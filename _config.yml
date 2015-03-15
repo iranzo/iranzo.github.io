@@ -1,0 +1,19 @@
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Pablo Iranzo's blog
+tagline:          Personal website
+url:              http://iranzo.github.io
+paginate:         1
+baseurl:          /
+author:
+  name:           Pablo Iranzo Gómez
+  url:            https://twitter.com/iranzop
+  email:          Pablo.Iranzo@gmail.com
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/poole/poole
