@@ -1,0 +1,12 @@
+---
+layout: post
+title: pyserial
+date: '2010-02-23T22:50:00.000+01:00'
+author: Pablo
+tags: 
+modified_time: '2010-02-25T12:15:17.209+01:00'
+blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-3750020937775227725
+blogger_orig_url: http://iranzop.blogspot.com/2010/02/pyserial.html
+---
+
+<div xmlns='http://www.w3.org/1999/xhtml'>Esta semana estuve jugando con python para interrogar mediante puerto   serie dispositivos.<br/><br/>La verdad es que resultó mucho más sencillo   de lo que pensaba, algo de complicación a la hora de interpretar las   constantes de ascii para el group separator (GS).<br/><br/>La   interrogación es tan sencilla como hacer:<br/><code><br/>import sys<br/>import serial<br/><br/><br/>try: <br/>  ser = serial.Serial(port='/dev/ttyS0', baudrate=9600, bytesize=serial.EIGHTBITS, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, xonxoff=1,rtscts=0)<br/>except:<br/>  print "Fallo al abrir el dispositivo"<br/>  sys.exit(-1)<br/><br/><br/>ser.write("Hola")<br/>respuesta=ser.readline()<br/>string="%s" % (chr(26))<br/>ser.write(string)<br/>ser.close()<br/></code><br/><br/>Jugando un poco con los requisitos, podemos hablar el lenguaje del dispositivo  que tengamos conectado o empezar con los ejemplos de terminal, etc que  acompañan a pyserial (terminales, etc)<br/><br/>A partir de aquí, es   cuestión de coger la referencia técnica del dispositivo a interrogar y   ponernos a ello.<br/><br/>Nota: Si quieres cambiar la velocidad, lo puedes hacer de forma dinámica haciendo:<br/><pre>   ser.baudrate=19200</pre><br/><br/><br/><div class='zemanta-pixie'><img src='http://img.zemanta.com/pixy.gif?x-id=cb8d2e98-2b05-8bfc-9c91-51344504bf20' alt='' class='zemanta-pixie-img'/></div></div>
