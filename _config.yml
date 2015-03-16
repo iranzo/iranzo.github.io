@@ -5,7 +5,7 @@ relative_permalinks: true
 # Setup
 title:            Pablo Iranzo's blog
 tagline:          Personal website
-url:              http://iranzo.github.io
+url:              http://iranzo.github.io/
 paginate:         1
 baseurl:          /
 author:
