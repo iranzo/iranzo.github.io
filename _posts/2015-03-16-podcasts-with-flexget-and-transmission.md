@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Podscasts with flexget and transmission
+title: Podcasts with flexget and transmission
 author: Pablo Iranzo Gómez
 date: '2015-03-16T21:45:00.000+02:00'
 tags: 
