@@ -73,4 +73,4 @@ vm.migrate()
 
 It's expected for RHEV 3.1 to have a developer guide (now in Beta) at <https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Virtualization/3.1-Beta/html-single/Developer_Guide/index.html>
 
-Check it for more examples of use and put the Virtualization to work for you!</div>
+Check it for more examples of use and put the Virtualization to work for you!
