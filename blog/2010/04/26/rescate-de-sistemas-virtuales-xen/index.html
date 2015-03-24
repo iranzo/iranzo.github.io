@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Rescate De Sistemas Virtuales (Xen) - Pablo Iranzo&#8217;s blog</title>
+  <meta name="author" content="Pablo Iranzo Gómez">
+
+  
+  <meta name="description" content="A raíz de un problema debido a reiterados apagones, me vi en la necesidad de
+levantar una máquina virtual que ya no arrancaba. En un sistema físico, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://iranzo.github.io/blog/2010/04/26/rescate-de-sistemas-virtuales-xen/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Pablo Iranzo's blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-81705-12']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Pablo Iranzo&#8217;s blog</a></h1>
+  
+    <h2>Some random posts&#8230;</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="iranzo.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Rescate De Sistemas Virtuales (Xen)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2010-04-26T23:31:00+02:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2010</span></span> <span class='time'>11:31 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>A raíz de un problema debido a reiterados apagones, me vi en la necesidad de
+levantar una máquina virtual que ya no arrancaba.</p>
+
+<p>En un sistema físico, lo que haríamos, es que según en qué punto estemos,
+usar un disco de arranque de nuestra distribución y por un lado reparar el
+sistema de ficheros con fsck o rehacer un initrd.img.</p>
+
+<p>¿Cómo hacemos esto si la máquina en lugar de ser una real, es una virtual?.</p>
+
+<p>Copiando el fichero de configuración de nuestra máquina a &lsquo;rescate&rsquo;, podemos
+editar la línea del cargador (eliminando pygrub) e indicando como kernel e
+initrd.img los de nuestro cd de distribución (en el caso de Xen, images/xen
+para EL5).</p>
+
+<p>Una vez arrancado, ya podemos seguir el procedimiento estándar de
+recuperación.</p>
+
+<p>En el caso de tener que reconstruir el initrd, podemos tener un problema
+añadido, pero por otro lado, al ser todo máquinas virtuales &lsquo;con el mismo
+hardware&rsquo;, es muy sencillo crear otra máquina virtual e instalarla indicando
+los mismos nombres para los vg&rsquo;s, particiones de arranque, etc y luego
+copiar el initrd.img y el kernel de la máquina nueva a la antigua y
+arrancarla, para llegados a este punto, reinstalar la última versión del
+kernel disponible con nuestro sistema ya arrancado.</p>
+
+<p>La copia la podemos hacer bien desde el medio de rescate o montando mediante
+loopback el fichero de la máquina virtual (con LVM&rsquo;s es trivial) (puedes
+encontrar mucha información al respecto buscando por xen image y loopback
+offset).</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pablo</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2010-04-26T23:31:00+02:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2010</span></span> <span class='time'>11:31 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://iranzo.github.io/blog/2010/04/26/rescate-de-sistemas-virtuales-xen/" data-via="iranzop" data-counturl="http://iranzo.github.io/blog/2010/04/26/rescate-de-sistemas-virtuales-xen/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de/" title="Previous Post: Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible (Linux/Windows)">&laquo; Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible (Linux/Windows)</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/" title="Next Post: Firsts steps with Fedora 15 pre-alpha">Firsts steps with Fedora 15 pre-alpha &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/03/16/podcasts-with-flexget-and-transmission/">Podcasts With Flexget and Transmission</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/16/jekyll-markdown/">Jekyll and MarkDown</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/24/rhevovirt-api-with-python/">RHEV/OVIRT API With Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/08/herramientas-de-sincronizacionbackup/">Herramientas De Sincronización/backup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/08/probando-nuevos-escritorios/">Probando Nuevos Escritorios</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/iranzo">@iranzo</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'iranzo',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/115967682482067873883?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Pablo Iranzo Gómez -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
