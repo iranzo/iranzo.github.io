@@ -1,4 +1,4 @@
-/*function getNav() {
+function getNav() {
   var mainNav = $('ul.main-navigation, ul[role=main-navigation]').before('<fieldset class="mobile-nav">')
   var mobileNav = $('fieldset.mobile-nav').append('<select>');
   mobileNav.find('select').append('<option value="">Navigate&hellip;</option>');
@@ -10,18 +10,14 @@
   mobileNav.find('select').bind('change', function(event) {
     if (event.target.value) { window.location.href = event.target.value; }
   });
-}*/
+}
 
-/*function addSidebarToggler() {
+function addSidebarToggler() {
   if(!$('body').hasClass('sidebar-footer')) {
     $('#content').append('<span class="toggle-sidebar"></span>');
     $('.toggle-sidebar').bind('click', function(e) {
       e.preventDefault();
-      if ($('body').hasClass('collapse-sidebar')) {
-        $('body').removeClass('collapse-sidebar');
-      } else {
-        $('body').addClass('collapse-sidebar');
-      }
+      $('body').toggleClass('collapse-sidebar');
     });
   }
   var sections = $('aside.sidebar > section');
@@ -35,7 +31,7 @@
     });
   }
   if (sections.length >= 3){ $('aside.sidebar').addClass('thirds'); }
-}*/
+}
 
 function testFeatures() {
   var features = ['maskImage'];
@@ -114,8 +110,8 @@ $('document').ready(function() {
   wrapFlashVideos();
   flashVideoFallback();
   addCodeLineNumbers();
-  //getNav();
-  //addSidebarToggler();
+  getNav();
+  addSidebarToggler();
 });
 
 // iOS scaling bug fix

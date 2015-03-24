@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: 
 
-Sitemap: http://iranzo.github.io/sitemap.xml
+Sitemap: http://iranzo.github.io/sitemap.xml 
