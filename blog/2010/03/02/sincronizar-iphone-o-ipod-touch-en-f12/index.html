@@ -4,31 +4,44 @@
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
+  <script src="/js/vendor/modernizr.js"></script>
   <meta charset="utf-8">
-  <title>Sincronizar &#8216;Basicamente&#8217; iPhone O iPod Touch en Fedora 12 - Pablo Iranzo&#8217;s blog</title>
+  <title>Sincronizar &#8216;Basicamente&#8217; iPhone O iPod Touch en Fedora 12 | Pablo Iranzo&#8217;s blog</title>
   <meta name="author" content="Pablo Iranzo Gómez">
 
   
   <meta name="description" content="Las nuevas versiones no están todavía soportadas en F12, así que tendremos que utilizar las de rawhide. yum --enablerepo=rawhide upgrade ifuse gtkpod &hellip;">
   
 
-  <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://iranzo.github.io/blog/2010/03/02/sincronizar-iphone-o-ipod-touch-en-f12/">
+  <link rel="canonical" href="http://iranzo.github.io/blog/2010/03/02/sincronizar-iphone-o-ipod-touch-en-f12">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Pablo Iranzo's blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/vendor/fastclick.js"></script>
+
+  <script src="/js/foundation.min.js"></script>
+
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
+
+
+  <script>
+
+  $(document).ready(function(){
+    $(document).foundation();
+  });
+
+  </script>
+
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:300,300italic,500,500italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 
   
   <script type="text/javascript">
@@ -46,41 +59,60 @@
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Pablo Iranzo&#8217;s blog</a></h1>
-  
-    <h2>Some random posts&#8230;</h2>
-  
-</hgroup>
-
+<body  >
+  <header role="banner" class="top-header">
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <nav role="navigation"><ul class="subscription hide" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="sitesearch" value="iranzo.github.io">
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
+
+
+  <nav class="top-bar" data-topbar>
+
+    <!--Uncomment Pablo Iranzo's blog below if you would like a title area on the left side of the nav bar-->
+
+    <ul class="title-area">
+        <li class="name">
+          <h1><a href="/">Pablo Iranzo&#8217;s blog <i class="fa fa-heart"></i></i></i></a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+
+    <section class="top-bar-section">
+
+      <ul class="main-navigation right">
+
+          <li><a href="/">Home</a></li>
+
+          <li class="has-dropdown">
+            <a href="/no-sidebar">No Sidebar Page</a>
+
+            <ul class="dropdown">
+              <li><a href="/no-sidebar/left-sidebar">Left Sidebar Page</a></li>
+              <li><a href="/no-sidebar/right-sidebar">Right Sidebar Page</a></li>
+              <li><a href="/no-sidebar/example-formatting">Example Formatting</a></li>
+            </ul>
+
+          </li>
+
+          <li><a href="/blog/archives">Archives</a></li>
+
+      </ul>
+
+    </section>
+  </nav>
 
 </nav>
   <div id="main">
-    <div id="content">
-      <div>
+    <div id="content" class="row">
+      <div class="small-12 medium-12 large-8 columns">
 <article class="hentry" role="article">
   
   <header>
     
-      <h1 class="entry-title">Sincronizar &#8216;Basicamente&#8217; iPhone O iPod Touch en Fedora 12</h1>
+      <h1 class="page-title">Sincronizar &#8216;Basicamente&#8217; iPhone O iPod Touch en Fedora 12</h1>
     
     
       <p class="meta">
@@ -89,7 +121,14 @@
 
 
 
-<time class='entry-date' datetime='2010-03-02T14:43:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2010</span></span> <span class='time'>2:43 pm</span></time>
+
+
+
+
+  
+
+
+<i class="fa fa-calendar-o"></i> <time datetime="2010-03-02T14:43:00+01:00" pubdate data-updated="true">March  2, 2010</time> 
         
       </p>
     
@@ -119,17 +158,6 @@ usbmuxd -v -f</code></pre></div>
 
   <footer>
     <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Pablo</span></span>
-
-      
-
-
-
-
-<time class='entry-date' datetime='2010-03-02T14:43:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2010</span></span> <span class='time'>2:43 pm</span></time>
       
 
 
@@ -161,10 +189,10 @@ usbmuxd -v -f</code></pre></div>
 
 </div>
 
-<aside class="sidebar">
+<aside class="sidebar small-12 medium-12 large-4 columns">
   
     <section>
-  <h1>Recent Posts</h1>
+  <h1>Recent Posts <i class="fa fa-edit"></i></h1>
   <ul id="recent_posts">
     
       <li class="post">
@@ -191,7 +219,7 @@ usbmuxd -v -f</code></pre></div>
 </section>
 
 <section>
-  <h1>GitHub Repos</h1>
+  <h1>GitHub Repos <i class="fa fa-github"></i></h1>
   <ul id="gh_repos">
     <li class="loading">Status updating&#8230;</li>
   </ul>
@@ -222,12 +250,12 @@ usbmuxd -v -f</code></pre></div>
 
 
 <section class="googleplus">
-  <h1>
+  <h3>
     <a href="https://plus.google.com/115967682482067873883?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      <i class="fa fa-google-plus-square"></i> 
       Google+
     </a>
-  </h1>
+  </h3>
 </section>
 
 
@@ -238,9 +266,15 @@ usbmuxd -v -f</code></pre></div>
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Pablo Iranzo Gómez -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <footer role="contentinfo"><p class="text-center">
+  <span class="copyright">
+  	Copyright &copy; 2015 by Pablo Iranzo Gómez
+  </span>
+
+  <span class="credit">
+  	Powered by <a href="http://octopress.org" target="_blank">Octopress</a><br />
+  	<span><a href="http://github.com/annejohnson/octofound" target="_blank">Theme</a> by <a href="http://feathers.io" target="_blank">Anne Johnson</a></span>
+  </span>
 </p>
 
 </footer>
@@ -278,6 +312,7 @@ usbmuxd -v -f</code></pre></div>
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
+
 
 
 
