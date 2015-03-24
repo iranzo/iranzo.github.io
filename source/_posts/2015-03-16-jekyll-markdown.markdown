@@ -3,7 +3,8 @@ layout: post
 title: Jekyll and MarkDown
 author: Pablo Iranzo Gómez
 date: '2015-03-16T09:06:00.000+01:00'
-tags: 
+tags:  jekyll
+category: blog
 ---
 
 For my work I've been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the formating.

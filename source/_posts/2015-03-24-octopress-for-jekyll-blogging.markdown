@@ -3,7 +3,8 @@ layout: post
 title: "Octopress for jekyll blogging"
 date: 2015-03-24 13:23:15 +0100
 comments: true
-categories: 
+tags: jekyll, markdown
+category: blog
 ---
 
 After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.

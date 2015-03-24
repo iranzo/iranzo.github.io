@@ -3,7 +3,7 @@ layout: post
 title: RHEV/OVIRT API with Python
 date: '2012-10-24T13:38:00.003+02:00'
 author: Pablo Iranzo Gómez
-tags: 
+tags: python, rhev, ovirt
 category: programming
 modified_time: '2012-10-25T01:50:16.848+02:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-1003448890473219410
