@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://iranzo.github.io
+title: Pablo Iranzo's blog
+subtitle: Some random posts...
+author: Pablo Iranzo Gómez
 simple_search: https://www.google.com/search
 description:
 
