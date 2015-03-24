@@ -22,5 +22,7 @@ On Fedora and as my unprivileged user, I did:
 - [Set octopress for github](http://octopress.org/docs/deploying/github/)
 - And from there, the `generate`, `preview` and `deploy` basics [for blogging](http://octopress.org/docs/blogging/)
 
+One of the interesting things it that it uses two branches on git, `master` and `source`, where `master` is the one that github publishes (your live environment) and `source` is the actual code for your blog, templates, posts, etc that are later generated, previewed and deployed from above steps.
+
 I'll be testing it for a while to see how it works, but so far, so good.
 
