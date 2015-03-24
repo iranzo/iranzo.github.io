@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://iranzo.github.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</loc>
+    <lastmod>2015-03-16T20:45:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2015/03/16/jekyll-markdown/</loc>
+    <lastmod>2015-03-16T09:06:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2012/10/24/rhevovirt-api-with-python/</loc>
+    <lastmod>2012-10-24T13:38:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2011/12/08/herramientas-de-sincronizacionbackup/</loc>
+    <lastmod>2011-12-08T11:52:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2011/12/08/probando-nuevos-escritorios/</loc>
+    <lastmod>2011-12-08T11:13:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2011/06/27/duplicity-for-managing-backups/</loc>
+    <lastmod>2011-06-27T18:35:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</loc>
+    <lastmod>2011-03-07T17:26:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2010/04/26/rescate-de-sistemas-virtuales-xen/</loc>
+    <lastmod>2010-04-26T23:31:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de/</loc>
+    <lastmod>2010-04-15T14:18:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2010/04/05/combinar-correspondencia-con/</loc>
+    <lastmod>2010-04-05T21:50:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2010/04/01/dropbox-en-fedora/</loc>
+    <lastmod>2010-04-01T11:54:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2010/03/02/sincronizar-iphone-o-ipod-touch-en-f12/</loc>
+    <lastmod>2010-03-02T14:43:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/2010/02/23/pyserial/</loc>
+    <lastmod>2010-02-23T22:50:00+01:00</lastmod>
+  </url>
+  <url>
     <loc>http://iranzo.github.io/blog/archives/</loc>
   </url>
   <url>
     <loc>http://iranzo.github.io/</loc>
+  </url>
+  <url>
+    <loc>http://iranzo.github.io/blog/categories/programming/</loc>
   </url>
 </urlset>
