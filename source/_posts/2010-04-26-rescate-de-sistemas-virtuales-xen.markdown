@@ -3,7 +3,8 @@ layout: post
 title: Rescate de sistemas virtuales (Xen)
 date: '2010-04-26T23:31:00.001+02:00'
 author: Pablo
-tags: 
+tags: fedora, xen
+category: virtualization
 modified_time: '2010-04-26T23:31:40.747+02:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-6096385341740071760
 blogger_orig_url: http://iranzop.blogspot.com/2010/04/rescate-de-sistemas-virtuales-xen.html

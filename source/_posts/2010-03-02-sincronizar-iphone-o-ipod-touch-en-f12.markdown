@@ -3,7 +3,8 @@ layout: post
 title: Sincronizar 'basicamente' iPhone o iPod Touch en Fedora 12
 date: '2010-03-02T14:43:00.001+01:00'
 author: Pablo
-tags: 
+tags: fedora
+category: desktop
 modified_time: '2011-01-26T08:00:30.406+01:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-1811300258953715112
 blogger_orig_url: http://iranzop.blogspot.com/2010/03/sincronizar-iphone-o-ipod-touch-en-f12.html

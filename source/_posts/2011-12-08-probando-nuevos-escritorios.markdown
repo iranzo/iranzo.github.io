@@ -3,7 +3,8 @@ layout: post
 title: Probando nuevos escritorios
 date: '2011-12-08T11:13:00.001+01:00'
 author: Pablo
-tags: 
+tags: fedora
+category: desktop
 modified_time: '2011-12-08T11:21:33.113+01:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-7897790878360794361
 blogger_orig_url: http://iranzop.blogspot.com/2011/12/probando-nuevos-escritorios.html
