@@ -33,7 +33,7 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: rdiscount
+markdown: kramdown
 rdiscount:
   extensions:
     - autolink
@@ -99,4 +99,3 @@ google_analytics_tracking_id: UA-81705-12
 
 # Facebook Like
 facebook_like: true
-
