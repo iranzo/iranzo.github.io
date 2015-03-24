@@ -3,7 +3,7 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Pablo Iranzo's blog
+title:            Pablo Iranzo
 tagline:          Personal website
 url:              http://iranzo.github.io/
 paginate:         1
