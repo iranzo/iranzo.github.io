@@ -1,93 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Pablo Iranzo&#8217;s blog</title>
-  <meta name="author" content="Pablo Iranzo Gómez">
-
-  
-  <meta name="description" content="Some podcasts are available via rss feeds, so you can get notified of new episodes, so the best way I&rsquo;ve found so far to automate this &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://iranzo.github.io/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Pablo Iranzo's blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Pablo Iranzo&#8217;s blog</a></h1>
-  
-    <h2>Some random posts&#8230;</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="sitesearch" value="iranzo.github.io">
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[Pablo Iranzo's blog]]></title>
+  <link href="http://iranzo.github.io/atom.xml" rel="self"/>
+  <link href="http://iranzo.github.io/"/>
+  <updated>2015-03-24T12:32:45+01:00</updated>
+  <id>http://iranzo.github.io/</id>
+  <author>
+    <name><![CDATA[Pablo Iranzo Gómez]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2015/03/16/podcasts-with-flexget-and-transmission/">Podcasts With Flexget and Transmission</a></h1>
-    
-    
-      <p class="meta">
-        
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
-
-
-
-<time class='entry-date' datetime='2015-03-16T20:45:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:45 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Some podcasts are available via rss feeds, so you can get notified of new episodes, so the best way I&rsquo;ve found so far to automate this procedure is to use the utility &lsquo;flexget&rsquo;.</p>
+  
+  <entry>
+    <title type="html"><![CDATA[Podcasts With Flexget and Transmission]]></title>
+    <link href="http://iranzo.github.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/"/>
+    <updated>2015-03-16T20:45:00+01:00</updated>
+    <id>http://iranzo.github.io/blog/2015/03/16/podcasts-with-flexget-and-transmission</id>
+    <content type="html"><![CDATA[<p>Some podcasts are available via rss feeds, so you can get notified of new episodes, so the best way I&rsquo;ve found so far to automate this procedure is to use the utility &lsquo;flexget&rsquo;.</p>
 
 <p>Flexget can download an rss feed and get the <code>.torrent</code> files associated to them and store locally, which makes a perfect fit for later using Transmission&rsquo;s <code>watch</code> folder, to automatically add them to your download queue.</p>
 
@@ -107,35 +38,15 @@ tasks:
 for new files and store the relevant <code>.torrent</code> files on the folder
 <code>/media/watch</code> from where transmission will pick up the new files and add
 them to your downloading queue for automatic download.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/03/16/jekyll-markdown/">Jekyll and MarkDown</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-03-16T09:06:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:06 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For my work I&rsquo;ve been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the formating.</p>
+  <entry>
+    <title type="html"><![CDATA[Jekyll and MarkDown]]></title>
+    <link href="http://iranzo.github.io/blog/2015/03/16/jekyll-markdown/"/>
+    <updated>2015-03-16T09:06:00+01:00</updated>
+    <id>http://iranzo.github.io/blog/2015/03/16/jekyll-markdown</id>
+    <content type="html"><![CDATA[<p>For my work I&rsquo;ve been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the formating.</p>
 
 <p>On the other side I was willing to improve the ability to make it easier to post new entries to blog without having to wait too much time, and of course, be able to prepare them offline and then push them live.</p>
 
@@ -163,35 +74,15 @@ started reading about Jekyll and Poole.</p>
 <p>Well, let&rsquo;s see how this goes and will try to implement some template to website not to use the standard one soon.</p>
 
 <p>PD: This was being written while offline at the aiport on a trip to Helsinki ;-)</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/24/rhevovirt-api-with-python/">RHEV/OVIRT API With Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-10-24T13:38:00+02:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>1:38 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>RHEV/OVIRT api allows faster and simple development of scripts / utilities ranging from gathering of information to VM/host, etc manipulation.</p>
+  <entry>
+    <title type="html"><![CDATA[RHEV/OVIRT API With Python]]></title>
+    <link href="http://iranzo.github.io/blog/2012/10/24/rhevovirt-api-with-python/"/>
+    <updated>2012-10-24T13:38:00+02:00</updated>
+    <id>http://iranzo.github.io/blog/2012/10/24/rhevovirt-api-with-python</id>
+    <content type="html"><![CDATA[<p>RHEV/OVIRT api allows faster and simple development of scripts / utilities ranging from gathering of information to VM/host, etc manipulation.</p>
 
 <p>For example, a simple script for connecting to API and list VM&rsquo;s could be:</p>
 
@@ -244,35 +135,15 @@ started reading about Jekyll and Poole.</p>
 <p>It&rsquo;s expected for RHEV 3.1 to have a developer guide (now in Beta) at <a href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Virtualization/3.1-Beta/html-single/Developer_Guide/index.html">https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Virtualization/3.1-Beta/html-single/Developer_Guide/index.html</a></p>
 
 <p>Check it for more examples of use and put the Virtualization to work for you!</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/08/herramientas-de-sincronizacionbackup/">Herramientas De Sincronización/backup</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2011-12-08T11:52:00+01:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2011</span></span> <span class='time'>11:52 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de &lsquo;backup&rsquo; en caso de fallo hardware de algún equipo.</p>
+  <entry>
+    <title type="html"><![CDATA[Herramientas De Sincronización/backup]]></title>
+    <link href="http://iranzo.github.io/blog/2011/12/08/herramientas-de-sincronizacionbackup/"/>
+    <updated>2011-12-08T11:52:00+01:00</updated>
+    <id>http://iranzo.github.io/blog/2011/12/08/herramientas-de-sincronizacionbackup</id>
+    <content type="html"><![CDATA[<p>Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de &lsquo;backup&rsquo; en caso de fallo hardware de algún equipo.</p>
 
 <p>Estuve probando y evaluando diversas herramientas multiplataforma y junto a algunas más, las que más probé fueron estas:</p>
 
@@ -339,35 +210,15 @@ ahora sigo con Dropbox para cosas rápidas que no necesito excesiva
 privacidad y para el resto Wuala y he añadido duplicity para hacer backup a
 un NAS en mi red local a la espera de ir probando mejor AeroFS y ver cómo
 respira syncany&hellip;</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/08/probando-nuevos-escritorios/">Probando Nuevos Escritorios</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2011-12-08T11:13:00+01:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2011</span></span> <span class='time'>11:13 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hace ya años que pasé de KDE con la llegada de KDE 3 a utilizar GNOME, más &lsquo;espartano&rsquo;, pero con mejor rendimiento.</p>
+  <entry>
+    <title type="html"><![CDATA[Probando Nuevos Escritorios]]></title>
+    <link href="http://iranzo.github.io/blog/2011/12/08/probando-nuevos-escritorios/"/>
+    <updated>2011-12-08T11:13:00+01:00</updated>
+    <id>http://iranzo.github.io/blog/2011/12/08/probando-nuevos-escritorios</id>
+    <content type="html"><![CDATA[<p>Hace ya años que pasé de KDE con la llegada de KDE 3 a utilizar GNOME, más &lsquo;espartano&rsquo;, pero con mejor rendimiento.</p>
 
 <p>Con Fedora 15 pasé a utilizar GNOME 3, bastante &lsquo;innovador&rsquo;, algo extraño, pero me fui acostumbrando relativamente bien, pero con la llegada de Fedora 16 y la versión 3.2, noto el equipo (que sigue siendo el mismo) con frecuentes enganchones y lentitud.</p>
 
@@ -395,35 +246,15 @@ respira syncany&hellip;</p>
 
 
 <p>Por ahora voy a seguir con LXDE en dos equipos y ver si finalmente lo pongo en todos o busco alguna alternativa más.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/27/duplicity-for-managing-backups/">Duplicity for Managing Backups</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2011-06-27T18:35:00+02:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2011</span></span> <span class='time'>6:35 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A few days ago, I was checking a friend&rsquo;s system for backing up.</p>
+  <entry>
+    <title type="html"><![CDATA[Duplicity for Managing Backups]]></title>
+    <link href="http://iranzo.github.io/blog/2011/06/27/duplicity-for-managing-backups/"/>
+    <updated>2011-06-27T18:35:00+02:00</updated>
+    <id>http://iranzo.github.io/blog/2011/06/27/duplicity-for-managing-backups</id>
+    <content type="html"><![CDATA[<p>A few days ago, I was checking a friend&rsquo;s system for backing up.</p>
 
 <p>It was based on rsync on the linux side and rsync server on a windows machine he uses for storing  information generated by other software.</p>
 
@@ -436,35 +267,15 @@ respira syncany&hellip;</p>
 <p>Duplicity can also take care of tiding backup store removing older backups and automatically perform a full backup if older than x time, so you can automate the full backup management.</p>
 
 <p>Best of all is the backend support, as you can do backups over rsync, scp, ftp, file, imap, ssh, amazon, webdav, etc , so you can use that old NAS to store your backups without any special support except pretty standard protocols even on low-end models.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/">Firsts Steps With Fedora 15 Pre-alpha</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2011-03-07T17:26:00+01:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2011</span></span> <span class='time'>5:26 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Today I&rsquo;ve decided to give it a try to F15-prealpha (expected to release tomorrow).<br />
+  <entry>
+    <title type="html"><![CDATA[Firsts Steps With Fedora 15 Pre-alpha]]></title>
+    <link href="http://iranzo.github.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/"/>
+    <updated>2011-03-07T17:26:00+01:00</updated>
+    <id>http://iranzo.github.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha</id>
+    <content type="html"><![CDATA[<p>Today I&rsquo;ve decided to give it a try to F15-prealpha (expected to release tomorrow).<br />
 The upgrade performed in the unsupported way  (getting and forcing install for newer fedora-release from a mirror then start issuing several yum upgrades) when reasonably good.</p>
 
 <p>Only some minor dependency problems et voilà, system started fine.</p>
@@ -508,35 +319,15 @@ The upgrade performed in the unsupported way  (getting and forcing install for n
 
 
 <p>Will keep updating this post with newer information!</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/04/26/rescate-de-sistemas-virtuales-xen/">Rescate De Sistemas Virtuales (Xen)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2010-04-26T23:31:00+02:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2010</span></span> <span class='time'>11:31 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A raíz de un problema debido a reiterados apagones, me vi en la necesidad de
+  <entry>
+    <title type="html"><![CDATA[Rescate De Sistemas Virtuales (Xen)]]></title>
+    <link href="http://iranzo.github.io/blog/2010/04/26/rescate-de-sistemas-virtuales-xen/"/>
+    <updated>2010-04-26T23:31:00+02:00</updated>
+    <id>http://iranzo.github.io/blog/2010/04/26/rescate-de-sistemas-virtuales-xen</id>
+    <content type="html"><![CDATA[<p>A raíz de un problema debido a reiterados apagones, me vi en la necesidad de
 levantar una máquina virtual que ya no arrancaba.</p>
 
 <p>En un sistema físico, lo que haríamos, es que según en qué punto estemos,
@@ -565,35 +356,15 @@ kernel disponible con nuestro sistema ya arrancado.</p>
 loopback el fichero de la máquina virtual (con LVM&rsquo;s es trivial) (puedes
 encontrar mucha información al respecto buscando por xen image y loopback
 offset).</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de/">Crear Pendrives De Arranque (Flasheo De Bios) en Un Ejecutable Autoextraible (Linux/Windows)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2010-04-15T14:18:00+02:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2010</span></span> <span class='time'>2:18 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Usando unetbootin (<a href="http://unetbootin.sourceforge.net/">http://unetbootin.sourceforge.net/</a>) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.</p>
+  <entry>
+    <title type="html"><![CDATA[Crear Pendrives De Arranque (Flasheo De Bios) en Un Ejecutable Autoextraible (Linux/Windows)]]></title>
+    <link href="http://iranzo.github.io/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de/"/>
+    <updated>2010-04-15T14:18:00+02:00</updated>
+    <id>http://iranzo.github.io/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de</id>
+    <content type="html"><![CDATA[<p>Usando unetbootin (<a href="http://unetbootin.sourceforge.net/">http://unetbootin.sourceforge.net/</a>) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.</p>
 
 <p>Si queremos además, crear un fichero ejecutable autodescomprimible, para que el usuario final sólo deba ejecutarlo e introducir un pendrive y que se cree &lsquo;solo&rsquo;, deberemos tener además:</p>
 
@@ -647,35 +418,15 @@ RunProgram=&ldquo;unetbootin.exe lang=es method=diskimage imgfile=&lsquo;flash.i
 <p>Cuando enviemos el fichero <code>autoejecutable.exe</code> a un usuario, al ejecutarlo, se descomprimirá el fichero <code>todo.7z</code> contenido dentro del ejecutable y se lanzará la línea de comando del <code>config.txt</code>, lanzando unetbootin para la creación&hellip;.</p>
 
 <p>Podemos utilizar este método (sin hacer el autoejecutable), para crear un pendrive de arranque de forma manual y poder actualizar nuestra bios, etc.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/04/05/combinar-correspondencia-con/">Combinar Correspondencia Con OpenOffice.org</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2010-04-05T21:50:00+02:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2010</span></span> <span class='time'>9:50 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hacía un tiempo que no usaba la función de combinar correspondencia y en el equipo de sobremesa con Fedora 13 x86_64 no conseguía hacerla funcionar.</p>
+  <entry>
+    <title type="html"><![CDATA[Combinar Correspondencia Con OpenOffice.org]]></title>
+    <link href="http://iranzo.github.io/blog/2010/04/05/combinar-correspondencia-con/"/>
+    <updated>2010-04-05T21:50:00+02:00</updated>
+    <id>http://iranzo.github.io/blog/2010/04/05/combinar-correspondencia-con</id>
+    <content type="html"><![CDATA[<p>Hacía un tiempo que no usaba la función de combinar correspondencia y en el equipo de sobremesa con Fedora 13 x86_64 no conseguía hacerla funcionar.</p>
 
 <p>Antes de nada:</p>
 
@@ -716,86 +467,125 @@ RunProgram=&ldquo;unetbootin.exe lang=es method=diskimage imgfile=&lsquo;flash.i
 
 
 <p>Una vez finalizado, en ese último paso del asistente podemos lanzar el envío de los correos.</p>
-</div>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Dropbox en Fedora]]></title>
+    <link href="http://iranzo.github.io/blog/2010/04/01/dropbox-en-fedora/"/>
+    <updated>2010-04-01T11:54:00+02:00</updated>
+    <id>http://iranzo.github.io/blog/2010/04/01/dropbox-en-fedora</id>
+    <content type="html"><![CDATA[<p>Para instalar dropbox en fedora, no es necesario realizar excesivos pasos:</p>
+
+<p>1- Abrir una cuenta en
+<a href="https://www.dropbox.com/referrals/NTM4OTM3ODI5">Dropbox</a> (o si prefieres,
+en una empresa alternativa como
+<a href="https://spideroak.com/download/referral/dfba22f9764b55ab68427da014e9f0e5">SpiderOak</a>
+(O <a href="http://www.wuala.com/referral/FK4KF3PFHJAF64A74KMB">Wuala</a> que ofrece
+espacio adicional por compartir espacio en tu propio disco)</p>
+
+<p>2- Instalar en nuestra fedora el paquete correspondiente para
+<a href="https://www.dropbox.com/downloading?os=lnx">Nautilus</a> (aunque ponga que es
+para Fedora 10, funciona perfectamente en superiores (probado en 12 y 13))</p>
+
+<p>3- Al volver a iniciar sesión (o la lanzar el programa), aparecerá un icono
+en la bandeja de sistema y comenzará el proceso de configuración en el que
+se asocia el &lsquo;escritorio&rsquo; a la cuenta de dropbox que creamos anteriormente.</p>
+
+<p>4- Durante el asistente, podremos escoger la ubicación de la carpeta que
+empezará a sincronizarse, utilizando los &lsquo;emblemas&rsquo; de Gnome para indicar el
+estado de sincronización con &lsquo;la nube&rsquo;.  Adicionalmente, en los menús
+contextuales, podremos copiar un enlace público para compartir ese fichero
+con otros usuarios sin necesidad de compartir una carpeta, o bien compartir
+una carpeta entera y que se pueda colaborar en ella con un grupo de
+personas.</p>
+
+<p>5- Repitiendo los pasos 2 a 4 podremos ir enlazando otros pc&rsquo;s entre los que
+se replicarán automáticamente los ficheros que compartamos.</p>
+
+<p>6- SELinux: Si tienes problemas con SELinux, revisa la discusión en <a href="http://forums.dropbox.com/topic.php?id=26808&amp;amp;replies=24">http://forums.dropbox.com/topic.php?id=26808&amp;amp;replies=24</a> en la que se apunta a que realices los siguientes pasos:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> .drobpox-dist/
+<span class="o">[</span>.dropbox-dist<span class="o">]</span><span class="nv">$ </span>execstack -q _ctypes.so X _ctypes.so
+<span class="o">[</span>.dropbox-dist<span class="o">]</span><span class="nv">$ </span>execstack -c _ctypes.so
+<span class="o">[</span>.dropbox-dist<span class="o">]</span><span class="nv">$ </span>execstack -q _ctypes.so - _ctypes.so
+<span class="o">[</span>.dropbox-dist<span class="o">]</span><span class="nv">$ </span>getenforce
+Enforcing</code></pre></div>
+
+
+<p>Y de esta forma, consigas que funcione dropbox con SELinux en modo enforcing.</p>
+
+<p>7 - LANSync
+Abre en tu cortafuegos los puertos 17500 por TCP y por UDP para que la funcionalidad de sincronización en la LAN funcione (permitiendo que los equipos con dropbox en la misma red sincronicen mucho más rápido entre ellos)</p>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Sincronizar 'Basicamente' iPhone O iPod Touch en Fedora 12]]></title>
+    <link href="http://iranzo.github.io/blog/2010/03/02/sincronizar-iphone-o-ipod-touch-en-f12/"/>
+    <updated>2010-03-02T14:43:00+01:00</updated>
+    <id>http://iranzo.github.io/blog/2010/03/02/sincronizar-iphone-o-ipod-touch-en-f12</id>
+    <content type="html"><![CDATA[<p>Las nuevas versiones no están todavía soportadas en F12, así que tendremos que utilizar las de rawhide.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">yum --enablerepo<span class="o">=</span>rawhide upgrade ifuse gtkpod libgpod libimobiledevice usbmuxd</code></pre></div>
 
 
-    </article>
+<p>Una vez instalados, podemos empezar a utilizarlo ejecutando como root:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir -p /mnt/ipod
+chmod <span class="m">777</span> /mnt/ipod
+usbmuxd -v -f</code></pre></div>
+
+
+<p>Y como nuestro usuario:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ifuse /mnt/ipod</code></pre></div>
+
+
+<p>A partir de ahí podrás, si todo ha ido bien, utilizar <code>gtkpod</code> para gestionar la biblioteca de tu dispositivo.</p>
+]]></content>
+  </entry>
   
-  <div class="pagination">
-    
-      <a class="prev" href="/posts/2">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
+  <entry>
+    <title type="html"><![CDATA[Pyserial]]></title>
+    <link href="http://iranzo.github.io/blog/2010/02/23/pyserial/"/>
+    <updated>2010-02-23T22:50:00+01:00</updated>
+    <id>http://iranzo.github.io/blog/2010/02/23/pyserial</id>
+    <content type="html"><![CDATA[<p>Esta semana estuve jugando con python para interrogar mediante puerto   serie dispositivos.</p>
+
+<p>La verdad es que resultó mucho más sencillo   de lo que pensaba, algo de complicación a la hora de interpretar las   constantes de ascii para el group separator (GS).</p>
+
+<p>La   interrogación es tan sencilla como hacer:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">serial</span>
+
+
+<span class="k">try</span><span class="p">:</span> 
+    <span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="s">&#39;/dev/ttyS0&#39;</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">9600</span><span class="p">,</span> <span class="n">bytesize</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">EIGHTBITS</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">parity</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">PARITY_NONE</span><span class="p">,</span> <span class="n">stopbits</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">STOPBITS_ONE</span><span class="p">,</span> <span class="n">xonxoff</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">rtscts</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Fallo al abrir el dispositivo&quot;</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">)</span>
+<span class="n">respuesta</span><span class="o">=</span><span class="n">ser</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">string</span><span class="o">=</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">26</span><span class="p">))</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre></div>
+
+
+<p>Jugando un poco con los requisitos, podemos hablar el lenguaje del dispositivo  que tengamos conectado o empezar con los ejemplos de terminal, etc que  acompañan a pyserial (terminales, etc)</p>
+
+<p>A partir de aquí, es   cuestión de coger la referencia técnica del dispositivo a interrogar y   ponernos a ello.</p>
+
+<p>Nota: Si quieres cambiar la velocidad, lo puedes hacer de forma dinámica haciendo:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">ser</span><span class="o">.</span><span class="n">baudrate</span><span class="o">=</span><span class="mi">19200</span></code></pre></div>
+
+
+
+]]></content>
+  </entry>
   
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2015/03/16/podcasts-with-flexget-and-transmission/">Podcasts With Flexget and Transmission</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/16/jekyll-markdown/">Jekyll and MarkDown</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/24/rhevovirt-api-with-python/">RHEV/OVIRT API With Python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/08/herramientas-de-sincronizacionbackup/">Herramientas De Sincronización/backup</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/08/probando-nuevos-escritorios/">Probando Nuevos Escritorios</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Pablo Iranzo Gómez -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

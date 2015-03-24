@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Programming | Pablo Iranzo's blog]]></title>
+  <link href="http://iranzo.github.io/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://iranzo.github.io/"/>
+  <updated>2015-03-24T12:32:45+01:00</updated>
+  <id>http://iranzo.github.io/</id>
+  <author>
+    <name><![CDATA[Pablo Iranzo Gómez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[RHEV/OVIRT API With Python]]></title>
+    <link href="http://iranzo.github.io/blog/2012/10/24/rhevovirt-api-with-python/"/>
+    <updated>2012-10-24T13:38:00+02:00</updated>
+    <id>http://iranzo.github.io/blog/2012/10/24/rhevovirt-api-with-python</id>
+    <content type="html"><![CDATA[<p>RHEV/OVIRT api allows faster and simple development of scripts / utilities ranging from gathering of information to VM/host, etc manipulation.</p>
+
+<p>For example, a simple script for connecting to API and list VM&rsquo;s could be:</p>
+
+<p><div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">getopt</span>
+<span class="kn">import</span> <span class="nn">optparse</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">from</span> <span class="nn">ovirtsdk.api</span> <span class="kn">import</span> <span class="n">API</span>
+<span class="kn">from</span> <span class="nn">ovirtsdk.xml</span> <span class="kn">import</span> <span class="n">params</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">baseurl</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;https://localhost:8443&quot;</span><span class="o">&gt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8443</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">API</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">baseurl</span><span class="p">,</span> <span class="n">username</span><span class="o">=&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">admin</span><span class="nd">@internal</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span><span class="n">password</span><span class="o">=&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">redhat</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span><span class="n">insecure</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">for</span> <span class="n">vm</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">vms</span><span class="o">.</span><span class="n">list</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">vm</span><span class="o">.</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span></code></pre></div></p>
+
+<p>The <code>.list()</code> method works pretty well, but beware, it limits collections to 100 elements for performance reasons, so in those cases, we&rsquo;ll need to check how many results do we have, and paginate by passing an extra argument to our &ldquo;.list()&rdquo; invocation, for example:</p>
+
+<p><div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">vm</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">vms</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">query</span><span class="o">=&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">page</span> <span class="mi">1</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;)</span></code></pre></div></p>
+
+<p>Furthermore, we can check the number of results by using:
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="nb">len</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">vms</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">query</span><span class="o">=&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">page</span> <span class="mi">1</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;))</span></code></pre></div></p>
+
+<p>And playing together, we could set a list that returns all results by running:</p>
+
+<p><div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">vms</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">page</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">length</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="n">page</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="n">s</span> <span class="n">page</span> <span class="o">%</span><span class="n">s</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="o">%</span> <span class="p">(</span><span class="n">oquery</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span>
+    <span class="n">tanda</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">vms</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">)</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tanda</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">vm</span> <span class="ow">in</span> <span class="n">tanda</span><span class="p">:</span>
+        <span class="n">vms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vm</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span></code></pre></div></p>
+
+<p>We can also make funny things like migrate VM&rsquo;s to another host by just running:</p>
+
+<p><div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">vm</span><span class="o">.</span><span class="n">migrate</span><span class="p">()</span></code></pre></div></p>
+
+<p>It&rsquo;s expected for RHEV 3.1 to have a developer guide (now in Beta) at <a href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Virtualization/3.1-Beta/html-single/Developer_Guide/index.html">https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Virtualization/3.1-Beta/html-single/Developer_Guide/index.html</a></p>
+
+<p>Check it for more examples of use and put the Virtualization to work for you!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pyserial]]></title>
+    <link href="http://iranzo.github.io/blog/2010/02/23/pyserial/"/>
+    <updated>2010-02-23T22:50:00+01:00</updated>
+    <id>http://iranzo.github.io/blog/2010/02/23/pyserial</id>
+    <content type="html"><![CDATA[<p>Esta semana estuve jugando con python para interrogar mediante puerto   serie dispositivos.</p>
+
+<p>La verdad es que resultó mucho más sencillo   de lo que pensaba, algo de complicación a la hora de interpretar las   constantes de ascii para el group separator (GS).</p>
+
+<p>La   interrogación es tan sencilla como hacer:</p>
+
+<p><div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">serial</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">try</span><span class="p">:</span>
+    <span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="n">port</span><span class="o">=&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyS0</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">9600</span><span class="p">,</span> <span class="n">bytesize</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">EIGHTBITS</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">parity</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">PARITY_NONE</span><span class="p">,</span> <span class="n">stopbits</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">STOPBITS_ONE</span><span class="p">,</span> <span class="n">xonxoff</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">rtscts</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">print</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Fallo</span> <span class="n">al</span> <span class="n">abrir</span> <span class="n">el</span> <span class="n">dispositivo</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Hola</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;)</span>
+<span class="n">respuesta</span><span class="o">=</span><span class="n">ser</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">string</span><span class="o">=&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="n">s</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">26</span><span class="p">))</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre></div></p>
+
+<p>Jugando un poco con los requisitos, podemos hablar el lenguaje del dispositivo  que tengamos conectado o empezar con los ejemplos de terminal, etc que  acompañan a pyserial (terminales, etc)</p>
+
+<p>A partir de aquí, es   cuestión de coger la referencia técnica del dispositivo a interrogar y   ponernos a ello.</p>
+
+<p>Nota: Si quieres cambiar la velocidad, lo puedes hacer de forma dinámica haciendo:</p>
+
+<p><div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">ser</span><span class="o">.</span><span class="n">baudrate</span><span class="o">=</span><span class="mi">19200</span></code></pre></div></p>
+]]></content>
+  </entry>
+  
+</feed>
