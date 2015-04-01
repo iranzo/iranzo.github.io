@@ -24,8 +24,10 @@ So:
 At this point I needed some software for automating the initial conversion, so I went to python's `feedparser` libraries to perform this with a bit of coding:
 
 {% highlight python %}
-import feedparser
 url="/path/to/your/xml/file.xml"
+
+import codecs
+import feedparser
 feed=feedparser.parse(url)
         
 for item in feed["items"]:
