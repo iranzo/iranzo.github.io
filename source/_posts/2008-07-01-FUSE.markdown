@@ -8,46 +8,23 @@ category: [linux, fuse]
 
 ### Introducción 
 
-En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y
-debido a empezar a trabajar más con equipos portátiles me acostumbré a
-"hibernar" la máquina en lugar de suspenderla, era más cómodo dejar
-todos los programas en "pausa" y al volver al día siguiente a utilizar
-el PC y encenderlo, recuperarlo todo tal cual estaba, listo para
-trabajar. Cuando pasé a [Fedora](https://alufis35.uv.es/Fedora.html)
-esta función junto con el LVM cifrado no iban a faltar en mi sistema :-)
+En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a "hibernar" la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en "pausa" y al volver al día siguiente a utilizar el PC y encenderlo, recuperarlo todo tal cual estaba, listo para trabajar. Cuando pasé a [Fedora]({% post_url 2008-06-14-Fedora %}) esta función junto con el LVM cifrado no iban a faltar en mi sistema :-)
 
-La hibernación utiliza la partición swap del sistema para almacenar el
-contenido de la RAM y así guardar el estado del sistema, y al siguiente
-arranque, se verifica si tiene información en dicha partición que se
-puede recuperar, y de ser así, gestiona la recuperación.
+La hibernación utiliza la partición swap del sistema para almacenar el contenido de la RAM y así guardar el estado del sistema, y al siguiente arranque, se verifica si tiene información en dicha partición que se puede recuperar, y de ser así, gestiona la recuperación.
 
-Por facilidad en la gestión y funcionamiento entre mi servidor y mi pc
-utilizo NFS para acceder a los ficheros y para facilitar la utilización,
-en mi equipo utilizo autofs con el mapa para redes, que me permite
-acceder a equipos automáticamente por nfs usando la ruta local
-/net/nombremaquina/recurso.
+Por facilidad en la gestión y funcionamiento entre mi servidor y mi pc utilizo NFS para acceder a los ficheros y para facilitar la utilización, en mi equipo utilizo autofs con el mapa para redes, que me permite acceder a equipos automáticamente por nfs usando la ruta local /net/nombremaquina/recurso.
 
-Durante muuuuuuchos años he estado utilizando ese funcionamiento para
-trabajar con mis equipos, pero el sistema NFS con autofs y más desde que
-hiberno mi equipo presenta un problema, al restaurar el equipo, es
-necesario restaurar autofs porque si no, tarda más en tener un timeout y
-liberar los puntos de montaje.
+Durante muuuuuuchos años he estado utilizando ese funcionamiento para trabajar con mis equipos, pero el sistema NFS con autofs y más desde que hiberno mi equipo presenta un problema, al restaurar el equipo, es necesario restaurar autofs porque si no, tarda más en tener un timeout y liberar los puntos de montaje.
 
-Ésto me animó a probar otras alternativas y fue cuando FUSE volvió a mis
-manos.
+Ésto me animó a probar otras alternativas y fue cuando FUSE volvió a mis manos.
 
 ### FUSE 
 
-[FUSE](http://fuse.sourceforge.net/)
-[[1](#nb2-1 "Filesystem in userspace")] es un proyecto que permite
-cargar sistemas de ficheros a nivel de usuario, para ello, dispone de un
-controlador en kernel, y una serie de utilidades ejecutables por
-usuarios para poder cargar esos sistemas de ficheros.
+[FUSE](http://fuse.sourceforge.net/)("Filesystem in userspace") es un proyecto que permite cargar sistemas de ficheros a nivel de usuario, para ello, dispone de un controlador en kernel, y una serie de utilidades ejecutables por usuarios para poder cargar esos sistemas de ficheros.
 
-En el caso de RHEL/CentOS 5 tenemos los paquetes de FUSE en RPMForge y
-en Fedora los tenemos en la propia distribución. Por ejemplo, en Fedora
-tenemos:
+En el caso de RHEL/CentOS 5 tenemos los paquetes de FUSE en RPMForge y en Fedora los tenemos en la propia distribución. Por ejemplo, en Fedora tenemos:
 
+~~~
     fuse.i386 : File System in Userspace (FUSE) utilities
     fuse-convmvfs.i386 : FUSE-Filesystem to convert filesystem encodings
     fuse-devel.i386 : File System in Userspace (FUSE) devel files
@@ -62,51 +39,36 @@ tenemos:
     fuse-sshfs.i386 : FUSE-Filesystem to access remote filesystems via SSH
     fusecompress.i386 : FUSE based compressed filesystem implementation
     fuseiso.i386 : FUSE support for ISO filesystem images
+~~~
 
-Yo actualmente estoy utilizando fuse-sshfs para solventar mi necesidad,
-y bueno, la cumple perfectamente :)
+Yo actualmente estoy utilizando `fuse-sshfs` para solventar mi necesidad, y bueno, la cumple perfectamente :)
 
 Lo que hago es lanzar desde un terminal el siguiente comando:
 
-    sshfs host:/ruta/a/la/carpeta carpeta-de-montaje
+{% highlight bash %}
+sshfs host:/ruta/a/la/carpeta carpeta-de-montaje
+{% endhighlight %}
 
-A partir de ese momento, cada vez que accedo a la carpeta
-"carpeta-de-montaje", los ficheros sobre los que opero, están en otro
-equipo, al que se ha conectado por ssh y se le envian los comandos para
-abrir ficheros, renombrarlos, etc.
+A partir de ese momento, cada vez que accedo a la carpeta "carpeta-de-montaje", los ficheros sobre los que opero, están en otro equipo, al que se ha conectado por ssh y se le envian los comandos para abrir ficheros, renombrarlos, etc.
 
 ### Extendiendo FUSE 
 
-El meollo de este artículo es un artículo "WEB LOCAL: Pythoneando con
-FUSE" de [Linux Magazine](http://www.linux-magazine.es/) (número 37) que
-me pasó un compañero (Fran Gimeno) en el que se analizaba por parte de
-"Jose María Ruiz" el funcionamiento de FUSE La parte interesante de
-dicho artículo, así como en este artículo de [Red Hat
-Magazine](http://www.redhatmagazine.com/2008/01/29/open-source-project-zmugfs/).
+El meollo de este artículo es un artículo "WEB LOCAL: Pythoneando con FUSE" de [Linux Magazine](http://www.linux-magazine.es/) (número 37) que me pasó un compañero (Fran Gimeno) en el que se analizaba por parte de "Jose María Ruiz" el funcionamiento de FUSE La parte interesante de dicho artículo, así como en este artículo de [Red Hat Magazine](http://www.redhatmagazine.com/2008/01/29/open-source-project-zmugfs/).
 
-El punto interesante del artículo de Jose María Ruíz es que implementan
-un nuevo sistema de ficheros en python, un lenguaje sencillo de aprender
-en el que se ve claramente lo necesario para utilizar FUSE: implementar
-las directivas de operación sobre ficheros.
+El punto interesante del artículo de Jose María Ruíz es que implementan un nuevo sistema de ficheros en python, un lenguaje sencillo de aprender en el que se ve claramente lo necesario para utilizar FUSE: implementar las directivas de operación sobre ficheros.
 
-En un sistema de ficheros estándar, utilizamos funciones como opendir,
-open, read, getattr para trabajar con ficheros, para utilizar FUSE,
-creamos métodos con esos nombres que realizan las operaciones que
-queremos, por ejemplo:
+En un sistema de ficheros estándar, utilizamos funciones como opendir, open, read, getattr para trabajar con ficheros, para utilizar FUSE, creamos métodos con esos nombres que realizan las operaciones que queremos, por ejemplo:
 
-    def readdir(self, path, offset): # read the next directory entry log.debug("readdir (%s) (%d)" % (str(path), int(offset))) node = self._nodes_by_path[path]
-     for n in node.get_nodes(): log.debug("would return (%s) for path (%s)" % (n.path, path)) yield fuse.Direntry(n.path.strip('/').encode('ascii'))
+{% highlight python %}
+def readdir(self, path, offset):
+    # read the next directory entry
+    log.debug("readdir (%s) (%d)" % (str(path), int(offset)))
+    node = self._nodes_by_path[path]
+    for n in node.get_nodes():
+        log.debug("would return (%s) for path (%s)" % (n.path, path))
+    yield fuse.Direntry(n.path.strip('/').encode('ascii'))
+{% endhighlight %}
 
-(Obtenido de
-[http://zmugtools.svn.sourceforge.ne...](http://zmugtools.svn.sourceforge.net/viewvc/zmugtools/tags/zmugfs/release-0.1/src/zmugfs.py?view=markup)
+(Obtenido de <http://zmugtools.svn.sourceforge.net/viewvc/zmugtools/tags/zmugfs/release-0.1/src/zmugfs.py?view=markup>)
 
-Así pues, aparte de los múltiples sistemas de ficheros ya disponibles
-con FUSE (entre ellos uno de los más conocidos inicialmente fue gmailfs
-que permitía utilizar el espacio de una cuenta de gmail como almacén de
-ficheros accesible de forma remota), podremos crear los que podamos
-necesitar de forma sencilla utilizando python (o el lenguaje de nuestra
-preferencia) para implementar las funciones de acceso.
-
-* * * * *
-
-[[1](#nh2-1 "Notas 2-1")] Filesystem in userspace
+Así pues, aparte de los múltiples sistemas de ficheros ya disponibles con FUSE (entre ellos uno de los más conocidos inicialmente fue gmailfs que permitía utilizar el espacio de una cuenta de gmail como almacén de ficheros accesible de forma remota), podremos crear los que podamos necesitar de forma sencilla utilizando python (o el lenguaje de nuestra preferencia) para implementar las funciones de acceso.

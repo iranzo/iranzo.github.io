@@ -29,7 +29,7 @@ cd-rom (no había internet con tanta facilidad de acceso como hay ahora
 Ya en la facultad y gracias a Jose Mª, y al uso que hice del servidor de
 correo de la facultad de Físicas, pudimos probar en un equipo "viejo",
 un P100 con 32 Mb de RAM y un disco duro, creo recordar que de 500 Mb
-una instalación de [Red Hat](http://www.es.redhat.com/) Linux 5.0, que
+una instalación de [Red Hat](http://www.redhat.com/) Linux 5.0, que
 se convirtió en el punto de partida para poder practicar otras
 habilidades relacionadas con el mundo de Linux: servidores de correo,
 servidores web, etc.
@@ -51,22 +51,19 @@ por Ubuntu pero la volví a actualizar a Debian.
 
 **¿Qué me parece cada distribución a día de hoy?**
 
-- 
-[Slackware](http://www.slackware.com/): Tengo constancia de mucha gente
+-  [Slackware](http://www.slackware.com/): Tengo constancia de mucha gente
 que la utiliza, personalmente sólo estuvo en mis primeros pasos con
 Linux y sigue teniendo muy buena reputación, aunque como he dicho, hace
 años que no la utilizo.
 
--  [Red Hat
-Linux](http://www.redhat.com/): Ya obsoleta, me introdujo en el mundo
+-  [Red Hat Linux](http://www.redhat.com/): Ya obsoleta, me introdujo en el mundo
 del manejo de dependencias, actualizaciones. Siempre me encantó
 [RHN](https://alufis35.uv.es/rhn.redhat.com) como herramienta que me
 permitía ver vía web el estado de todos mis sistemas, su estado de
 actualizaciones, así como algo de información de inventario. Pasó a ser
 Fedora y Red Hat Enterprise Linux poco después de la 9.2
 
-- 
-[SuSE](http://www.suse.de/): Durante el periodo de la 5.0 a la 8.0 que
+- [SuSE](http://www.suse.de/): Durante el periodo de la 5.0 a la 8.0 que
 era cuando más la utilicé, me proporcionaba en un conjunto de discos
 unos buenos manuales y más software del que quisiera jamás :-). A su
 favor, era muy sencilla de configurar, detectaba muy bien el hardware y
@@ -76,8 +73,7 @@ el sistema, destruyendo cualquier cambio personalizado que se hubiera
 podido realizar (lo que permitía arreglar las cosas si habíamos metido
 la pata).
 
-- 
-[Debian](http://www.debian.org/): Más espartana a la hora de instalarla
+- [Debian](http://www.debian.org/): Más espartana a la hora de instalarla
 pero ideal para equipos antiguos, Mientras SuSE necesitaba 80 Mb de RAM
 para poder cargar el instalador, Debian, funciona en equipos con 32Mb
 (aún tengo un Pentium a 75Mhz con 32 Mb de ram haciendo de router en el
@@ -87,8 +83,7 @@ cuantas cuestiones básicas que permiten dejarlos configurados a la vez
 que se instalan, que como contrapartida hace que haya que estar
 pendiente de la instalación.
 
-- 
-[Ubuntu](http://www.ubuntu.com/): Una Debian con ciclos más cortos entre
+- [Ubuntu](http://www.ubuntu.com/): Una Debian con ciclos más cortos entre
 versiones, que permitía probar nuevos desarrollos para escritorio,etc.
 No hay demasiada diferencia con respecto a una Debian testing (que
 tampoco me resultó tan inestable) y de hecho, ante las dudas de un
@@ -102,7 +97,7 @@ formatos propietarios) es, a mi parecer, un peligro a la larga para el
 software libre. A modo de ejemplo, hace años gasté casi el triple en un
 adaptador USB Wireless para disponer de uno con controlador libre (Zydas
 1211) que me permitía utilizar dicho adaptador tanto en Linux x86 como
-x86\_64 como en PowerPC. Mucha gente se contentaba con usar el
+x86_64 como en PowerPC. Mucha gente se contentaba con usar el
 ndiswrapper que utilizaba su controlador binario de Win32 y se encontró
 con la desagradable sorpresa de que en sistemas de 64 bits no era
 operativo. A corto plazo hace la vida fácil, a largo plazo, te encadena.
@@ -110,8 +105,7 @@ Por otro lado, Ubuntu ha dañado bastante al proyecto Debian contratando
 a muchos de sus programadores sin colaborar excesivamente liberando
 nuevo código aprovechable por otras distribuciones.
 
-- 
-[Gentoo](http://www.gentoo.org/): Gentoo se hizo muy famosa hace unos
+- [Gentoo](http://www.gentoo.org/): Gentoo se hizo muy famosa hace unos
 años porque supuestamente optimizaba el rendimiento sobre el hardware al
 compilarse específicamente sobre el hardware que se tenía y en base a
 otro software instalado. Personalmente sólo intenté instalarla durante
@@ -121,8 +115,7 @@ de instalación es manual, se aprende mucho acerca de cómo funciona un
 sistema con Linux y lo que otras distribuciones "esconden". Tienen muy
 buena documentación :)
 
-- 
-[CentOS](http://www.centos.org/): CentOS (Community Enterprise Operating
+- [CentOS](http://www.centos.org/): CentOS (Community Enterprise Operating
 System) es una comunidad que toma los códigos fuente de Red Hat
 Enterprise Linux ([ftp://ftp.redhat.com](ftp://ftp.redhat.com/)) y los
 compila tras eliminar todas las "marcas registradas" ofreciendo una
@@ -133,8 +126,7 @@ practicar nuestras habilidades con una de las distribuciones más
 extendidas a nivel empresarial). Además de CentOS existen otras
 distribuciones que hacen una labor parecida como Scientific Linux, etc
 
--  [Red Hat Enteprise
-Linux](http://www.redhat.com/rhel/): Una de las distribuciones más
+-  [Red Hat Enteprise Linux](http://www.redhat.com/rhel/): Una de las distribuciones más
 difundidas en entorno empresarial, [colaboradora
 activamente](http://fedoraproject.org/wiki/RedHatContributions) en el
 desarrollo de Linux a través del proyecto
@@ -142,8 +134,7 @@ desarrollo de Linux a través del proyecto
 RPM para la gestión de su software, uno de los más extendidos por otros
 fabricantes para proporcionar sus aplicaciones, controladores, etc.
 
-- 
-[Fedora](http://fedoraproject.org/): Evolución de Red Hat Linux (sin
+- [Fedora](http://fedoraproject.org/): Evolución de Red Hat Linux (sin
 Enterprise) que sigue recibiendo el apoyo de Red Hat para que como
 comunidad desarrollen la distribución. Se ha caracterizado por
 introducir novedosas mejoras tecnológicas. Una de las quizás más
@@ -152,51 +143,16 @@ controvertidas fue la introducción de[Security Enhanced Linux
 que inicialmente presentó algún problema para los usuarios pero que hoy
 en dia proporciona mayor seguridad de forma casi transparente.
 
-**¿Que me motivó?**\
--  Slack, la primera
-que tuve debido a haberla conseguido con Sólo Programadores\
--  Red Hat Linux, la
-primera con un instalador fácil que conseguí y con la que estuve muchos
-años, se me hacía incómodo el manejo de dependencias en las
-actualizaciones, pero no era excesivamente grave... y en aquella época,
-era algo común entre las distribuciones :)\
--  SuSE Linux: Poder
-probar las traducciones del software y ver a qué se refería el manual
-(en papel).\
--  Debian: reducido
-tamaño: miles de paquetes que permitían instalar sólo lo mínimo... lo
-hacían complicado para usuarios noveles que se podían asustar al ver
-tantos paquetes pero realmente permite instalar programas sueltos sin
-tener que ir empaquetados junto con otro software que no se va a
-utilizar.\
--  Ubuntu: ciclos más
-cortos que Debian que permitían probar software más actualizado.\
--  Debian (de nuevo):
-Cifrado LVM. Por motivos laborales, mi portátil con Red Hat Enterprise
-Linux utiliza cifrado de la carpeta /home, algo que veo muy útil de cara
-a proteger información confidencial en caso de robo. Cuando tuve que
-reinstalar mi PC debido a un cambio de disco, aproveché la oportunidad
-para cifrar también mi disco y me encontré con que en aquel momento,
-sólo Debian (entre Debian, Ubuntu, Fedora, CentOS) era capaz de cifrar
-"TODO" el sistema de ficheros (excepto /boot). Mientras CentOS y Fedora
-permitían cifrar un volumen (con cryptsetup), Debian incorporaba en
-Debian Installer todo lo necesario, incluso mensajes que recomendaban
-cifrar el espacio de intercambio si se cifra algún otro volumen para
-prevenir posibles claves almacenadas en swap.\
--  CentOS:
-Posibilidad de usar SELinux y [Cobbler](http://cobbler.et.redhat.com/)
-(un software libre para gestión de infraestructuras de instalación), así
-como estar basada en Red Hat Enterprise Linux que me permitía practicar
-habilidades :)\
--  Fedora: Desde la
-versión 9 soporta cifrado completo como hacía Debian y como añadido
-lleva incorporado de serie SELinux, una característica que como ya he
-comentado me atrae por su filosofía. Además disponía de Firefox 3 (que
-iba mucho mejor en mi portátil con RHEL 5 que FF 1.5). Además, tiene
-ciclos cortos de desarrollo lo que permite también probar nuevas
-características y la verdad es que hay bastantes proyectos interesantes
-bajo el paraguas de Fedora ([smolt](http://smolt.fedoraproject.org/),
-directory server, FreeIPA, etc)
+**¿Que me motivó?**
+
+-  Slack, la primera que tuve debido a haberla conseguido con Sólo Programadores
+-  Red Hat Linux, la primera con un instalador fácil que conseguí y con la que estuve muchos años, se me hacía incómodo el manejo de dependencias en las actualizaciones, pero no era excesivamente grave... y en aquella época, era algo común entre las distribuciones :)
+-  SuSE Linux: Poder probar las traducciones del software y ver a qué se refería el manual (en papel).
+-  Debian: reducido tamaño: miles de paquetes que permitían instalar sólo lo mínimo... lo hacían complicado para usuarios noveles que se podían asustar al ver tantos paquetes pero realmente permite instalar programas sueltos sin tener que ir empaquetados junto con otro software que no se va a utilizar.
+-  Ubuntu: ciclos más cortos que Debian que permitían probar software más actualizado.
+-  Debian (de nuevo): Cifrado LVM. Por motivos laborales, mi portátil con Red Hat Enterprise Linux utiliza cifrado de la carpeta /home, algo que veo muy útil de cara a proteger información confidencial en caso de robo. Cuando tuve que reinstalar mi PC debido a un cambio de disco, aproveché la oportunidad para cifrar también mi disco y me encontré con que en aquel momento, sólo Debian (entre Debian, Ubuntu, Fedora, CentOS) era capaz de cifrar "TODO" el sistema de ficheros (excepto /boot). Mientras CentOS y Fedora permitían cifrar un volumen (con cryptsetup), Debian incorporaba en Debian Installer todo lo necesario, incluso mensajes que recomendaban cifrar el espacio de intercambio si se cifra algún otro volumen para prevenir posibles claves almacenadas en swap.
+-  CentOS: Posibilidad de usar SELinux y [Cobbler](http://cobbler.et.redhat.com/) (un software libre para gestión de infraestructuras de instalación), así como estar basada en Red Hat Enterprise Linux que me permitía practicar habilidades :)
+-  Fedora: Desde la versión 9 soporta cifrado completo como hacía Debian y como añadido lleva incorporado de serie SELinux, una característica que como ya he comentado me atrae por su filosofía. Además disponía de Firefox 3 (que iba mucho mejor en mi portátil con RHEL 5 que FF 1.5). Además, tiene ciclos cortos de desarrollo lo que permite también probar nuevas características y la verdad es que hay bastantes proyectos interesantes bajo el paraguas de Fedora ([smolt](http://smolt.fedoraproject.org/), directory server, FreeIPA, etc)
 
 **En resumen**
 
@@ -208,13 +164,7 @@ OpenOffice para documentos. Para la parte multimedia, utilizo Exaile
 como reproductor (muy parecido a Amarok) y VLC como reproductor de
 vídeo.
 
-En los servidores tengo una mezcla de Debian, CentOS y RHEL, moviendo
-los basados en Debian a CentOS por la mayor experiencia que tengo en la
-creación y gestión de paquetes RPM y la automatización de
-instalaciones([Kickstart: instalaciones automatizadas para
-anaconda](https://alufis35.uv.es/Kickstart-instalaciones.html)).
+En los servidores tengo una mezcla de Debian, CentOS y RHEL, moviendo los basados en Debian a CentOS por la mayor experiencia que tengo en la creación y gestión de paquetes RPM y la automatización de instalaciones([Kickstart: instalaciones automatizadas para anaconda](https://alufis35.uv.es/Kickstart-instalaciones.html)).
 
-En el blog de [Pere
-Benavent](http://www.benavent.org/diario/2008/06/fedora-9-just-installed.html)
-tienes información para terminar de afinar la instalación de Fedora 9
-siguiendo sus instrucciones
+En el blog de [Pere Benavent](http://www.benavent.org/diario/2008/06/fedora-9-just-installed.html)
+tienes información para terminar de afinar la instalación de Fedora 9 siguiendo sus instrucciones
