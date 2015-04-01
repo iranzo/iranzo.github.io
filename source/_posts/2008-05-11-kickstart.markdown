@@ -1,4 +1,0 @@
----
-title: Kickstart installations
----
-
