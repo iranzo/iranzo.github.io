@@ -2,10 +2,12 @@
 layout: post
 title: Creación de distribuciones Live con Fedora
 date: 2008-09-24T20:34:16Z
+author: Pablo Iranzo Gómez
+category: [linux, fedora]
 ---
 
 
-### Introducción {.spip}
+### Introducción 
 
 Según lo visto en el artículo sobre kickstart ([Kickstart: instalaciones
 automatizadas para
@@ -19,7 +21,7 @@ crear una imagen ISO con una instalacion del sistema que hayamos
 escogido que tiene la característica de poderse ejecutar desde un
 CD/DVD.
 
-### Ejemplo {.spip}
+### Ejemplo 
 
 Por ejemplo, podemos personalizar nuestro medio 'live' cambiando el
 mensaje de login con un:
@@ -124,7 +126,7 @@ Un ejemplo de kickstart para un medio Live podría ser:
     echo "Inicie sesión como 'root' sin contraseña" >> /etc/issue
     echo " " >> /etc/issue
 
-### Creación {.spip}
+### Creación 
 
 Para generar la imagen Live, ejecutaremos
 
@@ -133,12 +135,12 @@ Para generar la imagen Live, ejecutaremos
 Al acabar, obtendremos un fichero ".iso" que contendrá un medio 'Vivo'
 basado en nuestro guión de instalación.
 
-### Llaves USB/Pendrives {.spip}
+### Llaves USB/Pendrives 
 
 Livecd-tools incorpora dos utilidades más:\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif)
+- 
 livecd-iso-to-disk\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif)
+- 
 livecd-iso-to-pxeboot
 
 Que graban esa imagen ISO en un medio USB y lo hacen arrancable, y por
@@ -147,7 +149,7 @@ entorno diskless nuestra imagen Live, por ejemplo, para hacer un medio
 de rescate más completo que el entorno mínimo que suelen ofrecer las
 distribuciones.
 
-### Conclusión {.spip}
+### Conclusión 
 
 Aprovechando los conocimientos que ya teníamos acerca de kickstart y
 anaconda, podemos personalizar un medio Vivo, livecd-tools se encargarán

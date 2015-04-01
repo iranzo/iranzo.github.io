@@ -2,6 +2,8 @@
 layout: post
 title: (mi) Evolución con Linux
 date: 2008-06-03T22:32:07Z
+author: Pablo Iranzo Gómez
+category: [ linux ]
 ---
 
 **Antecedentes**
@@ -49,13 +51,13 @@ por Ubuntu pero la volví a actualizar a Debian.
 
 **¿Qué me parece cada distribución a día de hoy?**
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif)
+- 
 [Slackware](http://www.slackware.com/): Tengo constancia de mucha gente
 que la utiliza, personalmente sólo estuvo en mis primeros pasos con
 Linux y sigue teniendo muy buena reputación, aunque como he dicho, hace
 años que no la utilizo.
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) [Red Hat
+-  [Red Hat
 Linux](http://www.redhat.com/): Ya obsoleta, me introdujo en el mundo
 del manejo de dependencias, actualizaciones. Siempre me encantó
 [RHN](https://alufis35.uv.es/rhn.redhat.com) como herramienta que me
@@ -63,7 +65,7 @@ permitía ver vía web el estado de todos mis sistemas, su estado de
 actualizaciones, así como algo de información de inventario. Pasó a ser
 Fedora y Red Hat Enterprise Linux poco después de la 9.2
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif)
+- 
 [SuSE](http://www.suse.de/): Durante el periodo de la 5.0 a la 8.0 que
 era cuando más la utilicé, me proporcionaba en un conjunto de discos
 unos buenos manuales y más software del que quisiera jamás :-). A su
@@ -74,7 +76,7 @@ el sistema, destruyendo cualquier cambio personalizado que se hubiera
 podido realizar (lo que permitía arreglar las cosas si habíamos metido
 la pata).
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif)
+- 
 [Debian](http://www.debian.org/): Más espartana a la hora de instalarla
 pero ideal para equipos antiguos, Mientras SuSE necesitaba 80 Mb de RAM
 para poder cargar el instalador, Debian, funciona en equipos con 32Mb
@@ -85,7 +87,7 @@ cuantas cuestiones básicas que permiten dejarlos configurados a la vez
 que se instalan, que como contrapartida hace que haya que estar
 pendiente de la instalación.
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif)
+- 
 [Ubuntu](http://www.ubuntu.com/): Una Debian con ciclos más cortos entre
 versiones, que permitía probar nuevos desarrollos para escritorio,etc.
 No hay demasiada diferencia con respecto a una Debian testing (que
@@ -108,7 +110,7 @@ Por otro lado, Ubuntu ha dañado bastante al proyecto Debian contratando
 a muchos de sus programadores sin colaborar excesivamente liberando
 nuevo código aprovechable por otras distribuciones.
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif)
+- 
 [Gentoo](http://www.gentoo.org/): Gentoo se hizo muy famosa hace unos
 años porque supuestamente optimizaba el rendimiento sobre el hardware al
 compilarse específicamente sobre el hardware que se tenía y en base a
@@ -119,7 +121,7 @@ de instalación es manual, se aprende mucho acerca de cómo funciona un
 sistema con Linux y lo que otras distribuciones "esconden". Tienen muy
 buena documentación :)
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif)
+- 
 [CentOS](http://www.centos.org/): CentOS (Community Enterprise Operating
 System) es una comunidad que toma los códigos fuente de Red Hat
 Enterprise Linux ([ftp://ftp.redhat.com](ftp://ftp.redhat.com/)) y los
@@ -131,7 +133,7 @@ practicar nuestras habilidades con una de las distribuciones más
 extendidas a nivel empresarial). Además de CentOS existen otras
 distribuciones que hacen una labor parecida como Scientific Linux, etc
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) [Red Hat Enteprise
+-  [Red Hat Enteprise
 Linux](http://www.redhat.com/rhel/): Una de las distribuciones más
 difundidas en entorno empresarial, [colaboradora
 activamente](http://fedoraproject.org/wiki/RedHatContributions) en el
@@ -140,7 +142,7 @@ desarrollo de Linux a través del proyecto
 RPM para la gestión de su software, uno de los más extendidos por otros
 fabricantes para proporcionar sus aplicaciones, controladores, etc.
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif)
+- 
 [Fedora](http://fedoraproject.org/): Evolución de Red Hat Linux (sin
 Enterprise) que sigue recibiendo el apoyo de Red Hat para que como
 comunidad desarrollen la distribución. Se ha caracterizado por
@@ -151,25 +153,25 @@ que inicialmente presentó algún problema para los usuarios pero que hoy
 en dia proporciona mayor seguridad de forma casi transparente.
 
 **¿Que me motivó?**\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Slack, la primera
+-  Slack, la primera
 que tuve debido a haberla conseguido con Sólo Programadores\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Red Hat Linux, la
+-  Red Hat Linux, la
 primera con un instalador fácil que conseguí y con la que estuve muchos
 años, se me hacía incómodo el manejo de dependencias en las
 actualizaciones, pero no era excesivamente grave... y en aquella época,
 era algo común entre las distribuciones :)\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) SuSE Linux: Poder
+-  SuSE Linux: Poder
 probar las traducciones del software y ver a qué se refería el manual
 (en papel).\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Debian: reducido
+-  Debian: reducido
 tamaño: miles de paquetes que permitían instalar sólo lo mínimo... lo
 hacían complicado para usuarios noveles que se podían asustar al ver
 tantos paquetes pero realmente permite instalar programas sueltos sin
 tener que ir empaquetados junto con otro software que no se va a
 utilizar.\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Ubuntu: ciclos más
+-  Ubuntu: ciclos más
 cortos que Debian que permitían probar software más actualizado.\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Debian (de nuevo):
+-  Debian (de nuevo):
 Cifrado LVM. Por motivos laborales, mi portátil con Red Hat Enterprise
 Linux utiliza cifrado de la carpeta /home, algo que veo muy útil de cara
 a proteger información confidencial en caso de robo. Cuando tuve que
@@ -181,12 +183,12 @@ permitían cifrar un volumen (con cryptsetup), Debian incorporaba en
 Debian Installer todo lo necesario, incluso mensajes que recomendaban
 cifrar el espacio de intercambio si se cifra algún otro volumen para
 prevenir posibles claves almacenadas en swap.\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) CentOS:
+-  CentOS:
 Posibilidad de usar SELinux y [Cobbler](http://cobbler.et.redhat.com/)
 (un software libre para gestión de infraestructuras de instalación), así
 como estar basada en Red Hat Enterprise Linux que me permitía practicar
 habilidades :)\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Fedora: Desde la
+-  Fedora: Desde la
 versión 9 soporta cifrado completo como hacía Debian y como añadido
 lleva incorporado de serie SELinux, una característica que como ya he
 comentado me atrae por su filosofía. Además disponía de Firefox 3 (que

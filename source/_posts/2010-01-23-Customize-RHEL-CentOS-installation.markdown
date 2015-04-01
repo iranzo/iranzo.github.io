@@ -2,17 +2,19 @@
 layout: post
 title: Customize RHEL/CentOS installation media (EL4/EL5+)
 date: 2010-01-23T08:25:00Z
+author: Pablo Iranzo Gómez
+category: [rhel, centos, linux, installation]
 ---
-### Introduction {.spip}
+### Introduction 
 
 A standard install media, (let's talk about a DVD for easier start) has
 several files/folders at his root, but most important are:
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) isolinux (where
+-  isolinux (where
 the loader lives)\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) images (for extra
+-  images (for extra
 files for installer to load)\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Packages for
+-  Packages for
 installation (RedHat/ for EL4, Server/Client for EL5)
 
 Usually, a distribution has for it's main binaries more than 2 Gb of
@@ -25,7 +27,7 @@ you'll need to upgrade to have recent patches.
 ¿Wouldn't it be better to have one install media suited for your target
 systems with all available updates applied?
 
-### Preparing everything {.spip}
+### Preparing everything 
 
 First, we'll need to copy all of our DVD media to a folder in our
 harddrive, including those hidden files on DVD root (the ones telling
@@ -36,7 +38,7 @@ Let's asume that we'll work on /home/user/DVD/
 After we've copied everything from our install media, we'll start
 customizing :)
 
-### DVD background image at boot prompt {.spip}
+### DVD background image at boot prompt 
 
 We can customize DVD background image and even keyboard layout by
 tweaking "isolinux/isolinux.cfg" with all required fields
@@ -47,15 +49,15 @@ anaconda](https://alufis35.uv.es/Kickstart-instalaciones.html) (spanish)
 you can also check how to create a kickstart, so you can embed it on
 this DVD and configure isolinux.cfg to automatic provision a system
 
-### Including updates {.spip}
+### Including updates 
 
 The easiest way would be to install a system with all required package
 set from original DVD media, and then connect that system to an update
 server to fetch but not install them.
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) EL4: up2date -du
+-  EL4: up2date -du
 // yum upgrade —downloadonly\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) EL5: yum upgrade
+-  EL5: yum upgrade
 —downloadonly
 
 After you download every single update, you'll need to copy them to a
@@ -71,14 +73,14 @@ After some minutes, you'll have all updates in place... and you can
 remove the DVD/updates/ folder as it will be empty after placing each
 updated RPM in the folder where the previous versions was.
 
-### Removing unused packages {.spip}
+### Removing unused packages 
 
 Well, after having everthing in place, we'll start removing unused
 files. Usually, we could check every package install status on 'test'
 system by checking rpm, but that's going to be a way looooong task, so
 we can 'automate' it a bit by doing:
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) If you have ssh
+-  If you have ssh
 password less connection between your systems (BUILD and TARGET):
 
 On BUILD system:
@@ -87,7 +89,7 @@ On BUILD system:
     do NAME=`rpm -q —queryformat '%NAME' $package` ssh TARGET "rpm -q $NAME >/dev/null 2>&1 || echo rm $package" |tee things-to-do
     done
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) If you don't have
+-  If you don't have
 ssh password-less setup (using private/public key auth or kerberos), you
 can do something similar this way:
 
@@ -112,14 +114,14 @@ If you're confident about it's contents, you can run 'sh things-to-do'
 and have all 'not installed on TARGET' packages removed from your DVD
 folder.
 
-### Adding extra software {.spip}
+### Adding extra software 
 
 In the same way we added updates, we can also add new software to be
 deployed along base system like monitoring utilities, custom software,
 HW drivers, etc, just add packages to desired folders before going
 throught next steps.
 
-### Recreating metadata {.spip}
+### Recreating metadata 
 
 After all our adds and removals, we need to tell installer that we
 changed packages, and update it's dependencies, install order, etc.
@@ -151,7 +153,7 @@ run:
 
     createrepo -g /home/DVD/Server/repodata/groupsfile.xml /home/DVD/Server/
 
-### Finishing {.spip}
+### Finishing 
 
 At this step you'll have a DVD structure on your hard drive, and just
 need to get an ISO to burn and test:

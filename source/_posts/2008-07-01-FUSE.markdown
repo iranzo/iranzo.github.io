@@ -2,9 +2,11 @@
 layout: post
 title: FUSE
 date: 2008-07-01T20:13:16Z
+author: Pablo Iranzo Gómez
+category: [linux, fuse]
 ---
 
-### Introducción {.spip}
+### Introducción 
 
 En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y
 debido a empezar a trabajar más con equipos portátiles me acostumbré a
@@ -34,7 +36,7 @@ liberar los puntos de montaje.
 Ésto me animó a probar otras alternativas y fue cuando FUSE volvió a mis
 manos.
 
-### FUSE {.spip}
+### FUSE 
 
 [FUSE](http://fuse.sourceforge.net/)
 [[1](#nb2-1 "Filesystem in userspace")] es un proyecto que permite
@@ -73,7 +75,7 @@ A partir de ese momento, cada vez que accedo a la carpeta
 equipo, al que se ha conectado por ssh y se le envian los comandos para
 abrir ficheros, renombrarlos, etc.
 
-### Extendiendo FUSE {.spip}
+### Extendiendo FUSE 
 
 El meollo de este artículo es un artículo "WEB LOCAL: Pythoneando con
 FUSE" de [Linux Magazine](http://www.linux-magazine.es/) (número 37) que
