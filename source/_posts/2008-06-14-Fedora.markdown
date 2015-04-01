@@ -1,0 +1,360 @@
+---
+layout: post
+title: Fedora
+date: 2008-06-14T05:00:00Z
+---
+![](https://alufis35.uv.es/IMG/arton40.png?1213294529)
+
+### Introducción {.spip}
+
+[Fedora](http://fedoraproject.org/) es una distribución
+[Linux](https://alufis35.uv.es/Que-es-Linux.html) fruto del desarrollo
+de la extinta Red Hat Linux.
+
+Red Hat Linux se readaptó al entorno empresarial proporcionado las
+opciones de soporte que las empresas buscaban en el software libre y del
+código de Red Linux, nacieron dos versiones, Red Hat Enterprise Linux,
+disponible para clientes con subscripciones
+[[1](#nb4-1 "Red Hat no vende "licencias de uso", vende servicios de soporte, (...)")]
+válidas y Fedora Core, sucesor directo de Red Hat Linux.
+
+Así pues el panorama quedaba del siguiente modo:
+
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Red Hat Enterprise
+Linux con ciclos de soporte de 7 años (parches, instalación, nuevo
+hardware, etc) que proporcionaban estabilidad a las empresas para
+mantener su sistema.
+
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Fedora Core, con
+ciclos de desarrollo de 6 meses, orientada a desarrollar e incluir
+tecnología punta en la distribución
+
+Con el nacimiento de Fedora Core, Red Hat siguió colaborando
+[[2](#nb4-2 "Hay una lista de contribuciones en http://fedoraproject.org/wiki/RedHa...")]
+en el desarrollo de Linux a través de RHEL y de Fedora, así como a
+través de los proyectos "upstream" dedicando recursos económicos y
+humanos alrededor de la comunidad Fedora, así como de las colaboraciones
+desinteresadas de personas de todo el mundo (algunos de ellos se
+consideran [Embajadores](http://fedoraproject.org/wiki/Ambassadors))
+
+Puedes consultar más información del proyecto en
+[http://fedoraproject.org/wiki/Overview](http://fedoraproject.org/wiki/Overview)
+
+### Características {.spip}
+
+Fedora, como decíamos, aporta una distribución equivalente a la antigua
+Red Hat Linux (misma estabilidad, etc que hace que mucha gente la
+utilice en los servidores en entornos de producción donde antes
+utilizaba Red Hat Linux), pero que a diferencia de Red Hat Enterprise
+Linux, se enfoca a introducir más rápidamente las novedades tecnológicas
+disponibles.
+
+Todo el software incluído en Fedora es Software Libre.
+
+**Anaconda**
+
+Una de las características que más tiempo llevan es Anaconda, el
+instalador que utiliza la distribución para las operaciones de
+instalación y actualización desde un medio de instalación.
+
+Aparte del interfaz gráfico de instalación y una versión en modo texto
+muy similar dispone de una funcionalidad que lo convierte en único: La
+posibilidad de utilizar guiones de instalación que permitan automatizar
+completamente una instalación sin requerir interacción alguna por parte
+del usuario (ideal para instalar aulas de informática, colegios, lugares
+públicos tales como zonas de navegación, bibliotecas, etc).
+
+Puedes consultar información al respecto en [Kickstart: instalaciones
+automatizadas para
+anaconda](https://alufis35.uv.es/Kickstart-instalaciones.html)
+
+**Security Enhanced Linux (SELinux)**
+
+[SELinux](https://alufis35.uv.es/Security-Enhanced-Linux-SELinux.html)
+es un conjunto de módulos de seguridad para el kernel incorporados y
+activados por defecto en Fedora que confinan los programas en sus
+"compartimentos", impidiendo que realicen acciones que no deberían.
+
+Por ejemplo SELInux, puede proteger un sistema con un Apache afectado
+por una vulnerabilidad impidiendo que un atacante pueda acceder a
+ficheros ya sea para leer o escribir que no debiera.
+
+¿Y por qué no es mejor un entorno chroot? En un entorno chroot, se
+utilizan ciertos binarios y librerías de sistema para crear un sistema
+mínimo donde se ejecuta el programa, si un "atacante" comprometiera el
+servicio, cierto es que no entraría al sistema anfitrión, pero podría
+hacer de las suyas desde ese entorno "chroot" atacando a otras máquinas
+de la red interna.
+
+SELinux fue desarrollado en colaboración con la Agencia de Seguridad
+Nacional Norteamericana (NSA) y permite varias políticas de
+funcionamiento, desde la estándar en Fedora/RHEL (targetted) que sólo
+gestiona ciertos servicios sin afectar al resto de los instalados, a la
+estricta con varios niveles de credenciales que impiden acceso a datos
+para los que no se ha sido autorizado.
+
+**LVM**
+
+[Gestor de Volúmenes Lógicos
+(LVM)](https://alufis35.uv.es/Gestor-de-Volumenes-Logicos-LVM.html)
+viene incorporado de serie y habilitado por defecto en Fedora desde hace
+ya muchas versiones, como novedad en la versión 9 es la inclusión de la
+posibilidad de utilizar volúmenes cifrados para todos los datos (hasta
+el momento se podía hacer con volúmenes que no fueran el de sistema, por
+ejemplo con /home), aumentando así la seguridad de los datos
+confidenciales que se llevan en dispositivos portátileso pc's de cara a
+posibles [pérdidas o
+robos](http://news.google.es/news?hl=es&ned=es&q=datos++port%C3%A1til+robado&btnG=Buscar).
+
+**PackageKit**
+
+Es una capa de abstracción que permite crear herramientas de gestión de
+paquetes independientemente del sistema de paquetes utilizado, en el
+caso de Fedora, PackageKit viene integrado con yum y con el entorno
+gráfico para mostrar información de actualizaciones, progreso de las
+mismas, etc y que permitirá que se utilice la misma aplicación gráfica
+para la gestión del software conforme otras distribuciones lo vayan
+adoptando al igual que han hecho con el proyecto NetworkManager que
+permite gestionar y configurar las conexiones de red de nuestro equipo
+(Cable, Wifi, VPN, Marcado, etc)
+
+### Instalación {.spip}
+
+La instalación de Fedora se puede realizar de forma gráfica o en un
+interfaz en modo texto y debido a los requisitos de memoria del nuevo
+instalador, requiere un mínimo de 256Mb de RAM (se añadieron
+funcionalidades para poder recuperar la instalación en caso de fallo,
+que requirieron cargar más datos en el ramdisk inicial). En cualquier
+sistema actual no deberíamos tener ningún problema en instalarla.
+
+La secuencia de imágenes muestra los pasos seguidos desde que metemos y
+arrancamos el DVD hasta que tenemos el sistema instalado y funcionando.
+
+  ------------------ ------------------ ------------------ ------------------
+  [![PNG -           [![PNG -           [![PNG -           [![PNG -
+  121.2 KB](https:// 14.7 KB](https://a 5.2 KB](https://al 105.2 KB](https://
+  alufis35.uv.es/loc lufis35.uv.es/loca ufis35.uv.es/local alufis35.uv.es/loc
+  al/cache-vignettes l/cache-vignettes/ /cache-vignettes/L al/cache-vignettes
+  /L150xH113/Pantall L150xH84/Pantallaz 150xH84/Pantallazo /L150xH113/Pantall
+  azo-00-8ba4b.png)] o-01-69dba.png)](h -02-c2c01.png)](ht azo-03-1eb07.png)]
+  (https://alufis35. ttps://alufis35.uv tps://alufis35.uv. (https://alufis35.
+  uv.es/IMG/png/Pant .es/IMG/png/Pantal es/IMG/png/Pantall uv.es/IMG/png/Pant
+  allazo-00.png "PNG lazo-01.png "PNG - azo-02.png "PNG -  allazo-03.png "PNG
+   - 121.2 KB")       14.7 KB")         5.2 KB")            - 105.2 KB")
+  **Arranque DVD**   **Arranque         **Verificación     **Inicio
+                     kernel**           disco**            instalador**
+
+  [![PNG -           [![PNG -           [![PNG -           [![PNG -
+  73.7 KB](https://a 64.3 KB](https://a 86.6 KB](https://a 68.3 KB](https://a
+  lufis35.uv.es/loca lufis35.uv.es/loca lufis35.uv.es/loca lufis35.uv.es/loca
+  l/cache-vignettes/ l/cache-vignettes/ l/cache-vignettes/ l/cache-vignettes/
+  L150xH113/Pantalla L150xH113/Pantalla L150xH113/Pantalla L150xH113/Pantalla
+  zo-04-01bb7.png)]( zo-05-e5e5f.png)]( zo-06-301f9.png)]( zo-07-b58dc.png)](
+  https://alufis35.u https://alufis35.u https://alufis35.u https://alufis35.u
+  v.es/IMG/png/Panta v.es/IMG/png/Panta v.es/IMG/png/Panta v.es/IMG/png/Panta
+  llazo-04.png "PNG  llazo-05.png "PNG  llazo-06.png "PNG  llazo-07.png "PNG 
+  - 73.7 KB")        - 64.3 KB")        - 86.6 KB")        - 68.3 KB")
+  **Selección        **Selección        **Inicialización   **Configuración
+  idioma**           teclado**          disco**            red**
+
+  [![PNG -           [![PNG -           [![PNG -           [![PNG -
+  155.7 KB](https:// 51 KB](https://alu 64 KB](https://alu 76.1 KB](https://a
+  alufis35.uv.es/loc fis35.uv.es/local/ fis35.uv.es/local/ lufis35.uv.es/loca
+  al/cache-vignettes cache-vignettes/L1 cache-vignettes/L1 l/cache-vignettes/
+  /L150xH113/Pantall 50xH113/Pantallazo 50xH113/Pantallazo L150xH113/Pantalla
+  azo-08-5b1a6.png)] -09-ea6b0.png)](ht -10-6ed87.png)](ht zo-11-82e8f.png)](
+  (https://alufis35. tps://alufis35.uv. tps://alufis35.uv. https://alufis35.u
+  uv.es/IMG/png/Pant es/IMG/png/Pantall es/IMG/png/Pantall v.es/IMG/png/Panta
+  allazo-08.png "PNG azo-09.png "PNG -  azo-10.png "PNG -  llazo-11.png "PNG 
+   - 155.7 KB")      51 KB")            64 KB")            - 76.1 KB")
+  **Zona horaria**   **Password de      **Clave sencilla** **Particionamiento
+                     root**                                **
+
+  [![PNG -           [![PNG -           [![PNG -           [![PNG -
+  69.5 KB](https://a 86.6 KB](https://a 78 KB](https://alu 79.4 KB](https://a
+  lufis35.uv.es/loca lufis35.uv.es/loca fis35.uv.es/local/ lufis35.uv.es/loca
+  l/cache-vignettes/ l/cache-vignettes/ cache-vignettes/L1 l/cache-vignettes/
+  L150xH113/Pantalla L150xH113/Pantalla 50xH113/Pantallazo L150xH113/Pantalla
+  zo-12-4f0c4.png)]( zo-13-41e8f.png)]( -14-70657.png)](ht zo-15-7b4a3.png)](
+  https://alufis35.u https://alufis35.u tps://alufis35.uv. https://alufis35.u
+  v.es/IMG/png/Panta v.es/IMG/png/Panta es/IMG/png/Pantall v.es/IMG/png/Panta
+  llazo-12.png "PNG  llazo-13.png "PNG  azo-14.png "PNG -  llazo-15.png "PNG 
+  - 69.5 KB")        - 86.6 KB")        78 KB")            - 79.4 KB")
+  **Cifrado de       **Aplicar cambios  **Formateo**       **Preparación
+  discos**           en disco**                            instalador**
+
+  [![PNG -           [![PNG -           [![PNG -           [![PNG -
+  77.8 KB](https://a 73.1 KB](https://a 77.3 KB](https://a 83 KB](https://alu
+  lufis35.uv.es/loca lufis35.uv.es/loca lufis35.uv.es/loca fis35.uv.es/local/
+  l/cache-vignettes/ l/cache-vignettes/ l/cache-vignettes/ cache-vignettes/L1
+  L150xH113/Pantalla L150xH113/Pantalla L150xH113/Pantalla 50xH113/Pantallazo
+  zo-16-e7a25.png)]( zo-17-04d14.png)]( zo-18-f945b.png)]( -19-401f8.png)](ht
+  https://alufis35.u https://alufis35.u https://alufis35.u tps://alufis35.uv.
+  v.es/IMG/png/Panta v.es/IMG/png/Panta v.es/IMG/png/Panta es/IMG/png/Pantall
+  llazo-16.png "PNG  llazo-17.png "PNG  llazo-18.png "PNG  azo-19.png "PNG - 
+  - 77.8 KB")        - 73.1 KB")        - 77.3 KB")        83 KB")
+  **Preparando       **Repositorios de  **Verificando      **Empezando
+  paquetes**         software**         dependencias**     instalación**
+
+  [![PNG -           [![PNG -           [![PNG -           [![PNG -
+  115.7 KB](https:// 102.1 KB](https:// 66.1 KB](https://a 8.7 KB](https://al
+  alufis35.uv.es/loc alufis35.uv.es/loc lufis35.uv.es/loca ufis35.uv.es/local
+  al/cache-vignettes al/cache-vignettes l/cache-vignettes/ /cache-vignettes/L
+  /L150xH113/Pantall /L150xH113/Pantall L150xH113/Pantalla 150xH61/Pantallazo
+  azo-20-bf607.png)] azo-21-e9f6c.png)] zo-22-0211b.png)]( -23-1f9d9.png)](ht
+  (https://alufis35. (https://alufis35. https://alufis35.u tps://alufis35.uv.
+  uv.es/IMG/png/Pant uv.es/IMG/png/Pant v.es/IMG/png/Panta es/IMG/png/Pantall
+  allazo-20.png "PNG allazo-21.png "PNG llazo-22.png "PNG  azo-23.png "PNG - 
+   - 115.7 KB")       - 102.1 KB")      - 66.1 KB")        8.7 KB")
+  **Progreso         **Acabando         **Fin instalación  **Clave de cifrado
+  instalación**      instalación**      y reinicio**       de disco en el
+                                                           arranque**
+  ------------------ ------------------ ------------------ ------------------
+
+Tras el primer arranque mostrará unas últimas páginas de configuración y
+creación de un usuario que nos dejarán en la pantalla que vemos a
+continuación para iniciar sesión en el equipo.
+
+  ------------------ ------------------ ------------------ ------------------
+  [![PNG -           [![PNG -           [![PNG -           [![PNG -
+  182.1 KB](https:// 199.2 KB](https:// 206.7 KB](https:// 200.6 KB](https://
+  alufis35.uv.es/loc alufis35.uv.es/loc alufis35.uv.es/loc alufis35.uv.es/loc
+  al/cache-vignettes al/cache-vignettes al/cache-vignettes al/cache-vignettes
+  /L150xH113/Pantall /L150xH113/Pantall /L150xH113/Pantall /L150xH113/Pantall
+  azo-24-156da.png)] azo-25-79ba2.png)] azo-26-9d381.png)] azo-27-7cadc.png)]
+  (https://alufis35. (https://alufis35. (https://alufis35. (https://alufis35.
+  uv.es/IMG/png/Pant uv.es/IMG/png/Pant uv.es/IMG/png/Pant uv.es/IMG/png/Pant
+  allazo-24.png "PNG allazo-25.png "PNG allazo-26.png "PNG allazo-27.png "PNG
+   - 182.1 KB")       - 199.2 KB")       - 206.7 KB")       - 200.6 KB")
+  **Login al entorno **Informe y envío  **Actualizaciones  **Acceso como root
+  gráfico**          de errores**       pendientes**       para actualizar**
+
+  [![PNG -           [![PNG -           [![PNG -           
+  211.9 KB](https:// 204.9 KB](https:// 8.7 KB](https://al 
+  alufis35.uv.es/loc alufis35.uv.es/loc ufis35.uv.es/local 
+  al/cache-vignettes al/cache-vignettes /cache-vignettes/L 
+  /L150xH113/Pantall /L150xH113/Pantall 150xH67/Pantallazo 
+  azo-28-2929b.png)] azo-29-4fd0f.png)] -30-cebff.png)](ht 
+  (https://alufis35. (https://alufis35. tps://alufis35.uv. 
+  uv.es/IMG/png/Pant uv.es/IMG/png/Pant es/IMG/png/Pantall 
+  allazo-28.png "PNG allazo-29.png "PNG azo-30.png "PNG -  
+   - 211.9 KB")       - 204.9 KB")      8.7 KB")           
+  **PackageKit       **Actualización    **Contraseña del   
+  realizando las     completada**       protector de       
+  tareas de                             pantalla y         
+  actualización**                       posibilidad de     
+                                        dejar notas**      
+  ------------------ ------------------ ------------------ ------------------
+
+### ¿Y ahora qué? {.spip}
+
+Fedora, como decíamos es una distribución de software 100% libre que
+incorpora gracias a la colaboración con Sun, etc una implementación
+libre de su máquina Virtual (IcedTea), así como plugins libres para ver
+videos de Shockwave Flash, etc.
+
+Cuando intentamos visualizar algún formato propietario, Fedora nos
+informa de los problemas del uso de formatos propietarios y nos ofrece
+adquirir versiones licenciadas de los códecs para reproducirlos.
+
+Para los casos donde la legislación lo permite, y siguiendo la
+información de
+[http://www.benavent.org/diario/2008...](http://www.benavent.org/diario/2008/06/fedora-9-just-installed.html)
+y [http://hacktux.com/fedora](http://hacktux.com/fedora)
+
+Procederemos a:\
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Instalar el
+repositorio de Livna en nuestra máquina visitando
+[http://rpm.livna.org/](http://rpm.livna.org/) y presionando sobre el
+texto Fedora 9 repository RPM e instalándolo con nuestra clave de
+administrador.\
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Instalar el
+repositorio de Adobe en nuestro equipo instalando desde la web de
+[Adobe](http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash)
+la selección del desplegable "YUM para linux"
+
+Ahora ya podremos instalar las librerías necesarias:
+
+**Flash**
+
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Desinstalaremos
+con `yum remove swfdec-mozilla gnash-plugin`{.spip_code dir="ltr"} los
+plugins que instala por defecto Fedora\
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Instalaremos con
+`yum install flash-plugin pulseaudio-libs libflashsupport`{.spip_code
+dir="ltr"}
+
+**Adobe Acrobat Reader**
+
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Lo instalaremos
+con `yum install AdobeReader_esp`{.spip_code dir="ltr"}\
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Activaremos el
+plugin en mozilla con:
+
+`cd /usr/lib/mozilla/plugins/ ln -s /opt/Adobe/Reader8/Browser/intellinux/nppdf.so .`
+
+**Audio/Video**
+
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Instalaremos con
+`yum install exaile vlc xmms-mp3 xine xine-lib-extras-nonfree gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-good gstreamer-plugins-pulse`{.spip_code
+dir="ltr"}
+
+**Java SUN**
+
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Desinstalaremos
+los paquetes de icedtea y openjdk instalados en el equipo\
+![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Descargaremos de
+[http://www.java.com](http://www.java.com/) el fichero RPM que
+proporcionan y lo instalaremos desde una consola lanzando el instalador
+con:
+
+`chmod +x jre-* ./jre-(VERSION)`
+
+Se nos pedirá aceptar la licencia y al cabo de un rato lo tendremos
+instalado para activar el plugin en firefox haremos:
+
+`cd /usr/lib/mozilla/plugins ln -s /usr/java/latest/plugin/i386/ns7/libjavaplugin_oji.so .`
+
+**Drivers gráficos acelerados**
+
+En los repositorios de livna existen paquetes de la forma
+kmod-tarjeta-gráfica y xorg-x11-drv-tarjeta-gráfica que al instalarlos
+modificarán en nuestro sistema la configuración de X-Window System en
+`/etc/X11/xorg.conf`{.spip_code dir="ltr"} y que permitirán en caso de
+disponer una tarjeta sin drivers acelerados libres (como ocurre con las
+gráficas Intel que permiten disfrutar de AIGLX y los efectos gráficos de
+Compiz sólo presionando un botón del panel de administración "Efectos de
+Escritorio".
+
+En el caso de NVIDIA tuve que agregar las siguientes líneas a la sección
+"Files"
+
+` ModulePath "/usr/lib/xorg/modules/extensions/nvidia" ModulePath "/usr/lib/xorg/modules"`
+
+**Extras**\
+ Recomiendo instalar yum-presto y yum-fastestmirror para que yum utilice
+rpm's diferenciales y por otro lado utilice el mirror más rápido para la
+descarga, todas las funciones se harán de forma transparente y además,
+disfrutaremos de mayor velocidad :-)
+
+Y ya tendremos el sistema listo y preparado para funcionar...
+
+¡¡A disfrutarlo!!
+
+* * * * *
+
+[[1](#nh4-1 "Notas 4-1")] Red Hat no vende "licencias de uso", vende
+servicios de soporte, actualización en forma de subscripciones, puede
+verse como una especie de tarifa plana para acceder a todas las
+versiones de los productos subscritos, soporte, etc
+
+[[2](#nh4-2 "Notas 4-2")] Hay una lista de contribuciones en
+[http://fedoraproject.org/wiki/RedHa...](http://fedoraproject.org/wiki/RedHatContributions)
+
+Si puedes y estás de acuerdo, instala el paquete "smolt", permite enviar
+un informe de tu hardware a
+[http://smolt.fedoraproject.org](http://smolt.fedoraproject.org/) que
+facilita saber qué tipo de hardware hay y se está utilizando y en caso
+de que algo no te funcioen puedes notificarlo. Siempre es más fácil que
+se desarrolle para mejorar el soporte sobre el hardware que se está
+utilizando ¿no?
