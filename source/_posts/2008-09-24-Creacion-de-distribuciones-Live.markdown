@@ -9,7 +9,7 @@ category: [linux, fedora]
 
 ### Introducción 
 
-Según lo visto en el artículo [Kickstart]({% post_url 2008-05-11-kickstart %}, podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
+Según lo visto en el artículo [Kickstart]({% post_url 2008-05-11-Kickstart-instalaciones %}, podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
 
 [Fedora]({% post_url 2008-06-14-Fedora %} proporciona unas utilidades 'livecd-tools' que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
 
