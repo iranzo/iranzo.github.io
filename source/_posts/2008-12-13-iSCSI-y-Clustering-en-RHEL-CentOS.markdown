@@ -4,6 +4,7 @@ title: iSCSI y Clustering en RHEL/CentOS
 date: 2008-12-13T17:59:41Z
 author: Pablo Iranzo Gómez
 category: [cluster,rhel, centos]
+published: false
 ---
 
 ### Introducción 
