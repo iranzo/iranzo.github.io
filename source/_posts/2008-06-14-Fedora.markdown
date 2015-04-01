@@ -2,10 +2,11 @@
 layout: post
 title: Fedora
 date: 2008-06-14T05:00:00Z
+author: Pablo Iranzo Gómez
+category: [Fedora, linux]
 ---
-![](https://alufis35.uv.es/IMG/arton40.png?1213294529)
 
-### Introducción {.spip}
+### Introducción 
 
 [Fedora](http://fedoraproject.org/) es una distribución
 [Linux](https://alufis35.uv.es/Que-es-Linux.html) fruto del desarrollo
@@ -20,12 +21,12 @@ válidas y Fedora Core, sucesor directo de Red Hat Linux.
 
 Así pues el panorama quedaba del siguiente modo:
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Red Hat Enterprise
+-  Red Hat Enterprise
 Linux con ciclos de soporte de 7 años (parches, instalación, nuevo
 hardware, etc) que proporcionaban estabilidad a las empresas para
 mantener su sistema.
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Fedora Core, con
+-  Fedora Core, con
 ciclos de desarrollo de 6 meses, orientada a desarrollar e incluir
 tecnología punta en la distribución
 
@@ -40,7 +41,7 @@ consideran [Embajadores](http://fedoraproject.org/wiki/Ambassadors))
 Puedes consultar más información del proyecto en
 [http://fedoraproject.org/wiki/Overview](http://fedoraproject.org/wiki/Overview)
 
-### Características {.spip}
+### Características 
 
 Fedora, como decíamos, aporta una distribución equivalente a la antigua
 Red Hat Linux (misma estabilidad, etc que hace que mucha gente la
@@ -118,7 +119,7 @@ adoptando al igual que han hecho con el proyecto NetworkManager que
 permite gestionar y configurar las conexiones de red de nuestro equipo
 (Cable, Wifi, VPN, Marcado, etc)
 
-### Instalación {.spip}
+### Instalación 
 
 La instalación de Fedora se puede realizar de forma gráfica o en un
 interfaz en modo texto y debido a los requisitos de memoria del nuevo
@@ -246,7 +247,7 @@ continuación para iniciar sesión en el equipo.
                                         dejar notas**      
   ------------------ ------------------ ------------------ ------------------
 
-### ¿Y ahora qué? {.spip}
+### ¿Y ahora qué? 
 
 Fedora, como decíamos es una distribución de software 100% libre que
 incorpora gracias a la colaboración con Sun, etc una implementación
@@ -263,12 +264,12 @@ información de
 y [http://hacktux.com/fedora](http://hacktux.com/fedora)
 
 Procederemos a:\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Instalar el
+-  Instalar el
 repositorio de Livna en nuestra máquina visitando
 [http://rpm.livna.org/](http://rpm.livna.org/) y presionando sobre el
 texto Fedora 9 repository RPM e instalándolo con nuestra clave de
 administrador.\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Instalar el
+-  Instalar el
 repositorio de Adobe en nuestro equipo instalando desde la web de
 [Adobe](http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash)
 la selección del desplegable "YUM para linux"
@@ -277,33 +278,33 @@ Ahora ya podremos instalar las librerías necesarias:
 
 **Flash**
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Desinstalaremos
+-  Desinstalaremos
 con `yum remove swfdec-mozilla gnash-plugin`{.spip_code dir="ltr"} los
 plugins que instala por defecto Fedora\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Instalaremos con
+-  Instalaremos con
 `yum install flash-plugin pulseaudio-libs libflashsupport`{.spip_code
 dir="ltr"}
 
 **Adobe Acrobat Reader**
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Lo instalaremos
+-  Lo instalaremos
 con `yum install AdobeReader_esp`{.spip_code dir="ltr"}\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Activaremos el
+-  Activaremos el
 plugin en mozilla con:
 
 `cd /usr/lib/mozilla/plugins/ ln -s /opt/Adobe/Reader8/Browser/intellinux/nppdf.so .`
 
 **Audio/Video**
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Instalaremos con
+-  Instalaremos con
 `yum install exaile vlc xmms-mp3 xine xine-lib-extras-nonfree gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-good gstreamer-plugins-pulse`{.spip_code
 dir="ltr"}
 
 **Java SUN**
 
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Desinstalaremos
+-  Desinstalaremos
 los paquetes de icedtea y openjdk instalados en el equipo\
-![-](https://alufis35.uv.es/squelettes-dist/puce.gif) Descargaremos de
+-  Descargaremos de
 [http://www.java.com](http://www.java.com/) el fichero RPM que
 proporcionan y lo instalaremos desde una consola lanzando el instalador
 con:

@@ -2,6 +2,8 @@
 layout: post
 title: Manifiesto en defensa de los derechos fundamentales en Internet
 date: 2009-12-03T20:48:43Z
+author: Pablo Iranzo Gómez
+category: [general]
 ---
 Ante la inclusión en el Anteproyecto de Ley de Economía sostenible de
 modificaciones legislativas que afectan al libre ejercicio de las

@@ -2,6 +2,8 @@
 layout: post
 title: Mount disk images
 date: 2008-07-18T06:17:02Z
+author: Pablo Iranzo Gómez
+category: [linux, xen]
 ---
 
 I've been using a Xen guest under RHEL 5.2 to hold this webserver, and

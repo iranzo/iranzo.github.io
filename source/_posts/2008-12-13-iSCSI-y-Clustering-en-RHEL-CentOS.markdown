@@ -2,10 +2,11 @@
 layout: post
 title: iSCSI y Clustering en RHEL/CentOS
 date: 2008-12-13T17:59:41Z
+author: Pablo Iranzo Gómez
+category: [cluster,rhel, centos]
 ---
-2008-12-13T17:59:41Z ---
 
-### Introducción {.spip}
+### Introducción 
 
 Durante la última semana estuve jugando de nuevo con iSCSI en el curso
 de [RH436 Enterprise Clustering and Storage
@@ -55,7 +56,7 @@ acceda guarde los logs en una carpeta.
 Imagina lanzar tantas máquinas virtuales como sea necesario para atender
 la demanda, poder distribuirlas en la red.
 
-### Manos a la obra {.spip}
+### Manos a la obra 
 
 **Target iSCSI**
 
@@ -111,7 +112,7 @@ Que descubrirá los targets disponibles para nuestra IP y luego hará
 unidades disponibles que se presentarán como SCSI a nuestro pc, podremos
 particionarlas, etc.
 
-### El clúster {.spip}
+### El clúster 
 
 Si queremos hacer las cosas de la forma 'sencilla', deberemos instalar
 'luci' en una de las máquinas, ya sea en un nodo de control, o en el
@@ -166,7 +167,7 @@ reiniciarán, por un lado para liberar cualquier tipo de acceso a disco,
 etc que hubiera estado haciendo a los recursos del cluster, como para
 intentar recuperarlo.
 
-### GFS: Global File System {.spip}
+### GFS: Global File System 
 
 ¿Qué pinta GFS en todo esto?
 
@@ -194,7 +195,7 @@ Este tipo de enlaces se denominan CDPN: Context-dependent pathnames y
 nos permiten jugar con este tipo de cosas y aprovechar las ventajas de
 un almacenamiento único.
 
-### ¿Y si falla la red {.spip}
+### ¿Y si falla la red 
 
 Como siempre podemos tener problemas con la red, la forma de
 solucionarlos consiste en tener varios interfaces de red en los equipos
@@ -208,7 +209,7 @@ configuramos las tarjetas de red en modo bonding, ya tenemos el acceso
 más o menos asegurado ante las catástrofes más comunes y nuestros datos
 disponibles
 
-### Conclusión {.spip}
+### Conclusión 
 
 Tenemos a nuestro alcance muchas herramientas para hacer sencilla la
 utilización y creación de sistemas equivalentes a lo que hace años sólo
