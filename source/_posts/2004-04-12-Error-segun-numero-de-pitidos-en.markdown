@@ -3,21 +3,17 @@ layout: post
 title: Error según número de pitidos en la BIOS
 date: 2004-04-12T09:54:00Z
 category: [hardware]
-published: false
 ---
 
-Las BIOS [[1](#nb11-1 "BIOS: Basic Input Output System")] de los pc's
-informan de los errores del hardware del pc en el arranque mediante un
-código de pitidos en el caso en el que no puede aparece nada por
-pantalla... aqui los podrás ver..
+Las BIOS (Basic Input Output System) de los pc's informan de los errores del hardware del pc en el arranque mediante un código de pitidos en el caso en el que no puede aparece nada por pantalla... aqui los podrás ver..
 
 Código de errores emitido por la BIOS para indicar los problemas que
-surgen durante el POST
-[[2](#nb11-2 "POST: Power On Self Test (Autocomprobación tras el encendido)")]
+surgen durante el POST (Power On Self Test (Autocomprobación tras el encendido))
 del arranque:
 
 **Errores Fatales**
 
+~~~
   Número de Pitidos   Significado
   ------------------- -------------------------------------
   1                   Error de refresco DRAM
@@ -27,17 +23,14 @@ del arranque:
   6                   Error de la puerta de teclado A20
   7                   Error de excepción del modo virtual
   9                   Error de checksum de la ROM-BIOS
+~~~
 
 **Errores no fatales**
 
+~~~
   Número de Pitidos   Significado
   ------------------- -----------------------------------------------------------
   3                   Fallo de comprobación de memoria convencional y extendida
   8                   Fallo de monitor y fallo de trazado vertical y horizontal
+~~~
 
-* * * * *
-
-[[1](#nh11-1 "Notas 11-1")] BIOS: Basic Input Output System
-
-[[2](#nh11-2 "Notas 11-2")] POST: Power On Self Test (Autocomprobación
-tras el encendido)
