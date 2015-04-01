@@ -4,6 +4,7 @@ title: FUSE
 date: 2008-07-01T20:13:16Z
 author: Pablo Iranzo Gómez
 category: [linux, fuse]
+published: false
 ---
 
 ### Introducción 
