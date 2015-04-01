@@ -3,7 +3,7 @@ layout: post
 title: "Migrate SPIP-RSS post feed to HTML"
 date: 2015-04-01 16:49:13 +0200
 comments: true
-category: python spip markdown html
+category: [python, spip, markdown, html]
 description: 
 ---
 
