@@ -13,7 +13,7 @@ Initially, I migrated my posts from blogger, where there's an option to export t
 
 Next step, was to migrate old posts on my spip site.
 
-SPIP, as it not as popular as other solutions, might lack plugins for importing the data, but has a nice feature: it allows to provide full article contents via RSS.
+SPIP, being not as popular as other solutions, might lack plugins for importing the data, but has a nice feature: it allows to provide full article contents via RSS.
 
 So:
 
