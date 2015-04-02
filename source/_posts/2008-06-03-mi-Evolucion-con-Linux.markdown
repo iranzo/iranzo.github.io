@@ -45,7 +45,7 @@ años que no la utilizo.
 -  [Red Hat Enteprise Linux](http://www.redhat.com/rhel/): Una de las distribuciones más
 difundidas en entorno empresarial, [colaboradora activamente](http://fedoraproject.org/wiki/RedHatContributions) en el desarrollo de Linux a través del proyecto [Fedora](http://fedoraproject.org/) y que utiliza el sistema de paquetes RPM para la gestión de su software, uno de los más extendidos por otros fabricantes para proporcionar sus aplicaciones, controladores, etc.
 
-- [Fedora](http://fedoraproject.org/): Evolución de Red Hat Linux (sin Enterprise) que sigue recibiendo el apoyo de Red Hat para que como comunidad desarrollen la distribución. Se ha caracterizado por introducir novedosas mejoras tecnológicas. Una de las quizás más controvertidas fue la introducción de[Security Enhanced Linux (SELinux)](https://alufis35.uv.es/Security-Enhanced-Linux-SELinux.html), que inicialmente presentó algún problema para los usuarios pero que hoy en dia proporciona mayor seguridad de forma casi transparente.
+- [Fedora](http://fedoraproject.org/): Evolución de Red Hat Linux (sin Enterprise) que sigue recibiendo el apoyo de Red Hat para que como comunidad desarrollen la distribución. Se ha caracterizado por introducir novedosas mejoras tecnológicas. Una de las quizás más controvertidas fue la introducción de[Security Enhanced Linux (SELinux)]({% post_url 2008-01-04-Security-Enhanced-Linux-SELinux %}), que inicialmente presentó algún problema para los usuarios pero que hoy en dia proporciona mayor seguridad de forma casi transparente.
 
 **¿Que me motivó?**
 
