@@ -3,7 +3,6 @@ layout: post
 title: Bookcrossing -  Libera tus libros
 date: 2003-06-03T20:13:00Z
 category: [general, bookcrossing]
-published: false
 ---
 
 Ha salido en las noticias de este medio día un proyecto de intercambio de libros a nivel mundial. La idea es que en lugar de tener los libros almacenando polvo en casa, los registremos en una web: [http://www.bookcrossing.com](http://www.bookcrossing.com/) y en base a los datos de registro, le pongamos una pegatina o una nota manuscrita (en la web hay modelos listos para imprimir de la pegatina) que lo identifiquen. 
@@ -16,3 +15,4 @@ Su web tiene un 'mirror' en España: [http://www.bookcrossing-spain.com](http://
 Cada persona que lo encuentre encontrará la nota con el número del libro y al acceder a la web podrá comprobar quién lo puso en circulación, por qué lugares han pasado y lo que la gente ha escrito de ellos... Por lo visto aquí en Valencia hay 9 en circulación, uno en Blasco Ibáñez, otro en la cafetería de la FNAC, otro cerca de "yampua" (o como se escriba), etc...
 
 ¿Ya te has encontrado alguno? ¿Has puesto alguno en circulación? ¿te parece buena idea la iniciativa?
+
