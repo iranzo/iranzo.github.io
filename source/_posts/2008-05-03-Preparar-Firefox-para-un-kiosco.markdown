@@ -3,7 +3,6 @@ layout: post
 title: Preparar Firefox para un kiosco
 date: 2008-05-03T23:13:33Z
 category: [linux, firefox, desktop]
-published: false
 ---
 
 ### userChrome.css 
@@ -14,12 +13,15 @@ Firefox tiene en la carpeta del usuario, y dentro del perfil una subcarpeta llam
 
 Por ejemplo, podemos esconder el menú de ayuda con:
 
+{% highlight css %}
     #helpMenu display: none !important; 
+{% endhighlight %}
 
 ### Compactando el entorno 
 
 Yo utilizo una visión más compacta reduciendo las barras, poniendo la barra de direcciones y búsqueda en la de menús:
 
+{% highlight css %}
     /* Remove the Edit and Help menus Id's for all toplevel menus: file-menu, edit-menu, view-menu, go-menu, bookmarks-menu, tools-menu, helpMenu */
     #helpMenu, #go-menu  display: none !important; 
      /* Remove Back button when there's nothing to go Back to */
@@ -28,11 +30,13 @@ Yo utilizo una visión más compacta reduciendo las barras, poniendo la barra de
     #stop-button[disabled="true"]  display: none;  /* Remove Home button */
     #home-button  display: none;  /*Remove magnifying glass button from search box*/
     .search-go-button-stack  display: none !important; 
+{% endhighlight %}
 
 ### Limitándolo 
 
 Para hacer una vista orientada a un kiosco, utilizaremos más limitaciones como esconder todos los menús:
 
+{% highlight css %}
     #helpMenu, #go-menu  display: none !important; 
     /*Remove magnifying glass button from search box*/
     .search-go-button-stack  display: none !important;  /* remove preferences from edit menu */
@@ -55,6 +59,7 @@ Para hacer una vista orientada a un kiosco, utilizaremos más limitaciones como 
     #menu[label="Editar"] menuitem[label="Preferencias"] display: none !important
     #menu[label="Edit"] menuitem[label="Preferences"] display: none !important /* disable statusbar updates */
     statusbar[id="status-bar"] statusbarpanel[id="security-button"], statusbarpanel[id="page-report-button"], statusbarpanel[id="page-theme-button"], statusbarpanel[id="statusbar-updates"]  display: none !important
+{% endhighlight %}
 
 ### Extensiones 
 
@@ -64,7 +69,7 @@ Personalmente he utilizado "[keyconfig](https://addons.mozilla.org/es-ES/firefox
 
 Una muy interesante es "[publicfox](https://addons.mozilla.org/es-ES/firefox/addon/3911)", que permite proteger las opciones de about:config para que el usuario no pueda cambiar configuración de proxy, programas externos, etc
 
-![JPEG - 59.2 KB](http://alufis35.uv.es/IMG/jpg/firefox-reducido.jpg)
+{% img /imagen/firefox-reducido.jpg %}
 
 **Firefox limitado**
 
