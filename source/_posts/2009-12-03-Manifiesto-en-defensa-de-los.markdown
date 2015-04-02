@@ -4,7 +4,6 @@ title: Manifiesto en defensa de los derechos fundamentales en Internet
 date: 2009-12-03T20:48:43Z
 author: Pablo Iranzo Gómez
 category: [general]
-published: false
 ---
 Ante la inclusión en el Anteproyecto de Ley de Economía sostenible de modificaciones legislativas que afectan al libre ejercicio de las libertades de expresión, información y el derecho de acceso a la cultura a través de Internet, los periodistas, bloggers, usuarios, profesionales y creadores de internet manifestamos nuestra firme oposición al proyecto, y declaramos que:
 
@@ -27,3 +26,4 @@ Ante la inclusión en el Anteproyecto de Ley de Economía sostenible de modifica
 10.- En democracia las leyes y sus modificaciones deben aprobarse tras el oportuno debate público y habiendo consultado previamente a todas las partes implicadas. No es de recibo que se realicen cambios legislativos que afectan a derechos fundamentales en una ley no orgánica y que versa sobre otra materia
 
 Este texto se publica en multitud de sitios web. Si estás de acuerdo, publícalo también en tu blog.
+
