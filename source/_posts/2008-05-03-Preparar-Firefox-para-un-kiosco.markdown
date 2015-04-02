@@ -8,11 +8,9 @@ published: false
 
 ### userChrome.css 
 
-Firefox tiene en la carpeta del usuario, y dentro del perfil una
-subcarpeta llamada chrome y en ella el fichero userChrome.css
+Firefox tiene en la carpeta del usuario, y dentro del perfil una subcarpeta llamada chrome y en ella el fichero userChrome.css
 
-Éste permite ajustar pequeños cambios en el diseño como mostrar u
-ocultar menús, botones, etc.
+Éste permite ajustar pequeños cambios en el diseño como mostrar u ocultar menús, botones, etc.
 
 Por ejemplo, podemos esconder el menú de ayuda con:
 
@@ -20,8 +18,7 @@ Por ejemplo, podemos esconder el menú de ayuda con:
 
 ### Compactando el entorno 
 
-Yo utilizo una visión más compacta reduciendo las barras, poniendo la
-barra de direcciones y búsqueda en la de menús:
+Yo utilizo una visión más compacta reduciendo las barras, poniendo la barra de direcciones y búsqueda en la de menús:
 
     /* Remove the Edit and Help menus Id's for all toplevel menus: file-menu, edit-menu, view-menu, go-menu, bookmarks-menu, tools-menu, helpMenu */
     #helpMenu, #go-menu  display: none !important; 
@@ -34,8 +31,7 @@ barra de direcciones y búsqueda en la de menús:
 
 ### Limitándolo 
 
-Para hacer una vista orientada a un kiosco, utilizaremos más
-limitaciones como esconder todos los menús:
+Para hacer una vista orientada a un kiosco, utilizaremos más limitaciones como esconder todos los menús:
 
     #helpMenu, #go-menu  display: none !important; 
     /*Remove magnifying glass button from search box*/
@@ -62,18 +58,11 @@ limitaciones como esconder todos los menús:
 
 ### Extensiones 
 
-También podemos hacer uso de extensiones con la finalidad de bloquear
-más el entorno.
+También podemos hacer uso de extensiones con la finalidad de bloquear más el entorno.
 
-Personalmente he utilizado
-"[keyconfig](https://addons.mozilla.org/es-ES/firefox/addon/6105)" para
-bloquear combinaciones de teclas y así evitar que aunque no aparezcan
-los menús, se puedan seguir utilizando.
+Personalmente he utilizado "[keyconfig](https://addons.mozilla.org/es-ES/firefox/addon/6105)" para bloquear combinaciones de teclas y así evitar que aunque no aparezcan los menús, se puedan seguir utilizando.
 
-Una muy interesante es
-"[publicfox](https://addons.mozilla.org/es-ES/firefox/addon/3911)", que
-permite proteger las opciones de about:config para que el usuario no
-pueda cambiar configuración de proxy, programas externos, etc
+Una muy interesante es "[publicfox](https://addons.mozilla.org/es-ES/firefox/addon/3911)", que permite proteger las opciones de about:config para que el usuario no pueda cambiar configuración de proxy, programas externos, etc
 
 ![JPEG - 59.2 KB](http://alufis35.uv.es/IMG/jpg/firefox-reducido.jpg)
 
