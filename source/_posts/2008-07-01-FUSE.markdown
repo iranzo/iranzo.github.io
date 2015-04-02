@@ -73,3 +73,4 @@ def readdir(self, path, offset):
 (Obtenido de <http://zmugtools.svn.sourceforge.net/viewvc/zmugtools/tags/zmugfs/release-0.1/src/zmugfs.py?view=markup>)
 
 Así pues, aparte de los múltiples sistemas de ficheros ya disponibles con FUSE (entre ellos uno de los más conocidos inicialmente fue gmailfs que permitía utilizar el espacio de una cuenta de gmail como almacén de ficheros accesible de forma remota), podremos crear los que podamos necesitar de forma sencilla utilizando python (o el lenguaje de nuestra preferencia) para implementar las funciones de acceso.
+
