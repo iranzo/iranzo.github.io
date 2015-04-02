@@ -8,6 +8,7 @@ category: [spip, cms]
 ### Introducción a SPIP 1.9 
 
 SPIP 1.9 va a traer bastantes mejoras respecto a versiones anteriores, entre ellas:
+
 -  Abandono de la compatibilidad con PHP3 y con ella, las extensiones ".php3" en los ficheros
 -  Nueva organización de las carpetas
 -  Nuevo sistema para llamar a los esqueletos (dejando de lado también el .php3)
