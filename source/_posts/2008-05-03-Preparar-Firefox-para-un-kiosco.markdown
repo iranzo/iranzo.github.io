@@ -7,7 +7,7 @@ category: [linux, firefox, desktop]
 
 ### userChrome.css 
 
-Firefox tiene en la carpeta del usuario, y dentro del perfil una subcarpeta llamada chrome y en ella el fichero userChrome.css
+Firefox tiene en la carpeta del usuario, y dentro del perfil una subcarpeta llamada chrome y en ella el fichero `userChrome.css`
 
 Éste permite ajustar pequeños cambios en el diseño como mostrar u ocultar menús, botones, etc.
 
