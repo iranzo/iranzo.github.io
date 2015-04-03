@@ -3,7 +3,6 @@ layout: post
 title: Gestor de Volúmenes Lógicos (LVM)
 date: 2007-03-09T16:39:35Z
 category: [linux, lvm]
-published: false
 ---
 
 ### Introducción 
@@ -20,21 +19,19 @@ LVM funciona a tres niveles, a saber:
 
 Una de las principales ventajas del sistema LVM sobre el sistema tradicional, es que LVM nos abstrae de los discos físicos y de las limitaciones de un disco, permitiendo tener sistemas de ficheros sobre varios discos, redimensionarlos según las necesidades y por lo tanto, hacer un uso más eficiente del espacio del que disponemos, con independencia de su ubicación.
 
-Los volúmenes utilizan los llamados PE (Physical Extents), que son las unidades (relacionadas con el tamaño definido durante la creación), en las que se mide el tamaño o futuras ampliaciones/reducciones de los volúmenes.
+Los volúmenes utilizan los llamados PE[^1], que son las unidades (relacionadas con el tamaño definido durante la creación), en las que se mide el tamaño o futuras ampliaciones/reducciones de los volúmenes.
 
 La estructura de LVM sería la siguiente:
 
-[![GIF - 10.3 KB](http://alufis35.uv.es/local/cache-vignettes/L150xH125/schema-08497.png)](http://alufis35.uv.es/IMG/gif/schema.gif "GIF - 10.3 KB")
+{% img /imagen/lvmschema.gif 'Estructura de LVM, extraída de http://www.ccp-west.de/tipps.html' %}
 
 **Estructura de LVM**
-:   Extraída de
-    [http://www.ccp-west.de/tipps.html](http://www.ccp-west.de/tipps.html)
 
 ### Volúmenes físicos (pv) 
 
 Un volumen físico es un disco o una parte del disco que habilitaremos para su inclusión en un grupo de volúmenes.
 
-Los volúmenes físicos, pueden estar ubicados en una partición (si por ejemplo han de coexistir con sistemas tradicionales), o bien extenderse por toda una unidad de disco o incluso, sobre dispositivos md [[2](#nb4-2 "Multiple Devices: Es una tecnología que mediante software permite la (...)")].
+Los volúmenes físicos, pueden estar ubicados en una partición (si por ejemplo han de coexistir con sistemas tradicionales), o bien extenderse por toda una unidad de disco o incluso, sobre dispositivos md[^2].
 
 ### Grupos de volumen (vg) 
 
@@ -48,12 +45,9 @@ Los volúmenes lógicos se crean dentro de un grupo de volumen y son el equivale
 
 Los comandos relacionados con LVM utilizan una nomenclatura parecida entre sí, con la particularidad del comienzo de la orden que varía según sea:
 
-- pv(change,display,remove,create,move,resize,scan) para volúmenes
-físicos
-- vg(convert,extend,reduce,scan,create,import,remove,split,change,display,merge,rename,export)
-para grupos de volumen
-- lv(change,display,convert,extend,remove,rename,scan,create,reduce,resize)
-para volúmenes lógicos
+- pv(change,display,remove,create,move,resize,scan) para volúmenes físicos
+- vg(convert,extend,reduce,scan,create,import,remove,split,change,display,merge,rename,export) para grupos de volumen
+- lv(change,display,convert,extend,remove,rename,scan,create,reduce,resize) para volúmenes lógicos
 
 ### Preparación de un sistema para LVM 
 
@@ -132,7 +126,6 @@ EXT3, el sistema de ficheros utilizado por defecto en la distribución, permite 
 A modo de ejemplo, y siguiendo con la dinámica de los ejemplos de creación de un sistema con LVM, vamos a extender el sistema de ficheros de "Inicial", aumentándolo en 250 Mb, para ello haremos:
 
 {% highlight bash %}
-
 pvscan #(donde nos mostrará los volúmenes físicos y el espacio libre)
 # En caso de ser necesario, ampliaremos el vg añadiendo un nuevo pv:
 pvcreate /dev/disconuevo
@@ -158,15 +151,13 @@ En el caso de Fedora Core 6 (FC6), la utilidad ext2online no existe, pues ha sid
 Si queremos reducir el tamaño de una unidad lógica, primero, deberemos anotar el espacio utilizado en el sistema de ficheros y proceder a desmontarlo:
 
 {% highlight bash %}
-
 umount /dev/mapper/Prueba-Inicial
 #El siguiente paso, es reducir el sistema de ficheros:
 resize2fs /dev/mapper/Prueba-Inicial [Tamaño nuevo]
-
 {% endhighlight %}
 
 Recomiendo reducir el tamaño del sistema de ficheros por debajo del tamaño final que deseamos alcanzar, para así tener un margen de seguridad. Este tamaño, deberá ser SIEMPRE mayor que la capacidad
-[[3](#nb4-3 "El que hemos anotado en el paso previo a desmontarlo")] utilizada del volumen.
+[^3] utilizada del volumen.
 
 Acabado el proceso, podemos redimensionar el volumen lógico:
 
@@ -180,34 +171,27 @@ Red Hat o Fedora Core incorporan una herramienta gráfica "system-config-lvm" qu
 
 En la siguiente captura podemos ver los volúmenes físicos no asignados a algún grupo de volumen, y con las opciones que nos proporciona el gestor, podremos añadirlos a un grupo de volumen existente, o bien crear un nuevo grupo de volumen:
 
-[![JPEG -
-75.5 KB](http://alufis35.uv.es/local/cache-vignettes/L150xH101/lvm3-425b4.jpg)](http://alufis35.uv.es/IMG/jpg/lvm3.jpg "JPEG - 75.5 KB")
-
-**PV no asignados**
+{% img /imagen/lvm3.jpg "PV no asignados" %}
 
 Aquí, podremos crear un nuevo volumen lógico dentro del grupo de volumen, podremos indicar el nombre del volumen, el tipo de volumen, así como el tamaño y sistema de ficheros:
 
-[![JPEG -
-37 KB](http://alufis35.uv.es/local/cache-vignettes/L124xH150/lvm6-aba08.jpg)](http://alufis35.uv.es/IMG/jpg/lvm6.jpg "JPEG - 37 KB")
-
-**Crear VL**
+{% img /imagen/lvm6.jpg "Crear VL" %}
 
 En esta vista de la aplicación podemos ver el grupo de volumen "Test" y la vista lógica y física de los volúmenes creados dentro del mismo (como vemos, Test, está compuesto por cuatro particiones o volúmenes físicos: sdb1,sdb2,sdb3,sdb4)
 
-[![JPEG -
-79.3 KB](http://alufis35.uv.es/local/cache-vignettes/L150xH101/lvm8-fad4d.jpg)](http://alufis35.uv.es/IMG/jpg/lvm8.jpg "JPEG - 79.3 KB")
-
-**Vista VL**
+{% img /imagen/lvm8.jpg "Vista VL" %}
 
 Vemos, al tener marcado el espacio libre del volumen lógico, dónde está ubicado el espacio libre a nivel físico y el número de extensiones que corresponden a cada volumen físico.
 
+Quiero destacar mi agradecimiento a [Carlos Hergueta](mailto:chergueta@gmail.com) por su colaboración en la realización de este documento
+
 * * * * *
 
-[[1](#nh4-1 "Notas 4-1")] Physical Extents
+[^1]:Physical Extents
 
-[[2](#nh4-2 "Notas 4-2")] Multiple Devices: Es una tecnología que mediante software permite la creación de distintos niveles de agrupación de discos: linear, raid0, raid1, raid5. Los dispositivos se identifican en un sistema linux por la existencia de unidades /dev/md*0,1,2,3,etc* y un fichero de estado /proc/mdstat que indica el estado actual de los md's definidos y su estado de sincronía en caso de estar agrupados como RAID
+[^2]:Multiple Devices: Es una tecnología que mediante software permite la creación de distintos niveles de agrupación de discos: linear, raid0, raid1, raid5. Los dispositivos se identifican en un sistema linux por la existencia de unidades /dev/md*0,1,2,3,etc* y un fichero de estado /proc/mdstat que indica el estado actual de los md's definidos y su estado de sincronía en caso de estar agrupados como RAID
 
-[[3](#nh4-3 "Notas 4-3")] El que hemos anotado en el paso previo a desmontarlo
+[^3]:El que hemos anotado en el paso previo a desmontarlo
 
-Quiero destacar mi agradecimiento a [Carlos Hergueta](mailto:chergueta@gmail.com) por su colaboración en la realización de este documento
+
 
