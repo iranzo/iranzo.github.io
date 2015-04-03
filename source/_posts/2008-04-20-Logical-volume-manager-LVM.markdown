@@ -23,8 +23,7 @@ Volumes make use of PE[^1], which are the units (there's a relationship set duri
 
 LVM structure is as shown:
 
-{% img /imagen/lvmschema.gif 'LVM schema, from http://www.ccp-west.de/tipps.html' %}
-**LVM structure**
+{% img /imagen/lvmschema.gif 'LVM schema' %}
 
 ### Physical volumes(pv) 
 
