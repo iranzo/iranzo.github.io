@@ -8,35 +8,37 @@ category: [hardware, general]
 Olivetti Echos Family (Tested on my P75, but obtained from the Internet)
 (Running now at 166 mhz)
 
-~~~
-   Jumper Settings   Processor Speed
-  ----------------- -----------------
-  1100              75 MHz
-  0000              90 MHz
-  0100              100 MHz
-  1110              100 MHz
-  0010              120 MHz
-  1111              120 MHz
-  0110              133 MHz
-  0011              150 MHz
-  1101              150 MHz
-  0001              166 MHz
-  0111              166 MHz
+|   Jumper Settings |  Processor Speed|
+|  -----------------| -----------------|
+|  1100   |           75 MHz|
+|  0000    |          90 MHz|
+|  0100     |         100 MHz|
+|  1110      |        100 MHz|
+|  0010       |       120 MHz|
+|  1111        |      120 MHz|
+|  0110         |     133 MHz|
+|  0011          |    150 MHz|
+|  1101           |   150 MHz|
+|  0001            |  166 MHz|
+|  0111             | 166 MHz|
 
-  Switch 1   Switch 2   bus
-  ---------- ---------- ------
-  OFF        OFF        60
-  OFF        ON         66.6
-  ON         OFF        20
-  ON         ON         50
+Switchs 1,2:
 
-  Switch 3   Switch 4   Multiplier
-  ---------- ---------- ------------
-  OFF        OFF        1.5x
-  OFF        ON         3x
-  ON         OFF        2x
-  ON         ON         2.5x
-~~~
+|  Switch 1 |  Switch 2 |  bus|
+|  ----------| ----------| ------|
+|  OFF|        OFF |       60|
+|  OFF |       ON   |      66.6|
+|  ON   |      OFF   |     20|
+|  ON    |     ON |        50|
+
+Switch 3,4:
+
+| Switch 3 |  Switch 4 |  Multiplier|
+|  ----------| ----------| ------------|
+|  OFF  |      OFF|        1.5x|
+|  OFF |       ON  |       3x|
+|  ON |        OFF  |      2x|
+|  ON|         ON    |     2.5x|
 
 You'll find those jumpers under the sound card, remove the ring from the outside part of the notebook, then remove the plastic pieces that keep keyboard in its position, then remove a screw that is retainning an aluminum piece (acting as disipator for the microprocessor) . Then, you'll see the sound card piece in the left side of the notebook, lift it up and you'll see a four switch piece... configure it as showed in the table before and you'll set the new processor speed.
 
