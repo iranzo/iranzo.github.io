@@ -60,119 +60,43 @@ La instalación de Fedora se puede realizar de forma gráfica o en un interfaz e
 
 La secuencia de imágenes muestra los pasos seguidos desde que metemos y arrancamos el DVD hasta que tenemos el sistema instalado y funcionando.
 
-  ------------------ ------------------ ------------------ ------------------
-  [![PNG -           [![PNG -           [![PNG -           [![PNG -
-  121.2 KB](https:// 14.7 KB](https://a 5.2 KB](https://al 105.2 KB](https://
-  alufis35.uv.es/loc lufis35.uv.es/loca ufis35.uv.es/local alufis35.uv.es/loc
-  al/cache-vignettes l/cache-vignettes/ /cache-vignettes/L al/cache-vignettes
-  /L150xH113/Pantall L150xH84/Pantallaz 150xH84/Pantallazo /L150xH113/Pantall
-  azo-00-8ba4b.png)] o-01-69dba.png)](h -02-c2c01.png)](ht azo-03-1eb07.png)]
-  (https://alufis35. ttps://alufis35.uv tps://alufis35.uv. (https://alufis35.
-  uv.es/IMG/png/Pant .es/IMG/png/Pantal es/IMG/png/Pantall uv.es/IMG/png/Pant
-  allazo-00.png "PNG lazo-01.png "PNG - azo-02.png "PNG -  allazo-03.png "PNG
-   - 121.2 KB")       14.7 KB")         5.2 KB")            - 105.2 KB")
-  **Arranque DVD**   **Arranque         **Verificación     **Inicio
-                     kernel**           disco**            instalador**
+{% img /imagen/Pantallazo-00.png 'Arranque DVD' %}
+{% img /imagen/Pantallazo-01.png 'Arranque kernel' %}
+{% img /imagen/Pantallazo-02.png 'Verificación disco' %}
+{% img /imagen/Pantallazo-03.png 'Inicio instalador' %}
+{% img /imagen/Pantallazo-04.png 'Selección idioma' %}
+{% img /imagen/Pantallazo-05.png 'Selección teclado' %}
+{% img /imagen/Pantallazo-06.png 'Inicialización disco' %}
+{% img /imagen/Pantallazo-07.png 'Configuración red' %}
+{% img /imagen/Pantallazo-08.png 'Zona horaria' %}
+{% img /imagen/Pantallazo-09.png 'Password de root' %}
+{% img /imagen/Pantallazo-10.png 'Clave sencilla' %}
+{% img /imagen/Pantallazo-11.png 'Particionamiento' %}
+{% img /imagen/Pantallazo-12.png 'Cifrado de discos' %}
+{% img /imagen/Pantallazo-13.png 'Aplicar cambios en disco' %}
+{% img /imagen/Pantallazo-14.png 'Formateo' %}
+{% img /imagen/Pantallazo-15.png 'Preparación instalador' %}
+{% img /imagen/Pantallazo-16.png 'Preparando paquetes' %}
+{% img /imagen/Pantallazo-17.png 'Repositorios de software' %}
+{% img /imagen/Pantallazo-18.png 'Verificando dependencias' %}
+{% img /imagen/Pantallazo-19.png 'Empezando instalación' %}
+{% img /imagen/Pantallazo-20.png 'Progreso instalación' %}
+{% img /imagen/Pantallazo-21.png 'Acabando instalación' %}
+{% img /imagen/Pantallazo-22.png 'Fin de instalación y reinicio' %}
+{% img /imagen/Pantallazo-23.png 'Clave de cifrado de disco en arranque' %}
 
-  [![PNG -           [![PNG -           [![PNG -           [![PNG -
-  73.7 KB](https://a 64.3 KB](https://a 86.6 KB](https://a 68.3 KB](https://a
-  lufis35.uv.es/loca lufis35.uv.es/loca lufis35.uv.es/loca lufis35.uv.es/loca
-  l/cache-vignettes/ l/cache-vignettes/ l/cache-vignettes/ l/cache-vignettes/
-  L150xH113/Pantalla L150xH113/Pantalla L150xH113/Pantalla L150xH113/Pantalla
-  zo-04-01bb7.png)]( zo-05-e5e5f.png)]( zo-06-301f9.png)]( zo-07-b58dc.png)](
-  https://alufis35.u https://alufis35.u https://alufis35.u https://alufis35.u
-  v.es/IMG/png/Panta v.es/IMG/png/Panta v.es/IMG/png/Panta v.es/IMG/png/Panta
-  llazo-04.png "PNG  llazo-05.png "PNG  llazo-06.png "PNG  llazo-07.png "PNG 
-  - 73.7 KB")        - 64.3 KB")        - 86.6 KB")        - 68.3 KB")
-  **Selección        **Selección        **Inicialización   **Configuración
-  idioma**           teclado**          disco**            red**
 
-  [![PNG -           [![PNG -           [![PNG -           [![PNG -
-  155.7 KB](https:// 51 KB](https://alu 64 KB](https://alu 76.1 KB](https://a
-  alufis35.uv.es/loc fis35.uv.es/local/ fis35.uv.es/local/ lufis35.uv.es/loca
-  al/cache-vignettes cache-vignettes/L1 cache-vignettes/L1 l/cache-vignettes/
-  /L150xH113/Pantall 50xH113/Pantallazo 50xH113/Pantallazo L150xH113/Pantalla
-  azo-08-5b1a6.png)] -09-ea6b0.png)](ht -10-6ed87.png)](ht zo-11-82e8f.png)](
-  (https://alufis35. tps://alufis35.uv. tps://alufis35.uv. https://alufis35.u
-  uv.es/IMG/png/Pant es/IMG/png/Pantall es/IMG/png/Pantall v.es/IMG/png/Panta
-  allazo-08.png "PNG azo-09.png "PNG -  azo-10.png "PNG -  llazo-11.png "PNG 
-   - 155.7 KB")      51 KB")            64 KB")            - 76.1 KB")
-  **Zona horaria**   **Password de      **Clave sencilla** **Particionamiento
-                     root**                                **
-
-  [![PNG -           [![PNG -           [![PNG -           [![PNG -
-  69.5 KB](https://a 86.6 KB](https://a 78 KB](https://alu 79.4 KB](https://a
-  lufis35.uv.es/loca lufis35.uv.es/loca fis35.uv.es/local/ lufis35.uv.es/loca
-  l/cache-vignettes/ l/cache-vignettes/ cache-vignettes/L1 l/cache-vignettes/
-  L150xH113/Pantalla L150xH113/Pantalla 50xH113/Pantallazo L150xH113/Pantalla
-  zo-12-4f0c4.png)]( zo-13-41e8f.png)]( -14-70657.png)](ht zo-15-7b4a3.png)](
-  https://alufis35.u https://alufis35.u tps://alufis35.uv. https://alufis35.u
-  v.es/IMG/png/Panta v.es/IMG/png/Panta es/IMG/png/Pantall v.es/IMG/png/Panta
-  llazo-12.png "PNG  llazo-13.png "PNG  azo-14.png "PNG -  llazo-15.png "PNG 
-  - 69.5 KB")        - 86.6 KB")        78 KB")            - 79.4 KB")
-  **Cifrado de       **Aplicar cambios  **Formateo**       **Preparación
-  discos**           en disco**                            instalador**
-
-  [![PNG -           [![PNG -           [![PNG -           [![PNG -
-  77.8 KB](https://a 73.1 KB](https://a 77.3 KB](https://a 83 KB](https://alu
-  lufis35.uv.es/loca lufis35.uv.es/loca lufis35.uv.es/loca fis35.uv.es/local/
-  l/cache-vignettes/ l/cache-vignettes/ l/cache-vignettes/ cache-vignettes/L1
-  L150xH113/Pantalla L150xH113/Pantalla L150xH113/Pantalla 50xH113/Pantallazo
-  zo-16-e7a25.png)]( zo-17-04d14.png)]( zo-18-f945b.png)]( -19-401f8.png)](ht
-  https://alufis35.u https://alufis35.u https://alufis35.u tps://alufis35.uv.
-  v.es/IMG/png/Panta v.es/IMG/png/Panta v.es/IMG/png/Panta es/IMG/png/Pantall
-  llazo-16.png "PNG  llazo-17.png "PNG  llazo-18.png "PNG  azo-19.png "PNG - 
-  - 77.8 KB")        - 73.1 KB")        - 77.3 KB")        83 KB")
-  **Preparando       **Repositorios de  **Verificando      **Empezando
-  paquetes**         software**         dependencias**     instalación**
-
-  [![PNG -           [![PNG -           [![PNG -           [![PNG -
-  115.7 KB](https:// 102.1 KB](https:// 66.1 KB](https://a 8.7 KB](https://al
-  alufis35.uv.es/loc alufis35.uv.es/loc lufis35.uv.es/loca ufis35.uv.es/local
-  al/cache-vignettes al/cache-vignettes l/cache-vignettes/ /cache-vignettes/L
-  /L150xH113/Pantall /L150xH113/Pantall L150xH113/Pantalla 150xH61/Pantallazo
-  azo-20-bf607.png)] azo-21-e9f6c.png)] zo-22-0211b.png)]( -23-1f9d9.png)](ht
-  (https://alufis35. (https://alufis35. https://alufis35.u tps://alufis35.uv.
-  uv.es/IMG/png/Pant uv.es/IMG/png/Pant v.es/IMG/png/Panta es/IMG/png/Pantall
-  allazo-20.png "PNG allazo-21.png "PNG llazo-22.png "PNG  azo-23.png "PNG - 
-   - 115.7 KB")       - 102.1 KB")      - 66.1 KB")        8.7 KB")
-  **Progreso         **Acabando         **Fin instalación  **Clave de cifrado
-  instalación**      instalación**      y reinicio**       de disco en el
-                                                           arranque**
-  ------------------ ------------------ ------------------ ------------------
 
 Tras el primer arranque mostrará unas últimas páginas de configuración y creación de un usuario que nos dejarán en la pantalla que vemos a continuación para iniciar sesión en el equipo.
 
-  ------------------ ------------------ ------------------ ------------------
-  [![PNG -           [![PNG -           [![PNG -           [![PNG -
-  182.1 KB](https:// 199.2 KB](https:// 206.7 KB](https:// 200.6 KB](https://
-  alufis35.uv.es/loc alufis35.uv.es/loc alufis35.uv.es/loc alufis35.uv.es/loc
-  al/cache-vignettes al/cache-vignettes al/cache-vignettes al/cache-vignettes
-  /L150xH113/Pantall /L150xH113/Pantall /L150xH113/Pantall /L150xH113/Pantall
-  azo-24-156da.png)] azo-25-79ba2.png)] azo-26-9d381.png)] azo-27-7cadc.png)]
-  (https://alufis35. (https://alufis35. (https://alufis35. (https://alufis35.
-  uv.es/IMG/png/Pant uv.es/IMG/png/Pant uv.es/IMG/png/Pant uv.es/IMG/png/Pant
-  allazo-24.png "PNG allazo-25.png "PNG allazo-26.png "PNG allazo-27.png "PNG
-   - 182.1 KB")       - 199.2 KB")       - 206.7 KB")       - 200.6 KB")
-  **Login al entorno **Informe y envío  **Actualizaciones  **Acceso como root
-  gráfico**          de errores**       pendientes**       para actualizar**
+{% img /imagen/Pantallazo-24.png 'Login al entorno gráfico' %}
+{% img /imagen/Pantallazo-25.png 'Informe y envío de errores' %}
+{% img /imagen/Pantallazo-26.png 'Actualizaciones pendientes' %}
+{% img /imagen/Pantallazo-27.png 'Acceso como root para actualizar' %}
+{% img /imagen/Pantallazo-28.png 'PackageKit realizando las tareas de actualización' %}
+{% img /imagen/Pantallazo-29.png 'Actualización completada' %}
+{% img /imagen/Pantallazo-30.png 'Contraseña del protector de pantalla con posibilidad de dejar notas' %}
 
-  [![PNG -           [![PNG -           [![PNG -           
-  211.9 KB](https:// 204.9 KB](https:// 8.7 KB](https://al 
-  alufis35.uv.es/loc alufis35.uv.es/loc ufis35.uv.es/local 
-  al/cache-vignettes al/cache-vignettes /cache-vignettes/L 
-  /L150xH113/Pantall /L150xH113/Pantall 150xH67/Pantallazo 
-  azo-28-2929b.png)] azo-29-4fd0f.png)] -30-cebff.png)](ht 
-  (https://alufis35. (https://alufis35. tps://alufis35.uv. 
-  uv.es/IMG/png/Pant uv.es/IMG/png/Pant es/IMG/png/Pantall 
-  allazo-28.png "PNG allazo-29.png "PNG azo-30.png "PNG -  
-   - 211.9 KB")       - 204.9 KB")      8.7 KB")           
-  **PackageKit       **Actualización    **Contraseña del   
-  realizando las     completada**       protector de       
-  tareas de                             pantalla y         
-  actualización**                       posibilidad de     
-                                        dejar notas**      
-  ------------------ ------------------ ------------------ ------------------
 
 ### ¿Y ahora qué? 
 
