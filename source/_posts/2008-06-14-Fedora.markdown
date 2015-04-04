@@ -4,7 +4,6 @@ title: Fedora
 date: 2008-06-14T05:00:00Z
 author: Pablo Iranzo Gómez
 category: [Fedora, linux]
-published: false
 ---
 
 ### Introducción 
@@ -16,7 +15,6 @@ Red Hat Linux se readaptó al entorno empresarial proporcionado las opciones de 
 Así pues el panorama quedaba del siguiente modo:
 
 -  Red Hat Enterprise Linux con ciclos de soporte de 7 años (parches, instalación, nuevo hardware, etc) que proporcionaban estabilidad a las empresas para mantener su sistema.
-
 -  Fedora Core, con ciclos de desarrollo de 6 meses, orientada a desarrollar e incluir tecnología punta en la distribución
 
 Con el nacimiento de Fedora Core, Red Hat siguió colaborando (Hay una lista de contribuciones en <http://fedoraproject.org/wiki/RedHatContributions>) en el desarrollo de Linux a través de RHEL y de Fedora, así como a través de los proyectos "upstream" dedicando recursos económicos y humanos alrededor de la comunidad Fedora, así como de las colaboraciones desinteresadas de personas de todo el mundo (algunos de ellos se consideran [Embajadores](http://fedoraproject.org/wiki/Ambassadors))
@@ -35,7 +33,7 @@ Una de las características que más tiempo llevan es Anaconda, el instalador qu
 
 Aparte del interfaz gráfico de instalación y una versión en modo texto muy similar dispone de una funcionalidad que lo convierte en único: La posibilidad de utilizar guiones de instalación que permitan automatizar completamente una instalación sin requerir interacción alguna por parte del usuario (ideal para instalar aulas de informática, colegios, lugares públicos tales como zonas de navegación, bibliotecas, etc).
 
-Puedes consultar información al respecto en [Kickstart: instalaciones automatizadas para anaconda](% post_url 2008-05-11-Kickstart-instalaciones %})
+Puedes consultar información al respecto en [Kickstart: instalaciones automatizadas para anaconda]({% post_url 2008-05-11-Kickstart-instalaciones %})
 
 **Security Enhanced Linux (SELinux)**
 
@@ -199,7 +197,11 @@ Ahora ya podremos instalar las librerías necesarias:
 **Adobe Acrobat Reader**
 
 -  Lo instalaremos con `yum install AdobeReader_esp`
--  Activaremos el plugin en mozilla con: `cd /usr/lib/mozilla/plugins/ ln -s /opt/Adobe/Reader8/Browser/intellinux/nppdf.so .`
+-  Activaremos el plugin en mozilla con:
+    {% highlight bash %}
+    cd /usr/lib/mozilla/plugins/ 
+    ln -s /opt/Adobe/Reader8/Browser/intellinux/nppdf.so .
+    {% endhighlight %}
 
 **Audio/Video**
 
@@ -210,14 +212,25 @@ Ahora ya podremos instalar las librerías necesarias:
 -  Desinstalaremos los paquetes de icedtea y openjdk instalados en el equipo 
 -  Descargaremos de <http://www.java.com> el fichero RPM que proporcionan y lo instalaremos desde una consola lanzando el instalador con: `chmod +x jre-* ./jre-(VERSION)`
 
-Se nos pedirá aceptar la licencia y al cabo de un rato lo tendremos instalado para activar el plugin en firefox haremos: `cd /usr/lib/mozilla/plugins ln -s /usr/java/latest/plugin/i386/ns7/libjavaplugin_oji.so .`
+Se nos pedirá aceptar la licencia y al cabo de un rato lo tendremos instalado para activar el plugin en firefox haremos: 
+
+{% highlight bash %}
+cd /usr/lib/mozilla/plugins
+ln -s /usr/java/latest/plugin/i386/ns7/libjavaplugin_oji.so .
+{% endhighlight %}
+
 
 **Drivers gráficos acelerados**
 
 En los repositorios de livna existen paquetes de la forma kmod-tarjeta-gráfica y xorg-x11-drv-tarjeta-gráfica que al instalarlos modificarán en nuestro sistema la configuración de X-Window System en `/etc/X11/xorg.conf` y que permitirán en caso de disponer una tarjeta sin drivers acelerados libres (como ocurre con las gráficas Intel que permiten disfrutar de AIGLX y los efectos gráficos de
 Compiz sólo presionando un botón del panel de administración "Efectos de Escritorio".
 
-En el caso de NVIDIA tuve que agregar las siguientes líneas a la sección "Files" ` ModulePath "/usr/lib/xorg/modules/extensions/nvidia" ModulePath "/usr/lib/xorg/modules"`
+En el caso de NVIDIA tuve que agregar las siguientes líneas a la sección "Files":
+
+~~~
+ModulePath "/usr/lib/xorg/modules/extensions/nvidia"
+ModulePath "/usr/lib/xorg/modules"
+~~~
 
 **Extras**
 

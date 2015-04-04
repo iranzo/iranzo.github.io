@@ -30,7 +30,7 @@ A la par que el servidor en la universidad pasaba a ser Debian 3.0, en mi pc de 
 -  [Slackware](http://www.slackware.com/): Tengo constancia de mucha gente que la utiliza, personalmente sólo estuvo en mis primeros pasos con Linux y sigue teniendo muy buena reputación, aunque como he dicho, hace
 años que no la utilizo.
 
--  [Red Hat Linux](http://www.redhat.com/): Ya obsoleta, me introdujo en el mundo del manejo de dependencias, actualizaciones. Siempre me encantó [RHN](https://alufis35.uv.es/rhn.redhat.com) como herramienta que me permitía ver vía web el estado de todos mis sistemas, su estado de actualizaciones, así como algo de información de inventario. Pasó a ser Fedora y Red Hat Enterprise Linux poco después de la 9.2
+-  [Red Hat Linux](http://www.redhat.com/): Ya obsoleta, me introdujo en el mundo del manejo de dependencias, actualizaciones. Siempre me encantó [RHN](https://rhn.redhat.com) como herramienta que me permitía ver vía web el estado de todos mis sistemas, su estado de actualizaciones, así como algo de información de inventario. Pasó a ser Fedora y Red Hat Enterprise Linux poco después de la 9.2
 
 - [SuSE](http://www.suse.de/): Durante el periodo de la 5.0 a la 8.0 que era cuando más la utilicé, me proporcionaba en un conjunto de discos unos buenos manuales y más software del que quisiera jamás :-). A su favor, era muy sencilla de configurar, detectaba muy bien el hardware y hasta funcionaba ;-). En su contra, toda la configuración en aquel momento venía en un fichero rc.config que SuSEConfig aplicaba sobre todo el sistema, destruyendo cualquier cambio personalizado que se hubiera podido realizar (lo que permitía arreglar las cosas si habíamos metido la pata).
 
@@ -63,7 +63,7 @@ difundidas en entorno empresarial, [colaboradora activamente](http://fedoraproje
 
 A día de hoy estoy utilizando Fedora 12 con LVM cifrado, Gnome como entorno, Firefox como navegador, gnome-terminal como consola, pidgin como programa de mensajería instantánea, xchat como cliente de IRC, k3b para grabación de DVD's y CD's y para contadas ocasiones LyX y OpenOffice para documentos. Para la parte multimedia, utilizo Exaile como reproductor (muy parecido a Amarok) y VLC como reproductor de vídeo.
 
-En los servidores tengo una mezcla de Debian, CentOS y RHEL, moviendo los basados en Debian a CentOS por la mayor experiencia que tengo en la creación y gestión de paquetes RPM y la automatización de instalaciones([Kickstart: instalaciones automatizadas para anaconda](https://alufis35.uv.es/Kickstart-instalaciones.html)).
+En los servidores tengo una mezcla de Debian, CentOS y RHEL, moviendo los basados en Debian a CentOS por la mayor experiencia que tengo en la creación y gestión de paquetes RPM y la automatización de instalaciones([Kickstart: instalaciones automatizadas para anaconda]({% post_url 2008-05-11-Kickstart-instalaciones  %})).
 
 En el blog de [Pere Benavent](http://www.benavent.org/diario/2008/06/fedora-9-just-installed.html) tienes información para terminar de afinar la instalación de Fedora 9 siguiendo sus instrucciones.
 
