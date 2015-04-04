@@ -4,26 +4,25 @@ title: Creación de distribuciones Live con Fedora
 date: 2008-09-24T20:34:16Z
 author: Pablo Iranzo Gómez
 category: [linux, fedora]
-published: false
 ---
 
 
 ### Introducción 
 
-Según lo visto en el artículo [Kickstart]({% post_url 2008-05-11-Kickstart-instalaciones %}, podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
+Según lo visto en el artículo [Kickstart]({% post_url 2008-05-11-Kickstart-instalaciones %}), podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
 
-[Fedora]({% post_url 2008-06-14-Fedora %} proporciona unas utilidades 'livecd-tools' que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
+[Fedora]({% post_url 2008-06-14-Fedora %}) proporciona unas utilidades 'livecd-tools' que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
 
 ### Ejemplo 
 
 Por ejemplo, podemos personalizar nuestro medio 'live' cambiando el mensaje de login con un:
 
 {% highlight bash %}
-    %post echo "Sistema personalizado Live" > /etc/issue
+%post
+echo "Sistema personalizado Live" > /etc/issue
 {% endhighlight %}
 
-Utilizando la sección `%packages` podemos por ejemplo instalar los paquetes openssh, o el entorno gráfico que luego tendremos disponibles
-en nuestro sistema. 
+Utilizando la sección `%packages` podemos por ejemplo instalar los paquetes openssh, o el entorno gráfico que luego tendremos disponibles en nuestro sistema. 
 
 Un ejemplo de kickstart para un medio Live podría ser:
 
@@ -83,8 +82,12 @@ cat > /etc/rc.d/init.d/rhel-live << EOF
 # live: Init script for live image
 #
 # chkconfig: 345 00 99
-# description: Init script for live image. . /etc/init.d/functions if ! strstr "`cat /proc/cmdline`" liveimg || [ "$1" != "start" ] || [ -e /.liveimg-configured ] ; then exit 0
-fi exists()  which $1 >/dev/null 2>&1 || return $*
+# description: Init script for live image.
+. /etc/init.d/functions
+if ! strstr "`cat /proc/cmdline`" liveimg || [ "$1" != "start" ] || [ -e /.liveimg-configured ] ; then exit 0
+fi
+exists()  
+which $1 >/dev/null 2>&1 || return $*
  touch /.liveimg-configured # mount live image
 if [ -b /dev/live ]; then mkdir -p /mnt/live mount -o ro /dev/live /mnt/live
 fi # read some variables out of /proc/cmdline

@@ -222,4 +222,4 @@ Thanks (again) to the OCS Developing team (specially to Pascal Danek) for creati
 
 Thanks to Pablo Chamorro for reviewing this article too ;)
 
-Have a look at [OCS Deployment Tips and tricks](http://alufis35.uv.es/OCS-Deployment-Tips-and-tricks.html) to get ideas on how to use package deployment
+Have a look at [OCS Deployment Tips and tricks]({% post_url 2006-07-29-OCS-Deployment-Tips-and-tricks  %}) to get ideas on how to use package deployment

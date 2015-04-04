@@ -4,7 +4,6 @@ title: Mount disk images
 date: 2008-07-18T06:17:02Z
 author: Pablo Iranzo Gómez
 category: [linux, xen]
-published: false
 ---
 
 I've been using a Xen guest under RHEL 5.2 to hold this webserver, and because of failures, I choose to keep a copy of the full disk image on another machine.

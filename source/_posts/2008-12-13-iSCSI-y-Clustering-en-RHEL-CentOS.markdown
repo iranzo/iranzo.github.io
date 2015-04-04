@@ -4,15 +4,11 @@ title: iSCSI y Clustering en RHEL/CentOS
 date: 2008-12-13T17:59:41Z
 author: Pablo Iranzo Gómez
 category: [cluster,rhel, centos]
-published: false
 ---
 
 ### Introducción 
 
-Durante la última semana estuve jugando de nuevo con iSCSI en el curso
-de [RH436 Enterprise Clustering and Storage Management](http://www.redhat.es/training/course/RH436). Hace tiempo
-había seguido dos artículos [Instalando un target iSCSI](http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/)
-y su continuación [Montando un iniciador iSCSI](http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/).
+Durante la última semana estuve jugando de nuevo con iSCSI en el curso de [RH436 Enterprise Clustering and Storage Management](http://www.redhat.es/training/course/RH436). Hace tiempo había seguido dos artículos [Instalando un target iSCSI](http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/) y su continuación [Montando un iniciador iSCSI](http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/).
 
 iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel 'barato', podemos utilizar el espacio de un sevidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.
 
@@ -22,8 +18,7 @@ Bueno, a medias :-)
 
 Siempre es complicado compartir sistemas de ficheros, existen problemas de bloqueos de ficheros, accesos recurrentes, etc, en el caso de iSCSI no sólo es el FS sino la unidad, desde cualquier equipo podemos particionarla, etc, es por ello que se necesitan algunas utilidades preparadas para dicho funcionamiento en red, así como por supuesto, un sistema de ficheros que soporte dicho uso simultáneo.
 
-Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster [LVM](https://alufis35.uv.es/Gestor-de-Volumenes-Logicos-LVM.html)) como
-de GFS (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.
+Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster [LVM]({% post_url 2007-03-09-Gestor-de-Volumenes-Logicos-LVM %})) como de GFS (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.
 
 Piensa por un momento, la posibilidad de tener ese host tan potente o una SAN con copias de seguridad bien controladas, etc
 
@@ -104,28 +99,17 @@ En el caso de máquinas virtuales, en caso de que dejen de responder, CMAN reali
 
 En el caso de tener enchufes 'con red' o bien máquinas con tarjetas de gestión remota (iLO, RemoteView Service Board, etc), definiremos los parámetros de acceso.
 
-En caso de detectar un problema con cualquier equipo, el resto de ellos
-hará votaciones y si la mayoría considera que no responde, lo
-reiniciarán, por un lado para liberar cualquier tipo de acceso a disco,
-etc que hubiera estado haciendo a los recursos del cluster, como para
-intentar recuperarlo.
+En caso de detectar un problema con cualquier equipo, el resto de ellos hará votaciones y si la mayoría considera que no responde, lo reiniciarán, por un lado para liberar cualquier tipo de acceso a disco, etc que hubiera estado haciendo a los recursos del cluster, como para intentar recuperarlo.
 
 ### GFS: Global File System 
 
 ¿Qué pinta GFS en todo esto?
 
-GFS1 nos permite crear un sistema de ficheros que tendrá un journal para
-cada nodo del cluster y que si lo creamos sobre el volumen iSCSI podemos
-hacer disponible a todos los equipos, si un equipo se bloquea, otro toma
-el control del journal no acabado, lo verifica y aplica sobre el FS
-hasta que la máquina retorna para dejarlo en un estado limpio.
+GFS1 nos permite crear un sistema de ficheros que tendrá un journal para cada nodo del cluster y que si lo creamos sobre el volumen iSCSI podemos hacer disponible a todos los equipos, si un equipo se bloquea, otro toma el control del journal no acabado, lo verifica y aplica sobre el FS hasta que la máquina retorna para dejarlo en un estado limpio.
 
-Por otro lado, CLVM y GFS permiten aumentar dinámicamente el tamaño de
-los volúmenes, de forma que no tenemos que dejar inoperativos nuestros
-sistemas para hacer mantenimientos par añadir más capacidad, etc.
+Por otro lado, CLVM y GFS permiten aumentar dinámicamente el tamaño de los volúmenes, de forma que no tenemos que dejar inoperativos nuestros sistemas para hacer mantenimientos par añadir más capacidad, etc.
 
-Permite también crear enlaces simbólicos de forma que una unidad con FS
-GFS1 pueda quedar:
+Permite también crear enlaces simbólicos de forma que una unidad con FS GFS1 pueda quedar:
 
 ~~~
 hosts/
@@ -137,35 +121,20 @@ hosts/host5/logs
 logs -> hosts/@hostname/logs/
 ~~~
 
-Esto permite que diversos servidores web tengan configurado como ruta
-para los logs la carpeta 'logs' que se expandirá al hostname de la
-máquina, haciendo que queden todos recogidos en un lugar central para
-posterior análisis de estadísticas, etc
+Esto permite que diversos servidores web tengan configurado como ruta para los logs la carpeta 'logs' que se expandirá al hostname de la máquina, haciendo que queden todos recogidos en un lugar central para posterior análisis de estadísticas, etc
 
-Este tipo de enlaces se denominan CDPN: Context-dependent pathnames y
-nos permiten jugar con este tipo de cosas y aprovechar las ventajas de
-un almacenamiento único.
+Este tipo de enlaces se denominan CDPN: Context-dependent pathnames y nos permiten jugar con este tipo de cosas y aprovechar las ventajas de un almacenamiento único.
 
 ### ¿Y si falla la red 
 
-Como siempre podemos tener problemas con la red, la forma de
-solucionarlos consiste en tener varios interfaces de red en los equipos
-a través de distintos switches, etc y en las máquinas, una vez
-descubiertos los targets, configurar el fichero `/etc/multipathd.conf` y
-habilitar el demonio.
+Como siempre podemos tener problemas con la red, la forma de solucionarlos consiste en tener varios interfaces de red en los equipos a través de distintos switches, etc y en las máquinas, una vez descubiertos los targets, configurar el fichero `/etc/multipathd.conf` y habilitar el demonio.
 
 Nos creará las rutas necesarias y una serie de dipositivos `/dev/mpath/*` para acceder de forma tolerante a fallos a nuestros recursos, si configuramos las tarjetas de red en modo bonding, ya tenemos el acceso más o menos asegurado ante las catástrofes más comunes y nuestros datos disponibles
 
 ### Conclusión 
 
-Tenemos a nuestro alcance muchas herramientas para hacer sencilla la
-utilización y creación de sistemas equivalentes a lo que hace años sólo
-tenía una alternativa excesivamente cara.
+Tenemos a nuestro alcance muchas herramientas para hacer sencilla la utilización y creación de sistemas equivalentes a lo que hace años sólo tenía una alternativa excesivamente cara.
 
-Sinceramente vale la pena perder un rato y probar estas cosas y
-maravillarnos de las posibilidades que abre de cara a la gestión de los
-equipos, la información y su acceso y lo mejor de todo, siempre con
-Software Libre.
+Sinceramente vale la pena perder un rato y probar estas cosas y maravillarnos de las posibilidades que abre de cara a la gestión de los equipos, la información y su acceso y lo mejor de todo, siempre con Software Libre.
 
-Espero que esta introducción os despierte el gusanillo para explorar las
-diversas funcionalidades que estas tecnologías nos ofrecen!
+Espero que esta introducción os despierte el gusanillo para explorar las diversas funcionalidades que estas tecnologías nos ofrecen!
