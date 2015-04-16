@@ -155,6 +155,7 @@ Palabras clave "BASE", dentro de Design, como todas las especiales
   _is_rubrique          Indica que el fichero de configuración afecta a las secciones
   _is_rubrique-agenda   Indica que el fichero de configuración afecta a la Agenda
   _is_rubrique-album    Indica que el fichero de configuración afecta a los Álbumes
+  _is_contact           Indica que el artículo se utilizará tanto por título como por enlace como medio de contacto
 
   Propiedad                           Descripción                                                                                                                                                           Aplica a
   ----------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------
@@ -190,6 +191,7 @@ Palabras clave "BASE", dentro de Design, como todas las especiales
   _has_sameauth     mod_artsaut.html mod_artsautalbum.html
   _has_rubriques    mod_rub.html
   _has_technorati   mod_technorati.html
+  _has_contact      Incluirá un enlace al artículo marcado como _is_contact
 ~~~
 
 Por ejemplo, para crear una web con el juego de colores Rojo, crearemos un artículo al que le asignaremos las palabras:
