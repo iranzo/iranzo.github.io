@@ -3,12 +3,12 @@ layout: post
 title: "Intel AMT on Linux for remote control/fencing"
 date: 2015-05-01 11:35:14 +0200
 comments: true
-category: [linux, fencing, management] 
+category: [Linux, fencing, management] 
 description: 
 ---
 Hi,
 
-Some time ago, and after discussing with a colleague, I had a look on Intel's [AMT](http://en.wikipedia.org/wiki/Intel_Active_Management_Technology), and this week I demoed it for another colleague as a cheap-replacement for having power fencing capabilities on comodity hardware.
+Some time ago, and after discussing with a colleague, I had a look on Intel's [AMT](http://en.wikipedia.org/wiki/Intel_Active_Management_Technology), and this week I demoed it for another colleague as a cheap-replacement for having power fencing capabilities on commodity hardware.
 
 AMT provides a server-like Out of band management like iLO, iDrac, RSB etc and it's included in i3 with vPro processors/chipsets of some equipment.
 
@@ -17,7 +17,7 @@ I did the test on a Lenovo X200/201 system I had as old laptop.
 The steps used for configuring it, require to:
 
 - first enable the support in the BIOS, usually named 'Intel AMT' or 'Intel Active Management Technology'.
-- After this step it was posssible to use the command to enter the special AMT firmware `Intel(R) Management Engine` which on this laptop is enabled with `CTRL-P`.
+- After this step it was possible to use the command to enter the special AMT firmware `Intel(R) Management Engine` which on this laptop is enabled with `CTRL-P`.
 - If this is the first time you enable it, you'll require to change the default `admin` password to something secure, usually mixed upper-lower case, symbol and numbers.
     - For this example we'll be using `Qwer123$` as password.
 - Explore the settings, enable it and validate network settings.
@@ -85,7 +85,7 @@ amttool $AMT_HOST powerdown
 
 Check `man amttool` for other commands like `reset`, `powercycle`.
 
-IMPORTANT: note that some power state changes can only be performed based on previous status, you can check with `info` the available ones and current status of syste,.
+IMPORTANT: note that some power state changes can only be performed based on previous status, you can check with `info` the available ones and current status of system.
 
 As a bonus, there's a RFE[^1] for requesting this tool to be incorporated as power fencing mechanism in fence-agents once 'amtterm' is included in RHEL, in the meantime it's already available in Fedora, and when it comes to RHEL, **hopefully** could also be used as fence agent for Clusters and RHEV.
 
