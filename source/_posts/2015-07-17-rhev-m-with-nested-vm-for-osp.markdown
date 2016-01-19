@@ -26,9 +26,9 @@ From here, just needed to enable NestedVT on the environment.
 `NestedVT` 'just' requires to expose the `svm` or `vmx` flag to the VM running directly from the bare-metal host, and we need to do that for every VM we start. On normal system with libvirt, we can just edit the XML for the VM definition and define the CPU like this:
 
 {% highlight xml %}
-<cpu mode=’custom’ match=’exact’>
-    <model fallback=’allow’>OpteronG3</model>
-    <feature policy=’require’ name=’svm’/>
+<cpu mode='custom' match='exact'>
+    <model fallback='allow'>Opteron_G3</model>
+    <feature policy='require' name='svm'/>
 </cpu>
 {% endhighlight %}
 
