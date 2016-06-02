@@ -2,10 +2,11 @@
 layout: post
 title: Migrar de SPIP 1.8 a 1.9
 date: 2006-07-01T14:48:00Z
-category: [spip, cms]
+tags: spip, cms
+lang: es
 ---
 
-### Introducción a SPIP 1.9 
+### Introducción a SPIP 1.9
 
 SPIP 1.9 va a traer bastantes mejoras respecto a versiones anteriores, entre ellas:
 
@@ -20,7 +21,7 @@ servidor al cliente que visita la página, haciendo que la navegación sea
 más fluída y el servidor no se sobrecargue)
 -  Soporte UTF-8
 
-### Proceso de actualización a SPIP 1.9 (de forma limpia) 
+### Proceso de actualización a SPIP 1.9 (de forma limpia)
 
 El proceso lo podemos llevar a cabo de varias formas, tanto por la parte del servidor como por las plantillas, pero teniendo en cuenta una serie de precauciones.
 
@@ -41,7 +42,7 @@ Hasta aquí, tenemos actualizados los ficheros, ahora viene la base de datos, po
 
 -  Si nuestro proveedor soporta el htpasswd, sería recomendable copiar el que viene con spip htpasswd.txt al nombre que nos haya indicado nuestro proveedor (habitualmente ".htpasswd"), así como habilitar las url_propres en ecrire/mes_options.php
 
-### Adaptar los esqueletos 
+### Adaptar los esqueletos
 
 Una de las cosas a tener en cuenta, es que con la desaparición de los .php3, han desaparecido también (al formar parte de las mejoras) las parejas de esqueletos .html/.php3, ahora las llamadas a los esqueletos se realizan con el parámetro page=plantilla.html, o con una nueva baliza llamada #URL_PAGE que nos permite crear url's de la forma en la que SPIP las utiliza y que previsiblemente, hará que no tengamos que volver a poner las url's a mano a pesar de los cambios de versión porque podrá
 encargarse SPIP de adaptarlas a la nueva forma de hacerlo en cada caso.

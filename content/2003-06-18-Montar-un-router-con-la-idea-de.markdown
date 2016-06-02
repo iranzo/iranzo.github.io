@@ -2,10 +2,11 @@
 layout: post
 title: Montar un router con la idea de wireless
 date: 2003-06-18T21:39:00Z
-category: [linux, wireless, router, firewall]
+tags: linux, wireless, router, firewall
+lang: es
 ---
 
-### Introducción 
+### Introducción
 
 Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red.
 
@@ -26,7 +27,7 @@ Las tarjetas a la venta en el mercado tienen tres modos de operación:
 En redes con Windows sólo es posible trabajar en los dos primeros modos, el Ad-Hoc y el Managed, para ello, como se ve, es necesario un AP por hardware que trabaje como Master al que las tarjetas que trabajan en Managed se puedan conectar. Y este es el punto en el que Linux marca la diferencia... con Linux, existe un controlador (hostap) para las tarjetas basadas en Prism2 (p.ej. las Conceptronic). Con Linux y con esos controladores, es posible poner en modo Master las tarjetas de red
 (generalmente PCMCIA con un adaptador PCI para equipos de sobremesa) y de ese modo, hacer un AP por software.
 
-Quisiera expresar mi agradecimiento a Ghfjdksl de #wireless, a Jorti de #guadawireless y a Hilario y a Hawkmoon de #valenciawireless por la ayuda prestada para montar este nodo. Saludos también al resto de gente de #valenciawireless por sus larguísimas tertulias ;P 
+Quisiera expresar mi agradecimiento a Ghfjdksl de #wireless, a Jorti de #guadawireless y a Hilario y a Hawkmoon de #valenciawireless por la ayuda prestada para montar este nodo. Saludos también al resto de gente de #valenciawireless por sus larguísimas tertulias ;P
 
 Hardware
 
@@ -79,7 +80,7 @@ Ahora el ordenador es un P200 MMX con 128 Mb de RAM, las tarjetas son una Intel 
 
 Ahora vamos a la configuración del software...
 
-### Sistema Operativo y Paquetes 
+### Sistema Operativo y Paquetes
 
 El primer paso previo a todos, es que una vez configurado el hardware para que no se queje (IRQ's, puertos IO, etc) (si la placa es realmente P'n'P no habrá problemas pero la mía aunque es P'n'P dio algunos problemas así que... ajo y agua...) Si has de comprar tarjetas y puedes, cómpralas PCI y mejor todavía si compras un HUB porque así no tienes que tener el ordenador rellenito en todas sus ranuras con ethernets ;).
 
@@ -151,7 +152,7 @@ apt-get install
 
 Automáticamente el programa se conectará a Internet y comenzará a bajar esos paquetes y todos los necesarios para que esos funcionen, es decir, si instalas webmin-status, para eso te hará falta primero el webmin y el programa lo instalará también solito tras pedir confirmación e indicar los megas a descargar y lo que ocupará una vez descomprimido.
 
-### Red 
+### Red
 
 Vale, se supone que ahora ya tenemos el sistema funcionando y bueno...  algo es algo :) ahora viene lo serio... configurarlo para que se adapte a nuestras necesidades...
 
@@ -174,7 +175,7 @@ Con el resto de tarjetas editaremos los ficheros para ver que está todo bien y 
 # /etc/modules: kernel modules to load at boot time.
 #
 # This file should contain the names of kernel modules that are
-# to be loaded at boot time, one per line. Comments begin with 
+# to be loaded at boot time, one per line. Comments begin with
 # a "#", and everything on the line after them are ignored.
 unix
 af_packet
@@ -351,13 +352,14 @@ Respecto al servidor de nombres... no hice nada, sólo instalé el paquete y ya 
 
 Hasta este punto los equipos cliente que se configuren para que pidan la configuración automáticamente, recibirán una configuración válida desde nuestro nodo, ahora sólo falta hacer alguna cosilla más ;)
 
-### Masquerading 
+### Masquerading
 
 Tenemos un servidor DHCP, las tarjetas configuradas y un servidor de nombres... ahora sólo falta que enrute!!! de esa forma tendremos acceso a Internet desde cualquiera de nuestros ordenadores...
 
 Para ello, si leemos el IP-MASQUERADING-HOWTO, sacaremos este interesante script:
 
-{% highlight bash %}
+~~~
+#!bash
 #!/bin/sh
 #
 # rc.firewall-2.4
@@ -473,7 +475,7 @@ $IPTABLES -A INPUT -p TCP —dport 179 -i $EXTIF -j DROP
 $IPTABLES -A INPUT -p TCP —dport 2600:2605 -i $EXTIF -j DROP
 $IPTABLES -A INPUT -p TCP —dport 179 -i $EXTIF2 -j DROP
 $IPTABLES -A INPUT -p TCP —dport 2600:2605 -i $EXTIF2 -j DROP
-{% endhighlight %}
+~~~
 
 Si nos olvidamos hasta donde pone algo con IPTABLES, lo que tenemos es un script que habilita la funcionalidad de enrutado del kernel de linux, a partir de ese momento ya tendremos acceso "teórico" a internet...
 
@@ -512,7 +514,8 @@ Para arrancar el script del firewall crearemos un script con el formato estánda
 
 /etc/init.d/fire
 
-{% highlight bash %}
+~~~
+#!bash
 #!/bin/sh
 IPTABLES=/sbin/iptables
 # See how we were called.
@@ -548,8 +551,8 @@ case "$1" in
         echo "Usage: fire start|stop|status|mlist"
         exit 1
         ;;
-esac 
-{% endhighlight %}
+esac
+~~~
 
 Si ahora creamos los enlaces simbólicos apropiados a este script en `/etc/rc?.d` pondremos especificar cuando queremos que se arranque el
 enrutamiento...
@@ -577,7 +580,7 @@ Ahora que parece que está más o menos esto en marcha, habría que hacer túnel
 
 Hay un bonito README en el VPNS.
 
-### Consejos Finales 
+### Consejos Finales
 
 Vale, nuestro servidor tiene las tarjetas configuradas, enruta, hace de servidor DHCP, DNS, bloquea los escaneos de puertos... ahora sólo queda algún detalle interesante:
 
@@ -603,7 +606,7 @@ Sería interesante activar también un Proxy tipo Squid para acelerar la navegac
 
 ¡¡Un saludo y suerte!!
 
-### Ficheros de configuración 
+### Ficheros de configuración
 
 **Squid**
 
@@ -639,5 +642,3 @@ lock
 # client server secret IP addresses
 prueba * probando *
 ~~~
-
-

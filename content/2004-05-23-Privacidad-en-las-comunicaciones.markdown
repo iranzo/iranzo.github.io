@@ -2,12 +2,13 @@
 layout: post
 title: Privacidad en las comunicaciones electrónicas
 date: 2004-05-23T20:40:00Z
-category: [software, privacy]
+tags: software, privacy
+lang: es
 ---
 
 Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto.
 
-### Orígenes 
+### Orígenes
 
 Desde tiempos inmemoriales, a la vez que se avanzaba en la comunicación, se avanzaba también en la necesidad de mantener la privacidad de las mismas...
 
@@ -40,7 +41,7 @@ Uno de los sistemas "modernos" más conocidos fue la máquina [Enigma](http://es
 
 La máquina Enigma se basaba en una clave que una vez introducida cambiaba mediante unos tambores rotatorios el resultado de apretar una tecla, de forma que al apretar varias veces una misma tecla, se obtenían resultados diferentes, dificultando enormemente el descifrado de un mensaje si no se conocía la clave inicial.
 
-### Actualidad 
+### Actualidad
 
 Hoy en día las comunicaciones siguen siendo algo necesario y la privacidad de las mismas es, si cabe, aún más necesaria.
 
@@ -59,7 +60,7 @@ Se rumorea que en Alemania, si durante una conversación telefónica se cita un 
 
 Se rumorea también que operadores de telefonía escuchan aleatoriamente conversaciones para comprobar la calidad de la comunicación...
 
-### ¿Cómo proteger nuestra privacidad entonces? 
+### ¿Cómo proteger nuestra privacidad entonces?
 
 *Web*
 
@@ -122,7 +123,7 @@ Actualmente poca gente protege sus redes inalámbricas y son numerosos los infor
 
 Incluso utilizando WEP, una red inalámbrica no es segura, ya que debido a fallos de diseño, es posible acceder a ella saltándose la clave de cifrado.
 
-### Marco legal 
+### Marco legal
 
 Uno de los principales escollos para la criptografía fue y sigue siendo las leyes de exportación[^12] americanas, que impedían su exportación al extranjero de programas que incorporaran cifrado "fuerte" y que provocó situaciones tan ridículas como que el código fuente del programa PGP no pudiera ser exportado electrónicamente y que por lo tanto fuera impreso completamente en muchísimos volúmenes de texto, que se sacaron legalmente (sólo era ilegal en formato binario) del país, permitiendo que a su llegada a Europa, fueran escaneados y convertidos de nuevo a código de ordenador para crear la versión Europea de PGP (sin la restricción de exportación americana).
 
@@ -150,7 +151,7 @@ En Grecia, según una reciente [noticia](http://barrapunto.com/article.pl?sid=04
 
 Existen alternativas como [Freenet](http://freenetproject.org/index.php?page=faq) que a costa de hacernos perder velocidad en nuestras conexiones, nos garantizan una mayor seguridad (los datos viajan por varios servidores antes de alcanzar realmente al destino, de forma similar a como cuando se utilizan redes de proxies para acceder a los servidores web), de forma que dificultan notablemente la posibilidad de trazarlos.
 
-### Consideraciones 
+### Consideraciones
 
 El software de cifrado no debe utilizarse sólo cuando haya algo privado que decir ya que llamará la atención, debe utilizarse por costumbre y de contínuo, dada la potencia actual de los ordenadores, el cifrado sólo es útil hasta que saquen máquinas suficientemente potentes como para romperlo en un plazo razonable de tiempo (un escrito cifrado que necesite un año para romperlo, no es útil, pues estará muy desfasado cuando se complete el descifrado). Por eso, al utilizar con normalidad el cifrado y la firma de los mensajes, estaremos contribuyendo a mantener nuestra privacidad para los momentos donde realmente sea necesaria.
 
@@ -160,11 +161,11 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 
 ¡Utiliza el cifrado!
 
-### Enlaces 
+### Enlaces
 -  [Kriptopolis](http://www.kriptopolis.org/)]
 -  [PGP Internacional](http://www.pgpi.org/)
 -  [Introducción a GPG: Necesidad y guía rápida en siete pasos](http://bulma.net/body.phtml?nIdNoticia=1684)
--  [Noticia en HispaSec del científico acusado](http://www.hispasec.com/unaaldia/2034) [Patentes de Software]({% post_url 2004-05-13-Patentes-de-Software %})
+-  [Noticia en HispaSec del científico acusado](http://www.hispasec.com/unaaldia/2034) [Patentes de Software]({% post_url 2004-05-13-Patentes-de-Software )
 -  [Redes Inalámbricas (declaradas) en España](http://www.nodedb.com/index.php?country=europe&state=es&city=)
 -  [Preguntas frecuentes sobre informática fiable](http://linuca.org/body.phtml?nIdNoticia=207)
 
@@ -209,4 +210,3 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 [^19]: Trusted Computing Platform Alliance
 
 [^20]: Nombre en Clave del sistema operativo de MS que permitiría un control absoluto bajo las políticas de "seguridad" de TCPA
-

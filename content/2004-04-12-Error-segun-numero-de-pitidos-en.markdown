@@ -2,7 +2,8 @@
 layout: post
 title: Error según número de pitidos en la BIOS
 date: 2004-04-12T09:54:00Z
-category: [hardware]
+tags: hardware
+lang: es
 ---
 
 Las BIOS (Basic Input Output System) de los pc's informan de los errores del hardware del pc en el arranque mediante un código de pitidos en el caso en el que no puede aparece nada por pantalla... aqui los podrás ver..
@@ -33,4 +34,3 @@ del arranque:
   3                   Fallo de comprobación de memoria convencional y extendida
   8                   Fallo de monitor y fallo de trazado vertical y horizontal
 ~~~
-

@@ -3,7 +3,7 @@ layout: post
 title: "RHEV-M with nested VM for OSP"
 date: 2015-07-17 18:34:17 +0200
 comments: true
-category: [linux, openstack, rhev, ovirt, vdsm, hook, nestedvt]
+tags: linux, openstack, rhev, ovirt, vdsm, hook, nestedvt
 description: 
 ---
 
@@ -25,12 +25,13 @@ From here, just needed to enable NestedVT on the environment.
 
 `NestedVT` 'just' requires to expose the `svm` or `vmx` flag to the VM running directly from the bare-metal host, and we need to do that for every VM we start. On normal system with libvirt, we can just edit the XML for the VM definition and define the CPU like this:
 
-{% highlight xml %}
+~~~
+#!xml 
 <cpu mode='custom' match='exact'>
     <model fallback='allow'>Opteron_G3</model>
     <feature policy='require' name='svm'/>
 </cpu>
-{% endhighlight %}
+~~~
 
 For RHEV, however, we don't have an XML we can edit, as it is created dynamically with the contents of the database for the VM (disks, NICS, name, etc), but we've the [VDSM-Hooks](http://www.ovirt.org/VDSM-Hooks) mechanism for doing this.
 
@@ -42,10 +43,11 @@ As you can imagine, this is something that has lot of interested people behind, 
 
 In this case, the one that we're needing is 'nestedvt', so we can proceed to install it on our hosts like:
 
-{% highlight bash %}
+~~~
+#!bash 
 wget http://mirrors.ibiblio.org/ovirt/pub/ovirt-3.4/rpm/el7/noarch/vdsm-hook-nestedvt-4.14.17-0.el7.noarch.rpm
 rpm -Uvh vdsm-hook-nestedvt-4.14.17-0.el7.noarch.rpm
-{% endhighlight %}
+~~~
 
 You'll need to put a host in maintenance and activate for VDSM to refresh the hooks installed and start new VM so we have the hook injecting the XML.
 
@@ -59,16 +61,18 @@ To come to our rescue, another hook comes to play in, this time `macspoof` which
 
 First, let's repeat the procedure and install the hook on all of our hypervisors:
 
-{% highlight bash %}
+~~~
+#!bash 
 wget http://mirrors.ibiblio.org/ovirt/pub/ovirt-3.4/rpm/el7/noarch/vdsm-hook-macspoof-4.14.17-0.el7.noarch.rpm
 rpm -Uvh vdsm-hook-macspoof-4.14.17-0.el7.noarch.rpm
-{% endhighlight %}
+~~~
 
 This will enable the hook in the system, but we also need to make the RHEV-M Engine aware of it, so we need to define a new Custom Property for VM's:
 
-{% highlight bash %}
+~~~
+#!bash 
 engine-config -s "UserDefinedVMProperties=macspoof=(true|false)"
-{% endhighlight %}
+~~~
 
 This will ask us for the compatibility version (we'll choose 3.5) and enable a new true/false property for VM's that require this security measure lifted. We're doing of course this approach instead of disabling it for everyone to limit it's use to just the VM's needing it, not losing all the benefits on security provided.
 

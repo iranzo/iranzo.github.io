@@ -3,30 +3,33 @@ layout: post
 title: Creación de distribuciones Live con Fedora
 date: 2008-09-24T20:34:16Z
 author: Pablo Iranzo Gómez
-category: [linux, fedora]
+tags: linux, fedora
+lang: es
 ---
 
 
-### Introducción 
+### Introducción
 
-Según lo visto en el artículo [Kickstart]({% post_url 2008-05-11-Kickstart-instalaciones %}), podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
+Según lo visto en el artículo [Kickstart]({% post_url 2008-05-11-Kickstart-instalaciones ), podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
 
-[Fedora]({% post_url 2008-06-14-Fedora %}) proporciona unas utilidades 'livecd-tools' que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
+[Fedora]({% post_url 2008-06-14-Fedora ) proporciona unas utilidades 'livecd-tools' que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
 
-### Ejemplo 
+### Ejemplo
 
 Por ejemplo, podemos personalizar nuestro medio 'live' cambiando el mensaje de login con un:
 
-{% highlight bash %}
+~~~
+#!bash 
 %post
 echo "Sistema personalizado Live" > /etc/issue
-{% endhighlight %}
+~~~
 
-Utilizando la sección `%packages` podemos por ejemplo instalar los paquetes openssh, o el entorno gráfico que luego tendremos disponibles en nuestro sistema. 
+Utilizando la sección `%packages` podemos por ejemplo instalar los paquetes openssh, o el entorno gráfico que luego tendremos disponibles en nuestro sistema.
 
 Un ejemplo de kickstart para un medio Live podría ser:
 
-{% highlight bash %}
+~~~
+#!bash 
 install
 cdrom
 reboot
@@ -126,19 +129,20 @@ echo "Medio Live personalizado" > /etc/issue
 echo "Inicie sesión como 'root' sin contraseña" >> /etc/issue
 echo " " >> /etc/issue
 
-{% endhighlight %}
+~~~
 
-### Creación 
+### Creación
 
 Para generar la imagen Live, ejecutaremos
 
-{% highlight bash %}
+~~~
+#!bash 
 livecd-creator -c /root/usuario/ks.cfg -f MedioLive
-{% endhighlight %}
+~~~
 
 Al acabar, obtendremos un fichero ".iso" que contendrá un medio 'Vivo' basado en nuestro guión de instalación.
 
-### Llaves USB/Pendrives 
+### Llaves USB/Pendrives
 
 Livecd-tools incorpora dos utilidades más:
 
@@ -147,7 +151,7 @@ Livecd-tools incorpora dos utilidades más:
 
 Que graban esa imagen ISO en un medio USB y lo hacen arrancable, y por otro permiten crear los ficheros necesarios para poder servir en un entorno diskless nuestra imagen Live, por ejemplo, para hacer un medio de rescate más completo que el entorno mínimo que suelen ofrecer las distribuciones.
 
-### Conclusión 
+### Conclusión
 
 Aprovechando los conocimientos que ya teníamos acerca de kickstart y anaconda, podemos personalizar un medio Vivo, livecd-tools se encargarán de la parte 'complicada' de adaptar el sistema a ejecutarse en un medio de sólo lectura.
 

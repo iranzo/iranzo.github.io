@@ -2,7 +2,7 @@
 layout: post
 title: Jumpers Olivetti Echos P75
 date: 2004-04-06T10:01:00Z
-category: [hardware, general]
+tags: hardware, general
 ---
 
 Olivetti Echos Family (Tested on my P75, but obtained from the Internet)
@@ -66,4 +66,3 @@ Olivetti Echos P75 system:
 -  Power adapter
 
 THIRD UPDATE: 17th November 2007: At [How to create a digital frame](http://www.dkomputer.com/cadrephoto/index_us.html) says that the problem with the blinking cursor is related with battery being exhausted (as a visitor pointed too). Will try :)
-

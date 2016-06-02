@@ -2,16 +2,17 @@
 layout: post
 title: Esqueleto basado en el de spip-contrib
 date: 2005-02-20T22:52:00Z
-category: [spip, cms]
+tags: spip, cms
+lang: es
 ---
 
-### Introducción 
+### Introducción
 
 Antes de nada... Estos esqueletos se basan en los aparecidos en [http://www.spip-contrib.net](http://www.spip-contrib.net/), gracias a un mensaje que se envió a la lista de correo de SPIP en Español, hablando de otros modelos basados en esos mismos (los de [nqnwebs para atén](http://www.nqnwebs.com.ar/article.php3?id_article=39) de Martín Gaitán)
 
 Lo que me llamó la atención de estos esqueletos era que se adaptaban bien al tamaño de pantalla y se veían adecuadamente tanto en [Mozilla](http://www.mozilla.org/) como otros navegadores, y que al disponer de dos áreas de menús, se adaptaban más cómodamente al diseño modular que habíamos utilizado Laura Primo y [Pablo Iranzo Gómez](http://alufis35.uv.es/~iranzo/) para las webs de [http://Linuv.uv.es](http://Linuv.uv.es/) y la versión anterior de [http://Alufis35.uv.es](http://Alufis35.uv.es/).
 
-### Créditos 
+### Créditos
 
 -  Este esqueleto se basa en el trabajo del grupo de diseño de [http://www.spip-contrib.net](http://www.spip-contrib.net/)
 -  Utiliza la parte de agenda con modificaciones del esqueleto [epona](http://www.spip-contrib.net/article509.html)
@@ -22,7 +23,7 @@ Lo que me llamó la atención de estos esqueletos era que se adaptaban bien al t
 
 Queremos agradecer desde aquí a todos ellos su trabajo previo que ha posibilitado la creación de este.
 
-### Características 
+### Características
 
 -  Permiten modificar el logotipo y frase de la web modificando un artículo con una palabra clave especial
 -  Permiten modificar el mensaje de la web con otro artículo con una frase especial
@@ -38,7 +39,7 @@ Queremos agradecer desde aquí a todos ellos su trabajo previo que ha posibilita
 -  Soporte automatizado para [Google Sitemaps](http://www.google.com/webmasters/sitemaps/), simplemente enviar el archivo con el mapa del sitio y listo
 -  Soporte automatizado para [ROR: Resources Of a Resource](http://www.rorweb.com/)
 
-### Requisitos 
+### Requisitos
 
 Estos esqueletos han sido desarrollados sobre la versión SPIP 1.8.2d, y aunque debería funcionar sobre las posteriores a la 1.7.2, no se han realizado pruebas al respecto.
 
@@ -143,4 +144,3 @@ Para utilizar la agenda, deberás publicar artículos en su sección y asignarle
 En caso de que tengas alguna duda relacionada o considerases que alguna parte de este documento o de las plantillas se puede mejorar, no dudes en colgar un mensaje al respecto.
 
 Saludos
-

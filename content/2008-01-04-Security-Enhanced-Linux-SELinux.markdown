@@ -2,7 +2,7 @@
 layout: post
 title: Security Enhanced Linux (SELinux)
 date: 2008-01-04T18:14:03Z
-category: [linux, selinux]
+tags: linux, selinux
 ---
 
 ### Introduction 

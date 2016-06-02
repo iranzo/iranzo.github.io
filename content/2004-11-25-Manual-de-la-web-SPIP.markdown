@@ -2,18 +2,19 @@
 layout: post
 title: Manual de la web SPIP
 date: 2004-11-25T18:44:00Z
-category: [cms, spip]
+tags: cms, spip
+lang: es
 ---
 
-### Manual de instrucciones de la web 
+### Manual de instrucciones de la web
 
-### Introducción 
+### Introducción
 
 Para facilitar el uso de la web tanto por personas acostumbradas al trabajo con ordenadores, como personas que no lo están,hacía falta una de forma de agrupar a la vez un sistema sencillo de manejar como potente en su funcionamiento y posibilidades de adaptación.
 
 Se analizaron los diversos sistemas libres de gestión de contenidos (la opción de editar directamente las páginas quedó descartada por su complejidad y falta de uniformidad, etc), y entre los más habituales: PHP-Nuke, Post-Nuke, Drupal, etc se fueron descartando debido a los problemas de seguridad de los que adolecían los más extendidos como PHP-Nuke, o a la orientación a personas acostumbradas al manejo de estos sistemas.
 
-### SPIP 
+### SPIP
 
 Al final se escogió a SPIP: Sistema para la Publicación en Internet.  SPIP es un gestor de contenido diseñado con la idea de crear los archivos digitales de Le Monde Diplomatique y se creó combinando otros sistemas ya utilizados en revistas online.
 
@@ -26,7 +27,7 @@ Como características, cabe destacar, que debido a su orientación al mundo edit
 
 Además de todas estas, SPIP aporta toda la funcionalidad de un gestor de contenido, como la creación de ficheros de sindicación, sindicación de titulares de otras páginas, buscador, imágenes por cada categoría, etc.
 
-### Estructura de SPIP 
+### Estructura de SPIP
 
 SPIP está estructurado en torno a secciones (rubriques) que pueden estar ubicadas en el raíz del sitio, o bien dentro de otras secciones.
 
@@ -34,7 +35,7 @@ A nivel de publicación, SPIP soporta dos tipos de artículo, las breves y los a
 
 Las breves están orientadas a pequeñas notas, no muy desarrolladas, por ejemplo, convocatorias de reuniones, concentraciones, etc, por otro lado, los artículos están orientados a comunicados de prensa, y a noticias más elaboradas, por ejemplo, en el caso de una concentración, explicando los motivos que han llevado a esa situación, enlaces a las noticias en otros sitios, etc.
 
-### La web 
+### La web
 
 El aspecto actual se basa en una modificación de las plantillas estándar de SPIP, con plantillas especiales para mostrar galerías fotográficas, etc, así como iconos personalizados según la sección.
 
@@ -42,7 +43,7 @@ La potencia de SPIP se basa precisamente en tener un mismo sistema para edición
 
 Llegando a hacer que parezca mentira que por debajo esté funcionando el mismo sistema de gestión.
 
-Actualmente existe un equipo desarrollando una nueva apariencia para la web, de forma que su aspecto resulte más atractivo y muestre de forma más organizada la información. 
+Actualmente existe un equipo desarrollando una nueva apariencia para la web, de forma que su aspecto resulte más atractivo y muestre de forma más organizada la información.
 
 ###Precauciones
 
@@ -54,7 +55,7 @@ Claro está, es conveniente, una vez creado un artículo, ver el aspecto que tie
 
 Debemos pues, procurar dotar a los artículos y como consecuencia a la web, de los mejores contenidos posibles, lo más completos, referenciados y sobre todo actualizados, para así poder ser un lugar de referencia del que la gente pueda obtener información
 
-### Entrada a la zona administrativa 
+### Entrada a la zona administrativa
 
 En la página principal, pincharemos sobre el enlace "Espacio privado" y nos aparecerá la ventana de inicio de sesión.
 
@@ -68,7 +69,7 @@ La aplicación está plagada de iconos que nos muestran la ayuda de la que dispo
 
 Vamos a presionar sobre el enlace "Nuevo Artículo", ya que es donde principalmente vamos a trabajar.
 
-### Creando un artículo 
+### Creando un artículo
 
 Cuando pinchamos el atajo para crear un nuevo artículo nos aparece una nueva ventana.
 
@@ -142,7 +143,7 @@ Código a no interpretar y mostrar de forma especial entre el tag: "`code`"
 
 Este cuadro nos permite añadir texto al final del artículo, que por ejemplo nos puede ser útil para referenciar a otros artículos relacionados, etc.
 
-### Las breves 
+### Las breves
 
 Una noticia breve, se parece mucho a un artículo, con la limitación de sólo poder publicarse en las secciones de primer nivel.
 
@@ -154,7 +155,7 @@ Por norma, sería aconsejable limitar las breves a pequeños avisos, que se escr
 
 Luego en el texto, se podría ampliar un poco más la información, pero siempre, teniendo en mente que se debería escribir un artículo al que enlace la breve, indicando los motivos que impulsan a esa concentración, cita, etc de forma que quede ampliada la información que con el título no es suficiente.
 
-### Comprobando el resultado 
+### Comprobando el resultado
 
 Una vez hemos escrito un artículo y hemos presionado el botón de validar, nos aparece una vista previa de cómo quedará el artículo, su título, antetítulo, descripción, etc.
 
@@ -168,11 +169,10 @@ También podemos adjuntar iconos personalizados a los artículos, de forma que p
 
 Actualmente, si no se especifica ninguno en el artículo, se utilice el de la sección.
 
-### Consideraciones 
+### Consideraciones
 
 Si el artículo va a tener documentos adjuntos, sería interesante, que por ejemplo en el caso de referencias técnicas, etc, éstos se publiquen como un artículo, no como un adjunto a un artículo, el motivo es muy sencillo, si un artículo lleva un adjunto, es poco probable que un buscador lo descargue y lo indexe, mientras que si es texto, los buscadores lo encontrarán, lo añadirán a sus bases de datos, y permitirán que se encuentre el artículo con mayor facilidad.
 
 Si el artículo va a tener adjuntadas muchas fotografías, por ejemplo en el caso de fotografías de una install party, un evento, etc, es recomendable crear dos artículos, uno con todo el texto del artículo, detallando por ejemplo, el motivo del evento, del programa del mismo, y por otro lado, en la parte de "post Scriptum", ponga el enlace a otro artículo publicado en la sección de "Galería fotográfica", donde se pondrían todas las imágenes relacionadas, permitiendo que la gente que sólo esté interesada en el texto, lo descargue rápidamente y por otro lado pueda consultar las fotografías con más calma.
 
 Una de las cosas a tener en cuenta para la publicación: cuanto más completo sea el artículo con textos claros, bien estructurados, enlaces a los lugares de dónde se ha sacado la información, o dónde se puede ampliar o contrastar la misma, enlaces a la Wikipedia para las palabras más "complejas" o que son importantes, pero no tienen lugar para una explicación dentro del artículo, etc, harán por un lado que los buscadores encuentren y valoren mejor la página y la información, favoreciendo que se la visite, y por otro lado, harán que los visitantes se lleven una buena impresión del trabajo realizado y vuelvan a ella convirtiéndola en un lugar de consulta frecuente, ampliando así su utilidad.
-

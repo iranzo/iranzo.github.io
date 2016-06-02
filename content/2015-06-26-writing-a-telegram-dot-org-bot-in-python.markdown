@@ -3,7 +3,7 @@ layout: post
 title: "Writing a Telegram.org bot in Python"
 date: 2015-06-26 17:12:30 +0200
 comments: true
-category: [Python, programming, telegram]
+tags: Python, programming, telegram
 description: 
 ---
 

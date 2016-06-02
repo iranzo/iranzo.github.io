@@ -3,9 +3,9 @@ layout: post
 title: Customize RHEL/CentOS installation media (EL4/EL5+)
 date: 2010-01-23T08:25:00Z
 author: Pablo Iranzo Gómez
-category: [rhel, centos, linux, installation]
+tags: rhel, centos, linux, installation
 ---
-### Introduction 
+### Introduction
 
 A standard install media, (let's talk about a DVD for easier start) has several files/folders at his root, but most important are:
 
@@ -17,7 +17,7 @@ Usually, a distribution has for it's main binaries more than 2 Gb of data, that 
 
 Wouldn't it be better to have one install media suited for your target systems with all available updates applied?
 
-### Preparing everything 
+### Preparing everything
 
 First, we'll need to copy all of our DVD media to a folder in our harddrive, including those hidden files on DVD root (the ones telling installer which cd-sets are included and some other info).
 
@@ -25,13 +25,13 @@ Let's asume that we'll work on /home/user/DVD/
 
 After we've copied everything from our install media, we'll start customizing :)
 
-### DVD background image at boot prompt 
+### DVD background image at boot prompt
 
 We can customize DVD background image and even keyboard layout by tweaking "isolinux/isolinux.cfg" with all required fields (Check [Syslinux](http://syslinux.zytor.com/wiki/index.php/SYSLINUX) Documentation to check proper syntax)
 
-On [Kickstart: instalaciones automatizadas para anaconda]({% post_url 2008-05-11-Kickstart-instalaciones %}) (spanish) you can also check how to create a kickstart, so you can embed it on this DVD and configure isolinux.cfg to automatic provision a system
+On [Kickstart: instalaciones automatizadas para anaconda]({% post_url 2008-05-11-Kickstart-instalaciones ) (spanish) you can also check how to create a kickstart, so you can embed it on this DVD and configure isolinux.cfg to automatic provision a system
 
-### Including updates 
+### Including updates
 
 The easiest way would be to install a system with all required package set from original DVD media, and then connect that system to an update server to fetch but not install them.
 
@@ -46,7 +46,7 @@ For each package in updates/, you'll need to remove old version from original fo
 
 After some minutes, you'll have all updates in place... and you can remove the DVD/updates/ folder as it will be empty after placing each updated RPM in the folder where the previous versions was.
 
-### Removing unused packages 
+### Removing unused packages
 
 Well, after having everthing in place, we'll start removing unused files. Usually, we could check every package install status on 'test' system by checking rpm, but that's going to be a way looooong task, so we can 'automate' it a bit by doing:
 
@@ -55,44 +55,47 @@ password less connection between your systems (BUILD and TARGET):
 
 On BUILD system:
 
-{% highlight bash %}
+~~~
+#!bash 
 for package in *.rpm
-do 
+do
     NAME=`rpm -q —queryformat '%NAME' $package` ssh TARGET "rpm -q $NAME >/dev/null 2>&1 || echo rm $package" |tee things-to-do
 done
-{% endhighlight %}
+~~~
 
 -  If you don't have ssh password-less setup (using private/public key auth or kerberos), you can do something similar this way:
 
 On BUILD system:
 
-{% highlight bash %}
+~~~
+#!bash 
 for package in *.rpm
 do
     NAME=`rpm -q —queryformat '%NAME' $package` echo "$package:$NAME" > packages-on-DVD
 done
-{% endhighlight %}
+~~~
 
 Then copy that file on your TARGET system and running:
 
 On TARGET system:
 
-{% highlight bash %}
+~~~
+#!bash 
 for package in `cat packages-on-DVD`
-do 
+do
     QUERY=`echo $package|cut -d ":" -f 2` FILE=`echo $package|cut -d ":" -f 1` rpm -q —queryformat '%NAME' $QUERY >/dev/null 2>&1 || echo rm $FILE|tee things-to-do
 done
-{% endhighlight %}
+~~~
 
 After you finish, you'll have a file named `things-to-do`, in which you'll see commands like 'rm packagename-version.rpm'
 
 If you're confident about it's contents, you can run `sh things-to-do` and have all 'not installed on TARGET' packages removed from your DVD folder.
 
-### Adding extra software 
+### Adding extra software
 
 In the same way we added updates, we can also add new software to be deployed along base system like monitoring utilities, custom software, HW drivers, etc, just add packages to desired folders before going throught next steps.
 
-### Recreating metadata 
+### Recreating metadata
 
 After all our adds and removals, we need to tell installer that we changed packages, and update it's dependencies, install order, etc.
 
@@ -102,34 +105,38 @@ This one is trickier, but it is still possible in a not so hard way, first of al
 
 Gererate first version of `hdlists`:
 
-{% highlight bash %}
+~~~
+#!bash 
 export PYTHONPATH=/usr/lib/anaconda-runtime:/usr/lib/anaconda
 /usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/
 /usr/lib/anaconda-runtime/pkgorder /home/user/DVD/ i386 |tee /home/user/order.txt
-{% endhighlight %}
+~~~
 
 Review order.txt to check all packages added by hand to check correct or include missing packages and then continue with next commands:
 
-{% highlight bash %}
+~~~
+#!bash 
 export PYTHONPATH=/usr/lib/anaconda-runtime:/usr/lib/anaconda
 /usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/ —fileorder /home/user/order.txt
-{% endhighlight %}
+~~~
 
 **EL5**
 
 Using createrepo we'll recreate metadata, but we've to keep care and use comps.xml to provide 'group' information to installer, so we'll need to run:
 
-{% highlight bash %}
+~~~
+#!bash 
 createrepo -g /home/DVD/Server/repodata/groupsfile.xml /home/DVD/Server/
-{% endhighlight %}
+~~~
 
-### Finishing 
+### Finishing
 
 At this step you'll have a DVD structure on your hard drive, and just need to get an ISO to burn and test:
 
-{% highlight bash %}
+~~~
+#!bash 
 mkisofs -v -r -N -L -d -D -J -V NAME -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -x lost+found -m .svn -o MyCustomISO.iso /home/user/DVD/
-{% endhighlight %}
+~~~
 
 Now, it's time to burn MyCustomISO.iso and give it a try ;-)
 

@@ -3,7 +3,7 @@ layout: post
 title: "Intel AMT on Linux for remote control/fencing"
 date: 2015-05-01 11:35:14 +0200
 comments: true
-category: [Linux, fencing, management] 
+tags: Linux, fencing, management
 description: 
 ---
 Hi,
@@ -32,7 +32,8 @@ From that web interface and once logging with `admin` and the password set `Qwer
 
 Now, for doing the 'command-line' part, we will need to install one package on our system and rum some scripts.
 
-{% highlight bash %}
+~~~
+#!bash 
 # First we'll install amtterm wsmancli
 
 dnf -y install amtterm wsmancli
@@ -65,13 +66,14 @@ wsman invoke -a RequestStateChange http://schemas.dmtf.org/wbem/wscim/1/cim-sche
 # OPTIONAL: view settings (validate all the settings)
 wsman get http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h ${AMT_HOST} -P 16992 -u admin -p ${AMT_PASSWORD}
 
-{% endhighlight %}
+~~~
 
 After this step, we should be able to use `vinagre target` to access the KVM redirection and remotely control our system.
 
 For example, to control power of host you can use:
 
-{% highlight bash %}
+~~~
+#!bash 
 # Check host status:
 amttool $AMT_HOST info
 
@@ -81,7 +83,7 @@ amttool $AMT_HOST powerup
 # Power down a powered-on host:
 amttool $AMT_HOST powerdown
 
-{% endhighlight %}
+~~~
 
 Check `man amttool` for other commands like `reset`, `powercycle`.
 

@@ -3,12 +3,13 @@ layout: post
 title: FUSE
 date: 2008-07-01T20:13:16Z
 author: Pablo Iranzo Gómez
-category: [linux, fuse]
+tags: linux, fuse
+lang: es
 ---
 
-### Introducción 
+### Introducción
 
-En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a "hibernar" la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en "pausa" y al volver al día siguiente a utilizar el PC y encenderlo, recuperarlo todo tal cual estaba, listo para trabajar. Cuando pasé a [Fedora]({% post_url 2008-06-14-Fedora %}) esta función junto con el LVM cifrado no iban a faltar en mi sistema :-)
+En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a "hibernar" la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en "pausa" y al volver al día siguiente a utilizar el PC y encenderlo, recuperarlo todo tal cual estaba, listo para trabajar. Cuando pasé a [Fedora]({% post_url 2008-06-14-Fedora ) esta función junto con el LVM cifrado no iban a faltar en mi sistema :-)
 
 La hibernación utiliza la partición swap del sistema para almacenar el contenido de la RAM y así guardar el estado del sistema, y al siguiente arranque, se verifica si tiene información en dicha partición que se puede recuperar, y de ser así, gestiona la recuperación.
 
@@ -18,7 +19,7 @@ Durante muuuuuuchos años he estado utilizando ese funcionamiento para trabajar 
 
 Ésto me animó a probar otras alternativas y fue cuando FUSE volvió a mis manos.
 
-### FUSE 
+### FUSE
 
 [FUSE](http://fuse.sourceforge.net/)("Filesystem in userspace") es un proyecto que permite cargar sistemas de ficheros a nivel de usuario, para ello, dispone de un controlador en kernel, y una serie de utilidades ejecutables por usuarios para poder cargar esos sistemas de ficheros.
 
@@ -45,13 +46,14 @@ Yo actualmente estoy utilizando `fuse-sshfs` para solventar mi necesidad, y buen
 
 Lo que hago es lanzar desde un terminal el siguiente comando:
 
-{% highlight bash %}
+~~~
+#!bash 
 sshfs host:/ruta/a/la/carpeta carpeta-de-montaje
-{% endhighlight %}
+~~~
 
 A partir de ese momento, cada vez que accedo a la carpeta "carpeta-de-montaje", los ficheros sobre los que opero, están en otro equipo, al que se ha conectado por ssh y se le envian los comandos para abrir ficheros, renombrarlos, etc.
 
-### Extendiendo FUSE 
+### Extendiendo FUSE
 
 El meollo de este artículo es un artículo "WEB LOCAL: Pythoneando con FUSE" de [Linux Magazine](http://www.linux-magazine.es/) (número 37) que me pasó un compañero (Fran Gimeno) en el que se analizaba por parte de "Jose María Ruiz" el funcionamiento de FUSE La parte interesante de dicho artículo, así como en este artículo de [Red Hat Magazine](http://www.redhatmagazine.com/2008/01/29/open-source-project-zmugfs/).
 
@@ -59,7 +61,8 @@ El punto interesante del artículo de Jose María Ruíz es que implementan un nu
 
 En un sistema de ficheros estándar, utilizamos funciones como opendir, open, read, getattr para trabajar con ficheros, para utilizar FUSE, creamos métodos con esos nombres que realizan las operaciones que queremos, por ejemplo:
 
-{% highlight python %}
+~~~
+#!python 
 def readdir(self, path, offset):
     # read the next directory entry
     log.debug("readdir (%s) (%d)" % (str(path), int(offset)))
@@ -67,9 +70,8 @@ def readdir(self, path, offset):
     for n in node.get_nodes():
         log.debug("would return (%s) for path (%s)" % (n.path, path))
     yield fuse.Direntry(n.path.strip('/').encode('ascii'))
-{% endhighlight %}
+~~~
 
 (Obtenido de <http://zmugtools.svn.sourceforge.net/viewvc/zmugtools/tags/zmugfs/release-0.1/src/zmugfs.py?view=markup>)
 
 Así pues, aparte de los múltiples sistemas de ficheros ya disponibles con FUSE (entre ellos uno de los más conocidos inicialmente fue gmailfs que permitía utilizar el espacio de una cuenta de gmail como almacén de ficheros accesible de forma remota), podremos crear los que podamos necesitar de forma sencilla utilizando python (o el lenguaje de nuestra preferencia) para implementar las funciones de acceso.
-

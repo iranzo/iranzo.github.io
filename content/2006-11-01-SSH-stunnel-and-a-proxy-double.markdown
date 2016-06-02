@@ -2,7 +2,7 @@
 layout: post
 title: SSH, stunnel and a proxy -  double stunnel bypass
 date: 2006-11-01T17:47:00Z
-category: [linux, network]
+tags: linux, network
 ---
 
 I'm working for a "very concerned about security" firm, that makes mandatory using VPN for accessing their network, and internal services:
@@ -83,16 +83,18 @@ Now, if we connect using ssh from home, we will redirect another set of ports...
 
 Launch script:
 
-{% highlight bash %}
+~~~
+#!bash 
 echo "Launching ssh tunnel"
 ssh -fNC home.com # Runs connection trought http proxy, and exits, leaving ssh
 echo "Starting ssh tunnels from home"
 ssh -t home.com ssh -ftNC business.com #redirects tty, allowing us to enter one-time-password, and because it will not forks to background, process will appear as blocked at this point for a while
-{% endhighlight %}
+~~~
 
 killtunnel script:
 
-{% highlight bash %}
+~~~
+#!bash 
 #(Requires improvements like identifying started processes for not killing other not opened by "launch" script.
 echo "Script connected, press enter for disconnecting"
 read  
@@ -100,7 +102,7 @@ echo "Killing remote session" ssh -f casa.com
 killall -9 ssh
 echo "Killing local session" 
 killall -9 ssh`
-{% endhighlight %}
+~~~
 
 Now, we can run at our command line `lanzar` and automatically all tunnels will be created for accessing IMAPS, SMTP and our business internal Proxy all by just using 10993, 1025 & 2225 of our local machine (all within a only-web internet access network ;) )
 
