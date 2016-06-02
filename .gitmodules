@@ -1,0 +1,6 @@
+[submodule "output"]
+	path = output
+	url = git@github.com:iranzo/iranzo.github.io.git
+[submodule "SOURCE/pelican-octopress-theme"]
+	path = SOURCE/pelican-octopress-theme
+	url = git@github.com:duilio/pelican-octopress-theme.git
