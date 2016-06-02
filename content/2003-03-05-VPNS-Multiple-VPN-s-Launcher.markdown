@@ -2,7 +2,7 @@
 layout: post
 title: VPNS - Multiple VPN's Launcher
 date: 2003-03-05T20:55:00Z
-category: [linux, network, vpn]
+tags: linux, network, vpn
 ---
 
 1 General Purpose
@@ -71,9 +71,9 @@ Into this subdir there would be the following config files:
 #### 4.2.1 Static files
 
 - **vpnd.key :** :   Cipher key that would be used for the connection with the remote host. It gets created by VPND or copied from remote host.
-- **mode :** :   Mode that we use to get connected to remote host (server or client) 
-- **port :** :   Port at wich the connection gets established 
-- **resolv :** :   Dinamic DNS resolver name for the target host (used for resolving it's IP) 
+- **mode :** :   Mode that we use to get connected to remote host (server or client)
+- **port :** :   Port at wich the connection gets established
+- **resolv :** :   Dinamic DNS resolver name for the target host (used for resolving it's IP)
 - **master :** :   Master configuration file for HOST (the config that it's static)
 
 #### 4.2.2 Dinamic files
@@ -94,9 +94,10 @@ As probably IP's will change, you'll need to put a crontab sentence for checking
 
 Sample crontab line would be:
 
-{% highlight bash %}
+~~~
+#!bash
 0-59/5 * * * * root /etc/init.d/vpns restart-if-needed
-{% endhighlight %}
+~~~
 
 This way, every five minutes, the script would be run and will restart VPNS that needed to do so.
 
@@ -169,8 +170,8 @@ Here you will see a sample files used at my host, the other files not dumped her
 
 #### 7.2.4 master
 
-- **local** :   172.16.97.78 
-- **remote** :   172.16.97.77 
+- **local** :   172.16.97.78
+- **remote** :   172.16.97.77
 - **autoroute** :   **keepalive** :   10
 - **noanswer** :   3
 - **keyfile** :   vpnd.key
@@ -217,4 +218,3 @@ This document has been created using the LYX Editor and compiled with under Debi
 
 * * * * *
 File translated from T~E~X by [T~T~H](http://hutchinson.belmont.ma.us/tth/), version 3.67.  On 9 Mar 2007, 21:50.
-

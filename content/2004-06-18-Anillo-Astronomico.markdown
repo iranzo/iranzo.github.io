@@ -2,16 +2,17 @@
 layout: post
 title: Anillo Astronómico
 date: 2004-06-18T15:33:00Z
-category: [science, astronomy]
+tags: science, astronomy
+lang: es
 ---
 
-### ¿Qué es? 
+### ¿Qué es?
 
 El Anillo Astronómico es un lugar de reunión con enlaces a diferentes webs de astronomía enviadas por los usuarios. El anillo proporciona un sencillo y a la vez potente interfaz que permite que los usuarios accedan a una base de datos que ellos mismos van ampliando con sus propias direcciones de astronomía. La base se puede consultar de varias formas para ayudar al interesado en la astronomía a encontrar la página que desea, por ejemplo realizando búsquedas entre las webs apuntadas al Anillo.
 
 El Anillo es un servicio accesible a todos (público y gratuito), que relaciona mediante un sencillo interfaz web todas las webs asociadas, y por lo tanto, relacionadas con la astronomía. La navegación por la base de datos se puede hacer mediante unos sencillos controles de navegado que permiten saltar de una página a otra, escoger una al azar, etc.
 
-### ¿Para qué? 
+### ¿Para qué?
 
 Antes (y todavía) los administradores de webs sobre astronomía, se veían obligados a mantener listas de webs de asociaciones regionales, etc.  Esas largas listas estaban casi siempre incompletas y con multitud de enlaces que con el tiempo quedaban rotos por el ir y venir de los nacimientos de nuevas páginas y los traslados o fines de otras.
 
@@ -25,7 +26,7 @@ Sólo hay una parte del anillo privada: El anillo, al apuntarse, mantiene un lis
 
 Espero que todo esto explique los motivos para crear el anillo. Es cuestión de comodidad para todos, es un servicio que proporciona mayor facilidad a la hora de dar a conocer la información.
 
-### Ventajas 
+### Ventajas
 
 -  El listado de las webs apuntadas es público, constituyendo un recurso de enlaces amplio.
 -  El sistema es gratuito, no hay que pagar nada por salir beneficiado.
@@ -38,7 +39,7 @@ Espero que todo esto explique los motivos para crear el anillo. Es cuestión de 
 
 **NOTA: Para poder resultar beneficiado por el anillo, es NECESARIO que se pongan las líneas HTML en la página que se subscribe.**
 
-### Unirse 
+### Unirse
 
 Rellena los datos del siguiente enlace [Unirse](http://p.webring.com/wrman?ring=astron&addsite) y ya estarás apuntado. Recibirás una confirmación por e-mail de que has sido añadido a la cola de entrada junto a la dirección a la que debes dirigirte para obtener el código HTML que debes poner en tu web. Más adelante, recibirás otro correo informándote de que ya estás en el anillo.
 
@@ -46,7 +47,7 @@ Para saber cuales son las líneas que debes poner en tu web para enlazar al anil
 
 Podrás comprobar que apareces utilizando la opción [Lista Completa](http://p.webring.com/hub?ring=astron) de los controles que hayas insertado en tu página web.
 
-### Modificar los datos 
+### Modificar los datos
 
 Una vez se ha dado de alta, la modificación de los datos no es difícil.
 
@@ -54,7 +55,7 @@ Dentro de [Mantenimiento](http://d.webring.com/mbr?p=ms), que nos lleva a una p�
 
 Una vez rellenados esos datos y enviado el formulario, tendremos acceso a los menús de administración de la web, pudiendo cambiar la descripción, etc y al salvarlo, los cambios quedarán reflejados en el anillo.
 
-### Glosario 
+### Glosario
 
 **ID**
 

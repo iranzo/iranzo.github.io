@@ -2,8 +2,9 @@
 layout: post
 title: Herramientas de sincronización/backup
 date: '2011-12-08T11:52:00.000+01:00'
-author: Pablo
-category: [fedora,dropbox]
+author: Pablo Iranzo Gómez
+lang: es
+tags: fedora,dropbox
 modified_time: '2011-12-08T12:39:18.043+01:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-547842584943144879
 blogger_orig_url: http://iranzop.blogspot.com/2011/12/herramientas-de-sincronizacionbackup.html
@@ -74,4 +75,3 @@ ahora sigo con Dropbox para cosas rápidas que no necesito excesiva
 privacidad y para el resto Wuala y he añadido duplicity para hacer backup a
 un NAS en mi red local a la espera de ir probando mejor AeroFS y ver cómo
 respira syncany...
-

@@ -3,7 +3,7 @@ layout: post
 title: iSCSI y Clustering en RHEL/CentOS
 date: 2008-12-13T17:59:41Z
 author: Pablo Iranzo Gómez
-category: [cluster,rhel, centos]
+tags: cluster,rhel, centos
 ---
 
 ### Introducción 
@@ -18,7 +18,7 @@ Bueno, a medias :-)
 
 Siempre es complicado compartir sistemas de ficheros, existen problemas de bloqueos de ficheros, accesos recurrentes, etc, en el caso de iSCSI no sólo es el FS sino la unidad, desde cualquier equipo podemos particionarla, etc, es por ello que se necesitan algunas utilidades preparadas para dicho funcionamiento en red, así como por supuesto, un sistema de ficheros que soporte dicho uso simultáneo.
 
-Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster [LVM]({% post_url 2007-03-09-Gestor-de-Volumenes-Logicos-LVM %})) como de GFS (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.
+Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster [LVM]({% post_url 2007-03-09-Gestor-de-Volumenes-Logicos-LVM )) como de GFS (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.
 
 Piensa por un momento, la posibilidad de tener ese host tan potente o una SAN con copias de seguridad bien controladas, etc
 
@@ -38,16 +38,18 @@ Esta utilidad contiene un comando `tgtadm` que podemos utilizar para definir las
 
 Deberemos activar el demonio de tgtd para que esté disponible en cada arranque con los comandos:
 
-{% highlight bash %}
+~~~
+#!bash 
 chkconfig tgtd on
 service tgtd start
-{% endhighlight %}
+~~~
 
 Actualmente y como tech preview, debemos repetir cada vez los comandos que necesitamos para definir la unidad iSCSI, por ejemplo:
 
-{% highlight bash %}
+~~~
+#!bash 
 tgtadm --lld iscsi --mode target --op new --tid=1 --targetname iqn.2008-12.tld.dominio.maquina:TARGET tgtadm --lld iscsi --mode logicalunit --op new --tid=1 --lun=1 -b /dev/vg0/TARGET tgtadm --mode target --op bind --tid=1 --initiator-address=14.14.14.14
-{% endhighlight %}
+~~~
 
 Con estos comandos definimos un nuevo target con ID 1, de nombre IQN `iqn.2008-12.tld.dominio.maquina:TARGET` y le añadimos una unidad lógica (LUN) que se basa en el contenido del volumen LVM /dev/vg0/TARGET.
 
@@ -61,18 +63,20 @@ El primer paso, es instalar en todas las máquinas los paquetes de `lvm2-cluster
 
 Para arrancar ricci tendremos que hacer algo parecido a lo que hicimos con tgtd
 
-{% highlight bash %}
+~~~
+#!bash 
 chkconfig ricci on
 service ricci start`
-{% endhighlight %}
+~~~
 
 Por otro lado necesitaremos tener `kmod-gfs`, `gfs-util` y `iscsi-initiator-utils`.
 
 Las unidades iSCSI se reconocerán a partir de la primera detección de forma automática, para ello deberemos ejecutar los siguientes comandos:
 
-{% highlight bash %}
+~~~
+#!bash 
 iscsiadm -m discovery -t sendtargets -p IPTARGETISCSI iscsiadm -m node -T iqn.2008-12.tld.dominio.maquina:TARGET -l
-{% endhighlight %}
+~~~
 
 Que descubrirá los targets disponibles para nuestra IP y luego hará 'login' en la máquina. A partir de este momento tendremos nuevas unidades disponibles que se presentarán como SCSI a nuestro pc, podremos
 particionarlas, etc.

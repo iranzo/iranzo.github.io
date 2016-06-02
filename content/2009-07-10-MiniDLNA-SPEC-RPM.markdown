@@ -3,7 +3,7 @@ layout: post
 title: MiniDLNA SPEC & RPM
 date: 2009-07-10T08:54:35Z
 author: Pablo Iranzo Gómez
-category: [dlna, linux, rpm, spec]
+tags: dlna, linux, rpm, spec
 ---
 
 MiniDLNA provides an opensource DLNA server software that can index and present specific folders on your computer to DLNA clients on your network.
@@ -13,7 +13,8 @@ Project at sourceforge is distributed as CVS code that you need to checkout and 
 I've setup a spec file that will allow you to create an rpm that has been tested on Red Hat Enterprise Linux 5.3 machine x86 for easing adoption among users.
 
 
-{% highlight spec %}
+~~~
+#!spec 
 %define dist .el%(rpm -q --queryformat='%{VERSION}' redhat-release 2> /dev/null | tr -cd '[:digit:]')
 Summary: DLNA compatible server
 Name: MiniDLNA
@@ -28,14 +29,14 @@ Packager: Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
 BuildRequires: flac-devel, libvorbis-devel, libexif-devel, sqlite-devel, uuid-devel,ffmpeg-devel,libid3tag-devel, libjpeg-devel, e2fsprogs-devel, cvs
 Requires: redhat-lsb
 
-%description 
+%description
 MiniDLNA is a DLNA UPnP AV compatible server for being used by other DLNA capable devices
 
 %prep
 [ -d %{name} ] && rm -Rfv %{name}
 mkdir %{name}
 cd %{name}
-cvs -q -d:pserver:anonymous@minidlna.cvs.sourceforge.net:/cvsroot/minidlna login 
+cvs -q -d:pserver:anonymous@minidlna.cvs.sourceforge.net:/cvsroot/minidlna login
 cvs -z3 -d:pserver:anonymous@minidlna.cvs.sourceforge.net:/cvsroot/minidlna co -P minidlna
 
 %build
@@ -108,7 +109,7 @@ chkconfig --del minidlna
 * Wed Jul 1 2009 Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
 - Initial version
 
-{% endhighlight %}
+~~~
 
 Enjoy it!
 

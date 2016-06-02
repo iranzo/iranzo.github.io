@@ -3,7 +3,7 @@ layout: post
 title: "Migrate SPIP-RSS post feed to HTML"
 date: 2015-04-01 16:49:13 +0200
 comments: true
-category: [python, spip, markdown, html]
+tags: python, spip, markdown, html
 description: 
 ---
 
@@ -23,7 +23,8 @@ So:
 
 At this point I needed some software for automating the initial conversion, so I went to python's `feedparser` libraries to perform this with a bit of coding:
 
-{% highlight python %}
+~~~
+#!python 
 url="/path/to/your/xml/file.xml"
 
 import codecs
@@ -40,7 +41,7 @@ for item in feed["items"]:
             f.write("%s: %s\n" % (elem,item[elem]))
         f.write("---\n")
         f.write(item["content"][0].value)
-{% endhighlight %}
+~~~
 
 After each iteration, a new file was created using the old http link to the article (which already had stripped problematic characters).
 

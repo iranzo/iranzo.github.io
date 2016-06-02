@@ -2,7 +2,7 @@
 layout: post
 title: Creating Jigsaw Download (Jigdo) files for downloading ISO's
 date: 2007-11-15T21:50:25Z
-category: [linux, iso]
+tags: linux, iso
 ---
 
 ### Introduction 
@@ -25,9 +25,10 @@ For example, if we download CentOS 5 DVD iso from [mirror.centos.org](http://alu
 
 (Suppossing that iso is at /var/www/CentOS/isos/ and that our exploded directory and file tree at /var/www/CentOS/tree/, we will do:
 
-{% highlight bash %}
+~~~
+#!bash 
 jigdo-file mt -i /var/www/CentOS/isos/CentOS-5.0-i386-bin-DVD/CentOS-5.0-i386-bin-DVD.iso -j /var/www/CentOS/Centos5-DVD.jigdo -t /var/www/CentOS/Centos5-DVD.template —uri Centosmirrors=[http://mirror.centos.org/centos-5/5/os/i386/](http://mirror.centos.org/centos-5/5/os/i386/) /var/www/CentOS/tree/
-{% endhighlight %}
+~~~
 
 After some processing and ISO<->tree verification we will have two new files.
 

@@ -2,10 +2,10 @@
 layout: post
 title: OCS Inventory Package deployment
 date: 2006-07-27T20:29:00Z
-category: [hardware, linux, software, ocs]
+tags: hardware, linux, software, ocs
 ---
 
-### Introduction 
+### Introduction
 
 OCS Inventory is an excelent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms).
 
@@ -17,7 +17,7 @@ This approach had a little problem, if you had a small outgoing connection, serv
 
 With RC3, agent for installation uses near double that size, about 1.5 Mb, but the ability for after first installed, use external servers with a bigger upload bandwidth, eases installation of new versions in computers.
 
-### Release Candidate 3, and 1.0 
+### Release Candidate 3, and 1.0
 
 OCS-NG RC3 came with important architectural changes, including several major and minor improvements, being these the more important ones:
 
@@ -35,7 +35,7 @@ OCS-NG could be setup on different machines hosting each service:
 
 or, as I did in my setup, use a Debian Linux machine for doing the four tasks, but I plan to relay the fourth task to other machines, when packages are bigger than expected.
 
-### Setting it up and running 
+### Setting it up and running
 
 I'll assume that you've running Apache, PHP, and were able to setup OCS using the bundled instructions, so you only have to enable new features for using package deployment.
 
@@ -45,16 +45,17 @@ Package deployment infrastructure, is too much powerfull, so it requiress SSL ac
 
 I like [http://www.cacert.org](http://www.cacert.org/) services: they sign your certificates, and provide one certificate aiming to be used with many FOSS projects, because it's free instead of paid certificates like the ones from Thawte or Verisign.
 
-### Getting SSL Certificates 
+### Getting SSL Certificates
 
 First of all, we need to create a private key and a CSR (Certificate Signing Request) which we will send to CACERT for signing (please, note that if you don't have a domain name, will make it impossible to use OCS Package Deployment if your IP is also dynamic, so if that is your case (as was mine too), open an account at No-IP and create a URL-Redirector to your machine, you'll have to install an update client, but this will allow you to use certificates) it.
 
 Having openssl installed, we will execute (please, double check that questions, specially CN exactly matches ServerName and "hostname", for it to work properly after) the following commands:
 
-{% highlight bash %}
+~~~
+#!bash 
 openssl genrsa -out server.key 1024
 openssl req -new -key server.key -out server.csr
-{% endhighlight %}
+~~~
 
 First one, will create a private key called "server.key", second one, will create a CSR which we will paste at [https://www.cacert.org/account.php?id=10](https://www.cacert.org/account.php?id=10) to get our server certificate signed.
 
@@ -68,7 +69,8 @@ Let's then download [CACERT's root certificate](http://www.cacert.org/certs/root
 
 Next, we'll have to tell apache, to use this certificate for SSL support, in my case, I configured:
 
-{% highlight apache %}
+~~~
+#!apache 
 /etc/apache2/conf.d/ssl:
 SSLProtocol all
 SSLOptions +StdEnvVars
@@ -76,18 +78,19 @@ SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
 SSLCACertificateFile /etc/apache2/ssl/cacert.pem
 SSLCertificateFile /etc/apache2/ssl/server.crt
 SSLCertificateKeyFile /etc/apache2/ssl/server.key
-{% endhighlight %}
+~~~
 
 So, I had to put server.crt, server.key and cacert.pem in `/etc/apache2/ssl/`
 
 Next one, was to configure a new site that requires SSL to work:
 
-{% highlight apache %}
+~~~
+#!apache 
 /etc/apache2/sites-enabled/001-default:
 ServerName yourserver.no-ip.org
 NameVirtualHost \*:443
 ErrorLog /var/log/apache2/errssl.log
-# Possible values include: debug, info, notice, warn, error, crit, 
+# Possible values include: debug, info, notice, warn, error, crit,
 # alert, emerg.
 LogLevel warn
 CustomLog /var/log/apache2/ssl.log combined
@@ -95,8 +98,8 @@ ServerSignature On
 DocumentRoot /var/www
 SSLEngine on
 SSLOptions +StdEnvVars
-SetEnvIf User-Agent ".\*MSIE.\*" nokeepalive ssl-unclean-shutdown 
-{% endhighlight %}
+SetEnvIf User-Agent ".\*MSIE.\*" nokeepalive ssl-unclean-shutdown
+~~~
 
 Afterthat... we have to reload apache configuration and try to connect to [https://yourserver.no-ip.org](https://yourserver.no-ip.org/) to check if everything is ok.
 
@@ -122,7 +125,7 @@ Next step, will allow us to specify fragments (pieces in wich the package will b
 
 Your package, will be created then on "/var/www/download/#pkgid#".
 
-### Activating a package 
+### Activating a package
 
 Once a package has been defined, we have an "info" file, describing package actions, and package fragments, we can have them together or split it between different servers, and we will have to specify where is located each piece, before using it on our machines. That process is called "Activation".
 
@@ -158,26 +161,28 @@ First, we'll have to create a folder and put in it:
 
 service.ini like this:
 
-{% highlight ini %}
+~~~
+#!ini 
 [OCS_SERVICE]
-TTO_WAIT=10 
+TTO_WAIT=10
 PROLOG_FREQ=1
 OLD_PROLOG_FREQ=1
 Miscellaneous= /S /SERVER:yourserver.no-ip.org
-{% endhighlight %}
+~~~
 
 And NSIS script with:
 
-{% highlight bat %}
-; Script edited using HM NIS Edit Script Wizard. 
-; Creator Pablo Iranzo Gómez (Pablo.Iranzo@uv.es) 
-; Homepage: http://Alufis35.uv.es/~iranzo/ 
+~~~
+#!bat 
+; Script edited using HM NIS Edit Script Wizard.
+; Creator Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
+; Homepage: http://Alufis35.uv.es/~iranzo/
 ; License: http://creativecommons.org/licenses/by-sa/2.5/  
 ; HM NIS Edit Wizard helper
-defines 
-!define PRODUCT_NAME "OCS" 
-!define PRODUCT_VERSION "RC3" 
-!define PRODUCT_PUBLISHER "Pablo Iranzo Gomez (Pablo.Iranzo@uv.es)" 
+defines
+!define PRODUCT_NAME "OCS"
+!define PRODUCT_VERSION "RC3"
+!define PRODUCT_PUBLISHER "Pablo Iranzo Gomez (Pablo.Iranzo@uv.es)"
 !define PRODUCT_WEB_SITE "http://Alufis35.uv.es/~iranzo/"
 SetCompressor zlib
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
@@ -200,7 +205,7 @@ SectionEnd
 Section -Post
 SectionEnd`
 
-{% endhighlight %}
+~~~
 
 This script, when compiled, will create a ocs-inst.exe file, with all
 files needed packed in it, when executed, will:
@@ -222,4 +227,4 @@ Thanks (again) to the OCS Developing team (specially to Pascal Danek) for creati
 
 Thanks to Pablo Chamorro for reviewing this article too ;)
 
-Have a look at [OCS Deployment Tips and tricks]({% post_url 2006-07-29-OCS-Deployment-Tips-and-tricks  %}) to get ideas on how to use package deployment
+Have a look at [OCS Deployment Tips and tricks]({% post_url 2006-07-29-OCS-Deployment-Tips-and-tricks  ) to get ideas on how to use package deployment

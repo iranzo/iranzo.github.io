@@ -3,7 +3,7 @@ layout: post
 title: "Install RHEL7/Centos/Fedora on a software raid device"
 date: 2015-03-28 18:46:42 +0100
 comments: true
-category: [linux, centos, Fedora, rhel]
+tags: linux, centos, Fedora, rhel
 description: 
 ---
 
@@ -75,15 +75,17 @@ Now, it's time to create the raid device on top, for simplicity, I tend to use `
 
 Let's create the raid devices for each system, starting with `/boot`:
 
-{% highlight bash %}
+~~~
+#!bash 
 mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sda1 /dev/sdb1
 mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sda2 /dev/sdb2
 mdadm --create /dev/md2 --level=0 --raid-devices=2 /dev/sda3 /dev/sdb3
-{% endhighlight %}
+~~~
 
 Now, check the status of the raid device creation by issuing:
 
-{% highlight bash %}
+~~~
+#!bash 
 cat /proc/mdstat
 
 Personalities : [raid1] [raid6] [raid5] [raid4]
@@ -95,7 +97,7 @@ md1 : active raid1 sda2[0] sdb2[1]
             [=====>...............]  recovery = 25.9% (37043392/692945152) finish=627.5min speed=13440K/sec
 ...
 
-{% endhighlight %}
+~~~
 
 When it finishes, all the devices will appear as synced, and we can start the installation of the operating system.
 

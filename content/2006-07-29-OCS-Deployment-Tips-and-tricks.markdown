@@ -2,7 +2,7 @@
 layout: post
 title: OCS Deployment Tips and tricks
 date: 2006-07-29T20:13:00Z
-category: [ocs, linux]
+tags: ocs, linux
 ---
 
 Prior to using the following info for creating own-made packages, let's test if everything is working fine.
@@ -11,9 +11,9 @@ I've created a NSIS script that writes into registry in a key called HKLMSOFTWAR
 
 If we create a package with action "LAUNCH", and attach the regcert.zip with command to execute "regcert.exe", all clients with functional package deployment, will add that key to registry, so we can check, using OCS registry query function for a key named "cert" into: HKLM SOFTWAREOCS.
 
-After some time, affected and with working software deployment (Read [OCS Inventory Package deployment]({% post_url 2006-07-27-OCS-Inventory-Package-deployment %}) to learn how to setup it properly), we could know in which ones it's working and in which ones it doesn't work, just doing a search for computers with a special value in that registry key. (I've also uploaded the precompiled version I use for your testing purpouses).
+After some time, affected and with working software deployment (Read [OCS Inventory Package deployment]({% post_url 2006-07-27-OCS-Inventory-Package-deployment ) to learn how to setup it properly), we could know in which ones it's working and in which ones it doesn't work, just doing a search for computers with a special value in that registry key. (I've also uploaded the precompiled version I use for your testing purpouses).
 
-### Software 
+### Software
 
 ~~~
   ------------------------------------------------------------------- ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ After some time, affected and with working software deployment (Read [OCS Invent
   ------------------------------------------------------------------- ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ~~~
 
-### Registry 
+### Registry
 
 ~~~
   Hive   Path                                                                             Value          Utility
@@ -44,7 +44,7 @@ After some time, affected and with working software deployment (Read [OCS Invent
   HKLM   SoftwareOCS                                                                    cert           Allows us to check if package deployment is working using regcert example
 ~~~
 
-### Packages 
+### Packages
 
 ~~~
   Action   File   Command line                                                 Description
@@ -56,4 +56,3 @@ After some time, affected and with working software deployment (Read [OCS Invent
 Please, feel free to contribute with your Registry Keys or command line commands to improve this guide.
 
 Using win-get (an apt-get clone for Win32), you can use [this big list](http://windows-get.sourceforge.net/listapps.php) of supported applications for installation doing `win-get sinstall APPNAME`
-

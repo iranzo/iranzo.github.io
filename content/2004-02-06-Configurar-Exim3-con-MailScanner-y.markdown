@@ -2,10 +2,11 @@
 layout: post
 title: Configurar Exim3 con MailScanner y ClamAV
 date: 2004-02-06T21:31:00Z
-category: [linux, exim]
+tags: linux, exim
+lang: es
 ---
 
-### Previos: 
+### Previos:
 
 Para hacerlo funcionar, vamos a tener que hacer unas cosillas...
 
@@ -27,7 +28,7 @@ El correo que recibamos será almacenado por exim en sus carpetas, cada cierto t
 - clamav: antes gastaba el fprot (los scripts que venían con el mailscanner servían para actualizarlo, etc. Clamav además de libre, se actualiza el solito ;) (por eso lo del freshclam y que os pregunte que cúal es la interfaz que se conecta a internet, para saber cuando estáis conectados y en base a eso hacer las actualizaciones).
 - razor: es una red colaborativa de detección/notificación de spam. Si yo recibo un tipo de spam nuevo, informo a esa red de ese mensaje (`cat mensaje.spam |razor-report`) y a partir de ese momento, gente que reciba ese mismo mensaje y utilice razor, lo detectará también como spam sin tener que configurar nada...
 
-### Configuración: 
+### Configuración:
 
 Bueno, vamos allá con la configuración.
 
@@ -39,13 +40,14 @@ Tal y como indica el Readme.Debian del paquete MailScanner (bueno, acabo de darm
 
 El caso es que una vez tenemos una configuración válida de exim (en `/etc/exim/exim.conf`), tenemos que hacer lo siguiente:
 
-{% highlight bash %}
+~~~
+#!bash
 cd /etc/exim
 mv exim.conf exim_original.conf
 cp exim_original.conf exim_incoming.conf
 cp exim_original.conf exim_outgoing.conf
 ln -s exim_incoming.conf exim.conf
-{% endhighlight %}
+~~~
 
 Tendremos que crear ahora también unos directorios copia de los que ya tenemos para el exim normal pero llamados exim_incoming (misma estructura, mismo propietario, mismos permisos)
 
@@ -54,6 +56,7 @@ Y ahora, empezamos a editar archivos...
 Lo primero es cambiar la configuración del exim_incoming.conf y añadimos al principio del archivo de configuración, tras los comentarios lo siguiente:
 
 ~~~
+#!ini
 # Mailscanner config
 spool_directory = /var/spool/exim_incoming
 queue_only = true
@@ -64,6 +67,7 @@ De este modo exim_incoming sólo almacenará los correos en la carpeta indicada,
 Luego al principio de la parte DIRECTORS, justo tras los comentarios del encabezamiento añadimos:
 
 ~~~
+#!ini
 #Mailscanner config
 defer_director:
     driver = smartuser
@@ -73,25 +77,27 @@ defer_director:
 Y luego justo tras el encabezamiento de la sección ROUTERS
 
 ~~~
+#!ini
 #mailscanner config
 defer_router:
     driver = domainlist
     self = defer
-    route_list = "* 127.0.0.1 byname" 
+    route_list = "* 127.0.0.1 byname"
 ~~~
 
 Acabado con el exim_incoming.conf, ahora vamos a retocar el exim_outgoing.conf y lo habeis adivinado... no hay que tocar nada ;)
 
 Hemos de crear el /etc/cron.d/exim con el siguiente contenido:
 
-{% highlight bash %}
+~~~
+#!bash
 # /etc/cron.d/exim: crontab fragment for exim
 # Run queue every 15 minutes
 08,23,38,53 * * * * mail if [ -x /usr/sbin/exim -a -f /etc/exim/exim_outgoing.conf ]; then /usr/sbin/exim -C /etc/exim/exim_outgoing.conf -q ; fi    
 # Tidy databases
 13 6 * * * mail if [ -x /usr/sbin/exim_tidydb ]; then /usr/sbin/exim_tidydb /var/spool/exim retry >/dev/null; fi
-17 6 * * * mail if [ -x /usr/sbin/exim_tidydb ]; then /usr/sbin/exim_tidydb /var/spool/exim wait-remote_smtp >/dev/null; fi 
-{% endhighlight %}
+17 6 * * * mail if [ -x /usr/sbin/exim_tidydb ]; then /usr/sbin/exim_tidydb /var/spool/exim wait-remote_smtp >/dev/null; fi
+~~~
 
 (las dos anteriores, van en la misma línea)
 
@@ -108,6 +114,7 @@ Yo recomendaría cambiar `%report-dir% = /etc/MailScanner/reports/es` para confi
 Además:
 
 ~~~
+#!ini
 Incoming Queue Dir = /var/spool/exim_incoming/input
 Outgoing Queue Dir = /var/spool/exim/input
 ~~~
@@ -115,6 +122,7 @@ Outgoing Queue Dir = /var/spool/exim/input
 Para indicar de dónde se recoge el correo y dónde se ubica tras los controles pertinentes y
 
 ~~~
+#!ini
 MTA = exim
 Sendmail2 = /usr/sbin/exim -C /etc/exim/exim_outgoing.conf
 ~~~
@@ -122,6 +130,7 @@ Sendmail2 = /usr/sbin/exim -C /etc/exim/exim_outgoing.conf
 para configurar nuestro demonio de correo, y el comando necesario para realizar la entrega final
 
 ~~~
+#!ini
 Virus Scanning = yes
 Virus Scanners = clamav
 ~~~
@@ -130,6 +139,7 @@ A partir de aquí vienen unas opciones interesantes (os podeis leer el archivo d
 el mensaje entero de HTML a texto ;)
 
 ~~~
+#!ini
 Spam Checks = yes
 Use SpamAssassin = yes
 ~~~
@@ -149,4 +159,3 @@ Claro, ahora tendremos que iniciar MailScanner: /etc/init.d/mailscanner start y 
 Espero que os haya resultado útil
 
 Saludos
-

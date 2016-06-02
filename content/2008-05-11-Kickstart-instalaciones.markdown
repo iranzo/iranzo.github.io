@@ -2,22 +2,23 @@
 layout: post
 title: Kickstart - instalaciones automatizadas para anaconda
 date: 2008-05-11T12:00:00Z
-category: [linux, kickstart, automation, unattended]
+tags: linux, kickstart, automation, unattended
+lang: es
 ---
 
 
-### Instalar linux 
+### Instalar linux
 
 Hoy en día todas las distribuciones suelen disponer de un instalador gráfico que mediante un sencillo asistente permiten particionar el sistema, seleccionar los paquetes, instalarlos y configurarlos.
 
 El problema viene cuando en lugar de instalar un PC en 40 minutos, tenemos que instalar 20, cada uno de esos pc's, aunque podamos ir con varios discos a la vez, nos va a llevar más de 40 minutos hacer la instalación, por tener que ir siguiendo el asistente, escogiendo opciones, paquetes, configurando cosas, etc.
 
-### Anaconda 
+### Anaconda
 
 Anaconda es un instalador basado en Python que incorpora en su base, un instalador en modo texto, y uno gráfico que entre sus muchas funcionalidades, incorpora la instalación en base a guiones llamados
 kickstart.
 
-### El archivo kickstart 
+### El archivo kickstart
 
 Un archivo kickstart es un fichero de texto plano, que puede se le proporciona a Anaconda, como tal, puede ser un archivo que tengamos grabado en el disco de instalación, en otro medio de almacenamiento, o
 incluso en un servidor remoto.
@@ -29,7 +30,8 @@ opcionales, etc.
 
 La estructura de un kickstart podría ser:
 
-{% highlight bash %}
+~~~
+#!bash 
 ## Queremos instalar un sistema
 install
 ## Queremos reiniciarlo al acabar la instalación
@@ -81,11 +83,11 @@ screen
 mc
 joe
 
-{% endhighlight %}
+~~~
 
 Con esta estructura, el sistema quedará instalado y configurado de forma automática, se habrá detectado el hardware y cargado su soporte en caso de ser detectado y disponer los controladores apropiados.
 
-### Dándole una vuelta de tuerca al kickstart 
+### Dándole una vuelta de tuerca al kickstart
 
 **Scripts de Pre y Post instalación**
 
@@ -97,7 +99,8 @@ Un uso típico es determinar dinámicamente la estructura de discos en base al t
 
 Por ejemplo, la forma típica sería crear el esquema de particiones como hemos hecho arriba, pero utilizando comandos "echo", por ejemplo:
 
-{% highlight bash %}
+~~~
+#!bash 
 %pre
 #Obtener el primer disco del sistema y el total de discos
 set $(list-harddrives)
@@ -113,7 +116,7 @@ echo "logvol swap —fstype swap —name=Swap —vgname=$ORGANIZATION —size=10
 >> /tmp/part-include
 echo "logvol / —fstype ext3 —name=root —vgname=$ORGANIZATION —size=4096" >> /tmp/part-include
 echo "logvol /home —fstype ext3 —size=1024 —name=home —vgname=$ORGANIZATION" >> /tmp/part-include
-{% endhighlight %}
+~~~
 
 Se obtendrán los datos de los discos detectados por anaconda y se irá escribiendo esa información a un fichero temporal que luego, lo incluiremos, reemplazando la parte del perfil donde antes definíamos las
 particiones por :
@@ -129,15 +132,16 @@ Así, para cada sistema podemos definir una organización basada en valores como
 Un script de instalación tiene una ventaja sobre un script de pre instalación, y es que podemos ejecutarlo sobre el sistema instalado o sobre el entorno de instalación, de forma que podemos copiar archivos generados en el pre (como los logs), copiar archivos del medio de instalación si es un CD, NFS, etc y luego actuar sobre nuestro sistema, por ejemplo:
 
 
-{% highlight bash %}
+~~~
+#!bash 
 %post
 #Sincronizar hora del sistema
 echo "Sincronizar hora del sistema"
 ntpdate pool.ntp.org
 hwclock —systohc
-{% endhighlight %}    
+~~~    
 
-### Generación dinámica 
+### Generación dinámica
 
 Dada la potencia de Linux y la habilidad de ejecutar scripts de pre instalación y post instalación, podemos configurar un sistema mediante estos scripts de la misma forma que lo haríamos en un sistema de forma manual, podemos dejar un sistema perfectamente configurado. Cierto es que a priori, nos llevará más tiempo ponerlo en marcha mediante este sistema que utilizando cuatro o cinco opciones en un menú, pero una vez hecho, tardaremos el mismo tiempo en instalar 1 sistema que 1000 con la ventaja
 de que ya no tendremos que estar delante para verificar toda la operación.
@@ -146,7 +150,7 @@ Si tomamos como generador un script en php, albergado en nuestro servidor web, p
 
 Existen diversos sistemas que facilitan estas tareas y permiten llevar un control de las máquinas que instalamos, etc que comentaremos más adelante.
 
-### Información adicional 
+### Información adicional
 
 Hasta que nos familiaricemos con la sintaxis, es conveniente recordar que en los sistemas basados en Fedora o Red Hat, existe la utilidad system-config-kickstart que es un editor gráfico de archivos kickstart que nos puede servir de punto de inicio para empezar a modificarlos con nuestros scripts y adaptaciones personales.
 
@@ -154,4 +158,3 @@ Hasta que nos familiaricemos con la sintaxis, es conveniente recordar que en los
 -  [Opciones soportadas en Fedora](http://fedoraproject.org/wiki/Anaconda/Kickstart)
 -  [Configurador
 kickstart web](http://www.linux.kaybee.org:8080/demo/hosts/index.html)
-

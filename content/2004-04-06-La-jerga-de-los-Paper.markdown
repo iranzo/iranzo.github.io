@@ -2,7 +2,8 @@
 layout: post
 title: La jerga de los Paper
 date: 2004-04-06T20:01:00Z
-category: [general]
+tags: general
+lang: es
 ---
 
 Extraído de un artículo publicado por el periódico El País:
@@ -22,8 +23,8 @@ Extraído de un artículo publicado por el periódico El País:
 | Estos resultados serán anunciados más tarde | A ver si tengo la paciencia de trabajar algo más|
 | Los valores más increíbles son los obtenidos por Fulanito | Era uno de mis estudiantes|
 | Se sugiere... | Creo que|
-| Parece ser que...|| 
-| Es posible que... || 
+| Parece ser que...||
+| Es posible que... ||
 | Está claro que se requiere una labor adicional... | Yo no lo entiendo|
 | Correcto dentro de un orden de magnitud... | Erróneo|
 | Cabe esperar que este trabajo de lugar a otros en el mismo campo | Este artículo no es muy bueno, pero tampoco lo son los demás en este asunto sin interés|
@@ -36,4 +37,3 @@ A continuación vienen algunas las que nos han inspirado algunos profesores y el
 | si fuese así de fácil ya estaría hecho | Es muy buena idea, pero no podemos admitirlo porque no es nuestra.|
 | es de una dificultad extrema | No tengo ni idea de cómo se podría hacer, pero no me voy a molestar en mirarlo|
 | os ayudaremos con vuestras peticiones si tenéis a algún profesor como tutor | No pensamos ayudaros a menos que el que se juegue el culo sea alguien más tonto (y por lo tanto, más volcado con los estudiantes que nosotros)|
-

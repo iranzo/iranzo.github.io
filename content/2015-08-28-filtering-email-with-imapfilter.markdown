@@ -3,8 +3,8 @@ layout: post
 title: "Filtering email with imapfilter"
 date: 2015-08-28 15:27:47 +0200
 comments: true
-category: [linux, email, imap, imapfilter, Fedora]
-description: 
+tags: linux, email, imap, imapfilter, Fedora
+description:
 ---
 
 Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&drop reordering of rules, cloning, etc.
@@ -15,31 +15,35 @@ After searching for several options [imapfilter](https://github.com/lefcha/imapf
 
 On my first attempts, I setup a pre-sync hook on offlineimap by using as well as the postsync hook I already had:
 
-{% highlight ini %}
+~~~
+#!ini
 presynchook  = time imapfilter
 postsynchook = ~/.mutt/postsync-offlineimap.sh
+~~~
 
-{% endhighlight %}
 
 Initial attempts were not good at all, applying filters on the remote imapserver was very time consuming and my actual 1 minute delay after finishing one check was becoming a real 10-15 minute interval between checks because of the imapfiltering and this was not scaling as I was putting new rules.
 
 After some tries, and as I already had all the email synced offline, moved filtering to be locally instead of server-side, but as imapfilter requires an imap server, I tricked `dovecot` into using the local folder to be offered via imap:
 
-{% highlight ini %}
+~~~
+#!ini
 protocols = imap
 mail_location = maildir:~/.maildir/FOLDER/:INBOX=~/.maildir/FOLDER/.INBOX/
 auth_debug_passwords=yes
-{% endhighlight %}
+~~~
 
 This also required to change my foldernames to use "." in front of them, so I needed to change `mutt` configuration too for this:
 
-{% highlight ini %}
+~~~
+#!ini
 set mask=".*"
-{% endhighlight %}
+~~~
 
 and my mailfoders  script:
 
-{% highlight bash %}
+~~~
+#!ini
 set mbox_type=Maildir
 set folder="~/.maildir/FOLDER"
 set spoolfile="~/.maildir/FOLDER/.INBOX"
@@ -50,20 +54,20 @@ mailboxes `find ~/.maildir/FOLDER -type d -name cur -printf '%h '|tr " " "\n"|gr
 #Store reply on current folder
 folder-hook . 'set record="^"'
 
-{% endhighlight %}
+~~~
 
 After this, I could start using imapfilter and start working on my set of rules... but first problem appeared, apparently I started having some duplicated email as I was cancelling and rerunning the script while debugging so a new tool was also introduced to 'dedup' my imap folder named [IMAPdedup](https://github.com/quentinsf/IMAPdedup) with a small script:
 
-{% highlight bash %}
+~~~
 #!/bin/bash
 (
 for folder in $(python ~/.bin/imapdedup.py -s localhost  -u iranzo    -w '$PASSWORD'  -m -c -v  -l)
 do
     python ~/.bin/imapdedup.py -s localhost  -u iranzo    -w '$PASSWORD'  -m -c  "$folder"
-             
+
 done
 ) 2>&1|grep "will be marked as deleted"
-{% endhighlight %}
+~~~
 
 This script was taking care of listing all email foders on 'localhost' with my username and password (can be scripted or use external tools to gather it) and dedup email after each sync (in my `postsync-offlinemap.sh` as well as lbdq script for fetchning new addresses, notmuch and running imapfilter after syncing (to cath the limited filtering I do sever-side)
 
@@ -78,7 +82,8 @@ This more or less ensures a clean INBOX with most important things still there, 
 
 So, after some tests, this is at the moment a simplified version of my filtering file:
 
-{% highlight lua %}
+~~~
+#!lua
 ---------------
 --  Options  --
 ---------------
@@ -162,7 +167,7 @@ filter(todos:contain_subject('[PNT] '),'noreply@example.com',EXAMPLE['Trash'])
 filter(todos:contain_subject('Red Hat - Group '),'noreply@example.com',EXAMPLE['INBOX/EXAMPLE/Customers/Other/CPG'])
 
 -- Remove month start reminders
-todos:contain_subject('mailing list memberships reminder'):delete_messages() 
+todos:contain_subject('mailing list memberships reminder'):delete_messages()
 
 -- Delete messages about New accounts created (RHN)
 usercreated=todos:contain_subject('New Red Hat user account created')*todos:contain_from('noreply@example.com')
@@ -185,7 +190,7 @@ filter(todos:contain_subject('Case '),'support@example.com',EXAMPLE['INBOX/EXAMP
 
 EXAMPLE['INBOX/EXAMPLE/Customers/_new']:is_seen():move_messages(EXAMPLE['INBOX/EXAMPLE/Customers/Other/cases'])
 
-support = EXAMPLE['INBOX/EXAMPLE/Customers/Other/cases']:select_all() 
+support = EXAMPLE['INBOX/EXAMPLE/Customers/Other/cases']:select_all()
 -- Restart the search only for messages in Other to also process if we have new rules
 
 support:contain_subject('is about to breach its SLA'):delete_messages()
@@ -264,11 +269,10 @@ deleteold(EXAMPLE['INBOX/EXAMPLE/Customers/_bugzilla'],maxage)
 maxage=7
 deleteold(EXAMPLE['Trash'],maxage)
 
-{% endhighlight %}
+~~~
 
 As this is applied filtering twice, `offlineimap` might be uploading part of your changes already, making it faster to next syncs, and suffle some of your emails while it runs.
 
 The point of adding the already filtered set to be filtered again (CPG, cases, etc) is that if a new customer is consiredered to be filter on a folder of its own, the messages will be picked up and moved accordingly automatically ;-)
 
 Hope it helps, and happy filtering!
-

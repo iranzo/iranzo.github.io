@@ -2,17 +2,18 @@
 layout: post
 title: Esqueleto basado en Mollio.org
 date: 2006-04-30T05:06:00Z
-category: [spip, cms]
+tags: spip, cms
+lang: es
 ---
 
-### Introducción 
+### Introducción
 
 Estos esqueletos se basan en el modelo tipo C de la web de [www.mollio.org](http://www.mollio.org/), gracias a un mensaje que se
 envió a la lista de correo de SPIP en Español.
 
 Los esqueletos se ajustqan al tamaño de pantalla y se visualizan adecuadamente tanto en [Mozilla](http://www.mozilla.org/) como otros navegadores, y al disponer de dos áreas de menús, se adaptaban más cómodamente al diseño modular que habíamos utilizado Laura Primo y [Pablo Iranzo Gómez](http://alufis35.uv.es/~iranzo/) para las webs de [http://Linuv.uv.es](http://Linuv.uv.es/) y la versión anterior de [http://Alufis35.uv.es](http://Alufis35.uv.es/).
 
-### Créditos 
+### Créditos
 
 -  Este esqueleto se basa en el trabajo del grupo de diseño de [http://www.mollio.org](http://www.mollio.org/)
 -  Utiliza la parte de agenda con modificaciones del esqueleto [epona](http://www.spip-contrib.net/article509.html)
@@ -26,7 +27,7 @@ Los esqueletos se ajustqan al tamaño de pantalla y se visualizan adecuadamente 
 
 Queremos agradecer desde aquí a todos ellos su trabajo previo que ha posibilitado la creación de este.
 
-### Características 
+### Características
 
 -  Permiten modificar el logotipo y frase de la web modificando un artículo con una palabra clave especial
 -  Permiten modificar el mensaje de la web con otro artículo con una frase especial
@@ -47,7 +48,7 @@ Queremos agradecer desde aquí a todos ellos su trabajo previo que ha posibilita
 -  Es posible escoger una licencia para asociarla a los artículos y así que los buscadores la indexen también
 -  Soporte para MicroSummary de Firefox 2
 
-### Requisitos 
+### Requisitos
 
 Estos esqueletos han sido desarrollados sobre la versión SPIP 1.9.2 y debido a sus características deberían ser la versión mínima sobre la que se utilizarán.
 
@@ -79,7 +80,7 @@ Como requisitos adicionales, una vez instaladas las plantillas, es necesario:
 -  Crear un artículo y asociarle la palabra "Creditos" para mostrar dicho enlace en el pie de cada página a una página con información sobre la web, autores, etc (opcional)
 -  Crear un grupo de palabras clave y llamarlo Licencia y luego, se van creando palabras clave a las que se le asocia el logotipo de la licencia, en la descripción se pone la URL para leer la licencia completa y en el TEXTO, se pone el código que aparece en [http://creativecommons.org/license/](http://creativecommons.org/license/) tras acabar de escogerla, para que los buscadores indexen el tipo de licencia del artículo
 
-### Funcionamiento 
+### Funcionamiento
 
 Además de los esqueletos normales de SPIP, estos tienen los siguientes módulos que se utilizan para definir o mostrar información adicional al tipo de documento que estamos visualizando, permitiendo simplificar la forma de mantener el código de los esqueletos a través de la reutilización.
 
@@ -124,7 +125,7 @@ Actualmente está formado por los siguientes módulos:
   el resto                                    el sitio completo
 ~~~
 
-### Configuración por palabras clave 
+### Configuración por palabras clave
 
 Ahora se puede configurar el aspecto visual de Mollio mediante el uso o no de palabras clave.
 
@@ -224,4 +225,3 @@ PD:
 Puedes consultar el funcionamiento a nivel de usuario de las plantillas consultando el artículo Manual de usuario de los esqueletos modificados de spip-contrib, pues es análogo al de estas plantillas.
 
 Puedes también consultar los [últimos cambios](https://github.com/iranzo/mollio-spip) en el código
-

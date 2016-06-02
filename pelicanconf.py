@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*- #
+# Libraries to install
+#
+
+
 from __future__ import unicode_literals
 
 import os
@@ -13,6 +17,7 @@ PATH = 'content'
 TIMEZONE = 'Europe/Madrid'
 
 DEFAULT_LANG = u'en'
+DEFAULT_CATEGORY = 'tech'
 
 # Feed generation is usually not desired when developing
 # FEED_ALL_ATOM = None
@@ -21,11 +26,18 @@ DEFAULT_LANG = u'en'
 # AUTHOR_FEED_ATOM = None
 # AUTHOR_FEED_RSS = None
 
+DISPLAY_PAGES_ON_MENU = True
 
 STATIC_PATHS = [
-    'imagen/',
-    'plugins',
+    'imagen',
+    'extra/robots.txt',
+    'extra/favicon.png'
 ]
+
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.png': {'path': 'favicon.png'}
+}
 
 CACHE_CONTENT = False
 CACHE_PATH = '.cache'
@@ -36,23 +48,21 @@ LOAD_CONTENT_CACHE = False
 PLUGIN_PATHS = ['plugins']
 
 PLUGINS = [
-    'summary',
-    'liquid_tags.img',
+    'better_codeblock_line_numbering',
+    'better_figures_and_images',
     'related_posts',
     'tag_cloud',
-    'tipue_search',
     'sitemap',
-    'post_revision',
     'category_order',
-    'Yuicompressor',
+    # 'yuicompressor',
 ]
 
-FAVICON = 'images/favicon.ico'
+FAVICON = 'extra/favicon.png'
 THEME = 'themes/octopress'
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
 USE_FOLDER_AS_CATEGORY = False
 
-SEARCH_BOX = True
+SEARCH_BOX = False
 
 
 # URL Settings to be compatible with octopress
@@ -98,17 +108,20 @@ DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives']
 
 # Social widget
 
-SOCIAL = [
-    ('github', 'https://github.com/iranzo'),
-]
+# SOCIAL = [
+#     ('github', 'https://github.com/iranzo'),
+# ]
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-# summary
-SUMMARY_END_MARKER = '<!-- more -->'
+# better codeblock
+MD_EXTENSIONS = [
+    'codehilite(css_class=highlight,linenums=False)',
+    'extra'
+]
 
 # related_posts
 RELATED_POSTS_MAX = 5
@@ -117,7 +130,6 @@ RELATED_POSTS_MAX = 5
 TAG_CLOUD_STEPS = 10
 TAG_CLOUD_MAX_ITEMS = 20
 TAG_CLOUD_SORTING = 'size-rev'
-
 
 # sitemap
 SITEMAP = {
@@ -134,14 +146,27 @@ SITEMAP = {
     }
 }
 
-# post revision
-GITHUB_URL = 'https://github.com/iranzo/iranzo.github.io-src'
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-POST_REVISION_TEXT = "Post History:"
-POST_HISTORY_MAX_COUNT = 5
-
 # category_order
 CATEGORIES_ORDER_BY = 'size-rev'
 TAGS_ORDER_BY = 'size-rev'
 
 SITE_UPDATED = datetime.date.today()
+
+
+#octopress theme
+GITHUB_USER = "iranzo"
+GITHUB_REPO_COUNT= 5
+GITHUB_SKIP_FORK= True
+GITHUB_SHOW_USER_LINK= True
+
+TWITTER_USER= "iranzop"
+GOOGLE_PLUS_ID= "115967682482067873883"
+FACEBOOK_LIKE=True
+
+GOOGLE_PLUS_ONE= True
+GOOGLE_PLUS_HIDDEN= False
+
+GOOGLE_ANALYTICS="UA-81705-12"
+
+
+
