@@ -1,5 +1,5 @@
 ---
-slug: Logical-Volume-Manager
+slug: Logical-volume-manager-LVM
 layout: post
 title: Gestor de Volúmenes Lógicos (LVM)
 date: 2007-03-09T16:39:35Z
