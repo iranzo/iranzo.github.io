@@ -52,7 +52,7 @@ First of all, we need to create a private key and a CSR (Certificate Signing Req
 Having openssl installed, we will execute (please, double check that questions, specially CN exactly matches ServerName and "hostname", for it to work properly after) the following commands:
 
 ~~~
-#!bash 
+#!bash
 openssl genrsa -out server.key 1024
 openssl req -new -key server.key -out server.csr
 ~~~
@@ -70,7 +70,7 @@ Let's then download [CACERT's root certificate](http://www.cacert.org/certs/root
 Next, we'll have to tell apache, to use this certificate for SSL support, in my case, I configured:
 
 ~~~
-#!apache 
+#!apache
 /etc/apache2/conf.d/ssl:
 SSLProtocol all
 SSLOptions +StdEnvVars
@@ -85,7 +85,7 @@ So, I had to put server.crt, server.key and cacert.pem in `/etc/apache2/ssl/`
 Next one, was to configure a new site that requires SSL to work:
 
 ~~~
-#!apache 
+#!apache
 /etc/apache2/sites-enabled/001-default:
 ServerName yourserver.no-ip.org
 NameVirtualHost \*:443
@@ -162,7 +162,7 @@ First, we'll have to create a folder and put in it:
 service.ini like this:
 
 ~~~
-#!ini 
+#!ini
 [OCS_SERVICE]
 TTO_WAIT=10
 PROLOG_FREQ=1
@@ -173,7 +173,7 @@ Miscellaneous= /S /SERVER:yourserver.no-ip.org
 And NSIS script with:
 
 ~~~
-#!bat 
+#!bat
 ; Script edited using HM NIS Edit Script Wizard.
 ; Creator Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
 ; Homepage: http://Alufis35.uv.es/~iranzo/
@@ -227,4 +227,4 @@ Thanks (again) to the OCS Developing team (specially to Pascal Danek) for creati
 
 Thanks to Pablo Chamorro for reviewing this article too ;)
 
-Have a look at [OCS Deployment Tips and tricks]({% post_url 2006-07-29-OCS-Deployment-Tips-and-tricks  ) to get ideas on how to use package deployment
+Have a look at [OCS Deployment Tips and tricks]({filename}2006-07-29-OCS-Deployment-Tips-and-tricks.markdown) to get ideas on how to use package deployment

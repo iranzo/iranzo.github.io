@@ -10,16 +10,16 @@ lang: es
 
 ### Introducción
 
-Según lo visto en el artículo [Kickstart]({% post_url 2008-05-11-Kickstart-instalaciones ), podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
+Según lo visto en el artículo [Kickstart]({filename}2008-05-11-Kickstart-instalaciones.markdown), podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
 
-[Fedora]({% post_url 2008-06-14-Fedora ) proporciona unas utilidades 'livecd-tools' que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
+[Fedora]({filename}2008-06-14-Fedora.markdown) proporciona unas utilidades 'livecd-tools' que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
 
 ### Ejemplo
 
 Por ejemplo, podemos personalizar nuestro medio 'live' cambiando el mensaje de login con un:
 
 ~~~
-#!bash 
+#!bash
 %post
 echo "Sistema personalizado Live" > /etc/issue
 ~~~
@@ -29,7 +29,7 @@ Utilizando la sección `%packages` podemos por ejemplo instalar los paquetes ope
 Un ejemplo de kickstart para un medio Live podría ser:
 
 ~~~
-#!bash 
+#!bash
 install
 cdrom
 reboot
@@ -136,7 +136,7 @@ echo " " >> /etc/issue
 Para generar la imagen Live, ejecutaremos
 
 ~~~
-#!bash 
+#!bash
 livecd-creator -c /root/usuario/ks.cfg -f MedioLive
 ~~~
 

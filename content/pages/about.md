@@ -1,4 +1,4 @@
-title: Who am I?
+title: About
 layout: post
 date: 2016-06-02 17:27:47 +0200
 comments: true
@@ -17,4 +17,4 @@ After two more years visitting the biggest customers in the country, I moved to 
 
 Shorty after my start as TAM, I started working with Cloud customers, providing support to their OpenStack deployments.
 
-You can check my updated profile at [Linkedin](http://linkedin.com/in/iranzo)
+You can check my updated profile at [LinkedIn](http://linkedin.com/in/iranzo)

@@ -6,7 +6,7 @@ author: Pablo Iranzo Gómez
 tags: cluster,rhel, centos
 ---
 
-### Introducción 
+### Introducción
 
 Durante la última semana estuve jugando de nuevo con iSCSI en el curso de [RH436 Enterprise Clustering and Storage Management](http://www.redhat.es/training/course/RH436). Hace tiempo había seguido dos artículos [Instalando un target iSCSI](http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/) y su continuación [Montando un iniciador iSCSI](http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/).
 
@@ -18,17 +18,17 @@ Bueno, a medias :-)
 
 Siempre es complicado compartir sistemas de ficheros, existen problemas de bloqueos de ficheros, accesos recurrentes, etc, en el caso de iSCSI no sólo es el FS sino la unidad, desde cualquier equipo podemos particionarla, etc, es por ello que se necesitan algunas utilidades preparadas para dicho funcionamiento en red, así como por supuesto, un sistema de ficheros que soporte dicho uso simultáneo.
 
-Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster [LVM]({% post_url 2007-03-09-Gestor-de-Volumenes-Logicos-LVM )) como de GFS (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.
+Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster [LVM]({filename}2007-03-09-Gestor-de-Volumenes-Logicos-LVM.markdown)) como de GFS (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.
 
 Piensa por un momento, la posibilidad de tener ese host tan potente o una SAN con copias de seguridad bien controladas, etc
 
 Añádele la posibilidad de tener máquinas virtuales que monten por la red una unidad iSCSI.
 
-Añádele que esa unidad iSCSI puede ser de Lectura escritura, y que puedes utilizar enlaces simbólicos con variables que según el host que acceda guarde los logs en una carpeta. 
+Añádele que esa unidad iSCSI puede ser de Lectura escritura, y que puedes utilizar enlaces simbólicos con variables que según el host que acceda guarde los logs en una carpeta.
 
 Imagina lanzar tantas máquinas virtuales como sea necesario para atender la demanda, poder distribuirlas en la red.
 
-### Manos a la obra 
+### Manos a la obra
 
 **Target iSCSI**
 
@@ -39,7 +39,7 @@ Esta utilidad contiene un comando `tgtadm` que podemos utilizar para definir las
 Deberemos activar el demonio de tgtd para que esté disponible en cada arranque con los comandos:
 
 ~~~
-#!bash 
+#!bash
 chkconfig tgtd on
 service tgtd start
 ~~~
@@ -47,7 +47,7 @@ service tgtd start
 Actualmente y como tech preview, debemos repetir cada vez los comandos que necesitamos para definir la unidad iSCSI, por ejemplo:
 
 ~~~
-#!bash 
+#!bash
 tgtadm --lld iscsi --mode target --op new --tid=1 --targetname iqn.2008-12.tld.dominio.maquina:TARGET tgtadm --lld iscsi --mode logicalunit --op new --tid=1 --lun=1 -b /dev/vg0/TARGET tgtadm --mode target --op bind --tid=1 --initiator-address=14.14.14.14
 ~~~
 
@@ -64,7 +64,7 @@ El primer paso, es instalar en todas las máquinas los paquetes de `lvm2-cluster
 Para arrancar ricci tendremos que hacer algo parecido a lo que hicimos con tgtd
 
 ~~~
-#!bash 
+#!bash
 chkconfig ricci on
 service ricci start`
 ~~~
@@ -74,18 +74,18 @@ Por otro lado necesitaremos tener `kmod-gfs`, `gfs-util` y `iscsi-initiator-util
 Las unidades iSCSI se reconocerán a partir de la primera detección de forma automática, para ello deberemos ejecutar los siguientes comandos:
 
 ~~~
-#!bash 
+#!bash
 iscsiadm -m discovery -t sendtargets -p IPTARGETISCSI iscsiadm -m node -T iqn.2008-12.tld.dominio.maquina:TARGET -l
 ~~~
 
 Que descubrirá los targets disponibles para nuestra IP y luego hará 'login' en la máquina. A partir de este momento tendremos nuevas unidades disponibles que se presentarán como SCSI a nuestro pc, podremos
 particionarlas, etc.
 
-### El clúster 
+### El clúster
 
 Si queremos hacer las cosas de la forma 'sencilla', deberemos instalar `luci` en una de las máquinas, ya sea en un nodo de control, o en el anfitrión Xen.
 
-Luci es un interfaz web que permite la gestión y creación de clusters y para ello utiliza el demonio 'ricci' que hemos instalado en cada máquina. 
+Luci es un interfaz web que permite la gestión y creación de clusters y para ello utiliza el demonio 'ricci' que hemos instalado en cada máquina.
 
 Si tenemos las máquinas configuradas con los repositorios necesarios, `ricci` se hará cargo de la instalación de los paquetes necesarios para configurar todo.
 
@@ -105,7 +105,7 @@ En el caso de tener enchufes 'con red' o bien máquinas con tarjetas de gestión
 
 En caso de detectar un problema con cualquier equipo, el resto de ellos hará votaciones y si la mayoría considera que no responde, lo reiniciarán, por un lado para liberar cualquier tipo de acceso a disco, etc que hubiera estado haciendo a los recursos del cluster, como para intentar recuperarlo.
 
-### GFS: Global File System 
+### GFS: Global File System
 
 ¿Qué pinta GFS en todo esto?
 
@@ -129,13 +129,13 @@ Esto permite que diversos servidores web tengan configurado como ruta para los l
 
 Este tipo de enlaces se denominan CDPN: Context-dependent pathnames y nos permiten jugar con este tipo de cosas y aprovechar las ventajas de un almacenamiento único.
 
-### ¿Y si falla la red 
+### ¿Y si falla la red
 
 Como siempre podemos tener problemas con la red, la forma de solucionarlos consiste en tener varios interfaces de red en los equipos a través de distintos switches, etc y en las máquinas, una vez descubiertos los targets, configurar el fichero `/etc/multipathd.conf` y habilitar el demonio.
 
 Nos creará las rutas necesarias y una serie de dipositivos `/dev/mpath/*` para acceder de forma tolerante a fallos a nuestros recursos, si configuramos las tarjetas de red en modo bonding, ya tenemos el acceso más o menos asegurado ante las catástrofes más comunes y nuestros datos disponibles
 
-### Conclusión 
+### Conclusión
 
 Tenemos a nuestro alcance muchas herramientas para hacer sencilla la utilización y creación de sistemas equivalentes a lo que hace años sólo tenía una alternativa excesivamente cara.
 
