@@ -9,7 +9,7 @@ lang: es
 
 ### Introducción
 
-En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a "hibernar" la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en "pausa" y al volver al día siguiente a utilizar el PC y encenderlo, recuperarlo todo tal cual estaba, listo para trabajar. Cuando pasé a [Fedora]({% post_url 2008-06-14-Fedora ) esta función junto con el LVM cifrado no iban a faltar en mi sistema :-)
+En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a "hibernar" la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en "pausa" y al volver al día siguiente a utilizar el PC y encenderlo, recuperarlo todo tal cual estaba, listo para trabajar. Cuando pasé a [Fedora]({filename}2008-06-14-Fedora.markdown) esta función junto con el LVM cifrado no iban a faltar en mi sistema :-)
 
 La hibernación utiliza la partición swap del sistema para almacenar el contenido de la RAM y así guardar el estado del sistema, y al siguiente arranque, se verifica si tiene información en dicha partición que se puede recuperar, y de ser así, gestiona la recuperación.
 
@@ -47,7 +47,7 @@ Yo actualmente estoy utilizando `fuse-sshfs` para solventar mi necesidad, y buen
 Lo que hago es lanzar desde un terminal el siguiente comando:
 
 ~~~
-#!bash 
+#!bash
 sshfs host:/ruta/a/la/carpeta carpeta-de-montaje
 ~~~
 
@@ -62,7 +62,7 @@ El punto interesante del artículo de Jose María Ruíz es que implementan un nu
 En un sistema de ficheros estándar, utilizamos funciones como opendir, open, read, getattr para trabajar con ficheros, para utilizar FUSE, creamos métodos con esos nombres que realizan las operaciones que queremos, por ejemplo:
 
 ~~~
-#!python 
+#!python
 def readdir(self, path, offset):
     # read the next directory entry
     log.debug("readdir (%s) (%d)" % (str(path), int(offset)))

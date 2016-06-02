@@ -11,7 +11,7 @@ A standard install media, (let's talk about a DVD for easier start) has several 
 
 -  isolinux (where the loader lives)
 -  images (for extra files for installer to load)
--  Packages for installation (RedHat/ for EL4, Server/Client for EL5)
+-  Packages for installation (`RedHat/` for EL4, `Server`/`Client` for EL5)
 
 Usually, a distribution has for it's main binaries more than 2 Gb of data, that enables one target to act as a multifunction server/workstation, but that you will not usually load on the same system. Furthermore, since the DVD creation, there have been so many updates/patches that make your installation a 'outdated' install that you'll need to upgrade to have recent patches.
 
@@ -29,7 +29,7 @@ After we've copied everything from our install media, we'll start customizing :)
 
 We can customize DVD background image and even keyboard layout by tweaking "isolinux/isolinux.cfg" with all required fields (Check [Syslinux](http://syslinux.zytor.com/wiki/index.php/SYSLINUX) Documentation to check proper syntax)
 
-On [Kickstart: instalaciones automatizadas para anaconda]({% post_url 2008-05-11-Kickstart-instalaciones ) (spanish) you can also check how to create a kickstart, so you can embed it on this DVD and configure isolinux.cfg to automatic provision a system
+On [Kickstart: instalaciones automatizadas para anaconda]({filename}/2008-05-11-Kickstart-instalaciones.markdown) (spanish) you can also check how to create a kickstart, so you can embed it on this DVD and configure isolinux.cfg to automatic provision a system
 
 ### Including updates
 
@@ -56,7 +56,7 @@ password less connection between your systems (BUILD and TARGET):
 On BUILD system:
 
 ~~~
-#!bash 
+#!bash
 for package in *.rpm
 do
     NAME=`rpm -q —queryformat '%NAME' $package` ssh TARGET "rpm -q $NAME >/dev/null 2>&1 || echo rm $package" |tee things-to-do
@@ -68,7 +68,7 @@ done
 On BUILD system:
 
 ~~~
-#!bash 
+#!bash
 for package in *.rpm
 do
     NAME=`rpm -q —queryformat '%NAME' $package` echo "$package:$NAME" > packages-on-DVD
@@ -80,7 +80,7 @@ Then copy that file on your TARGET system and running:
 On TARGET system:
 
 ~~~
-#!bash 
+#!bash
 for package in `cat packages-on-DVD`
 do
     QUERY=`echo $package|cut -d ":" -f 2` FILE=`echo $package|cut -d ":" -f 1` rpm -q —queryformat '%NAME' $QUERY >/dev/null 2>&1 || echo rm $FILE|tee things-to-do
@@ -106,7 +106,7 @@ This one is trickier, but it is still possible in a not so hard way, first of al
 Gererate first version of `hdlists`:
 
 ~~~
-#!bash 
+#!bash
 export PYTHONPATH=/usr/lib/anaconda-runtime:/usr/lib/anaconda
 /usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/
 /usr/lib/anaconda-runtime/pkgorder /home/user/DVD/ i386 |tee /home/user/order.txt
@@ -115,7 +115,7 @@ export PYTHONPATH=/usr/lib/anaconda-runtime:/usr/lib/anaconda
 Review order.txt to check all packages added by hand to check correct or include missing packages and then continue with next commands:
 
 ~~~
-#!bash 
+#!bash
 export PYTHONPATH=/usr/lib/anaconda-runtime:/usr/lib/anaconda
 /usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/ —fileorder /home/user/order.txt
 ~~~
@@ -125,7 +125,7 @@ export PYTHONPATH=/usr/lib/anaconda-runtime:/usr/lib/anaconda
 Using createrepo we'll recreate metadata, but we've to keep care and use comps.xml to provide 'group' information to installer, so we'll need to run:
 
 ~~~
-#!bash 
+#!bash
 createrepo -g /home/DVD/Server/repodata/groupsfile.xml /home/DVD/Server/
 ~~~
 
@@ -134,7 +134,7 @@ createrepo -g /home/DVD/Server/repodata/groupsfile.xml /home/DVD/Server/
 At this step you'll have a DVD structure on your hard drive, and just need to get an ISO to burn and test:
 
 ~~~
-#!bash 
+#!bash
 mkisofs -v -r -N -L -d -D -J -V NAME -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -x lost+found -m .svn -o MyCustomISO.iso /home/user/DVD/
 ~~~
 

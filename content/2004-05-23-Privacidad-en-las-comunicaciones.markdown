@@ -165,7 +165,7 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 -  [Kriptopolis](http://www.kriptopolis.org/)]
 -  [PGP Internacional](http://www.pgpi.org/)
 -  [Introducción a GPG: Necesidad y guía rápida en siete pasos](http://bulma.net/body.phtml?nIdNoticia=1684)
--  [Noticia en HispaSec del científico acusado](http://www.hispasec.com/unaaldia/2034) [Patentes de Software]({% post_url 2004-05-13-Patentes-de-Software )
+-  [Noticia en HispaSec del científico acusado](http://www.hispasec.com/unaaldia/2034) [Patentes de Software]({filename}2004-05-13-Patentes-de-Software.markdown)
 -  [Redes Inalámbricas (declaradas) en España](http://www.nodedb.com/index.php?country=europe&state=es&city=)
 -  [Preguntas frecuentes sobre informática fiable](http://linuca.org/body.phtml?nIdNoticia=207)
 
