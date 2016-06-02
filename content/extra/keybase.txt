@@ -1,0 +1,51 @@
+https://keybase.io/iranzo
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://iranzo.github.io
+  * I am iranzo (https://keybase.io/iranzo) on keybase.
+  * I have a public key ASA0uqX-6IrtxKWWXqYBw8Dua_eWzatdfHNWavjIiFb_Fwo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012034baa5fee88aedc4a5965ea601c3c0ee6bf796cdab5d7c73566af8c88856ff170a",
+            "host": "keybase.io",
+            "kid": "012034baa5fee88aedc4a5965ea601c3c0ee6bf796cdab5d7c73566af8c88856ff170a",
+            "uid": "fc68bef1f9b978485d004cc806b19d19",
+            "username": "iranzo"
+        },
+        "service": {
+            "hostname": "iranzo.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.14"
+    },
+    "ctime": 1458344164,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1458344005,
+        "hash": "67463efd0ad207a0970442866fcb6f466fae63fe9b078ad4faa86a3caefa61ffaa3be712e18d862dbf00a84a613916c410672157af5eb3d7e27f124468a4a4ce",
+        "seqno": 413494
+    },
+    "prev": "92a456d4c200d10f871c1dc42c971158fe7be3cf2deaca20c14ce90c4958648b",
+    "seqno": 15,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNLql/uiK7cSlll6mAcPA7mv3ls2rXXxzVmr4yIhW/xcKp3BheWxvYWTFAvd7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzRiYWE1ZmVlODhhZWRjNGE1OTY1ZWE2MDFjM2MwZWU2YmY3OTZjZGFiNWQ3YzczNTY2YWY4Yzg4ODU2ZmYxNzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzRiYWE1ZmVlODhhZWRjNGE1OTY1ZWE2MDFjM2MwZWU2YmY3OTZjZGFiNWQ3YzczNTY2YWY4Yzg4ODU2ZmYxNzBhIiwidWlkIjoiZmM2OGJlZjFmOWI5Nzg0ODVkMDA0Y2M4MDZiMTlkMTkiLCJ1c2VybmFtZSI6ImlyYW56byJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiaXJhbnpvLmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE0In0sImN0aW1lIjoxNDU4MzQ0MTY0LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NTgzNDQwMDUsImhhc2giOiI2NzQ2M2VmZDBhZDIwN2EwOTcwNDQyODY2ZmNiNmY0NjZmYWU2M2ZlOWIwNzhhZDRmYWE4NmEzY2FlZmE2MWZmYWEzYmU3MTJlMThkODYyZGJmMDBhODRhNjEzOTE2YzQxMDY3MjE1N2FmNWViM2Q3ZTI3ZjEyNDQ2OGE0YTRjZSIsInNlcW5vIjo0MTM0OTR9LCJwcmV2IjoiOTJhNDU2ZDRjMjAwZDEwZjg3MWMxZGM0MmM5NzExNThmZTdiZTNjZjJkZWFjYTIwYzE0Y2U5MGM0OTU4NjQ4YiIsInNlcW5vIjoxNSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDpzm3giUY+lEhp9D5PAmE7MyRQt0zGmWkAozvuz/u5hANosRBhvhvptuXDRnJCxbYSxvHqfrBwgFM2u2Kyq2cIqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/iranzo

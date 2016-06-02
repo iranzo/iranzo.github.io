@@ -36,7 +36,8 @@ STATIC_PATHS = [
 
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.png': {'path': 'favicon.png'}
+    'extra/favicon.png': {'path': 'favicon.png'},
+    'extra/keybase.txt': {'path': 'keybase.txt'}
 }
 
 CACHE_CONTENT = False
