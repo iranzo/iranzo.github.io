@@ -3,3 +3,6 @@ pelicanconf.pyc
 .idea/
 pelican.pid
 srv.pid
+output
+plugins/*/*.pyc
+*.pyc
