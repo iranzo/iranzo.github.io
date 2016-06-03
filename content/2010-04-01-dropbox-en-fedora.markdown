@@ -2,7 +2,7 @@
 layout: post
 title: Dropbox en Fedora
 date: '2010-04-01T11:54:00.001+02:00'
-author: Pablo
+author: Pablo Iranzo Gómez
 tags: fedora, dropbox
 lang: es
 modified_time: '2011-05-09T21:39:53.954+02:00'
@@ -41,7 +41,7 @@ se replicarán automáticamente los ficheros que compartamos.
 6- SELinux: Si tienes problemas con SELinux, revisa la discusión en <http://forums.dropbox.com/topic.php?id=26808&amp;replies=24> en la que se apunta a que realices los siguientes pasos:
 
 ~~~
-#!bash 
+#!bash
 cd .drobpox-dist/
 [.dropbox-dist]$ execstack -q _ctypes.so X _ctypes.so
 [.dropbox-dist]$ execstack -c _ctypes.so

@@ -14,7 +14,7 @@ I've setup a spec file that will allow you to create an rpm that has been tested
 
 
 ~~~
-#!spec 
+#!spec
 %define dist .el%(rpm -q --queryformat='%{VERSION}' redhat-release 2> /dev/null | tr -cd '[:digit:]')
 Summary: DLNA compatible server
 Name: MiniDLNA
