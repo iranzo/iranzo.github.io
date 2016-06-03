@@ -5,7 +5,6 @@
 
 from __future__ import unicode_literals
 
-import os
 import datetime
 
 AUTHOR = u'Pablo Iranzo Gómez'
@@ -31,13 +30,14 @@ DISPLAY_PAGES_ON_MENU = True
 STATIC_PATHS = [
     'imagen',
     'extra/robots.txt',
-    'extra/favicon.png'
+    'extra/favicon.png',
+    'extra/keybase.txt'
 ]
 
 EXTRA_PATH_METADATA = {
+    'extra/keybase.txt': {'path': 'keybase.txt'},
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.png': {'path': 'favicon.png'},
-    'extra/keybase.txt': {'path': 'keybase.txt'}
 }
 
 CACHE_CONTENT = False
@@ -154,20 +154,17 @@ TAGS_ORDER_BY = 'size-rev'
 SITE_UPDATED = datetime.date.today()
 
 
-#octopress theme
+# octopress theme
 GITHUB_USER = "iranzo"
-GITHUB_REPO_COUNT= 5
-GITHUB_SKIP_FORK= True
-GITHUB_SHOW_USER_LINK= True
+GITHUB_REPO_COUNT = 5
+GITHUB_SKIP_FORK = True
+GITHUB_SHOW_USER_LINK = True
 
-TWITTER_USER= "iranzop"
-GOOGLE_PLUS_ID= "115967682482067873883"
-FACEBOOK_LIKE=True
+TWITTER_USER = "iranzop"
+GOOGLE_PLUS_ID = "115967682482067873883"
+FACEBOOK_LIKE = True
 
-GOOGLE_PLUS_ONE= True
-GOOGLE_PLUS_HIDDEN= False
+GOOGLE_PLUS_ONE = True
+GOOGLE_PLUS_HIDDEN = False
 
-GOOGLE_ANALYTICS="UA-81705-12"
-
-
-
+GOOGLE_ANALYTICS = "UA-81705-12"
