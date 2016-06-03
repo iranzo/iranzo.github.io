@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Writing a Telegram.org bot in Python"
+title: Writing a Telegram.org bot in Python
 date: 2015-06-26 17:12:30 +0200
 comments: true
 tags: Python, programming, telegram
-description: 
+description:
 ---
 
 Hi,
@@ -24,4 +24,3 @@ Enjoy!
 Pablo
 
 BTW: the bot is not allowed to join channels (`@stampy_bot`) so it remains in a controlled environment until the code is made more robust, but I'm thinking about having a second `public` instance on `Openshift.redhat.com` for wider audience.
-

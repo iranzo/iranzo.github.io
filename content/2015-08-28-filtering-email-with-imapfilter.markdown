@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Filtering email with imapfilter"
+title: Filtering email with imapfilter
 date: 2015-08-28 15:27:47 +0200
 comments: true
 tags: linux, email, imap, imapfilter, Fedora

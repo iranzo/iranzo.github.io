@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Octopress for jekyll blogging"
+title: Octopress for jekyll blogging
 date: 2015-03-24 13:23:15 +0100
 comments: true
 tags: jekyll, markdown, octopress
+category: blog
 ---
 
 After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.
@@ -25,4 +26,3 @@ On Fedora and as my unprivileged user, I did:
 One of the interesting things it that it uses two branches on git, `master` and `source`, where `master` is the one that github publishes (your live environment) and `source` is the actual code for your blog, templates, posts, etc that are later generated, previewed and deployed from above steps.
 
 I'll be testing it for a while to see how it works, but so far, so good.
-

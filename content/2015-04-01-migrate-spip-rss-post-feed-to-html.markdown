@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Migrate SPIP-RSS post feed to HTML"
+title: Migrate SPIP-RSS post feed to HTML
 date: 2015-04-01 16:49:13 +0200
 comments: true
 tags: python, spip, markdown, html
-description: 
+description:
 ---
 
 I had my old blog based on [SPIP](http://www.spip.net), and I wanted to keep all the posts together, to make it easier to migrate in the future.
@@ -24,13 +24,13 @@ So:
 At this point I needed some software for automating the initial conversion, so I went to python's `feedparser` libraries to perform this with a bit of coding:
 
 ~~~
-#!python 
+#!python
 url="/path/to/your/xml/file.xml"
 
 import codecs
 import feedparser
 feed=feedparser.parse(url)
-        
+
 for item in feed["items"]:
     filename=item["date"][0:10]+"-"+item["link"][23:] #remove the first 23 chars from article url http+domain
     print filename
@@ -46,4 +46,3 @@ for item in feed["items"]:
 After each iteration, a new file was created using the old http link to the article (which already had stripped problematic characters).
 
 Just moving those files to `source/_posts` allows me to republish them on a different site, and later work the conversion to markdown by using `pandoc` and some manual tuning.
-
