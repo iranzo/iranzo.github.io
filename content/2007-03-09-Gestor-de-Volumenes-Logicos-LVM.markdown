@@ -26,7 +26,7 @@ Los volúmenes utilizan los llamados PE[^1], que son las unidades (relacionadas 
 
 La estructura de LVM sería la siguiente:
 
-[Estructura de LVM, original de "http://www.ccp-west.de/tipps.html"]({filename}/imagen/lvmschema.gif)
+![Estructura de LVM, original de "http://www.ccp-west.de/tipps.html"]({filename}/imagen/lvmschema.gif)
 
 **Estructura de LVM**
 
@@ -184,15 +184,15 @@ Red Hat o Fedora Core incorporan una herramienta gráfica "system-config-lvm" qu
 
 En la siguiente captura podemos ver los volúmenes físicos no asignados a algún grupo de volumen, y con las opciones que nos proporciona el gestor, podremos añadirlos a un grupo de volumen existente, o bien crear un nuevo grupo de volumen:
 
-[PV no asignados]({filename}/imagen/lvm3.jpg)
+![PV no asignados]({filename}/imagen/lvm3.jpg)
 
 Aquí, podremos crear un nuevo volumen lógico dentro del grupo de volumen, podremos indicar el nombre del volumen, el tipo de volumen, así como el tamaño y sistema de ficheros:
 
-[Crear VL]({filename}/imagen/lvm6.jpg)
+![Crear VL]({filename}/imagen/lvm6.jpg)
 
 En esta vista de la aplicación podemos ver el grupo de volumen "Test" y la vista lógica y física de los volúmenes creados dentro del mismo (como vemos, Test, está compuesto por cuatro particiones o volúmenes físicos: sdb1,sdb2,sdb3,sdb4)
 
-[Vista VL]({filename}/imagen/lvm8.jpg)
+![Vista VL]({filename}/imagen/lvm8.jpg)
 
 Vemos, al tener marcado el espacio libre del volumen lógico, dónde está ubicado el espacio libre a nivel físico y el número de extensiones que corresponden a cada volumen físico.
 
