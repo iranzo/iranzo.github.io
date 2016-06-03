@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Intel AMT on Linux for remote control/fencing"
+title: Intel AMT on Linux for remote control/fencing
 date: 2015-05-01 11:35:14 +0200
 comments: true
 tags: Linux, fencing, management
-description: 
+description:
 ---
 Hi,
 
@@ -33,7 +33,7 @@ From that web interface and once logging with `admin` and the password set `Qwer
 Now, for doing the 'command-line' part, we will need to install one package on our system and rum some scripts.
 
 ~~~
-#!bash 
+#!bash
 # First we'll install amtterm wsmancli
 
 dnf -y install amtterm wsmancli
@@ -50,19 +50,19 @@ VNC_PASSWORD='Qwer123$'
 
 # set the vnc password (must be 8 characters MAX)
 wsman put http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h ${AMT_HOST} -P 16992 -u admin -p ${AMT_PASSWORD} -k RFBPassword=${VNC_PASSWORD}
- 
+
 # enable KVM redirection to port 5900 (this will also intercept 5900 port for console redirection, so make it sure you'll not need it later)
 wsman put http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h ${AMT_HOST} -P 16992 -u admin -p ${AMT_PASSWORD} -k Is5900PortEnabled=true
-   
+
 # disable opt-in policy (do not ask user for console access)
 wsman put http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h ${AMT_HOST} -P 16992 -u admin -p ${AMT_PASSWORD} -k OptInPolicy=false
-      
+
 # disable session timeout (do not timeout sessions)
 wsman put http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h ${AMT_HOST} -P 16992 -u admin -p ${AMT_PASSWORD} -k SessionTimeout=0
-          
+
 # enable KVM (enable keyboard/video/monitor redirection)
 wsman invoke -a RequestStateChange http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_KVMRedirectionSAP -h ${AMT_HOST} -P 16992 -u admin -p ${AMT_PASSWORD} -k RequestedState=2
-             
+
 # OPTIONAL: view settings (validate all the settings)
 wsman get http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h ${AMT_HOST} -P 16992 -u admin -p ${AMT_PASSWORD}
 
@@ -73,7 +73,7 @@ After this step, we should be able to use `vinagre target` to access the KVM red
 For example, to control power of host you can use:
 
 ~~~
-#!bash 
+#!bash
 # Check host status:
 amttool $AMT_HOST info
 
