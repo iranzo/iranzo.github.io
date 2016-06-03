@@ -179,15 +179,15 @@ Red Hat or Fedora have a graphical tool "system-config-lvm" which allows to mana
 
 In the next screenshot we can see the physical volumes no assignated to a volume group, and with the options provided by the tool, we can add to an existing volume group or well, create a new volume group:
 
-[Unassigned PV]({filename}/imagen/lvm3.jpg)
+![Unassigned PV]({filename}/imagen/lvm3.jpg)
 
 Here we can create a new logical volume inside the volume group, we can specify the volume name, the kind of volume as well as size and filesystem:
 
-[Create LV]({filename}/imagen/lvm6.jpg)
+![Create LV]({filename}/imagen/lvm6.jpg)
 
 Here we can see the volume group "Test" and the logical and physical view created (as we see, Test is made of four physical volumes: sdb1,sdb2,sdb3,sdb4)
 
-[LV view]({filename}/imagen/lvm8.jpg)
+![LV view]({filename}/imagen/lvm8.jpg)
 
 When we select the free space of the logical volume, the following is shown: number of extents, physical location for each physical volume.
 
