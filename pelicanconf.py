@@ -31,14 +31,14 @@ DISPLAY_PAGES_ON_MENU = True
 STATIC_PATHS = [
     'imagen',
     'extra/robots.txt',
-    'extra/favicon.png',
+    'extra/favicon.ico',
     'extra/keybase.txt'
 ]
 
 EXTRA_PATH_METADATA = {
     'extra/keybase.txt': {'path': 'keybase.txt'},
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.png': {'path': 'favicon.png'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
 }
 
 CACHE_CONTENT = False
@@ -52,15 +52,13 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'better_codeblock_line_numbering',
     'better_figures_and_images',
-    'related_posts',
-    'tag_cloud',
     'sitemap',
-    'category_order',
     # 'yuicompressor',
 ]
 
-FAVICON = 'extra/favicon.png'
-THEME = 'themes/octopress'
+FAVICON = 'extra/favicon.ico'
+THEME = 'themes/blue-penguin'
+
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
 USE_FOLDER_AS_CATEGORY = False
 
@@ -114,7 +112,13 @@ DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives']
 #     ('github', 'https://github.com/iranzo'),
 # ]
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
+
+PAGINATION_PATTERNS = (
+    (1, '{base_name}/', '{base_name}/index.html'),
+    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+)
+
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
@@ -124,14 +128,6 @@ MD_EXTENSIONS = [
     'codehilite(css_class=highlight,linenums=False)',
     'extra'
 ]
-
-# related_posts
-RELATED_POSTS_MAX = 5
-
-# tag_cloud
-TAG_CLOUD_STEPS = 10
-TAG_CLOUD_MAX_ITEMS = 20
-TAG_CLOUD_SORTING = 'size-rev'
 
 # sitemap
 SITEMAP = {
@@ -148,24 +144,25 @@ SITEMAP = {
     }
 }
 
-# category_order
-CATEGORIES_ORDER_BY = 'size-rev'
-TAGS_ORDER_BY = 'size-rev'
-
 SITE_UPDATED = datetime.date.today()
 
-
-# octopress theme
-GITHUB_USER = "iranzo"
-GITHUB_REPO_COUNT = 5
-GITHUB_SKIP_FORK = True
-GITHUB_SHOW_USER_LINK = True
-
-TWITTER_USER = "iranzop"
-GOOGLE_PLUS_ID = "115967682482067873883"
-FACEBOOK_LIKE = True
-
-GOOGLE_PLUS_ONE = True
-GOOGLE_PLUS_HIDDEN = False
-
 GOOGLE_ANALYTICS = "UA-81705-12"
+
+
+# blue-penguin
+
+# provided as examples, they make ‘clean’ urls. used by MENU_INTERNAL_PAGES.
+TAGS_URL = 'tags'
+TAGS_SAVE_AS = 'tags/index.html'
+AUTHORS_URL = 'authors'
+AUTHORS_SAVE_AS = 'authors/index.html'
+CATEGORIES_URL = 'categories'
+CATEGORIES_SAVE_AS = 'categories/index.html'
+ARCHIVES_URL = 'archives'
+ARCHIVES_SAVE_AS = 'archives/index.html'
+
+# use those if you want pelican standard pages to appear in your menu
+MENU_INTERNAL_PAGES = (
+    ('Tags', TAGS_URL, TAGS_SAVE_AS),
+    ('Archives', ARCHIVES_URL, ARCHIVES_SAVE_AS),
+)
