@@ -2,7 +2,7 @@
 layout: post
 title: Sincronizar 'basicamente' iPhone o iPod Touch en Fedora 12
 date: '2010-03-02T14:43:00.001+01:00'
-author: Pablo
+author: Pablo Iranzo Gómez
 tags: fedora
 lang: es
 modified_time: '2011-01-26T08:00:30.406+01:00'
@@ -13,14 +13,14 @@ blogger_orig_url: http://iranzop.blogspot.com/2010/03/sincronizar-iphone-o-ipod-
 Las nuevas versiones no están todavía soportadas en F12, así que tendremos que utilizar las de rawhide.
 
 ~~~
-#!bash 
+#!bash
 yum --enablerepo=rawhide upgrade ifuse gtkpod libgpod libimobiledevice usbmuxd
 ~~~
 
 Una vez instalados, podemos empezar a utilizarlo ejecutando como root:
 
 ~~~
-#!bash 
+#!bash
 mkdir -p /mnt/ipod
 chmod 777 /mnt/ipod
 usbmuxd -v -f
@@ -29,7 +29,7 @@ usbmuxd -v -f
 Y como nuestro usuario:
 
 ~~~
-#!bash 
+#!bash
 ifuse /mnt/ipod
 ~~~
 

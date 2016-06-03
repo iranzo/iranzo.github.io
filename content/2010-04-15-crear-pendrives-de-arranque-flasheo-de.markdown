@@ -3,7 +3,7 @@ layout: post
 title: Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible
   (Linux/Windows)
 date: '2010-04-15T14:18:00.001+02:00'
-author: Pablo
+author: Pablo Iranzo Gómez
 lang: es
 tags: fedora
 modified_time: '2010-04-15T14:27:56.211+02:00'
@@ -57,7 +57,7 @@ Los que hay indicados, ponen el idioma en castellano, indica que usaremos una im
 En el paso final, debemos concatenar los ficheros en un único ejecutable
 
 ~~~
-#!bash 
+#!bash
 cat 7zS.sfx config.txt todo7z > autoejecutable.exe
 ~~~
 

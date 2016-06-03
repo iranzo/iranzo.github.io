@@ -2,7 +2,7 @@
 layout: post
 title: Combinar correspondencia con OpenOffice.org
 date: '2010-04-05T21:50:00.001+02:00'
-author: Pablo
+author: Pablo Iranzo Gómez
 tags: fedora
 lang: es
 modified_time: '2010-04-05T22:16:08.804+02:00'

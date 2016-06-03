@@ -2,7 +2,7 @@
 layout: post
 title: duplicity for managing backups
 date: '2011-06-27T18:35:00.000+02:00'
-author: Pablo
+author: Pablo Iranzo Gómez
 tags: fedora, backup
 modified_time: '2011-06-27T18:59:39.499+02:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-3644739387663146921
