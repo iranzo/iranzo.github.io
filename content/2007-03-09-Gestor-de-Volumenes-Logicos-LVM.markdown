@@ -6,6 +6,8 @@ date: 2007-03-09T16:39:35Z
 tags: linux, lvm
 lang: es
 save_as: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/index.html
+url: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/
+
 -------------------------------------------------------------------
 
 ### Introducción

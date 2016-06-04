@@ -69,6 +69,9 @@ SEARCH_BOX = False
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
+ARTICLE_LANG_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}-{lang}/'
+ARTICLE_LANG_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}-{lang}/index.html'
+
 YEAR_ARCHIVE_URL = 'blog/archive/{date:%Y}/'
 YEAR_ARCHIVE_SAVE_AS = 'blog/archive/{date:%Y}/index.html'
 
