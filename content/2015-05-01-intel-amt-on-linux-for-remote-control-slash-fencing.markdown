@@ -93,6 +93,4 @@ As a bonus, there's a RFE[^1] for requesting this tool to be incorporated as pow
 
 Enjoy!
 
-* * * * *
-
 [^1]: Request for Enhancement: a bugzilla request oriented not to fix a bug, but to incorporate new functionality/software into a product.
