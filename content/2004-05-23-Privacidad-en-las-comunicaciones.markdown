@@ -169,7 +169,6 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 -  [Redes Inalámbricas (declaradas) en España](http://www.nodedb.com/index.php?country=europe&state=es&city=)
 -  [Preguntas frecuentes sobre informática fiable](http://linuca.org/body.phtml?nIdNoticia=207)
 
-* * * * *
 
 [^1]: Web con un programa que cifra y descifra en [www.rot13.com](http://www.rot13.com/)
 
