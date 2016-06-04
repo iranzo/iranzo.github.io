@@ -3,9 +3,11 @@ layout: post
 title: Creating Jigsaw Download (Jigdo) files for downloading ISO's
 date: 2007-11-15T21:50:25Z
 tags: linux, iso
+lang: en
+slug: Creating-Jigsaw-Download-Jigdo
 ---
 
-### Introduction 
+### Introduction
 
 Jigdo (JIGsaw DOwnload) is a small utility that can assemble a CD/DVD image from it's internal files.
 
@@ -13,20 +15,20 @@ For example, [Debian](http://www.debian.org/) has been using it for years for di
 
 Furthermore, if you already had some files (for example if you started at version X and have been downloading and keeping al files until X.Y, jigdo, can use those updated files to compare them against the .jigdo file and avoid downloading duplicated files...
 
-### ¿How it works? 
+### ¿How it works?
 
 A Jigdo download contains two parts, one, the .jigdo file which contains the files part of the ISO[^2] image and a template file automatically generated when creating the .jigdo using jigdo-file.
 
 When specified jigdo-lite "file.jigdo" will ask for previous locations (folders) that could contain required packages, and will use the url's described in .jigdo file to download any missing package and reassemble an ISO image with same MD5sum of original, but saving on bandwidht and avoiding re-downloads from network failures (just small file compared to a full DVD iso)
 
-### ¿How do I create a .jigdo and a .template file? 
+### ¿How do I create a .jigdo and a .template file?
 
 For example, if we download CentOS 5 DVD iso from [mirror.centos.org](http://alufis35.uv.es/mirror.centos.org) and then mount it loopback and put on a folder (for example for providing our own mirror, or kickstartable tree) we can do:
 
 (Suppossing that iso is at /var/www/CentOS/isos/ and that our exploded directory and file tree at /var/www/CentOS/tree/, we will do:
 
 ~~~
-#!bash 
+#!bash
 jigdo-file mt -i /var/www/CentOS/isos/CentOS-5.0-i386-bin-DVD/CentOS-5.0-i386-bin-DVD.iso -j /var/www/CentOS/Centos5-DVD.jigdo -t /var/www/CentOS/Centos5-DVD.template —uri Centosmirrors=[http://mirror.centos.org/centos-5/5/os/i386/](http://mirror.centos.org/centos-5/5/os/i386/) /var/www/CentOS/tree/
 ~~~
 
@@ -36,7 +38,7 @@ Using a text editor we can modify our .jigdo file and set the URL for our source
 
 After that, if we provide those files to anyone, he/she could enjoy faster and better downloads of our ISO's that will get reconstructed automatically on target system
 
-### ¿How do I get an ISO from a .jigdo file? 
+### ¿How do I get an ISO from a .jigdo file?
 
 Easy:
 
@@ -46,7 +48,6 @@ JigDo will download the descriptor, search it for the template file, download it
 
 I hope you find this useful :)
 
-* * * * *
 
 [^1]: [From Dag's Repo](http://dag.wieers.com/rpm/packages/jigdo/)
 
@@ -57,4 +58,3 @@ Attached are the sample .jigdo and .template that I created for this document, r
 You can test it using jigdo-lite [http://alufis35.uv.es/deploy/Centos5-DVD.jigdo](http://alufis35.uv.es/deploy/Centos5-DVD.jigdo)
 
 Or: jigdo-lite [http://alufis35.uv.es/deploy/CentOS51-DVD.jigdo](http://alufis35.uv.es/deploy/CentOS51-DVD.jigdo)
-

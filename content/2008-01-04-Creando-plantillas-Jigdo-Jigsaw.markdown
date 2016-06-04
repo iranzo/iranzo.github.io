@@ -4,6 +4,9 @@ title: Creando plantillas Jigdo (Jigsaw Download) para descargar ISO's
 date: 2008-01-04T18:43:29Z
 tags: linux, iso
 lang: es
+url: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/
+save_as: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/index.html
+slug: Creating-Jigsaw-Download-Jigdo
 ---
 
 ### Introducción
@@ -27,7 +30,7 @@ Por ejemplo, si descargamos la imagen ISO de CentOS [mirror.centos.org](http://a
 (Supongamos que la iso está en /var/www/CentOS/isos/ y que la carpeta con el contenido de la iso en /var/www/CentOS/tree/, haremos:
 
 ~~~
-#!bash 
+#!bash
 jigdo-file mt -i /var/www/CentOS/isos/CentOS-5.0-i386-bin-DVD/CentOS-5.0-i386-bin-DVD.iso -j /var/www/CentOS/Centos5-DVD.jigdo -t /var/www/CentOS/Centos5-DVD.template —uri Centosmirrors=[http://mirror.centos.org/centos-5/5/os/i386/](http://mirror.centos.org/centos-5/5/os/i386/) /var/www/CentOS/tree/
 ~~~
 
@@ -47,7 +50,6 @@ JigDo descargará la descripción, buscará el fichero de plantilla, lo descarga
 
 Espero que te sea útil :)
 
-* * * * *
 
 [^1]:[del repositorio de Dag](http://dag.wieers.com/rpm/packages/jigdo/)
 
