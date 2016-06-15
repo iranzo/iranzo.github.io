@@ -10,7 +10,7 @@ Ha salido en las noticias de este medio día un proyecto de intercambio de libro
 
 Una vez identificado el libro, la cosa consiste en ponerlo en circulación: "olvidarlo" en una cafetería, una estatua, un baño, simplemente dárselo a alguien que vaya a otra ciudad, etc.
 
-Su web tiene un 'mirror' en España: [http://www.bookcrossing-spain.com](http://www.bookcrossing-spain.com/), con la información traducida, y en esta
+Su web tiene un 'espejo' en España: [http://www.bookcrossing-spain.com](http://www.bookcrossing-spain.com/), con la información traducida, y en esta
 [lista](http://www.bookcrossing.com/hunt/29) se pueden ver los libros desperdigados por España.
 
 Cada persona que lo encuentre encontrará la nota con el número del libro y al acceder a la web podrá comprobar quién lo puso en circulación, por qué lugares han pasado y lo que la gente ha escrito de ellos... Por lo visto aquí en Valencia hay 9 en circulación, uno en Blasco Ibáñez, otro en la cafetería de la FNAC, otro cerca de "yampua" (o como se escriba), etc...
