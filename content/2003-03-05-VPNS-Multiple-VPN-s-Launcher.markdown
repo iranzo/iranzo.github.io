@@ -8,15 +8,15 @@ tags: linux, network, vpn
 1 General Purpose
 -----------------
 
-The idea on writing vpns and the structure it follows was the problem that we had into easily configure many vpn's for use with the wireless project interconnection (Valencia Wireless [`http://www.valenciawireless.org`](http://www.valenciawireless.org/)).
+The idea on writing vpn's and the structure it follows was the problem that we had into easily configure many vpn's for use with the wireless project interconnection (Valencia Wireless [`http://www.valenciawireless.org`](http://www.valenciawireless.org/)).
 
-When having no chance to join networks using just wireless links, we needed to provide some kind of transparent link from one wifi node to another. To do so, we decided to use the VPND daemon to establish links between our networks for allowing transparent traffic flow.
+When having no chance to join networks using just wireless links, we needed to provide some kind of transparent link from one WiFi node to another. To do so, we decided to use the VPND daemon to establish links between our networks for allowing transparent traffic flow.
 
-VPND it's great because it's very easy to configure and works fine, but has a little big problem... it doesn't allow to use DNS names for establishing VPN's, it just allows to use static IP's. Probably that would'nt be a problem for big business, universities, etc but as wireless projects are common between particulars, and at least in Spain we usually have dinamic IP's, it made our tunnels to be "alive" until either our provider or the remote provider decides to change the IP...
+VPND it's great because it's very easy to configure and works fine, but has a little big problem... it doesn't allow to use DNS names for establishing VPN's, it just allows to use static IP's. Probably that wouldn't be a problem for big business, universities, etc but as wireless projects are common between particulars, and at least in Spain we usually have dynamic IP's, it made our tunnels to be "alive" until either our provider or the remote provider decides to change the IP...
 
-All of us were using Dinamic DNS Services from different providers (I use No-IP ([http://www.no-ip.org](http://www.no-ip.org/)), so if you decide to sign it with them, please use the following link No-Ip [`http://www.no-ip.com/referral/index.php/client/Pablo.Iranzo@uv.es`](http://www.no-ip.com/referral/index.php/client/Pablo.Iranzo@uv.es)), other people at Valencia Wireless uses DynDNS [`http://www.dyndns.org`](http://www.dyndns.org/), if in doubt, search for Dynamic DNS to get an idea on what you can use...
+All of us were using Dynamic DNS Services from different providers (I use No-IP ([http://www.no-ip.org](http://www.no-ip.org/)), so if you decide to sign it with them, please use the following link No-Ip [`http://www.no-ip.com/referral/index.php/client/Pablo.Iranzo@uv.es`](http://www.no-ip.com/referral/index.php/client/Pablo.Iranzo@uv.es)), other people at Valencia Wireless uses DynDNS [`http://www.dyndns.org`](http://www.dyndns.org/), if in doubt, search for Dynamic DNS to get an idea on what you can use...
 
-In brief... we had DNS names that get dinamically resolved to our current IP's, but VPND was unable to deal with those names... so I wrote VPNS :-D
+In brief... we had DNS names that get dynamically resolved to our current IP's, but VPND was unable to deal with those names... so I wrote VPNS :-D
 
 (please, if you use it, send me an email to let me know how much people is using it... thanks)
 
@@ -55,7 +55,7 @@ There are also some rc?.d directories with symbolic links to vpns to start/stop 
 Those files specify the configuration for the local host that will be used by all the other hosts.
 
 - **/etc/vpnd/master.resolv :** :   In this file you'll need to put the Dynamic DNS name of your machine (in my case "lacreu.no-ip.org"), so the update script will get your IP from it to be able to establish tunnels both if your IP changes or just if remote IP changes.
-- **/etc/vpnd/master.ip :** :   This file is created automatically with the results of resolving your Dynamic DNS to an IP to allow comparision between your last IP and your current to check if you need to relaunch VPN's (remember that the worst case is both local and remote IP's getting changed).
+- **/etc/vpnd/master.ip :** :   This file is created automatically with the results of resolving your Dynamic DNS to an IP to allow comparison between your last IP and your current to check if you need to relaunch VPN's (remember that the worst case is both local and remote IP's getting changed).
 - **/etc/vpnd/master.restart :** :   This file is created when local IP has changed, specifying a total VPND restart for all VPN's
 
 ### 4.2 Host configuration (/etc/vpnd/hosts/$HOST)
@@ -79,7 +79,7 @@ Into this subdir there would be the following config files:
 #### 4.2.2 Dinamic files
 
 - **vpnd.conf :** :   Configuration file for HOST, it gets created automatically when running /etc/vpnd/update.pl script
-- **restart :** :   This file gets created by the "compare.pl" script to indicate that VPNS should restart this host VPN. This file is created if the IP has changed since las launch
+- **restart :** :   This file gets created by the "compare.pl" script to indicate that VPNS should restart this host VPN. This file is created if the IP has changed since last launch
 
 #### 4.2.3 Scripts
 
@@ -87,7 +87,7 @@ Into this subdir there would be the following config files:
 - **/etc/vpnd/compare.pl :** :   Script to compare IP's between recorded one and current for preparing VPND restart
 - **/etc/init.d/vpns :** :   Script to start, stop, restart or restart-if-needed the VPNS based on hosts definitions
 
-5 Recomendations
+5 Recommendations
 ----------------
 
 As probably IP's will change, you'll need to put a crontab sentence for checking of updated ip's, to do so, put /etc/init.d/vpns restart-if-needed in your crontab for allowing the tunnels to be recreated at every change.
@@ -116,15 +116,15 @@ Thanks to Hawkmoon
 
 ### Version 0.42
 
-Change in the compare.pl script for the case in wich the changed ip was the local one to restart all vpn daemons.
+Change in the compare.pl script for the case in which the changed ip was the local one to restart all vpn daemons.
 
-Before this version, when local ip changed, only the first-checked VPN will be restarted as there was no file specifiying a total restart.
+Before this version, when local ip changed, only the first-checked VPN will be restarted as there was no file specifying a total restart.
 
 ### Version 0.41
 
 Little changes in configuration files an scripts to make it easier to set up, please, check your configuration files to use new behaviour
 
--   pid file now gets automatically defined to match vpns kill procedure, so it should't be in "master" file.
+-   pid file now gets automatically defined to match vpns kill procedure, so it shouldn't be in "master" file.
 ### Version 0.4
 
 Now, added localhost IP resolution to check if just origin or end (or both) changed their IP, so if either one of them changes, the VPN get's marked as restart-needed.

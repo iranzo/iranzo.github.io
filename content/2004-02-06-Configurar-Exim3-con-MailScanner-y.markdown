@@ -135,7 +135,7 @@ Virus Scanning = yes
 Virus Scanners = clamav
 ~~~
 
-A partir de aquí vienen unas opciones interesantes (os podeis leer el archivo de configuración para entenderlas), pero para destacar, por ejemplo permite quitar los IFRAMES para así evitar muchos de los virus que se propagan hoy en día... puede que clamav no los detectase, pero como mailscanner puede eliminar esos tags, esos archivos serían inofensivos (además, permite bloqueos automáticos de .scr, .pif, etc), incluso bloquear formularios en mails... y lo mejor: convertir esas órdenes o incluso
+A partir de aquí vienen unas opciones interesantes (os podéis leer el archivo de configuración para entenderlas), pero para destacar, por ejemplo permite quitar los IFRAMES para así evitar muchos de los virus que se propagan hoy en día... puede que clamav no los detectase, pero como mailscanner puede eliminar esos tags, esos archivos serían inofensivos (además, permite bloqueos automáticos de .scr, .pif, etc), incluso bloquear formularios en mails... y lo mejor: convertir esas órdenes o incluso
 el mensaje entero de HTML a texto ;)
 
 ~~~
