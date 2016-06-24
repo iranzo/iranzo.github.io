@@ -17,4 +17,4 @@ After two more years visitting the biggest customers in the country, I moved to 
 
 Shorty after my start as TAM, I started working with Cloud customers, providing support to their OpenStack deployments.
 
-You can check my updated profile at [LinkedIn](http://linkedin.com/in/iranzo)
+You can check my updated profile at [LinkedIn](http://linkedin.com/in/iranzo) and my current [RH Certifications](https://www.redhat.com/rhtapps/certification/badge/verify/XUU4H2Y5ITPDW5NMTLLN3YMSSAAEQU3CUPSQX2KSDXT6RW46LQ3U7PJCSIXUILAFHEDCMJS26CYXW4U5NQYTCNA62RUWOCM34WWBUYQ=)
