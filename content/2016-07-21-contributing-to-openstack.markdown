@@ -64,7 +64,7 @@ Of couse, all the code is checked by some automation engines when submitted, whi
 - `tox -e py27`
 - `tox -e coverage`
 
-To respectively, validate pep8 formatting (line lenght, spaces around operators, docsstrings formatting, etc) and to run another set of tests like the ones you define.
+To respectively, validate pep8 formatting (line length, spaces around operators, docsstrings formatting, etc) and to run another set of tests like the ones you define.
 
 After each set of changes performed to apply the feedback received, ensure to:
 
