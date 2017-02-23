@@ -8,7 +8,7 @@ category: blog
 description:
 ---
 
-In started to get familiar with [Ansible](http://www.ansible.com) because,
+I've started to get familiar with [Ansible](http://www.ansible.com) because,
 apart of getting more and more accepted for OSP-related tasks and
 installation, I wanted to automate  some tasks we needed to setup some servers
 for the OpenStack group I work for.
