@@ -26,7 +26,7 @@ Setting InfraRed is quite easy, at the moment the version 2 (branch on github) i
 
 We'll start with:
 
-- Clone GIT repo: `git clone https://github.com/redhat-openstack/infrared.git -b IR2`
+- Clone GIT repo: `git clone https://github.com/redhat-openstack/infrared.git`
 - Create a virtual ENV so we can proceed with installation, later we'll need to source it before each use.    `cd infrared ;  virtualenv .venv && source .venv/bin/activate`
 - Proceed with upgrade of pip and setuptools (required) and installation of InfraRed
     - `pip install --upgrade pip`
