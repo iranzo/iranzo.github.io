@@ -6,7 +6,6 @@ comments: true
 tags: linux, email, imap, imapfilter, Fedora
 description:
 ---
-
 Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&drop reordering of rules, cloning, etc.
 
 As I was already using offlineimap to sync from the remote mailserver to my system into a maildir folder, I had almost all the elements I needed.
@@ -15,19 +14,16 @@ After searching for several options [imapfilter](https://github.com/lefcha/imapf
 
 On my first attempts, I setup a pre-sync hook on offlineimap by using as well as the postsync hook I already had:
 
-~~~
-#!ini
+~~~ini
 presynchook  = time imapfilter
 postsynchook = ~/.mutt/postsync-offlineimap.sh
 ~~~
-
 
 Initial attempts were not good at all, applying filters on the remote imapserver was very time consuming and my actual 1 minute delay after finishing one check was becoming a real 10-15 minute interval between checks because of the imapfiltering and this was not scaling as I was putting new rules.
 
 After some tries, and as I already had all the email synced offline, moved filtering to be locally instead of server-side, but as imapfilter requires an imap server, I tricked `dovecot` into using the local folder to be offered via imap:
 
-~~~
-#!ini
+~~~ini
 protocols = imap
 mail_location = maildir:~/.maildir/FOLDER/:INBOX=~/.maildir/FOLDER/.INBOX/
 auth_debug_passwords=yes
@@ -35,15 +31,13 @@ auth_debug_passwords=yes
 
 This also required to change my foldernames to use "." in front of them, so I needed to change `mutt` configuration too for this:
 
-~~~
-#!ini
+~~~ini
 set mask=".*"
 ~~~
 
 and my mailfoders  script:
 
-~~~
-#!ini
+~~~bash
 set mbox_type=Maildir
 set folder="~/.maildir/FOLDER"
 set spoolfile="~/.maildir/FOLDER/.INBOX"
@@ -58,7 +52,7 @@ folder-hook . 'set record="^"'
 
 After this, I could start using imapfilter and start working on my set of rules... but first problem appeared, apparently I started having some duplicated email as I was cancelling and rerunning the script while debugging so a new tool was also introduced to 'dedup' my imap folder named [IMAPdedup](https://github.com/quentinsf/IMAPdedup) with a small script:
 
-~~~
+~~~bash
 #!/bin/bash
 (
 for folder in $(python ~/.bin/imapdedup.py -s localhost  -u iranzo    -w '$PASSWORD'  -m -c -v  -l)
@@ -82,8 +76,7 @@ This more or less ensures a clean INBOX with most important things still there, 
 
 So, after some tests, this is at the moment a simplified version of my filtering file:
 
-~~~
-#!lua
+~~~lua
 ---------------
 --  Options  --
 ---------------
@@ -93,9 +86,9 @@ options.subscribe = true
 options.create = false
 
 function offlineimap (key)
-	local status
-	local value
-	status, value = pipe_from('grep -A2 ACCOUNT ~/.offlineimaprc | grep -v ^#|grep '.. key ..'|cut -d= -f2')C
+    local status
+    local value
+    status, value = pipe_from('grep -A2 ACCOUNT ~/.offlineimaprc | grep -v ^#|grep '.. key ..'|cut -d= -f2')C
         value = string.gsub(value, ' ', '')
         value = string.gsub(value, '\n', '')
         return value
@@ -122,15 +115,15 @@ function mine(messages)
 end
 
 function filter(messages,email,destination)
-	messages:contain_from(email):move_messages(destination)
-	messages:contain_to(email):move_messages(destination)
-	messages:contain_cc(email):move_messages(destination)
-	messages:contain_field('sender', email):move_messages(destination)
+    messages:contain_from(email):move_messages(destination)
+    messages:contain_to(email):move_messages(destination)
+    messages:contain_cc(email):move_messages(destination)
+    messages:contain_field('sender', email):move_messages(destination)
 end
 
 function deleteold(messages,days)
-	todelete=messages:is_older(days)-mine(messages)
-	todelete:move_messages(EXAMPLE['Trash'])
+    todelete=messages:is_older(days)-mine(messages)
+    todelete:move_messages(EXAMPLE['Trash'])
 end
 
 
@@ -268,7 +261,6 @@ deleteold(EXAMPLE['INBOX/EXAMPLE/Customers/_bugzilla'],maxage)
 -- Empty trash every 7 days
 maxage=7
 deleteold(EXAMPLE['Trash'],maxage)
-
 ~~~
 
 As this is applied filtering twice, `offlineimap` might be uploading part of your changes already, making it faster to next syncs, and suffle some of your emails while it runs.

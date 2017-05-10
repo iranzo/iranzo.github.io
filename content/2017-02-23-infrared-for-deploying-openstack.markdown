@@ -7,12 +7,12 @@ tags: python, ansible, openstack, sysmgmt, InfraRed
 category: blog
 description:
 ---
-
 [InfraRed](https://github.com/redhat-openstack/infrared/) is tool that allows to install/provision OpenStack. You can find the documentation for the project at <http://infrared.readthedocs.io>.
 
 Also, developers and users are online in FreeNode at #infrared channel.
 
 ## Why InfraRed?
+
 Deploying OSP with OSP-d (TripleO) requires several setup steps for preparation, deployment, etc. InfraRed simplifies them by automating with ansible most of those steps and configuration.
 
 - It allows to deploy several OSP versions
@@ -33,8 +33,8 @@ We'll start with:
     - `pip install --upgrade setuptools`
     - `pip install .`
 
-
 ## Remote host setup
+
 Once done, we need to setup the requirements on the host we'll use to virtualize, this includes, having the system registered against a repository providing required packages.
 
 - Register RHEL7 and update:
@@ -44,15 +44,17 @@ Once done, we need to setup the requirements on the host we'll use to virtualize
     - `for canal in rhel-7-server-extras-rpms rhel-7-server-fastrack-rpms rhel-7-server-optional-fastrack-rpms rhel-7-server-optional-rpms rhel-7-server-rh-common-rpms rhel-7-server-rhn-tools-rpms rhel-7-server-rpms rhel-7-server-supplementary-rpms rhel-ha-for-rhel-7-server-rpms;do subscription-manager repos --enable=$canal; done`
 
 ## NOTES
- - OSP7 did not contain RPM packaged version of images, a repo with the images needs to be defined like:
-     - `time infrared tripleo-undercloud --version $VERSION --images-task import --images-url $REPO_URL`
-     - NOTE: --images-task `import` and `--images-url`
- - Ceph failed to install unless `--storage-backend ceph` was provided (open bug for that)
+
+- OSP7 did not contain RPM packaged version of images, a repo with the images needs to be defined like:
+    - `time infrared tripleo-undercloud --version $VERSION --images-task import --images-url $REPO_URL`
+    - NOTE: --images-task `import` and `--images-url`
+- Ceph failed to install unless `--storage-backend ceph` was provided (open bug for that)
 
 ## Error reporting
-  - IRC or github
 
-##  RFE/BUGS
+- IRC or github
+
+## RFE/BUGS
 
 Some bugs/RFE on the way to get implemented some day:
 
@@ -64,7 +66,7 @@ Some bugs/RFE on the way to get implemented some day:
 
 This is something that I began testing to automate the basic setup, still is needed to decide version to use, and do deployment of infrastructure vm's but does some automation for setting up the hypervisors.
 
-~~~
+~~~yaml
 ---
 - hosts: all
   user: root
@@ -106,14 +108,16 @@ This is something that I began testing to automate the basic setup, still is nee
         name: file:///root/infrared/.
 
 ~~~
+
 This playbook will do checkout of git repo, setup extra pip commands to upgrade virtualenv's deployed pip and setuptools, etc.
 
-
 ## Deploy environment examples
+
 This will show the commands that might be used to deploy some environments and some sample timings on a 64Gb RAM host.
 
 ### Common requirements
-~~~
+
+~~~bash
 export HOST=myserver.com
 export HOST_KEY=~/.ssh/id_rsa
 export ANSIBLE_LOG_PATH=deploy.log
@@ -121,14 +125,15 @@ export ANSIBLE_LOG_PATH=deploy.log
 
 ## Cleanup
 
-~~~
+~~~bash
 time infrared virsh --cleanup True --host-address $HOST --host-key $HOST_KEY
 ~~~
 
 ### OSP 9 (3 + 2)
 
 #### Define version to use
-~~~
+
+~~~bash
 export VERSION=9
 
 time infrared virsh --host-address $HOST --host-key $HOST_KEY --topology-nodes "undercloud:1,controller:3,compute:2"
@@ -152,7 +157,7 @@ sys     4m39.188s
 
 ### OSP 8 (3+2)
 
-~~~
+~~~bash
 export VERSION=8
 
 time infrared virsh --host-address $HOST --host-key $HOST_KEY --topology-nodes "undercloud:1,controller:3,compute:2"
@@ -176,7 +181,7 @@ sys     4m25.840s
 
 ### OSP 10 (3+2)
 
-~~~
+~~~bash
 export VERSION=10
 
 time infrared virsh --host-address $HOST --host-key $HOST_KEY --topology-nodes "undercloud:1,controller:3,compute:2"
@@ -199,7 +204,8 @@ sys     6m1.023s
 ~~~
 
 ### OSP 7 (3+2+3)
-~~~
+
+~~~bash
 export VERSION=7
 
 time infrared virsh --host-address $HOST --host-key $HOST_KEY --topology-nodes "undercloud:1,controller:3,compute:2,ceph:3"

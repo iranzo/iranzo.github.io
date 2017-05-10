@@ -4,9 +4,7 @@ title: VPNS - Multiple VPN's Launcher
 date: 2003-03-05T20:55:00Z
 tags: linux, network, vpn
 ---
-
-1 General Purpose
------------------
+## General Purpose
 
 The idea on writing vpn's and the structure it follows was the problem that we had into easily configure many vpn's for use with the wireless project interconnection (Valencia Wireless [`http://www.valenciawireless.org`](http://www.valenciawireless.org/)).
 
@@ -20,22 +18,20 @@ In brief... we had DNS names that get dynamically resolved to our current IP's, 
 
 (please, if you use it, send me an email to let me know how much people is using it... thanks)
 
-2 Requirements
---------------
+## Requirements
 
 VPNS, it's just a bunch of configuration files and three scripts that requires the presence of:
 
--   Perl (for the scripts)
--   Bash or compatible (for the startup script)
--   VPND (for the VPN establishing)
--   Ping (for resolving DNS names to Ip's)
+- Perl (for the scripts)
+- Bash or compatible (for the startup script)
+- VPND (for the VPN establishing)
+- Ping (for resolving DNS names to Ip's)
 
 **CAUTION:**:   As this is just a gzipped-tar file by the moment, you'll have to check that the required software is installed before trying to use it.
 
 This script has been created for a Debian GNU/Linux distribution, but as far as I can remember it's compatible with the schema used on Red Hat, SuSE, etc... but check before
 
-3 The way it works...
----------------------
+## The way it works...
 
 As VPND requires one key file (vpnd.key), and a configuration file (vpnd.conf) for each connection, the idea was to split different files for each node.
 
@@ -43,8 +39,7 @@ We'll require then one key file and one configuration file for each node to be a
 
 As each VPND will require both static origin and target IP's there would be some things that would be static in the configuration (other parameters) and others that would need to get rewritten (target, and start addresses).
 
-4 Configuration files
----------------------
+## Configuration files
 
 The configuration get's deployed on two directories: /etc/vpnd/ for the local host configuration (your host) and /etc/vpnd/hosts/* for the remote hosts configuration.
 
@@ -87,14 +82,13 @@ Into this subdir there would be the following config files:
 - **/etc/vpnd/compare.pl :** :   Script to compare IP's between recorded one and current for preparing VPND restart
 - **/etc/init.d/vpns :** :   Script to start, stop, restart or restart-if-needed the VPNS based on hosts definitions
 
-5 Recommendations
-----------------
+## Recommendations
 
 As probably IP's will change, you'll need to put a crontab sentence for checking of updated ip's, to do so, put /etc/init.d/vpns restart-if-needed in your crontab for allowing the tunnels to be recreated at every change.
 
 Sample crontab line would be:
 
-~~~
+~~~cron
 #!bash
 0-59/5 * * * * root /etc/init.d/vpns restart-if-needed
 ~~~
@@ -105,8 +99,7 @@ At every run, compare.pl will check new IP addresses, and will mark the service 
 
 update.pl will dump a vpnd.conf file containing the merge of "host/master" and the Dinamic DNS for both local host and remote host configured as "host/mode" says using the "host/port" port to establish connection and vpnd.key file in each "host/" subdir.
 
-6 Changelog
------------
+## Changelog
 
 ### Version 0.43
 
@@ -124,7 +117,8 @@ Before this version, when local ip changed, only the first-checked VPN will be r
 
 Little changes in configuration files an scripts to make it easier to set up, please, check your configuration files to use new behaviour
 
--   pid file now gets automatically defined to match vpns kill procedure, so it shouldn't be in "master" file.
+- pid file now gets automatically defined to match vpns kill procedure, so it shouldn't be in "master" file.
+
 ### Version 0.4
 
 Now, added localhost IP resolution to check if just origin or end (or both) changed their IP, so if either one of them changes, the VPN get's marked as restart-needed.
@@ -143,30 +137,29 @@ Configuration files moved from /etc/vpnd/ to /etc/vpnd/hosts/*, so each host has
 
 First version: at every restart of VPNS new configuration files were created for each host, and then the VPND were restarted with the configuration files
 
-7 Sample configuration files
-----------------------------
+## Sample configuration files
 
 Here you will see a sample files used at my host, the other files not dumped here are created automatically by the scripts or you must create them manually (for example the vpnd.key).
 
 ### 7.1 Local
 
-#### 7.1.1 master.resolv
+### 7.1.1 master.resolv
 
-**merak.no-ip.org** :   
+`merak.no-ip.org`
 
 ### 7.2 Remote Host
 
 #### 7.2.1 mode
 
-**server** :   
+`server`
 
 #### 7.2.2 port
 
-**2010** :   
+`2010`
 
 #### 7.2.3 resolv
 
-**oceano.dyndns.org** :   
+`oceano.dyndns.org`
 
 #### 7.2.4 master
 
@@ -181,7 +174,7 @@ Here you will see a sample files used at my host, the other files not dumped her
 
 - **local** :   172.16.97.78
 - **remote** :   172.16.97.77
-- **autoroute** :   
+- **autoroute** :
 - **keepalive** :   10
 - **noanswer** :   3
 - **keyfile** :   vpnd.key
@@ -192,8 +185,7 @@ Here you will see a sample files used at my host, the other files not dumped her
 - **server** :   81.202.117.88 2010
 - **mode** :   server
 
-8 FAQ
------
+## FAQ
 
 ### 8.1 Problems
 
@@ -201,8 +193,7 @@ Here you will see a sample files used at my host, the other files not dumped her
 
 It seems that the script as provided within this package doesn't work fine with Gentoo, please, specify the full path to the vpnd.key file in each "master" configuration file, and be sure to edit "vpns" to point to your "vpnd" executable.
 
-9 Credits
----------
+## Credits
 
 ### Copyright
 
@@ -212,9 +203,8 @@ You're given permission to copy, distribute and/or modify this document under th
 
 Please, if you use this program, email me to know where it gets to and if it's used.
 
-### Credits
+### About
 
 This document has been created using the LYX Editor and compiled with under Debian GNU/Linux, and then converted to the format you're viewing.
 
-* * * * *
 File translated from T~E~X by [T~T~H](http://hutchinson.belmont.ma.us/tth/), version 3.67.  On 9 Mar 2007, 21:50.

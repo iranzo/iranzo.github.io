@@ -9,17 +9,16 @@ modified_time: '2011-01-26T08:00:30.406+01:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-1811300258953715112
 blogger_orig_url: http://iranzop.blogspot.com/2010/03/sincronizar-iphone-o-ipod-touch-en-f12.html
 ---
+Las nuevas versiones no están todavía soportadas en Fedora 12, así que tendremos que utilizar las de rawhide.
 
-Las nuevas versiones no están todavía soportadas en F12, así que tendremos que utilizar las de rawhide.
-
-~~~
+~~~bash
 #!bash
 yum --enablerepo=rawhide upgrade ifuse gtkpod libgpod libimobiledevice usbmuxd
 ~~~
 
 Una vez instalados, podemos empezar a utilizarlo ejecutando como root:
 
-~~~
+~~~bash
 #!bash
 mkdir -p /mnt/ipod
 chmod 777 /mnt/ipod
@@ -28,7 +27,7 @@ usbmuxd -v -f
 
 Y como nuestro usuario:
 
-~~~
+~~~bash
 #!bash
 ifuse /mnt/ipod
 ~~~

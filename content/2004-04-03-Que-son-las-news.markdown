@@ -5,7 +5,6 @@ date: 2004-04-03T20:04:00Z
 tags: nntp, general
 lang: es
 ---
-
 Este artículo es una traducción de un documento en inglés de EARN de hace bastantes años, en los que se explicaban muchos de los servicios de la antigua Internet, hoy en día desaparecidos.
 
 Este artículo fue publicado en el servidor de news de la Universidad de Valencia
@@ -45,17 +44,12 @@ Existen muchos paquetes disponibles para acceder y distribuir Usenet en multitud
 
 Muchos, sino todos, los lectores de news proporcionan las siguientesgq utilidades básicas:
 
--  Subscribirse a grupos de noticias: Esto significa que su software lector de news, hará inmediatamente accesibles dichos grupos para que pueda escoger leer los mensajes de su interee de forma rápida y sencilla.
-
--  Cancelar la subscripción: Quitar grupos de su lista de acceso fácil.
-
--  Leer los mensajes: Su clienet de news le mostrará los mensajes y mantendrá un control sobre los leidos y los no leidos.
-
--  Hilos de discusión (Thread): Puede seguir grupos de discusiones que tratan sobre un mismo tema de forma sencilla.
-
--  Mandar mensajes: Puede participar en las discusiones de grupo; su cliente de news sabe dónde mandar los mensajes.
-
--  Responder a un mensaje: Puede enviar una respuesta al grupo de noticias (generalmente llamado FOLLOW-UP) o al autor del mensaje (generalmente llamado REPLY).
+- Subscribirse a grupos de noticias: Esto significa que su software lector de news, hará inmediatamente accesibles dichos grupos para que pueda escoger leer los mensajes de su interee de forma rápida y sencilla.
+- Cancelar la subscripción: Quitar grupos de su lista de acceso fácil.
+- Leer los mensajes: Su clienet de news le mostrará los mensajes y mantendrá un control sobre los leidos y los no leidos.
+- Hilos de discusión (Thread): Puede seguir grupos de discusiones que tratan sobre un mismo tema de forma sencilla.
+- Mandar mensajes: Puede participar en las discusiones de grupo; su cliente de news sabe dónde mandar los mensajes.
+- Responder a un mensaje: Puede enviar una respuesta al grupo de noticias (generalmente llamado FOLLOW-UP) o al autor del mensaje (generalmente llamado REPLY).
 
 ### Conociendo más acerca de USENET
 
@@ -63,9 +57,8 @@ Los programas de news se comunican entre sí utilizando protocolos estándar, al
 
 Las RFC's actuales incluyen las siguientes:
 
--  RFC 977: Especifica NNTP
-
--  RFC 1036: Especifica el formato de los mensajes USENET
+- RFC 977: Especifica NNTP
+- RFC 1036: Especifica el formato de los mensajes USENET
 
 Algunos grupos están orientados a los nuevos usuarios y al uso de USENET: news.announce.newusers, news.answers y news.newsusers.questions.
 

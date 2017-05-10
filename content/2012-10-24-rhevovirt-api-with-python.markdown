@@ -8,14 +8,11 @@ modified_time: '2012-10-25T01:50:16.848+02:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-1003448890473219410
 blogger_orig_url: http://iranzop.blogspot.com/2012/10/rhevovirt-api-with-python.html
 ---
-
-RHEV/OVIRT api allows faster and simple development of scripts / utilities ranging from gathering of information to VM/host, etc manipulation.
-
+RHEV/oVirt api allows faster and simple development of scripts / utilities ranging from gathering of information to VM/host, etc manipulation.
 
 For example, a simple script for connecting to API and list VM's could be:
 
-~~~
-#!python 
+~~~python
 import sys
 import getopt
 import optparse
@@ -36,22 +33,19 @@ for vm in api.vms.list():
 
 The `.list()` method works pretty well, but beware, it limits collections to 100 elements for performance reasons, so in those cases, we'll need to check how many results do we have, and paginate by passing an extra argument to our ".list()" invocation, for example:
 
-~~~
-#!python 
+~~~python
 for vm in api.vms.list(query="page 1")
 ~~~
 
 Furthermore, we can check the number of results by using:
-~~~
-#!python 
+
+~~~python
 len(api.vms.list(query="page 1"))
 ~~~
 
 And playing together, we could set a list that returns all results by running:
 
-~~~
-#!python 
-
+~~~python
 vms = []
 page = 0
 length = 100
@@ -62,17 +56,11 @@ while (length > 0):
     length = len(tanda)
     for vm in tanda:
         vms.append(vm)
-
 ~~~
 
 We can also make funny things like migrate VM's to another host by just running:
 
-
-
-
-
-~~~
-#!python 
+~~~python
 vm.migrate()
 ~~~
 

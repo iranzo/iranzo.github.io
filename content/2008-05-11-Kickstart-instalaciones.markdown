@@ -5,8 +5,6 @@ date: 2008-05-11T12:00:00Z
 tags: linux, kickstart, automation, unattended
 lang: es
 ---
-
-
 ### Instalar linux
 
 Hoy en día todas las distribuciones suelen disponer de un instalador gráfico que mediante un sencillo asistente permiten particionar el sistema, seleccionar los paquetes, instalarlos y configurarlos.
@@ -26,12 +24,12 @@ incluso en un servidor remoto.
 El hecho de que se albergue en un servidor remoto, abre nuevas posibilidades, como que por ejemplo, el archivo kickstart se genere dinámicamente para cada equipo, en base a perfiles de equipo, parámetros
 opcionales, etc.
 
-**Estructura**
+#### Estructura
 
 La estructura de un kickstart podría ser:
 
-~~~
-#!bash 
+~~~bash
+#!bash
 ## Queremos instalar un sistema
 install
 ## Queremos reiniciarlo al acabar la instalación
@@ -89,18 +87,18 @@ Con esta estructura, el sistema quedará instalado y configurado de forma autom�
 
 ### Dándole una vuelta de tuerca al kickstart
 
-**Scripts de Pre y Post instalación**
+#### Scripts de Pre y Post instalación
 
 Además de la información mostrada anteriormente, un fichero kickstart puede contener scripts que se ejecuten antes de comenzar la instalación (con el hardware y red ya operativos) y scripts que se ejecuten tras la instalación.
 
 Un uso típico es determinar dinámicamente la estructura de discos en base al tamaño del mismo, o incluso establecer configuraciones RAID si se detecta más de un disco duro en el sistema, o mayor de cierta capacidad.
 
-**Pre instalación**
+#### Pre instalación
 
 Por ejemplo, la forma típica sería crear el esquema de particiones como hemos hecho arriba, pero utilizando comandos "echo", por ejemplo:
 
-~~~
-#!bash 
+~~~bash
+#!bash
 %pre
 #Obtener el primer disco del sistema y el total de discos
 set $(list-harddrives)
@@ -121,25 +119,24 @@ echo "logvol /home —fstype ext3 —size=1024 —name=home —vgname=$ORGANIZAT
 Se obtendrán los datos de los discos detectados por anaconda y se irá escribiendo esa información a un fichero temporal que luego, lo incluiremos, reemplazando la parte del perfil donde antes definíamos las
 particiones por :
 
-~~~
+~~~bash
 %include /tmp/part-include
 ~~~
 
 Así, para cada sistema podemos definir una organización basada en valores como la IP obtenida, etc y que sería procesador por un script, por ejemplo en PHP en el servidor.
 
-**Post instalación**
+#### Post instalación
 
 Un script de instalación tiene una ventaja sobre un script de pre instalación, y es que podemos ejecutarlo sobre el sistema instalado o sobre el entorno de instalación, de forma que podemos copiar archivos generados en el pre (como los logs), copiar archivos del medio de instalación si es un CD, NFS, etc y luego actuar sobre nuestro sistema, por ejemplo:
 
-
-~~~
-#!bash 
+~~~bash
+#!bash
 %post
 #Sincronizar hora del sistema
 echo "Sincronizar hora del sistema"
 ntpdate pool.ntp.org
 hwclock —systohc
-~~~    
+~~~
 
 ### Generación dinámica
 
@@ -154,7 +151,6 @@ Existen diversos sistemas que facilitan estas tareas y permiten llevar un contro
 
 Hasta que nos familiaricemos con la sintaxis, es conveniente recordar que en los sistemas basados en Fedora o Red Hat, existe la utilidad system-config-kickstart que es un editor gráfico de archivos kickstart que nos puede servir de punto de inicio para empezar a modificarlos con nuestros scripts y adaptaciones personales.
 
--  [Opciones soportadas en RHEL5](http://www.redhat.com/docs/manuals/enterprise/RHEL-5-manual/Installation_Guide-en-US/s1-kickstart2-options.html)
--  [Opciones soportadas en Fedora](http://fedoraproject.org/wiki/Anaconda/Kickstart)
--  [Configurador
-kickstart web](http://www.linux.kaybee.org:8080/demo/hosts/index.html)
+- [Opciones soportadas en RHEL5](http://www.redhat.com/docs/manuals/enterprise/RHEL-5-manual/Installation_Guide-en-US/s1-kickstart2-options.html)
+- [Opciones soportadas en Fedora](http://fedoraproject.org/wiki/Anaconda/Kickstart)
+- [Configurador kickstart web](http://www.linux.kaybee.org:8080/demo/hosts/index.html)

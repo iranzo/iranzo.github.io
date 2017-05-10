@@ -6,3 +6,4 @@ srv.pid
 output
 plugins/*/*.pyc
 *.pyc
+.tox/

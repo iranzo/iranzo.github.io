@@ -5,8 +5,7 @@ date: 2008-12-13T17:59:41Z
 author: Pablo Iranzo Gómez
 tags: cluster,rhel, centos
 ---
-
-### Introducción
+## Introducción
 
 Durante la última semana estuve jugando de nuevo con iSCSI en el curso de [RH436 Enterprise Clustering and Storage Management](http://www.redhat.es/training/course/RH436). Hace tiempo había seguido dos artículos [Instalando un target iSCSI](http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/) y su continuación [Montando un iniciador iSCSI](http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/).
 
@@ -28,9 +27,9 @@ Añádele que esa unidad iSCSI puede ser de Lectura escritura, y que puedes util
 
 Imagina lanzar tantas máquinas virtuales como sea necesario para atender la demanda, poder distribuirlas en la red.
 
-### Manos a la obra
+## Manos a la obra
 
-**Target iSCSI**
+### Target iSCSI
 
 Si no tenemos un target iSCSI, podemos definirlo en nuestro anfitrión, utilizando la versión Tech Preview de iSCSI Target llamada: `scsi-target-utils`
 
@@ -38,7 +37,7 @@ Esta utilidad contiene un comando `tgtadm` que podemos utilizar para definir las
 
 Deberemos activar el demonio de tgtd para que esté disponible en cada arranque con los comandos:
 
-~~~
+~~~bash
 #!bash
 chkconfig tgtd on
 service tgtd start
@@ -46,7 +45,7 @@ service tgtd start
 
 Actualmente y como tech preview, debemos repetir cada vez los comandos que necesitamos para definir la unidad iSCSI, por ejemplo:
 
-~~~
+~~~bash
 #!bash
 tgtadm --lld iscsi --mode target --op new --tid=1 --targetname iqn.2008-12.tld.dominio.maquina:TARGET tgtadm --lld iscsi --mode logicalunit --op new --tid=1 --lun=1 -b /dev/vg0/TARGET tgtadm --mode target --op bind --tid=1 --initiator-address=14.14.14.14
 ~~~
@@ -57,13 +56,13 @@ Además, le permitimos el acceso a dicho target desde la ip `14.14.14.14`
 
 Si todo esto está bien, deberemos, hasta que salga de la Tech Preview, añadir estos comandos al fichero `/etc/rc.local` para que se ejecuten en cada arranque
 
-**Resto de equipos**
+### Resto de equipos
 
 El primer paso, es instalar en todas las máquinas los paquetes de `lvm2-cluster`, así como `ricci`. En todas ellas deberemos ejecutar `lvm —enable-cluster` para modificar los parámetros de locking para utilizarlo en red.
 
 Para arrancar ricci tendremos que hacer algo parecido a lo que hicimos con tgtd
 
-~~~
+~~~bash
 #!bash
 chkconfig ricci on
 service ricci start`
@@ -73,7 +72,7 @@ Por otro lado necesitaremos tener `kmod-gfs`, `gfs-util` y `iscsi-initiator-util
 
 Las unidades iSCSI se reconocerán a partir de la primera detección de forma automática, para ello deberemos ejecutar los siguientes comandos:
 
-~~~
+~~~bash
 #!bash
 iscsiadm -m discovery -t sendtargets -p IPTARGETISCSI iscsiadm -m node -T iqn.2008-12.tld.dominio.maquina:TARGET -l
 ~~~
@@ -115,7 +114,7 @@ Por otro lado, CLVM y GFS permiten aumentar dinámicamente el tamaño de los vol
 
 Permite también crear enlaces simbólicos de forma que una unidad con FS GFS1 pueda quedar:
 
-~~~
+~~~bash
 hosts/
 hosts/host1/logs
 hosts/host2/logs

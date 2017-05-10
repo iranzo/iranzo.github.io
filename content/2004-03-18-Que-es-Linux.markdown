@@ -5,8 +5,6 @@ date: 2004-03-18T22:50:00Z
 tags: linux, general
 lang: es
 ---
-
-
 ### Introducción
 
 Linux técnicamente hablando es sólo el núcleo de un sistema operativo, formado por la unión de ese núcleo y una serie de utilidades llamadas GNU.
@@ -21,16 +19,16 @@ Esa revolución, fue principalmente ideológica y unida a la filosofía iniciada
 
 La definición de software libre se basa en las Debian Free Software Guidelines (DFSG) que dicen lo siguiente:
 
--  Libre Redistribución La licencia de un componente de Debian no puede restringir a un tercero de vender o entregar el programa como componente de una distribución agregada conteniendo programas de diferentes fuentes. La licencia no debe solicitar «royalties» u otras comisiones para esta venta.
--  Código fuente El programa debe incluir el código fuente completo, y debe permitir distribución en código fuente y en forma compilada.
--  Trabajos Derivados La licencia debe permitir modificaciones y trabajos derivados, y debe permitir que éstos se distribuyan bajo los mismos términos que la licencia del programa original.
--  Integridad del Código Fuente del Autor La licencia puede restringir la distribución del código fuente en forma modificada _sólo_ si la licencia permite la distribución de «ficheros de parches» junto con el código fuente con la intención de modificar el programa en el momento de compilarlo. Proceso por el cual se convierte el código fuente o receta de un programa en un archivo que el ordenador entiende para poder ejecutarlo.
--  La licencia debe permitir explícitamente la distribución de software a partir de código fuente modificado. La licencia puede obligar a los trabajos derivados a llevar un nombre o número de versión diferentes del programa original.  (Esto es un compromiso. El grupo de Debian anima a todos los autores a no restringir ningún fichero, fuente o compilado, de ser modificado.)
--  No Discriminación contra Personas o Grupos La licencia no debe discriminar a ninguna persona o grupo de personas.
--  No Discriminación contra Campos de Trabajo: La licencia no puede restringir a nadie que trabaje en un determinado campo a no usar el programa. Por ejemplo, no puede restringir el uso del programa a empresas, o ser usado en investigación genética.
--  Distribución de Licencia: Los derechos unidos al programa deben aplicarse a todos aquellos a los que se redistribuya el programa, sin necesidad de pedir una licencia adicional para estas terceras partes.
--  Licencia No Específica a Debian: Los derechos adjuntos al programa no deben depender de que el programa sea parte del sistema Debian. Si el programa es extraído de Debian y usado o distribuido sin Debian, pero manteniendo el resto de las condiciones de la licencia, todos aquellos a los que el programa se redistribuya deben tener los mismos derechos que los dados cuando forma parte de Debian.
--  Licencia No Contaminante a Otros Programas. La licencia no debe poner restricciones sobre otros programas que se distribuyan junto con el programa licenciado. Por ejemplo, la licencia no puede insistir que todos los demás programas distribuidos sobre el mismo medio deben ser software libre.
+- Libre Redistribución La licencia de un componente de Debian no puede restringir a un tercero de vender o entregar el programa como componente de una distribución agregada conteniendo programas de diferentes fuentes. La licencia no debe solicitar «royalties» u otras comisiones para esta venta.
+- Código fuente El programa debe incluir el código fuente completo, y debe permitir distribución en código fuente y en forma compilada.
+- Trabajos Derivados La licencia debe permitir modificaciones y trabajos derivados, y debe permitir que éstos se distribuyan bajo los mismos términos que la licencia del programa original.
+- Integridad del Código Fuente del Autor La licencia puede restringir la distribución del código fuente en forma modificada _sólo_ si la licencia permite la distribución de «ficheros de parches» junto con el código fuente con la intención de modificar el programa en el momento de compilarlo. Proceso por el cual se convierte el código fuente o receta de un programa en un archivo que el ordenador entiende para poder ejecutarlo.
+- La licencia debe permitir explícitamente la distribución de software a partir de código fuente modificado. La licencia puede obligar a los trabajos derivados a llevar un nombre o número de versión diferentes del programa original.  (Esto es un compromiso. El grupo de Debian anima a todos los autores a no restringir ningún fichero, fuente o compilado, de ser modificado.)
+- No Discriminación contra Personas o Grupos La licencia no debe discriminar a ninguna persona o grupo de personas.
+- No Discriminación contra Campos de Trabajo: La licencia no puede restringir a nadie que trabaje en un determinado campo a no usar el programa. Por ejemplo, no puede restringir el uso del programa a empresas, o ser usado en investigación genética.
+- Distribución de Licencia: Los derechos unidos al programa deben aplicarse a todos aquellos a los que se redistribuya el programa, sin necesidad de pedir una licencia adicional para estas terceras partes.
+- Licencia No Específica a Debian: Los derechos adjuntos al programa no deben depender de que el programa sea parte del sistema Debian. Si el programa es extraído de Debian y usado o distribuido sin Debian, pero manteniendo el resto de las condiciones de la licencia, todos aquellos a los que el programa se redistribuya deben tener los mismos derechos que los dados cuando forma parte de Debian.
+- Licencia No Contaminante a Otros Programas. La licencia no debe poner restricciones sobre otros programas que se distribuyan junto con el programa licenciado. Por ejemplo, la licencia no puede insistir que todos los demás programas distribuidos sobre el mismo medio deben ser software libre.
 
 Ejemplos de Licencia: Las licencias «GPL», «BSD», y «Artística» son ejemplos de licencias que nosotros consideramos «libres».
 
@@ -53,43 +51,44 @@ Su transcripción es la siguiente:
 
 ### Linux: El futuro es abierto
 
--  Hombre Pienso que deberías ver esto.
--  Mujer Es sólo un niño
-Imagen Niño sentado enfrente de un músico de rock
--  Rockero Este es el acorde G (y toca la guitarra)
--  Hombre Está aprendiendo. Absorbiendo. Se hace más inteligente cada día.
-Imagen Antropólogo sentado delante del niño
--  Antropólogo El Homo Habilis fue el primero en utilizar herramientas
-Imagen Entrenador John R. Wooden hablando al niño
--  Entrenador Un jugador que hace grande un equipo es más valioso que un gran jugador.  Mezclarte con el grupo para el bien del grupo, eso es el trabajo en equipo.
-Imagen primer plano del niño
--  Hombre Está ocurriendo rápido
-Imagen Astrónomo hablando al niño
--  Astrónomo Siempre hemos observado las estrellas. Si miras al cielo verás el comienzo de los tiempos
-Imagen Futbolista botando una pelota en frente del niño
-Imagen Profesor Gates hablando al niño
--  Profesor Recoger datos es el primer paso hacia la sabiduría, pero compartir los datos es el primer paso hacia la comunidad
-Imagen Poeta hablando al niño
--  Poeta Poesía. No hay mucha gloria en la poesía, sólo reconocimiento
-Imagen Plano superior del niño
--  Voz Amplificación de conocimientos. Lo que él aprende, lo aprendemos todos. Lo que el conoce, nos beneficia a todos.
-Imagen Sylvia Nasar hablando al niño
--  Sylvia Una pequeña cosa puede resolver un problema increíblemente complejo.
-Imagen Penny Marshall hablando al niño
--  Penny Todo tiene que ver con el tiempo chico.
-Imagen Hombre de negocios hablando al niño
--  CEO Esto es el negocio: Más rápido, mejor, más barato. Mejora constante
-Imagen Piloto hablando al niño
--  Piloto Así que quieres volar ¿eh?. Viento, velocidad, empuje, es física
-Imagen Profesor de latín hablando
--  Profesor Res Plublica non dominetur (Lo público no debe ser privado)
-Imagen Fontanero hablando al niño
--  Fontanero Fontanería: Todo gracias a las herramientas.
-Imagen Muhammad Ali
--  Ali Dí lo que piensas, no te achiques.
-Imagen Enfoque desde arriba al niño, volviendo la imagen en blanco.
--  Mujer ¿Tiene un nombre?
--  Hombre Su nombre es Linux
+- Imagen inicial
+    - Hombre Pienso que deberías ver esto.
+    - Mujer Es sólo un niño
+- Imagen Niño sentado enfrente de un músico de rock
+    - Rockero Este es el acorde G (y toca la guitarra)
+    - Hombre Está aprendiendo. Absorbiendo. Se hace más inteligente cada día.
+- Imagen Antropólogo sentado delante del niño
+    - Antropólogo El Homo Habilis fue el primero en utilizar herramientas
+- Imagen Entrenador John R. Wooden hablando al niño
+    - Entrenador Un jugador que hace grande un equipo es más valioso que un gran jugador.  Mezclarte con el grupo para el bien del grupo, eso es el trabajo en equipo.
+- Imagen primer plano del niño
+    - Hombre Está ocurriendo rápido
+- Imagen Astrónomo hablando al niño
+    - Astrónomo Siempre hemos observado las estrellas. Si miras al cielo verás el comienzo de los tiempos
+- Imagen Futbolista botando una pelota en frente del niño
+- Imagen Profesor Gates hablando al niño
+    - Profesor Recoger datos es el primer paso hacia la sabiduría, pero compartir los datos es el primer paso hacia la comunidad
+- Imagen Poeta hablando al niño
+    - Poeta Poesía. No hay mucha gloria en la poesía, sólo reconocimiento
+- Imagen Plano superior del niño
+    - Voz Amplificación de conocimientos. Lo que él aprende, lo aprendemos todos. Lo que el conoce, nos beneficia a todos.
+- Imagen Sylvia Nasar hablando al niño
+    - Sylvia Una pequeña cosa puede resolver un problema increíblemente complejo.
+- Imagen Penny Marshall hablando al niño
+    - Penny Todo tiene que ver con el tiempo chico.
+- Imagen Hombre de negocios hablando al niño
+    - CEO Esto es el negocio: Más rápido, mejor, más barato. Mejora constante
+- Imagen Piloto hablando al niño
+    - Piloto Así que quieres volar ¿eh?. Viento, velocidad, empuje, es física
+- Imagen Profesor de latín hablando
+    - Profesor Res Plublica non dominetur (Lo público no debe ser privado)
+- Imagen Fontanero hablando al niño
+    - Fontanero Fontanería: Todo gracias a las herramientas.
+- Imagen Muhammad Ali
+    - Ali Dí lo que piensas, no te achiques.
+- Imagen Enfoque desde arriba al niño, volviendo la imagen en blanco.
+    - Mujer ¿Tiene un nombre?
+    - Hombre Su nombre es Linux
 
 Este anuncio, es una introducción bastante buena de lo que es Linux, es un sistema que es pequeño (en edad) todavía (la primera versión publicada por Linus Torvalds es del año 1991), pero es un sistema que se ha beneficiado desde muy joven de las mejores aportaciones de los expertos en cada campo, gente que no buscaba gloria, sino sólo el reconocimiento de un trabajo bien hecho y han conseguido un producto más rápido, más barato, mejor que además está en continua mejora.
 

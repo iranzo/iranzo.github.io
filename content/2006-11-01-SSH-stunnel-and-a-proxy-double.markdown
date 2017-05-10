@@ -1,44 +1,44 @@
 ---
 layout: post
-title: SSH, stunnel and a proxy -  double stunnel bypass
+title: SSH, stunnel and a proxy - double stunnel bypass
 date: 2006-11-01T17:47:00Z
 tags: linux, network
 ---
 
 I'm working for a "very concerned about security" firm, that makes mandatory using VPN for accessing their network, and internal services:
 
--  IMAPS
--  SMTP
--  Intranet
--  Forums
--  Online training, etc
+- IMAPS
+- SMTP
+- Intranet
+- Forums
+- Online training, etc
 
 As it should, we provided services for a client, also very concerned about security, thus not allowing internet access despite of using two squid proxys with a network appliance filtering protocols, scripts, viruses and malware. They only allow FTP, HTTP and HTTPS.
 
 What to do when you need to access your business services from within the client network?
 
-### Ingredients 
+### Ingredients
 
--  ssh
--  an intermediate computer outside both networks (at home, for example...)
--  a machine which you can reach by ssh on your business
--  a squid server
+- ssh
+- an intermediate computer outside both networks (at home, for example...)
+- a machine which you can reach by ssh on your business
+- a squid server
 
-### Extras 
+### Extras
 
--  [SSH Proxy Command](http://zippo.taiyo.co.jp/~gotoh/ssh/connect.html) by Shun-ichi GOTO
+- [SSH Proxy Command](http://zippo.taiyo.co.jp/~gotoh/ssh/connect.html) by Shun-ichi GOTO
 
-### Preparation 
+### Preparation
 
 First of all, we need to be able to exit from our client network, and the only way is to use HTTP, HTTPS or FTP... and if we use HTTP packet filtering, would block access, so we only have the SSL choice, as it is cyphered, and doesn't tolerate "Man-in-the-middle" attacks, and allows us to get internet traffic trought it.
 
-### SSH Proxy command 
+### SSH Proxy command
 
 SSH Proxy command, is a excelent piece of code, distributed in C in only one file that we will get compiled with `gcc command.c -o connect`
 
 With "connect" we will get a connection, for example ssh trought squid.  The way to configure it is just editing `.ssh/config` file and make it look kind of sort like this:
 
-~~~
+~~~ssh
 Host home.com
     KeepAlive yes
     ProxyCommand connect -H proxy.client.com:3128 %h %p
@@ -52,7 +52,7 @@ As we have full-control of our computer at home, we can make SSH listen to 22 an
 
 Well, after this step, we have exterior connectivity, and we can make use of a good utility that SSH provides us: "tunnels" that will pass inside the ssh connection, so let's use one text editor and begin modifyng .ssh/configto add something like:
 
-~~~
+~~~ssh
 Host casa.com
     KeepAlive yes
     ProxyCommand connect -H proxy.cliente.com:3128 %h 2222
@@ -70,7 +70,7 @@ We will need to repeat this configuration at home, this time, without using SSH 
 
 Let's edit `.ssh/config` from our house's machine, and we will add the following configuration:
 
-~~~
+~~~ssh
 Host business.com
     compression yes
     KeepAlive yes
@@ -83,8 +83,8 @@ Now, if we connect using ssh from home, we will redirect another set of ports...
 
 Launch script:
 
-~~~
-#!bash 
+~~~bash
+#!bash
 echo "Launching ssh tunnel"
 ssh -fNC home.com # Runs connection trought http proxy, and exits, leaving ssh
 echo "Starting ssh tunnels from home"
@@ -93,18 +93,17 @@ ssh -t home.com ssh -ftNC business.com #redirects tty, allowing us to enter one-
 
 killtunnel script:
 
-~~~
-#!bash 
+~~~bash
+#!bash
 #(Requires improvements like identifying started processes for not killing other not opened by "launch" script.
 echo "Script connected, press enter for disconnecting"
-read  
+read
 echo "Killing remote session" ssh -f casa.com
 killall -9 ssh
-echo "Killing local session" 
+echo "Killing local session"
 killall -9 ssh`
 ~~~
 
 Now, we can run at our command line `lanzar` and automatically all tunnels will be created for accessing IMAPS, SMTP and our business internal Proxy all by just using 10993, 1025 & 2225 of our local machine (all within a only-web internet access network ;) )
 
 Special thanks to a colleague, JMP for original script for using ssh tunnels that I adapted for this manual.
-

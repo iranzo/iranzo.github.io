@@ -21,17 +21,17 @@ With RC3, agent for installation uses near double that size, about 1.5 Mb, but t
 
 OCS-NG RC3 came with important architectural changes, including several major and minor improvements, being these the more important ones:
 
--  Now the windows client works as a service (for the first time it includes a windows agent)
--  RC3 includes a component for software/files deployment/distribution
+- Now the windows client works as a service (for the first time it includes a windows agent)
+- RC3 includes a component for software/files deployment/distribution
 
 The new tool is called package deployment. This feature it is managed using the also improved admin web interface.
 
 OCS-NG could be setup on different machines hosting each service:
 
--  An Inventory-receiving machine
--  An Admin web interface
--  A site with information about packages
--  A site with package fragments for deployment
+- An Inventory-receiving machine
+- An Admin web interface
+- A site with information about packages
+- A site with package fragments for deployment
 
 or, as I did in my setup, use a Debian Linux machine for doing the four tasks, but I plan to relay the fourth task to other machines, when packages are bigger than expected.
 
@@ -51,7 +51,7 @@ First of all, we need to create a private key and a CSR (Certificate Signing Req
 
 Having openssl installed, we will execute (please, double check that questions, specially CN exactly matches ServerName and "hostname", for it to work properly after) the following commands:
 
-~~~
+~~~bash
 #!bash
 openssl genrsa -out server.key 1024
 openssl req -new -key server.key -out server.csr
@@ -65,11 +65,11 @@ After that, Cacert.org will show you a certificate for your server that you'll h
 
 Let's then download [CACERT's root certificate](http://www.cacert.org/certs/root.crt) to "cacert.pem"
 
-*Configuring apache for using that certificates*
+#### Configuring apache for using that certificates
 
 Next, we'll have to tell apache, to use this certificate for SSL support, in my case, I configured:
 
-~~~
+~~~apache
 #!apache
 /etc/apache2/conf.d/ssl:
 SSLProtocol all
@@ -84,7 +84,7 @@ So, I had to put server.crt, server.key and cacert.pem in `/etc/apache2/ssl/`
 
 Next one, was to configure a new site that requires SSL to work:
 
-~~~
+~~~apache
 #!apache
 /etc/apache2/sites-enabled/001-default:
 ServerName yourserver.no-ip.org
@@ -105,7 +105,7 @@ Afterthat... we have to reload apache configuration and try to connect to [https
 
 Well, if this works, we had the first and harder step done ;)
 
-###Creating a package
+### Creating a package
 
 There are three types of packages: RUN, STORE and LAUNCH.
 
@@ -115,11 +115,11 @@ For Package creating, we must have write access to Apache's DocumentRoot/downloa
 
 So... let's create a first package:
 
-1.  We must login into OCS Web interface, and select (first menu option on first yellow icon) package creation
-2.  We must assign a name for the package, Platform, Protocol and Priority (priority will allow us to decide package execution order in the client, the lower number, the higher priority)
-3.  If we're going to upload files, we must ZIP it BEFORE, so OCS will unzip on client machine, and then run commands
-4.  We choose an action, and then, a path (we  can use system variables like %SYSTEMDRIVE%, %TEMP%, %USERPROFILE%,%PROGRAMFILES%, etc) to store the file, or command to run
-5.  We can choose if we want the user to be warned about package execution, and even to allow user to delay execution (useful for service pack deployments, etc)
+1. We must login into OCS Web interface, and select (first menu option on first yellow icon) package creation
+1. We must assign a name for the package, Platform, Protocol and Priority (priority will allow us to decide package execution order in the client, the lower number, the higher priority)
+1. If we're going to upload files, we must ZIP it BEFORE, so OCS will unzip on client machine, and then run commands
+1. We choose an action, and then, a path (we  can use system variables like %SYSTEMDRIVE%, %TEMP%, %USERPROFILE%,%PROGRAMFILES%, etc) to store the file, or command to run
+1. We can choose if we want the user to be warned about package execution, and even to allow user to delay execution (useful for service pack deployments, etc)
 
 Next step, will allow us to specify fragments (pieces in wich the package will be splitted for allowing better deployment, making use of redownloading for only failed fragments, etc), as well as checksum for data validity
 
@@ -135,7 +135,7 @@ On package activation, we will be asked for two SERVERS (thanks to the developme
 
 After sending server names, OCS will check availability of "info" and fragment files (if any (On RUN packages, there is nothing to download prior to running the commands) and then, package will be activated and ready for next step.
 
-####Afecting a package
+#### Afecting a package
 
 In this step, we can select a computer in the main view, or do a search using specific criteria, and as a result, apply a package on listed computers.
 
@@ -143,8 +143,7 @@ We can affect a package to several computers at once, just to one, and even, hav
 
 OCS will connect, and execute actions defined in priority order...
 
-
-####How to get client side Package working
+#### How to get client side Package working
 
 Packages from client side, are as easy to setup, as having a working OCS Agent Service installed and a file called cacert.pem, which we got from the SSL Creation step... having them in the OCS Agent folder, and a package affected to a computer, will make computer to download, and do the actions specified.  ¿What are the pro's and con's of this method?
 
@@ -154,14 +153,14 @@ I've used [NSIS](http://nsis.sourceforge.net/) to create a script for doing this
 
 First, we'll have to create a folder and put in it:
 
--  OcsAgentSetup.exe
--  cacert.pem
--  NSIS Script
--  service.ini (in my case, for accelerating first inventory creation)
+- OcsAgentSetup.exe
+- cacert.pem
+- NSIS Script
+- service.ini (in my case, for accelerating first inventory creation)
 
 service.ini like this:
 
-~~~
+~~~ini
 #!ini
 [OCS_SERVICE]
 TTO_WAIT=10
@@ -172,12 +171,12 @@ Miscellaneous= /S /SERVER:yourserver.no-ip.org
 
 And NSIS script with:
 
-~~~
+~~~batch
 #!bat
 ; Script edited using HM NIS Edit Script Wizard.
 ; Creator Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
 ; Homepage: http://Alufis35.uv.es/~iranzo/
-; License: http://creativecommons.org/licenses/by-sa/2.5/  
+; License: http://creativecommons.org/licenses/by-sa/2.5/
 ; HM NIS Edit Wizard helper
 defines
 !define PRODUCT_NAME "OCS"
@@ -210,14 +209,14 @@ SectionEnd`
 This script, when compiled, will create a ocs-inst.exe file, with all
 files needed packed in it, when executed, will:
 
-1.  silently run
-2.  extract OCSAgentSetup
-3.  install it using silent install
-4.  then, stop service
-5.  output cacert.pem certificate in OCS Service folder
-6.  replace service.ini for faster inventory, and then,
-7.  start service
-8.  Force DEBUG and hand-started inventory
+1. silently run
+1. extract OCSAgentSetup
+1. install it using silent install
+1. then, stop service
+1. output cacert.pem certificate in OCS Service folder
+1. replace service.ini for faster inventory, and then,
+1. start service
+1. Force DEBUG and hand-started inventory
 
 This will leave us with a working OCS Agent Setup, with a valid certificate for autenticating against our deployment server, and ready for creating more packages.
 

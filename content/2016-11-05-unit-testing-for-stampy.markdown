@@ -7,7 +7,6 @@ tags: python, telegram, openstack
 category: blog
 description:
 ---
-
 Since my prior post on [Contributing to OpenStack]({filename}2016-07-21-contributing-to-openstack.markdown), I liked the idea of using some automated tests to validate functionality and specifically, the corner cases that could arise when playing with the code.
 
 Most of the errors fixed so far on stampy, were related with some pieces of the code not properly handling UTF or some information returned, etc and still it has improved, the idea of ensuring that prior errors were not put back into the code when some other changes were performed, started to arise to be a priority.
@@ -16,7 +15,7 @@ For implementing them, I made use of `nose`, which can be executed with `nosetes
 
 Let's start with `tox`: once installed, a new configuration file is created for it, defining the different environments and configuration in a similar way to:
 
-~~~
+~~~ini
 [tox]
 minversion = 2.0
 envlist = py27,pep8
@@ -27,9 +26,9 @@ passenv = CI TRAVIS TRAVIS_*
 deps = -r{toxinidir}/requirements.txt
        -r{toxinidir}/test-requirements.txt
 commands =
-	/usr/bin/find . -type f -name "*.pyc" -delete
-	nosetests \
-		[]
+    /usr/bin/find . -type f -name "*.pyc" -delete
+    nosetests \
+        []
 [testenv:pep8]
 commands = flake8
 
@@ -51,10 +50,9 @@ The environment definition for the tests, also performs some commands like execu
 
 Above `tox.ini` also mentions `requirements.txt` and `test-requirements.txt`, which define the python packages required to validate the program, that will be automatically installed by tox on a `virtualenv`, so the alternate versions being used, doesn't interfere with the system-wide ones we're using.
 
-
 About the tests themselves, as `nosetests` does automatic discovery of tests to perform, I've created a new folder named `tests/` and placed there some files in alphabetically order:
 
-~~~
+~~~bash
 ls -l tests
 total 28
 -rw-r--r--. 1 iranzo iranzo  709 nov  5 16:58 test_00-setup.py
@@ -68,7 +66,7 @@ total 28
 
 First one `test_00-setup` takes the required commands to define the enviroment, as on each validation run of `tox`, a new environment should be available not to mask errors that could be overlooked.
 
-~~~
+~~~python
 #!/usr/bin/env python
 # encoding: utf-8
 
@@ -109,8 +107,8 @@ From that point, the tests are performed again in ***alphabetically order***, so
 
 For example, for karma changes we've:
 
-~~~
-#!/#!/usr/bin/env python
+~~~python
+#!/usr/bin/env python
 # encoding: utf-8
 
 from unittest import TestCase
@@ -140,7 +138,7 @@ Which starts by putting a known karma on a word, validating, verifying the query
 
 For the aliases, we use a similar aproach, as we also play with the karma changes when an alias is defined:
 
-~~~
+~~~python
 #!/usr/bin/env python
 # encoding: utf-8
 
@@ -183,7 +181,7 @@ This will for sure end up with some more code rewriting so the functions can be 
 
 As an end, an example of the execution of tox and the results raised:
 
-~~~
+~~~bash
 tox
 py27 installed: coverage==4.2,nose==1.3.7,prettytable==0.7.2
 py27 runtests: PYTHONHASHSEED='604985980'
@@ -209,7 +207,7 @@ __________________________________________________________________________ summa
 
 If you're using a CI system, like 'Travis', which is also available to <https://github.com> repos, a `.travis.yml` can be added to the repo to ensure those tests are performed automatically on each code push:
 
-~~~
+~~~yaml
 language: python
 python:
     - 2.7

@@ -20,9 +20,9 @@ La solución más aceptada es utilizar un PC para que haga de nodo, teniendo as�
 
 Las tarjetas a la venta en el mercado tienen tres modos de operación:
 
-1.  Ad-hoc: Es el modo estándar, en este tipo de modo de operación, es el equivalente a las redes con Windows en las que se trabaja de igual a igual, todos son clientes y servidores.
-2.  Managed: un servidor independiente (un AP) es el lugar al que se conectan todas las demás tarjetas inalámbricas, el AP gestiona todas las conexiones, enrutados, etc.
-3.  Master: Es el modo en el que trabaja el AP del punto anterior para que las tarjetas puedan trabajar como "Managed".
+1. Ad-hoc: Es el modo estándar, en este tipo de modo de operación, es el equivalente a las redes con Windows en las que se trabaja de igual a igual, todos son clientes y servidores.
+1. Managed: un servidor independiente (un AP) es el lugar al que se conectan todas las demás tarjetas inalámbricas, el AP gestiona todas las conexiones, enrutados, etc.
+1. Master: Es el modo en el que trabaja el AP del punto anterior para que las tarjetas puedan trabajar como "Managed".
 
 En redes con Windows sólo es posible trabajar en los dos primeros modos, el Ad-Hoc y el Managed, para ello, como se ve, es necesario un AP por hardware que trabaje como Master al que las tarjetas que trabajan en Managed se puedan conectar. Y este es el punto en el que Linux marca la diferencia... con Linux, existe un controlador (hostap) para las tarjetas basadas en Prism2 (p.ej. las Conceptronic). Con Linux y con esos controladores, es posible poner en modo Master las tarjetas de red
 (generalmente PCMCIA con un adaptador PCI para equipos de sobremesa) y de ese modo, hacer un AP por software.
@@ -35,20 +35,19 @@ Para la creación del nodo, necesitaremos unos componentes de hardware tanto de 
 
 En la creación del nodo de La Creu Wireless, el hardware es el siguiente:
 
--  Placa AT Pentium 120
--  500 Mb HD
--  420 Mb HD (porque lo tenía a mano, pero posiblemente lo quite... lo que menos quiero es
-que el ordenador haga más ruido...)
--  64 mb Ram (iba a tener 16, pero a última hora conseguí más...)
--  Tarjeta gráfica ATI Mach 64 Pro Turbo PCI
--  Ethernet ISA P'n'P Intel PRO 10/10+
--  Ethernet PCI basada en Realtek 8029 (10 mbps)
--  Ethernet PCI basada en Realtek 8139 (10/100)
--  Ethernet ISA P'n'P Compatible con NE 2000
--  Tarjeta wireless todavía no la tengo, utilizo la ISA P'n'P compatible con NE2000 como si fuese la wireless (A la que en la actualidad tengo conectado un USR2450 en modo bridge con LinuxAP)
--  Tarjeta de sonido SB 16 P'n'P (no se para qué porque no la tengo conectada ni nada, pero el caso es que como la tenía....)
--  CD-ROM (instalé desde disco duro porque no tenía cd-rom en ese momento... pero bueno..  ahora sí ;))
--  RJ45 (latiguillos), uno directo para conectar al módem y a la eth0 y luego tres cruzados para conectar a cada uno de los pc's sin necesidad de hub... si tienes hub, pues todos directos y listo...
+- Placa AT Pentium 120
+- 500 Mb HD
+- 420 Mb HD (porque lo tenía a mano, pero posiblemente lo quite... lo que menos quiero es que el ordenador haga más ruido...)
+- 64 mb Ram (iba a tener 16, pero a última hora conseguí más...)
+- Tarjeta gráfica ATI Mach 64 Pro Turbo PCI
+- Ethernet ISA P'n'P Intel PRO 10/10+
+- Ethernet PCI basada en Realtek 8029 (10 mbps)
+- Ethernet PCI basada en Realtek 8139 (10/100)
+- Ethernet ISA P'n'P Compatible con NE 2000
+- Tarjeta wireless todavía no la tengo, utilizo la ISA P'n'P compatible con NE2000 como si fuese la wireless (A la que en la actualidad tengo conectado un USR2450 en modo bridge con LinuxAP)
+- Tarjeta de sonido SB 16 P'n'P (no se para qué porque no la tengo conectada ni nada, pero el caso es que como la tenía....)
+- CD-ROM (instalé desde disco duro porque no tenía cd-rom en ese momento... pero bueno..  ahora sí ;))
+- RJ45 (latiguillos), uno directo para conectar al módem y a la eth0 y luego tres cruzados para conectar a cada uno de los pc's sin necesidad de hub... si tienes hub, pues todos directos y listo...
 
 Se aceptan regalos ;) (Portátiles incluidos... ;) )
 
@@ -60,10 +59,10 @@ Lo de las tarjetas de red puede asustar al principio... pero bueno, tiene una cl
 
 Así que el montaje de la falla es el siguiente:
 
--  Intel Pro ISA 10/10+: eth0 conectada a mi conexión a Internet
--  Realtek 8139 (10/100): eth1 conectada a mi equipo principal (también con otra tarjeta 10/100, así que red local a 100 mbps ;) )
--  Realtek 8029: eth2 conectada al otro pc que tengo en casa (también con una ethernet a 10 mbps)
--  Isa P'n'P NE2000: eth3 hace las labores de wireless hasta que tenga una de verdad (la utilizo para conectar otro equipo y hacer las pruebas como si estuviese conectado por wireless), en su momento será utilizada para conexiones "temporales" por cable, siendo entonces eth4 la wireless "real".
+- Intel Pro ISA 10/10+: eth0 conectada a mi conexión a Internet
+- Realtek 8139 (10/100): eth1 conectada a mi equipo principal (también con otra tarjeta 10/100, así que red local a 100 mbps ;) )
+- Realtek 8029: eth2 conectada al otro pc que tengo en casa (también con una ethernet a 10 mbps)
+- Isa P'n'P NE2000: eth3 hace las labores de wireless hasta que tenga una de verdad (la utilizo para conectar otro equipo y hacer las pruebas como si estuviese conectado por wireless), en su momento será utilizada para conexiones "temporales" por cable, siendo entonces eth4 la wireless "real".
 
 Realmente con un HUB podría quitar dos tarjetas de red del ordenador (ya que el ordenador principal y el secundario irían conectados al hub y no serían necesarias las tarjetas correspondientes y sólo utilizaría la otra que quedase para Internet y la otra para conectar al HUB (si mi conexión me permitiese hacerlo, hasta podría conectar mi módem al HUB y ahorrarme otra tarjeta.. pero bueno, el caso es que no se puede...)
 
@@ -73,10 +72,10 @@ El teclado que tengo es uno de 84 teclas que será como un teclado normal pero s
 
 Ahora el ordenador es un P200 MMX con 128 Mb de RAM, las tarjetas son una Intel Pro ISA 10/10+, una SMC 100, 3Com 3c509 y NE2000, discos tiene uno de 10 Gb, y otro de 20, configurados como:
 
--  128 Mb Swap
--  10 Mb boot
--  3 Gb sistema, usuarios
--  Resto = 26 Gb para descargas diversas... (pero con ánimo educativo, no os vayais a pensar...)
+- 128 Mb Swap
+- 10 Mb boot
+- 3 Gb sistema, usuarios
+- Resto = 26 Gb para descargas diversas... (pero con ánimo educativo, no os vayais a pensar...)
 
 Ahora vamos a la configuración del software...
 
@@ -106,10 +105,10 @@ La imagen iso son unos 30 Mb y la descargué de la página de debian.  (woody_ne
 
 La decisión de tomar "Debian" como sistema a instalar fue sencilla (lo de que tenía que ser Linux estaba cantado por lo explicado en la introducción):
 
--  **Red Hat Linux**: Está muy bien, de hecho es con la que más experiencia tengo, la tengo funcionando desde el año 96 en un servidor y me va genial, poquitos problemas excepto actualizaciones, etc (aunque con las nuevas herramientas es muy fácil). Las actualizaciones, en el momento de lanzarlas, si hay muchos clientes de pago, pues a los que no pagamos, pues ajo y agua y a esperarse a que no esté tan saturado... el formato de redhat, el RPM es el estándar más extendido. (Se puede bajar de  internet en versión libre, llamada Fedora Core, o bien en clónicas basadas en RHEL).
--  **SuSE Linux**: Está muy bien, si compras la distribución, tienes muchos cd's con programas, manuales, etc Bastante bien adaptada al Español (je, je), etc... Pero no se puede bajar la versión completa de internet porque tiene programas con licencias de distribución que no lo permiten, sólo si se compra. Utiliza el RPM que es un punto a favor, pero en contra es que no es compatible al 100% con las estructuras de directorios y funcionamientos de Red Hat, así que no hay forma de distinguir si ese
+- **Red Hat Linux**: Está muy bien, de hecho es con la que más experiencia tengo, la tengo funcionando desde el año 96 en un servidor y me va genial, poquitos problemas excepto actualizaciones, etc (aunque con las nuevas herramientas es muy fácil). Las actualizaciones, en el momento de lanzarlas, si hay muchos clientes de pago, pues a los que no pagamos, pues ajo y agua y a esperarse a que no esté tan saturado... el formato de redhat, el RPM es el estándar más extendido. (Se puede bajar de  internet en versión libre, llamada Fedora Core, o bien en clónicas basadas en RHEL).
+- **SuSE Linux**: Está muy bien, si compras la distribución, tienes muchos cd's con programas, manuales, etc Bastante bien adaptada al Español (je, je), etc... Pero no se puede bajar la versión completa de internet porque tiene programas con licencias de distribución que no lo permiten, sólo si se compra. Utiliza el RPM que es un punto a favor, pero en contra es que no es compatible al 100% con las estructuras de directorios y funcionamientos de Red Hat, así que no hay forma de distinguir si ese
    RPM funcionará bien o no con SuSE. El peor inconveniente es la gran cantidad de recursos que necesita, tanto de RAM para la instalación como para el almacenamiento en disco (la mínima son unos 500 mb (pero mínima mínima mínima...)). La ventaja es que la configuración es toda en modo gráfico, con una autodetección genial, etc. Tenía experiencia con ella tanto de gastarla en casa como distribución linux, en la uni en un servidor como de haber colaborado en su traducción de manuales y de software de configuración.
--  **Debian**: No tenia ni puta idea de ella, una vez que la intenté instalar casi me da algo con el programa de selección de paquetes a instalar (dselect de la Potato). La instalación es en modo texto. Tiene un sistema de actualización/instalación bastante bueno en modo texto. la decisión fue usar Debian... de paso que aprendía a gastarla, al ser en modo texto, tenía el aliciente de que facilita su administración remota (recordemos que el ordenador una vez instalado mínimamente no iba a tener    ni teclado ni ratón ni monitor ni naa de na... excepto el cable de la luz y cuatro cables RJ45 para las tarjetas de red :))
+- **Debian**: No tenia ni puta idea de ella, una vez que la intenté instalar casi me da algo con el programa de selección de paquetes a instalar (dselect de la Potato). La instalación es en modo texto. Tiene un sistema de actualización/instalación bastante bueno en modo texto. la decisión fue usar Debian... de paso que aprendía a gastarla, al ser en modo texto, tenía el aliciente de que facilita su administración remota (recordemos que el ordenador una vez instalado mínimamente no iba a tener    ni teclado ni ratón ni monitor ni naa de na... excepto el cable de la luz y cuatro cables RJ45 para las tarjetas de red :))
 
 Vale, como ya he comentado, en el nodo, en el momento de su creación no tenía ni disquetera ni CD-ROM, así que se copiaron los archivos a una instalación de Windows 95, se reinicia en modo-msdos y una vez en el, se cambia al directorio donde se extrajo la imagen de cd y se ejecuta el programa de instalación...
 
@@ -133,22 +132,20 @@ Para la wireless hace falta el wavemon que es un monitor de estado de la tarjeta
 
 En mi caso, ya que ese ordenador iba a hacer de medio "servidor" en mi casa, pues me interesó ponerle:
 
--  samba: para compartir archivos e impresoras en un formato compatible con Windows y así poder luego bajar archivos de un ordenador a otro (del principal al nodo) mediante el entorno de red
--  pptpd: para permitir conexiones VPN, permite que desde internet (o en este caso, desde la wireless), se pueda conectar con el nodo, y se asigne otra dirección IP que permita hacer otras cosas que de normal no se podría...  En mi caso, tengo limite de descarga en Internet y aunque por el momento no lo apliquen no quita que pudieran hacerlo... causa pues de que no comparta mi acceso a Internet a no ser que conozca directamente al equipo que se conecta... es decir, una vez conectado mediante la  wireless, hará una conexión VPN desde su Windows o su Linux al nodo y mediante un login y un pass tendrá acceso a Internet a través del nodo, que de otra forma no tendría...) (un nodo no tiene que necesariamente tener acceso a Internet, pero es recomendable para unir los nodos y facilitar la integración en la red, etc)
--  webmin: es un programa hecho por caldera y que funciona en multitud de plataformas y distribuciones, permite muy fácilmente configurar desde un navegador muchísimas cosas del sistema. No digo que vaya a reemplazar a la configuración en modo consola, pero para muchas cosas es muchísimo más fácil hacerlo desde navegador que tener que entrar, etc...
--  Otros paquetes instalados (muchos de ellos se instalan solitos como dependencias a los ya instalados...):
+- samba: para compartir archivos e impresoras en un formato compatible con Windows y así poder luego bajar archivos de un ordenador a otro (del principal al nodo) mediante el entorno de red
+- pptpd: para permitir conexiones VPN, permite que desde internet (o en este caso, desde la wireless), se pueda conectar con el nodo, y se asigne otra dirección IP que permita hacer otras cosas que de normal no se podría...  En mi caso, tengo limite de descarga en Internet y aunque por el momento no lo apliquen no quita que pudieran hacerlo... causa pues de que no comparta mi acceso a Internet a no ser que conozca directamente al equipo que se conecta... es decir, una vez conectado mediante la  wireless, hará una conexión VPN desde su Windows o su Linux al nodo y mediante un login y un pass tendrá acceso a Internet a través del nodo, que de otra forma no tendría...) (un nodo no tiene que necesariamente tener acceso a Internet, pero es recomendable para unir los nodos y facilitar la integración en la red, etc)
+- webmin: es un programa hecho por caldera y que funciona en multitud de plataformas y distribuciones, permite muy fácilmente configurar desde un navegador muchísimas cosas del sistema. No digo que vaya a reemplazar a la configuración en modo consola, pero para muchas cosas es muchísimo más fácil hacerlo desde navegador que tener que entrar, etc...
+- Otros paquetes instalados (muchos de ellos se instalan solitos como dependencias a los ya instalados...):
 
 A ver, en resumen, interesa instalar el ssh porque con el podremos entrar desde fuera al servidor, el webmin y los módulos listados arriba, etc
 
 Lo dicho, esto es lo que yo tengo puesto... los paquetes se instalan poniendo:
 
-
-~~~
+~~~bash
 apt-get install
 ~~~
 
-
-**por ejemplo: apt-get install wavemon zebra webmin-stunnel webmin-status wget vtun**
+por ejemplo: `apt-get install wavemon zebra webmin-stunnel webmin-status wget vtun`
 
 Automáticamente el programa se conectará a Internet y comenzará a bajar esos paquetes y todos los necesarios para que esos funcionen, es decir, si instalas webmin-status, para eso te hará falta primero el webmin y el programa lo instalará también solito tras pedir confirmación e indicar los megas a descargar y lo que ocupará una vez descomprimido.
 
@@ -162,16 +159,15 @@ Tenemos que por un lado configurar las tarjetas de red: Para eso, entramos en /e
 
 Contenido de : /etc/modutils/eepro
 
-~~~
+~~~config
 options eepro io=0x210
 ~~~
 
-
--  Como veréis es altamente jodidísimo configurar una tarjeta de red... sólo indicando el puerto de entrada salida Linux ya le busca la IRQ apropiada (en casos chungos, se le puede indicar también)
+- Como veréis es altamente jodidísimo configurar una tarjeta de red... sólo indicando el puerto de entrada salida Linux ya le busca la IRQ apropiada (en casos chungos, se le puede indicar también)
 
 Con el resto de tarjetas editaremos los ficheros para ver que está todo bien y los llamaremos con el nombre del módulo necesario (sale durante la instalación o en páginas de ayuda) Luego, editaremos el fichero /etc/modules y pondremos las tarjetas en el orden en el que queremos que se llamen:
 
-~~~
+~~~text
 # /etc/modules: kernel modules to load at boot time.
 #
 # This file should contain the names of kernel modules that are
@@ -192,8 +188,7 @@ En el caso de haber dos tarjetas con el mismo controlador, se irán creando cons
 
 Tras editar ese fichero, tendremos que hacer que al siguiente arranque se tome esta configuración, así que ejecutaremos update-modules, para que el ordenador cree el /etc/modules.conf adecuado conforme a nuestros deseos., al siguiente arranque tendremos algo como:
 
-
-~~~
+~~~text
 Real Time Clock Driver v1.10e
 id: 0xb4 <7> io: 0x210 <6>eth0: Intel EtherExpress Pro/10+ ISA at 0x210,<6> 00<6>:aa<6>:00<6>:c9<6>:9d<6>:1a<6>, IRQ 11, 10BaseT.
 eepro.c: v0.13 11/08/2001 aris@cathedrallabs.org
@@ -218,13 +213,11 @@ SB 4.13 detected OK (220)
 sb: 1 Soundblaster PnP card(s) found.
 ~~~
 
-
 Como vemos, ya ha ido asignando tarjetas.. eth0 la Intel, eth1 la 8139, eth2 la 8029 y eth3 la Ne2000, lo de la SoundBlaster es accesorio, pero mola que la pille el solito ;) (con un kernel de la 2.4 aviso...)
 
 Ahora falta configurar las direcciones para cada tarjeta... editamos el fichero /etc/network/interfaces:
 
-
-~~~
+~~~text
 # The first network card - this entry was created during the Debian installation
 auto eth0
 iface eth0 inet dhcp
@@ -246,7 +239,6 @@ netmask 255.255.255.224
 # netmask 255.255.255.0
 ~~~
 
-
 Esto en cristiano viene a decir que cargue las tarjetas en el arranque (auto eth?), y lo de abajo, pues cómo configurarlas... la eth0 es la que estaba conectada a internet, por lo tanto como mi proveedor configura por DHCP, pues eso pone... la eth1 es la de mi red local con el primero ordenador, le asigna una ip 1.1.1.1 y una máscara de subred de tipo C.
 
 En realidad la dirección 1.1.1.1 está asignada en internet y sería una cabronada el conectarme con eso configurado así, pero como hemos dicho, es una red local y no tiene porqué afectar a nadie, así que así se queda...
@@ -262,7 +254,7 @@ resolver nombres...
 
 El fichero de configuración del DHCP es el siguiente: (/etc/dhcp3/dhcp.conf):
 
-~~~
+~~~text
 #
 # Sample configuration file for ISC dhcpd
 #
@@ -323,15 +315,13 @@ fixed-address 10.34.12.130;
 server-name "alnilam";
 ~~~
 
-
 A ver... por partes...
 
 Primero defino lo que será la wireless, con la ip asignada, la subred, el rango de ip's, etc...
 
-~~~
+~~~text
 subnet 10.34.12.128 netmask 255.255.255.224 option domain-name-servers 10.34.12.129; range 10.34.12.130 10.34.12.158; option broadcast-address 10.34.12.159; option routers 10.34.12.129;
 ~~~
-
 
 Esto viene a significar que la red 10.34.12.128 (valencia wireless, mi nodo), con máscara de subred (255.255.255.224), tiene un servidor de nombres situado en 10.34.12.129 (la asignada a eth3), una dirección de broadcast en .158 y un router en .129 (el mismo que el DNS, es decir, el nodo...).
 
@@ -358,7 +348,7 @@ Tenemos un servidor DHCP, las tarjetas configuradas y un servidor de nombres... 
 
 Para ello, si leemos el IP-MASQUERADING-HOWTO, sacaremos este interesante script:
 
-~~~
+~~~bash
 #!bash
 #!/bin/sh
 #
@@ -492,19 +482,18 @@ El script original fue modificado para cumplir con los requisitos de mi red, as�
 Vale, un punto importante, es que al tener un trasto conectado todo el día a Internet, lo mejor es tenerlo bien asegurado, por eso, contar con una buena configuración de firewall así como el portscanner vendrá bien.  Port scanner analiza y registra todos los intentos de escaneo de puertos contra nuestro equipo y posteriormente impide todo acceso desde las ip's originantes, tanto creando rutas nulas como vuelta a esas ip's como añadiéndola a los filtros de los TCP-wrappers En
 /etc/portsentry.ignore.static, pondremos:
 
-~~~
+~~~text
 127.0.0.1/32 0.0.0.0 1.1.0.0/16
 ~~~
-
 
 Para que no bloquee los locales (como indica en la ayuda) y añadimos los de nuestra red local... equipos con IP 1.1.*.* (esto permite bloquear a los graciositos que se conecten por la wireless...)
 
 Luego, en el /etc/porsentry/portsentry.conf cambiaremos:
 
+~~~bash
+BLOCK_UDP="1"
+BLOCK_TCP="1"
 ~~~
-BLOCK_UDP="1" BLOCK_TCP="1"
-~~~
-
 
 y entre las otras opciones escogeremos las aptas para nuestro sistema, el tipo de bloqueo a realizar, etc
 
@@ -514,7 +503,7 @@ Para arrancar el script del firewall crearemos un script con el formato estánda
 
 /etc/init.d/fire
 
-~~~
+~~~bash
 #!bash
 #!/bin/sh
 IPTABLES=/sbin/iptables
@@ -559,7 +548,7 @@ enrutamiento...
 
 En mi caso:
 
-~~~
+~~~bash
 rc0.d/K20fire
 rc1.d/K20fire
 rc2.d/S20fire
@@ -568,7 +557,6 @@ rc4.d/S20fire
 rc5.d/S20fire
 rc6.d/K20fire
 ~~~
-
 
 En esas carpetas dentro de /etc
 
@@ -608,9 +596,9 @@ Sería interesante activar también un Proxy tipo Squid para acelerar la navegac
 
 ### Ficheros de configuración
 
-**Squid**
+#### Squid
 
-~~~
+~~~config
 acl local src 1.1.0.0/16
 http_access allow local
 maximum_object_size 32768 KB
@@ -620,10 +608,9 @@ redirect_program /usr/lib/squid/squid_redirect
 redirect_children 30 # PPTPD (para las VPN entrantes)
 ~~~
 
+#### /etc/ppp/pptpd-options
 
-**/etc/ppp/pptpd-options**:
-
-~~~
+~~~config
 debug
 name in chap-secrets
 name Merak
@@ -634,10 +621,9 @@ netmask 255.255.0.0
 lock
 ~~~
 
+#### /etc/ppp/chap-secrets
 
-**/etc/ppp/chap-secrets**:
-
-~~~
+~~~config
 # Secrets for authentication using CHAP
 # client server secret IP addresses
 prueba * probando *

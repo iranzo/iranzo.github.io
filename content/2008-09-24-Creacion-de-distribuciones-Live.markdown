@@ -6,19 +6,17 @@ author: Pablo Iranzo Gómez
 tags: linux, fedora
 lang: es
 ---
-
-
-### Introducción
+## Introducción
 
 Según lo visto en el artículo [Kickstart]({filename}2008-05-11-Kickstart-instalaciones.markdown), podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
 
 [Fedora]({filename}2008-06-14-Fedora.markdown) proporciona unas utilidades 'livecd-tools' que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
 
-### Ejemplo
+## Ejemplo
 
 Por ejemplo, podemos personalizar nuestro medio 'live' cambiando el mensaje de login con un:
 
-~~~
+~~~bash
 #!bash
 %post
 echo "Sistema personalizado Live" > /etc/issue
@@ -28,7 +26,7 @@ Utilizando la sección `%packages` podemos por ejemplo instalar los paquetes ope
 
 Un ejemplo de kickstart para un medio Live podría ser:
 
-~~~
+~~~bash
 #!bash
 install
 cdrom
@@ -89,7 +87,7 @@ cat > /etc/rc.d/init.d/rhel-live << EOF
 . /etc/init.d/functions
 if ! strstr "`cat /proc/cmdline`" liveimg || [ "$1" != "start" ] || [ -e /.liveimg-configured ] ; then exit 0
 fi
-exists()  
+exists()
 which $1 >/dev/null 2>&1 || return $*
  touch /.liveimg-configured # mount live image
 if [ -b /dev/live ]; then mkdir -p /mnt/live mount -o ro /dev/live /mnt/live
@@ -131,11 +129,11 @@ echo " " >> /etc/issue
 
 ~~~
 
-### Creación
+## Creación
 
 Para generar la imagen Live, ejecutaremos
 
-~~~
+~~~bash
 #!bash
 livecd-creator -c /root/usuario/ks.cfg -f MedioLive
 ~~~

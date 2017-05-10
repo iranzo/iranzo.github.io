@@ -6,7 +6,6 @@ comments: true
 tags: linux, openstack, rhev, ovirt, vdsm, hook, nestedvt
 description:
 ---
-
 Since some time ago, I've been mostly dealing with OpenStack, requiring different releases to test for different tests, etc.
 
 Virtualization, as provided by KVM requires some CPU flags to get accelerated operations, vmx and svm depending on your processor architecture, but, of course, this is only provided on bare-metal.
@@ -25,8 +24,7 @@ From here, just needed to enable NestedVT on the environment.
 
 `NestedVT` 'just' requires to expose the `svm` or `vmx` flag to the VM running directly from the bare-metal host, and we need to do that for every VM we start. On normal system with libvirt, we can just edit the XML for the VM definition and define the CPU like this:
 
-~~~
-#!xml
+~~~xml
 <cpu mode='custom' match='exact'>
     <model fallback='allow'>Opteron_G3</model>
     <feature policy='require' name='svm'/>
@@ -43,8 +41,7 @@ As you can imagine, this is something that has lot of interested people behind, 
 
 In this case, the one that we're needing is 'nestedvt', so we can proceed to install it on our hosts like:
 
-~~~
-#!bash
+~~~bash
 wget http://mirrors.ibiblio.org/ovirt/pub/ovirt-3.4/rpm/el7/noarch/vdsm-hook-nestedvt-4.14.17-0.el7.noarch.rpm
 rpm -Uvh vdsm-hook-nestedvt-4.14.17-0.el7.noarch.rpm
 ~~~
@@ -61,16 +58,14 @@ To come to our rescue, another hook comes to play in, this time `macspoof` which
 
 First, let's repeat the procedure and install the hook on all of our hypervisors:
 
-~~~
-#!bash
+~~~bash
 wget http://mirrors.ibiblio.org/ovirt/pub/ovirt-3.4/rpm/el7/noarch/vdsm-hook-macspoof-4.14.17-0.el7.noarch.rpm
 rpm -Uvh vdsm-hook-macspoof-4.14.17-0.el7.noarch.rpm
 ~~~
 
 This will enable the hook in the system, but we also need to make the RHEV-M Engine aware of it, so we need to define a new Custom Property for VM's:
 
-~~~
-#!bash
+~~~bash
 engine-config -s "UserDefinedVMProperties=macspoof=(true|false)"
 ~~~
 

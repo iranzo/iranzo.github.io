@@ -7,8 +7,7 @@ tags: linux, lvm
 lang: es
 save_as: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/index.html
 url: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/
-
--------------------------------------------------------------------
+---
 
 ### Introducción
 
@@ -18,9 +17,9 @@ LVM introduce una separación entre la estructura típica de un sistema y los el
 
 LVM funciona a tres niveles, a saber:
 
--  Volúmenes físicos
--  Grupos de volumen
--  Volúmenes lógicos
+- Volúmenes físicos
+- Grupos de volumen
+- Volúmenes lógicos
 
 Una de las principales ventajas del sistema LVM sobre el sistema tradicional, es que LVM nos abstrae de los discos físicos y de las limitaciones de un disco, permitiendo tener sistemas de ficheros sobre varios discos, redimensionarlos según las necesidades y por lo tanto, hacer un uso más eficiente del espacio del que disponemos, con independencia de su ubicación.
 
@@ -30,7 +29,7 @@ La estructura de LVM sería la siguiente:
 
 ![Estructura de LVM, original de "http://www.ccp-west.de/tipps.html"]({filename}/imagen/lvmschema.gif)
 
-**Estructura de LVM**
+## Estructura de LVM
 
 ### Volúmenes físicos (pv)
 
@@ -73,8 +72,7 @@ En sda, tenemos todo el disco duro disponible para utilizarlo con LVM, así que 
 
 Los volúmenes físicos son las unidades donde se asienta la estructura de las grupos de volúmenes, su creación, es tan sencilla como ejecutar:
 
-
-~~~
+~~~bash
 #!bash
 pvcreate /dev/hda2
 
@@ -91,7 +89,7 @@ Los grupos de volúmenes son los cajones, que ubicados sobre los volúmenes fís
 
 Para crear un grupo de volumen haremos:
 
-~~~
+~~~bash
 #!bash
 vgcreate Prueba /dev/sda1
 ~~~
@@ -106,7 +104,7 @@ Los volúmenes lógicos son el equivalente a las particiones, es el lugar donde 
 
 Los volúmenes lógicos se definen dentro de un grupo de volúmenes de la siguiente forma:
 
-~~~
+~~~bash
 #!bash
 lvcreate Prueba -n Inicial -L 2G
 ~~~
@@ -117,7 +115,7 @@ Si ejecutamos a continuación lvscan, tendremos un listado de todos los grupos d
 
 Antes de poder utilizar el volumen lógico, deberemos prepararlo para contener datos y crear la estructura de un sistema de ficheros, esta vez, el comando es idéntico a cuando creamos un sistema de ficheros sobre un disco físico, pero especificando el volumen lógico, por ejemplo:
 
-~~~
+~~~bash
 #!bash
 mkfs.ext3 /dev/Prueba/Inicial
 ~~~
@@ -126,7 +124,7 @@ Es muy recomendable hacer uso de un sistema de ficheros que podamos redimensiona
 
 Ahora, ya podremos montar el sistema de ficheros, por ejemplo:
 
-mount /dev/Prueba/Inicial /mnt
+`mount /dev/Prueba/Inicial /mnt`
 
 ### Redimensionamiento de una unidad LVM
 
@@ -134,7 +132,7 @@ EXT3, el sistema de ficheros utilizado por defecto en la distribución, permite 
 
 A modo de ejemplo, y siguiendo con la dinámica de los ejemplos de creación de un sistema con LVM, vamos a extender el sistema de ficheros de "Inicial", aumentándolo en 250 Mb, para ello haremos:
 
-~~~
+~~~bash
 #!bash
 pvscan #(donde nos mostrará los volúmenes físicos y el espacio libre)
 # En caso de ser necesario, ampliaremos el vg añadiendo un nuevo pv:
@@ -149,7 +147,7 @@ Al acabar, el sistema de ficheros montado en /mnt habrá aumentado en 250 Mb su 
 
 También, podemos aumentar el volumen a un tamaño total, por ejemplo, aumentar el volumen a 4 Gb, ejecutando:
 
-~~~
+~~~bash
 #!bash
 lvextend -L 4G /dev/Prueba/Inicial
 ext2online /dev/mapper/Prueba-Inicial
@@ -157,11 +155,11 @@ ext2online /dev/mapper/Prueba-Inicial
 
 En el caso de Fedora Core 6 (FC6), la utilidad ext2online no existe, pues ha sido integrada en resize2fs, por lo que llevaremos a cabo el redimensionamiento con `resize2fs -p /dev/Prueba-Inicial [tamaño final]`.
 
-**ATENCIÓN: Éste es un proceso muy peligroso, pues podemos perder datos**
+ATENCIÓN: **Éste es un proceso muy peligroso, pues podemos perder datos**
 
 Si queremos reducir el tamaño de una unidad lógica, primero, deberemos anotar el espacio utilizado en el sistema de ficheros y proceder a desmontarlo:
 
-~~~
+~~~bash
 #!bash
 umount /dev/mapper/Prueba-Inicial
 #El siguiente paso, es reducir el sistema de ficheros:
@@ -173,7 +171,7 @@ Recomiendo reducir el tamaño del sistema de ficheros por debajo del tamaño fin
 
 Acabado el proceso, podemos redimensionar el volumen lógico:
 
-~~~
+~~~bash
 #!bash
 lvextend -L -2G /dev/mapper/Prueba-Inicial
 ~~~

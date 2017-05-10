@@ -28,16 +28,16 @@ Espero que todo esto explique los motivos para crear el anillo. Es cuestión de 
 
 ### Ventajas
 
--  El listado de las webs apuntadas es público, constituyendo un recurso de enlaces amplio.
--  El sistema es gratuito, no hay que pagar nada por salir beneficiado.
--  Las estadísticas de uso son públicas, puede ver si le conviene o no apuntarse (por si todavía lo duda)
--  El anillo favorece la visita a las webs menos visitadas: periódicamente el anillo se reordena para mostrar las webs menos visitadas en primer lugar, y de este modo promocionarlas.
--  Cualquier web que, estando apuntada al anillo, sea promocionada por algún tema en especial (unas Jornadas sobre Astronomía por ejemplo), está promocionando indirectamente al resto de las apuntadas al anillo.
--  Es posible desde la página de Webring, buscar webs por categorías y palabras clave, de modo que los navegantes podrán encontrar webs directamente, sin tener que ir una a una buscando la información que desean.
--  Se pueden mandar mensajes relacionados con la astronomía a la totalidad de las webs apuntadas.
--  El identificador del anillo se puede utilizar como redirector de la dirección de la página, de modo que dando de alta en los buscadores la dirección de la web como su número en el anillo, en el momento que se actualice la información del anillo, todos los enlaces de los buscadores apuntarán a la nueva página.
+- El listado de las webs apuntadas es público, constituyendo un recurso de enlaces amplio.
+- El sistema es gratuito, no hay que pagar nada por salir beneficiado.
+- Las estadísticas de uso son públicas, puede ver si le conviene o no apuntarse (por si todavía lo duda)
+- El anillo favorece la visita a las webs menos visitadas: periódicamente el anillo se reordena para mostrar las webs menos visitadas en primer lugar, y de este modo promocionarlas.
+- Cualquier web que, estando apuntada al anillo, sea promocionada por algún tema en especial (unas Jornadas sobre Astronomía por ejemplo), está promocionando indirectamente al resto de las apuntadas al anillo.
+- Es posible desde la página de Webring, buscar webs por categorías y palabras clave, de modo que los navegantes podrán encontrar webs directamente, sin tener que ir una a una buscando la información que desean.
+- Se pueden mandar mensajes relacionados con la astronomía a la totalidad de las webs apuntadas.
+- El identificador del anillo se puede utilizar como redirector de la dirección de la página, de modo que dando de alta en los buscadores la dirección de la web como su número en el anillo, en el momento que se actualice la información del anillo, todos los enlaces de los buscadores apuntarán a la nueva página.
 
-**NOTA: Para poder resultar beneficiado por el anillo, es NECESARIO que se pongan las líneas HTML en la página que se subscribe.**
+NOTA: ** Para poder resultar beneficiado por el anillo, es NECESARIO que se pongan las líneas HTML en la página que se subscribe.**
 
 ### Unirse
 
@@ -57,19 +57,19 @@ Una vez rellenados esos datos y enviado el formulario, tendremos acceso a los me
 
 ### Glosario
 
-**ID**
+#### ID
 
 Con el nuevo sistema del Anillo, el identificador, es también el nombre de usuario que has creado para indicar cual es tu web y es el que ahora relaciona toda tu web con el Anillo, aunque si te fijas, sigues teniendo un número asignado a tu web que podrás ver como parte de algunas páginas de administración, al inscribirte se te asigna uno que será utilizado se te favorecerá a la hora de reordenar el anillo, incrementando el tráfico hacia tu página.
 
-**Anillo/Webring**
+#### Anillo/Webring
 
 Es un término que se utiliza para definir un servicio de directorio temático. Aquí las páginas se asocian en temas denominados anillos. Se utiliza el término anillo, ya que no tiene ni comienzo ni fin, es posible ir de una página a otra siempre relacionada con el mismo tema y volver a la de partida por otro camino. En nuestro caso, el Anillo Astronómico, pretende reunir a todas las páginas sobre astronomía disponibles en Español.
 
-**Cola/Queue**
+#### Cola/Queue
 
 La cola es un lugar temporal de estancia en el anillo. Cuando te apuntas, pasas a la cola, para que de este modo, cuando el administrador valide los datos, te introduzca en el anillo. También te sirve para modificar tus datos antes de entrar al anillo.
 
-**Controles**
+#### Controles
 
 Los controles, son unas líneas de códigodo JavasScript (o código HTML) que insertan unos "controles de navegado" en tu web así, desde cualquier página se puede acceder al listado completo de webs, saltar a otra web al azar, etc.
 

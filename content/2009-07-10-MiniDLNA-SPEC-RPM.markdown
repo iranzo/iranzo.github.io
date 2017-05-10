@@ -12,8 +12,7 @@ Project at sourceforge is distributed as CVS code that you need to checkout and 
 
 I've setup a spec file that will allow you to create an rpm that has been tested on Red Hat Enterprise Linux 5.3 machine x86 for easing adoption among users.
 
-
-~~~
+~~~spec
 #!spec
 %define dist .el%(rpm -q --queryformat='%{VERSION}' redhat-release 2> /dev/null | tr -cd '[:digit:]')
 Summary: DLNA compatible server
@@ -108,7 +107,6 @@ chkconfig --del minidlna
 %changelog
 * Wed Jul 1 2009 Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
 - Initial version
-
 ~~~
 
 Enjoy it!

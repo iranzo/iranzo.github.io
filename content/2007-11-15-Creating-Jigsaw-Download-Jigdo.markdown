@@ -27,7 +27,7 @@ For example, if we download CentOS 5 DVD iso from [mirror.centos.org](http://alu
 
 (Suppossing that iso is at /var/www/CentOS/isos/ and that our exploded directory and file tree at /var/www/CentOS/tree/, we will do:
 
-~~~
+~~~bash
 #!bash
 jigdo-file mt -i /var/www/CentOS/isos/CentOS-5.0-i386-bin-DVD/CentOS-5.0-i386-bin-DVD.iso -j /var/www/CentOS/Centos5-DVD.jigdo -t /var/www/CentOS/Centos5-DVD.template —uri Centosmirrors=[http://mirror.centos.org/centos-5/5/os/i386/](http://mirror.centos.org/centos-5/5/os/i386/) /var/www/CentOS/tree/
 ~~~
@@ -47,7 +47,6 @@ Easy:
 JigDo will download the descriptor, search it for the template file, download it and begin creation of ISO by downloading packages not found on optional local folder (to avoid re-download of packages).
 
 I hope you find this useful :)
-
 
 [^1]: [From Dag's Repo](http://dag.wieers.com/rpm/packages/jigdo/)
 
