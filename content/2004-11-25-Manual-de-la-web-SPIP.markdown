@@ -20,10 +20,10 @@ Al final se escogió a SPIP: Sistema para la Publicación en Internet.  SPIP es 
 
 Como características, cabe destacar, que debido a su orientación al mundo editorial SPIP contempla características muy interesantes:
 
--  Varios niveles de acceso: Administrador, Editor, Redactor
--  Estructura por secciones
--  Completo soporte multilingüe (con gestión de traducciones entre artículos, etc)
--  Soporte avanzado para formatos dentro de los artículos, inclusión de documentos como imágenes, vídeos, etc, enlaces internos, notas al pie, etc
+- Varios niveles de acceso: Administrador, Editor, Redactor
+- Estructura por secciones
+- Completo soporte multilingüe (con gestión de traducciones entre artículos, etc)
+- Soporte avanzado para formatos dentro de los artículos, inclusión de documentos como imágenes, vídeos, etc, enlaces internos, notas al pie, etc
 
 Además de todas estas, SPIP aporta toda la funcionalidad de un gestor de contenido, como la creación de ficheros de sindicación, sindicación de titulares de otras páginas, buscador, imágenes por cada categoría, etc.
 
@@ -45,7 +45,7 @@ Llegando a hacer que parezca mentira que por debajo esté funcionando el mismo s
 
 Actualmente existe un equipo desarrollando una nueva apariencia para la web, de forma que su aspecto resulte más atractivo y muestre de forma más organizada la información.
 
-###Precauciones
+### Precauciones
 
 A modo de ejemplo, publicar una noticia de dos líneas de texto convocando a una manifestación o enlazando a otra web como un artículo no es buena idea, cuando disponemos de las noticias breves que además de tener más visibilidad, no "desilusionan" al entrar y ver que están vacías.
 
@@ -75,33 +75,33 @@ Cuando pinchamos el atajo para crear un nuevo artículo nos aparece una nueva ve
 
 En ella, tenemos unos recuadros para ir rellenando los campos que luego darán forma a nuestro artículo.
 
-**Antetítulo, Título y Subtítulo**
+#### Antetítulo, Título y Subtítulo
 
 Como en una noticia de un periódico, tenemos un antetítulo, un título y un subtítulo, que nos permiten crear una pequeña ampliación sobre el texto que vamos a tratar. A modo de ejemplo, se pueden consultar noticias ya publicadas en la web que hacen uso de estos campos.
 
 El campo estrictamente necesario es el título y la sección.
 
-**Sección**
+#### Sección
 
 Debemos escoger correctamente la sección, para así facilitar que artículos de temáticas relacionadas estén juntos, a la vez que facilitamos que la persona encargada de la labor de editor, tenga que perder menos tiempo y pueda realizar un mejor trabajo.
 
 Además de esta estructura, tenemos una sección para tablón de anuncios (donde publicaremos las breves), otra para galería fotográfica (artículos que no tengan texto, o muy pequeño y tengan muchas fotografías adjuntas, por ejemplo el de una concentración, evento, etc).
 
-**Descripción**
+#### Descripción
 
 Una vez escogida adecuadamente la sección donde irá ubicado, debemos especificar una descripción rápida del artículo que aparecerá junto al título mientras el artículo esté en la parte principal de la portada y que ayudará al visitante a conocer el contenido, en caso de omitirse, se utilizará el comienzo del texto del artículo.
 
-**Epígrafe**
+#### Epígrafe
 
 El epígrafe es una ampliación de la descripción que nos permite obtener una introducción al texto del artículo.
 
-**Texto**
+#### Texto
 
 Este es el lugar donde trabajaremos principalmente, como habremos visto, en cada uno de los cuadros tenemos el botón de ayuda para abrir la ayuda del entorno y conocer el funcionamiento de cada cuadro, su función y las opciones que podemos utilizar en su interior.
 
 Dentro del cuadro de texto podemos utilizar código HTML para aplicar formato, o bien utilizar los atajos que incorpora SPIP.
 
-**Atajos**
+#### Atajos
 
 Párrafos: Se deben separar entre sí con una línea en blanco: dos retornos de carro seguidos.
 
@@ -111,14 +111,13 @@ Cursiva, texto entre llaves "`{`" y "`}`"
 
 Negrita, texto entre llaves dobles "`{ {`" y "`} }`"
 
-Subtítulos, precedido por tres  \#\#\#  
+Subtítulos, precedido por tres  \#\#\#
 
 Línea de separación horizontal, cuatro guiones seguidos "`----`"
 
 Hipervínculos:
 
-- a otro artículo: "[texto](http://alufis35.uv.es/destino)", donde texto y destino son los que vamos variando nosotros,
-existen una serie de destinos "especiales":
+- a otro artículo: "[texto](http://alufis35.uv.es/destino)", donde texto y destino son los que vamos variando nosotros, existen una serie de destinos "especiales":
 - art# Artículo,
 - br# Enlace a la noticia breve,
 - doc# Documento adjunto,
@@ -139,7 +138,7 @@ Texto sin interpretar: encerrado entre el tag HTML
 
 Código a no interpretar y mostrar de forma especial entre el tag: "`code`"
 
-**Post Scriptum**
+#### Post Scriptum
 
 Este cuadro nos permite añadir texto al final del artículo, que por ejemplo nos puede ser útil para referenciar a otros artículos relacionados, etc.
 

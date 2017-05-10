@@ -25,7 +25,7 @@ Durante muuuuuuchos años he estado utilizando ese funcionamiento para trabajar 
 
 En el caso de RHEL/CentOS 5 tenemos los paquetes de FUSE en RPMForge y en Fedora los tenemos en la propia distribución. Por ejemplo, en Fedora tenemos:
 
-~~~
+~~~text
     fuse.i386 : File System in Userspace (FUSE) utilities
     fuse-convmvfs.i386 : FUSE-Filesystem to convert filesystem encodings
     fuse-devel.i386 : File System in Userspace (FUSE) devel files
@@ -46,7 +46,7 @@ Yo actualmente estoy utilizando `fuse-sshfs` para solventar mi necesidad, y buen
 
 Lo que hago es lanzar desde un terminal el siguiente comando:
 
-~~~
+~~~bash
 #!bash
 sshfs host:/ruta/a/la/carpeta carpeta-de-montaje
 ~~~
@@ -61,7 +61,7 @@ El punto interesante del artículo de Jose María Ruíz es que implementan un nu
 
 En un sistema de ficheros estándar, utilizamos funciones como opendir, open, read, getattr para trabajar con ficheros, para utilizar FUSE, creamos métodos con esos nombres que realizan las operaciones que queremos, por ejemplo:
 
-~~~
+~~~python
 #!python
 def readdir(self, path, offset):
     # read the next directory entry

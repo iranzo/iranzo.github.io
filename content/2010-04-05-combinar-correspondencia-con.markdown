@@ -9,18 +9,17 @@ modified_time: '2010-04-05T22:16:08.804+02:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-834340470617137892
 blogger_orig_url: http://iranzop.blogspot.com/2010/04/combinar-correspondencia-con.html
 ---
-
 Hacía un tiempo que no usaba la función de combinar correspondencia y en el equipo de sobremesa con Fedora 13 x86_64 no conseguía hacerla funcionar.
 
 Antes de nada:
 
-####¿Qué es combinar correspondencia?
+## Qué es combinar correspondencia
 
 Una de las ventajas de tener la información en formato digital es su tratamiento, y una de las opciones más habituales, es tener bases de datos con la información que necesitamos y acceder a ella.
 
 La función de 'combinar correspondencia' permite utilizar los datos de una base de datos para rellenar campos en un documento y luego, escoger la salida (impresión, nuevos documentos, email, etc).
 
-#### Pasos
+## Pasos
 
 Antes de nada, es conveniente instalar el paquete `openoffice.org-emailmerge`
 

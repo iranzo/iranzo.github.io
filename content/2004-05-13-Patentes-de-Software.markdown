@@ -47,7 +47,7 @@ El siguiente paso tendrá lugar el próximo 17 de mayo en el Consejo Ministerial
 Las directivas europeas son acuerdos legales supracomunitarios de corge general que posteriormente deben ser adaptados a cada una de las legislaciones existentes en cada uno de los estados miembros. Si esta directiva fuera aprobada de tal forma qu permitiera la patentabilidad de software, sólo habría lugar para la impugnación:
 
 1. El primer nivel sería a través del Tribunal de Justicia de las Comunidades Europeas (Luxemburgo)
-2. El segundo nivel sería a través del Tribunal Supremo del Estado Español (Madrid)
+1. El segundo nivel sería a través del Tribunal Supremo del Estado Español (Madrid)
 
 ### ¿Qué se puede hacer?
 
@@ -55,30 +55,30 @@ De lo que se trata aquí es de presionar para que no sea ignorado nuestro desacu
 
 1. Difundir con la mayor urgencia y extensión posible el contenido del problema. La consignas es: "¡¡Haz visible tu desacuerdo!!"
 1. Seguir haciendo frente al poder y sea cual sea el resultado de los acuerdos a los que se llegue en Europa, el libre acceso a la información es nuestro derecho inalienable y fundamental al que no podemos renunciar de forma alguna. Si es necesario apelaremos a la desobediencia civil electrónica.
-2. Al mismo tiempo es muy importante sensibilizar a nuestros representantes parlamentarios de las graves repercusiones de estas legislaciones y animarlos a votar en contra: queramos o no, son nuestros únicos portavoces válidos
-3. Podemos firmar esta [Petición por una Europa Libre de Patentes](http://petition.eurolinux.org/index_html?LANG=es)
-4. Puedes enviar tu propuesta al jefe del Consejo Europeo, el Irlandés Bertie Ahem, su email es info@jef-europe.net
-5. Seguir potenciando el uso de Software Libre como gesto de independencia tecnológica grente a los modelos de software propietario, principales interesados en imponer las patentes de software en Europa
-6. Mira lo que hicieron los demás
-7. En fin, actúa, no esperes a que sea demasiado tarde, échale algo de imaginación que no vamos a decidirlo todo nosotros ¿no?
-8. Patentar nosotros la patentabilidad.
+1. Al mismo tiempo es muy importante sensibilizar a nuestros representantes parlamentarios de las graves repercusiones de estas legislaciones y animarlos a votar en contra: queramos o no, son nuestros únicos portavoces válidos
+1. Podemos firmar esta [Petición por una Europa Libre de Patentes](http://petition.eurolinux.org/index_html?LANG=es)
+1. Puedes enviar tu propuesta al jefe del Consejo Europeo, el Irlandés Bertie Ahem, su email es info@jef-europe.net
+1. Seguir potenciando el uso de Software Libre como gesto de independencia tecnológica grente a los modelos de software propietario, principales interesados en imponer las patentes de software en Europa
+1. Mira lo que hicieron los demás
+1. En fin, actúa, no esperes a que sea demasiado tarde, échale algo de imaginación que no vamos a decidirlo todo nosotros ¿no?
+1. Patentar nosotros la patentabilidad.
 
 ### Enlaces
 
--  [Foundation for a Free Information Infrastructure](http://ffii.org/)
--  [Página de las acciones en Valencia](http://kwiki.ffii.org/?DemoValencia040514Es)
--  [Noticia en IMC-Galicia](http://galiza.indymedia.org/ler.php?numero?6138&cidade=1)
--  [Salvando a Europa de las Patentes de Software. Richard Stallman](http://www.gnu.org/philosophy/savingeurope.es.html)
--  [Grupo ProInnova](http://proinnova.hispalinux.es/)
--  [Diez razones para oponerse a las patentes de software](http://www.el-mundo.es/navegante/2000/10/19/razones.html)
--  [Actúa contra la Directiva Europea sobre Propiedad Intelectual](http://acp.sindominio.net/article.pl?sid=04/03/05/1956242&mode=thread)
--  [Cómo las patentes de software ahogarán los negocios en la red](http://juanjo.sdf-eu.org/weblog/archivos/2003/12/19/como-las-patentes-de-software-ahogaran-los-negocios-en-la-red/)
--  [Legislación Europea y el OpenSource/Free Software - J.M.Fidel Santiago](http://granada.sourceforge.net/jasl3/ponencias/ponencia6.pdf)
--  [Patentabilidad de Funciones Lógicas (más allá del Software) - Jorge Cortell-Albert](http://www.faq-mac.com/mt/archives/003961.php)
--  [Carta abierta a la ciudadanía europea - FSF Europa](http://barrapunto.com/journal.pl?op=display&uid=11069&id=4711)
--  [Nota informativa de ProInnova sobre la actual situación en las Cortes Europeas](http://barrapunto.com/comments.pl?sid=41224&op=&threshold=-1&commentsort=0&mode=thread&pid=300165#300168)
--  [Estructura de las Instituciones Europeas](http://europa.eu.int/institutions/council/index_pt.htm)
--  [Oficina Española de Patentes y Marcas](http://www.oepm.es/)
+- [Foundation for a Free Information Infrastructure](http://ffii.org/)
+- [Página de las acciones en Valencia](http://kwiki.ffii.org/?DemoValencia040514Es)
+- [Noticia en IMC-Galicia](http://galiza.indymedia.org/ler.php?numero?6138&cidade=1)
+- [Salvando a Europa de las Patentes de Software. Richard Stallman](http://www.gnu.org/philosophy/savingeurope.es.html)
+- [Grupo ProInnova](http://proinnova.hispalinux.es/)
+- [Diez razones para oponerse a las patentes de software](http://www.el-mundo.es/navegante/2000/10/19/razones.html)
+- [Actúa contra la Directiva Europea sobre Propiedad Intelectual](http://acp.sindominio.net/article.pl?sid=04/03/05/1956242&mode=thread)
+- [Cómo las patentes de software ahogarán los negocios en la red](http://juanjo.sdf-eu.org/weblog/archivos/2003/12/19/como-las-patentes-de-software-ahogaran-los-negocios-en-la-red/)
+- [Legislación Europea y el OpenSource/Free Software - J.M.Fidel Santiago](http://granada.sourceforge.net/jasl3/ponencias/ponencia6.pdf)
+- [Patentabilidad de Funciones Lógicas (más allá del Software) - Jorge Cortell-Albert](http://www.faq-mac.com/mt/archives/003961.php)
+- [Carta abierta a la ciudadanía europea - FSF Europa](http://barrapunto.com/journal.pl?op=display&uid=11069&id=4711)
+- [Nota informativa de ProInnova sobre la actual situación en las Cortes Europeas](http://barrapunto.com/comments.pl?sid=41224&op=&threshold=-1&commentsort=0&mode=thread&pid=300165#300168)
+- [Estructura de las Instituciones Europeas](http://europa.eu.int/institutions/council/index_pt.htm)
+- [Oficina Española de Patentes y Marcas](http://www.oepm.es/)
 
 ### Créditos
 

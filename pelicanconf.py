@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*- #
-# Libraries to install
-#
-
-
 from __future__ import unicode_literals
 
 import datetime
@@ -44,7 +40,6 @@ EXTRA_PATH_METADATA = {
 CACHE_CONTENT = False
 CACHE_PATH = '.cache'
 LOAD_CONTENT_CACHE = False
-
 
 # Plugins
 PLUGIN_PATHS = ['plugins']
@@ -99,9 +94,7 @@ CATEGORIES_SAVE_AS = 'blog/categories/index.html'
 TAGS_URL = 'blog/tags/'
 TAGS_SAVE_AS = 'blog/tags/index.html'
 
-
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives']
-
 
 # Blogroll
 # LINKS = (('Pelican', 'http://getpelican.com/'),

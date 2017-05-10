@@ -12,8 +12,8 @@ La aurora es un fenómeno luminoso, que aparece en las latitudes altas del plane
 
 El término aurora, comprende a dos tipos de auroras clasificadas por localización geográfica:
 
--  Aurora Boreal en el hemisferio Norte (aurora borealis)
--  Aurora austral en el hemisferio Sur (aurora australis)
+- Aurora Boreal en el hemisferio Norte (aurora borealis)
+- Aurora austral en el hemisferio Sur (aurora australis)
 
 La aurora boreal o borealis también ha sido denominada en la literatura como "Las Luces del Norte".
 
@@ -68,6 +68,5 @@ Las auroras son mucho más que una simple cosa curiosa y son demasiado important
 Tienen gran relevancia en mucho ámbitos de la Física tales como la fusión, el confinamiento magnético, interferencias, campos magnéticos, dinámica de plasmas, dinámica de la ionosfera.
 
 Apuntes de la conferencia que inspiró este artículo: Auroras: Magia en el Cielo
-
 
 [^1]: Al ser éste un artículo de difusión general, sólo trataremos de forma poco profunda el campo magnético terrestre y el viento solar

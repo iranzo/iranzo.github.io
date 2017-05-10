@@ -26,15 +26,14 @@ Cada sistema de raid tiene sus ventajas y sus inconvenientes y deberemos escoger
 |0+1|Espejo bandas|Permite un acceso rápido a los datos|Es menos fiable que el 1+0 por lo que se utiliza menos|Se crean dos conjuntos de bandas y encima de ellas se crea un espejo|
 |1+0|Bandas de espejo|Es de los más extendidos por ser fiable y rápido|Requiere muchos discos|Se crean muchos conjuntos espejos y luego se crean conjuntos de bandas sobre ellos|
 
-
 En el kernel de Linux tenemos soporte para algunos tipos de RAID, en la carpeta /lib/modules/verkernel/drivers/md/ podremos ver los que soporta.
 
 Para utilizar el soporte de dispositivos múltiples (Multiple Devices: MD), la forma más sencilla de empezar, es definir las particiones del sistema de antemano y tener clara la estructura de RAID a montar.
 
 A partir de este punto tenemos tres posibilidades:
--  Utilizar la instalación manual del sistema (hablaré de Debian y su debootstrap)
--  Utilizar los nuevos instaladores de Debian (válido para Ubuntu)
--  Convertir un sistema en ejecución a sistema raid raíz
+- Utilizar la instalación manual del sistema (hablaré de Debian y su debootstrap)
+- Utilizar los nuevos instaladores de Debian (válido para Ubuntu)
+- Convertir un sistema en ejecución a sistema raid raíz
 
 ### Instalación manual del sistema
 
@@ -54,7 +53,7 @@ Para poder hacerlo, las particiones hda2, hdc2 deben tener el mismo tamaño y es
 
 Una vez creado el archivo y salvado, podemos ejecutar las órdenes:
 
-~~~
+~~~bash
 mkraid /dev/md0
 mkraid /dev/md1
 mkfs.ext3 /dev/md0
@@ -64,8 +63,8 @@ mkfs.ext3 /dev/md1
 y a partir de ese momento, utilizar debootstrap tras montar las
 particiones:
 
-~~~
-#!bash 
+~~~bash
+#!bash
 mount /dev/md0 /target
 mkdir /target/home
 mount /dev/md1 /target/home
@@ -82,7 +81,7 @@ Es conveniente añadir a lilo la siguiente opción: raid-extra-boot=mbr, con ell
 
 Para generar de nuevo el initrd, deberemos ejecutar
 
-~~~
+~~~bash
 mkinitrd -o /boot/initrd.img-`uname -r` /lib/modules/`uname -r`
 ~~~
 
@@ -98,7 +97,7 @@ En dicho paso, deberemos instalar el lilo, configurar el lilo.conf y adaptar el 
 
 Deberemos ejecutar mkinitrd como en el paso anterior:
 
-~~~
+~~~bash
 mkinitrd -o /boot/initrd.img-$verkernel /lib/modules/$verkernel
 ~~~
 
@@ -118,8 +117,8 @@ De esta forma, indicamos al sistema que el sistema RAID estará formado por dos 
 
 Crearemos el raid con:
 
-~~~
-#!bash 
+~~~bash
+#!bash
 mkraid /dev/md0
 #y luego formatearemos la nueva unidad con
 mkfs.ext3 /dev/md0
@@ -127,7 +126,7 @@ mkfs.ext3 /dev/md0
 
 Una vez realizado este paso crearemos una nueva carpeta donde montar la unidad de raid recién creada:
 
-~~~
+~~~bash
 mkdir /target; mount /dev/md0 /target
 ~~~
 
@@ -141,7 +140,7 @@ Tras ejecutar lilo y asegurarnos de que no falla, podremos proceder a reiniciar 
 
 Ahora, deberemos proceder a la sincronización del raid, para ello, por un lado, modificaremos el /etc/raidtab y cambiaremos la palabra failed-disk por raid-disk, y en la línea de comandos, añadiremos las particiones de hda al raid con:
 
-~~~
+~~~bash
 raidhotadd /dev/md0 /dev/hda2
 ~~~
 

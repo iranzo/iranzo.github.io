@@ -22,7 +22,7 @@ A virtual Environment allows to create a 'chroot'-like enviroment that might con
 
 For creating a virtualenv, we require the package `python-virtualenv` installed on our system and executing `virtualenv` and a target folder, for example:
 
-~~~
+~~~bash
 [iranzo@iranzo ~]$ virtualenv .venv
 New python executable in /home/iranzo/.venv/bin/python2
 Also creating executable in /home/iranzo/.venv/bin/python
@@ -31,13 +31,13 @@ Installing setuptools, pip, wheel...done.
 
 From this point, we've a base virtualenv installed, but as we would like to install more packages inside we'll first need to 'enter' into it:
 
-~~~
+~~~bash
 . .venv/bin/activate
 ~~~
 
 And from there, we can list the available/installed packages:
 
-~~~
+~~~bash
 [iranzo@iranzo ~]$ pip list
 DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
 appdirs (1.4.0)
@@ -59,13 +59,13 @@ In order to simplify the management we can make use of `pipsi` which not only al
 
 If our distribution provides it, we can install `pipsi` on our system:
 
-~~~
+~~~bash
 dnf -y install pipsi
 ~~~
 
 But if not, we can use this workaround (for example, on RHEL7)
 
-~~~
+~~~bash
 # Use pip to install pipsi on the system (should be minor change not affecting other software installed)
 pip install pipsi
 ~~~
@@ -74,7 +74,7 @@ From this point, we can use pipsi to take care of installation and maintenance (
 
 For example, we can install `ansible` by executing:
 
-~~~
+~~~bash
 pipsi install ansible
 ~~~
 
@@ -88,7 +88,7 @@ Ansible uses an inventory file (can be provided on command line) so it can conne
 
 This file, for example, can consist of just a simple list of hosts to connect to like:
 
-~~~
+~~~hosts
 192.168.1.1
 192.168.1.2
 myhostname.net
@@ -96,7 +96,7 @@ myhostname.net
 
 And for starting we create a simple playbook, for example a HW asset inventory:
 
-~~~
+~~~yaml
 ---
 - hosts: all
   user: root
@@ -111,7 +111,7 @@ This will act on all hosts, as user root and will run a task which prints a debu
 
 To run it is quite easy:
 
-~~~
+~~~bash
 [iranzo@iranzo labs]$ ansible-playbook -i myhost.net, inventory.yaml
 
 PLAY [all] *********************************************************************
@@ -132,7 +132,7 @@ This has connected to the target host, and returned a message with hostname, ip 
 
 This is a quite simple script, but for example, we can use `ansible` to deploy `ansible` binary on our target host using other modules available, in this case, for simplicity, we'll not be using pipsi for ansible installation.
 
-~~~
+~~~yaml
 ---
 - hosts: all
   user: root
@@ -171,7 +171,7 @@ This is a quite simple script, but for example, we can use `ansible` to deploy `
 
 At this point, the system should have ansible available from within the virtualenv we've created and should be avialble when executing:
 
-~~~
+~~~bash
 # Activate python virtualenv
 . .venv/bin/activate
 # execute ansible

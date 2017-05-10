@@ -5,7 +5,6 @@ date: 2006-04-30T05:06:00Z
 tags: spip, cms
 lang: es
 ---
-
 ### Introducción
 
 Estos esqueletos se basan en el modelo tipo C de la web de [www.mollio.org](http://www.mollio.org/), gracias a un mensaje que se
@@ -15,38 +14,38 @@ Los esqueletos se ajustqan al tamaño de pantalla y se visualizan adecuadamente 
 
 ### Créditos
 
--  Este esqueleto se basa en el trabajo del grupo de diseño de [http://www.mollio.org](http://www.mollio.org/)
--  Utiliza la parte de agenda con modificaciones del esqueleto [epona](http://www.spip-contrib.net/article509.html)
--  Utiliza la parte de atributos EXIF de [PhotoPholder](http://www.jakeo.com/software/fotopholder/index.php)
--  Utiliza la corrección de transparencias de archivos PNG en IE de [http://homepage.ntlworld.com/bobosola/](http://homepage.ntlworld.com/bobosola/)
--  Utiliza partes del trabajo de Laura Primo y [Pablo Iranzo Gómez](http://alufis35.uv.es/~iranzo/) en el diseño de la web de [LinUV](http://LinUV.uv.es/) y [Alufis35](http://Alufis35.uv.es/)
--  Utiliza parte del bucle de [http://www.spip-contrib.net/_marabbeh_](http://www.spip-contrib.net/_marabbeh_) (extraer según estructura del sitio en sectores en lugar de por bloques de bucles)
--  Se basa en los anteriores esqueletos de Alufis35, basados en spip-contrib Esqueleto basado en el de spip-contrib
--  Laura Primo ha colaborado (como viene haciendo) en la creación de estos esqueletos y se ha encargado de la validación [http://W3.org](http://W3.org/) de los mismos.
--  El módulo "Nube" es una adaptación del enviado por [Juan Martínez](mailto:comcincoARROBAzemos98.org) utilizado en su web [www.colectivosolano.org](http://www.colectivosolano.org/)
+- Este esqueleto se basa en el trabajo del grupo de diseño de [http://www.mollio.org](http://www.mollio.org/)
+- Utiliza la parte de agenda con modificaciones del esqueleto [epona](http://www.spip-contrib.net/article509.html)
+- Utiliza la parte de atributos EXIF de [PhotoPholder](http://www.jakeo.com/software/fotopholder/index.php)
+- Utiliza la corrección de transparencias de archivos PNG en IE de [http://homepage.ntlworld.com/bobosola/](http://homepage.ntlworld.com/bobosola/)
+- Utiliza partes del trabajo de Laura Primo y [Pablo Iranzo Gómez](http://alufis35.uv.es/~iranzo/) en el diseño de la web de [LinUV](http://LinUV.uv.es/) y [Alufis35](http://Alufis35.uv.es/)
+- Utiliza parte del bucle de [http://www.spip-contrib.net/_marabbeh_](http://www.spip-contrib.net/_marabbeh_) (extraer según estructura del sitio en sectores en lugar de por bloques de bucles)
+- Se basa en los anteriores esqueletos de Alufis35, basados en spip-contrib Esqueleto basado en el de spip-contrib
+- Laura Primo ha colaborado (como viene haciendo) en la creación de estos esqueletos y se ha encargado de la validación [http://W3.org](http://W3.org/) de los mismos.
+- El módulo "Nube" es una adaptación del enviado por [Juan Martínez](mailto:comcincoARROBAzemos98.org) utilizado en su web [www.colectivosolano.org](http://www.colectivosolano.org/)
 
 Queremos agradecer desde aquí a todos ellos su trabajo previo que ha posibilitado la creación de este.
 
 ### Características
 
--  Permiten modificar el logotipo y frase de la web modificando un artículo con una palabra clave especial
--  Permiten modificar el mensaje de la web con otro artículo con una frase especial
--  La web se adapta al tamaño del navegador, de forma que siempre se muestra la máxima información posible evitando los molestos desplazamientos que tienen muchas webs al ser diseñadas para resoluciones bajas.
--  Tiene un diseño a base de módulos, que añadidos a cada plantilla principal (rubrique, sommaire, article, etc) en la sección derecha o izquierda del menú, permiten adaptar el diseño de la página a la información mostrada.
--  Dichos módulos se habilitano o deshabilitan con las palabras clave adecuadas
--  El album fotográfico muestra controles adelante-atrás así como información de las cabeceras EXIF que proporcionan las cámaras digitales (modelo, focal, diafragma, hora, etc) (además, utiliza el sistema de caché de SPIP para mejorar la navegación)
--  El módulo de agenda así como el de mini-agenda permiten mostrar eventos programados en nuestra web
--  La ficha de información del autor, permite el envío de mensajes, pero oculta su dirección de correo electrónico para evitar SPAM
--  Cada sección y artículo muestran un mini-icono que facilita su localización al navegar por las distintas páginas del sitio web.
--  Las cabeceras de los archivos, así como los META, se generan dinámicamente en función de las palabras claves asignadas a los artículos
--  En el caso de los artículos con la palabra clave "Frase", se asigna su decripción a la descripción general de la web (META DESCRIPTION).
--  Muestra las noticias sindicadas de otras webs como si fueran artículos de la propia
--  Soporte automatizado para [Google Sitemaps](http://www.google.com/webmasters/sitemaps/), simplemente enviar el archivo con el mapa del sitio y listo
--  Soporte automatizado para [ROR: Resources Of a Resource](http://www.rorweb.com/)
--  Validan con el comprobador de w3.org en [http://validator.w3.org/](http://validator.w3.org/)
--  Los esqueletos han sido internacionalizados y ahora cuentan con soporte para Español, Inglés, Catalán y Francés
--  Es posible escoger una licencia para asociarla a los artículos y así que los buscadores la indexen también
--  Soporte para MicroSummary de Firefox 2
+- Permiten modificar el logotipo y frase de la web modificando un artículo con una palabra clave especial
+- Permiten modificar el mensaje de la web con otro artículo con una frase especial
+- La web se adapta al tamaño del navegador, de forma que siempre se muestra la máxima información posible evitando los molestos desplazamientos que tienen muchas webs al ser diseñadas para resoluciones bajas.
+- Tiene un diseño a base de módulos, que añadidos a cada plantilla principal (rubrique, sommaire, article, etc) en la sección derecha o izquierda del menú, permiten adaptar el diseño de la página a la información mostrada.
+- Dichos módulos se habilitano o deshabilitan con las palabras clave adecuadas
+- El album fotográfico muestra controles adelante-atrás así como información de las cabeceras EXIF que proporcionan las cámaras digitales (modelo, focal, diafragma, hora, etc) (además, utiliza el sistema de caché de SPIP para mejorar la navegación)
+- El módulo de agenda así como el de mini-agenda permiten mostrar eventos programados en nuestra web
+- La ficha de información del autor, permite el envío de mensajes, pero oculta su dirección de correo electrónico para evitar SPAM
+- Cada sección y artículo muestran un mini-icono que facilita su localización al navegar por las distintas páginas del sitio web.
+- Las cabeceras de los archivos, así como los META, se generan dinámicamente en función de las palabras claves asignadas a los artículos
+- En el caso de los artículos con la palabra clave "Frase", se asigna su decripción a la descripción general de la web (META DESCRIPTION).
+- Muestra las noticias sindicadas de otras webs como si fueran artículos de la propia
+- Soporte automatizado para [Google Sitemaps](http://www.google.com/webmasters/sitemaps/), simplemente enviar el archivo con el mapa del sitio y listo
+- Soporte automatizado para [ROR: Resources Of a Resource](http://www.rorweb.com/)
+- Validan con el comprobador de w3.org en [http://validator.w3.org/](http://validator.w3.org/)
+- Los esqueletos han sido internacionalizados y ahora cuentan con soporte para Español, Inglés, Catalán y Francés
+- Es posible escoger una licencia para asociarla a los artículos y así que los buscadores la indexen también
+- Soporte para MicroSummary de Firefox 2
 
 ### Requisitos
 
@@ -60,25 +59,25 @@ Para su funcionamiento, necesita que las siguientes redirecciones estén habilit
 
 Actualmente y para usar las URL Propres (Las URL Propres, permiten generar rutas de acceso a los artículos basadas en el título del mismo, facilitando que sean recordadas por los usuarios y mejorando la gestión por parte de los buscadores de Internet) de SPIP, las redirecciones a habilitar son las que se distribuyen en el archivo htaccess de la carpeta "mollio", donde entre otras, se ha incorporado un esqueleto "parser" que en caso de que se nos visitara desde urls con reescritura html en lugar de propres, notifica (Hace un http redirect permanente de archivos estilo article10.html a la URL correspondiente en propre o el sistema habilitado en ese momento en el servidor) a los visitantes y buscadores el nuevo esquema.
 
--  El funcionamiento del conversor PDF se ha migrado al plugin [article_pdf](http://trac.rezo.net/trac/spip-zone/browser/_plugins_/_test_/article_pdf) de spip con modificaciones para la internacionalización de los pdf's generados
--  Para el correcto escalado de archivos con transparencias, es recomendable el gestor "convert" o "ImageMagick" para gestionar la creación de miniaturas
--  Para el módulo de agenda es necesario habilitar la opción de Fecha de publicación anterior
+- El funcionamiento del conversor PDF se ha migrado al plugin [article_pdf](http://trac.rezo.net/trac/spip-zone/browser/_plugins_/_test_/article_pdf) de spip con modificaciones para la internacionalización de los pdf's generados
+- Para el correcto escalado de archivos con transparencias, es recomendable el gestor "convert" o "ImageMagick" para gestionar la creación de miniaturas
+- Para el módulo de agenda es necesario habilitar la opción de Fecha de publicación anterior
 
 Como requisitos adicionales, una vez instaladas las plantillas, es necesario:
 
--  Copiar la arpeta "plugins" de "mollio" al raíz del sitio, y luego, en la parte de gestión de SPIP, activar el plugin article_PDF
--  Crear enlaces simbólicos (o copias) de las plantillas: article-album.html, rubrique-album.html, rubrique-agenda.html y rubrique-synd.html a los correspondientes -(NUM#) según cúal sea el ID de nuestra sección para agenda, galería fotográfica y para titulares de otras webs.
--  Crear un grupo de palabras llamado "Design" con al menos estas palabras clave: "Notadeldia", "Agenda", "Frase", "Banner_cabecera", "Creditos", "rubrique1", "rubrique2", "rubrique3", "rubrique4", "rubrique5" *(Ver parte "Configuración con Palabras Clave")
--  Crear una sección llamada agenda y asociarle tanto a la sección como a los artículos publicados en ella la palabra clave "Agenda" (si se publican artículos con la palabra clave Agenda aparecen en la miniagenda, aunque no en la de la sección)
--  Crear para la sección de titulares, una sección y dentro de ella, una nueva sección por cada web referenciada, de forma que dentro de dicha sección sólo se referencie un sitio web, para que así la plantilla muestre en esa sección, los artículos sindicados como artículos propios. (sólo si se van a referenciar webs externas)
--  Enviar a [Google Sitemaps](http://www.google.com/webmasters/sitemaps/) la url del sitio con la página sitemap (por ejemplo [http://Alufis35.uv.es/spip/spip.php...](http://Alufis35.uv.es/spip/spip.php?page=sitemap)) para que lo indexe
--  Si se utiliza la web para un sitio de noticias, enviar a Google News la solicitud y a Google Sitemaps la url SITIO/spip.php?page=sitemap-googlenews para cumplir con los requisitos para los artículos (requiere redirects del servidor Web (.htaccess))
--  Crear un artículo y asociarle la palabra "Frase", para que las plantillas tomen del título y del logotipo del artículo el logotipo y frase para la web. (opcional)
--  Crear un artículo y asociarle la palabra "Notadeldia" para que se muestre el mensaje del día en la sección central de la portada. (opcional)
--  Crear un artículo y asociarle la palabra "Banner_cabecera" para mostrar en la parte superior derecha el logotipo de dicho artículo y enlazarlo al campo URL de dicho artículo (opcional), si le añadimos una fecha de redacción anterior, podemos especificar la fecha de caducidad en la web (para campañas, etc)
--  Crear la palabra clave "Banners" en Design y asociarla a los artículos que deban salir como al estilo de Banner_cabecera pero en el lateral derecho.
--  Crear un artículo y asociarle la palabra "Creditos" para mostrar dicho enlace en el pie de cada página a una página con información sobre la web, autores, etc (opcional)
--  Crear un grupo de palabras clave y llamarlo Licencia y luego, se van creando palabras clave a las que se le asocia el logotipo de la licencia, en la descripción se pone la URL para leer la licencia completa y en el TEXTO, se pone el código que aparece en [http://creativecommons.org/license/](http://creativecommons.org/license/) tras acabar de escogerla, para que los buscadores indexen el tipo de licencia del artículo
+- Copiar la arpeta "plugins" de "mollio" al raíz del sitio, y luego, en la parte de gestión de SPIP, activar el plugin article_PDF
+- Crear enlaces simbólicos (o copias) de las plantillas: article-album.html, rubrique-album.html, rubrique-agenda.html y rubrique-synd.html a los correspondientes -(NUM#) según cúal sea el ID de nuestra sección para agenda, galería fotográfica y para titulares de otras webs.
+- Crear un grupo de palabras llamado "Design" con al menos estas palabras clave: "Notadeldia", "Agenda", "Frase", "Banner_cabecera", "Creditos", "rubrique1", "rubrique2", "rubrique3", "rubrique4", "rubrique5" *(Ver parte "Configuración con Palabras Clave")
+- Crear una sección llamada agenda y asociarle tanto a la sección como a los artículos publicados en ella la palabra clave "Agenda" (si se publican artículos con la palabra clave Agenda aparecen en la miniagenda, aunque no en la de la sección)
+- Crear para la sección de titulares, una sección y dentro de ella, una nueva sección por cada web referenciada, de forma que dentro de dicha sección sólo se referencie un sitio web, para que así la plantilla muestre en esa sección, los artículos sindicados como artículos propios. (sólo si se van a referenciar webs externas)
+- Enviar a [Google Sitemaps](http://www.google.com/webmasters/sitemaps/) la url del sitio con la página sitemap (por ejemplo [http://Alufis35.uv.es/spip/spip.php...](http://Alufis35.uv.es/spip/spip.php?page=sitemap)) para que lo indexe
+- Si se utiliza la web para un sitio de noticias, enviar a Google News la solicitud y a Google Sitemaps la url SITIO/spip.php?page=sitemap-googlenews para cumplir con los requisitos para los artículos (requiere redirects del servidor Web (.htaccess))
+- Crear un artículo y asociarle la palabra "Frase", para que las plantillas tomen del título y del logotipo del artículo el logotipo y frase para la web. (opcional)
+- Crear un artículo y asociarle la palabra "Notadeldia" para que se muestre el mensaje del día en la sección central de la portada. (opcional)
+- Crear un artículo y asociarle la palabra "Banner_cabecera" para mostrar en la parte superior derecha el logotipo de dicho artículo y enlazarlo al campo URL de dicho artículo (opcional), si le añadimos una fecha de redacción anterior, podemos especificar la fecha de caducidad en la web (para campañas, etc)
+- Crear la palabra clave "Banners" en Design y asociarla a los artículos que deban salir como al estilo de Banner_cabecera pero en el lateral derecho.
+- Crear un artículo y asociarle la palabra "Creditos" para mostrar dicho enlace en el pie de cada página a una página con información sobre la web, autores, etc (opcional)
+- Crear un grupo de palabras clave y llamarlo Licencia y luego, se van creando palabras clave a las que se le asocia el logotipo de la licencia, en la descripción se pone la URL para leer la licencia completa y en el TEXTO, se pone el código que aparece en [http://creativecommons.org/license/](http://creativecommons.org/license/) tras acabar de escogerla, para que los buscadores indexen el tipo de licencia del artículo
 
 ### Funcionamiento
 
@@ -86,7 +85,7 @@ Además de los esqueletos normales de SPIP, estos tienen los siguientes módulos
 
 Actualmente está formado por los siguientes módulos:
 
-~~~
+~~~text
   Módulo              Cometido
   ------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
   mod_agenda         Muestra la mini agenda con los eventos del mes en curso
@@ -133,7 +132,7 @@ Todas estas palabras deberán estar creadas en el grupo "Design" para que no int
 
 Palabras clave "BASE", dentro de Design, como todas las especiales
 
-~~~
+~~~text
   Palabra        Descripción
   -------------- -----------------------------------------------------------------------------------------------------------------------------------------------------
   _is_config   Indica que este archivo debe ser tratado como un fichero de configuración (Debe asignarse a todos los que quieran incluir alguna de las siguientes)

@@ -32,8 +32,7 @@ From that web interface and once logging with `admin` and the password set `Qwer
 
 Now, for doing the 'command-line' part, we will need to install one package on our system and rum some scripts.
 
-~~~
-#!bash
+~~~bash
 # First we'll install amtterm wsmancli
 
 dnf -y install amtterm wsmancli
@@ -72,8 +71,7 @@ After this step, we should be able to use `vinagre target` to access the KVM red
 
 For example, to control power of host you can use:
 
-~~~
-#!bash
+~~~bash
 # Check host status:
 amttool $AMT_HOST info
 
@@ -82,7 +80,6 @@ amttool $AMT_HOST powerup
 
 # Power down a powered-on host:
 amttool $AMT_HOST powerdown
-
 ~~~
 
 Check `man amttool` for other commands like `reset`, `powercycle`.

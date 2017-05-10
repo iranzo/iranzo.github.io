@@ -8,8 +8,8 @@ modified_time: '2011-03-16T22:53:59.256+01:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-5784454064298055044
 blogger_orig_url: http://iranzop.blogspot.com/2011/03/firsts-steps-with-fedora-15-pre-alpha.html
 ---
+Today I've decided to give it a try to F15-prealpha (expected to release tomorrow).
 
-Today I've decided to give it a try to F15-prealpha (expected to release tomorrow).<br />
 The upgrade performed in the unsupported way  (getting and forcing install for newer fedora-release from a mirror then start issuing several yum upgrades) when reasonably good.
 
 Only some minor dependency problems et voilà, system started fine.
@@ -42,6 +42,5 @@ Update Wed 16/Mar/2011
 - Sometimes gdm doesn't show usernames, but you can enter username/password
 - Evolution has a good integration with google services (contacts/calendar/gmail) so you can use it as an offline client
 - Some bugs opened on BZ, but still more than 15 days for 'Beta', and a very good ratio of fixes :)
-
 
 Will keep updating this post with newer information!

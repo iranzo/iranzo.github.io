@@ -25,7 +25,7 @@ Before contributing you need to:
 
 Submitting a change is quite easy:
 
-~~~
+~~~bash
 # Select the project, 'neutron-lbaas' for me
 each='neutron-lbaas'
 git clone git@github.com:openstack/$each.git
@@ -58,7 +58,7 @@ At the moment, I'm trying to close the one to neutron-lib to use the function al
 
 My experience so far, is that sometimes it might be a bit difficult, as git-review is a collaborative environment so different opinions are being shared with different approachs and some of them are 'easier' and some others 'pickier' like having an 'extra space', etc.
 
-Of couse, all the code is checked by some automation engines when submitted, which validates that the code still builds, no formatting errors, etc but many of them can be executed locally by using `tox`, which allows to perform part of the tests like:
+Of course, all the code is checked by some automation engines when submitted, which validates that the code still builds, no formatting errors, etc but many of them can be executed locally by using `tox`, which allows to perform part of the tests like:
 
 - `tox -e pep8`
 - `tox -e py27`
@@ -68,7 +68,7 @@ To respectively, validate pep8 formatting (line length, spaces around operators,
 
 After each set of changes performed to apply the feedback received, ensure to:
 
-~~~
+~~~bash
 # Add the modified files to a commit
 
 git add $files_modified

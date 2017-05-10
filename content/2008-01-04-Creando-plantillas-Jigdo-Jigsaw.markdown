@@ -17,7 +17,7 @@ Por ejemplo, [Debian](http://www.debian.org/) ha estado utilizándolo durante al
 
 Además, si ya disponíamos de ficheros descargados (por ejemplo si iniciamos con la versión X y hemos ido descargando y conservando los ficheros hasta la X.Y, jigdo puede utilizar dichos ficheros, comparándolos con los existentes en la plantilla y así, evitarnos descargar ficheros que ya tuviéramos...
 
-### ¿Cómo funciona?
+### Cómo funciona
 
 Una plantilla Jigdo contiene dos partes: una, el archivo .jigdo que contiene la información de los ficheros que conforman la ISO[^2] y una plantilla que se crea en base al análisis que jigdo-file hace de la imagen original al crear las plantillas.
 
@@ -29,7 +29,7 @@ Por ejemplo, si descargamos la imagen ISO de CentOS [mirror.centos.org](http://a
 
 (Supongamos que la iso está en /var/www/CentOS/isos/ y que la carpeta con el contenido de la iso en /var/www/CentOS/tree/, haremos:
 
-~~~
+~~~bash
 #!bash
 jigdo-file mt -i /var/www/CentOS/isos/CentOS-5.0-i386-bin-DVD/CentOS-5.0-i386-bin-DVD.iso -j /var/www/CentOS/Centos5-DVD.jigdo -t /var/www/CentOS/Centos5-DVD.template —uri Centosmirrors=[http://mirror.centos.org/centos-5/5/os/i386/](http://mirror.centos.org/centos-5/5/os/i386/) /var/www/CentOS/tree/
 ~~~
@@ -49,7 +49,6 @@ Fácil:
 JigDo descargará la descripción, buscará el fichero de plantilla, lo descargará y comenzará la creación de la imagen ISO, descargando los ficheros que no encuentre en la carpeta opcional que podemos indicarle.
 
 Espero que te sea útil :)
-
 
 [^1]:[del repositorio de Dag](http://dag.wieers.com/rpm/packages/jigdo/)
 

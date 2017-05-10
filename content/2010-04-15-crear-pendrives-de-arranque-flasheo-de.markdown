@@ -10,7 +10,6 @@ modified_time: '2010-04-15T14:27:56.211+02:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-1553465470350306245
 blogger_orig_url: http://iranzop.blogspot.com/2010/04/crear-pendrives-de-arranque-flasheo-de.html
 ---
-
 Usando unetbootin (<http://unetbootin.sourceforge.net/>) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.
 
 Si queremos además, crear un fichero ejecutable autodescomprimible, para que el usuario final sólo deba ejecutarlo e introducir un pendrive y que se cree 'solo', deberemos tener además:
@@ -22,7 +21,7 @@ En una carpeta, copiaremos el ejecutable de unetbootin al que llamaremos `unetbo
 
 Yo añado también un fichero `syslinux.cfg` que desactiva la linea `vesamenu.c32` que pone por defecto unedbootin, quedando:
 
-~~~
+~~~cfg
 ---------- syslinux.cfg --------------
 default unetbootindefault
 prompt 0
@@ -40,12 +39,10 @@ Con 7zip comprimiremos los ficheros `flash.img` , `syslinux.cfg` y `unedbootin.e
 
 Crearemos un fichero 'config.txt con las órdenes a ejecutar, por ejemplo
 
-~~~
+~~~bash
 ------------------- config.txt ----------------
 !@Install@!UTF-8!
-</pre>
 RunProgram="unetbootin.exe lang=es method=diskimage imgfile='flash.img' cfgfile='syslinux.cfg' nocustom=y nodistro=y  message='Presione OK para generar Pendrive de Flasheo BIOS'  installtype=USB"
-<pre>
 !@InstallEnd@
 -------------------------------------------------
 ~~~
@@ -56,7 +53,7 @@ Los que hay indicados, ponen el idioma en castellano, indica que usaremos una im
 
 En el paso final, debemos concatenar los ficheros en un único ejecutable
 
-~~~
+~~~bash
 #!bash
 cat 7zS.sfx config.txt todo7z > autoejecutable.exe
 ~~~

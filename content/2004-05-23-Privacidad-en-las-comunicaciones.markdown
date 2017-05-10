@@ -5,7 +5,6 @@ date: 2004-05-23T20:40:00Z
 tags: software, privacy
 lang: es
 ---
-
 Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto.
 
 ### Orígenes
@@ -23,11 +22,11 @@ Uno de los métodos más utilizados era la permutación de letras, si en un mens
 
 Siguiendo el abecedario: abcdefghijklmnñopqrstuvwxyz y una semilla de permutación, el mensaje:
 
--  Hola, este es un mensaje de saludo
+- Hola, este es un mensaje de saludo
 
 ...quedaría con una clave de permutación 13 (rot13)[^1]:
 
--  Ubyn, rfgr rf ha zrafnwr qr fnyhqb
+- Ubyn, rfgr rf ha zrafnwr qr fnyhqb
 
 Que a simple vista parece algo ininteligible.
 
@@ -62,7 +61,7 @@ Se rumorea también que operadores de telefonía escuchan aleatoriamente convers
 
 ### ¿Cómo proteger nuestra privacidad entonces?
 
-*Web*
+#### Web
 
 Para las páginas web, el estándar adoptado son las SSL [^3] que cifran la comunicación entre el cliente y un servidor web autentificado con un certificado digital firmado por ciertas compañías consideradas de confianza y utiliza un cifrado de 56 ó 128 bits. Este cifrado es el más conocido, ya que es el que utilizan bancos, comercios, etc
 
@@ -76,11 +75,11 @@ Como alternativa libre surgió [CACERT](http://www.cacert.org/) que ofrece un se
 
 Estos certificados se basan en cadenas de confianza: tu navegador confía en unas empresas de certificado (CA [^5] y todos los certificados "firmados" por esas empesas son válidos ante el navegador.... algo así como la frase "los amigos de mis amigos son mis amigos"
 
-*Redes*
+#### Redes
 
 Para las conexiones entre diversas redes, se utilizan VPN[^6]. Una VPN enlaza dos equipos a través de otra red (generalmente internet) y permite utilizar un sencillo cifrado, para que los datos enviados no estén desprotegidos,mediante una VPN es fácil unir distintas redes como si fueran una sola a la vez que se crea un poco más de seguridad para los datos que se transmiten[^7].
 
-*Correo Electrónico*
+#### Correo Electrónico
 
 El tema del correo electrónico es un aspecto muy importante, pero poco explorado por los usuarios. El más integrado en los programas más comerciales, es el basado en certificados, al estilo de las SSL, con el inconveniente de que requiere de un certificado firmado por una CA de confianza que es costoso en el caso de una comercial, o poco extendido en el caso de CACERT.
 
@@ -90,13 +89,10 @@ GPG se basa en el sistema de llave pública/llave privada. En dicho sistema, cad
 
 Mediante este sistema, para enviar un mensaje cifrado, hacen falta cuatro claves para llevar a cabo la transferencia completa del mensaje:
 
-~~~
-  ----------------- -----------------
-  *Usuario 1*       *Usuario 2*
-  Clave privada 1   Clave privada 2
-  Clave pública 1   Clave pública 2
-  ----------------- -----------------
-~~~
+  |---|---|
+  |*Usuario 1*|       *Usuario 2*|
+  |Clave privada 1   |Clave privada 2|
+  |Clave pública 1   |Clave pública 2|
 
 El usuario 1, cuando quiere enviar un mensaje cifrado al usuario 2 debe, por un lado cifrar el mensaje con su clave privada y con la clave pública de la otra persona.
 
@@ -114,7 +110,8 @@ Una característica muy importante es la "firma" de los mensajes, que es el equi
 
 Si combinamos la firma de mensajes con el cifrado, dispondremos de un sistema muy bueno de cifrado que nos asegurará privacidad en las comunicaciones.
 
-*Redes inalámbricas*
+#### Redes inalámbricas
+
 WEP[^10] Es un sistema de cifrado equivalente a las SSL pero para redes inalámbricas, pero que ha demostrado ser fácilmente "rompible" y por lo tanto insuficiente para asegurar los datos enviados en una conexión.
 
 En muchos casos se refuerza el WEP con túneles VPN cifrados con [FreeSWAN](http://www.freeswan.org/) además del uso de aplicaciones seguras (SSH, etc)
@@ -162,50 +159,31 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 ¡Utiliza el cifrado!
 
 ### Enlaces
--  [Kriptopolis](http://www.kriptopolis.org/)]
--  [PGP Internacional](http://www.pgpi.org/)
--  [Introducción a GPG: Necesidad y guía rápida en siete pasos](http://bulma.net/body.phtml?nIdNoticia=1684)
--  [Noticia en HispaSec del científico acusado](http://www.hispasec.com/unaaldia/2034) [Patentes de Software]({filename}2004-05-13-Patentes-de-Software.markdown)
--  [Redes Inalámbricas (declaradas) en España](http://www.nodedb.com/index.php?country=europe&state=es&city=)
--  [Preguntas frecuentes sobre informática fiable](http://linuca.org/body.phtml?nIdNoticia=207)
 
+- [Kriptopolis](http://www.kriptopolis.org/)]
+- [PGP Internacional](http://www.pgpi.org/)
+- [Introducción a GPG: Necesidad y guía rápida en siete pasos](http://bulma.net/body.phtml?nIdNoticia=1684)
+- [Noticia en HispaSec del científico acusado](http://www.hispasec.com/unaaldia/2034) [Patentes de Software]({filename}2004-05-13-Patentes-de-Software.markdown)
+- [Redes Inalámbricas (declaradas) en España](http://www.nodedb.com/index.php?country=europe&state=es&city=)
+- [Preguntas frecuentes sobre informática fiable](http://linuca.org/body.phtml?nIdNoticia=207)
 
 [^1]: Web con un programa que cifra y descifra en [www.rot13.com](http://www.rot13.com/)
-
-[^2]:[Informe Echeclon](http://altavoz.nodo50.org/echelon2000.htm), [El Programa Echelon](http://www.ugt.es/globalizacion/echelon.htm)
-
-[^3]:Secure Socket Layers: Capas de sockets seguras
-
+[^2]: [Informe Echeclon](http://altavoz.nodo50.org/echelon2000.htm), [El Programa Echelon](http://www.ugt.es/globalizacion/echelon.htm)
+[^3]: Secure Socket Layers: Capas de sockets seguras
 [^4]: Existe una petición a Mozilla foundation para incluir estos certificados con su navegador
-
 [^5]: Certification Authority
-
 [^6]: Virtual Private Network
-
 [^7]: Por lo que son ampliamente utilizadas para interconectar organismos con diversas delegaciones
-
 [^8]: GNU Privacy Guard
-
 [^9]: Pretty Good Privacy: Privacidad bastante buena
-
 [^10]: Wired Equivalent Privacy
-
 [^11]: Técnica consistente en viajar con un vehículo y un equipo con posibilidad de conexión inalámbrica detectando las redes accesibles y marcándolas para su posterior acceso
-
 [^12]: Leyes que actualmente impiden a científicos de países "no buenos" publicar en revistas americanas, congresos, etc...
-
 [^13]: Los pongo aqui porque es el argumento recientemente utilizado desde los atentados del 11 de Septiembre para cualquier cosa que se aleje del pensamiento único: Antipatriotismo, terrorista, etc (un poco al igual que antes los "malos" eran los "comunistas")
-
 [^14]: Por eso el Software Libre aventaja al Privativo, en que al haber libre disponibilidad del código, se puede analizar en busca de puertas traseras
-
 [^15]: Le acusan con cargos de Terrorismo
-
 [^16]: Seguridad por ocultación: aunque muchas empresas basan el modelo de seguridad en este sitema, se corre el riesgo de que el día que alguien de "dentro" difunda la información, se vean todos los fallos y alguien lo aproveche malintencionadamente ya que los fallos existen, sólo se han "tapado"
-
 [^17]: Peer to Peer: Programas utilizados para el intercambio de archivos de igual a igual
-
 [^18]: DRM:Digital Rights Management
-
 [^19]: Trusted Computing Platform Alliance
-
 [^20]: Nombre en Clave del sistema operativo de MS que permitiría un control absoluto bajo las políticas de "seguridad" de TCPA

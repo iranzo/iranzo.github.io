@@ -36,11 +36,11 @@ El clamav lo único que tenemos que hacer es configurarlo durante la instalació
 
 Tal y como indica el Readme.Debian del paquete MailScanner (bueno, acabo de darme cuenta que nanai, han quitado el documento de montarlo con exim3, así que lo haré en base al que tengo yo ya puesto ;))
 
-####Exim:
+#### Exim:
 
 El caso es que una vez tenemos una configuración válida de exim (en `/etc/exim/exim.conf`), tenemos que hacer lo siguiente:
 
-~~~
+~~~bash
 #!bash
 cd /etc/exim
 mv exim.conf exim_original.conf
@@ -55,7 +55,7 @@ Y ahora, empezamos a editar archivos...
 
 Lo primero es cambiar la configuración del exim_incoming.conf y añadimos al principio del archivo de configuración, tras los comentarios lo siguiente:
 
-~~~
+~~~ini
 #!ini
 # Mailscanner config
 spool_directory = /var/spool/exim_incoming
@@ -66,7 +66,7 @@ De este modo exim_incoming sólo almacenará los correos en la carpeta indicada,
 
 Luego al principio de la parte DIRECTORS, justo tras los comentarios del encabezamiento añadimos:
 
-~~~
+~~~ini
 #!ini
 #Mailscanner config
 defer_director:
@@ -76,7 +76,7 @@ defer_director:
 
 Y luego justo tras el encabezamiento de la sección ROUTERS
 
-~~~
+~~~ini
 #!ini
 #mailscanner config
 defer_router:
@@ -89,11 +89,11 @@ Acabado con el exim_incoming.conf, ahora vamos a retocar el exim_outgoing.conf y
 
 Hemos de crear el /etc/cron.d/exim con el siguiente contenido:
 
-~~~
+~~~bash
 #!bash
 # /etc/cron.d/exim: crontab fragment for exim
 # Run queue every 15 minutes
-08,23,38,53 * * * * mail if [ -x /usr/sbin/exim -a -f /etc/exim/exim_outgoing.conf ]; then /usr/sbin/exim -C /etc/exim/exim_outgoing.conf -q ; fi    
+08,23,38,53 * * * * mail if [ -x /usr/sbin/exim -a -f /etc/exim/exim_outgoing.conf ]; then /usr/sbin/exim -C /etc/exim/exim_outgoing.conf -q ; fi
 # Tidy databases
 13 6 * * * mail if [ -x /usr/sbin/exim_tidydb ]; then /usr/sbin/exim_tidydb /var/spool/exim retry >/dev/null; fi
 17 6 * * * mail if [ -x /usr/sbin/exim_tidydb ]; then /usr/sbin/exim_tidydb /var/spool/exim wait-remote_smtp >/dev/null; fi
@@ -103,7 +103,7 @@ Hemos de crear el /etc/cron.d/exim con el siguiente contenido:
 
 Con esta entrada en el cron, nos aseguramos que se envíen los correos de salida cada 15 minutos.
 
-####MailScanner:
+#### MailScanner:
 
 Vamos a pasar a configurar el MailScanner editando el `/etc/MailScanner/MailScanner.conf`
 
@@ -113,7 +113,7 @@ Yo recomendaría cambiar `%report-dir% = /etc/MailScanner/reports/es` para confi
 
 Además:
 
-~~~
+~~~ini
 #!ini
 Incoming Queue Dir = /var/spool/exim_incoming/input
 Outgoing Queue Dir = /var/spool/exim/input
@@ -121,7 +121,7 @@ Outgoing Queue Dir = /var/spool/exim/input
 
 Para indicar de dónde se recoge el correo y dónde se ubica tras los controles pertinentes y
 
-~~~
+~~~ini
 #!ini
 MTA = exim
 Sendmail2 = /usr/sbin/exim -C /etc/exim/exim_outgoing.conf
@@ -129,7 +129,7 @@ Sendmail2 = /usr/sbin/exim -C /etc/exim/exim_outgoing.conf
 
 para configurar nuestro demonio de correo, y el comando necesario para realizar la entrega final
 
-~~~
+~~~ini
 #!ini
 Virus Scanning = yes
 Virus Scanners = clamav
@@ -138,7 +138,7 @@ Virus Scanners = clamav
 A partir de aquí vienen unas opciones interesantes (os podéis leer el archivo de configuración para entenderlas), pero para destacar, por ejemplo permite quitar los IFRAMES para así evitar muchos de los virus que se propagan hoy en día... puede que clamav no los detectase, pero como mailscanner puede eliminar esos tags, esos archivos serían inofensivos (además, permite bloqueos automáticos de .scr, .pif, etc), incluso bloquear formularios en mails... y lo mejor: convertir esas órdenes o incluso
 el mensaje entero de HTML a texto ;)
 
-~~~
+~~~ini
 #!ini
 Spam Checks = yes
 Use SpamAssassin = yes

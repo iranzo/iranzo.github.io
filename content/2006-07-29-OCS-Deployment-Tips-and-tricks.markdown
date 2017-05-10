@@ -15,7 +15,7 @@ After some time, affected and with working software deployment (Read [OCS Invent
 
 ### Software
 
-~~~
+~~~raw
   ------------------------------------------------------------------- ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Software**                                                        Command switches                                                  **Result**
   [OCS Inventory](http://ocsinventory.sf.net/)                        /S /SERVER:serverip                                               Installs new OCS version on top of older one, this is only recommended if package deployment was setup successfully, if not, use NSIS script referred at OCS Inventory Package Deployment
@@ -31,7 +31,7 @@ After some time, affected and with working software deployment (Read [OCS Invent
 
 ### Registry
 
-~~~
+~~~raw
   Hive   Path                                                                             Value          Utility
   ------ -------------------------------------------------------------------------------- -------------- ---------------------------------------------------------------------------
   HKLM   SOFTWAREMicrosoftWindowsCurrentVersionRun                                *             Know which programs are executed at startup
@@ -46,7 +46,7 @@ After some time, affected and with working software deployment (Read [OCS Invent
 
 ### Packages
 
-~~~
+~~~raw
   Action   File   Command line                                                 Description
   -------- ------ ------------------------------------------------------------ -----------------------------------------------------------------------------------------------
   RUN             "%PROGRAMFILES%RealVNCVNC4winvnc4.exe" -connect HOST   Launches a new VNC client to HOST, allowing to watch Desktop as HOST initiated the connection

@@ -57,12 +57,13 @@ SECOND UPDATE: After moving the notebook for connecting a parallel cable from my
 I've the following hardware if someone interested in buying it:
 
 Olivetti Echos P75 system:
--  Motherboard
--  DSTN Screen
--  Spanish Keyboard
--  Sound card
--  Floppy drive
--  Used battery
--  Power adapter
+
+- Motherboard
+- DSTN Screen
+- Spanish Keyboard
+- Sound card
+- Floppy drive
+- Used battery
+- Power adapter
 
 THIRD UPDATE: 17th November 2007: At [How to create a digital frame](http://www.dkomputer.com/cadrephoto/index_us.html) says that the problem with the blinking cursor is related with battery being exhausted (as a visitor pointed too). Will try :)

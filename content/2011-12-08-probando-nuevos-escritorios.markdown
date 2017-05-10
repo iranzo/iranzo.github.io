@@ -9,7 +9,6 @@ modified_time: '2011-12-08T11:21:33.113+01:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-7897790878360794361
 blogger_orig_url: http://iranzop.blogspot.com/2011/12/probando-nuevos-escritorios.html
 ---
-
 Hace ya años que pasé de KDE con la llegada de KDE 3 a utilizar GNOME, más 'espartano', pero con mejor rendimiento.
 
 Con Fedora 15 pasé a utilizar GNOME 3, bastante 'innovador', algo extraño, pero me fui acostumbrando relativamente bien, pero con la llegada de Fedora 16 y la versión 3.2, noto el equipo (que sigue siendo el mismo) con frecuentes enganchones y lentitud.
