@@ -5,7 +5,7 @@ import datetime
 
 AUTHOR = u'Pablo Iranzo Gómez'
 SITENAME = u"Pablo Iranzo Gómez's blog"
-SITEURL = u'/'
+SITEURL = u'https://iranzo.github.io/'
 
 PATH = 'content'
 
