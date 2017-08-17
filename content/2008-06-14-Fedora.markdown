@@ -9,7 +9,7 @@ lang: es
 
 ### Introducción
 
-[Fedora](http://fedoraproject.org/) es una distribución [Linux]({%filename}2004-03-18-Que-es-Linux.markdown) fruto del desarrollo de la extinta Red Hat Linux.
+[Fedora](http://fedoraproject.org/) es una distribución [Linux]({filename}2004-03-18-Que-es-Linux.markdown) fruto del desarrollo de la extinta Red Hat Linux.
 
 Red Hat Linux se readaptó al entorno empresarial proporcionado las opciones de soporte que las empresas buscaban en el software libre y del código de Red Linux, nacieron dos versiones, Red Hat Enterprise Linux, disponible para clientes con subscripciones (Red Hat no vende "licencias de uso", vende servicios de soporte, actualización en forma de subscripciones, puede verse como una especie de tarifa plana para acceder a todas las versiones de los productos subscritos, soporte, etc) válidas y Fedora Core, sucesor directo de Red Hat Linux.
 
