@@ -8,7 +8,7 @@ category: blog
 description:
 ---
 ## Background
-[Citellus](2017-07-26-Citellus-framework-for-detecting-known-issues.markdown) allows to check a sosreport againt known problems identified on the provided tests.
+[Citellus](2017-07-26-Citellus-framework-for-detecting-known-issues) allows to check a sosreport againt known problems identified on the provided tests.
 
 This approach is easy to implement and easy to test but has limitations when a problem can span across several hosts and only the problem reveals itself when a general analysis is performed.
 
