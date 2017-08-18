@@ -59,6 +59,8 @@ make altinstall
 ln -s /usr/local/bin/python3.5 /usr/bin/
 ~~~
 
+## Installing Jenkins
+
 For the jenkins installation it's easier, there's a 'stable' repo for RHEL and the procedure is [documented](https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions):
 
 ~~~bash
@@ -82,6 +84,8 @@ During it, you'll be asked for a password on a file on disk and you'll be prompt
 
 Also, we'll be offered to deploy the most common set of plugins, choose that option, and later we'll add the `gerrit` plugin and `Python`.
 
+## Configure Jenkins
+
 Once we can login into gerrit, we need to enter the administration area, and install new plugins and install [Gerrit Trigger](https://wiki.jenkins.io/display/JENKINS/Gerrit+Trigger).
 
 ![Manage Jenkins]({filename}/imagen/jenkins/manage.png)
@@ -101,6 +105,8 @@ Once done, click on `Test Connection` and validate if it worked.
 At the time of this writing, version reported by plugin was `2.13.6-3044-g7e9c06d` when connected to gerrithub.io.
 
 ![Gerrit servers]({filename}/imagen/jenkins/gerritconfig.png)
+
+### Creating a Job
 
 Now, we need to create a Job (first option in Jenkins list of jobs).
 
@@ -140,6 +146,8 @@ tox.cmdline()
 From this point, any new push (review) made against gerrit will trigger a Jenkins build (in this case, running `tox`). Additionally, a manual trigger of the job can be executed to validate the behavior.
 
 ![Manual trigger]({filename}/imagen/jenkins/manualtrigger.png)
+
+### Checking execution
 
 In our project, tox checks some UT's on `python 2.7`, and `python 3.5`, as well as python's `PEP` compliance.
 
