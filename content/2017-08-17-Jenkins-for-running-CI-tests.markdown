@@ -3,17 +3,16 @@ layout: post
 title: Jenkins for running CI tests
 date: 2017-08-17 23:54:00 +0200
 comments: true
-tags: python, openstack, sysmgmt, bash, sosreport, citellus, jenkins, unittest
+tags: python, openstack, sysmgmt, bash, sosreport, citellus, jenkins, unittest, gerrit
 category: blog
-status: draft
 description:
 ---
 ## Why?
-When working on [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.markdown) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.markdown) it soon became evident that Unit testing for validating the changes was a requirement.
+While working on [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.markdown) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.markdown) it soon became evident that Unit testing for validating the changes was a requirement.
 
-Initially, using a ´.travis.yml` file contained in the repo and the free service provided by <travis-ci.org> we soon got <github.com> repo providing information about if the builds succeded or not.
+Initially, using a `.travis.yml` file contained in the repo and the free service provided by <https://travis-ci.org> we soon got <https://github.com> repo providing information about if the builds succeded or not.
 
-When it was decided to move to <gerrithub.io> to work in a more similar way to what is being done in upstream, we improved on the code comenting (peer review), but we lost the ability to run the tests in an automated way until the change was merged into github.
+When it was decided to move to <https://gerrithub.io> to work in a more similar way to what is being done in upstream, we improved on the code comenting (peer review), but we lost the ability to run the tests in an automated way until the change was merged into github.
 
 After some research, it became more or less evident that another tool, like Jenkins was required to automate the UT process and report to individual reviews about the status.
 
@@ -29,6 +28,7 @@ Some initial steps are required for integration:
 In order to setup the Jenkins environment a new VM was spawned in one of our RHV servers.
 
 This VM was installed with:
+
 - 20 Gb of HDD
 - 2 Gb of RAM
 - 2 VCPU
@@ -76,11 +76,15 @@ This will install and start jenkins and enable the firewall to access it.
 
 If you can get to the url of your server at the port 8080, you'll be presented an initial procedure for installing Jenkins.
 
+![Jenkins dashboard]({filename}/imagen/jenkins/dashboard.png)
+
 During it, you'll be asked for a password on a file on disk and you'll be prompted to create an user we'll be using from now on to configure.
 
-Also, we'll be offered to deploy the most common set of plugins, choose that option, and later we'll add the gerrit plugin.
+Also, we'll be offered to deploy the most common set of plugins, choose that option, and later we'll add the `gerrit` plugin and `Python`.
 
 Once we can login into gerrit, we need to enter the administration area, and install new plugins and install [Gerrit Trigger](https://wiki.jenkins.io/display/JENKINS/Gerrit+Trigger).
+
+![Manage Jenkins]({filename}/imagen/jenkins/manage.png)
 
 Above link details how to do most of the setup, in this case, for gerrithub, we required:
 
@@ -90,4 +94,57 @@ Above link details how to do most of the setup, in this case, for gerrithub, we 
 - Username: **our-github-jenkins-user**
 - SSH keyfile: **path_to_private_sshkey**
 
+![Gerrit trigger configuration]({filename}/imagen/jenkins/gerrit-trigger-config.png)
+
 Once done, click on `Test Connection` and validate if it worked.
+
+At the time of this writing, version reported by plugin was `2.13.6-3044-g7e9c06d` when connected to gerrithub.io.
+
+![Gerrit servers]({filename}/imagen/jenkins/gerritconfig.png)
+
+Now, we need to create a Job (first option in Jenkins list of jobs).
+
+- Name: **Citellus**
+- Discard older executions:
+    - Max number of executions to keep: **10**
+- Source code Origin: ** Git**
+    - URL: **ssh://<username>@review.gerrithub.io:29418/zerodayz/citellus**
+    - Credentials: **jenkins** (Created based on the ssh keypair defined above)
+    - Branch: **
+- Triggers for launch:
+    - Change Merged
+    - Commend added with regexp: .*recheck.*
+    - Patchset created
+    - Ref Updated
+    - Gerrit Project:
+        - Type: **plain**
+        - Pattern: **zerodayz/citellus**
+    - Branches:
+        - Type: **Path**
+        - Pattern: **
+- Execute:
+    - Python script:
+
+~~~python
+import os
+import tox
+
+os.chdir(os.getenv('WORKSPACE'))
+
+# environment is selected by ``TOXENV`` env variable
+tox.cmdline()
+~~~
+
+![Jenkins Job configuration]({filename}/imagen/jenkins/jobconfig.png)
+
+From this point, any new push (review) made against gerrit will trigger a Jenkins build (in this case, running `tox`). Additionally, a manual trigger of the job can be executed to validate the behavior.
+
+![Manual trigger]({filename}/imagen/jenkins/manualtrigger.png)
+
+In our project, tox checks some UT's on `python 2.7`, and `python 3.5`, as well as python's `PEP` compliance.
+
+Now, Jenkins will build, and post messages on the review, stating that the build has started and the results of it, setting also the 'Verified' flag.
+
+![Gerrithub commens by Jenkins]({filename}/imagen/jenkins/gitreview.png)
+
+Enjoy having automated validation of new reviews before accepting them into your code!
