@@ -116,9 +116,9 @@ Now, we need to create a Job (first option in Jenkins list of jobs).
 - Source code Origin: ** Git**
     - URL: **ssh://<username>@review.gerrithub.io:29418/zerodayz/citellus**
     - Credentials: **jenkins** (Created based on the ssh keypair defined above)
+    - Branches to build: $GERRIT_BRANCH
     - Advanced
         - Refspec: **$GERRIT_REFSPEC**
-    - Branch: **
     - Add additional behaviours
         - Strategy for choosing what to build:
             - Choosing strategy **Gerrit Trigger**
@@ -132,7 +132,7 @@ Now, we need to create a Job (first option in Jenkins list of jobs).
         - Pattern: **zerodayz/citellus**
     - Branches:
         - Type: **Path**
-        - Pattern: **$GERRIT_BRANCH**
+        - Pattern: **`**`**
 - Execute:
     - Python script:
 
