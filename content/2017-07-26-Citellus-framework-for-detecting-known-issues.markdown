@@ -38,9 +38,9 @@ The philosphy behind is very easy:
     - Plugin should be run or skipped if it's a live system, a sosreport
     - Plugin should run because of required file or package missing
     - Provide return code of:
-        - 0 for success
-        - 1 for failure
-        - 2 for skip
+        - **$RC_OKAY** for **success**
+        - **$RC_FAILED** for **failure**
+        - **$RC_SKIPPED** for **skip**
         - anything else (Undetermined error)
     - Provide 'stderr' with relevant messages:
         - Reason to be skipped
@@ -66,15 +66,20 @@ if [ "$CITELLUS_LIVE" = "0" ];  ## Checks if we're running live or not
 then
         grep -q ovirt-hosted-engine-ha $CITELLUS_ROOT/installed-rpms ## checks package
         returncode=$?  #stores return code
-        echo “ovirt-hosted-engine is not installed “ >&2 #Outputs info
-        exit $returncode #returns code to wrapper
+        if [ "x$returncode" == "x0" ];
+        then
+            exit $RC_OKAY
+        else
+            echo “ovirt-hosted-engine is not installed “ >&2 #Outputs info
+            exit $RC_FAILED e #returns code to wrapper
+        fi
 else
         echo “Not running on Live system” >&2
-        exit 2
+        exit $RC_SKIPPED
 fi
 ~~~
 
-Above example is a bit 'hacky', as we count on wrapper not outputing information if return code is `0`, so it should have another conditional to write output or not.
+Above example is a bit 'hacky', as we count on wrapper not outputing information if return code is `$RC_OKAY`, so it should have another conditional to write output or not.
 
 ## How to debug?
 Easiest way to do trial-error would be to create a new folder for your plugins to test and use something like this:
