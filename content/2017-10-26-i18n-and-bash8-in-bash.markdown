@@ -71,12 +71,16 @@ Just in case, some remarks:
 
 - As we've strings in citellus.py, magui.py, etc and the bash files, I did update a script to extract the required strings:
 
-    ~~~sh
-    python setup.py extract_messages -F babel.cfg -k _L
-    find citellus -name "*.sh" -exec bash --dump-po-strings "{}" \; > citellus/locale/citellus-plugins.pot
-    msgcat -F citellus/locale/citellus.pot citellus/locale/citellus-plugins.pot > citellus/locale/citellus-new.pot
-    cat citellus/locale/citellus-new.pot > citellus/locale/citellus.pot
-    ~~~
+~~~sh
+# Extract python strings
+python setup.py extract_messages -F babel.cfg -k _L
+# Extract bash strings
+find citellus -name "*.sh" -exec bash --dump-po-strings "{}" \; > citellus/locale/citellus-plugins.pot
+# Merge bash and python strings
+msgcat -F citellus/locale/citellus.pot citellus/locale/citellus-plugins.pot > citellus/locale/citellus-new.pot
+# Move file to destination
+cat citellus/locale/citellus-new.pot > citellus/locale/citellus.pot
+~~~
 
 In this way, we're ready to use on editor to translate all the strings for the whole citellus + plugins.
 
