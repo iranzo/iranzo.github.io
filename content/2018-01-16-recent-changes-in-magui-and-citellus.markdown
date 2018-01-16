@@ -56,7 +56,7 @@ Some of the changes include...
     - `citellus-metadata`
         - Outputs metadata gathered by `metadata` plugins in citellus arranged by plugin and sosreport
 - First plugins that compare data received from citellus on global level
-    - Plugins are written in python and use each plugin `id` to just work on the data they know how to proces
+    - Plugins are written in python and use each plugin `id` to just work on the data they know how to process
     - `pipeline-yaml`
         - Checks if pipeline.yaml and warns if is different across hosts
     - `seqno`
