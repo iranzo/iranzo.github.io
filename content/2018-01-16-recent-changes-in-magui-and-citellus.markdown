@@ -51,17 +51,17 @@ Some of the changes include...
 - If there's an existing `citellus.json` magui does load it to speed it up process across multiple sosreports.
 - Magui can also use `ansible-playbook` to copy citellus program to remote host and run there the command, and bring back the generated `citellus.json` so you can quickly run citellus across several hosts without having to manually perform operations or generate sosreports.
 - Moved prior data to two plugins:
-    - citellus-outputs
+    - `citellus-outputs`
         - Citellus plugins output arranged by plugin and sosreport
-    - citellus-metadata
-        - Outputs metadata gathered by `metadatap` plugins in citellus arranged by plugin and sosreport
+    - `citellus-metadata`
+        - Outputs metadata gathered by `metadata` plugins in citellus arranged by plugin and sosreport
 - First plugins that compare data received from citellus on global level
     - Plugins are written in python and use each plugin `id` to just work on the data they know how to proces
-    - pipeline-yaml
+    - `pipeline-yaml`
         - Checks if pipeline.yaml and warns if is different across hosts
-    - seqno
+    - `seqno`
         - Checks latest galera seqno on hosts
-    - release
+    - `release`
         - Reports RHEL release across hosts and warns if is different across hosts
 - Enable `quiet` mode on the data received from citellus as well as local plugins, so only outputs with ERROR or different output on sosreports is shown, even on magui plugins.
 
