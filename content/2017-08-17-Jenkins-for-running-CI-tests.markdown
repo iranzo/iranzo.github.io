@@ -114,7 +114,7 @@ Now, we need to create a Job (first option in Jenkins list of jobs).
 - Discard older executions:
     - Max number of executions to keep: **10**
 - Source code Origin: ** Git**
-    - URL: **ssh://<username>@review.gerrithub.io:29418/zerodayz/citellus**
+    - URL: **ssh://<username>@review.gerrithub.io:29418/citellusorg/citellus**
     - Credentials: **jenkins** (Created based on the ssh keypair defined above)
     - Branches to build: $GERRIT_BRANCH
     - Advanced
@@ -129,7 +129,7 @@ Now, we need to create a Job (first option in Jenkins list of jobs).
     - Ref Updated
     - Gerrit Project:
         - Type: **plain**
-        - Pattern: **zerodayz/citellus**
+        - Pattern: **citellusorg/citellus**
     - Branches:
         - Type: **Path**
         - Pattern: **`**`**

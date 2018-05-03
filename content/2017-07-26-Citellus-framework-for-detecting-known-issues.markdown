@@ -28,7 +28,7 @@ Here is where Citellus comes to play.
 
 ## Citellus
 
-The Citellus project <https://github.com/zerodayz/citellus/> created by my colleague Robin, aims on creating a set of tests that can be executed against a live system or an uncompressed sosreport tarball (it depends on the test if it applies to one or the other).
+The Citellus project <https://github.com/citellusorg/citellus/> created by my colleague Robin, aims on creating a set of tests that can be executed against a live system or an uncompressed sosreport tarball (it depends on the test if it applies to one or the other).
 
 The philosphy behind is very easy: 
 - There's a wrapper `citellus.py` which allows to select plugins to use, or folder containing plugins, verbosity, etc and a sosreport folder to act against.
