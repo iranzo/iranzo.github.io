@@ -16,3 +16,5 @@ Check the schedule at <https://supersec.es/programa/>
 I'll be presenting on 13th may at 10:50, and the slide deck to be used is at <https://github.com/citellusorg/citellus/blob/master/doc/supersec2018-presentation-ES.md> and I'll be updating this once I get the recording URL.
 
 Enjoy!
+
+PD: Hilighted in Citellus blog at <https://citellus.org/blog/2018/04/16/supersec/>
