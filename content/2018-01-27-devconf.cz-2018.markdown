@@ -9,7 +9,7 @@ description:
 ---
 ## Presentation at Devconf.cz 2018!
 
-As hilighted in the prior editio of the ['What's new']({filename}2018-01-16-recent-changes-in-magui-and-citellus.markdown), we got a slot for DevConf.cz 2018.
+As hilighted in the prior edition of the ['What's new']({filename}2018-01-16-recent-changes-in-magui-and-citellus.markdown), we got a slot for DevConf.cz 2018.
 
 During that [slot](https://devconfcz2018.sched.com/event/DJXG/detect-pitfalls-of-osp-deployments-with-citellus), my colleagues Martin, Pablo and myself were presenting on the history and basics of Citellus and how it helps on debugging issues and providing faster analysis of already known ones.
 
