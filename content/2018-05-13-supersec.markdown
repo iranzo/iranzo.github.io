@@ -1,0 +1,18 @@
+---
+layout: post
+title: SuperSec 2018!
+date: 2018-05-08 10:50:00 +0200
+comments: true
+tags: citellus, magui, conference, supersec
+category: blog
+description:
+---
+## Presentation at SuperSec 2018!
+
+I've also got a slot at SuperSec 2018 (https://supersec.es/): Congress on secure software development, happening in Almería, Spain on the weekend on 12-13 May. 
+
+Check the schedule at <https://supersec.es/programa/>
+
+I'll be presenting on 13th may at 10:50, and the slide deck to be used is at <https://github.com/citellusorg/citellus/blob/master/doc/supersec2018-presentation-ES.md> and I'll be updating this once I get the recording URL.
+
+Enjoy!
