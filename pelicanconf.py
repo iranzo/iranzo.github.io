@@ -28,13 +28,15 @@ STATIC_PATHS = [
     'imagen',
     'extra/robots.txt',
     'extra/favicon.ico',
-    'extra/keybase.txt'
+    'extra/keybase.txt',
+    'extra/google3bc953001343abe6.html'
 ]
 
 EXTRA_PATH_METADATA = {
     'extra/keybase.txt': {'path': 'keybase.txt'},
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/google3bc953001343abe6.html' : {'path': 'google3bc953001343abe6.html'}
 }
 
 CACHE_CONTENT = False
