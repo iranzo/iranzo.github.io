@@ -1,9 +1,11 @@
 ---
+comments: true
 layout: post
 title: Migrar de SPIP 1.8 a 1.9
 date: 2006-07-01T14:48:00Z
 tags: spip, cms
 lang: es
+
 ---
 
 ### Introducción a SPIP 1.9

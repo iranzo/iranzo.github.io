@@ -4,6 +4,7 @@ title: Anillo Astronómico
 date: 2004-06-18T15:33:00Z
 tags: science, astronomy
 lang: es
+comments: true
 ---
 
 ### ¿Qué es?

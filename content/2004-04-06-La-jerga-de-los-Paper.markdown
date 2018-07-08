@@ -3,6 +3,7 @@ layout: post
 title: La jerga de los Paper
 date: 2004-04-06T20:01:00Z
 tags: general
+comments: true
 lang: es
 ---
 

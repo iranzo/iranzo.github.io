@@ -4,6 +4,7 @@ title: Montar un router con la idea de wireless
 date: 2003-06-18T21:39:00Z
 tags: linux, wireless, router, firewall
 lang: es
+comments: true
 ---
 
 ### Introducción

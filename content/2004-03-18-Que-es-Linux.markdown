@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: post
 title: ¿Qué es Linux?
 date: 2004-03-18T22:50:00Z

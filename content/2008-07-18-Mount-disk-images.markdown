@@ -3,6 +3,7 @@ layout: post
 title: Mount disk images
 date: 2008-07-18T06:17:02Z
 author: Pablo Iranzo Gómez
+comments: true
 tags: linux, xen
 ---
 

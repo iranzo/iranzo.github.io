@@ -8,6 +8,7 @@ lang: es
 modified_time: '2011-05-09T21:39:53.954+02:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-7983751062601820085
 blogger_orig_url: http://iranzop.blogspot.com/2010/04/dropbox-en-fedora.html
+comments: true
 ---
 Para instalar dropbox en Fedora, no es necesario realizar excesivos pasos:
 

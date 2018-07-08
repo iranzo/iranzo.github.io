@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: post
 title: ¿Qué son las news?
 date: 2004-04-03T20:04:00Z

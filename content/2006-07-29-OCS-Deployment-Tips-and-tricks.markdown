@@ -3,6 +3,7 @@ layout: post
 title: OCS Deployment Tips and tricks
 date: 2006-07-29T20:13:00Z
 tags: ocs, linux
+comments: true
 ---
 
 Prior to using the following info for creating own-made packages, let's test if everything is working fine.

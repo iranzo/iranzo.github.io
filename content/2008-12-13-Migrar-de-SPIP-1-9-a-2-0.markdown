@@ -3,6 +3,7 @@ layout: post
 title: Migrar de SPIP 1.9 a 2.0
 date: 2008-12-13T18:10:58Z
 author: Pablo Iranzo Gómez
+comments: true
 tags: spip
 lang: es
 ---

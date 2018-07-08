@@ -3,6 +3,7 @@ layout: post
 title: Customize RHEL/CentOS installation media (EL4/EL5+)
 date: 2010-01-23T08:25:00Z
 author: Pablo Iranzo Gómez
+comments: true
 tags: rhel, centos, linux, installation
 ---
 ## Introduction

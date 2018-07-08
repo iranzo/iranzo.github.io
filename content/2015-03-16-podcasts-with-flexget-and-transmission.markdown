@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: post
 title: Podcasts with flexget and transmission
 author: Pablo Iranzo Gómez

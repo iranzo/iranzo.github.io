@@ -4,6 +4,7 @@ layout: post
 title: Gestor de Volúmenes Lógicos (LVM)
 date: 2007-03-09T16:39:35Z
 tags: linux, lvm
+comments: true
 lang: es
 save_as: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/index.html
 url: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/

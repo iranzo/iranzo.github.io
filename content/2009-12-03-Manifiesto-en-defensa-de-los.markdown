@@ -3,6 +3,7 @@ layout: post
 title: Manifiesto en defensa de los derechos fundamentales en Internet
 date: 2009-12-03T20:48:43Z
 author: Pablo Iranzo Gómez
+comments: true
 tags: general
 lang: es
 ---

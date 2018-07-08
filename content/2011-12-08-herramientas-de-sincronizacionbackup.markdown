@@ -4,6 +4,7 @@ title: Herramientas de sincronización/backup
 date: '2011-12-08T11:52:00.000+01:00'
 author: Pablo Iranzo Gómez
 lang: es
+comments: true
 tags: fedora,dropbox
 modified_time: '2011-12-08T12:39:18.043+01:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-547842584943144879

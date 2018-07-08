@@ -3,6 +3,7 @@ layout: post
 title: Preparar Firefox para un kiosco
 date: 2008-05-03T23:13:33Z
 tags: linux, firefox, desktop
+comments: true
 lang: es
 ---
 

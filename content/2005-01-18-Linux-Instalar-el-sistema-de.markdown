@@ -4,6 +4,7 @@ title: Linux - Instalar el sistema de ficheros raíz sobre RAID
 date: 2005-01-18T20:12:00Z
 tags: linux, raid, mdadm
 lang: es
+comments: true
 ---
 
 Si queremos implementar un disco espejo en el sistema raíz, nos encontramos con que muchas distribuciones no están preparadas, siendo un incordio tener que prepararlas para esta finalidad... con este artículo veremos cómo conseguirlo.

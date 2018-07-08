@@ -4,6 +4,7 @@ title: Manual de la web SPIP
 date: 2004-11-25T18:44:00Z
 tags: cms, spip
 lang: es
+comments: true
 ---
 
 ### Manual de instrucciones de la web

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: post
 title: Configurar Exim3 con MailScanner y ClamAV
 date: 2004-02-06T21:31:00Z
