@@ -3,6 +3,7 @@ slug: Logical-volume-manager-LVM
 title: Logical volume manager (LVM)
 layout: post
 date: 2008-04-20T23:03:52Z
+comments: true
 tags: linux, lvm
 lang: en
 ---

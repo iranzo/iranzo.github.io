@@ -4,6 +4,7 @@ title: Error según número de pitidos en la BIOS
 date: 2004-04-12T09:54:00Z
 tags: hardware
 lang: es
+comments: true
 slug: Error-segun-numero-de-pitidos-en-es
 ---
 

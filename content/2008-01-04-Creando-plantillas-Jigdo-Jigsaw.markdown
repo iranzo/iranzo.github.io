@@ -4,6 +4,7 @@ title: Creando plantillas Jigdo (Jigsaw Download) para descargar ISO's
 date: 2008-01-04T18:43:29Z
 tags: linux, iso
 lang: es
+comments: true
 url: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/
 save_as: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/index.html
 slug: Creating-Jigsaw-Download-Jigdo

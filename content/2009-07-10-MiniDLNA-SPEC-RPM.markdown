@@ -3,6 +3,7 @@ layout: post
 title: MiniDLNA SPEC & RPM
 date: 2009-07-10T08:54:35Z
 author: Pablo Iranzo Gómez
+comments: true
 tags: dlna, linux, rpm, spec
 ---
 

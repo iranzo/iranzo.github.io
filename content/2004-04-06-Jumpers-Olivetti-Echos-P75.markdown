@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Jumpers Olivetti Echos P75
 date: 2004-04-06T10:01:00Z
 tags: hardware, general

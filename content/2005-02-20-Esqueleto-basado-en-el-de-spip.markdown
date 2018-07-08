@@ -4,6 +4,7 @@ title: Esqueleto basado en el de spip-contrib
 date: 2005-02-20T22:52:00Z
 tags: spip, cms
 lang: es
+comments: true
 ---
 ### Introducción
 

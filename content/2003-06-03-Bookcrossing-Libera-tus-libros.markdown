@@ -4,6 +4,7 @@ title: Bookcrossing -  Libera tus libros
 date: 2003-06-03T20:13:00Z
 tags: general, bookcrossing
 lang: es
+comments: true
 ---
 
 Ha salido en las noticias de este medio día un proyecto de intercambio de libros a nivel mundial. La idea es que en lugar de tener los libros almacenando polvo en casa, los registremos en una web: [http://www.bookcrossing.com](http://www.bookcrossing.com/) y en base a los datos de registro, le pongamos una pegatina o una nota manuscrita (en la web hay modelos listos para imprimir de la pegatina) que lo identifiquen.

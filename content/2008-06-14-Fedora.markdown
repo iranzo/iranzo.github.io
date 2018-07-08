@@ -3,6 +3,7 @@ layout: post
 title: Fedora
 date: 2008-06-14T05:00:00Z
 author: Pablo Iranzo Gómez
+comments: true
 tags: Fedora, linux
 lang: es
 ---

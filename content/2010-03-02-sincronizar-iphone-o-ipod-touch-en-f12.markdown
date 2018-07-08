@@ -8,6 +8,7 @@ lang: es
 modified_time: '2011-01-26T08:00:30.406+01:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-1811300258953715112
 blogger_orig_url: http://iranzop.blogspot.com/2010/03/sincronizar-iphone-o-ipod-touch-en-f12.html
+comments: true
 ---
 Las nuevas versiones no están todavía soportadas en Fedora 12, así que tendremos que utilizar las de rawhide.
 

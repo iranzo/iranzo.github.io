@@ -3,6 +3,7 @@ layout: post
 title: Kickstart - instalaciones automatizadas para anaconda
 date: 2008-05-11T12:00:00Z
 tags: linux, kickstart, automation, unattended
+comments: true
 lang: es
 ---
 ### Instalar linux

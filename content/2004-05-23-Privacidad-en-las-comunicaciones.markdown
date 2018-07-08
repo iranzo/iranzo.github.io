@@ -4,6 +4,7 @@ title: Privacidad en las comunicaciones electrónicas
 date: 2004-05-23T20:40:00Z
 tags: software, privacy
 lang: es
+comments: true
 ---
 Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto.
 

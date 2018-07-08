@@ -4,6 +4,7 @@ title: Patentes de Software
 date: 2004-05-13T21:55:00Z
 tags: software, linux
 lang: es
+comments: true
 ---
 
 ### ¿Qué es una patente?

@@ -3,6 +3,7 @@ layout: post
 title: Creación de distribuciones Live con Fedora
 date: 2008-09-24T20:34:16Z
 author: Pablo Iranzo Gómez
+comments: true
 tags: linux, fedora
 lang: es
 ---

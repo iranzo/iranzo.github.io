@@ -164,3 +164,6 @@ MENU_INTERNAL_PAGES = (
     ('Tags', TAGS_URL, TAGS_SAVE_AS),
     ('Archives', ARCHIVES_URL, ARCHIVES_SAVE_AS),
 )
+
+DISQUS_SITENAME = "https://iranzo-github-io.disqus.com/"
+DISQUS_DISPLAY_COUNTS = True
