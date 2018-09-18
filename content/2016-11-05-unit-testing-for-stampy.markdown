@@ -3,7 +3,7 @@ layout: post
 title: Unit testing for stampy
 date: 2016-11-05 19:39:00 +0100
 comments: true
-tags: python, telegram, openstack
+tags: python, telegram, openstack, foss
 category: blog
 description:
 ---

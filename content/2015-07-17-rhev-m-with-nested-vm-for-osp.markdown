@@ -3,7 +3,7 @@ layout: post
 title: RHEV-M with nested VM for OSP
 date: 2015-07-17 18:34:17 +0200
 comments: true
-tags: linux, openstack, rhev, ovirt, vdsm, hook, nestedvt
+tags: linux, openstack, rhev, ovirt, vdsm, hook, nestedvt, foss
 description:
 ---
 Since some time ago, I've been mostly dealing with OpenStack, requiring different releases to test for different tests, etc.

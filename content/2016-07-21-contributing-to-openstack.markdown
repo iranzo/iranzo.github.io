@@ -3,7 +3,7 @@ layout: post
 title: Contributing to OpenStack
 date: 2016-07-21 17:32:47 +0200
 comments: true
-tags: python, OpenStack
+tags: python, OpenStack, foss
 category: blog
 description:
 ---

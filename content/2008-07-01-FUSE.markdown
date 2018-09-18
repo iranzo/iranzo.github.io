@@ -4,7 +4,7 @@ title: FUSE
 date: 2008-07-01T20:13:16Z
 author: Pablo Iranzo Gómez
 comments: true
-tags: linux, fuse
+tags: linux, fuse, foss
 lang: es
 ---
 

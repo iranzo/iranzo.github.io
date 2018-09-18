@@ -3,7 +3,7 @@ layout: post
 title: First post on Red Hat blog 
 date: 2018-06-07 22:32:00 +0200
 comments: true
-tags: citellus, magui, redhat
+tags: citellus, magui, redhat, foss
 category: blog
 description:
 ---

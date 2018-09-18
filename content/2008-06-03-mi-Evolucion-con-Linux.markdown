@@ -4,7 +4,7 @@ title: (mi) Evolución con Linux
 date: 2008-06-03T22:32:07Z
 author: Pablo Iranzo Gómez
 comments: true
-tags:  linux , fedora, desktop
+tags:  linux , fedora, desktop, foss
 lang: es
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Manual de la web SPIP
 date: 2004-11-25T18:44:00Z
-tags: cms, spip
+tags: cms, spip, foss
 lang: es
 comments: true
 ---

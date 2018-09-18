@@ -3,7 +3,7 @@ layout: post
 title: pyserial
 date: '2010-02-23T22:50:00.000+01:00'
 author: Pablo Iranzo Gómez
-tags: python
+tags: python, foss
 lang: es
 modified_time: '2010-02-25T12:15:17.209+01:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-3750020937775227725

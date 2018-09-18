@@ -2,7 +2,7 @@
 layout: post
 title: Esqueleto basado en Mollio.org
 date: 2006-04-30T05:06:00Z
-tags: spip, cms
+tags: spip, cms, foss
 lang: es
 comments: true
 ---

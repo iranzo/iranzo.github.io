@@ -2,7 +2,7 @@
 layout: post
 title: Creating Jigsaw Download (Jigdo) files for downloading ISO's
 date: 2007-11-15T21:50:25Z
-tags: linux, iso
+tags: linux, iso, foss
 comments: true
 lang: en
 slug: Creating-Jigsaw-Download-Jigdo

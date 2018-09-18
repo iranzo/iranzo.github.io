@@ -2,7 +2,7 @@
 layout: post
 title: OCS Deployment Tips and tricks
 date: 2006-07-29T20:13:00Z
-tags: ocs, linux
+tags: ocs, linux, foss
 comments: true
 ---
 

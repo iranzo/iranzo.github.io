@@ -3,7 +3,7 @@ layout: post
 title: Rescate de sistemas virtuales (Xen)
 date: '2010-04-26T23:31:00.001+02:00'
 author: Pablo Iranzo Gómez
-tags: fedora, xen
+tags: fedora, xen, foss
 lang: es
 comments: true
 modified_time: '2010-04-26T23:31:40.747+02:00'

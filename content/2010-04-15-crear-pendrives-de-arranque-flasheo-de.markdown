@@ -6,7 +6,7 @@ date: '2010-04-15T14:18:00.001+02:00'
 author: Pablo Iranzo Gómez
 lang: es
 comments: true
-tags: fedora
+tags: fedora, foss
 modified_time: '2010-04-15T14:27:56.211+02:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-1553465470350306245
 blogger_orig_url: http://iranzop.blogspot.com/2010/04/crear-pendrives-de-arranque-flasheo-de.html

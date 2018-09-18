@@ -3,7 +3,7 @@ layout: post
 title: Migrate SPIP-RSS post feed to HTML
 date: 2015-04-01 16:49:13 +0200
 comments: true
-tags: python, spip, markdown, html
+tags: python, spip, markdown, html, foss
 description:
 ---
 I had my old blog based on [SPIP](http://www.spip.net), and I wanted to keep all the posts together, to make it easier to migrate in the future.

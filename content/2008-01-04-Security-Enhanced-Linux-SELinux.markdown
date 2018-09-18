@@ -2,8 +2,7 @@
 layout: post
 title: Security Enhanced Linux (SELinux)
 date: 2008-01-04T18:14:03Z
-tags: linux, selinux
-comments: true
+tags: linux, selinux, foss
 ---
 ### Introduction
 
