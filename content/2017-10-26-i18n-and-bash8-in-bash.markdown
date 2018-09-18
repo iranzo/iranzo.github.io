@@ -3,7 +3,7 @@ layout: post
 title: i18n and 'bash8' in bash
 date: 2017-10-26 21:17:00 +0200
 comments: true
-tags: bash, gettext, i18n, citellus, bashate
+tags: bash, gettext, i18n, citellus, bashate, foss
 category: blog
 description:
 ---

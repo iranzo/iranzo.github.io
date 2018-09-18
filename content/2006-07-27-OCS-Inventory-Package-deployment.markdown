@@ -2,7 +2,7 @@
 layout: post
 title: OCS Inventory Package deployment
 date: 2006-07-27T20:29:00Z
-tags: hardware, linux, software, ocs
+tags: hardware, linux, software, ocs, foss
 comments: true
 ---
 

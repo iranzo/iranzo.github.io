@@ -2,7 +2,7 @@
 layout: post
 title: Linux - Instalar el sistema de ficheros raíz sobre RAID
 date: 2005-01-18T20:12:00Z
-tags: linux, raid, mdadm
+tags: linux, raid, mdadm, foss
 lang: es
 comments: true
 ---

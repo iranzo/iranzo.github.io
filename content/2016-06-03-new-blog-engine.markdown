@@ -3,7 +3,7 @@ layout: post
 title: New blog rendering engine: Pelican
 date: 2016-06-03 17:23:47 +0200
 comments: true
-tags: pelican, python, markdown
+tags: pelican, python, markdown, foss
 category: blog
 description:
 ---

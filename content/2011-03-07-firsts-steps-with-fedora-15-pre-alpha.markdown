@@ -3,7 +3,7 @@ layout: post
 title: Firsts steps with Fedora 15 pre-alpha
 date: '2011-03-07T17:26:00.000+01:00'
 author: Pablo Iranzo Gómez
-tags: fedora
+tags: fedora, foss
 modified_time: '2011-03-16T22:53:59.256+01:00'
 comments: true
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-5784454064298055044

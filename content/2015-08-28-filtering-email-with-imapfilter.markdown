@@ -3,7 +3,7 @@ layout: post
 title: Filtering email with imapfilter
 date: 2015-08-28 15:27:47 +0200
 comments: true
-tags: linux, email, imap, imapfilter, Fedora
+tags: linux, email, imap, imapfilter, Fedora, foss
 description:
 ---
 Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&drop reordering of rules, cloning, etc.

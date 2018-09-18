@@ -3,7 +3,7 @@ layout: post
 title: Install RHEL7/Centos/Fedora on a software raid device
 date: 2015-03-28 18:46:42 +0100
 comments: true
-tags: linux, centos, Fedora, rhel
+tags: linux, centos, Fedora, rhel, foss
 description:
 ---
 Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.

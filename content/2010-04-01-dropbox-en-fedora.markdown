@@ -3,7 +3,7 @@ layout: post
 title: Dropbox en Fedora
 date: '2010-04-01T11:54:00.001+02:00'
 author: Pablo Iranzo Gómez
-tags: fedora, dropbox
+tags: fedora, dropbox, foss
 lang: es
 modified_time: '2011-05-09T21:39:53.954+02:00'
 blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-7983751062601820085

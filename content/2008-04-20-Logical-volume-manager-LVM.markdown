@@ -4,7 +4,7 @@ title: Logical volume manager (LVM)
 layout: post
 date: 2008-04-20T23:03:52Z
 comments: true
-tags: linux, lvm
+tags: linux, lvm, foss
 lang: en
 ---
 

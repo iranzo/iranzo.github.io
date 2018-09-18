@@ -3,7 +3,7 @@ layout: post
 title: Magui for analysis of issues across everal hosts.
 date: 2017-07-31 12:45:00 +0200
 comments: true
-tags: python, openstack, sysmgmt, bash, sosreport, citellus, magui
+tags: python, openstack, sysmgmt, bash, sosreport, citellus, magui, foss
 category: blog
 description:
 ---

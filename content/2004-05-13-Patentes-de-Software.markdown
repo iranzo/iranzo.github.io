@@ -2,7 +2,7 @@
 layout: post
 title: Patentes de Software
 date: 2004-05-13T21:55:00Z
-tags: software, linux
+tags: software, linux, foss
 lang: es
 comments: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title: DevConf.cz 2018!
 date: 2018-01-27 15:00:00 +0100
 comments: true
-tags: citellus, magui, conference, devconf
+tags: citellus, magui, conference, devconf, foss
 category: blog
 description:
 ---

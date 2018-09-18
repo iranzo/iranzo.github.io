@@ -3,7 +3,7 @@ layout: post
 title: SSH, stunnel and a proxy - double stunnel bypass
 date: 2006-11-01T17:47:00Z
 comments: true
-tags: linux, network
+tags: linux, network, foss
 ---
 
 I'm working for a "very concerned about security" firm, that makes mandatory using VPN for accessing their network, and internal services:

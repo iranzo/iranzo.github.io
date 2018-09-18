@@ -3,7 +3,7 @@ comments: true
 layout: post
 title: Migrar de SPIP 1.8 a 1.9
 date: 2006-07-01T14:48:00Z
-tags: spip, cms
+tags: spip, cms, foss
 lang: es
 
 ---
