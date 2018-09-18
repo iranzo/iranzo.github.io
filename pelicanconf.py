@@ -21,6 +21,7 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 TRANSLATION_FEED_ATOM = 'feeds/%s.atom.xml'
 AUTHOR_FEED_ATOM = 'feeds/%s.atom.xml'
 AUTHOR_FEED_RSS = 'feeds/%s.rss'
+TAG_FEED_ATOM = 'feeds/tag_%s.atom.xml'
 
 DISPLAY_PAGES_ON_MENU = True
 
