@@ -133,7 +133,7 @@ PAGINATION_PATTERNS = (
 RELATIVE_URLS = True
 
 # better codeblock
-MD_EXTENSIONS = [
+MARKDOWN = [
     'codehilite(css_class=highlight,linenums=False)',
     'extra'
 ]
