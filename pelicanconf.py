@@ -5,7 +5,9 @@ import datetime
 
 AUTHOR = u'Pablo Iranzo Gómez'
 SITENAME = u"Pablo Iranzo Gómez's blog"
+SITESUBTITLE = u'A bunch of unrelated data'
 SITEURL = u'/'
+TWITTER_USERNAME = "iranzop"
 
 PATH = 'content'
 
@@ -109,19 +111,14 @@ TAGS_SAVE_AS = 'blog/tags/index.html'
 
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives']
 
-# Blogroll
-# LINKS = (('Pelican', 'http://getpelican.com/'),
-#         ('Python.org', 'http://python.org/'),
-#         ('Jinja2', 'http://jinja.pocoo.org/'),
-#         ('You can modify those links in your config file', '#'),)
+LINKS = (('Redken on telegram', 'https://t.me/redken_bot'),
+         ('RHJobs channel on TG', "https://t.me/rhjobs"),)
 
-# Social widget
-
-# SOCIAL = [
-#     ('github', 'https://github.com/iranzo'),
-# ]
+SOCIAL = (('twitter', 'http://twitter.com/iranzop'),
+          ('github', 'http://github.com/iranzo'),)
 
 DEFAULT_PAGINATION = 5
+DEFAULT_ORPHANS = 0
 
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
@@ -133,10 +130,14 @@ PAGINATION_PATTERNS = (
 RELATIVE_URLS = True
 
 # better codeblock
-MARKDOWN = [
-    'codehilite(css_class=highlight,linenums=False)',
-    'extra'
-]
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight', 'linenums': False},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
 
 # sitemap
 SITEMAP = {
