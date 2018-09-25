@@ -11,6 +11,12 @@ PATH = 'content'
 
 TIMEZONE = 'Europe/Madrid'
 
+# Put as draft content in the future
+WITH_FUTURE_DATES = False
+
+# Put full text in RSS feed
+RSS_FEED_SUMMARY_ONLY = False
+
 DEFAULT_LANG = u'en'
 DEFAULT_CATEGORY = 'tech'
 
