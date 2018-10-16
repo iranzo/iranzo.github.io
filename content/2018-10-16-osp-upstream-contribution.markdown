@@ -7,7 +7,6 @@ tags: python, OpenStack, foss, git, gerrit, rdo, fedora, citellus
 category: blog
 description:
 ---
-# Contributing to OSP upstream a.k.a. Peer Review
 
 ## Introduction
 In the article "[Contributing to OpenStack]({filename}2016-07-21-contributing-to-openstack.markdown)" we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find `low hanging fruits` to start contributing).
@@ -17,6 +16,7 @@ Here, we'll cover what happens behind the scene to get change published.
 ## Upstream workflow
 
 ### Peer review
+
 Upstream contributions to OSP and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.
 
 The last command executed (`git-review`) on the submit sequence (in the prior article) will effectively submit the patch to the defined git review service (`git-review -s` does the required setup process) and will print an URL that can be used to access the review.
@@ -103,6 +103,7 @@ git-review # to upload a new version of the patchset
 This will start over the progress, but will, once completed to get the change merged.
 
 ## How do we do it with Citellus?
+
 In [Citellus](https://citellus.org/) we've replicated more or less what we've upstream... even the use of `tox`.
 
 Citellus does use <https://gerrithub.io> (free service that hooks on github and allows to do PR)
