@@ -6,24 +6,39 @@ comments: true
 tags: linux, centos, Fedora, rhel, foss
 description:
 ---
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Why or why not use a RAID via software](#why-or-why-not-use-a-raid-via-software)
+    1. [Pros](#pros)
+    2. [Cons](#cons)
+2. [Performing the setup](#performing-the-setup)
+3. [Creating the raid devices with Multiple Devices `mdadm`](#creating-the-raid-devices-with-multiple-devices-mdadm)
+
+<!-- /TOC -->
+
 Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.
 
 There are several [RAID](http://en.wikipedia.org/wiki/RAID) level definitions and may have different uses depending on our needs and hardware availability.
 
 For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data)..
 
+<a id="markdown-why-or-why-not-use-a-raid-via-software" name="why-or-why-not-use-a-raid-via-software"></a>
 ## Why or why not use a RAID via software
 
+<a id="markdown-pros" name="pros"></a>
 ### Pros
 
 - There's no propietary data on the disks that could require this specific controller in case the hardware fails.
 - Can be performed on any system, disk combination, etc
 
+<a id="markdown-cons" name="cons"></a>
 ### Cons
 
 - The use of dedicated HW RAID cards allows to offload the CPU intensive tasks for raid calculation, etc to the dedicated processor, freeing internal CPU for system/user usage.
 - Dedicated cards may have fancier features that require no support from the operating system as are all implemented by the card itself and presented to the OS as a standard drive.
 
+<a id="markdown-performing-the-setup" name="performing-the-setup"></a>
 ## Performing the setup
 
 As I was installing on a HP Microserver G8 recently, I had to first disable the advanced mode for the included controller, so it behaved like a standard SATA one, once done, I was able to boot from my OS image (in this case EL7 iso).
@@ -69,6 +84,7 @@ At this point, we'll have both `sda` and `sdb` with the same partitions defined:
 
 Now, it's time to create the raid device on top, for simplicity, I tend to use `md0` for /boot, so let's start with it.
 
+<a id="markdown-creating-the-raid-devices-with-multiple-devices-mdadm" name="creating-the-raid-devices-with-multiple-devices-mdadm"></a>
 ## Creating the raid devices with Multiple Devices `mdadm`
 
 Let's create the raid devices for each system, starting with `/boot`:

@@ -6,7 +6,19 @@ tags: science
 lang: es
 comments: true
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
+1. [Introducción](#introducción)
+2. [Historia](#historia)
+3. [El fenómeno](#el-fenómeno)
+4. [¿Ocurren siempre?](#¿ocurren-siempre)
+5. [¿Sólo en la Tierra?](#¿sólo-en-la-tierra)
+6. [Comentario](#comentario)
+
+<!-- /TOC -->
+
+<a id="markdown-introducción" name="introducción"></a>
 ### Introducción
 
 La aurora es un fenómeno luminoso, que aparece en las latitudes altas del planeta, y raramente se observa en latitudes medias, aunque han llegado a verse hasta en Francia.
@@ -18,6 +30,7 @@ El término aurora, comprende a dos tipos de auroras clasificadas por localizaci
 
 La aurora boreal o borealis también ha sido denominada en la literatura como "Las Luces del Norte".
 
+<a id="markdown-historia" name="historia"></a>
 ### Historia
 
 El hecho de que tengan mayor relevancia o renombre en el hemisferio Norte corresponde al hecho de que a latitudes altas, existen muchas mas zonas habitadas que en el otro extremo del planeta.
@@ -26,6 +39,7 @@ Ya en la antigüedad se relacionaba el fenómeno con "fuegos celestes" o reflejo
 
 Cuando se halló que la altura de la atmósfera supera con creces los 10 km, llegando hasta los 200 y 700 km, se abrieron paso nuevas ideas y alcanzamos una vision de una Tierra mucho más cercana al resto del universo, y las explicaciones se fueron encaminando hacia la actual.
 
+<a id="markdown-el-fenómeno" name="el-fenómeno"></a>
 ### El fenómeno
 
 La aurora, es un fenómeno, que al contrario de lo que se cree, no está restringido a las horas nocturnas, sino que durante el día también se puede observar, aunque toda la belleza y detalle del fenómeno se ven mermadas por la luz solar.
@@ -48,6 +62,7 @@ El más interno de ellos se halla a 1 radio de la Tierra y en él, están las pa
 
 Es en esta interacción cuando esos iones, excitan átomos de oxígeno y nitrógeno, los cuales al desescitarse dan lugar a los maravillosos colores que observamos.
 
+<a id="markdown-¿ocurren-siempre" name="¿ocurren-siempre"></a>
 ### ¿Ocurren siempre?
 
 Ya hemos dicho que las auroras dependen del viento solar y éste, a su vez, de una compleja dinámica del Sol: ciclos de manchas solares, fulguraciones, etc.
@@ -56,12 +71,14 @@ En épocas especialmente activas, el viento solar es más energético y afecta d
 
 Otra consecuencia es que en estas épocas, el fenómeno es observable a latitudes más bajas.
 
+<a id="markdown-¿sólo-en-la-tierra" name="¿sólo-en-la-tierra"></a>
 ### ¿Sólo en la Tierra?
 
 Las auroras no es un fenómeno exclusivo de la Tierra, puede darse en cualquier planeta que tenga un campo magnético, Son de relevancia y han sido confirmadas en Júpiter, Saturno, y se sabe, que podrían darse en Urano, Neptuno y Mercurio.
 
 El campo magético de Jupiter es de un orden 10 veces superior al de la Tierra. Siendo su cola tan larga que llega hasta la órbita de Saturno.
 
+<a id="markdown-comentario" name="comentario"></a>
 ### Comentario
 
 Las auroras son mucho más que una simple cosa curiosa y son demasiado importantes y cubren demasiados aspectos como para limitarlas a tan breve explicación, que no es mas que una pobre aproximacion de todo lo que cubre y es este fenomeno.

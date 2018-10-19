@@ -7,6 +7,7 @@ tags: python, openstack, sysmgmt, bash, sosreport, citellus, magui, foss
 category: blog
 description:
 ---
+
 ## Background
 [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.markdown) allows to check a sosreport against known problems identified on the provided tests.
 

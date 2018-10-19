@@ -6,6 +6,21 @@ author: Pablo Iranzo Gómez
 comments: true
 tags: cluster,rhel, centos, foss
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Introducción](#introducción)
+2. [Manos a la obra](#manos-a-la-obra)
+    1. [Target iSCSI](#target-iscsi)
+    2. [Resto de equipos](#resto-de-equipos)
+    3. [El clúster](#el-clúster)
+    4. [GFS: Global File System](#gfs-global-file-system)
+    5. [¿Y si falla la red](#¿y-si-falla-la-red)
+    6. [Conclusión](#conclusión)
+
+<!-- /TOC -->
+
+<a id="markdown-introducción" name="introducción"></a>
 ## Introducción
 
 Durante la última semana estuve jugando de nuevo con iSCSI en el curso de [RH436 Enterprise Clustering and Storage Management](http://www.redhat.es/training/course/RH436). Hace tiempo había seguido dos artículos [Instalando un target iSCSI](http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/) y su continuación [Montando un iniciador iSCSI](http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/).
@@ -28,8 +43,10 @@ Añádele que esa unidad iSCSI puede ser de Lectura escritura, y que puedes util
 
 Imagina lanzar tantas máquinas virtuales como sea necesario para atender la demanda, poder distribuirlas en la red.
 
+<a id="markdown-manos-a-la-obra" name="manos-a-la-obra"></a>
 ## Manos a la obra
 
+<a id="markdown-target-iscsi" name="target-iscsi"></a>
 ### Target iSCSI
 
 Si no tenemos un target iSCSI, podemos definirlo en nuestro anfitrión, utilizando la versión Tech Preview de iSCSI Target llamada: `scsi-target-utils`
@@ -57,6 +74,7 @@ Además, le permitimos el acceso a dicho target desde la ip `14.14.14.14`
 
 Si todo esto está bien, deberemos, hasta que salga de la Tech Preview, añadir estos comandos al fichero `/etc/rc.local` para que se ejecuten en cada arranque
 
+<a id="markdown-resto-de-equipos" name="resto-de-equipos"></a>
 ### Resto de equipos
 
 El primer paso, es instalar en todas las máquinas los paquetes de `lvm2-cluster`, así como `ricci`. En todas ellas deberemos ejecutar `lvm —enable-cluster` para modificar los parámetros de locking para utilizarlo en red.
@@ -81,6 +99,7 @@ iscsiadm -m discovery -t sendtargets -p IPTARGETISCSI iscsiadm -m node -T iqn.20
 Que descubrirá los targets disponibles para nuestra IP y luego hará 'login' en la máquina. A partir de este momento tendremos nuevas unidades disponibles que se presentarán como SCSI a nuestro pc, podremos
 particionarlas, etc.
 
+<a id="markdown-el-clúster" name="el-clúster"></a>
 ### El clúster
 
 Si queremos hacer las cosas de la forma 'sencilla', deberemos instalar `luci` en una de las máquinas, ya sea en un nodo de control, o en el anfitrión Xen.
@@ -105,6 +124,7 @@ En el caso de tener enchufes 'con red' o bien máquinas con tarjetas de gestión
 
 En caso de detectar un problema con cualquier equipo, el resto de ellos hará votaciones y si la mayoría considera que no responde, lo reiniciarán, por un lado para liberar cualquier tipo de acceso a disco, etc que hubiera estado haciendo a los recursos del cluster, como para intentar recuperarlo.
 
+<a id="markdown-gfs-global-file-system" name="gfs-global-file-system"></a>
 ### GFS: Global File System
 
 ¿Qué pinta GFS en todo esto?
@@ -129,12 +149,14 @@ Esto permite que diversos servidores web tengan configurado como ruta para los l
 
 Este tipo de enlaces se denominan CDPN: Context-dependent pathnames y nos permiten jugar con este tipo de cosas y aprovechar las ventajas de un almacenamiento único.
 
+<a id="markdown-¿y-si-falla-la-red" name="¿y-si-falla-la-red"></a>
 ### ¿Y si falla la red
 
 Como siempre podemos tener problemas con la red, la forma de solucionarlos consiste en tener varios interfaces de red en los equipos a través de distintos switches, etc y en las máquinas, una vez descubiertos los targets, configurar el fichero `/etc/multipathd.conf` y habilitar el demonio.
 
 Nos creará las rutas necesarias y una serie de dipositivos `/dev/mpath/*` para acceder de forma tolerante a fallos a nuestros recursos, si configuramos las tarjetas de red en modo bonding, ya tenemos el acceso más o menos asegurado ante las catástrofes más comunes y nuestros datos disponibles
 
+<a id="markdown-conclusión" name="conclusión"></a>
 ### Conclusión
 
 Tenemos a nuestro alcance muchas herramientas para hacer sencilla la utilización y creación de sistemas equivalentes a lo que hace años sólo tenía una alternativa excesivamente cara.

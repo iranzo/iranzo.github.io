@@ -7,7 +7,18 @@ tags: python, ansible, openstack, sysmgmt, foss
 category: blog
 description:
 ---
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
+1. [Introduction](#introduction)
+2. [virtualenvs](#virtualenvs)
+3. [Pipsi](#pipsi)
+4. [Prepare for ansible utilization](#prepare-for-ansible-utilization)
+
+<!-- /TOC -->
+
+<a id="markdown-introduction" name="introduction"></a>
+## Introduction
 I've started to get familiar with [Ansible](http://www.ansible.com) because,
 apart of getting more and more accepted for OSP-related tasks and
 installation, I wanted to automate  some tasks we needed to setup some servers
@@ -18,6 +29,7 @@ RHEL7 and Fedora), but in order not to mess with the system python libraries, it
 
 A virtual Environment allows to create a 'chroot'-like enviroment that might contain different library versions to the one installed with the system (but be careful as if it's not kept track as part of the usually system patching process, it might become a security concern).
 
+<a id="markdown-virtualenvs" name="virtualenvs"></a>
 ## virtualenvs
 
 For creating a virtualenv, we require the package `python-virtualenv` installed on our system and executing `virtualenv` and a target folder, for example:
@@ -53,6 +65,7 @@ Now, all packages we install using `pip` will get installed to this folder, leav
 
 Once we finished, to return back to system's environment, we'll execute `deactivate`.
 
+<a id="markdown-pipsi" name="pipsi"></a>
 ## Pipsi
 
 In order to simplify the management we can make use of `pipsi` which not only allows to install Python packages as we'll normally do with `pip`, but also, takes care of doing proper symlinks so the installed packages are available directly for execution.
@@ -80,6 +93,7 @@ pipsi install ansible
 
 This might fail, as ansible, does some compiling and for doing so, it might require some development libraries on your system, have care of that to satisfy requirements for the packages.
 
+<a id="markdown-prepare-for-ansible-utilization" name="prepare-for-ansible-utilization"></a>
 ## Prepare for ansible utilization
 
 At this point we've the `ansible` binary available for execution as `pipsi` did take care of setting up the required symlinks, etc

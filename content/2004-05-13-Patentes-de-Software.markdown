@@ -6,13 +6,28 @@ tags: software, linux, foss
 lang: es
 comments: true
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
+1. [¿Qué es una patente?](#¿qué-es-una-patente)
+2. [¿Qué es lo que se patenta en este caso?](#¿qué-es-lo-que-se-patenta-en-este-caso)
+3. [¿Qué riesgos conlleva el uso de las patentes en general?](#¿qué-riesgos-conlleva-el-uso-de-las-patentes-en-general)
+4. [¿Cúales son las motivaciones subyacentes?](#¿cúales-son-las-motivaciones-subyacentes)
+5. [¿Cúal es la situación actual en Europa?](#¿cúal-es-la-situación-actual-en-europa)
+6. [¿Qué se puede hacer?](#¿qué-se-puede-hacer)
+7. [Enlaces](#enlaces)
+8. [Créditos](#créditos)
+
+<!-- /TOC -->
+
+<a id="markdown-¿qué-es-una-patente" name="¿qué-es-una-patente"></a>
 ### ¿Qué es una patente?
 
 Una [patente](http://es.wikipedia.org/wiki/patente) es la legitimación jurídica formal para la explotación de un recurso determinado.
 
 En realidad se trata de un modelo restringido de monopolio comercial.  Como dato histórico cabe recordar las famosas "patentes de corso", licencias de asesinato y expolio que los estados otorgaban a piratas (los corsarios) para que ejercieran impunemente sus actividades bajo determinadas condiciones beneficiosas para ambos. [¿No os suena de algo?](http://antisgae.internautas.org/)
 
+<a id="markdown-¿qué-es-lo-que-se-patenta-en-este-caso" name="¿qué-es-lo-que-se-patenta-en-este-caso"></a>
 ### ¿Qué es lo que se patenta en este caso?
 
 Se patentan programas de ordenador, estructuras de datos, flujos de proceso, o sea, ¡¡¡conceptos!!!. Algunos ejemplos de patentes: Ventanas de navegación con pestañas, ventanas flotantes, conexiones seguras ssl (Como las que utilizan los bancos a través de internet), formatos de archivo mp3, mpg4...
@@ -22,6 +37,7 @@ forzosa.
 
 Por otro lado, patentar cualquier cosa, supone un costoso proceso burocrático que sólo grandes empresas o multinacionales pueden permitirse, resultando evidente el sembrado de grandes desigualdades.
 
+<a id="markdown-¿qué-riesgos-conlleva-el-uso-de-las-patentes-en-general" name="¿qué-riesgos-conlleva-el-uso-de-las-patentes-en-general"></a>
 ### ¿Qué riesgos conlleva el uso de las patentes en general?
 
 Los de cualquier monopolio: concentración injustificable y abusiba de la gestión de recursos fundamentales, reducción del desarrollo, parálisis social, desigualdad económica....
@@ -33,10 +49,12 @@ En el caso del software, las patentes se establecen sobre la difusa ética de po
 
 En ambos casos, de lo que se trata es controlar recursos y bienes que por si, son y deben seguir siendo públicos y de libre uso. Tal como y como se están desarrollando los hechos que se debatirán el próximo 17 de mayo, no existen garantía alguna de que estos bienes comunes vayan a a quedar razonablemente protegidos de la rapiña industrial
 
+<a id="markdown-¿cúales-son-las-motivaciones-subyacentes" name="¿cúales-son-las-motivaciones-subyacentes"></a>
 ### ¿Cúales son las motivaciones subyacentes?
 
 La necesidad de imponernos forzosamente en el contexto económico y jurídico actualmente vijente en EEUU de forma que se pueda controlar la libertad de acceso a la información y de paso, acabar con cualquier posibilidad de autogestión comunitaria de los medios de producción y distribución comunicativa para asegurar de esa manera la pervivencia exclusiva del mercado capitalista en un clima de arancelismo informativo, y por lo tanto, impedir cualquier compromiso social que mantenga la necesidad de compartir el conocimiento.
 
+<a id="markdown-¿cúal-es-la-situación-actual-en-europa" name="¿cúal-es-la-situación-actual-en-europa"></a>
 ### ¿Cúal es la situación actual en Europa?
 
 En Europa estas medidas inquisitoriales quieren materializarse en la Directiva del Parlamento Europeo y del Consejo sobre Patentabilidad de invenciones implementadas en un ordenador.
@@ -50,6 +68,7 @@ Las directivas europeas son acuerdos legales supracomunitarios de corge general 
 1. El primer nivel sería a través del Tribunal de Justicia de las Comunidades Europeas (Luxemburgo)
 1. El segundo nivel sería a través del Tribunal Supremo del Estado Español (Madrid)
 
+<a id="markdown-¿qué-se-puede-hacer" name="¿qué-se-puede-hacer"></a>
 ### ¿Qué se puede hacer?
 
 De lo que se trata aquí es de presionar para que no sea ignorado nuestro desacuerdo con cualquier directiva que no tenga en cuenta las [enmiendas](http://proinnova.hispalinux.es/infopaquetes/directiva-patsw/) logradas en septiembre del año pasado.
@@ -64,6 +83,7 @@ De lo que se trata aquí es de presionar para que no sea ignorado nuestro desacu
 1. En fin, actúa, no esperes a que sea demasiado tarde, échale algo de imaginación que no vamos a decidirlo todo nosotros ¿no?
 1. Patentar nosotros la patentabilidad.
 
+<a id="markdown-enlaces" name="enlaces"></a>
 ### Enlaces
 
 - [Foundation for a Free Information Infrastructure](http://ffii.org/)
@@ -81,6 +101,7 @@ De lo que se trata aquí es de presionar para que no sea ignorado nuestro desacu
 - [Estructura de las Instituciones Europeas](http://europa.eu.int/institutions/council/index_pt.htm)
 - [Oficina Española de Patentes y Marcas](http://www.oepm.es/)
 
+<a id="markdown-créditos" name="créditos"></a>
 ### Créditos
 
 Extraído de: <http://hacklab.causaencantada.org/wiki/PatentesDeSoftware>

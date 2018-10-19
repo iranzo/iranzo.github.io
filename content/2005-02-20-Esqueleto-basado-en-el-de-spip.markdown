@@ -6,12 +6,24 @@ tags: spip, cms, foss
 lang: es
 comments: true
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Introducción](#introducción)
+2. [Créditos](#créditos)
+3. [Características](#características)
+4. [Requisitos](#requisitos)
+
+<!-- /TOC -->
+
+<a id="markdown-introducción" name="introducción"></a>
 ### Introducción
 
 Antes de nada... Estos esqueletos se basan en los aparecidos en [http://www.spip-contrib.net](http://www.spip-contrib.net/), gracias a un mensaje que se envió a la lista de correo de SPIP en Español, hablando de otros modelos basados en esos mismos (los de [nqnwebs para atén](http://www.nqnwebs.com.ar/article.php3?id_article=39) de Martín Gaitán)
 
 Lo que me llamó la atención de estos esqueletos era que se adaptaban bien al tamaño de pantalla y se veían adecuadamente tanto en [Mozilla](http://www.mozilla.org/) como otros navegadores, y que al disponer de dos áreas de menús, se adaptaban más cómodamente al diseño modular que habíamos utilizado Laura Primo y [Pablo Iranzo Gómez](http://alufis35.uv.es/~iranzo/) para las webs de [http://Linuv.uv.es](http://Linuv.uv.es/) y la versión anterior de [http://Alufis35.uv.es](http://Alufis35.uv.es/).
 
+<a id="markdown-créditos" name="créditos"></a>
 ### Créditos
 
 - Este esqueleto se basa en el trabajo del grupo de diseño de [http://www.spip-contrib.net](http://www.spip-contrib.net/)
@@ -23,6 +35,7 @@ Lo que me llamó la atención de estos esqueletos era que se adaptaban bien al t
 
 Queremos agradecer desde aquí a todos ellos su trabajo previo que ha posibilitado la creación de este.
 
+<a id="markdown-características" name="características"></a>
 ### Características
 
 - Permiten modificar el logotipo y frase de la web modificando un artículo con una palabra clave especial
@@ -39,6 +52,7 @@ Queremos agradecer desde aquí a todos ellos su trabajo previo que ha posibilita
 - Soporte automatizado para [Google Sitemaps](http://www.google.com/webmasters/sitemaps/), simplemente enviar el archivo con el mapa del sitio y listo
 - Soporte automatizado para [ROR: Resources Of a Resource](http://www.rorweb.com/)
 
+<a id="markdown-requisitos" name="requisitos"></a>
 ### Requisitos
 
 Estos esqueletos han sido desarrollados sobre la versión SPIP 1.8.2d, y aunque debería funcionar sobre las posteriores a la 1.7.2, no se han realizado pruebas al respecto.

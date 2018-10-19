@@ -5,6 +5,14 @@ date: 2006-07-29T20:13:00Z
 tags: ocs, linux, foss
 comments: true
 ---
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Software](#software)
+2. [Registry](#registry)
+3. [Packages](#packages)
+
+<!-- /TOC -->
 
 Prior to using the following info for creating own-made packages, let's test if everything is working fine.
 
@@ -14,6 +22,7 @@ If we create a package with action "LAUNCH", and attach the regcert.zip with com
 
 After some time, affected and with working software deployment (Read [OCS Inventory Package deployment]({filename}2006-07-27-OCS-Inventory-Package-deployment.markdown) to learn how to setup it properly), we could know in which ones it's working and in which ones it doesn't work, just doing a search for computers with a special value in that registry key. (I've also uploaded the precompiled version I use for your testing purpouses).
 
+<a id="markdown-software" name="software"></a>
 ### Software
 
 ~~~raw
@@ -30,6 +39,7 @@ After some time, affected and with working software deployment (Read [OCS Invent
   ------------------------------------------------------------------- ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ~~~
 
+<a id="markdown-registry" name="registry"></a>
 ### Registry
 
 ~~~raw
@@ -45,6 +55,7 @@ After some time, affected and with working software deployment (Read [OCS Invent
   HKLM   SoftwareOCS                                                                    cert           Allows us to check if package deployment is working using regcert example
 ~~~
 
+<a id="markdown-packages" name="packages"></a>
 ### Packages
 
 ~~~raw

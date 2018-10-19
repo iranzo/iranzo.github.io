@@ -9,7 +9,16 @@ url: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/
 save_as: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/index.html
 slug: Creating-Jigsaw-Download-Jigdo
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
+1. [Introducción](#introducción)
+2. [Cómo funciona](#cómo-funciona)
+3. [¿Cómo creo un fichero .jigdo y un .template?](#¿cómo-creo-un-fichero-jigdo-y-un-template)
+4. [¿Cómo obtengo una ISO desde un fichero .jigdo?](#¿cómo-obtengo-una-iso-desde-un-fichero-jigdo)
+
+<!-- /TOC -->
+<a id="markdown-introducción" name="introducción"></a>
 ### Introducción
 
 Jigdo (JIGsaw DOwnload) es una pequeña utilidad que permite ensamblar imágenes de CD/DVD a partir de los ficheros que las forman.
@@ -18,12 +27,14 @@ Por ejemplo, [Debian](http://www.debian.org/) ha estado utilizándolo durante al
 
 Además, si ya disponíamos de ficheros descargados (por ejemplo si iniciamos con la versión X y hemos ido descargando y conservando los ficheros hasta la X.Y, jigdo puede utilizar dichos ficheros, comparándolos con los existentes en la plantilla y así, evitarnos descargar ficheros que ya tuviéramos...
 
+<a id="markdown-cómo-funciona" name="cómo-funciona"></a>
 ### Cómo funciona
 
 Una plantilla Jigdo contiene dos partes: una, el archivo .jigdo que contiene la información de los ficheros que conforman la ISO[^2] y una plantilla que se crea en base al análisis que jigdo-file hace de la imagen original al crear las plantillas.
 
 Al ejecutar jigdo-lite "archivo.jigdo", se nos preguntará por posibles ubicaciones (carpetas) que podrían tener ya los archivos que descargamos, y utilizará las URL's especificadas en el fichero ".jigdo" para descargar todos aquellos que no tuviéramos disponibles. Al final del proceso, jigdo ensamblará de nuevo la imagen con todos los ficheros, obteniendo una imagen idéntica a la original desde la que se crearon las plantillas. Como aliciente, sólo se habrán descargado los archivos realmente necesarios y en caso de fallos de conectividad, será necesario sólo descargar pequeñas partes en lugar de toda una ISO como se haría con métodos tradicionales.
 
+<a id="markdown-¿cómo-creo-un-fichero-jigdo-y-un-template" name="¿cómo-creo-un-fichero-jigdo-y-un-template"></a>
 ### ¿Cómo creo un fichero .jigdo y un .template?
 
 Por ejemplo, si descargamos la imagen ISO de CentOS [mirror.centos.org](http://alufis35.uv.es/mirror.centos.org), podemos montarla usando loopback y colocarla en una carpeta (por ejemplo para proporcionar nuestro propio servidor espejo o árbol de instalación), podremos hacer:
@@ -41,6 +52,7 @@ Utilizando un editor de texto, podemos editar nuestro fichero .jigdo y establece
 
 Proporcionando estos dos ficheros a alguien, disfrutará de mejores descargas de nuestras ISO's que se reconstruirán en su máquina.
 
+<a id="markdown-¿cómo-obtengo-una-iso-desde-un-fichero-jigdo" name="¿cómo-obtengo-una-iso-desde-un-fichero-jigdo"></a>
 ### ¿Cómo obtengo una ISO desde un fichero .jigdo?
 
 Fácil:

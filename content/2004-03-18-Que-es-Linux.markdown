@@ -6,6 +6,29 @@ date: 2004-03-18T22:50:00Z
 tags: linux, general, foss
 lang: es
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Introducción](#introducción)
+2. [DFSG Debian Free Software Guidelines y Contrato social de Debian)](#dfsg-debian-free-software-guidelines-y-contrato-social-de-debian)
+3. [Software Libre](#software-libre)
+4. [Linux: El futuro es abierto](#linux-el-futuro-es-abierto)
+5. [GPL: General Public License](#gpl-general-public-license)
+6. [Linux y la sociedad](#linux-y-la-sociedad)
+7. [El negocio de Linux](#el-negocio-de-linux)
+8. [Linux en nuestros alrededores](#linux-en-nuestros-alrededores)
+9. [Democratización de la tecnología](#democratización-de-la-tecnología)
+10. [Una pequeña torre de babel](#una-pequeña-torre-de-babel)
+11. [Compatibilidad](#compatibilidad)
+12. [Seguridad Nacional](#seguridad-nacional)
+13. [TCPA/Palladium - ¿Intenciones fiables detrás de la Trusted Computing?](#tcpapalladium---¿intenciones-fiables-detrás-de-la-trusted-computing)
+14. [Open Source / Shared Source](#open-source--shared-source)
+15. [Escalabilidad: De lo más pequeño a lo más grande, de lo más sencillo a lo más complejo](#escalabilidad-de-lo-más-pequeño-a-lo-más-grande-de-lo-más-sencillo-a-lo-más-complejo)
+16. [Enlaces recomendados](#enlaces-recomendados)
+
+<!-- /TOC -->
+
+<a id="markdown-introducción" name="introducción"></a>
 ### Introducción
 
 Linux técnicamente hablando es sólo el núcleo de un sistema operativo, formado por la unión de ese núcleo y una serie de utilidades llamadas GNU.
@@ -16,6 +39,7 @@ La revolución de Linux fue precisamente que en sus primeros pasos fue publicado
 
 Esa revolución, fue principalmente ideológica y unida a la filosofía iniciada por Richard Stallman con el movimiento GNU ha dado lugar a lo que se conoce como "Free Software".
 
+<a id="markdown-dfsg-debian-free-software-guidelines-y-contrato-social-de-debian" name="dfsg-debian-free-software-guidelines-y-contrato-social-de-debian"></a>
 ### DFSG Debian Free Software Guidelines y Contrato social de Debian)
 
 La definición de software libre se basa en las Debian Free Software Guidelines (DFSG) que dicen lo siguiente:
@@ -35,6 +59,7 @@ Ejemplos de Licencia: Las licencias «GPL», «BSD», y «Artística» son ejemp
 
 Si un programa cumple todas esas condiciones es considerado Free Software.
 
+<a id="markdown-software-libre" name="software-libre"></a>
 ### Software Libre
 
 En español, la palabra "free" tiene dos significados "libre" y "gratuito", lo que lleva a confusiones.
@@ -50,6 +75,7 @@ Ya no está en IBM, en youtube:
 
 Su transcripción es la siguiente:
 
+<a id="markdown-linux-el-futuro-es-abierto" name="linux-el-futuro-es-abierto"></a>
 ### Linux: El futuro es abierto
 
 - Imagen inicial
@@ -101,14 +127,17 @@ El software libre tampoco está libre de derechos de autor o copyright.  El Soft
 
 La licencia libre más conocida es la GPL y la BSD, la más extendida, la GPL otorga unos derechos unas obligaciones al usuario del software al que acompaña.
 
+<a id="markdown-gpl-general-public-license" name="gpl-general-public-license"></a>
 ### GPL: General Public License
 
 La GPL otorga el permiso para copiar, distribuir y/o modificar los programas a los que acompaña bajo los términos de la GPL, que obligan a que cualquier trabajo mantenga los créditos, una copia completa de la GPL y a que cualquier trabajo derivado de uno basado en la GPL deba ser forzosamente basado también en la licencia GPL, de ese modo obliga a que el programa derivado del trabajo de otros, repercuta de nuevo en la sociedad.
 
 La GPL sólo obliga a que el trabajo esté disponible también bajo la GPL y a la dar la posibilidad de acceder al código modificado, pero no necesariamente debe acompañarlo (aunque es lo habitual).
 
+<a id="markdown-linux-y-la-sociedad" name="linux-y-la-sociedad"></a>
 ### Linux y la sociedad
 
+<a id="markdown-el-negocio-de-linux" name="el-negocio-de-linux"></a>
 ### El negocio de Linux
 
 El lugar para Linux existía en la sociedad desde hacía mucho tiempo, en realidad siempre ha existido, pero en un mundo movido por intereses económicos siempre se ha intentado ocultar.
@@ -131,12 +160,14 @@ Si tomamos como ejemplo los móviles, si sólo unas pocas personas tuvieran tel�
 
 Aplicándolo al tema del software, un software, al igual que un idioma se más valioso cuanta más gente lo conoce y lo utiliza y el verdadero negocio no está en su posesión, sino en lo servicios asociados.
 
+<a id="markdown-linux-en-nuestros-alrededores" name="linux-en-nuestros-alrededores"></a>
 ### Linux en nuestros alrededores
 
 Actualmente, con grandes empresas monopolizando el negocio del software (principalmente norteamericanas), mucho del dinero gastado en el software "huye" de nuestro país, de nuestra comunidad para ir a parar a las arcas de personas en países extraños, de forma que no repercuten en nuestra economía.
 
 El software Libre, al ser abierto (Open Source) permite que cualquier persona pueda mantenerlo de forma que favorece y fomenta la economía local ya que se contratan "servicios" basados en ese software como por ejemplo mantenimiento del software, personalización de determinados aspectos, etc y se encargan a empresas locales.
 
+<a id="markdown-democratización-de-la-tecnología" name="democratización-de-la-tecnología"></a>
 ### Democratización de la tecnología
 
 Como el coste del software tiende a ser nulo ya que el software está públicamente disponible en Internet, favorecemos a las economías oprimidas permitiéndoles acceso a nuevas tecnologías. El caso más conocido en España, es el de Extremadura que gracias a impulsar la implantación de Linux en los colegios y administraciones y al ahorro derivado de las inversiones en licencias de programas propietarios ha alcanzado que cada dos alumnos se disponga de un ordenador en las clases, permitiendo su familiarización con nuevas tecnologías.
@@ -147,12 +178,14 @@ Linux está desarrollado por particulares y empresas que colaboran alrededor de 
 
 Distintas personas en distintos entornos contrastan ideas, encuentran las mejores soluciones y las aplican al producto final que al estar formado de esa forma colaborativa, se adapta a multitud de entornos.
 
+<a id="markdown-una-pequeña-torre-de-babel" name="una-pequeña-torre-de-babel"></a>
 ### Una pequeña torre de babel
 
 Otra de las ventajas de esta unión de culturas es que Linux es una verdadera torre de babel, los principales programas están traducidos a multitud de idiomas Traducciones OO y en los casos donde no ha sido traducido, al disponer del código fuente del programa, es posible adaptarlo por grupos locales para necesidades concretas.
 
 Linux permite así que los usuarios de pequeñas comunidades lingüísticas puedan desarrollar sus propias versiones del software y evitar así la pérdida de la identidad cultural subyacente en su idioma o dialecto.
 
+<a id="markdown-compatibilidad" name="compatibilidad"></a>
 ### Compatibilidad
 
 Linux además de las características ya comentadas dispone de una que es estar basado en estándares abiertos (de no ser así habría sido imposible la coordinación de tan diversos grupos alrededor del mundo).
@@ -177,6 +210,7 @@ Con estándares abiertos como XHTML+CSS el acceso a la información se puede rea
 
 El problema por ejemplo de los formatos cerrados es lo que por ejemplo lo que pasó con el llamado efecto 2000
 
+<a id="markdown-seguridad-nacional" name="seguridad-nacional"></a>
 ### Seguridad Nacional
 
 En las cercanías del año 2000 hubo un gran revuelo porque muchas empresas utilizaban software muy antiguo que por economizar memoria (cuando era muy cara y escasa) utilizaban sólo 2 dígitos para indicar el año, haciendo que "00" pudiera ser bien 1900 o bien 2000 con todos los problemas en contabilidad, funcionamiento, etc que podría causar.
@@ -197,6 +231,7 @@ Hace poco se aprobó una ley mediante la cual, el saltarse cualquier sistema de 
 
 Si todos los formatos fueran abiertos, podríamos leerlos siempre, o en caso de no disponer del programa para ello, podríamos programarlos siguiendo el estándar y saber que funcionarán a la perfección, por lo que no habrá pérdida alguna de datos.
 
+<a id="markdown-tcpapalladium---¿intenciones-fiables-detrás-de-la-trusted-computing" name="tcpapalladium---¿intenciones-fiables-detrás-de-la-trusted-computing"></a>
 ### TCPA/Palladium - ¿Intenciones fiables detrás de la Trusted Computing?
 
 El tema de las consolas, al igual que los reproductores de DVD, comparten una misma raíz. Disponen de dispositivos electrónicos que impiden la libertad de uso. Por ejemplo, si disponemos de algún DVD de alguna colección de estas que regalan con periódicos, veremos que al principio, de forma irremediable debemos ver una publicidad sobre dicha colección.... estos dispositivos están controlando la forma en la que podemos disfrutar/acceder a la cultura, nos obligan a ver ciertas partes aunque no
@@ -220,6 +255,7 @@ Con TCPA estaremos controlados por los ordenadores y no los controlaremos nosotr
 
 ¿Le parece adecuado que secretos de estado sean accesibles por gobiernos extranjeros? ¿empresas sean espiadas para ganar acuerdos comerciales con otras? [[3](#nb3-3 "La Eurocámara reconoce que Echelon espía a Europa")]
 
+<a id="markdown-open-source--shared-source" name="open-source--shared-source"></a>
 ### Open Source / Shared Source
 
 El código abierto, o Open Source es lo que caracteriza a Linux, se tiene acceso total al mismo para su revisión y auditoria y ha demostrado mayores cotas de seguridad y fiabilidad que alternativas cerradas, tanto a nivel de sistema operativo como de aplicaciones.
@@ -232,6 +268,7 @@ El código fuente puede ser muy bonito, pero para estar seguros de lo que estamo
 
 Por muchas empresas se está intentando difundir la imagen de que Linux puede ayudar a terroristas, o es antipatriótico, pero no por nada en especial, sino porque le otorga al usuario la libertad para saber lo que ejecuta, poder modificarlo y no depender para ello de gobiernos o personas con intereses económicos creados.
 
+<a id="markdown-escalabilidad-de-lo-más-pequeño-a-lo-más-grande-de-lo-más-sencillo-a-lo-más-complejo" name="escalabilidad-de-lo-más-pequeño-a-lo-más-grande-de-lo-más-sencillo-a-lo-más-complejo"></a>
 ### Escalabilidad: De lo más pequeño a lo más grande, de lo más sencillo a lo más complejo
 
 Linux ha demostrado que se adapta muy bien, desde pequeñas PDA's o dispositivos integrados a grandes supercomputadores
@@ -250,6 +287,7 @@ Dentro de Linux tenemos desde versiones muy estables orientadas a servidores a v
 
 Linux está hecha por usuarios, por gente que sugiere, gente que ayuda traduciendo, gente que crea documentación, cada uno aporta su granito de arena y hace que Linux gire hacia sus intereses, teniendo un sistema que puede adaptarse a miles de necesidades de los usuarios, es por así decirlo, una especie de navaja suiza...
 
+<a id="markdown-enlaces-recomendados" name="enlaces-recomendados"></a>
 ### Enlaces recomendados
 
 Además de los enlaces que ya se han ido indicando en el documento, recomiendo estas páginas web por estar relacionadas con los derechos y libertades en el mundo "electónico" .

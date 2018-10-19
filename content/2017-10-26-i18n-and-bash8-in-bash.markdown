@@ -7,6 +7,17 @@ tags: bash, gettext, i18n, citellus, bashate, foss
 category: blog
 description:
 ---
+
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Introduction](#introduction)
+2. [Bashate for bash code validation](#bashate-for-bash-code-validation)
+3. [Bash i18n](#bash-i18n)
+
+<!-- /TOC -->
+
+<a id="markdown-introduction" name="introduction"></a>
 ## Introduction
 In order to improve [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.markdown) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.markdown), we did implement some [Unit testing]({filename}2017-08-17-Jenkins-for-running-CI-tests.markdown) to improve code quality.
 
@@ -14,6 +25,7 @@ The tests written were made in python and with some changes it was also possible
 
 Also, we did prepare the strings in python using gettext library so the actual messages can be translated to the language of choice (defaults to en, but can be changed via `--lang` modifier of citellus).
 
+<a id="markdown-bashate-for-bash-code-validation" name="bashate-for-bash-code-validation"></a>
 ## Bashate for bash code validation
 One of the things I did miss was to have some kind of `tox8` for validate format, and locate some errors. After some research I came to [bashate](https://github.com/openstack-dev/bashate), and as it was written in python was very easy to integrate:
 
@@ -28,6 +40,7 @@ One of the things I did miss was to have some kind of `tox8` for validate format
 
 This change makes that execution of `tox` also pulls the output of bashate so all the integration already done for CI, was automatically update to do bash formatting too :-)
 
+<a id="markdown-bash-i18n" name="bash-i18n"></a>
 ## Bash i18n
 
 Another topic that was interesting is the ability to easily write code in one language and via `poedit` or equivalent editors, be able to localize it.

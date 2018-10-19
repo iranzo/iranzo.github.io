@@ -7,6 +7,21 @@ tags: python, openstack, sysmgmt, bash, sosreport, citellus, jenkins, unittest, 
 category: blog
 description:
 ---
+
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Why?](#why)
+2. [Setup](#setup)
+    1. [Tuning the OS](#tuning-the-os)
+3. [Installing Jenkins](#installing-jenkins)
+4. [Configure Jenkins](#configure-jenkins)
+    1. [Creating a Job](#creating-a-job)
+    2. [Checking execution](#checking-execution)
+
+<!-- /TOC -->
+
+<a id="markdown-why" name="why"></a>
 ## Why?
 While working on [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.markdown) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.markdown) it soon became evident that Unit testing for validating the changes was a requirement.
 
@@ -16,6 +31,7 @@ When it was decided to move to <https://gerrithub.io> to work in a more similar 
 
 After some research, it became more or less evident that another tool, like Jenkins was required to automate the UT process and report to individual reviews about the status.
 
+<a id="markdown-setup" name="setup"></a>
 ## Setup
 Some initial steps are required for integration:
 
@@ -34,6 +50,7 @@ This VM was installed with:
 - 2 VCPU
 - Red Hat Enterprise Linux 7 'base install'
 
+<a id="markdown-tuning-the-os" name="tuning-the-os"></a>
 ### Tuning the OS
 RHEL7 provides a stable environment for run on, but at the same time we were lacking some of the latest tools we're using for the builds.
 
@@ -59,6 +76,7 @@ make altinstall
 ln -s /usr/local/bin/python3.5 /usr/bin/
 ~~~
 
+<a id="markdown-installing-jenkins" name="installing-jenkins"></a>
 ## Installing Jenkins
 
 For the jenkins installation it's easier, there's a 'stable' repo for RHEL and the procedure is [documented](https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions):
@@ -84,6 +102,7 @@ During it, you'll be asked for a password on a file on disk and you'll be prompt
 
 Also, we'll be offered to deploy the most common set of plugins, choose that option, and later we'll add the `gerrit` plugin and `Python`.
 
+<a id="markdown-configure-jenkins" name="configure-jenkins"></a>
 ## Configure Jenkins
 
 Once we can login into gerrit, we need to enter the administration area, and install new plugins and install [Gerrit Trigger](https://wiki.jenkins.io/display/JENKINS/Gerrit+Trigger).
@@ -106,6 +125,7 @@ At the time of this writing, version reported by plugin was `2.13.6-3044-g7e9c06
 
 ![Gerrit servers]({filename}/imagen/jenkins/gerritconfig.png)
 
+<a id="markdown-creating-a-job" name="creating-a-job"></a>
 ### Creating a Job
 
 Now, we need to create a Job (first option in Jenkins list of jobs).
@@ -152,6 +172,7 @@ From this point, any new push (review) made against gerrit will trigger a Jenkin
 
 ![Manual trigger]({filename}/imagen/jenkins/manualtrigger.png)
 
+<a id="markdown-checking-execution" name="checking-execution"></a>
 ### Checking execution
 
 In our project, tox checks some UT's on `python 2.7`, and `python 3.5`, as well as python's `PEP` compliance.
