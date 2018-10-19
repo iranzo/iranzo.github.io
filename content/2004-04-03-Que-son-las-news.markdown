@@ -6,10 +6,24 @@ date: 2004-04-03T20:04:00Z
 tags: nntp, general
 lang: es
 ---
+
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [¿Qué es USENET?](#¿qué-es-usenet)
+2. [¿Quién puede utilizar USENET?](#¿quién-puede-utilizar-usenet)
+3. [¿Cómo acceder a las news?](#¿cómo-acceder-a-las-news)
+4. [Utilizando USENET](#utilizando-usenet)
+5. [Conociendo más acerca de USENET](#conociendo-más-acerca-de-usenet)
+
+<!-- /TOC -->
+
+
 Este artículo es una traducción de un documento en inglés de EARN de hace bastantes años, en los que se explicaban muchos de los servicios de la antigua Internet, hoy en día desaparecidos.
 
 Este artículo fue publicado en el servidor de news de la Universidad de Valencia
 
+<a id="markdown-¿qué-es-usenet" name="¿qué-es-usenet"></a>
 ### ¿Qué es USENET?
 
 Netnews o Usenet como se le conoce de forma común es un sistema de intercambio de mensajes que intercambia mensajes electrónicamente por todo el mundo de forma estándar. Los mensajes intercambiados en USENET están organizados por temática en categorías llamadas grupos de news (o foros). Usenet, es por lo tanto una gran colección de mensajes transferidos de una máquina a otra. Los mensajes que pueden contener tanto texto plano como datos binarios codificados. Los mensajes también contienen
@@ -23,6 +37,7 @@ Las categorías principales están divididas en más de 1200 grupos de noticias 
 
 Usenet se desarrolló originariamente para los sistemas UNIX en 1979. En un año, 50 servidores UNIX participaban. Actualmente, hay miles de servidores ejecutando diversos sistemas operativos en gran variedad de plataformas de hardware comunicándose mediante USENET alrededor de la Tierra.
 
+<a id="markdown-¿quién-puede-utilizar-usenet" name="¿quién-puede-utilizar-usenet"></a>
 ### ¿Quién puede utilizar USENET?
 
 Los grupos de USENET pueden ser leidos en multitud de lugares alrededor del mundo. Como añadido, existen lugares que permiten acceso telefónico público para que la gente que no está en un servidor USENET puede acceder también a los grupos. Si no sabe si su servidor tiene acceso a USENET compruebe con el equipo de soporte informático local.
@@ -31,6 +46,7 @@ Los protocolos y el software para la distribución de news están disponibles en
 
 Si sólo dispone de acceso por correo electrónico, no puede acceder a USENET. De todos modos, muchos grupos de noticias están conectados a listas de correo a las que puede unirse. Para obtener un listado de estos grupos de noticias y sus listas de correo asociadas, mande un email a [LISTSERV@AMERICAN.EDU](mailto:LISTSERV@AMERICAN.EDU) con la línea "GET NETGATE GATELIST". Muchos de los documentos que aparecen periódicamente en los grupos de noticias están disponibles mediante e-mail desde [mail-server@rtfm.mit.edu](mailto:mail-server@rtfm.mit.edu). Para obtener ayuda, mande un mensaje con el asunto "HELP".
 
+<a id="markdown-¿cómo-acceder-a-las-news" name="¿cómo-acceder-a-las-news"></a>
 ### ¿Cómo acceder a las news?
 
 Si su proveedor le proporciona acceso a las news, sólo neesita utilizar uno de los numerosos paquetes de software disponibles para leer news (al menos uno está disponible probablemente en su ordenador). Estos paquetes o bien acceden a un servidor local o utilizan el Protcolo para la Red de Transferencia de Noticias (NNTP) para acceder a otros servidores en otros equipos de su red.
@@ -39,6 +55,7 @@ En EARN, se ha desarrollado una red distribución de Netnews, proporcionando acc
 
 Está también disponible mediante FTP anónimo desde rtfm.mit.edu como /pub/usenet/news.answers/site-setup o por email a: [mail-server@rtfm.mit.edu](mailto:mail-server@rtfm.mit.edu) con la línea: send usetnet/news.answers/site-setup-
 
+<a id="markdown-utilizando-usenet" name="utilizando-usenet"></a>
 ### Utilizando USENET
 
 Existen muchos paquetes disponibles para acceder y distribuir Usenet en multitud de sistemas operativos (Unix, VMS, VM/CMS, MVS, Macintosh, MS-DOS y OS/2) y entornos (Emacs, X-Window System, MS-Windows). Consulte la lista de lectores de news disponibles en el apéndice A. Tenga presente que el número de paquetes de software para acceder a las news, sobre todo en los PC's está aumentando. Como añadido, además de los paquetes específicamente diseñados para ser lectores de news, muchos otros programas de comunicación, especialmente lectores de correo, proporcionan la posibilidad de acceder a usenet como extra a su función principal.
@@ -52,6 +69,7 @@ Muchos, sino todos, los lectores de news proporcionan las siguientesgq utilidade
 - Mandar mensajes: Puede participar en las discusiones de grupo; su cliente de news sabe dónde mandar los mensajes.
 - Responder a un mensaje: Puede enviar una respuesta al grupo de noticias (generalmente llamado FOLLOW-UP) o al autor del mensaje (generalmente llamado REPLY).
 
+<a id="markdown-conociendo-más-acerca-de-usenet" name="conociendo-más-acerca-de-usenet"></a>
 ### Conociendo más acerca de USENET
 
 Los programas de news se comunican entre sí utilizando protocolos estándar, algunos de los cuales se describen mediante las Internet Request For Comments (RFC). Generalmente las RFC se envían a la red y se obtienen desde archivos.

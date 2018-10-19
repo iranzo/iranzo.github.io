@@ -8,13 +8,30 @@ category: blog
 description:
 ---
 
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Introduction](#introduction)
+2. [Upstream workflow](#upstream-workflow)
+    1. [Peer review](#peer-review)
+    2. [CI tests (Verified +1)](#ci-tests-verified-1)
+    3. [Code Review+2](#code-review2)
+    4. [Workflow+1](#workflow1)
+    5. [Cannot merge, please rebase](#cannot-merge-please-rebase)
+3. [How do we do it with Citellus?](#how-do-we-do-it-with-citellus)
+
+<!-- /TOC -->
+
+<a id="markdown-introduction" name="introduction"></a>
 ## Introduction
 In the article "[Contributing to OpenStack]({filename}2016-07-21-contributing-to-openstack.markdown)" we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find `low hanging fruits` to start contributing).
 
 Here, we'll cover what happens behind the scene to get change published.
 
+<a id="markdown-upstream-workflow" name="upstream-workflow"></a>
 ## Upstream workflow
 
+<a id="markdown-peer-review" name="peer-review"></a>
 ### Peer review
 
 Upstream contributions to OSP and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.
@@ -38,6 +55,7 @@ For a review example, we'll use one from gerrithub from [Citellus](https://citel
 
 Here, we can see that we're on review `380646` and that's the link that allows us to check the changes submitted (the one printed when executing `git-review`).
 
+<a id="markdown-ci-tests-verified-1" name="ci-tests-verified-1"></a>
 ### CI tests (Verified +1)
 
 Once a review has been submitted, usually the bots are the first ones to pick them and run the defined unit testing on the new changes, to ensure that it doesn't break anything (based on what is defined to be tested).
@@ -62,6 +80,7 @@ Note: you can run some of the tests on your system to validate faster if you've 
 
 This is however not always possible as some changes include requirements like testing upgrades, full environment deployments, etc that cannot be done without the required preparation steps or even the infrastructure.
 
+<a id="markdown-code-review2" name="code-review2"></a>
 ### Code Review+2
 
 This is probably the 'longest' process, it requires peers to be added as 'reviewer' (you can get an idea on the names based on other reviews submitted for the same component) or they will pick up new reviews as the pop un on notification channels or pending queues.
@@ -74,12 +93,14 @@ Once reviewers are OK with your code, and with some 'Core' developers also agree
 
 Once you get `Code Review +2` and with the prior `Verified +1` you're almost ready to get the change merged.
 
+<a id="markdown-workflow1" name="workflow1"></a>
 ### Workflow+1
 
 Ok, last step is to have someone with Workflow permissions to give a +1, this will 'seal' the change saying that everything is ok (as it had CR+2 and Verified+1) and change is valid...
 
 This vote will trigger another build by CI, and when finished, the change will be merged into the code upstream, congratulations!
 
+<a id="markdown-cannot-merge-please-rebase" name="cannot-merge-please-rebase"></a>
 ### Cannot merge, please rebase
 
 Sometimes, your change is doing changes on the same files that other programmers did on the code, so there's no way to automatically 'rebase' the change, in this case the bad news is that you need to:
@@ -102,6 +123,7 @@ git-review # to upload a new version of the patchset
 
 This will start over the progress, but will, once completed to get the change merged.
 
+<a id="markdown-how-do-we-do-it-with-citellus" name="how-do-we-do-it-with-citellus"></a>
 ## How do we do it with Citellus?
 
 In [Citellus](https://citellus.org/) we've replicated more or less what we've upstream... even the use of `tox`.

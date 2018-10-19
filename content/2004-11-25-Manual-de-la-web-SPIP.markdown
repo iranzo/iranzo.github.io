@@ -6,15 +6,41 @@ tags: cms, spip, foss
 lang: es
 comments: true
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
+1. [Manual de instrucciones de la web](#manual-de-instrucciones-de-la-web)
+2. [Introducción](#introducción)
+3. [SPIP](#spip)
+4. [Estructura de SPIP](#estructura-de-spip)
+5. [La web](#la-web)
+6. [Precauciones](#precauciones)
+7. [Entrada a la zona administrativa](#entrada-a-la-zona-administrativa)
+8. [Creando un artículo](#creando-un-artículo)
+    1. [Antetítulo, Título y Subtítulo](#antetítulo-título-y-subtítulo)
+    2. [Sección](#sección)
+    3. [Descripción](#descripción)
+    4. [Epígrafe](#epígrafe)
+    5. [Texto](#texto)
+    6. [Atajos](#atajos)
+    7. [Post Scriptum](#post-scriptum)
+9. [Las breves](#las-breves)
+10. [Comprobando el resultado](#comprobando-el-resultado)
+11. [Consideraciones](#consideraciones)
+
+<!-- /TOC -->
+
+<a id="markdown-manual-de-instrucciones-de-la-web" name="manual-de-instrucciones-de-la-web"></a>
 ### Manual de instrucciones de la web
 
+<a id="markdown-introducción" name="introducción"></a>
 ### Introducción
 
 Para facilitar el uso de la web tanto por personas acostumbradas al trabajo con ordenadores, como personas que no lo están,hacía falta una de forma de agrupar a la vez un sistema sencillo de manejar como potente en su funcionamiento y posibilidades de adaptación.
 
 Se analizaron los diversos sistemas libres de gestión de contenidos (la opción de editar directamente las páginas quedó descartada por su complejidad y falta de uniformidad, etc), y entre los más habituales: PHP-Nuke, Post-Nuke, Drupal, etc se fueron descartando debido a los problemas de seguridad de los que adolecían los más extendidos como PHP-Nuke, o a la orientación a personas acostumbradas al manejo de estos sistemas.
 
+<a id="markdown-spip" name="spip"></a>
 ### SPIP
 
 Al final se escogió a SPIP: Sistema para la Publicación en Internet.  SPIP es un gestor de contenido diseñado con la idea de crear los archivos digitales de Le Monde Diplomatique y se creó combinando otros sistemas ya utilizados en revistas online.
@@ -28,6 +54,7 @@ Como características, cabe destacar, que debido a su orientación al mundo edit
 
 Además de todas estas, SPIP aporta toda la funcionalidad de un gestor de contenido, como la creación de ficheros de sindicación, sindicación de titulares de otras páginas, buscador, imágenes por cada categoría, etc.
 
+<a id="markdown-estructura-de-spip" name="estructura-de-spip"></a>
 ### Estructura de SPIP
 
 SPIP está estructurado en torno a secciones (rubriques) que pueden estar ubicadas en el raíz del sitio, o bien dentro de otras secciones.
@@ -36,6 +63,7 @@ A nivel de publicación, SPIP soporta dos tipos de artículo, las breves y los a
 
 Las breves están orientadas a pequeñas notas, no muy desarrolladas, por ejemplo, convocatorias de reuniones, concentraciones, etc, por otro lado, los artículos están orientados a comunicados de prensa, y a noticias más elaboradas, por ejemplo, en el caso de una concentración, explicando los motivos que han llevado a esa situación, enlaces a las noticias en otros sitios, etc.
 
+<a id="markdown-la-web" name="la-web"></a>
 ### La web
 
 El aspecto actual se basa en una modificación de las plantillas estándar de SPIP, con plantillas especiales para mostrar galerías fotográficas, etc, así como iconos personalizados según la sección.
@@ -46,6 +74,7 @@ Llegando a hacer que parezca mentira que por debajo esté funcionando el mismo s
 
 Actualmente existe un equipo desarrollando una nueva apariencia para la web, de forma que su aspecto resulte más atractivo y muestre de forma más organizada la información.
 
+<a id="markdown-precauciones" name="precauciones"></a>
 ### Precauciones
 
 A modo de ejemplo, publicar una noticia de dos líneas de texto convocando a una manifestación o enlazando a otra web como un artículo no es buena idea, cuando disponemos de las noticias breves que además de tener más visibilidad, no "desilusionan" al entrar y ver que están vacías.
@@ -56,6 +85,7 @@ Claro está, es conveniente, una vez creado un artículo, ver el aspecto que tie
 
 Debemos pues, procurar dotar a los artículos y como consecuencia a la web, de los mejores contenidos posibles, lo más completos, referenciados y sobre todo actualizados, para así poder ser un lugar de referencia del que la gente pueda obtener información
 
+<a id="markdown-entrada-a-la-zona-administrativa" name="entrada-a-la-zona-administrativa"></a>
 ### Entrada a la zona administrativa
 
 En la página principal, pincharemos sobre el enlace "Espacio privado" y nos aparecerá la ventana de inicio de sesión.
@@ -70,38 +100,45 @@ La aplicación está plagada de iconos que nos muestran la ayuda de la que dispo
 
 Vamos a presionar sobre el enlace "Nuevo Artículo", ya que es donde principalmente vamos a trabajar.
 
+<a id="markdown-creando-un-artículo" name="creando-un-artículo"></a>
 ### Creando un artículo
 
 Cuando pinchamos el atajo para crear un nuevo artículo nos aparece una nueva ventana.
 
 En ella, tenemos unos recuadros para ir rellenando los campos que luego darán forma a nuestro artículo.
 
+<a id="markdown-antetítulo-título-y-subtítulo" name="antetítulo-título-y-subtítulo"></a>
 #### Antetítulo, Título y Subtítulo
 
 Como en una noticia de un periódico, tenemos un antetítulo, un título y un subtítulo, que nos permiten crear una pequeña ampliación sobre el texto que vamos a tratar. A modo de ejemplo, se pueden consultar noticias ya publicadas en la web que hacen uso de estos campos.
 
 El campo estrictamente necesario es el título y la sección.
 
+<a id="markdown-sección" name="sección"></a>
 #### Sección
 
 Debemos escoger correctamente la sección, para así facilitar que artículos de temáticas relacionadas estén juntos, a la vez que facilitamos que la persona encargada de la labor de editor, tenga que perder menos tiempo y pueda realizar un mejor trabajo.
 
 Además de esta estructura, tenemos una sección para tablón de anuncios (donde publicaremos las breves), otra para galería fotográfica (artículos que no tengan texto, o muy pequeño y tengan muchas fotografías adjuntas, por ejemplo el de una concentración, evento, etc).
 
+<a id="markdown-descripción" name="descripción"></a>
 #### Descripción
 
 Una vez escogida adecuadamente la sección donde irá ubicado, debemos especificar una descripción rápida del artículo que aparecerá junto al título mientras el artículo esté en la parte principal de la portada y que ayudará al visitante a conocer el contenido, en caso de omitirse, se utilizará el comienzo del texto del artículo.
 
+<a id="markdown-epígrafe" name="epígrafe"></a>
 #### Epígrafe
 
 El epígrafe es una ampliación de la descripción que nos permite obtener una introducción al texto del artículo.
 
+<a id="markdown-texto" name="texto"></a>
 #### Texto
 
 Este es el lugar donde trabajaremos principalmente, como habremos visto, en cada uno de los cuadros tenemos el botón de ayuda para abrir la ayuda del entorno y conocer el funcionamiento de cada cuadro, su función y las opciones que podemos utilizar en su interior.
 
 Dentro del cuadro de texto podemos utilizar código HTML para aplicar formato, o bien utilizar los atajos que incorpora SPIP.
 
+<a id="markdown-atajos" name="atajos"></a>
 #### Atajos
 
 Párrafos: Se deben separar entre sí con una línea en blanco: dos retornos de carro seguidos.
@@ -139,10 +176,12 @@ Texto sin interpretar: encerrado entre el tag HTML
 
 Código a no interpretar y mostrar de forma especial entre el tag: "`code`"
 
+<a id="markdown-post-scriptum" name="post-scriptum"></a>
 #### Post Scriptum
 
 Este cuadro nos permite añadir texto al final del artículo, que por ejemplo nos puede ser útil para referenciar a otros artículos relacionados, etc.
 
+<a id="markdown-las-breves" name="las-breves"></a>
 ### Las breves
 
 Una noticia breve, se parece mucho a un artículo, con la limitación de sólo poder publicarse en las secciones de primer nivel.
@@ -155,6 +194,7 @@ Por norma, sería aconsejable limitar las breves a pequeños avisos, que se escr
 
 Luego en el texto, se podría ampliar un poco más la información, pero siempre, teniendo en mente que se debería escribir un artículo al que enlace la breve, indicando los motivos que impulsan a esa concentración, cita, etc de forma que quede ampliada la información que con el título no es suficiente.
 
+<a id="markdown-comprobando-el-resultado" name="comprobando-el-resultado"></a>
 ### Comprobando el resultado
 
 Una vez hemos escrito un artículo y hemos presionado el botón de validar, nos aparece una vista previa de cómo quedará el artículo, su título, antetítulo, descripción, etc.
@@ -169,6 +209,7 @@ También podemos adjuntar iconos personalizados a los artículos, de forma que p
 
 Actualmente, si no se especifica ninguno en el artículo, se utilice el de la sección.
 
+<a id="markdown-consideraciones" name="consideraciones"></a>
 ### Consideraciones
 
 Si el artículo va a tener documentos adjuntos, sería interesante, que por ejemplo en el caso de referencias técnicas, etc, éstos se publiquen como un artículo, no como un adjunto a un artículo, el motivo es muy sencillo, si un artículo lleva un adjunto, es poco probable que un buscador lo descargue y lo indexe, mientras que si es texto, los buscadores lo encontrarán, lo añadirán a sus bases de datos, y permitirán que se encuentre el artículo con mayor facilidad.

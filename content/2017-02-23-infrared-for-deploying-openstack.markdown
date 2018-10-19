@@ -7,10 +7,33 @@ tags: python, ansible, openstack, sysmgmt, InfraRed, foss
 category: blog
 description:
 ---
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Why InfraRed?](#why-infrared)
+2. [Setup of InfraRed-running host](#setup-of-infrared-running-host)
+3. [Remote host setup](#remote-host-setup)
+4. [NOTES](#notes)
+5. [Error reporting](#error-reporting)
+6. [RFE/BUGS](#rfebugs)
+7. [Using Ansible to deploy InfraRed](#using-ansible-to-deploy-infrared)
+8. [Deploy environment examples](#deploy-environment-examples)
+    1. [Common requirements](#common-requirements)
+9. [Cleanup](#cleanup)
+    1. [OSP 9 (3 + 2)](#osp-9-3--2)
+        1. [Define version to use](#define-version-to-use)
+    2. [OSP 8 (3+2)](#osp-8-32)
+    3. [OSP 10 (3+2)](#osp-10-32)
+    4. [OSP 7 (3+2+3)](#osp-7-323)
+10. [Wrapping-up](#wrapping-up)
+
+<!-- /TOC -->
+
 [InfraRed](https://github.com/redhat-openstack/infrared/) is tool that allows to install/provision OpenStack. You can find the documentation for the project at <http://infrared.readthedocs.io>.
 
 Also, developers and users are online in FreeNode at #infrared channel.
 
+<a id="markdown-why-infrared" name="why-infrared"></a>
 ## Why InfraRed?
 
 Deploying OSP with OSP-d (TripleO) requires several setup steps for preparation, deployment, etc. InfraRed simplifies them by automating with ansible most of those steps and configuration.
@@ -20,6 +43,7 @@ Deploying OSP with OSP-d (TripleO) requires several setup steps for preparation,
 - Allows to define working environments so one InfraRed-running host can be used to manage different environments
 - and much more...
 
+<a id="markdown-setup-of-infrared-running-host" name="setup-of-infrared-running-host"></a>
 ## Setup of InfraRed-running host
 
 Setting InfraRed is quite easy, at the moment the version 2 (branch on github) is working pretty well.
@@ -33,6 +57,7 @@ We'll start with:
     - `pip install --upgrade setuptools`
     - `pip install .`
 
+<a id="markdown-remote-host-setup" name="remote-host-setup"></a>
 ## Remote host setup
 
 Once done, we need to setup the requirements on the host we'll use to virtualize, this includes, having the system registered against a repository providing required packages.
@@ -43,6 +68,7 @@ Once done, we need to setup the requirements on the host we'll use to virtualize
     - `subscription-manager repos --disable=*`
     - `for canal in rhel-7-server-extras-rpms rhel-7-server-fastrack-rpms rhel-7-server-optional-fastrack-rpms rhel-7-server-optional-rpms rhel-7-server-rh-common-rpms rhel-7-server-rhn-tools-rpms rhel-7-server-rpms rhel-7-server-supplementary-rpms rhel-ha-for-rhel-7-server-rpms;do subscription-manager repos --enable=$canal; done`
 
+<a id="markdown-notes" name="notes"></a>
 ## NOTES
 
 - OSP7 did not contain RPM packaged version of images, a repo with the images needs to be defined like:
@@ -50,10 +76,12 @@ Once done, we need to setup the requirements on the host we'll use to virtualize
     - NOTE: --images-task `import` and `--images-url`
 - Ceph failed to install unless `--storage-backend ceph` was provided (open bug for that)
 
+<a id="markdown-error-reporting" name="error-reporting"></a>
 ## Error reporting
 
 - IRC or github
 
+<a id="markdown-rfebugs" name="rfebugs"></a>
 ## RFE/BUGS
 
 Some bugs/RFE on the way to get implemented some day:
@@ -62,6 +90,7 @@ Some bugs/RFE on the way to get implemented some day:
 - Multi env creation, so several osp-d versions are deployed on the same hypervisor but one launched
 - Automatically add `--storage-backend ceph` when ceph nodes defined
 
+<a id="markdown-using-ansible-to-deploy-infrared" name="using-ansible-to-deploy-infrared"></a>
 ## Using Ansible to deploy InfraRed
 
 This is something that I began testing to automate the basic setup, still is needed to decide version to use, and do deployment of infrastructure vm's but does some automation for setting up the hypervisors.
@@ -111,10 +140,12 @@ This is something that I began testing to automate the basic setup, still is nee
 
 This playbook will do checkout of git repo, setup extra pip commands to upgrade virtualenv's deployed pip and setuptools, etc.
 
+<a id="markdown-deploy-environment-examples" name="deploy-environment-examples"></a>
 ## Deploy environment examples
 
 This will show the commands that might be used to deploy some environments and some sample timings on a 64Gb RAM host.
 
+<a id="markdown-common-requirements" name="common-requirements"></a>
 ### Common requirements
 
 ~~~bash
@@ -123,14 +154,17 @@ export HOST_KEY=~/.ssh/id_rsa
 export ANSIBLE_LOG_PATH=deploy.log
 ~~~
 
+<a id="markdown-cleanup" name="cleanup"></a>
 ## Cleanup
 
 ~~~bash
 time infrared virsh --cleanup True --host-address $HOST --host-key $HOST_KEY
 ~~~
 
+<a id="markdown-osp-9-3--2" name="osp-9-3--2"></a>
 ### OSP 9 (3 + 2)
 
+<a id="markdown-define-version-to-use" name="define-version-to-use"></a>
 #### Define version to use
 
 ~~~bash
@@ -155,6 +189,7 @@ user    9m36.592s
 sys     4m39.188s
 ~~~
 
+<a id="markdown-osp-8-32" name="osp-8-32"></a>
 ### OSP 8 (3+2)
 
 ~~~bash
@@ -179,6 +214,7 @@ user    9m2.412s
 sys     4m25.840s
 ~~~
 
+<a id="markdown-osp-10-32" name="osp-10-32"></a>
 ### OSP 10 (3+2)
 
 ~~~bash
@@ -203,6 +239,7 @@ user    11m55.808s
 sys     6m1.023s
 ~~~
 
+<a id="markdown-osp-7-323" name="osp-7-323"></a>
 ### OSP 7 (3+2+3)
 
 ~~~bash
@@ -227,6 +264,7 @@ user    20m2.582s
 sys     9m42.577s
 ~~~
 
+<a id="markdown-wrapping-up" name="wrapping-up"></a>
 ## Wrapping-up
 
 Please do refer to the InfraRed documentation to get deeper in its possibilities and if interested, consider contributing!

@@ -4,6 +4,25 @@ title: Security Enhanced Linux (SELinux)
 date: 2008-01-04T18:14:03Z
 tags: linux, selinux, foss
 ---
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Introduction](#introduction)
+    1. [Policies](#policies)
+2. [The [Fedora](http://fedoraproject.org/)/[Red Hat](http://www.redhat.com/)/[CentOS](http://www.centos.org/) approach](#the-fedorahttpfedoraprojectorgred-hathttpwwwredhatcomcentoshttpwwwcentosorg-approach)
+3. [Learning by example: Apache](#learning-by-example-apache)
+    1. [Working with SELinux](#working-with-selinux)
+    2. [Where does system stores them](#where-does-system-stores-them)
+    3. [How do we start httpd daemon](#how-do-we-start-httpd-daemon)
+    4. [Are we supposed to do everything like this on our own](#are-we-supposed-to-do-everything-like-this-on-our-own)
+    5. [How does apache loads its config files](#how-does-apache-loads-its-config-files)
+    6. [How do we setup correct SELinux rules to allow something blocked](#how-do-we-setup-correct-selinux-rules-to-allow-something-blocked)
+    7. [What if we try to run httpd listening on port 27](#what-if-we-try-to-run-httpd-listening-on-port-27)
+    8. [Write a simple policy](#write-a-simple-policy)
+    9. [How do we verify that a module has been loaded](#how-do-we-verify-that-a-module-has-been-loaded)
+
+<!-- /TOC -->
+<a id="markdown-introduction" name="introduction"></a>
 ### Introduction
 
 SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel.
@@ -13,6 +32,7 @@ SELinux, originally developed by N.S.A.  (National Security Agency) allows appli
 Inside that "confined area", much more grained than a standard chroot (system where basic executables are copied to another folder in order to have a small subsystem isolated from real system. The drawback is that a small subsystem could have enough utilities to reveal private information from our internal network),in which we can allow only certain operations, for example: adding information to a file, read from a directory but not writing, even just for one file in a standard directory,
 etc...
 
+<a id="markdown-policies" name="policies"></a>
 #### Policies
 Each policy has different applications, and restrictions to the running system. The most extended ones are:
 
@@ -32,6 +52,7 @@ There are several sites on the Internet which provide a locked-down environment 
 
 A system running in MLS/Strict would be difficult to use as due to security restrictions required by the policy, no windowing environment (there are some projects to achieve this,but using very simple windowing environments) would be available to avoid copying of information between windows (as this could avoid security levels).
 
+<a id="markdown-the-fedorahttpfedoraprojectorgred-hathttpwwwredhatcomcentoshttpwwwcentosorg-approach" name="the-fedorahttpfedoraprojectorgred-hathttpwwwredhatcomcentoshttpwwwcentosorg-approach"></a>
 ### The [Fedora](http://fedoraproject.org/)/[Red Hat](http://www.redhat.com/)/[CentOS](http://www.centos.org/) approach
 
 Those distributions decided to focus on just some services. Instead of using a system-wide restrictive policy, that would make system unusable, their choice was to "target" services that are subject to attacks, so, for example, there's a policy for Apache that defines exactly what files can read, what can write, what are log files, what should access from disk, etc.
@@ -40,8 +61,10 @@ This policy is named "targeted" and for services defined within, it restricts wh
 
 This policy balances the security provided by SELinux for critical services, while keeping system usable. Services without rules continue working as on a system with SELinux disabled.
 
+<a id="markdown-learning-by-example-apache" name="learning-by-example-apache"></a>
 ### Learning by example: Apache
 
+<a id="markdown-working-with-selinux" name="working-with-selinux"></a>
 #### Working with SELinux
 
 For working with SELinux we have several tools available, most of them, are old friends: ls, ps, id, etc.
@@ -56,6 +79,7 @@ rwxr-xr-x root root system_u:object_r:httpd_exec_t /usr/sbin/httpd.worker
 
 The "-Z" tells ls to show the SELinux attributes.
 
+<a id="markdown-where-does-system-stores-them" name="where-does-system-stores-them"></a>
 #### Where does system stores them
 
 First versions of SELinux, used external files, but in order to get included into upstream Kernel, a more standard approach was required, and finally, it got implemented using system "Extended Attributes".
@@ -76,6 +100,7 @@ Hey, how could that be possible? executable was httpd_exec, but process is httpd
 
 Well, SELinux uses process transitions, in this case, httpd_exec_t, when executed, translates to httpd_t and from now on, would be the type regulating what process can or cannot do on our system.
 
+<a id="markdown-how-do-we-start-httpd-daemon" name="how-do-we-start-httpd-daemon"></a>
 #### How do we start httpd daemon
 
 We use a script at `/etc/init.d/httpd` which:
@@ -89,6 +114,7 @@ Is yet another type!!!
 
 SELinux defines another kind of "domain transition" which allows that process started by "root" or by init transition to final "httpd_t", all those rules need to be defined in a module for SELinux.
 
+<a id="markdown-are-we-supposed-to-do-everything-like-this-on-our-own" name="are-we-supposed-to-do-everything-like-this-on-our-own"></a>
 #### Are we supposed to do everything like this on our own
 
 Not really ;-). There are several macros that automate this (for example, from /usr/share/selinux/devel/example.te), we can see:
@@ -100,6 +126,7 @@ domain_entry_file(myapp_t, myapp_exec_t)
 
 That automatically setup a domain type myapp_t, and a transition from myapp_exec_t to myapp_t when that executable is loaded for running it on our system.
 
+<a id="markdown-how-does-apache-loads-its-config-files" name="how-does-apache-loads-its-config-files"></a>
 #### How does apache loads its config files
 
 ~~~bash
@@ -120,12 +147,14 @@ Why do this? Well. it's a question about security... ¿why should Apache write t
 
 In a chroot environment, an attacker could get into a minimal system which could give access to our internal network, SELinux will limit this :-)
 
+<a id="markdown-how-do-we-setup-correct-selinux-rules-to-allow-something-blocked" name="how-do-we-setup-correct-selinux-rules-to-allow-something-blocked"></a>
 #### How do we setup correct SELinux rules to allow something blocked
 
 Well, our installed system has a graphical SELinux troubleshooter that will pop up when there are any kind of problems with rules.
 
 There is an command-line utility named "audit2allow" that will told us what we need to enable in order to get that problem fixed, for example:
 
+<a id="markdown-what-if-we-try-to-run-httpd-listening-on-port-27" name="what-if-we-try-to-run-httpd-listening-on-port-27"></a>
 #### What if we try to run httpd listening on port 27
 
 ~~~bash
@@ -160,6 +189,7 @@ In this case, any user gets mapped to user_u and s0 level, root instead, gets ro
 
 We can test with policies and disabling them or not using setenforce. Set enforce allows to switch SELinux enforcing behaviour without rebooting system, so we can freely test our rules without wasting time on reboots.
 
+<a id="markdown-write-a-simple-policy" name="write-a-simple-policy"></a>
 #### Write a simple policy
 
 Well, in order to write a simple policy, we need the selinux-devel package on our system, and then:
@@ -196,6 +226,7 @@ This defines that /usr/sbin/myapp will have the context system_u:object_r:myapp_
 In order to get it loaded, we just need to do `make load`, and module will be compiled (they use m4 macro language), and then
 loaded.
 
+<a id="markdown-how-do-we-verify-that-a-module-has-been-loaded" name="how-do-we-verify-that-a-module-has-been-loaded"></a>
 #### How do we verify that a module has been loaded
 
 With `semodule -l` all loaded modules will be shown, remember that some policies allow booleans to enable or disable certain aspects of them. We can check all defined booleans for currently loaded modules with `getsebool -a`  and we can set them with `setsebool` , using "-P" in order to set that value as default after reboots.

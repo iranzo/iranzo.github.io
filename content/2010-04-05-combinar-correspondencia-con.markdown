@@ -10,6 +10,7 @@ blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-83434047061713789
 blogger_orig_url: http://iranzop.blogspot.com/2010/04/combinar-correspondencia-con.html
 comments: true
 ---
+
 Hacía un tiempo que no usaba la función de combinar correspondencia y en el equipo de sobremesa con Fedora 13 x86_64 no conseguía hacerla funcionar.
 
 Antes de nada:

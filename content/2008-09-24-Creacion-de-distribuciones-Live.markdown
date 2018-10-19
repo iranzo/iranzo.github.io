@@ -7,12 +7,24 @@ comments: true
 tags: linux, fedora, foss
 lang: es
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Introducción](#introducción)
+2. [Ejemplo](#ejemplo)
+3. [Creación](#creación)
+    1. [Llaves USB/Pendrives](#llaves-usbpendrives)
+    2. [Conclusión](#conclusión)
+
+<!-- /TOC -->
+<a id="markdown-introducción" name="introducción"></a>
 ## Introducción
 
 Según lo visto en el artículo [Kickstart]({filename}2008-05-11-Kickstart-instalaciones.markdown), podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
 
 [Fedora]({filename}2008-06-14-Fedora.markdown) proporciona unas utilidades 'livecd-tools' que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
 
+<a id="markdown-ejemplo" name="ejemplo"></a>
 ## Ejemplo
 
 Por ejemplo, podemos personalizar nuestro medio 'live' cambiando el mensaje de login con un:
@@ -130,6 +142,7 @@ echo " " >> /etc/issue
 
 ~~~
 
+<a id="markdown-creación" name="creación"></a>
 ## Creación
 
 Para generar la imagen Live, ejecutaremos
@@ -141,6 +154,7 @@ livecd-creator -c /root/usuario/ks.cfg -f MedioLive
 
 Al acabar, obtendremos un fichero ".iso" que contendrá un medio 'Vivo' basado en nuestro guión de instalación.
 
+<a id="markdown-llaves-usbpendrives" name="llaves-usbpendrives"></a>
 ### Llaves USB/Pendrives
 
 Livecd-tools incorpora dos utilidades más:
@@ -150,6 +164,7 @@ Livecd-tools incorpora dos utilidades más:
 
 Que graban esa imagen ISO en un medio USB y lo hacen arrancable, y por otro permiten crear los ficheros necesarios para poder servir en un entorno diskless nuestra imagen Live, por ejemplo, para hacer un medio de rescate más completo que el entorno mínimo que suelen ofrecer las distribuciones.
 
+<a id="markdown-conclusión" name="conclusión"></a>
 ### Conclusión
 
 Aprovechando los conocimientos que ya teníamos acerca de kickstart y anaconda, podemos personalizar un medio Vivo, livecd-tools se encargarán de la parte 'complicada' de adaptar el sistema a ejecutarse en un medio de sólo lectura.

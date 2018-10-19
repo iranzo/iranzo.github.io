@@ -7,7 +7,17 @@ tags: spip, cms, foss
 lang: es
 
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
+1. [Introducción a SPIP 1.9](#introducción-a-spip-19)
+2. [Proceso de actualización a SPIP 1.9 (de forma limpia)](#proceso-de-actualización-a-spip-19-de-forma-limpia)
+3. [Adaptar los esqueletos](#adaptar-los-esqueletos)
+
+<!-- /TOC -->
+
+
+<a id="markdown-introducción-a-spip-19" name="introducción-a-spip-19"></a>
 ### Introducción a SPIP 1.9
 
 SPIP 1.9 va a traer bastantes mejoras respecto a versiones anteriores, entre ellas:
@@ -21,6 +31,7 @@ SPIP 1.9 va a traer bastantes mejoras respecto a versiones anteriores, entre ell
 - Introducción de algunos elementos de programación AJAX(Desplazan parte de la carga de trabajo del servidor al cliente que visita la página, haciendo que la navegación sea más fluída y el servidor no se sobrecargue)
 - Soporte UTF-8
 
+<a id="markdown-proceso-de-actualización-a-spip-19-de-forma-limpia" name="proceso-de-actualización-a-spip-19-de-forma-limpia"></a>
 ### Proceso de actualización a SPIP 1.9 (de forma limpia)
 
 El proceso lo podemos llevar a cabo de varias formas, tanto por la parte del servidor como por las plantillas, pero teniendo en cuenta una serie de precauciones.
@@ -42,6 +53,7 @@ Hasta aquí, tenemos actualizados los ficheros, ahora viene la base de datos, po
 
 - Si nuestro proveedor soporta el htpasswd, sería recomendable copiar el que viene con spip htpasswd.txt al nombre que nos haya indicado nuestro proveedor (habitualmente ".htpasswd"), así como habilitar las url_propres en ecrire/mes_options.php
 
+<a id="markdown-adaptar-los-esqueletos" name="adaptar-los-esqueletos"></a>
 ### Adaptar los esqueletos
 
 Una de las cosas a tener en cuenta, es que con la desaparición de los .php3, han desaparecido también (al formar parte de las mejoras) las parejas de esqueletos .html/.php3, ahora las llamadas a los esqueletos se realizan con el parámetro page=plantilla.html, o con una nueva baliza llamada #URL_PAGE que nos permite crear url's de la forma en la que SPIP las utiliza y que previsiblemente, hará que no tengamos que volver a poner las url's a mano a pesar de los cambios de versión porque podrá

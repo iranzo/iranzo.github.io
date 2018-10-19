@@ -7,7 +7,17 @@ comments: true
 tags:  linux , fedora, desktop, foss
 lang: es
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
+1. [Antecedentes](#antecedentes)
+2. [¿Qué me parece cada distribución a día de hoy?](#¿qué-me-parece-cada-distribución-a-día-de-hoy)
+3. [¿Que me motivó?](#¿que-me-motivó)
+4. [En resumen](#en-resumen)
+
+<!-- /TOC -->
+
+<a id="markdown-antecedentes" name="antecedentes"></a>
 ## Antecedentes
 
 Llevo gastando Linux desde hace bastantes años...
@@ -27,6 +37,7 @@ etc
 
 A la par que el servidor en la universidad pasaba a ser Debian 3.0, en mi pc de casa aterrizaba también Debian, primero en su versión estable y rápidamente en su versión "testing" con la que iba probando las nuevas versiones de software que venían. Como no, también pasé una temporada por Ubuntu pero la volví a actualizar a Debian.
 
+<a id="markdown-¿qué-me-parece-cada-distribución-a-día-de-hoy" name="¿qué-me-parece-cada-distribución-a-día-de-hoy"></a>
 ## ¿Qué me parece cada distribución a día de hoy?
 
 - [Slackware](http://www.slackware.com/): Tengo constancia de mucha gente que la utiliza, personalmente sólo estuvo en mis primeros pasos con Linux y sigue teniendo muy buena reputación, aunque como he dicho, hace años que no la utilizo.
@@ -39,6 +50,7 @@ A la par que el servidor en la universidad pasaba a ser Debian 3.0, en mi pc de 
 - [Red Hat Enteprise Linux](http://www.redhat.com/rhel/): Una de las distribuciones más difundidas en entorno empresarial, [colaboradora activamente](http://fedoraproject.org/wiki/RedHatContributions) en el desarrollo de Linux a través del proyecto [Fedora](http://fedoraproject.org/) y que utiliza el sistema de paquetes RPM para la gestión de su software, uno de los más extendidos por otros fabricantes para proporcionar sus aplicaciones, controladores, etc.
 - [Fedora](http://fedoraproject.org/): Evolución de Red Hat Linux (sin Enterprise) que sigue recibiendo el apoyo de Red Hat para que como comunidad desarrollen la distribución. Se ha caracterizado por introducir novedosas mejoras tecnológicas. Una de las quizás más controvertidas fue la introducción de [Security Enhanced Linux (SELinux)]({filename}2008-01-04-Security-Enhanced-Linux-SELinux.markdown), que inicialmente presentó algún problema para los usuarios pero que hoy en dia proporciona mayor seguridad de forma casi transparente.
 
+<a id="markdown-¿que-me-motivó" name="¿que-me-motivó"></a>
 ## ¿Que me motivó?
 
 - Slack, la primera que tuve debido a haberla conseguido con Sólo Programadores
@@ -51,6 +63,7 @@ A la par que el servidor en la universidad pasaba a ser Debian 3.0, en mi pc de 
 - CentOS: Posibilidad de usar SELinux y [Cobbler](http://cobbler.et.redhat.com/) (un software libre para gestión de infraestructuras de instalación), así como estar basada en Red Hat Enterprise Linux que me permitía practicar habilidades :)
 - Fedora: Desde la versión 9 soporta cifrado completo como hacía Debian y como añadido lleva incorporado de serie SELinux, una característica que como ya he comentado me atrae por su filosofía. Además disponía de Firefox 3 (que iba mucho mejor en mi portátil con RHEL 5 que FF 1.5). Además, tiene ciclos cortos de desarrollo lo que permite también probar nuevas características y la verdad es que hay bastantes proyectos interesantes bajo el paraguas de Fedora ([smolt](http://smolt.fedoraproject.org/), directory server, FreeIPA, etc)
 
+<a id="markdown-en-resumen" name="en-resumen"></a>
 ## En resumen
 
 A día de hoy estoy utilizando Fedora 12 con LVM cifrado, Gnome como entorno, Firefox como navegador, gnome-terminal como consola, pidgin como programa de mensajería instantánea, xchat como cliente de IRC, k3b para grabación de DVD's y CD's y para contadas ocasiones LyX y OpenOffice para documentos. Para la parte multimedia, utilizo Exaile como reproductor (muy parecido a Amarok) y VLC como reproductor de vídeo.

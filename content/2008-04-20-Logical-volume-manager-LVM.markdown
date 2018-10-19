@@ -8,6 +8,26 @@ tags: linux, lvm, foss
 lang: en
 ---
 
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Introducion](#introducion)
+2. [Physical volumes(pv)](#physical-volumespv)
+3. [Volume groups (vg)](#volume-groups-vg)
+4. [Logical volumes(lv)](#logical-volumeslv)
+5. [Commands](#commands)
+6. [System preparation for LVM](#system-preparation-for-lvm)
+7. [Hard drive partitioning](#hard-drive-partitioning)
+8. [Creation of physical volumes (PV)](#creation-of-physical-volumes-pv)
+9. [Creation of volume groups (VG)](#creation-of-volume-groups-vg)
+10. [Creation of Logical volumes (LV)](#creation-of-logical-volumes-lv)
+11. [Creation of a filesystem](#creation-of-a-filesystem)
+12. [Resizing an LVM "drive"](#resizing-an-lvm-drive)
+13. [Graphical tool](#graphical-tool)
+
+<!-- /TOC -->
+
+<a id="markdown-introducion" name="introducion"></a>
 ### Introducion
 
 LVM are the initials for Logical Volume Manager, a powerful tool present in actual Linux systems inspired in the implementation available in other systems like AIX and HP-UX.
@@ -28,20 +48,24 @@ LVM structure is as shown:
 
 ![LVM schema]({filename}/imagen/lvmschema.gif)
 
+<a id="markdown-physical-volumespv" name="physical-volumespv"></a>
 ### Physical volumes(pv)
 
 A physical volume is a disk or a slice of it that we will designate for inclusion in a volume group.
 
 Physical volumes can be places in a partition (for example if they have to coexist with another operating systems), or well span over the whole disk, even over md devices[^2].
 
+<a id="markdown-volume-groups-vg" name="volume-groups-vg"></a>
 ### Volume groups (vg)
 
 Volume groups are defined grouping one or more physical volumes and are, as if they where phyisical disks which take their size from the different physical volumes associaited to them.
 
+<a id="markdown-logical-volumeslv" name="logical-volumeslv"></a>
 ### Logical volumes(lv)
 
 Logical volumes are created inside a volume group and are the equivalent to partitions in other systems, is the part of LVM that we format with a filesystem and we join afterwards to our system for being used for storage.
 
+<a id="markdown-commands" name="commands"></a>
 ### Commands
 
 Commands related with LVM use a similar naming, which starts with the element they affect to:
@@ -50,8 +74,10 @@ Commands related with LVM use a similar naming, which starts with the element th
 - vg(convert,extend,reduce,scan,create,import,remove,split,change,display,merge,rename,export) for volume groups
 - lv(change,display,convert,extend,remove,rename,scan,create,reduce,resize) for logical volumes
 
+<a id="markdown-system-preparation-for-lvm" name="system-preparation-for-lvm"></a>
 ### System preparation for LVM
 
+<a id="markdown-hard-drive-partitioning" name="hard-drive-partitioning"></a>
 ### Hard drive partitioning
 
 Before using LVM we need to designate some devices (full drives or partitions (type 8e on fdisk))
@@ -64,6 +90,7 @@ In hda we have one partition, hda1 in which we store /boot (partition for kernel
 
 In sda we have the whole disk available for being used as LVM, so we will define a partition sda1 for this use.
 
+<a id="markdown-creation-of-physical-volumes-pv" name="creation-of-physical-volumes-pv"></a>
 ### Creation of physical volumes (PV)
 
 Physical volumes are the places in which we put the structure for volume groups, it's creation is as easy as running:
@@ -79,6 +106,7 @@ If we execute "pvscan", we can check the listing of physical volumes defined on 
 
 For having a detailed state, we can execute "pvdisplay", which will show more information like size, PE's avaiable, etc.
 
+<a id="markdown-creation-of-volume-groups-vg" name="creation-of-volume-groups-vg"></a>
 ### Creation of volume groups (VG)
 
 Volume groups are like drawers, which placed over physical volumes, that define the grouping for logical volumes, making more clear the structure.
@@ -94,6 +122,7 @@ This command will create a volume group named "Prueba" over the physical volume 
 
 For checking that the action went ok, was we can execute "vgscan" for getting a listing of defined volume groups.
 
+<a id="markdown-creation-of-logical-volumes-lv" name="creation-of-logical-volumes-lv"></a>
 ### Creation of Logical volumes (LV)
 
 Logical volumes are the equivalent to partitions, is the place over which we will put a filesystem and thus, the data we want to store.
@@ -107,6 +136,7 @@ lvcreate Prueba -n Inicial -L 2G
 
 If we execute "lvscan", we will have a listing of all the defined volume groups and it's size and between them, "Inicial", inside of "Prueba" and with a 2Gb size
 
+<a id="markdown-creation-of-a-filesystem" name="creation-of-a-filesystem"></a>
 ### Creation of a filesystem
 
 Before using the logical volume we'll need to prepare it for data, and creating a filesystem, this time, the command is identical to the one we use over a physical disk, but specifying the logical volume, for example:
@@ -125,6 +155,7 @@ Now, we can mount the filesystem:
 mount /dev/Prueba/Inicial /mnt
 ~~~
 
+<a id="markdown-resizing-an-lvm-drive" name="resizing-an-lvm-drive"></a>
 ### Resizing an LVM "drive"
 
 EXT3, allows resizing of volumes, so they can grow while being used, but for reducing size we need to stop its usage, and even in that case, it allows the interesting opportunity to create small filesystems, fitted for our initial usage and then keep them growing based on our needs without stop running.
@@ -173,6 +204,7 @@ When the process has ended, we can reduce the volume running:
 
 And now we will make the filesystem grow to regain the "security margin" we left with: resize2fs /dev/mapper/Prueba-Inicial .
 
+<a id="markdown-graphical-tool" name="graphical-tool"></a>
 ### Graphical tool
 
 Red Hat or Fedora have a graphical tool "system-config-lvm" which allows to manage logical volumes in our system in the following way.

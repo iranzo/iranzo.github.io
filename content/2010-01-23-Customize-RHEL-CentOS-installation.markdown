@@ -6,6 +6,23 @@ author: Pablo Iranzo Gómez
 comments: true
 tags: rhel, centos, linux, installation, foss
 ---
+**Table of contents**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+
+1. [Introduction](#introduction)
+2. [Preparing everything](#preparing-everything)
+3. [DVD background image at boot prompt](#dvd-background-image-at-boot-prompt)
+4. [Including updates](#including-updates)
+5. [Removing unused packages](#removing-unused-packages)
+6. [Adding extra software](#adding-extra-software)
+7. [Recreating metadata](#recreating-metadata)
+    1. [EL4](#el4)
+    2. [EL5](#el5)
+8. [Finishing](#finishing)
+
+<!-- /TOC -->
+
+<a id="markdown-introduction" name="introduction"></a>
 ## Introduction
 
 A standard install media, (let's talk about a DVD for easier start) has several files/folders at his root, but most important are:
@@ -18,6 +35,7 @@ Usually, a distribution has for it's main binaries more than 2 Gb of data, that 
 
 Wouldn't it be better to have one install media suited for your target systems with all available updates applied?
 
+<a id="markdown-preparing-everything" name="preparing-everything"></a>
 ## Preparing everything
 
 First, we'll need to copy all of our DVD media to a folder in our harddrive, including those hidden files on DVD root (the ones telling installer which cd-sets are included and some other info).
@@ -26,12 +44,14 @@ Let's asume that we'll work on /home/user/DVD/
 
 After we've copied everything from our install media, we'll start customizing :)
 
+<a id="markdown-dvd-background-image-at-boot-prompt" name="dvd-background-image-at-boot-prompt"></a>
 ## DVD background image at boot prompt
 
 We can customize DVD background image and even keyboard layout by tweaking "isolinux/isolinux.cfg" with all required fields (Check [Syslinux](http://syslinux.zytor.com/wiki/index.php/SYSLINUX) Documentation to check proper syntax)
 
 On [Kickstart: instalaciones automatizadas para anaconda]({filename}/2008-05-11-Kickstart-instalaciones.markdown) (spanish) you can also check how to create a kickstart, so you can embed it on this DVD and configure isolinux.cfg to automatic provision a system
 
+<a id="markdown-including-updates" name="including-updates"></a>
 ## Including updates
 
 The easiest way would be to install a system with all required package set from original DVD media, and then connect that system to an update server to fetch but not install them.
@@ -47,6 +67,7 @@ For each package in updates/, you'll need to remove old version from original fo
 
 After some minutes, you'll have all updates in place... and you can remove the DVD/updates/ folder as it will be empty after placing each updated RPM in the folder where the previous versions was.
 
+<a id="markdown-removing-unused-packages" name="removing-unused-packages"></a>
 ## Removing unused packages
 
 Well, after having everthing in place, we'll start removing unused files. Usually, we could check every package install status on 'test' system by checking rpm, but that's going to be a way looooong task, so we can 'automate' it a bit by doing:
@@ -91,14 +112,17 @@ After you finish, you'll have a file named `things-to-do`, in which you'll see c
 
 If you're confident about it's contents, you can run `sh things-to-do` and have all 'not installed on TARGET' packages removed from your DVD folder.
 
+<a id="markdown-adding-extra-software" name="adding-extra-software"></a>
 ## Adding extra software
 
 In the same way we added updates, we can also add new software to be deployed along base system like monitoring utilities, custom software, HW drivers, etc, just add packages to desired folders before going throught next steps.
 
+<a id="markdown-recreating-metadata" name="recreating-metadata"></a>
 ## Recreating metadata
 
 After all our adds and removals, we need to tell installer that we changed packages, and update it's dependencies, install order, etc.
 
+<a id="markdown-el4" name="el4"></a>
 ### EL4
 
 This one is trickier, but it is still possible in a not so hard way, first of all, we need to update some metadata files (hdlist) and Package order for installation, it can be dificult if we add extra packages, as we'll have special care:
@@ -120,6 +144,7 @@ export PYTHONPATH=/usr/lib/anaconda-runtime:/usr/lib/anaconda
 /usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/ —fileorder /home/user/order.txt
 ~~~
 
+<a id="markdown-el5" name="el5"></a>
 ### EL5
 
 Using createrepo we'll recreate metadata, but we've to keep care and use comps.xml to provide 'group' information to installer, so we'll need to run:
@@ -129,6 +154,7 @@ Using createrepo we'll recreate metadata, but we've to keep care and use comps.x
 createrepo -g /home/DVD/Server/repodata/groupsfile.xml /home/DVD/Server/
 ~~~
 
+<a id="markdown-finishing" name="finishing"></a>
 ## Finishing
 
 At this step you'll have a DVD structure on your hard drive, and just need to get an ISO to burn and test:

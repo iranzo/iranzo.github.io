@@ -7,7 +7,15 @@ comments: true
 tags: linux, fuse, foss
 lang: es
 ---
+**Tabla de contenidos**
+<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
+1. [Introducción](#introducción)
+2. [FUSE](#fuse)
+3. [Extendiendo FUSE](#extendiendo-fuse)
+
+<!-- /TOC -->
+<a id="markdown-introducción" name="introducción"></a>
 ### Introducción
 
 En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a "hibernar" la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en "pausa" y al volver al día siguiente a utilizar el PC y encenderlo, recuperarlo todo tal cual estaba, listo para trabajar. Cuando pasé a [Fedora]({filename}2008-06-14-Fedora.markdown) esta función junto con el LVM cifrado no iban a faltar en mi sistema :-)
@@ -20,6 +28,7 @@ Durante muuuuuuchos años he estado utilizando ese funcionamiento para trabajar 
 
 Ésto me animó a probar otras alternativas y fue cuando FUSE volvió a mis manos.
 
+<a id="markdown-fuse" name="fuse"></a>
 ### FUSE
 
 [FUSE](http://fuse.sourceforge.net/)("Filesystem in userspace") es un proyecto que permite cargar sistemas de ficheros a nivel de usuario, para ello, dispone de un controlador en kernel, y una serie de utilidades ejecutables por usuarios para poder cargar esos sistemas de ficheros.
@@ -54,6 +63,7 @@ sshfs host:/ruta/a/la/carpeta carpeta-de-montaje
 
 A partir de ese momento, cada vez que accedo a la carpeta "carpeta-de-montaje", los ficheros sobre los que opero, están en otro equipo, al que se ha conectado por ssh y se le envian los comandos para abrir ficheros, renombrarlos, etc.
 
+<a id="markdown-extendiendo-fuse" name="extendiendo-fuse"></a>
 ### Extendiendo FUSE
 
 El meollo de este artículo es un artículo "WEB LOCAL: Pythoneando con FUSE" de [Linux Magazine](http://www.linux-magazine.es/) (número 37) que me pasó un compañero (Fran Gimeno) en el que se analizaba por parte de "Jose María Ruiz" el funcionamiento de FUSE La parte interesante de dicho artículo, así como en este artículo de [Red Hat Magazine](http://www.redhatmagazine.com/2008/01/29/open-source-project-zmugfs/).
