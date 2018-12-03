@@ -64,10 +64,30 @@ PLUGINS = [
     'better_figures_and_images',
     'sitemap',
     # 'yuicompressor',
+    'extract_toc',
+    'tipue_search',
+    "liquid_tags",
+    "multi_part",
+    "neighbors",
+    "related_posts",
+    "share_post"
 ]
 
 FAVICON = 'extra/favicon.ico'
-THEME = 'themes/blue-penguin'
+THEME = 'themes/elegant'
+
+#elegant
+TYPOGRIFY = False
+
+MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc']
+DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
+
+# Elegant Labels
+SOCIAL_PROFILE_LABEL = u'Stay in Touch'
+RELATED_POSTS_LABEL = 'Keep Reading'
+SHARE_POST_INTRO = 'Like this post? Share on:'
+COMMENTS_INTRO = u''
+
 
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
 USE_FOLDER_AS_CATEGORY = False
@@ -108,8 +128,6 @@ CATEGORIES_SAVE_AS = 'blog/categories/index.html'
 
 TAGS_URL = 'blog/tags/'
 TAGS_SAVE_AS = 'blog/tags/index.html'
-
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives']
 
 LINKS = (('Redken on telegram', 'https://t.me/redken_bot'),
          ('RHJobs channel on TG', "https://t.me/rhjobs"),)
