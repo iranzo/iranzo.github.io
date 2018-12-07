@@ -14,8 +14,6 @@ description:
 
 - [Background](#background)
 - [Under the hood](#under-the-hood)
-- [Copyright (C) 2017, 2018 Pablo Iranzo Gómez <Pablo.Iranzo@gmail.com>](#copyright-c-2017-2018-pablo-iranzo-g%C3%B3mez-pabloiranzogmailcom)
-- [- python-codacy-coverage -r coverage.xml](#python-codacy-coverage--r-coveragexml)
     - [Image setup](#image-setup)
     - [Preparation of environment](#preparation-of-environment)
     - [Actual tests](#actual-tests)
@@ -44,8 +42,6 @@ Setting an automated build required several steps to be done:
 One of the key pieces is a properly configured `.travis.yaml` like the one we started using:
 
 ~~~yaml
-# Copyright (C) 2017, 2018 Pablo Iranzo Gómez <Pablo.Iranzo@gmail.com>
-
 language: python
 dist: trusty
 sudo: required
@@ -65,7 +61,6 @@ before_install:
 script:
 - tox
 - make html
-# - python-codacy-coverage -r coverage.xml
 
 after_success:
 - rm -rf .git/
