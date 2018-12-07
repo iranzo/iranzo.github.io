@@ -152,6 +152,7 @@ In the final step, 'make github' uses the makefile provided with pelican to push
 # Wrap up
 
 So, right now we've accomplished several things:
+
 - We do use pelican in the same way that we'll do for our own website
     - We do also have as a consequence, a 'live' demo of latest master branch showcasing features
 - We did automate publishing of webpage as soon as contributors send new articles and are approved for merge
