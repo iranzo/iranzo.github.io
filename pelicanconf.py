@@ -59,19 +59,11 @@ LOAD_CONTENT_CACHE = False
 # Plugins
 PLUGIN_PATHS = ['plugins']
 
-PLUGINS = ['assets',
-           'better_codeblock_line_numbering',
-           'better_figures_and_images',
-           'extract_toc',
-           'liquid_tags',
-           'liquid_tags.img',
-           'multi_part',
-           'neighbors',
-           'related_posts',
-           'render_math',
-           'share_post',
-           'sitemap',
-           'tipue_search']
+PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img',
+           'neighbors', 'render_math', 'related_posts', 'share_post',
+           'multi_part']
+
+# assets
 
 FAVICON = 'extra/favicon.ico'
 THEME = 'themes/elegant'
@@ -79,7 +71,7 @@ THEME = 'themes/elegant'
 #elegant
 TYPOGRIFY = False
 
-MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc']
+MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc(permalink=true)']
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
 
 # Elegant Labels
