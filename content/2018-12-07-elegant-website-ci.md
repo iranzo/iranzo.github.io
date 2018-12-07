@@ -25,7 +25,7 @@ description:
 <a id="markdown-background" name="background"></a>
 # Background
 
-Elegant theme for pelican has been undergoing a big change from individual-driven effort to community, as part of this, one of the tasks to accomplish, has been the decoupling from author blog to project site for documentation.
+[Elegant](https://github.com/Pelican-Elegant/elegant) theme for pelican has been undergoing a big change from individual-driven effort to community, as part of this, one of the tasks to accomplish, has been the decoupling from author blog to project site for documentation.
 
 As we wanted this process to be both automated and allowed us to demonstrate via dogfooding that the theme works and how it looks, the idea was to automate the rendering of pelican website with new documents.
 
@@ -154,7 +154,7 @@ In the final step, 'make github' uses the makefile provided with pelican to push
 So, right now we've accomplished several things:
 
 - We do use pelican in the same way that we'll do for our own website
-    - We do also have as a consequence, a 'live' demo of latest master branch showcasing features
+    - We do also have as a consequence, a ['live' demo](https://pelican-elegant.github.io) of latest master branch showcasing features
 - We did automate publishing of webpage as soon as contributors send new articles and are approved for merge
 - All requires no extra change to regular workflow as <Travis-ci.org> is the glue here puting together all the pieces.
 
