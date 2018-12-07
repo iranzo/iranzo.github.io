@@ -59,19 +59,19 @@ LOAD_CONTENT_CACHE = False
 # Plugins
 PLUGIN_PATHS = ['plugins']
 
-PLUGINS = [
-    'better_codeblock_line_numbering',
-    'better_figures_and_images',
-    'sitemap',
-    # 'yuicompressor',
-    'extract_toc',
-    'tipue_search',
-    "liquid_tags",
-    "multi_part",
-    "neighbors",
-    "related_posts",
-    "share_post"
-]
+PLUGINS = ['assets',
+           'better_codeblock_line_numbering',
+           'better_figures_and_images',
+           'extract_toc',
+           'liquid_tags',
+           'liquid_tags.img',
+           'multi_part',
+           'neighbors',
+           'related_posts',
+           'render_math',
+           'share_post',
+           'sitemap',
+           'tipue_search']
 
 FAVICON = 'extra/favicon.ico'
 THEME = 'themes/elegant'
