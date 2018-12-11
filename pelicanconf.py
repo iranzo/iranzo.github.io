@@ -73,7 +73,13 @@ THEME = 'themes/elegant'
 TYPOGRIFY = False
 RECENT_ARTICLE_SUMMARY = True
 
-MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc(permalink=true)']
+MARKDOWN = {
+'extension_configs': {
+    'markdown.extensions.codehilite': {'css_class': 'codehilight code'},
+    'markdown.extensions.toc': {'permalink': 'true'},
+    }
+}
+
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
 
 # Elegant Labels
