@@ -63,6 +63,8 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags',
            'neighbors', 'render_math', 'related_posts', 'share_post',
            'series']
+           # 'better_codeblock_line_numbering'
+           # 'better_figures_and_images' 
 
 # assets
 
@@ -70,14 +72,23 @@ FAVICON = 'extra/favicon.ico'
 THEME = 'themes/elegant'
 
 #elegant
-TYPOGRIFY = False
+TYPOGRIFY = True
 RECENT_ARTICLE_SUMMARY = True
+RESPONSIVE_IMAGES = True
 
 MARKDOWN = {
-'extension_configs': {
-    'markdown.extensions.codehilite': {'css_class': 'codehilight code'},
-    'markdown.extensions.toc': {'permalink': 'true'},
-    }
+    'extension_configs': {
+        'markdown.extensions.codehilite': {
+            'css_class': 'highlight',
+            'linenums': True
+        },
+        'markdown.extensions.extra': {},
+        'markdown.extensions.toc': {
+            'permalink': 'true'
+        },
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
 }
 
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))

@@ -11,3 +11,5 @@ cssmin
 ghp-import
 pysvg
 cssutils
+typogrify
+# Pillow-PIL

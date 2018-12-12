@@ -14,10 +14,10 @@ description:
 
 - [Background](#background)
 - [Under the hood](#under-the-hood)
-    - [Image setup](#image-setup)
-    - [Preparation of environment](#preparation-of-environment)
-    - [Actual tests](#actual-tests)
-    - [After tests passed](#after-tests-passed)
+  - [Image setup](#image-setup)
+  - [Preparation of environment](#preparation-of-environment)
+  - [Actual tests](#actual-tests)
+  - [After tests passed](#after-tests-passed)
 - [Wrap up](#wrap-up)
 
 <!-- /TOC -->
