@@ -12,21 +12,14 @@ description:
 **Table of contents**
 <!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
-- [Introduction](#introduction)
-- [The technical solution](#the-technical-solution)
-
-<!-- /TOC -->
-
-<a id="markdown-introduction" name="introduction"></a>
 # Introduction
 
 After setting up [build automation]({filename}2018-12-07-elegant-website-ci.md) we also wanted it not to happen only when updating the `documentation` repository.
 
-As Elegant website is not only the documentarton repository but also the 'live' demo of the current branch, we do want to keep it updated not only when a document is added, but also when elegant templates are updated.
+Besides hosting documentation, Elegant website also serves as a live demo of the current release. This meant, the website should be regenerated and updated every time when a documented is added or edited, and also when Elegant theme is updated.
 
-Github and Travis doesn't allow by default to use dependant builds, so the trick goes to 'signal' via a github token to trigger a travis-ci build.
+Github and Travis doesn't offer dependent builds out of the box, so the trick goes to 'signal' via a github token to trigger a travis-ci build.
 
-<a id="markdown-the-technical-solution" name="the-technical-solution"></a>
 # The technical solution
 
 The approach goes via tweaking the 'test validation' `.travis.yaml` and adding some more steps:
@@ -70,11 +63,13 @@ after_success:
 - node trigger-build.js
 ~~~
 
-This does in fact, install travis-ci utilities and does run a custom script 'trigger-build.js' with node that does actually trigger Travis build.
+This installs travis-ci utilities and runs a custom script 'trigger-build.js' with node, which in turn actually triggers Travis build.
 
-The script, downloaded from [here](http://kamranicus.com/blog/2015/02/26/continuous-deployment-with-travis-ci/) has been tweaked to specify the 'repo' we will trigger and the name of the environment variable containing the token:
+The script, downloaded from [Kamran Ayub blog](https://kamranicus.com/posts/2015-02-26-continuous-deployment-with-travis-ci) has been edited to specify the 'repo' we will trigger and the name of the environment variable containing the token:
 
-```js
+```
+#!js
+
 var Travis = require('travis-ci');
 
 // change this
@@ -112,9 +107,11 @@ travis.authenticate({
 });
 ```
 
-As you can see, it grabs the github token from environment variable 'TRATOKEN' that we've defined in travis-ci environment for the build, similar to what we did in the documentation repo to push the built website to another repo.
+As you can see, in line 14, it grabs the github token from environment variable 'TRATOKEN' that we've defined in travis-ci environment for the build.
 
-With all the solution in place, when a new commit is merged on 'master' branch on the 'theme' repo (`elegant`), travis does get invoked to schedule a build on the `documentation` repo, thus, rendering the live website with latest templates.
+This is similar to [what we did]({filename}2018-12-07-elegant-website-ci.md) in the documentation repo to push the built website to another repo.
+
+With this solution in place, when a new commit is merged on 'master' branch on the 'theme' repo [(`elegant`)](https://github.com/Pelican-Elegant/elegant), travis does get invoked to schedule a build on the [`documentation`](https://github.com/Pelican-Elegant/documentation) repo, thus, rendering the live website with latest templates.
 
 Enjoy!
 Pablo
