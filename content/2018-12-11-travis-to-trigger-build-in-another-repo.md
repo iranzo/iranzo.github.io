@@ -12,6 +12,12 @@ description:
 **Table of contents**
 <!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
+- [Introduction](#introduction)
+- [The technical solution](#the-technical-solution)
+
+<!-- /TOC -->
+
+<a id="markdown-introduction" name="introduction"></a>
 # Introduction
 
 After setting up [build automation]({filename}2018-12-07-elegant-website-ci.md) we also wanted it not to happen only when updating the `documentation` repository.
@@ -20,6 +26,7 @@ Besides hosting documentation, Elegant website also serves as a live demo of the
 
 Github and Travis doesn't offer dependent builds out of the box, so the trick goes to 'signal' via a github token to trigger a travis-ci build.
 
+<a id="markdown-the-technical-solution" name="the-technical-solution"></a>
 # The technical solution
 
 The approach goes via tweaking the 'test validation' `.travis.yaml` and adding some more steps:
