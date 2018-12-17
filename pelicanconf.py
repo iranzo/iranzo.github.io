@@ -76,6 +76,13 @@ TYPOGRIFY = True
 RECENT_ARTICLE_SUMMARY = True
 RESPONSIVE_IMAGES = True
 
+PROJECTS = [{'name': 'Redken on telegram', 'url': 'https://t.me/redken_bot',
+             'description': 'A Telegram bot with support for Karma, RSS Feeds, Quotes, etc'},
+            {'name': 'Citellus', 'url': 'https://citellus.org',
+             'description': 'Troubleshooting automation tool with easy to contribute rules'},
+            {'name': 'Pets at Github', 'url': 'https://github.com/iranzo',
+             'description': 'Other projects at Github website'}]
+
 MARKDOWN = {
     'extension_configs': {
         'markdown.extensions.codehilite': {
