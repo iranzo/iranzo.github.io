@@ -76,6 +76,10 @@ TYPOGRIFY = True
 RECENT_ARTICLE_SUMMARY = True
 RESPONSIVE_IMAGES = True
 
+LANDING_PAGE_ABOUT = {'title': 'A bunch of unrelated data',
+                      'details': """<p>This website contains both documentation and setups that could be interesting to you.</p><p>I hope that this results interesting or at least you get some ideas :-)</p><p>You can find more information on me on <a href="https://iranzo.github.io/cv/">my profile</a></p>"""}
+
+
 PROJECTS = [{'name': 'Redken on telegram', 'url': 'https://t.me/redken_bot',
              'description': 'A Telegram bot with support for Karma, RSS Feeds, Quotes, etc'},
             {'name': 'Citellus', 'url': 'https://citellus.org',
