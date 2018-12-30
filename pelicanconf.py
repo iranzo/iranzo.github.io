@@ -8,6 +8,7 @@ SITENAME = u"Pablo Iranzo Gómez's blog"
 SITESUBTITLE = u'A bunch of unrelated data'
 SITEURL = u'/'
 TWITTER_USERNAME = "iranzop"
+AMAZON_ONELINK = "b63a2115-85f7-43a9-b169-5f4c8c275655"
 
 PATH = 'content'
 
