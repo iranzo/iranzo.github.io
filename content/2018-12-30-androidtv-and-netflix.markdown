@@ -39,7 +39,7 @@ One of the features of an AndroidTV box is the ability to use it with [Amazon Pr
 
 Unfortunately, recently I started getting an error on the Xiaomi MiTV Box I bought for an older TV:
 
-![](imagen/netflix-tvq-pm-100.png)
+![](/imagen/netflix-tvq-pm-100.png)
 
 After googling for `tvq pm 5.2 5`, I got to this Netflix FAQ: <https://help.netflix.com/en/node/59709>
 
