@@ -1,7 +1,9 @@
-pelican
-webassets
-cssmin
+bs4
 beautifulsoup4
-markdown
+cssmin
 ghp-import
+markdown
+pelican
 typogrify
+webassets
+peru
