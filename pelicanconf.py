@@ -63,9 +63,10 @@ LOAD_CONTENT_CACHE = False
 # Plugins
 PLUGIN_PATHS = ['plugins']
 
-PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags',
+PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img',
            'neighbors', 'render_math', 'related_posts', 'share_post',
-           'series']
+           'series', 'assets', 'post_stats']
+
            # 'better_codeblock_line_numbering'
            # 'better_figures_and_images' 
 
