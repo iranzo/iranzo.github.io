@@ -42,7 +42,8 @@ Here is where Citellus comes to play.
 
 The Citellus project <https://github.com/citellusorg/citellus/> created by my colleague Robin, aims on creating a set of tests that can be executed against a live system or an uncompressed sosreport tarball (it depends on the test if it applies to one or the other).
 
-The philosphy behind is very easy: 
+The philosophy behind is very easy:
+
 - There's a wrapper `citellus.py` which allows to select plugins to use, or folder containing plugins, verbosity, etc and a sosreport folder to act against.
 - The wrapper does check the plugins available (can be anything executable from linux, so bash, python, etc are there to be used)
 - Then it setups some environment variables like the path to find the data and proceeds to execute the plugins against, recording the output of them.
@@ -70,6 +71,7 @@ As Citellus works with sosreports it is easy to have it installed locally and te
 
 <a id="markdown-writing-a-new-test" name="writing-a-new-test"></a>
 ## Writing a new test
+
 Leading by the example is probably easier, so let's illustrate how to create a basic plugin for checking if a system is a RHV hosted engine:
 
 ~~~bash
@@ -96,6 +98,7 @@ Above example is a bit 'hacky', as we count on wrapper not outputing information
 
 <a id="markdown-how-to-debug" name="how-to-debug"></a>
 ## How to debug?
+
 Easiest way to do trial-error would be to create a new folder for your plugins to test and use something like this:
 
 ~~~sh
