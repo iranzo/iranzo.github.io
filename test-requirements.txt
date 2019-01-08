@@ -13,3 +13,4 @@ pysvg
 cssutils
 typogrify
 # Pillow-PIL
+ConfigParser
