@@ -9,6 +9,8 @@ SITESUBTITLE = u'A bunch of unrelated data'
 SITEURL = u'/'
 TWITTER_USERNAME = "iranzop"
 AMAZON_ONELINK = "b63a2115-85f7-43a9-b169-5f4c8c275655"
+CLAIM_GOOGLE = "Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ"
+CLAIM_BING = "8FF1B025212A47B5B27CC47163A042F0"
 
 PATH = 'content'
 
@@ -43,17 +45,13 @@ STATIC_PATHS = [
     'imagen',
     'extra/robots.txt',
     'extra/favicon.ico',
-    'extra/keybase.txt',
-    'extra/google3bc953001343abe6',
-    'extra/BingSiteAuth.xml'
+    'extra/keybase.txt'
 ]
 
 EXTRA_PATH_METADATA = {
     'extra/keybase.txt': {'path': 'keybase.txt'},
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'},
-    'extra/google3bc953001343abe6' : {'path': 'google3bc953001343abe6.html'},
-    'extra/BingSiteAuth.xml': {'path': 'BingSiteAuth.xml'}
+    'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
 CACHE_CONTENT = False
@@ -68,7 +66,7 @@ PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img',
            'series', 'assets', 'post_stats']
 
            # 'better_codeblock_line_numbering'
-           # 'better_figures_and_images' 
+           # 'better_figures_and_images'
 
 # assets
 
@@ -88,6 +86,8 @@ PROJECTS = [{'name': 'Redken on telegram', 'url': 'https://t.me/redken_bot',
              'description': 'A Telegram bot with support for Karma, RSS Feeds, Quotes, etc'},
             {'name': 'Citellus', 'url': 'https://citellus.org',
              'description': 'Troubleshooting automation tool with easy to contribute rules'},
+            {'name': 'Blog-o-matic', 'url': 'https://github.com/iranzo/blog-o-matic',
+             'description': 'Canned blog automation for quickly setting up a blog with Pelican'},
             {'name': 'Pets at Github', 'url': 'https://github.com/iranzo',
              'description': 'Other projects at Github website'}]
 
