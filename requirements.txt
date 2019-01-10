@@ -1,9 +1,12 @@
-bs4
 beautifulsoup4
+bs4
 cssmin
+cssutils
+flake8
 ghp-import
 markdown
 pelican
+peru
+pysvg
 typogrify
 webassets
-peru

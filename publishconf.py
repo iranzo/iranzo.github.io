@@ -13,4 +13,4 @@ from pelicanconf import *
 SITEURL = 'https://iranzo.github.io/'
 RELATIVE_URLS = False
 
-DELETE_OUTPUT_DIRECTORY = True
+DELETE_OUTPUT_DIRECTORY = False

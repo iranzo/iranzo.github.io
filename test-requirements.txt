@@ -1,6 +1,0 @@
-# Pillow-PIL
-cssutils
-flake8
-misspellings
-pysvg
-tox
