@@ -1,4 +1,11 @@
-# iranzo.github.io
-Personal website
+# Pablo Iranzo's blog
 
-This project contains the file for my personal website
+## Welcome
+
+![mugshot](mugshot.png)
+
+This is the **source** of my personal blog, please, go to <https://iranzo.github.io> to visit it.
+
+Check <https://github.com/iranzo/blog-o-matic/> so that you can kickstart a blog like this within minutes!
+
+Enjoy!

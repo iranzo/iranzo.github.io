@@ -3,14 +3,63 @@ from __future__ import unicode_literals
 
 import datetime
 
+## THINGS TO CONFIGURE
+## ---------------------------------------------------------------------
+
 AUTHOR = u'Pablo Iranzo Gómez'
 SITENAME = u"Pablo Iranzo Gómez's blog"
 SITESUBTITLE = u'A bunch of unrelated data'
 SITEURL = u'/'
-TWITTER_USERNAME = "iranzop"
-AMAZON_ONELINK = "b63a2115-85f7-43a9-b169-5f4c8c275655"
+DEFAULT_LANG = u'en'
+DEFAULT_CATEGORY = 'tech'
 CLAIM_GOOGLE = "Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ"
 CLAIM_BING = "8FF1B025212A47B5B27CC47163A042F0"
+
+LANDING_PAGE_ABOUT = {'title': 'A bunch of unrelated data',
+                      'details': """<p>This website contains both documentation and setups that could be interesting to you.</p><p>I hope that this results interesting or at least you get some ideas :-)</p><p>You can find more information on me on <a href="https://iranzo.github.io/cv/">my profile</a></p>"""}
+
+PROJECTS = [{'name': 'Redken on telegram', 'url': 'https://t.me/redken_bot',
+             'description': 'A Telegram bot with support for Karma, RSS Feeds, Quotes, etc'},
+            {'name': 'Citellus', 'url': 'https://citellus.org',
+             'description': 'Troubleshooting automation tool with easy to contribute rules'},
+            {'name': 'Blog-o-matic', 'url': 'https://github.com/iranzo/blog-o-matic',
+             'description': 'Canned blog automation for quickly setting up a blog with Pelican'},
+            {'name': 'Pets at Github', 'url': 'https://github.com/iranzo',
+             'description': 'Other projects at Github website'}]
+
+
+LINKS = (('Redken on telegram', 'https://t.me/redken_bot'),
+          ('RHJobs channel on TG', "https://t.me/rhjobs"),)
+
+SOCIAL = (('Iranzo twitter', 'http://twitter.com/iranzop'),
+           ('Iranzo github', 'http://github.com/iranzo'),)
+
+
+TWITTER_USERNAME = "iranzop"
+# Update if you use amazon links
+AMAZON_ONELINK = "b63a2115-85f7-43a9-b169-5f4c8c275655"
+
+# GOOGLE_ANALYTICS tracking ID
+GOOGLE_ANALYTICS = "UA-81705-12"
+
+## Configure if you use Disqus for comments
+DISQUS_SITENAME = "iranzo-github-io"
+DISQUS_DISPLAY_COUNTS = True
+
+# Extra files customization
+EXTRA_PATH_METADATA = {
+    'extra/keybase.txt': {'path': 'keybase.txt'},
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+}
+
+FAVICON='extra/favicon.ico'
+
+STATIC_PATHS = [ 'images', 'imagen', 'extra/robots.txt', 'extra/favicon.ico', 'extra/keybase.txt' ]
+
+
+## ONLY TOUCH IF YOU KNOW WHAT YOU'RE DOING!
+## ---------------------------------------------------------------------
 
 PATH = 'content'
 
@@ -21,9 +70,6 @@ WITH_FUTURE_DATES = False
 
 # Put full text in RSS feed
 RSS_FEED_SUMMARY_ONLY = False
-
-DEFAULT_LANG = u'en'
-DEFAULT_CATEGORY = 'tech'
 
 # Feed generation is usually not desired when developing
 
@@ -41,19 +87,6 @@ TAG_FEED_RSS = 'feeds/tag_{slug}.rss'
 
 DISPLAY_PAGES_ON_MENU = True
 
-STATIC_PATHS = [
-    'imagen',
-    'extra/robots.txt',
-    'extra/favicon.ico',
-    'extra/keybase.txt'
-]
-
-EXTRA_PATH_METADATA = {
-    'extra/keybase.txt': {'path': 'keybase.txt'},
-    'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'}
-}
-
 CACHE_CONTENT = False
 CACHE_PATH = '.cache'
 LOAD_CONTENT_CACHE = False
@@ -68,28 +101,12 @@ PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img',
            # 'better_codeblock_line_numbering'
            # 'better_figures_and_images'
 
-# assets
-
-FAVICON = 'extra/favicon.ico'
 THEME = 'themes/elegant'
 
 #elegant
 TYPOGRIFY = True
 RECENT_ARTICLE_SUMMARY = True
 RESPONSIVE_IMAGES = True
-
-LANDING_PAGE_ABOUT = {'title': 'A bunch of unrelated data',
-                      'details': """<p>This website contains both documentation and setups that could be interesting to you.</p><p>I hope that this results interesting or at least you get some ideas :-)</p><p>You can find more information on me on <a href="https://iranzo.github.io/cv/">my profile</a></p>"""}
-
-
-PROJECTS = [{'name': 'Redken on telegram', 'url': 'https://t.me/redken_bot',
-             'description': 'A Telegram bot with support for Karma, RSS Feeds, Quotes, etc'},
-            {'name': 'Citellus', 'url': 'https://citellus.org',
-             'description': 'Troubleshooting automation tool with easy to contribute rules'},
-            {'name': 'Blog-o-matic', 'url': 'https://github.com/iranzo/blog-o-matic',
-             'description': 'Canned blog automation for quickly setting up a blog with Pelican'},
-            {'name': 'Pets at Github', 'url': 'https://github.com/iranzo',
-             'description': 'Other projects at Github website'}]
 
 MARKDOWN = {
     'extension_configs': {
@@ -102,6 +119,7 @@ MARKDOWN = {
             'permalink': 'true'
         },
         'markdown.extensions.meta': {},
+        'markdown.extensions.admonition': {},
     },
     'output_format': 'html5',
 }
@@ -114,12 +132,10 @@ RELATED_POSTS_LABEL = 'Keep Reading'
 SHARE_POST_INTRO = 'Like this post? Share on:'
 COMMENTS_INTRO = u''
 
-
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
 USE_FOLDER_AS_CATEGORY = False
 
 SEARCH_BOX = False
-
 
 # URL Settings to be compatible with octopress
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
@@ -155,11 +171,14 @@ CATEGORIES_SAVE_AS = 'blog/categories/index.html'
 TAGS_URL = 'blog/tags/'
 TAGS_SAVE_AS = 'blog/tags/index.html'
 
-LINKS = (('Redken on telegram', 'https://t.me/redken_bot'),
-         ('RHJobs channel on TG', "https://t.me/rhjobs"),)
-
-SOCIAL = (('twitter', 'http://twitter.com/iranzop'),
-          ('github', 'http://github.com/iranzo'),)
+TAGS_URL = 'tags'
+TAGS_SAVE_AS = 'tags/index.html'
+AUTHORS_URL = 'authors'
+AUTHORS_SAVE_AS = 'authors/index.html'
+CATEGORIES_URL = 'categories'
+CATEGORIES_SAVE_AS = 'categories/index.html'
+ARCHIVES_URL = 'archives'
+ARCHIVES_SAVE_AS = 'archives/index.html'
 
 DEFAULT_PAGINATION = 5
 DEFAULT_ORPHANS = 0
@@ -200,26 +219,8 @@ SITEMAP = {
 
 SITE_UPDATED = datetime.date.today()
 
-GOOGLE_ANALYTICS = "UA-81705-12"
-
-
-# blue-penguin
-
-# provided as examples, they make ‘clean’ urls. used by MENU_INTERNAL_PAGES.
-TAGS_URL = 'tags'
-TAGS_SAVE_AS = 'tags/index.html'
-AUTHORS_URL = 'authors'
-AUTHORS_SAVE_AS = 'authors/index.html'
-CATEGORIES_URL = 'categories'
-CATEGORIES_SAVE_AS = 'categories/index.html'
-ARCHIVES_URL = 'archives'
-ARCHIVES_SAVE_AS = 'archives/index.html'
-
 # use those if you want pelican standard pages to appear in your menu
 MENU_INTERNAL_PAGES = (
     ('Tags', TAGS_URL, TAGS_SAVE_AS),
     ('Archives', ARCHIVES_URL, ARCHIVES_SAVE_AS),
 )
-
-DISQUS_SITENAME = "iranzo-github-io"
-DISQUS_DISPLAY_COUNTS = True
