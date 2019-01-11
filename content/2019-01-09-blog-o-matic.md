@@ -35,4 +35,4 @@ Blog-o-Matic, uses several discussed topics so far:
 
 The setup process is outlined at its [README.md](https://github.com/iranzo/blog-o-matic/) and just requires a few steps to setup that, from that point, will allow you to get your website published each time you commit a new document to the content folder.
 
-You can also check the 'generated' website after instalation via <https://iranzo.github.io/blog-o-matic>
+You can also check the 'generated' website after installation via <https://iranzo.github.io/blog-o-matic>
