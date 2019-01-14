@@ -27,13 +27,11 @@ PROJECTS = [{'name': 'Redken on telegram', 'url': 'https://t.me/redken_bot',
             {'name': 'Pets at Github', 'url': 'https://github.com/iranzo',
              'description': 'Other projects at Github website'}]
 
-
 LINKS = (('Redken on telegram', 'https://t.me/redken_bot'),
-          ('RHJobs channel on TG', "https://t.me/rhjobs"),)
+         ('RHJobs channel on TG', "https://t.me/rhjobs"),)
 
 SOCIAL = (('Iranzo twitter', 'http://twitter.com/iranzop'),
-           ('Iranzo github', 'http://github.com/iranzo'),)
-
+          ('Iranzo github', 'http://github.com/iranzo'),)
 
 TWITTER_USERNAME = "iranzop"
 # Update if you use amazon links
@@ -53,10 +51,9 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
-FAVICON='extra/favicon.ico'
+FAVICON = 'extra/favicon.ico'
 
-STATIC_PATHS = [ 'images', 'imagen', 'extra/robots.txt', 'extra/favicon.ico', 'extra/keybase.txt' ]
-
+STATIC_PATHS = ['images', 'imagen', 'extra/robots.txt', 'extra/favicon.ico', 'extra/keybase.txt']
 
 ## ONLY TOUCH IF YOU KNOW WHAT YOU'RE DOING!
 ## ---------------------------------------------------------------------
@@ -98,12 +95,9 @@ PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img',
            'neighbors', 'render_math', 'related_posts', 'share_post',
            'series', 'assets', 'post_stats']
 
-           # 'better_codeblock_line_numbering'
-           # 'better_figures_and_images'
-
 THEME = 'themes/elegant'
 
-#elegant
+# elegant
 TYPOGRIFY = True
 RECENT_ARTICLE_SUMMARY = True
 RESPONSIVE_IMAGES = True
@@ -120,11 +114,10 @@ MARKDOWN = {
         },
         'markdown.extensions.meta': {},
         'markdown.extensions.admonition': {},
-    },
-    'output_format': 'html5',
+    }
 }
 
-DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'search', '404')
 
 # Elegant Labels
 SOCIAL_PROFILE_LABEL = u'Stay in Touch'
@@ -187,7 +180,6 @@ PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
 )
-
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
