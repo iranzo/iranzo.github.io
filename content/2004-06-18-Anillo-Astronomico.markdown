@@ -6,30 +6,15 @@ tags: science, astronomy
 lang: es
 comments: true
 ---
-**Tabla de contenidos**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
-1. [¿Qué es?](#¿qué-es)
-2. [¿Para qué?](#¿para-qué)
-3. [Ventajas](#ventajas)
-4. [Unirse](#unirse)
-5. [Modificar los datos](#modificar-los-datos)
-6. [Glosario](#glosario)
-    1. [ID](#id)
-    2. [Anillo/Webring](#anillowebring)
-    3. [Cola/Queue](#colaqueue)
-    4. [Controles](#controles)
+[TOC]
 
-<!-- /TOC -->
-
-<a id="markdown-¿qué-es" name="¿qué-es"></a>
 ### ¿Qué es?
 
 El Anillo Astronómico es un lugar de reunión con enlaces a diferentes webs de astronomía enviadas por los usuarios. El anillo proporciona un sencillo y a la vez potente interfaz que permite que los usuarios accedan a una base de datos que ellos mismos van ampliando con sus propias direcciones de astronomía. La base se puede consultar de varias formas para ayudar al interesado en la astronomía a encontrar la página que desea, por ejemplo realizando búsquedas entre las webs apuntadas al Anillo.
 
 El Anillo es un servicio accesible a todos (público y gratuito), que relaciona mediante un sencillo interfaz web todas las webs asociadas, y por lo tanto, relacionadas con la astronomía. La navegación por la base de datos se puede hacer mediante unos sencillos controles de navegado que permiten saltar de una página a otra, escoger una al azar, etc.
 
-<a id="markdown-¿para-qué" name="¿para-qué"></a>
 ### ¿Para qué?
 
 Antes (y todavía) los administradores de webs sobre astronomía, se veían obligados a mantener listas de webs de asociaciones regionales, etc.  Esas largas listas estaban casi siempre incompletas y con multitud de enlaces que con el tiempo quedaban rotos por el ir y venir de los nacimientos de nuevas páginas y los traslados o fines de otras.
@@ -44,7 +29,6 @@ Sólo hay una parte del anillo privada: El anillo, al apuntarse, mantiene un lis
 
 Espero que todo esto explique los motivos para crear el anillo. Es cuestión de comodidad para todos, es un servicio que proporciona mayor facilidad a la hora de dar a conocer la información.
 
-<a id="markdown-ventajas" name="ventajas"></a>
 ### Ventajas
 
 - El listado de las webs apuntadas es público, constituyendo un recurso de enlaces amplio.
@@ -58,7 +42,6 @@ Espero que todo esto explique los motivos para crear el anillo. Es cuestión de 
 
 NOTA: ** Para poder resultar beneficiado por el anillo, es NECESARIO que se pongan las líneas HTML en la página que se subscribe.**
 
-<a id="markdown-unirse" name="unirse"></a>
 ### Unirse
 
 Rellena los datos del siguiente enlace [Unirse](http://p.webring.com/wrman?ring=astron&addsite) y ya estarás apuntado. Recibirás una confirmación por e-mail de que has sido añadido a la cola de entrada junto a la dirección a la que debes dirigirte para obtener el código HTML que debes poner en tu web. Más adelante, recibirás otro correo informándote de que ya estás en el anillo.
@@ -67,7 +50,6 @@ Para saber cuales son las líneas que debes poner en tu web para enlazar al anil
 
 Podrás comprobar que apareces utilizando la opción [Lista Completa](http://p.webring.com/hub?ring=astron) de los controles que hayas insertado en tu página web.
 
-<a id="markdown-modificar-los-datos" name="modificar-los-datos"></a>
 ### Modificar los datos
 
 Una vez se ha dado de alta, la modificación de los datos no es difícil.
@@ -76,25 +58,20 @@ Dentro de [Mantenimiento](http://d.webring.com/mbr?p=ms), que nos lleva a una p�
 
 Una vez rellenados esos datos y enviado el formulario, tendremos acceso a los menús de administración de la web, pudiendo cambiar la descripción, etc y al salvarlo, los cambios quedarán reflejados en el anillo.
 
-<a id="markdown-glosario" name="glosario"></a>
 ### Glosario
 
-<a id="markdown-id" name="id"></a>
 #### ID
 
 Con el nuevo sistema del Anillo, el identificador, es también el nombre de usuario que has creado para indicar cual es tu web y es el que ahora relaciona toda tu web con el Anillo, aunque si te fijas, sigues teniendo un número asignado a tu web que podrás ver como parte de algunas páginas de administración, al inscribirte se te asigna uno que será utilizado se te favorecerá a la hora de reordenar el anillo, incrementando el tráfico hacia tu página.
 
-<a id="markdown-anillowebring" name="anillowebring"></a>
 #### Anillo/Webring
 
 Es un término que se utiliza para definir un servicio de directorio temático. Aquí las páginas se asocian en temas denominados anillos. Se utiliza el término anillo, ya que no tiene ni comienzo ni fin, es posible ir de una página a otra siempre relacionada con el mismo tema y volver a la de partida por otro camino. En nuestro caso, el Anillo Astronómico, pretende reunir a todas las páginas sobre astronomía disponibles en Español.
 
-<a id="markdown-colaqueue" name="colaqueue"></a>
 #### Cola/Queue
 
 La cola es un lugar temporal de estancia en el anillo. Cuando te apuntas, pasas a la cola, para que de este modo, cuando el administrador valide los datos, te introduzca en el anillo. También te sirve para modificar tus datos antes de entrar al anillo.
 
-<a id="markdown-controles" name="controles"></a>
 #### Controles
 
 Los controles, son unas líneas de códigodo JavasScript (o código HTML) que insertan unos "controles de navegado" en tu web así, desde cualquier página se puede acceder al listado completo de webs, saltar a otra web al azar, etc.

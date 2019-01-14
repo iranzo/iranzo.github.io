@@ -7,17 +7,8 @@ tags: python, openstack, sysmgmt, bash, sosreport, citellus, foss
 category: blog
 description:
 ---
-**Table of contents**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+[TOC]
 
-1. [Background](#background)
-2. [Citellus](#citellus)
-3. [Writing a new test](#writing-a-new-test)
-4. [How to debug?](#how-to-debug)
-
-<!-- /TOC -->
-
-<a id="markdown-background" name="background"></a>
 ## Background
 Since I became Technical Account Manager for Cloud and later as Software Maintenance Engineer for OpenStack, I became officially part of Red Hat Support.
 
@@ -37,7 +28,6 @@ Many times, a missed configuration (documented) is causing headaches and can be 
 
 Here is where Citellus comes to play.
 
-<a id="markdown-citellus" name="citellus"></a>
 ## Citellus
 
 The Citellus project <https://github.com/citellusorg/citellus/> created by my colleague Robin, aims on creating a set of tests that can be executed against a live system or an uncompressed sosreport tarball (it depends on the test if it applies to one or the other).
@@ -69,7 +59,6 @@ Even if we've started with OpenStack plugins (that's what we do for a living), t
 
 As Citellus works with sosreports it is easy to have it installed locally and test new tests.
 
-<a id="markdown-writing-a-new-test" name="writing-a-new-test"></a>
 ## Writing a new test
 
 Leading by the example is probably easier, so let's illustrate how to create a basic plugin for checking if a system is a RHV hosted engine:
@@ -96,7 +85,6 @@ fi
 
 Above example is a bit 'hacky', as we count on wrapper not outputing information if return code is `$RC_OKAY`, so it should have another conditional to write output or not.
 
-<a id="markdown-how-to-debug" name="how-to-debug"></a>
 ## How to debug?
 
 Easiest way to do trial-error would be to create a new folder for your plugins to test and use something like this:
@@ -107,7 +95,7 @@ Easiest way to do trial-error would be to create a new folder for your plugins t
 
 DEBUG:__main__:Additional parameters: ['/cases/sosreport-20170724-175510/hostname', '/home/remote/piranzo/mytests/']
 DEBUG:__main__:Found plugins: ['/home/remote/piranzo/mytests/ovirt-engine.sh']
-_________ .__  __         .__  .__                
+_________ .__  __         .__  .__
 \_   ___ \|__|/  |_  ____ |  | |  |  __ __  ______
 /    \  \/|  \   __\/ __ \|  | |  | |  |  \/  ___/
 \     \___|  ||  | \  ___/|  |_|  |_|  |  /\___ \
@@ -118,7 +106,7 @@ mode: fs snapshot /cases/sosreport-20170724-175510/hostname
 DEBUG:__main__:Running plugin: /home/remote/piranzo/mytests/ovirt-engine.sh
 # /home/remote/piranzo/mytests/ovirt-engine.sh: failed
     “ovirt-hosted-engine is not installed “
-    
+
 DEBUG:__main__:Plugin: /home/remote/piranzo/mytests/ovirt-engine.sh, output: {'text': u'\x1b[31mfailed\x1b[0m', 'rc': 1, 'err': '\xe2\x80\x9covirt-hosted-engine is not installed \xe2\x80\x9c\n', 'out': ''}
 ~~~
 

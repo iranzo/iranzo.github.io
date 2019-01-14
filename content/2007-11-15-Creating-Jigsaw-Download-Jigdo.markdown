@@ -7,16 +7,8 @@ comments: true
 lang: en
 slug: Creating-Jigsaw-Download-Jigdo
 ---
-**Table of contents**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+[TOC]
 
-1. [Introduction](#introduction)
-2. [¿How it works?](#¿how-it-works)
-3. [¿How do I create a .jigdo and a .template file?](#¿how-do-i-create-a-jigdo-and-a-template-file)
-4. [¿How do I get an ISO from a .jigdo file?](#¿how-do-i-get-an-iso-from-a-jigdo-file)
-
-<!-- /TOC -->
-<a id="markdown-introduction" name="introduction"></a>
 ### Introduction
 
 Jigdo (JIGsaw DOwnload) is a small utility that can assemble a CD/DVD image from it's internal files.
@@ -25,14 +17,12 @@ For example, [Debian](http://www.debian.org/) has been using it for years for di
 
 Furthermore, if you already had some files (for example if you started at version X and have been downloading and keeping al files until X.Y, jigdo, can use those updated files to compare them against the .jigdo file and avoid downloading duplicated files...
 
-<a id="markdown-¿how-it-works" name="¿how-it-works"></a>
 ### ¿How it works?
 
 A Jigdo download contains two parts, one, the .jigdo file which contains the files part of the ISO[^2] image and a template file automatically generated when creating the .jigdo using jigdo-file.
 
 When specified jigdo-lite "file.jigdo" will ask for previous locations (folders) that could contain required packages, and will use the url's described in .jigdo file to download any missing package and reassemble an ISO image with same MD5sum of original, but saving on bandwidht and avoiding re-downloads from network failures (just small file compared to a full DVD iso)
 
-<a id="markdown-¿how-do-i-create-a-jigdo-and-a-template-file" name="¿how-do-i-create-a-jigdo-and-a-template-file"></a>
 ### ¿How do I create a .jigdo and a .template file?
 
 For example, if we download CentOS 5 DVD iso from [mirror.centos.org](http://alufis35.uv.es/mirror.centos.org) and then mount it loopback and put on a folder (for example for providing our own mirror, or kickstartable tree) we can do:
@@ -50,7 +40,6 @@ Using a text editor we can modify our .jigdo file and set the URL for our source
 
 After that, if we provide those files to anyone, he/she could enjoy faster and better downloads of our ISO's that will get reconstructed automatically on target system
 
-<a id="markdown-¿how-do-i-get-an-iso-from-a-jigdo-file" name="¿how-do-i-get-an-iso-from-a-jigdo-file"></a>
 ### ¿How do I get an ISO from a .jigdo file?
 
 Easy:

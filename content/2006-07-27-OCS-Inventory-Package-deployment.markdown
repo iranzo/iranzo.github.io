@@ -5,22 +5,8 @@ date: 2006-07-27T20:29:00Z
 tags: hardware, linux, software, ocs, foss
 comments: true
 ---
-**Table of contents**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+[TOC]
 
-1. [Introduction](#introduction)
-2. [Release Candidate 3, and 1.0](#release-candidate-3-and-10)
-3. [Setting it up and running](#setting-it-up-and-running)
-4. [Getting SSL Certificates](#getting-ssl-certificates)
-    1. [Configuring apache for using that certificates](#configuring-apache-for-using-that-certificates)
-5. [Creating a package](#creating-a-package)
-6. [Activating a package](#activating-a-package)
-    1. [Afecting a package](#afecting-a-package)
-    2. [How to get client side Package working](#how-to-get-client-side-package-working)
-
-<!-- /TOC -->
-
-<a id="markdown-introduction" name="introduction"></a>
 ### Introduction
 
 OCS Inventory is an excelent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms).
@@ -33,7 +19,6 @@ This approach had a little problem, if you had a small outgoing connection, serv
 
 With RC3, agent for installation uses near double that size, about 1.5 Mb, but the ability for after first installed, use external servers with a bigger upload bandwidth, eases installation of new versions in computers.
 
-<a id="markdown-release-candidate-3-and-10" name="release-candidate-3-and-10"></a>
 ### Release Candidate 3, and 1.0
 
 OCS-NG RC3 came with important architectural changes, including several major and minor improvements, being these the more important ones:
@@ -52,7 +37,6 @@ OCS-NG could be setup on different machines hosting each service:
 
 or, as I did in my setup, use a Debian Linux machine for doing the four tasks, but I plan to relay the fourth task to other machines, when packages are bigger than expected.
 
-<a id="markdown-setting-it-up-and-running" name="setting-it-up-and-running"></a>
 ### Setting it up and running
 
 I'll assume that you've running Apache, PHP, and were able to setup OCS using the bundled instructions, so you only have to enable new features for using package deployment.
@@ -63,7 +47,6 @@ Package deployment infrastructure, is too much powerfull, so it requiress SSL ac
 
 I like [http://www.cacert.org](http://www.cacert.org/) services: they sign your certificates, and provide one certificate aiming to be used with many FOSS projects, because it's free instead of paid certificates like the ones from Thawte or Verisign.
 
-<a id="markdown-getting-ssl-certificates" name="getting-ssl-certificates"></a>
 ### Getting SSL Certificates
 
 First of all, we need to create a private key and a CSR (Certificate Signing Request) which we will send to CACERT for signing (please, note that if you don't have a domain name, will make it impossible to use OCS Package Deployment if your IP is also dynamic, so if that is your case (as was mine too), open an account at No-IP and create a URL-Redirector to your machine, you'll have to install an update client, but this will allow you to use certificates) it.
@@ -84,7 +67,6 @@ After that, Cacert.org will show you a certificate for your server that you'll h
 
 Let's then download [CACERT's root certificate](http://www.cacert.org/certs/root.crt) to "cacert.pem"
 
-<a id="markdown-configuring-apache-for-using-that-certificates" name="configuring-apache-for-using-that-certificates"></a>
 #### Configuring apache for using that certificates
 
 Next, we'll have to tell apache, to use this certificate for SSL support, in my case, I configured:
@@ -125,7 +107,6 @@ Afterthat... we have to reload apache configuration and try to connect to [https
 
 Well, if this works, we had the first and harder step done ;)
 
-<a id="markdown-creating-a-package" name="creating-a-package"></a>
 ### Creating a package
 
 There are three types of packages: RUN, STORE and LAUNCH.
@@ -146,7 +127,6 @@ Next step, will allow us to specify fragments (pieces in wich the package will b
 
 Your package, will be created then on "/var/www/download/#pkgid#".
 
-<a id="markdown-activating-a-package" name="activating-a-package"></a>
 ### Activating a package
 
 Once a package has been defined, we have an "info" file, describing package actions, and package fragments, we can have them together or split it between different servers, and we will have to specify where is located each piece, before using it on our machines. That process is called "Activation".
@@ -157,7 +137,6 @@ On package activation, we will be asked for two SERVERS (thanks to the developme
 
 After sending server names, OCS will check availability of "info" and fragment files (if any (On RUN packages, there is nothing to download prior to running the commands) and then, package will be activated and ready for next step.
 
-<a id="markdown-afecting-a-package" name="afecting-a-package"></a>
 #### Afecting a package
 
 In this step, we can select a computer in the main view, or do a search using specific criteria, and as a result, apply a package on listed computers.
@@ -166,7 +145,6 @@ We can affect a package to several computers at once, just to one, and even, hav
 
 OCS will connect, and execute actions defined in priority order...
 
-<a id="markdown-how-to-get-client-side-package-working" name="how-to-get-client-side-package-working"></a>
 #### How to get client side Package working
 
 Packages from client side, are as easy to setup, as having a working OCS Agent Service installed and a file called cacert.pem, which we got from the SSL Creation step... having them in the OCS Agent folder, and a package affected to a computer, will make computer to download, and do the actions specified.  ¿What are the pro's and con's of this method?

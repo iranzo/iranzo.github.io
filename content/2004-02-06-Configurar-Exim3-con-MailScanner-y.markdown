@@ -6,18 +6,9 @@ date: 2004-02-06T21:31:00Z
 tags: linux, exim, foss
 lang: es
 ---
-**Tabla de contenidos**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
-1. [Prerequisitos:](#prerequisitos)
-2. [Configuración:](#configuración)
-    1. [Exim:](#exim)
-    2. [MailScanner:](#mailscanner)
+[TOC]
 
-<!-- /TOC -->
-
-
-<a id="markdown-prerequisitos" name="prerequisitos"></a>
 ### Prerequisitos:
 
 Para hacerlo funcionar, vamos a tener que hacer unas cosillas...
@@ -40,7 +31,6 @@ El correo que recibamos será almacenado por exim en sus carpetas, cada cierto t
 - clamav: antes gastaba el fprot (los scripts que venían con el mailscanner servían para actualizarlo, etc. Clamav además de libre, se actualiza el solito ;) (por eso lo del freshclam y que os pregunte que cúal es la interfaz que se conecta a internet, para saber cuando estáis conectados y en base a eso hacer las actualizaciones).
 - razor: es una red colaborativa de detección/notificación de spam. Si yo recibo un tipo de spam nuevo, informo a esa red de ese mensaje (`cat mensaje.spam |razor-report`) y a partir de ese momento, gente que reciba ese mismo mensaje y utilice razor, lo detectará también como spam sin tener que configurar nada...
 
-<a id="markdown-configuración" name="configuración"></a>
 ### Configuración:
 
 Bueno, vamos allá con la configuración.
@@ -49,7 +39,6 @@ El clamav lo único que tenemos que hacer es configurarlo durante la instalació
 
 Tal y como indica el Readme.Debian del paquete MailScanner (bueno, acabo de darme cuenta que nanai, han quitado el documento de montarlo con exim3, así que lo haré en base al que tengo yo ya puesto ;))
 
-<a id="markdown-exim" name="exim"></a>
 #### Exim:
 
 El caso es que una vez tenemos una configuración válida de exim (en `/etc/exim/exim.conf`), tenemos que hacer lo siguiente:
@@ -117,7 +106,6 @@ Hemos de crear el /etc/cron.d/exim con el siguiente contenido:
 
 Con esta entrada en el cron, nos aseguramos que se envíen los correos de salida cada 15 minutos.
 
-<a id="markdown-mailscanner" name="mailscanner"></a>
 #### MailScanner:
 
 Vamos a pasar a configurar el MailScanner editando el `/etc/MailScanner/MailScanner.conf`

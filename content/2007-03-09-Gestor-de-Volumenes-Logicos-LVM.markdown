@@ -9,27 +9,8 @@ lang: es
 save_as: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/index.html
 url: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/
 ---
-**Tabla de contenidos**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+[TOC]
 
-1. [Introducción](#introducción)
-2. [Estructura de LVM](#estructura-de-lvm)
-    1. [Volúmenes físicos (pv)](#volúmenes-físicos-pv)
-    2. [Grupos de volumen (vg)](#grupos-de-volumen-vg)
-    3. [Volúmenes lógicos (lv)](#volúmenes-lógicos-lv)
-    4. [Comandos](#comandos)
-3. [Preparación de un sistema para LVM](#preparación-de-un-sistema-para-lvm)
-4. [Particionamiento de discos](#particionamiento-de-discos)
-5. [Creación de volúmenes físicos (PV)](#creación-de-volúmenes-físicos-pv)
-6. [Creación de grupos de volúmenes (VG)](#creación-de-grupos-de-volúmenes-vg)
-7. [Creación de volúmenes lógicos (LV)](#creación-de-volúmenes-lógicos-lv)
-8. [Creación de un sistema de ficheros](#creación-de-un-sistema-de-ficheros)
-9. [Redimensionamiento de una unidad LVM](#redimensionamiento-de-una-unidad-lvm)
-10. [Herramienta gráfica](#herramienta-gráfica)
-
-<!-- /TOC -->
-
-<a id="markdown-introducción" name="introducción"></a>
 ### Introducción
 
 LVM son las siglas de Logical Volume Manager, gestor de volúmenes lógicos, una potente herramienta presente en los actuales sistemas Linux, inspirada en la implementación de la que disponían otros sistemas como AIX y HP-UX.
@@ -50,27 +31,22 @@ La estructura de LVM sería la siguiente:
 
 ![Estructura de LVM, original de "http://www.ccp-west.de/tipps.html"]({filename}/imagen/lvmschema.gif)
 
-<a id="markdown-estructura-de-lvm" name="estructura-de-lvm"></a>
 ### Estructura de LVM
 
-<a id="markdown-volúmenes-físicos-pv" name="volúmenes-físicos-pv"></a>
 #### Volúmenes físicos (pv)
 
 Un volumen físico es un disco o una parte del disco que habilitaremos para su inclusión en un grupo de volúmenes.
 
 Los volúmenes físicos, pueden estar ubicados en una partición (si por ejemplo han de coexistir con sistemas tradicionales), o bien extenderse por toda una unidad de disco o incluso, sobre dispositivos md[^2].
 
-<a id="markdown-grupos-de-volumen-vg" name="grupos-de-volumen-vg"></a>
 #### Grupos de volumen (vg)
 
 Los grupos de volumen se definen agrupando uno o más volúmenes físicos y son por así decirlo como discos virtuales, que toman su capacidad de entre los volúmenes físicos asignados al grupo de volumen.
 
-<a id="markdown-volúmenes-lógicos-lv" name="volúmenes-lógicos-lv"></a>
 #### Volúmenes lógicos (lv)
 
 Los volúmenes lógicos se crean dentro de un grupo de volumen y son el equivalente a las particiones en otros sistemas, es la parte de LVM que formateamos con un sistema de ficheros y que luego anexamos a nuestro sistema para poder utilizarlos como almacén de información.
 
-<a id="markdown-comandos" name="comandos"></a>
 #### Comandos
 
 Los comandos relacionados con LVM utilizan una nomenclatura parecida entre sí, con la particularidad del comienzo de la orden que varía según sea:
@@ -79,10 +55,8 @@ Los comandos relacionados con LVM utilizan una nomenclatura parecida entre sí, 
 - vg(convert,extend,reduce,scan,create,import,remove,split,change,display,merge,rename,export) para grupos de volumen
 - lv(change,display,convert,extend,remove,rename,scan,create,reduce,resize) para volúmenes lógicos
 
-<a id="markdown-preparación-de-un-sistema-para-lvm" name="preparación-de-un-sistema-para-lvm"></a>
 ### Preparación de un sistema para LVM
 
-<a id="markdown-particionamiento-de-discos" name="particionamiento-de-discos"></a>
 ### Particionamiento de discos
 
 Antes de poder utilizar LVM, debemos designar una serie de dispositivos (completos), o bien particiones (tipo 8e en fdisk)
@@ -96,7 +70,6 @@ partición hda2, que ocupará el resto del disco duro.
 
 En sda, tenemos todo el disco duro disponible para utilizarlo con LVM, así que definiremos una partición sda1 que dedicaremos enteramente a esta finalidad.
 
-<a id="markdown-creación-de-volúmenes-físicos-pv" name="creación-de-volúmenes-físicos-pv"></a>
 ### Creación de volúmenes físicos (PV)
 
 Los volúmenes físicos son las unidades donde se asienta la estructura de las grupos de volúmenes, su creación, es tan sencilla como ejecutar:
@@ -112,7 +85,6 @@ Si a continuación ejecutamos `pvscan`, podremos consultar un listado de los vol
 
 Para ver el estado detallado, podremos ejecutar pvdisplay, que nos mostrará más información como el tamaño, los PE'*s* disponibles, etc
 
-<a id="markdown-creación-de-grupos-de-volúmenes-vg" name="creación-de-grupos-de-volúmenes-vg"></a>
 ### Creación de grupos de volúmenes (VG)
 
 Los grupos de volúmenes son los cajones, que ubicados sobre los volúmenes físicos, definen la agrupación para los volúmenes lógicos, permitiendo clarificar así la estructura de los mismos.
@@ -128,7 +100,6 @@ Este comando creará un grupo de volúmenes llamado `Prueba` sobre el volumen f�
 
 Para comprobar que la acción ha sido realizada correctamente, podremos ejecutar vgscan para ver un listado de los grupos de volumen definidos.
 
-<a id="markdown-creación-de-volúmenes-lógicos-lv" name="creación-de-volúmenes-lógicos-lv"></a>
 ### Creación de volúmenes lógicos (LV)
 
 Los volúmenes lógicos son el equivalente a las particiones, es el lugar donde vamos a poner un sistema de ficheros y en consecuencia los datos.
@@ -142,7 +113,6 @@ lvcreate Prueba -n Inicial -L 2G
 
 Si ejecutamos a continuación lvscan, tendremos un listado de todos los grupos de volumen definidos y su tamaño, entre ellos, "Inicial", definido dentro de "Prueba" y con un tamaño de 2 Gb
 
-<a id="markdown-creación-de-un-sistema-de-ficheros" name="creación-de-un-sistema-de-ficheros"></a>
 ### Creación de un sistema de ficheros
 
 Antes de poder utilizar el volumen lógico, deberemos prepararlo para contener datos y crear la estructura de un sistema de ficheros, esta vez, el comando es idéntico a cuando creamos un sistema de ficheros sobre un disco físico, pero especificando el volumen lógico, por ejemplo:
@@ -158,7 +128,6 @@ Ahora, ya podremos montar el sistema de ficheros, por ejemplo:
 
 `mount /dev/Prueba/Inicial /mnt`
 
-<a id="markdown-redimensionamiento-de-una-unidad-lvm" name="redimensionamiento-de-una-unidad-lvm"></a>
 ### Redimensionamiento de una unidad LVM
 
 EXT3, el sistema de ficheros utilizado por defecto en la distribución, permite redimensionamiento de discos, el sistema de ficheros puede crecer sin tener que dejar de utilizarlo, pero para reducir su tamaño, es necesario detener su uso, aun así, nos permite la posibilidad muy interesante de crear sistemas de ficheros pequeños, adaptados a nuestro uso inicial y luego ir haciéndolos crecer cuando sea necesario sin tener que detener las operaciones que estemos llevando a caba en el equipo.
@@ -211,7 +180,6 @@ lvextend -L -2G /dev/mapper/Prueba-Inicial
 
 Y volveremos a estirar el sistema de ficheros de nuevo con `resize2fs /dev/mapper/Prueba-Inicial` para ocupar todo el espacio disponible en el volumen.
 
-<a id="markdown-herramienta-gráfica" name="herramienta-gráfica"></a>
 ### Herramienta gráfica
 
 Red Hat o Fedora Core incorporan una herramienta gráfica "system-config-lvm" que permite realizar la gestión de los volúmenes presentes en el sistema de forma gráfica, a continuación se muestran unas capturas de pantalla del aspecto de la aplicación.

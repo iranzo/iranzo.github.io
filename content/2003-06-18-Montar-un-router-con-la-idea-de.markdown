@@ -6,23 +6,9 @@ tags: linux, wireless, router, firewall, foss
 lang: es
 comments: true
 ---
-**Tabla de contenidos**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
 
-1. [Introducción](#introducción)
-2. [Sistema Operativo y Paquetes](#sistema-operativo-y-paquetes)
-3. [Red](#red)
-4. [Masquerading](#masquerading)
-5. [Consejos Finales](#consejos-finales)
-6. [Ficheros de configuración](#ficheros-de-configuración)
-    1. [Squid](#squid)
-    2. [/etc/ppp/pptpd-options](#etcppppptpd-options)
-    3. [/etc/ppp/chap-secrets](#etcpppchap-secrets)
+[TOC]
 
-<!-- /TOC -->
-
-
-<a id="markdown-introducción" name="introducción"></a>
 ### Introducción
 
 Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red.
@@ -96,7 +82,6 @@ Ahora el ordenador es un P200 MMX con 128 Mb de RAM, las tarjetas son una Intel 
 
 Ahora vamos a la configuración del software...
 
-<a id="markdown-sistema-operativo-y-paquetes" name="sistema-operativo-y-paquetes"></a>
 ### Sistema Operativo y Paquetes
 
 El primer paso previo a todos, es que una vez configurado el hardware para que no se queje (IRQ's, puertos IO, etc) (si la placa es realmente P'n'P no habrá problemas pero la mía aunque es P'n'P dio algunos problemas así que... ajo y agua...) Si has de comprar tarjetas y puedes, cómpralas PCI y mejor todavía si compras un HUB porque así no tienes que tener el ordenador rellenito en todas sus ranuras con ethernets ;).
@@ -167,7 +152,6 @@ por ejemplo: `apt-get install wavemon zebra webmin-stunnel webmin-status wget vt
 
 Automáticamente el programa se conectará a Internet y comenzará a bajar esos paquetes y todos los necesarios para que esos funcionen, es decir, si instalas webmin-status, para eso te hará falta primero el webmin y el programa lo instalará también solito tras pedir confirmación e indicar los megas a descargar y lo que ocupará una vez descomprimido.
 
-<a id="markdown-red" name="red"></a>
 ### Red
 
 Vale, se supone que ahora ya tenemos el sistema funcionando y bueno...  algo es algo :) ahora viene lo serio... configurarlo para que se adapte a nuestras necesidades...
@@ -361,7 +345,6 @@ Respecto al servidor de nombres... no hice nada, sólo instalé el paquete y ya 
 
 Hasta este punto los equipos cliente que se configuren para que pidan la configuración automáticamente, recibirán una configuración válida desde nuestro nodo, ahora sólo falta hacer alguna cosilla más ;)
 
-<a id="markdown-masquerading" name="masquerading"></a>
 ### Masquerading
 
 Tenemos un servidor DHCP, las tarjetas configuradas y un servidor de nombres... ahora sólo falta que enrute!!! de esa forma tendremos acceso a Internet desde cualquiera de nuestros ordenadores...
@@ -588,7 +571,6 @@ Ahora que parece que está más o menos esto en marcha, habría que hacer túnel
 
 Hay un bonito README en el VPNS.
 
-<a id="markdown-consejos-finales" name="consejos-finales"></a>
 ### Consejos Finales
 
 Vale, nuestro servidor tiene las tarjetas configuradas, enruta, hace de servidor DHCP, DNS, bloquea los escaneos de puertos... ahora sólo queda algún detalle interesante:
@@ -615,10 +597,8 @@ Sería interesante activar también un Proxy tipo Squid para acelerar la navegac
 
 ¡¡Un saludo y suerte!!
 
-<a id="markdown-ficheros-de-configuración" name="ficheros-de-configuración"></a>
 ### Ficheros de configuración
 
-<a id="markdown-squid" name="squid"></a>
 #### Squid
 
 ~~~config
@@ -631,7 +611,6 @@ redirect_program /usr/lib/squid/squid_redirect
 redirect_children 30 # PPTPD (para las VPN entrantes)
 ~~~
 
-<a id="markdown-etcppppptpd-options" name="etcppppptpd-options"></a>
 #### /etc/ppp/pptpd-options
 
 ~~~config
@@ -645,7 +624,6 @@ netmask 255.255.0.0
 lock
 ~~~
 
-<a id="markdown-etcpppchap-secrets" name="etcpppchap-secrets"></a>
 #### /etc/ppp/chap-secrets
 
 ~~~config

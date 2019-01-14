@@ -11,6 +11,8 @@ lang: es
 slug: AndroidTV-and-Netflix-tvq-pm-100
 ---
 
+[TOC]
+
 # Android TV versus Android TV-Box
 
 Android, utilizado en múltiples dispositivos móviles es también parte de televisores y reproductores multimedia.

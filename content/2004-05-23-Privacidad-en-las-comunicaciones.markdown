@@ -7,25 +7,10 @@ lang: es
 comments: true
 ---
 
-**Tabla de contenidos**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
-
-1. [Orígenes](#orígenes)
-2. [Actualidad](#actualidad)
-3. [¿Cómo proteger nuestra privacidad entonces?](#¿cómo-proteger-nuestra-privacidad-entonces)
-    1. [Web](#web)
-    2. [Redes](#redes)
-    3. [Correo Electrónico](#correo-electrónico)
-    4. [Redes inalámbricas](#redes-inalámbricas)
-4. [Marco legal](#marco-legal)
-5. [Consideraciones](#consideraciones)
-6. [Enlaces](#enlaces)
-
-<!-- /TOC -->
+[TOC]
 
 Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto.
 
-<a id="markdown-orígenes" name="orígenes"></a>
 ### Orígenes
 
 Desde tiempos inmemoriales, a la vez que se avanzaba en la comunicación, se avanzaba también en la necesidad de mantener la privacidad de las mismas...
@@ -59,7 +44,6 @@ Uno de los sistemas "modernos" más conocidos fue la máquina [Enigma](http://es
 
 La máquina Enigma se basaba en una clave que una vez introducida cambiaba mediante unos tambores rotatorios el resultado de apretar una tecla, de forma que al apretar varias veces una misma tecla, se obtenían resultados diferentes, dificultando enormemente el descifrado de un mensaje si no se conocía la clave inicial.
 
-<a id="markdown-actualidad" name="actualidad"></a>
 ### Actualidad
 
 Hoy en día las comunicaciones siguen siendo algo necesario y la privacidad de las mismas es, si cabe, aún más necesaria.
@@ -79,10 +63,8 @@ Se rumorea que en Alemania, si durante una conversación telefónica se cita un 
 
 Se rumorea también que operadores de telefonía escuchan aleatoriamente conversaciones para comprobar la calidad de la comunicación...
 
-<a id="markdown-¿cómo-proteger-nuestra-privacidad-entonces" name="¿cómo-proteger-nuestra-privacidad-entonces"></a>
 ### ¿Cómo proteger nuestra privacidad entonces?
 
-<a id="markdown-web" name="web"></a>
 #### Web
 
 Para las páginas web, el estándar adoptado son las SSL [^3] que cifran la comunicación entre el cliente y un servidor web autentificado con un certificado digital firmado por ciertas compañías consideradas de confianza y utiliza un cifrado de 56 ó 128 bits. Este cifrado es el más conocido, ya que es el que utilizan bancos, comercios, etc
@@ -97,12 +79,10 @@ Como alternativa libre surgió [CACERT](http://www.cacert.org/) que ofrece un se
 
 Estos certificados se basan en cadenas de confianza: tu navegador confía en unas empresas de certificado (CA [^5] y todos los certificados "firmados" por esas empesas son válidos ante el navegador.... algo así como la frase "los amigos de mis amigos son mis amigos"
 
-<a id="markdown-redes" name="redes"></a>
 #### Redes
 
 Para las conexiones entre diversas redes, se utilizan VPN[^6]. Una VPN enlaza dos equipos a través de otra red (generalmente internet) y permite utilizar un sencillo cifrado, para que los datos enviados no estén desprotegidos,mediante una VPN es fácil unir distintas redes como si fueran una sola a la vez que se crea un poco más de seguridad para los datos que se transmiten[^7].
 
-<a id="markdown-correo-electrónico" name="correo-electrónico"></a>
 #### Correo Electrónico
 
 El tema del correo electrónico es un aspecto muy importante, pero poco explorado por los usuarios. El más integrado en los programas más comerciales, es el basado en certificados, al estilo de las SSL, con el inconveniente de que requiere de un certificado firmado por una CA de confianza que es costoso en el caso de una comercial, o poco extendido en el caso de CACERT.
@@ -134,7 +114,6 @@ Una característica muy importante es la "firma" de los mensajes, que es el equi
 
 Si combinamos la firma de mensajes con el cifrado, dispondremos de un sistema muy bueno de cifrado que nos asegurará privacidad en las comunicaciones.
 
-<a id="markdown-redes-inalámbricas" name="redes-inalámbricas"></a>
 #### Redes inalámbricas
 
 WEP[^10] Es un sistema de cifrado equivalente a las SSL pero para redes inalámbricas, pero que ha demostrado ser fácilmente "rompible" y por lo tanto insuficiente para asegurar los datos enviados en una conexión.
@@ -145,7 +124,6 @@ Actualmente poca gente protege sus redes inalámbricas y son numerosos los infor
 
 Incluso utilizando WEP, una red inalámbrica no es segura, ya que debido a fallos de diseño, es posible acceder a ella saltándose la clave de cifrado.
 
-<a id="markdown-marco-legal" name="marco-legal"></a>
 ### Marco legal
 
 Uno de los principales escollos para la criptografía fue y sigue siendo las leyes de exportación[^12] americanas, que impedían su exportación al extranjero de programas que incorporaran cifrado "fuerte" y que provocó situaciones tan ridículas como que el código fuente del programa PGP no pudiera ser exportado electrónicamente y que por lo tanto fuera impreso completamente en muchísimos volúmenes de texto, que se sacaron legalmente (sólo era ilegal en formato binario) del país, permitiendo que a su llegada a Europa, fueran escaneados y convertidos de nuevo a código de ordenador para crear la versión Europea de PGP (sin la restricción de exportación americana).
@@ -174,7 +152,6 @@ En Grecia, según una reciente [noticia](http://barrapunto.com/article.pl?sid=04
 
 Existen alternativas como [Freenet](http://freenetproject.org/index.php?page=faq) que a costa de hacernos perder velocidad en nuestras conexiones, nos garantizan una mayor seguridad (los datos viajan por varios servidores antes de alcanzar realmente al destino, de forma similar a como cuando se utilizan redes de proxies para acceder a los servidores web), de forma que dificultan notablemente la posibilidad de trazarlos.
 
-<a id="markdown-consideraciones" name="consideraciones"></a>
 ### Consideraciones
 
 El software de cifrado no debe utilizarse sólo cuando haya algo privado que decir ya que llamará la atención, debe utilizarse por costumbre y de contínuo, dada la potencia actual de los ordenadores, el cifrado sólo es útil hasta que saquen máquinas suficientemente potentes como para romperlo en un plazo razonable de tiempo (un escrito cifrado que necesite un año para romperlo, no es útil, pues estará muy desfasado cuando se complete el descifrado). Por eso, al utilizar con normalidad el cifrado y la firma de los mensajes, estaremos contribuyendo a mantener nuestra privacidad para los momentos donde realmente sea necesaria.
@@ -185,7 +162,6 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 
 ¡Utiliza el cifrado!
 
-<a id="markdown-enlaces" name="enlaces"></a>
 ### Enlaces
 
 - [Kriptopolis](http://www.kriptopolis.org/)]

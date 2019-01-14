@@ -6,36 +6,19 @@ tags: linux, kickstart, automation, unattended, foss
 comments: true
 lang: es
 ---
-**Tabla de contenidos**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+[TOC]
 
-1. [Instalar linux](#instalar-linux)
-2. [Anaconda](#anaconda)
-3. [El archivo kickstart](#el-archivo-kickstart)
-    1. [Estructura](#estructura)
-4. [Dándole una vuelta de tuerca al kickstart](#dándole-una-vuelta-de-tuerca-al-kickstart)
-    1. [Scripts de Pre y Post instalación](#scripts-de-pre-y-post-instalación)
-    2. [Pre instalación](#pre-instalación)
-    3. [Post instalación](#post-instalación)
-5. [Generación dinámica](#generación-dinámica)
-6. [Información adicional](#información-adicional)
-
-<!-- /TOC -->
-
-<a id="markdown-instalar-linux" name="instalar-linux"></a>
 ### Instalar linux
 
 Hoy en día todas las distribuciones suelen disponer de un instalador gráfico que mediante un sencillo asistente permiten particionar el sistema, seleccionar los paquetes, instalarlos y configurarlos.
 
 El problema viene cuando en lugar de instalar un PC en 40 minutos, tenemos que instalar 20, cada uno de esos pc's, aunque podamos ir con varios discos a la vez, nos va a llevar más de 40 minutos hacer la instalación, por tener que ir siguiendo el asistente, escogiendo opciones, paquetes, configurando cosas, etc.
 
-<a id="markdown-anaconda" name="anaconda"></a>
 ### Anaconda
 
 Anaconda es un instalador basado en Python que incorpora en su base, un instalador en modo texto, y uno gráfico que entre sus muchas funcionalidades, incorpora la instalación en base a guiones llamados
 kickstart.
 
-<a id="markdown-el-archivo-kickstart" name="el-archivo-kickstart"></a>
 ### El archivo kickstart
 
 Un archivo kickstart es un fichero de texto plano, que puede se le proporciona a Anaconda, como tal, puede ser un archivo que tengamos grabado en el disco de instalación, en otro medio de almacenamiento, o
@@ -44,7 +27,6 @@ incluso en un servidor remoto.
 El hecho de que se albergue en un servidor remoto, abre nuevas posibilidades, como que por ejemplo, el archivo kickstart se genere dinámicamente para cada equipo, en base a perfiles de equipo, parámetros
 opcionales, etc.
 
-<a id="markdown-estructura" name="estructura"></a>
 #### Estructura
 
 La estructura de un kickstart podría ser:
@@ -106,17 +88,14 @@ joe
 
 Con esta estructura, el sistema quedará instalado y configurado de forma automática, se habrá detectado el hardware y cargado su soporte en caso de ser detectado y disponer los controladores apropiados.
 
-<a id="markdown-dándole-una-vuelta-de-tuerca-al-kickstart" name="dándole-una-vuelta-de-tuerca-al-kickstart"></a>
 ### Dándole una vuelta de tuerca al kickstart
 
-<a id="markdown-scripts-de-pre-y-post-instalación" name="scripts-de-pre-y-post-instalación"></a>
 #### Scripts de Pre y Post instalación
 
 Además de la información mostrada anteriormente, un fichero kickstart puede contener scripts que se ejecuten antes de comenzar la instalación (con el hardware y red ya operativos) y scripts que se ejecuten tras la instalación.
 
 Un uso típico es determinar dinámicamente la estructura de discos en base al tamaño del mismo, o incluso establecer configuraciones RAID si se detecta más de un disco duro en el sistema, o mayor de cierta capacidad.
 
-<a id="markdown-pre-instalación" name="pre-instalación"></a>
 #### Pre instalación
 
 Por ejemplo, la forma típica sería crear el esquema de particiones como hemos hecho arriba, pero utilizando comandos "echo", por ejemplo:
@@ -149,7 +128,6 @@ particiones por :
 
 Así, para cada sistema podemos definir una organización basada en valores como la IP obtenida, etc y que sería procesador por un script, por ejemplo en PHP en el servidor.
 
-<a id="markdown-post-instalación" name="post-instalación"></a>
 #### Post instalación
 
 Un script de instalación tiene una ventaja sobre un script de pre instalación, y es que podemos ejecutarlo sobre el sistema instalado o sobre el entorno de instalación, de forma que podemos copiar archivos generados en el pre (como los logs), copiar archivos del medio de instalación si es un CD, NFS, etc y luego actuar sobre nuestro sistema, por ejemplo:
@@ -163,7 +141,6 @@ ntpdate pool.ntp.org
 hwclock —systohc
 ~~~
 
-<a id="markdown-generación-dinámica" name="generación-dinámica"></a>
 ### Generación dinámica
 
 Dada la potencia de Linux y la habilidad de ejecutar scripts de pre instalación y post instalación, podemos configurar un sistema mediante estos scripts de la misma forma que lo haríamos en un sistema de forma manual, podemos dejar un sistema perfectamente configurado. Cierto es que a priori, nos llevará más tiempo ponerlo en marcha mediante este sistema que utilizando cuatro o cinco opciones en un menú, pero una vez hecho, tardaremos el mismo tiempo en instalar 1 sistema que 1000 con la ventaja
@@ -173,7 +150,6 @@ Si tomamos como generador un script en php, albergado en nuestro servidor web, p
 
 Existen diversos sistemas que facilitan estas tareas y permiten llevar un control de las máquinas que instalamos, etc que comentaremos más adelante.
 
-<a id="markdown-información-adicional" name="información-adicional"></a>
 ### Información adicional
 
 Hasta que nos familiaricemos con la sintaxis, es conveniente recordar que en los sistemas basados en Fedora o Red Hat, existe la utilidad system-config-kickstart que es un editor gráfico de archivos kickstart que nos puede servir de punto de inicio para empezar a modificarlos con nuestros scripts y adaptaciones personales.
