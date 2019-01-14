@@ -6,17 +6,8 @@ tags: linux, firefox, desktop, foss
 comments: true
 lang: es
 ---
-**Tabla de contenidos**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+[TOC]
 
-1. [userChrome.css](#userchromecss)
-2. [Compactando el entorno](#compactando-el-entorno)
-3. [Limitándolo](#limitándolo)
-4. [Extensiones](#extensiones)
-
-<!-- /TOC -->
-
-<a id="markdown-userchromecss" name="userchromecss"></a>
 ### userChrome.css
 
 Firefox tiene en la carpeta del usuario, y dentro del perfil una subcarpeta llamada chrome y en ella el fichero `userChrome.css`
@@ -29,7 +20,6 @@ Por ejemplo, podemos esconder el menú de ayuda con:
 #helpMenu display: none !important;
 ~~~
 
-<a id="markdown-compactando-el-entorno" name="compactando-el-entorno"></a>
 ### Compactando el entorno
 
 Yo utilizo una visión más compacta reduciendo las barras, poniendo la barra de direcciones y búsqueda en la de menús:
@@ -45,7 +35,6 @@ Yo utilizo una visión más compacta reduciendo las barras, poniendo la barra de
 .search-go-button-stack  display: none !important;
 ~~~
 
-<a id="markdown-limitándolo" name="limitándolo"></a>
 ### Limitándolo
 
 Para hacer una vista orientada a un kiosco, utilizaremos más limitaciones como esconder todos los menús:
@@ -75,7 +64,6 @@ menu[label="Go"]display: none !important # También podemos esconder sólo algun
 statusbar[id="status-bar"] statusbarpanel[id="security-button"], statusbarpanel[id="page-report-button"], statusbarpanel[id="page-theme-button"], statusbarpanel[id="statusbar-updates"]  display: none !important
 ~~~
 
-<a id="markdown-extensiones" name="extensiones"></a>
 ### Extensiones
 
 También podemos hacer uso de extensiones con la finalidad de bloquear más el entorno.

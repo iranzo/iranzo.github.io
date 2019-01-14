@@ -5,18 +5,8 @@ date: 2006-11-01T17:47:00Z
 comments: true
 tags: linux, network, foss
 ---
-**Table of contents**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+[TOC]
 
-1. [Introduction](#introduction)
-2. [Ingredients](#ingredients)
-3. [Extras](#extras)
-4. [Preparation](#preparation)
-5. [SSH Proxy command](#ssh-proxy-command)
-
-<!-- /TOC -->
-
-<a id="markdown-introduction" name="introduction"></a>
 ### Introduction
 I'm working for a "very concerned about security" firm, that makes mandatory using VPN for accessing their network, and internal services:
 
@@ -30,7 +20,6 @@ As it should, we provided services for a client, also very concerned about secur
 
 What to do when you need to access your business services from within the client network?
 
-<a id="markdown-ingredients" name="ingredients"></a>
 ### Ingredients
 
 - ssh
@@ -38,17 +27,14 @@ What to do when you need to access your business services from within the client
 - a machine which you can reach by ssh on your business
 - a squid server
 
-<a id="markdown-extras" name="extras"></a>
 ### Extras
 
 - [SSH Proxy Command](http://zippo.taiyo.co.jp/~gotoh/ssh/connect.html) by Shun-ichi GOTO
 
-<a id="markdown-preparation" name="preparation"></a>
 ### Preparation
 
 First of all, we need to be able to exit from our client network, and the only way is to use HTTP, HTTPS or FTP... and if we use HTTP packet filtering, would block access, so we only have the SSL choice, as it is cyphered, and doesn't tolerate "Man-in-the-middle" attacks, and allows us to get internet traffic trought it.
 
-<a id="markdown-ssh-proxy-command" name="ssh-proxy-command"></a>
 ### SSH Proxy command
 
 SSH Proxy command, is a excelent piece of code, distributed in C in only one file that we will get compiled with `gcc command.c -o connect`

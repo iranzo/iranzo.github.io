@@ -11,6 +11,8 @@ lang: en
 slug: AndroidTV-and-Netflix-tvq-pm-100
 ---
 
+[TOC]
+
 # Android TV versus Android TV-Box
 
 Android, being used in lot of mobile devices is also part of TVs and set-top boxes.

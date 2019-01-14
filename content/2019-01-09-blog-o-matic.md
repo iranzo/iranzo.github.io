@@ -9,13 +9,7 @@ category: blog
 description:
 ---
 
-**Table of contents**
-<!-- TOC depthFrom:1 insertAnchor:false orderedList:true -->
-
-- [Introduction](#introduction)
-- [The approach](#the-approach)
-
-<!-- /TOC -->
+[TOC]
 
 # Introduction
 

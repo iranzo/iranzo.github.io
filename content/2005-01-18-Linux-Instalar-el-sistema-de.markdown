@@ -6,17 +6,8 @@ tags: linux, raid, mdadm, foss
 lang: es
 comments: true
 ---
-**Tabla de contenidos**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+[TOC]
 
-1. [Introducción](#introducción)
-2. [Instalación manual del sistema](#instalación-manual-del-sistema)
-3. [Instalación usando el nuevo instalador de Debian](#instalación-usando-el-nuevo-instalador-de-debian)
-4. [Migración en vivo de un sistema en ejecución](#migración-en-vivo-de-un-sistema-en-ejecución)
-
-<!-- /TOC -->
-
-<a id="markdown-introducción" name="introducción"></a>
 ## Introducción
 
 Si queremos implementar un disco espejo en el sistema raíz, nos encontramos con que muchas distribuciones no están preparadas, siendo un incordio tener que prepararlas para esta finalidad... con este artículo veremos cómo conseguirlo.
@@ -48,7 +39,6 @@ A partir de este punto tenemos tres posibilidades:
 - Utilizar los nuevos instaladores de Debian (válido para Ubuntu)
 - Convertir un sistema en ejecución a sistema raid raíz
 
-<a id="markdown-instalación-manual-del-sistema" name="instalación-manual-del-sistema"></a>
 ## Instalación manual del sistema
 
 En este caso, lo más cómodo consiste en arrancar con un Live CD como Knoppix y definir las particiones.
@@ -101,7 +91,6 @@ mkinitrd -o /boot/initrd.img-`uname -r` /lib/modules/`uname -r`
 
 Tras el primer reinicio correcto arrancando desde el sistema raid, podremos quitar la línea ROOT=/dev/md0 del mkinitrd.conf y dejarlo en su predeterminada (PROBE).
 
-<a id="markdown-instalación-usando-el-nuevo-instalador-de-debian" name="instalación-usando-el-nuevo-instalador-de-debian"></a>
 ## Instalación usando el nuevo instalador de Debian
 
 Con el nuevo instalador de debian, es posible, durante la fase de particionado definir particiones para raid, e incluso definir los raids, pero, al menos con Ubuntu, se informa de que no será posible arrancar el sistema si se instala así el sistema operativo...
@@ -118,7 +107,6 @@ mkinitrd -o /boot/initrd.img-$verkernel /lib/modules/$verkernel
 
 Al finalizar la instalación y reiniciar, podremos cambiar al formato original el mkinitrd.conf, ya que Linux reconocerá que para poder montar el sistema raíz le hace falta el soporte para raidtools.
 
-<a id="markdown-migración-en-vivo-de-un-sistema-en-ejecución" name="migración-en-vivo-de-un-sistema-en-ejecución"></a>
 ## Migración en vivo de un sistema en ejecución
 
 Esta parte requiere un par de reinicios del sistema en ejecución, pero permite llevar a cabo la mayor parte de la faena sin dejar de estar operativo (y por lo tanto, permite realizarlo remotamente sin excesivos riesgos).

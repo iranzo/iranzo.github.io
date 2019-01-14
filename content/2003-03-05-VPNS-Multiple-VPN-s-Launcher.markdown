@@ -6,46 +6,8 @@ tags: linux, network, vpn, foss
 comments: true
 ---
 
-**Table of contents**
-<!-- TOC depthFrom:1 insertAnchor:true orderedList:true -->
+[TOC]
 
-1. [General Purpose](#general-purpose)
-2. [Requirements](#requirements)
-3. [The way it works...](#the-way-it-works)
-4. [Configuration files](#configuration-files)
-    1. [4.1 Local Configuration](#41-local-configuration)
-    2. [4.2 Host configuration (/etc/vpnd/hosts/$HOST)](#42-host-configuration-etcvpndhostshost)
-        1. [4.2.1 Static files](#421-static-files)
-        2. [4.2.2 Dinamic files](#422-dinamic-files)
-        3. [4.2.3 Scripts](#423-scripts)
-5. [Recommendations](#recommendations)
-6. [Changelog](#changelog)
-    1. [Version 0.43](#version-043)
-    2. [Version 0.42](#version-042)
-    3. [Version 0.41](#version-041)
-    4. [Version 0.4](#version-04)
-    5. [Version 0.3](#version-03)
-    6. [Version 0.2](#version-02)
-    7. [Version 0.1](#version-01)
-7. [Sample configuration files](#sample-configuration-files)
-    1. [7.1 Local](#71-local)
-    2. [7.1.1 master.resolv](#711-masterresolv)
-    3. [7.2 Remote Host](#72-remote-host)
-        1. [7.2.1 mode](#721-mode)
-        2. [7.2.2 port](#722-port)
-        3. [7.2.3 resolv](#723-resolv)
-        4. [7.2.4 master](#724-master)
-    4. [7.3 Sample run for Oceano (resulting vpnd.conf)](#73-sample-run-for-oceano-resulting-vpndconf)
-8. [FAQ](#faq)
-    1. [8.1 Problems](#81-problems)
-        1. [8.1.1 Gentoo (Thanks to Hawkmoon):](#811-gentoo-thanks-to-hawkmoon)
-9. [Credits](#credits)
-    1. [Copyright](#copyright)
-    2. [About](#about)
-
-<!-- /TOC -->
-
-<a id="markdown-general-purpose" name="general-purpose"></a>
 ## General Purpose
 
 The idea on writing vpn's and the structure it follows was the problem that we had into easily configure many vpn's for use with the wireless project interconnection (Valencia Wireless [`http://www.valenciawireless.org`](http://www.valenciawireless.org/)).
@@ -60,7 +22,6 @@ In brief... we had DNS names that get dynamically resolved to our current IP's, 
 
 (please, if you use it, send me an email to let me know how much people is using it... thanks)
 
-<a id="markdown-requirements" name="requirements"></a>
 ## Requirements
 
 VPNS, it's just a bunch of configuration files and three scripts that requires the presence of:
@@ -74,7 +35,6 @@ VPNS, it's just a bunch of configuration files and three scripts that requires t
 
 This script has been created for a Debian GNU/Linux distribution, but as far as I can remember it's compatible with the schema used on Red Hat, SuSE, etc... but check before
 
-<a id="markdown-the-way-it-works" name="the-way-it-works"></a>
 ## The way it works...
 
 As VPND requires one key file (vpnd.key), and a configuration file (vpnd.conf) for each connection, the idea was to split different files for each node.
@@ -83,14 +43,12 @@ We'll require then one key file and one configuration file for each node to be a
 
 As each VPND will require both static origin and target IP's there would be some things that would be static in the configuration (other parameters) and others that would need to get rewritten (target, and start addresses).
 
-<a id="markdown-configuration-files" name="configuration-files"></a>
 ## Configuration files
 
 The configuration get's deployed on two directories: /etc/vpnd/ for the local host configuration (your host) and /etc/vpnd/hosts/* for the remote hosts configuration.
 
 There are also some rc?.d directories with symbolic links to vpns to start/stop the daemon at different runlevels, it's a good idea to copy them too, but as the main purpose of this script is to periodically test it, it should be included at crontab (as well as rc?.d to initial startup).
 
-<a id="markdown-41-local-configuration" name="41-local-configuration"></a>
 ### 4.1 Local Configuration
 
 Those files specify the configuration for the local host that will be used by all the other hosts.
@@ -99,7 +57,6 @@ Those files specify the configuration for the local host that will be used by al
 - **/etc/vpnd/master.ip :** :   This file is created automatically with the results of resolving your Dynamic DNS to an IP to allow comparison between your last IP and your current to check if you need to relaunch VPN's (remember that the worst case is both local and remote IP's getting changed).
 - **/etc/vpnd/master.restart :** :   This file is created when local IP has changed, specifying a total VPND restart for all VPN's
 
-<a id="markdown-42-host-configuration-etcvpndhostshost" name="42-host-configuration-etcvpndhostshost"></a>
 ### 4.2 Host configuration (/etc/vpnd/hosts/$HOST)
 
 Each file in this subdir specifies a VPN to be launched and defines the name that the configuration files would have appended.
@@ -110,7 +67,6 @@ We'll create a folder for each remote host with a descriptive name that would be
 
 Into this subdir there would be the following config files:
 
-<a id="markdown-421-static-files" name="421-static-files"></a>
 #### 4.2.1 Static files
 
 - **vpnd.key :** :   Cipher key that would be used for the connection with the remote host. It gets created by VPND or copied from remote host.
@@ -119,20 +75,17 @@ Into this subdir there would be the following config files:
 - **resolv :** :   Dinamic DNS resolver name for the target host (used for resolving it's IP)
 - **master :** :   Master configuration file for HOST (the config that it's static)
 
-<a id="markdown-422-dinamic-files" name="422-dinamic-files"></a>
 #### 4.2.2 Dinamic files
 
 - **vpnd.conf :** :   Configuration file for HOST, it gets created automatically when running /etc/vpnd/update.pl script
 - **restart :** :   This file gets created by the "compare.pl" script to indicate that VPNS should restart this host VPN. This file is created if the IP has changed since last launch
 
-<a id="markdown-423-scripts" name="423-scripts"></a>
 #### 4.2.3 Scripts
 
 - **/etc/vpnd/update.pl :** :   Script to merge configuration files for host, resolve IP and then output a vpnd.conf file for that host
 - **/etc/vpnd/compare.pl :** :   Script to compare IP's between recorded one and current for preparing VPND restart
 - **/etc/init.d/vpns :** :   Script to start, stop, restart or restart-if-needed the VPNS based on hosts definitions
 
-<a id="markdown-recommendations" name="recommendations"></a>
 ## Recommendations
 
 As probably IP's will change, you'll need to put a crontab sentence for checking of updated ip's, to do so, put /etc/init.d/vpns restart-if-needed in your crontab for allowing the tunnels to be recreated at every change.
@@ -150,84 +103,68 @@ At every run, compare.pl will check new IP addresses, and will mark the service 
 
 update.pl will dump a vpnd.conf file containing the merge of "host/master" and the Dinamic DNS for both local host and remote host configured as "host/mode" says using the "host/port" port to establish connection and vpnd.key file in each "host/" subdir.
 
-<a id="markdown-changelog" name="changelog"></a>
 ## Changelog
 
-<a id="markdown-version-043" name="version-043"></a>
 ### Version 0.43
 
 Added a check (chop $mode) with the mode definition to fix problems in systems that always configured mode as server (default check, because the if sentence at update.pl searched for "client" and sometimes it was not well compared)
 
 Thanks to Hawkmoon
 
-<a id="markdown-version-042" name="version-042"></a>
 ### Version 0.42
 
 Change in the compare.pl script for the case in which the changed ip was the local one to restart all vpn daemons.
 
 Before this version, when local ip changed, only the first-checked VPN will be restarted as there was no file specifying a total restart.
 
-<a id="markdown-version-041" name="version-041"></a>
 ### Version 0.41
 
 Little changes in configuration files an scripts to make it easier to set up, please, check your configuration files to use new behaviour
 
 - pid file now gets automatically defined to match vpns kill procedure, so it shouldn't be in "master" file.
 
-<a id="markdown-version-04" name="version-04"></a>
 ### Version 0.4
 
 Now, added localhost IP resolution to check if just origin or end (or both) changed their IP, so if either one of them changes, the VPN get's marked as restart-needed.
 
-<a id="markdown-version-03" name="version-03"></a>
 ### Version 0.3
 
 Each host is now restarted only if needed. (added vpns restart-if-needed command) for not having to stop/relaunch every VPN at every time.
 
 Added compare.pl script to compare IP's and to let inform the vpns that needs to restart it.
 
-<a id="markdown-version-02" name="version-02"></a>
 ### Version 0.2
 
 Configuration files moved from /etc/vpnd/ to /etc/vpnd/hosts/*, so each host has it's configuration files into one subdirectory, allowing to tidy the things a bit. Old files were named vpnd-HOST.conf, vpnd-HOST.key, HOST.resolv,etc. They got renamed and moved to the actual location.
 
-<a id="markdown-version-01" name="version-01"></a>
 ### Version 0.1
 
 First version: at every restart of VPNS new configuration files were created for each host, and then the VPND were restarted with the configuration files
 
-<a id="markdown-sample-configuration-files" name="sample-configuration-files"></a>
 ## Sample configuration files
 
 Here you will see a sample files used at my host, the other files not dumped here are created automatically by the scripts or you must create them manually (for example the vpnd.key).
 
-<a id="markdown-71-local" name="71-local"></a>
 ### 7.1 Local
 
-<a id="markdown-711-masterresolv" name="711-masterresolv"></a>
 ### 7.1.1 master.resolv
 
 `merak.no-ip.org`
 
-<a id="markdown-72-remote-host" name="72-remote-host"></a>
 ### 7.2 Remote Host
 
-<a id="markdown-721-mode" name="721-mode"></a>
 #### 7.2.1 mode
 
 `server`
 
-<a id="markdown-722-port" name="722-port"></a>
 #### 7.2.2 port
 
 `2010`
 
-<a id="markdown-723-resolv" name="723-resolv"></a>
 #### 7.2.3 resolv
 
 `oceano.dyndns.org`
 
-<a id="markdown-724-master" name="724-master"></a>
 #### 7.2.4 master
 
 - **local** :   172.16.97.78
@@ -237,7 +174,6 @@ Here you will see a sample files used at my host, the other files not dumped her
 - **keyfile** :   vpnd.key
 - **randomdev** :   /dev/urandom mtu 1600
 
-<a id="markdown-73-sample-run-for-oceano-resulting-vpndconf" name="73-sample-run-for-oceano-resulting-vpndconf"></a>
 ### 7.3 Sample run for Oceano (resulting vpnd.conf)
 
 - **local** :   172.16.97.78
@@ -253,21 +189,16 @@ Here you will see a sample files used at my host, the other files not dumped her
 - **server** :   81.202.117.88 2010
 - **mode** :   server
 
-<a id="markdown-faq" name="faq"></a>
 ## FAQ
 
-<a id="markdown-81-problems" name="81-problems"></a>
 ### 8.1 Problems
 
-<a id="markdown-811-gentoo-thanks-to-hawkmoon" name="811-gentoo-thanks-to-hawkmoon"></a>
 #### 8.1.1 Gentoo (Thanks to Hawkmoon):
 
 It seems that the script as provided within this package doesn't work fine with Gentoo, please, specify the full path to the vpnd.key file in each "master" configuration file, and be sure to edit "vpns" to point to your "vpnd" executable.
 
-<a id="markdown-credits" name="credits"></a>
 ## Credits
 
-<a id="markdown-copyright" name="copyright"></a>
 ### Copyright
 
 Copyright (c) 2003 Pablo Iranzo Gómez (Pablo.Iranzo@uv.es) <http://Alufis35.uv.es/~iranzo/>
@@ -276,7 +207,6 @@ You're given permission to copy, distribute and/or modify this document under th
 
 Please, if you use this program, email me to know where it gets to and if it's used.
 
-<a id="markdown-about" name="about"></a>
 ### About
 
 This document has been created using the LYX Editor and compiled with under Debian GNU/Linux, and then converted to the format you're viewing.
