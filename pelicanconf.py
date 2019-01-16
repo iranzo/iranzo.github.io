@@ -51,6 +51,10 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
+EXTRA_TEMPLATES_PATHS = [
+    "plugins/revealmd/templates",  # eg: "plugins/revealmd/templates"
+]
+
 FAVICON = 'extra/favicon.ico'
 
 STATIC_PATHS = ['images', 'imagen', 'extra/robots.txt', 'extra/favicon.ico', 'extra/keybase.txt']
@@ -93,7 +97,7 @@ PLUGIN_PATHS = ['plugins']
 
 PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img',
            'neighbors', 'render_math', 'related_posts', 'share_post',
-           'series', 'assets', 'post_stats']
+           'series', 'assets', 'post_stats', 'revealmd']
 
 THEME = 'themes/elegant'
 
