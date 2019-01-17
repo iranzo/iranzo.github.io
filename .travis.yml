@@ -8,6 +8,7 @@ python:
 - '3.5'
 
 before_install:
+- sudo apt-get -y install pandoc
 - pip install -U pip
 - pip install -U setuptools
 - pip install -r requirements.txt
