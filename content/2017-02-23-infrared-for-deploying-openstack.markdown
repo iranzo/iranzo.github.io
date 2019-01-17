@@ -49,7 +49,10 @@ Once done, we need to setup the requirements on the host we'll use to virtualize
 
 - OSP7 did not contain RPM packaged version of images, a repo with the images needs to be defined like:
     - `time infrared tripleo-undercloud --version $VERSION --images-task import --images-url $REPO_URL`
-    - NOTE: --images-task `import` and `--images-url`
+
+    !!! note "Check the parameter values"
+        --images-task `import` and `--images-url`
+
 - Ceph failed to install unless `--storage-backend ceph` was provided (open bug for that)
 
 ## Error reporting
