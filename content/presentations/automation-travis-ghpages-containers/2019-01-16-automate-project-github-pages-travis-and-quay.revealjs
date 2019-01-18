@@ -212,21 +212,21 @@ What else?
 
 ## Containers!!
 
-![](2018-12-24-13-12-19.png)
+![]({attach}2018-12-24-13-12-19.png)
 
 ---
 
 ## Container creation - Quay
 
 Quay and DockerHub allow to automate build on branch commit
-![](2018-12-24-12-22-08.png)
+![]({attach}2018-12-24-12-22-08.png)
 
 ---
 
 ## Docker Hub
 
 On each commit, a new container will be built
-![](2018-12-24-12-25-49.png)
+![]({attach}2018-12-24-12-25-49.png)
 
 ---
 
