@@ -9,6 +9,8 @@ python:
 
 before_install:
 - sudo apt-get -y install pandoc
+- wget -O /tmp/pandoc.deb https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-1-amd64.deb
+- sudo dpkg -i /tmp/pandoc.deb
 - pip install -U pip
 - pip install -U setuptools
 - pip install -r requirements.txt
