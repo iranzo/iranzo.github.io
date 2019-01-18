@@ -103,7 +103,7 @@ THEME = 'themes/elegant'
 
 # elegant
 TYPOGRIFY = True
-RECENT_ARTICLE_SUMMARY = True
+RECENT_ARTICLE_SUMMARY = False
 RESPONSIVE_IMAGES = True
 
 MARKDOWN = {
