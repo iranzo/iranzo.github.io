@@ -18,7 +18,7 @@ revealOptions:
 ## [Citellus](https://github.com/citellusorg/citellus):
 ### Detecting common pitfalls of deployments
 
-<img src="../citellus.png" width="15%" border=0>
+<img src="{attach}citellus.png" width="15%" border=0>
 
 
 <https://github.com/citellusorg/citellus>
@@ -98,7 +98,7 @@ virtualization : 1 []
 ---
 
 ## How to run it manually?
-<img src="images/citellusrun.png" height="20%" border=0><!-- .element height="50%"  width="90%" -->
+<img src="{attach}citellusrun.png" height="20%" border=0><!-- .element height="50%"  width="90%" -->
 
 
 Note: Change speaker after this
@@ -117,7 +117,7 @@ Note: Change speaker after this
 
 ## HTML Interface
 - Create by using --output and --web, open the generated `citellus.html` over http.
-<img src="images/www.png" height="40%" border=0><!-- .element height="50%"  width="70%" -->
+<img src="{attach}www.png" height="40%" border=0><!-- .element height="50%"  width="70%" -->
 
 ---
 
