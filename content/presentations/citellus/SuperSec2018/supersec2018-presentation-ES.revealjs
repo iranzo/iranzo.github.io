@@ -18,7 +18,7 @@ revealOptions:
 ## [Citellus](https://citellus.org):
 ### Citellus - Verifica tus sistemas!!
 
-<img src="../citellus.png" width="15%" border=0>
+<img src="{attach}citellus.png" width="15%" border=0>
 
 <https://citellus.org>
 
@@ -145,7 +145,7 @@ total : 215
 ---
 
 ## Cómo ejecutarlo?
-<img src="images/citellusrun.png" width="80%" border=0><!-- .element height="50%"  width="90%" -->
+<img src="{attach}citellusrun.png" width="80%" border=0><!-- .element height="50%"  width="90%" -->
 
 ---
 
@@ -167,7 +167,7 @@ total : 215
 
 ## Interfaz HTML
 - Creado al usar --web, abriendo fichero `citellus.html` por http se visualiza.
-<img src="images/www.png" width="80%" border=0><!-- .element height="50%"  width="70%" -->
+<img src="{attach}www.png" width="80%" border=0><!-- .element height="50%"  width="70%" -->
 
 ---
 
