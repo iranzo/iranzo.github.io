@@ -5,7 +5,6 @@ ghp-import
 markdown
 pelican
 peru
-pypandoc
 pysvg
 typogrify
 webassets
