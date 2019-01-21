@@ -46,7 +46,7 @@ As the templates for the rendered the pages should be similar, I moved to use th
 
 This also, rendered in two outcomes, 2nd patch was no longer needed in that form, and some other dependencies were removed (no more pypandoc, no more BeautifulSoup, etc)
 
-The new version of the plugin has been contributed via PR, but while it is being accepted by original author, you can find the relevant version in the 'next' branch of <https://github.com/iranzo/pelican-revealmd/tree/next>.
+The new version of the plugin has been contributed via PR, but while it is being accepted by original author, you can find the relevant version in the 'master' branch of <https://github.com/iranzo/pelican-revealmd>.
 
 ## Outcomes
 
