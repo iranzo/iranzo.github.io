@@ -28,56 +28,58 @@ Of course, the biggest issue is that many of those channels are providing the sa
 Using python we can come to approach this in several steps:
 
 - First we can expand the url to longer one (those channels tend to use url shorteners)
-  ~~~py
-  def expandurl(url):
-    """
-    Expands short URL to long one
-    :param url: url to expand
-    :return: expanded url
-    """
 
-    logger = logging.getLogger(__name__)
+~~~py
+def expandurl(url):
+"""
+Expands short URL to long one
+:param url: url to expand
+:return: expanded url
+"""
 
-    try:
-        session = requests.Session()  # so connections are recycled
-        resp = session.head(url, allow_redirects=True, timeout=10)
-        newurl = resp.url
-        logger.debug(msg="URL Expanded to: %s" % newurl)
-    except:
-        # Fake as we couldn't expand url
-        newurl = url
+logger = logging.getLogger(__name__)
 
-    logger.debug(msg="Expanding url: %s to %s" % (url, newurl))
+try:
+    session = requests.Session()  # so connections are recycled
+    resp = session.head(url, allow_redirects=True, timeout=10)
+    newurl = resp.url
+    logger.debug(msg="URL Expanded to: %s" % newurl)
+except:
+    # Fake as we couldn't expand url
+    newurl = url
 
-    return newurl
-  ~~~
+logger.debug(msg="Expanding url: %s to %s" % (url, newurl))
+
+return newurl
+~~~
 
 - Second, restrict the links we process to the ones in amazon, as it's 'easy' to catch the product ID and perform a search. This leaves out lot of offers, but makes it easier to locate them as there's an API to use.
-  ~~~py
-    def findamazonproductid(newurl):
-        """
-        Finds amazon product id and country in URL
-        :param newurl: url to parse
-        :return: productid, country
-        """
-        domain = None
 
-        # Find Product ID in URL
-        prodregex = re.compile(r"\/([A-Z0-9]{10})")
-        r = prodregex.search(newurl)
+~~~py
+def findamazonproductid(newurl):
+    """
+    Finds amazon product id and country in URL
+    :param newurl: url to parse
+    :return: productid, country
+    """
+    domain = None
 
-        if r:
-            productid = r.groups()[0]
-        else:
-            productid = None
+    # Find Product ID in URL
+    prodregex = re.compile(r"\/([A-Z0-9]{10})")
+    r = prodregex.search(newurl)
 
-        domainregex = re.compile(r"amazon\.([a-z0-9\.]{1,5})/")
-        r = domainregex.search(newurl)
-        if r:
-            domain = r.groups()[0]
+    if r:
+        productid = r.groups()[0]
+    else:
+        productid = None
 
-        return productid, domain
-  ~~~
+    domainregex = re.compile(r"amazon\.([a-z0-9\.]{1,5})/")
+    r = domainregex.search(newurl)
+    if r:
+        domain = r.groups()[0]
+
+    return productid, domain
+~~~
 
 - Now that we get product id an domain, we can use a database to store when was received (if before) and store as 'seen' to not repeat it.
 
