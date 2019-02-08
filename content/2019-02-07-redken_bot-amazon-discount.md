@@ -51,6 +51,7 @@ Using python we can come to approach this in several steps:
 
     return newurl
   ~~~
+
 - Second, restrict the links we process to the ones in amazon, as it's 'easy' to catch the product ID and perform a search. This leaves out lot of offers, but makes it easier to locate them as there's an API to use.
   ~~~py
     def findamazonproductid(newurl):
@@ -77,6 +78,7 @@ Using python we can come to approach this in several steps:
 
         return productid, domain
   ~~~
+
 - Now that we get product id an domain, we can use a database to store when was received (if before) and store as 'seen' to not repeat it.
 
 Telegram bot api can help sending the messages or receiving them from a chat, so now it is our chance to code in the way we want it.
