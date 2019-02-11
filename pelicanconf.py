@@ -30,8 +30,9 @@ PROJECTS = [{'name': 'Redken on telegram', 'url': 'https://t.me/redken_bot',
 LINKS = (('Redken on telegram', 'https://t.me/redken_bot'),
          ('RHJobs channel on TG', "https://t.me/rhjobs"),)
 
-SOCIAL = (('Iranzo twitter', 'http://twitter.com/iranzop'),
-          ('Iranzo github', 'http://github.com/iranzo'),)
+SOCIAL = (('Twitter', 'http://twitter.com/iranzop'),
+          ('github', 'http://github.com/iranzo'),
+          ('linkedin', 'https://www.linkedin.com/in/iranzo/'),)
 
 TWITTER_USERNAME = "iranzop"
 # Update if you use amazon links
