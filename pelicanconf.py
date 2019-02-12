@@ -32,7 +32,8 @@ LINKS = (('Redken on telegram', 'https://t.me/redken_bot'),
 
 SOCIAL = (('Twitter', 'http://twitter.com/iranzop'),
           ('github', 'http://github.com/iranzo'),
-          ('linkedin', 'https://www.linkedin.com/in/iranzo/'),)
+          ('linkedin', 'https://www.linkedin.com/in/iranzo/'),
+          ('RSS', SITEURL + '/feeds/all.atom.xml'),)
 
 TWITTER_USERNAME = "iranzop"
 # Update if you use amazon links
