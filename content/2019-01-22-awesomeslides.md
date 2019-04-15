@@ -20,10 +20,10 @@ The presentations already got several transformations, but in the actual status 
 Some software for the conversion, did generate them as 'screenshoots' for each slide, this however had some cons/pros:
 
 - Pros:
-  - Format was kept almost 100%
-  - Easy to showcase with any 'gallery' plugin
+    - Format was kept almost 100%
+    - Easy to showcase with any 'gallery' plugin
 - Cons:
-  - Text was lost, so no links, no indexation, etc
+    - Text was lost, so no links, no indexation, etc
 
 Alternatively, I could add and attach via a link to the odp file for end users to download and reproduce, but that will increase blog size (no constrains, but sounded like nonsense to me), so I continued my research for a solution or workaround to use.
 
