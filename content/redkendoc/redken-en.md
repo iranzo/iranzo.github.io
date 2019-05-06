@@ -49,15 +49,15 @@ Also, as per general usage:
 - `/feed <add|delete|list> name url` Adds/deletes/lists a new feed form URL on channel
 - `/cn <word>` To get a random Chuck Norris fact related with provided word (or random)
 
-### offers
+### Bargains/Deals
 
-Lists amazon offers published without duplicated during 24 hours, matching ones will be sent privately by <https://t.me/redken_bot>
+Lists amazon bargains/deals published without duplicated during 24 hours, matching ones will be sent privately by <https://t.me/redken_bot>
 
 - `/ofertas add <words>` to add a new word to the ofertas watch
 - `/ofertas remove <words>` to remove a new word to the ofertas watch
 - `/ofertas show` to show the words being watched
 
-Lists amazon offers published without duplicated during 24 hours, matching ones will be sent to GROUP by <https://t.me/redken_bot>
+Lists amazon bargains/deal published without duplicated during 24 hours, matching ones will be sent to GROUP by <https://t.me/redken_bot>
 
 - `/gofertas add <words>` to add a new word to the ofertas watch
 - `/gofertas remove <words>` to remove a new word to the ofertas watch
