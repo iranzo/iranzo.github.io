@@ -29,9 +29,9 @@ Android TV también tiene soporte de Chromecast, por lo que no sólo puedes repl
 
 Entre los sistemas Android TV que he probado están:
 
-- [Nvidia Shield TV](https://amzn.to/2BQJJGH) que actúa como consola de juegos y como dispositivo Android TV
-- [Xiaomi Mi Box](https://amzn.to/2SsFecu) que permite 'actualizar' cualquier televisor a disponer de un sistema Android TV via el puerto HDMI
-- [Sony Bravia Android TV](https://amzn.to/2Q94kuY) que directamente incorporan AndroidTV como sistema operativo del televisor.
+- [Nvidia Shield TV](https://amzn.to/2HvImBk) que actúa como consola de juegos y como dispositivo Android TV
+- [Xiaomi Mi Box](https://amzn.to/2VXO1sN) que permite 'actualizar' cualquier televisor a disponer de un sistema Android TV via el puerto HDMI
+- [Sony Bravia Android TV](https://amzn.to/2JYDDtt) que directamente incorporan AndroidTV como sistema operativo del televisor.
 
 Tanto Nvidia como Xiaomi TV Box permiten convertir o 'actualizar' cualquier televisor y a su vez, permiten, que en un futuro, en caso de querer actualizar el dispositivo, el coste es claramente inferior que reemplazar un televisor entero.
 

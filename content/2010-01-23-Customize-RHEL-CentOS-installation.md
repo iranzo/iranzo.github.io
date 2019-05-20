@@ -32,7 +32,7 @@ After we've copied everything from our install media, we'll start customizing :)
 
 We can customize DVD background image and even keyboard layout by tweaking "isolinux/isolinux.cfg" with all required fields (Check [Syslinux](http://syslinux.zytor.com/wiki/index.php/SYSLINUX) Documentation to check proper syntax)
 
-On [Kickstart: instalaciones automatizadas para anaconda]({filename}/2008-05-11-Kickstart-instalaciones.markdown) (spanish) you can also check how to create a kickstart, so you can embed it on this DVD and configure isolinux.cfg to automatic provision a system
+On [Kickstart: instalaciones automatizadas para anaconda]({filename}/2008-05-11-Kickstart-instalaciones.md) (spanish) you can also check how to create a kickstart, so you can embed it on this DVD and configure isolinux.cfg to automatic provision a system
 
 ## Including updates
 

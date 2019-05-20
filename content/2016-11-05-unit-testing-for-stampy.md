@@ -7,7 +7,7 @@ tags: python, telegram, openstack, foss
 category: blog
 description:
 ---
-Since my prior post on [Contributing to OpenStack]({filename}2016-07-21-contributing-to-openstack.markdown), I liked the idea of using some automated tests to validate functionality and specifically, the corner cases that could arise when playing with the code.
+Since my prior post on [Contributing to OpenStack]({filename}2016-07-21-contributing-to-openstack.md), I liked the idea of using some automated tests to validate functionality and specifically, the corner cases that could arise when playing with the code.
 
 Most of the errors fixed so far on stampy, were related with some pieces of the code not properly handling UTF or some information returned, etc and still it has improved, the idea of ensuring that prior errors were not put back into the code when some other changes were performed, started to arise to be a priority.
 

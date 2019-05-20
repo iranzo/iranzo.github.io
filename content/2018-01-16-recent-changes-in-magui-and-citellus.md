@@ -12,7 +12,7 @@ description:
 
 ## What's new?
 
-During recent weeks we've been coding and performing several changes to  [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.markdown) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.markdown).
+During recent weeks we've been coding and performing several changes to  [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.md) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.md).
 
 Checking the latest logs or list of issues open and closed on github is probably not an easy task or the best way to get 'up-to-date' with changes, so I'll try to compile a few here.
 
