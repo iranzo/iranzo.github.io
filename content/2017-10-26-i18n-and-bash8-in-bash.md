@@ -11,7 +11,7 @@ description:
 [TOC]
 
 ## Introduction
-In order to improve [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.markdown) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.markdown), we did implement some [Unit testing]({filename}2017-08-17-Jenkins-for-running-CI-tests.markdown) to improve code quality.
+In order to improve [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.md) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.md), we did implement some [Unit testing]({filename}2017-08-17-Jenkins-for-running-CI-tests.md) to improve code quality.
 
 The tests written were made in python and with some changes it was also possible to validate the actual tests.
 

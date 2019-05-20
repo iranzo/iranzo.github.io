@@ -11,7 +11,7 @@ description:
 [TOC]
 
 ## Why?
-While working on [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.markdown) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.markdown) it soon became evident that Unit testing for validating the changes was a requirement.
+While working on [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.md) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.md) it soon became evident that Unit testing for validating the changes was a requirement.
 
 Initially, using a `.travis.yml` file contained in the repo and the free service provided by <https://travis-ci.org> we soon got <https://github.com> repo providing information about if the builds succeded or not.
 

@@ -13,7 +13,7 @@ I've created a NSIS script that writes into registry in a key called HKLMSOFTWAR
 
 If we create a package with action "LAUNCH", and attach the regcert.zip with command to execute "regcert.exe", all clients with functional package deployment, will add that key to registry, so we can check, using OCS registry query function for a key named "cert" into: HKLM SOFTWAREOCS.
 
-After some time, affected and with working software deployment (Read [OCS Inventory Package deployment]({filename}2006-07-27-OCS-Inventory-Package-deployment.markdown) to learn how to setup it properly), we could know in which ones it's working and in which ones it doesn't work, just doing a search for computers with a special value in that registry key. (I've also uploaded the precompiled version I use for your testing purpouses).
+After some time, affected and with working software deployment (Read [OCS Inventory Package deployment]({filename}2006-07-27-OCS-Inventory-Package-deployment.md) to learn how to setup it properly), we could know in which ones it's working and in which ones it doesn't work, just doing a search for computers with a special value in that registry key. (I've also uploaded the precompiled version I use for your testing purpouses).
 
 ### Software
 

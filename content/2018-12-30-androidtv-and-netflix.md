@@ -29,9 +29,9 @@ Android TV also has Chromecast support, so that you can not only replicate/mirro
 
 Among Android TV systems I've tested three:
 
-- [Nvidia Shield TV](https://amzn.to/2BQJJGH) which acts both as Game Console and Android TV system
-- [Xiaomi Mi Box](https://amzn.to/2SsFecu) which contains the Android TV System as an addon for any TV with HDMI input
-- [Sony Bravia Android TV](https://amzn.to/2Q94kuY) which directly integrates Android TV as the TV operating system
+- [Nvidia Shield TV](https://amzn.to/2HvImBk) which acts both as Game Console and Android TV system
+- [Xiaomi Mi Box](https://amzn.to/2VXO1sN) which contains the Android TV System as an addon for any TV with HDMI input
+- [Sony Bravia Android TV](https://amzn.to/2JYDDtt) which directly integrates Android TV as the TV operating system
 
 Nvidia and Xiaomi both allow to 'convert' or 'upgrade' any TV to an Android TV box and additionally can be upgraded in the future for a cheaper price tag than upgrading a TV.
 
