@@ -9,7 +9,7 @@ description:
 
 My name is Pablo and I've been working with opensource since before I started university.
 
-Part of my evolution with opensource is described in this article [Linux]({filename}/2008-06-03-mi-Evolucion-con-Linux.markdown).
+Part of my evolution with opensource is described in this article [Linux]({filename}../2008-06-03-mi-Evolucion-con-Linux.md).
 
 Since 2006 I work for Red Hat, where I started as Dedicated Enterprise Engineer (Onsite Consultant) for a contry-wide retail company with headquarters in Valencia.
 
