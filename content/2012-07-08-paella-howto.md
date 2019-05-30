@@ -4,7 +4,7 @@ title: Paella Howto
 date: 2012-07-08 11:35:14 +0200
 comments: true
 tags: paella, receipt, cooking
-category: other
+category: blog
 description:
 lang: en
 slug: paella-howto

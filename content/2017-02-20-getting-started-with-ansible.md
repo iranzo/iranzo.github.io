@@ -4,7 +4,7 @@ title: Getting started with Ansible
 date: 2017-02-20 23:10:00 +0100
 comments: true
 tags: python, ansible, openstack, sysmgmt, foss
-category: blog
+category: tech
 description:
 ---
 [TOC]

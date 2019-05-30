@@ -4,7 +4,7 @@ title: InfraRed for deploying OpenStack
 date: 2017-02-23 23:27:00 +0100
 comments: true
 tags: python, ansible, openstack, sysmgmt, InfraRed, foss
-category: blog
+category: tech
 description:
 ---
 [TOC]

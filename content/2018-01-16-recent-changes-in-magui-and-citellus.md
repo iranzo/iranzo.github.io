@@ -4,7 +4,7 @@ title: Recent changes in Magui and Citellus
 date: 2018-01-16 21:17:00 +0200
 comments: true
 tags: citellus, magui, foss
-category: blog
+category: tech
 description:
 ---
 

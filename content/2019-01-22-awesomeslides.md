@@ -5,7 +5,7 @@ tags: pelican, foss, blog, linux, pandoc, LibreOffice, odp, ppt, presentations
 layout: post
 date: 2019-01-22 20:51:27 +0100
 comments: true
-category: blog
+category: tech
 description:
 ---
 
