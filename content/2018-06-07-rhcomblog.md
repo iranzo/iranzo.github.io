@@ -4,7 +4,7 @@ title: First post on Red Hat blog
 date: 2018-06-07 22:32:00 +0200
 comments: true
 tags: citellus, magui, redhat, foss
-category: blog
+category: tech
 description:
 ---
 ## New blog post!

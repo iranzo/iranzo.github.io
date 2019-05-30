@@ -5,7 +5,7 @@ tags: pelican, Foss, travis, ci/cd, elegant, blog, python
 layout: post
 date: 2018-12-11 21:49:47 +0100
 comments: true
-category: blog
+category: tech
 description:
 ---
 

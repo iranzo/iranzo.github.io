@@ -5,7 +5,7 @@ author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
 layout: post
 date: 2018-12-30 19:26:00 +0100
 comments: true
-category: blog
+category: tech
 description:
 lang: es
 slug: AndroidTV-and-Netflix-tvq-pm-100

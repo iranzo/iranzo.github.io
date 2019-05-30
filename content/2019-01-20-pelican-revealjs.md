@@ -5,7 +5,7 @@ tags: pelican, foss, blog, python, github, blog-o-matic, linux, pandoc
 layout: post
 date: 2019-01-20 23:12:17 +0100
 comments: true
-category: blog
+category: tech
 description:
 ---
 

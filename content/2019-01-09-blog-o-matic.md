@@ -5,7 +5,7 @@ tags: pelican, foss, travis, ci/cd, elegant, blog, python, github, blog-o-matic,
 layout: post
 date: 2019-01-09 22:00:47 +0100
 comments: true
-category: blog
+category: tech
 description:
 ---
 

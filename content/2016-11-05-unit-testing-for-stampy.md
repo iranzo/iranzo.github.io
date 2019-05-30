@@ -3,8 +3,8 @@ layout: post
 title: Unit testing for stampy
 date: 2016-11-05 19:39:00 +0100
 comments: true
-tags: python, telegram, openstack, foss
-category: blog
+tags: python, telegram, openstack, foss, redken
+category: tech
 description:
 ---
 Since my prior post on [Contributing to OpenStack]({filename}2016-07-21-contributing-to-openstack.md), I liked the idea of using some automated tests to validate functionality and specifically, the corner cases that could arise when playing with the code.

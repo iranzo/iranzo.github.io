@@ -5,7 +5,7 @@ tags: foss, telegram, python, redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 slug: telegram-redken_bot-documentation

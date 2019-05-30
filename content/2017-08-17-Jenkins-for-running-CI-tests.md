@@ -4,7 +4,7 @@ title: Jenkins for running CI tests
 date: 2017-08-17 23:54:00 +0200
 comments: true
 tags: python, openstack, sysmgmt, bash, sosreport, citellus, jenkins, unittest, gerrit, magui, foss
-category: blog
+category: tech
 description:
 ---
 
