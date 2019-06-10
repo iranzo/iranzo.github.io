@@ -5,6 +5,7 @@ imports:
     plugins|yuicompressor: plugins/
     plugins|better_figures_and_images: plugins/
     plugins|better_codeblock_line_numbering: plugins/
+    plugins|photos: plugins/
     plugins|extract_toc: plugins/
     plugins|tipue_search: plugins/
     plugins|liquid_tags: plugins/
@@ -36,6 +37,9 @@ rule yuicompressor:
 
 rule better_figures_and_images:
     pick: better_figures_and_images
+
+rule photos:
+    pick: photos
 
 rule better_codeblock_line_numbering:
     pick: better_codeblock_line_numbering
