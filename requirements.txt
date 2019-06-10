@@ -8,3 +8,5 @@ peru
 pysvg
 typogrify
 webassets
+Pillow
+Piexif
