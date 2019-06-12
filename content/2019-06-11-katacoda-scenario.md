@@ -16,6 +16,6 @@ With the help of [Mario Vázquez](https://linuxera.org), author of [Getting Star
 - [How to use Citellus](https://www.katacoda.com/iranzo/scenarios/citellus) on [Citellus: Troubleshooting automation](https://citellus.org)
 - [Kubevirt](https://www.katacoda.com/iranzo/scenarios/kubevirt) on a 'browser-based' approach for [Minikube](https://kubevirt.io/quickstart_minikube/) setup for validating Kubevirt: Kubernetes with VM Virtualization (vs the regular containers).
 
-You can check how them can be created by looking at their code at: [Katacoda Scenarios](https://github.com/iranzo/katacoda-scenarios)
+You can check how them can be created by looking at their code at: [Katacoda Scenarios](https://github.com/iranzo/katacoda-scenarios) or the 'playable' version at <https://www.katacoda.com/iranzo/>.
 
 Enjoy!
