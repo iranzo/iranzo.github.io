@@ -48,6 +48,7 @@ Also, as per general usage:
 - `/hilight <add|delete|list> <word>` Adds/deletes word or lists words that will cause a forward to notify you
 - `/feed <add|delete|list> name url` Adds/deletes/lists a new feed form URL on channel
 - `/cn <word>` To get a random Chuck Norris fact related with provided word (or random)
+- `/excuse` To get a random excuse
 
 ### Bargains/Deals
 
