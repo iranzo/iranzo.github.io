@@ -39,7 +39,7 @@ Se cubre el suelo con papel de periódico, revistas, etc para evitar las salpica
 
 ![]({static}imagen/paella/2012-07-08 12.36.05.jpg)
 
-Ahora, en simultánteo se pone la olla el agua a hervir con la verdura y empezamos a sofreir el pollo. Al agua, de hervir, le podemos añadir algo de romero para que le de algo de sabor.
+Ahora, en paralelo, se pone la olla el agua a hervir con la verdura y empezamos a sofreir el pollo. Al agua, de hervir, le podemos añadir algo de romero para que le de algo de sabor.
 
 ![]({static}imagen/paella/2012-07-08 12.48.16.jpg)
 
