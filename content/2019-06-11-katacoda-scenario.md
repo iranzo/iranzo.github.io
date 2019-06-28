@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
 title: Katacoda scenario creation
-tags: linux, minikube, citellus, floss, katacoda, foss, kubevirt, kubernetes, k8s
+tags: linux, minikube, citellus, katacoda, foss, kubevirt, kubernetes, k8s
 layout: post
 date: 2019-06-11 21:16:14 +0200
 comments: true
