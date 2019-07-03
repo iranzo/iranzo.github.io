@@ -9,7 +9,7 @@ import datetime
 AUTHOR = u'Pablo Iranzo Gómez'
 AUTHORS = {
     u'Pablo Iranzo Gómez': {
-        u'blurb': """ opensource enthusiast and Lego fan doing some python simple programs like [redken_bot](https://t.me/redken_bot).""",
+        u'blurb': """ opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc""",
         u'url': 'https://iranzo.github.io'
     },
 }
