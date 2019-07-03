@@ -1,5 +1,5 @@
 ---
-author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
+author: Pablo Iranzo Gómez
 title: AwesomeSlides for converting LibreOffice ODP into revealjs
 tags: pelican, foss, blog, linux, pandoc, LibreOffice, odp, ppt, presentations
 layout: post
