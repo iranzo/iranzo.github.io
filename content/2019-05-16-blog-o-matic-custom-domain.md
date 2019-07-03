@@ -1,5 +1,5 @@
 ---
-author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
+author: Pablo Iranzo Gómez
 title: Use custom domain name with Blog-O-Matic
 tags: pelican, foss, travis, ci/cd, elegant, blog, python, github, blog-o-matic, linux
 layout: post

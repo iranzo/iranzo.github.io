@@ -1,5 +1,5 @@
 ---
-author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
+author: Pablo Iranzo Gómez
 title: Telegram Redken bot and amazon/discounts/bargains unification
 tags: foss, telegram, python, amazon, programming, redken
 layout: post

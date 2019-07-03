@@ -1,5 +1,5 @@
 ---
-author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
+author: Pablo Iranzo Gómez
 title: How to automate via Travis CI publishing of new pelican pages to GitHub pages
 tags: pelican, Foss, travis, ci/cd, elegant, blog, python
 layout: post

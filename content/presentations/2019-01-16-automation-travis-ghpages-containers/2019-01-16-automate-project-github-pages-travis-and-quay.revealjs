@@ -1,5 +1,5 @@
 ---
-author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
+author: Pablo Iranzo Gómez
 title: Project automation with Travis, GitHub Pages and Quay
 tags: pelican, foss, travis, quay, docker, dockerhub
 layout: post

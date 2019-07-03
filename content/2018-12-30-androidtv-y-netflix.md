@@ -1,7 +1,7 @@
 ---
 title: Android TV y el error de Netflix's tvq-pm-100 (5.2.5)
 tags: Android, Netflix, tvq-pm-100, kodi
-author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
+author: Pablo Iranzo Gómez
 layout: post
 date: 2018-12-30 19:26:00 +0100
 comments: true

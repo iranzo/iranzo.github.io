@@ -1,5 +1,5 @@
 ---
-author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
+author: Pablo Iranzo Gómez
 title: Telegram Redken bot documentation
 tags: foss, telegram, python, redken
 layout: post

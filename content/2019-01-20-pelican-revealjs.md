@@ -1,5 +1,5 @@
 ---
-author: Pablo Iranzo Gómez (pablo.iranzo@gmail.com)
+author: Pablo Iranzo Gómez
 title: Fixing pelican revealjs plugin
 tags: pelican, foss, blog, python, github, blog-o-matic, linux, pandoc
 layout: post
