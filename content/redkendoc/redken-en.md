@@ -22,20 +22,7 @@ This document contains some information about regular Redken <https://t.me/redke
 
 By default, new groups where the bot is added are just ready to start being used.
 
-Also, while nothing is set against, you could use `/gconfig` to configure several aspects of it like:
-
-- `modulo` (to just report karma every `modulo` points)
-- `stock` (to define the stock tickers to query when invoking `stock`)
-
-Once you started chatting with the bot, you can also use /hilight `word` so messages containing that word will be forwarded to you as a private message.
-
-By default karma in channels is private to that group, but also, groups can be linked.
-
-On the channel to become `master` execute: `/admin link master` and it will generate a code (token) to link against just once.
-
-On the channel to be linked against `master`, a.k.a. `slave`, execute: `/admin link slave <token>` where `token` is the code received as reply to the command in master channel.
-
-Also, as per general usage:
+General usage:
 
 - `word++` to add karma
 - `word--` to remove karma
@@ -50,15 +37,28 @@ Also, as per general usage:
 - `/cn <word>` To get a random Chuck Norris fact related with provided word (or random)
 - `/excuse` To get a random excuse
 
+Also, while nothing is set against, you could use `/gconfig` to configure several aspects of it like:
+
+- `modulo` (to just report karma every `modulo` points)
+- `stock` (to define the stock tickers to query when invoking `stock`)
+
+Once you started chatting with the bot, you can also use /hilight `word` so messages containing that word will be forwarded to you as a private message.
+
+By default karma in channels is private to that group, but also, groups can be linked.
+
+On the channel to become `master` execute: `/admin link master` and it will generate a code (token) to link against just once.
+
+On the channel to be linked against `master`, a.k.a. `slave`, execute: `/admin link slave <token>` where `token` is the code received as reply to the command in master channel.
+
 ### Bargains/Deals
 
-Lists amazon bargains/deals published without duplicated during 24 hours, matching ones will be sent privately by <https://t.me/redken_bot>
+Lists amazon bargains/deals published without duplicated during 24 hours, matching ones will be sent privately by <https://t.me/descuenbot>
 
 - `/ofertas add <words>` to add a new word to the ofertas watch
 - `/ofertas remove <words>` to remove a new word to the ofertas watch
 - `/ofertas show` to show the words being watched
 
-Lists amazon bargains/deal published without duplicated during 24 hours, matching ones will be sent to GROUP by <https://t.me/redken_bot>
+Lists amazon bargains/deal published without duplicated during 24 hours, matching ones will be sent to GROUP by <https://t.me/descuenbot>
 
 - `/gofertas add <words>` to add a new word to the ofertas watch
 - `/gofertas remove <words>` to remove a new word to the ofertas watch
