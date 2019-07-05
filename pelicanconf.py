@@ -10,7 +10,8 @@ AUTHOR = u'Pablo Iranzo Gómez'
 AUTHORS = {
     u'Pablo Iranzo Gómez': {
         u'blurb': """ opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc""",
-        u'url': 'https://iranzo.github.io'
+        u'url': 'https://iranzo.github.io',
+        "avatar": "https://es.gravatar.com/userimage/47837087/6e8d2c6bc801fb6ea9cdad090b4f5814.jpg?size=200",
     },
 }
 SITENAME = u"Pablo Iranzo Gómez's blog"
