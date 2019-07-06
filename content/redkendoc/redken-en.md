@@ -66,9 +66,9 @@ Lists amazon bargains/deal published without duplicated during 24 hours, matchin
 
 #### Special notes
 
-- Use 'word' for regular substring match in include
-- Use '!word' for regular substring exclude
-- Use '$word' for whole word matching in include
+- Use `word` for regular substring match in include
+- Use `!word` for regular substring exclude
+- Use `$word` for whole word matching in include
 
 
 ## User/chat configuration
