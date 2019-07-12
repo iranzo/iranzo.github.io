@@ -41,7 +41,7 @@ Una de las características de Android TV es la posibilidad de utilizarlo con pl
 
 Lamentablemente, recientemente empecé a recibir este mensaje de error en el Xiaomi TV Box que compré para un televisor más antiguo:
 
-![](/imagen/netflix-tvq-pm-100.png)
+![Netflix tvq-pm-100 error](/imagen/netflix-tvq-pm-100.png)
 
 Tras buscar por el mensaje recibido `tvq pm 5.2 5`, llegué a este PUF de netflix: <https://help.netflix.com/es/node/59709>
 
