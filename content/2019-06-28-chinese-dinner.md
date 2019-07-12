@@ -14,4 +14,4 @@ This is the pictures of the set that my colleague Raúl brought back from his tr
 
 There are lot of printed pieces that look very nice, even the faces have been suited for the region.
 
-Model is [80101 Chinese New's Year Eve Dinner](https://www.amazon.com/dp/B07MPQYPXT?tag=redken01-20).
+Model is [80101 Chinese New's Year Eve Dinner](https://www.amazon.es/dp/B07KRFLDLN?tag=redken-21).

@@ -17,13 +17,13 @@ This document is based on the original recipe and pictures that my colleague [Mi
 
 - A bag of vegetables for paella (garrofón, Valencian white bean; ferraura y bajoqueta,
 Valencian green beans with pod)
-- [Rice 'bomba'](https://amzn.to/2HzqCFi) (7 handfuls)
+- [Rice 'bomba'](https://www.amazon.es/dp/B00986HSH0?tag=redken-21) (7 handfuls)
 - Chicken and Rabbit (700 y 400 gr)
 - Grated tomato (The equivalent to 5 spoons)
-- Sweet Red Paprika Powder ([Pimentón Rojo](https://amzn.to/2VYPUoO))
-- [Spanish Saffron](https://amzn.to/2VUa4R3) (300mg in threads) or [E102 dye](https://amzn.to/2MerdAC) (small spoon just to the border)
-- [Olive oil](https://amzn.to/2ErlbpA) to stir-fry (not much, so it doesn't get oily)
-- [Rosemary](https://amzn.to/2Es0OZA)
+- Sweet Red Paprika Powder ([Pimentón Rojo](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21&psc=1))
+- [Spanish Saffron](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21&psc=1) (300mg in threads) or [E102 dye](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) (small spoon just to the border)
+- [Olive oil](https://www.amazon.es/dp/B0781Z7TD4?tag=redken-21) to stir-fry (not much, so it doesn't get oily)
+- [Rosemary](https://www.amazon.es/dp/B01HN23N3S?tag=redken-21)
 - Salt
 - Water (from Valencia)
 
