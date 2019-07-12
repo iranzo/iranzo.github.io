@@ -29,9 +29,9 @@ Android TV also has Chromecast support, so that you can not only replicate/mirro
 
 Among Android TV systems I've tested three:
 
-- [Nvidia Shield TV](https://amzn.to/2HvImBk) which acts both as Game Console and Android TV system
-- [Xiaomi Mi Box](https://amzn.to/2VXO1sN) which contains the Android TV System as an addon for any TV with HDMI input
-- [Sony Bravia Android TV](https://amzn.to/2JYDDtt) which directly integrates Android TV as the TV operating system
+- [Nvidia Shield TV](https://www.amazon.es/dp/B01NBJ6KZY?tag=redken-21) which acts both as Game Console and Android TV system
+- [Xiaomi Mi Box](https://www.amazon.es/dp/B07K3KC5CP?tag=redken-21) which contains the Android TV System as an addon for any TV with HDMI input
+- [Sony Bravia Android TV](https://www.amazon.es/dp/B01IW656UC?tag=redken-21) which directly integrates Android TV as the TV operating system
 
 Nvidia and Xiaomi both allow to 'convert' or 'upgrade' any TV to an Android TV box and additionally can be upgraded in the future for a cheaper price tag than upgrading a TV.
 
@@ -45,7 +45,7 @@ Unfortunately, recently I started getting an error on the Xiaomi MiTV Box I boug
 
 After googling for `tvq pm 5.2 5`, I got to this Netflix FAQ: <https://help.netflix.com/en/node/59709>
 
-Which more or less solved nothing, even technical support said that their supported platforms are [Fire TV](https://amzn.to/2CG89o0), which was not the kind of answer I wanted to hear.
+Which more or less solved nothing, even technical support said that their supported platforms are [Fire TV](https://www.amazon.es/dp/B01ETRGE7M?tag=redken-21), which was not the kind of answer I wanted to hear.
 
 # Kodi to the rescue
 

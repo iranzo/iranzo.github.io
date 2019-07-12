@@ -29,15 +29,15 @@ Android TV también tiene soporte de Chromecast, por lo que no sólo puedes repl
 
 Entre los sistemas Android TV que he probado están:
 
-- [Nvidia Shield TV](https://amzn.to/2HvImBk) que actúa como consola de juegos y como dispositivo Android TV
-- [Xiaomi Mi Box](https://amzn.to/2VXO1sN) que permite 'actualizar' cualquier televisor a disponer de un sistema Android TV via el puerto HDMI
-- [Sony Bravia Android TV](https://amzn.to/2JYDDtt) que directamente incorporan AndroidTV como sistema operativo del televisor.
+- [Nvidia Shield TV](https://www.amazon.es/dp/B01NBJ6KZY?tag=redken-21) que actúa como consola de juegos y como dispositivo Android TV
+- [Xiaomi Mi Box](https://www.amazon.es/dp/B07K3KC5CP?tag=redken-21) que permite 'actualizar' cualquier televisor a disponer de un sistema Android TV via el puerto HDMI
+- [Sony Bravia Android TV](https://www.amazon.es/dp/B01IW656UC?tag=redken-21) que directamente incorporan AndroidTV como sistema operativo del televisor.
 
 Tanto Nvidia como Xiaomi TV Box permiten convertir o 'actualizar' cualquier televisor y a su vez, permiten, que en un futuro, en caso de querer actualizar el dispositivo, el coste es claramente inferior que reemplazar un televisor entero.
 
 # Netflix
 
-Una de las características de Android TV es la posibilidad de utilizarlo con plataformas de video como  [Amazon Prime Video](https://www.primevideo.com/?tag=iranzo-21) o [Netflix](https://netflix.com).
+Una de las características de Android TV es la posibilidad de utilizarlo con plataformas de video como  [Amazon Prime Video](https://www.primevideo.com/?tag=redken-21) o [Netflix](https://netflix.com).
 
 Lamentablemente, recientemente empecé a recibir este mensaje de error en el Xiaomi TV Box que compré para un televisor más antiguo:
 
@@ -45,7 +45,7 @@ Lamentablemente, recientemente empecé a recibir este mensaje de error en el Xia
 
 Tras buscar por el mensaje recibido `tvq pm 5.2 5`, llegué a este PUF de netflix: <https://help.netflix.com/es/node/59709>
 
-Que muy a mi pesar, no resolvió nada, incluso el soporte técnico de Netflix dijo que su plataforma soportada son los dispositivos [Fire TV](https://amzn.to/2CG89o0), que no era la respuesta que quería oir.
+Que muy a mi pesar, no resolvió nada, incluso el soporte técnico de Netflix dijo que su plataforma soportada son los dispositivos [Fire TV](https://www.amazon.es/dp/B01ETRGE7M?tag=redken-21), que no era la respuesta que quería oir.
 
 # Kodi al rescate
 
