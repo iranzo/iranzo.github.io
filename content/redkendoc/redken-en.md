@@ -56,13 +56,13 @@ Lists amazon bargains/deals published without duplicated during 24 hours, matchi
 
 - `/ofertas add <words>` to add a new word to the ofertas watch
 - `/ofertas remove <words>` to remove a new word to the ofertas watch
-- `/ofertas show` to show the words being watched
+- `/ofertas list` to show the words being watched
 
 Lists amazon bargains/deal published without duplicated during 24 hours, matching ones will be sent to GROUP by <https://t.me/descuenbot>
 
 - `/gofertas add <words>` to add a new word to the ofertas watch
 - `/gofertas remove <words>` to remove a new word to the ofertas watch
-- `/gofertas show` to show the words being watched
+- `/gofertas list` to show the words being watched
 
 #### Special notes
 
@@ -70,6 +70,13 @@ Lists amazon bargains/deal published without duplicated during 24 hours, matchin
 - Use `!word` for regular substring exclude
 - Use `$word` for whole word matching in include
 
+### Red Hat Jobs
+
+Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
+
+- `/rhjobs add <words>` to add a new word to the rhjobs watch
+- `/rhjobs remove <words>` to remove a new word to the rhjobs watch
+- `/rhjobs list` to show the words being watched
 
 ## User/chat configuration
 
