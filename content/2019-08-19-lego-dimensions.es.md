@@ -3,7 +3,7 @@ author: Pablo Iranzo Gómez
 title: Lego Dimensions
 tags: lego, xbox, playstation, ps3, ps4, wii, dimensions, nfc
 layout: post
-date: 2019-08-18 22:00:36 +0200
+date: 2019-09 22:00:36 +0200
 comments: true
 category: blog
 description:
