@@ -5,7 +5,7 @@ tags: linux, minikube, citellus, katacoda, foss, kubevirt, kubernetes, k8s
 layout: post
 date: 2019-06-11 21:16:14 +0200
 comments: true
-category: blog
+category: tech
 description:
 ---
 

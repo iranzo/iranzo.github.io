@@ -5,7 +5,7 @@ tags: katacoda, kubevirt, citellus, foss
 layout: post
 date: 2019-07-31 07:39:14 +0200
 comments: true
-category: blog
+category: tech
 description:
 ---
 
