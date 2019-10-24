@@ -120,6 +120,14 @@ Bot allows to trigger auto-karma events, so when keyword is given, it will trigg
 - `/autok list [word]` Will show current defined autokarma triggers and in case a word is provided will search based on that word
 - `/autok delete key=value` will delete a previously defined auto-karma so no more auto-karma events will be triggered for that pair
 
+### Auto-gif triggers
+
+Bot allows to trigger gif sending when a keyword is given.
+
+- `/autog key=value` Will create a new auto-gif trigger, so each time `key` is used, it will trigger gif send event
+- `/autog list [word]` Will show current defined autogif triggers and in case a word is provided will search based on that word
+- `/autog delete key=value` will delete a previously defined auto-gif so no more gifs will be sent for that keyword
+
 ### Alias
 
 Bot allows to setup aliases, so when karma is given to a word, it will instead add it to a different one (and report that one)
