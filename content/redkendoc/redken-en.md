@@ -87,6 +87,7 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
     - stock: stock tickers to check
     - cleanlink: True if we want links to be expanded and removed
     - cleankey: Regexp to replace, for example tag=
+    - splitkarmaword: Set to 'False' to make that johndoe.linux.expert++ stops reporting karma to the word and to johndoe
 - chat
     - isolated: False, if true, allow link, all karma, etc is tied to GID
     - link: empty, if defined, channel is slave to a mater
