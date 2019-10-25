@@ -82,19 +82,19 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
 ## User/chat configuration
 
 - common
-    - currency: EUR
-    - modulo: 1 (to just show karma every X/modulo points, 0 to disable)
-    - stock: stock tickers to check
-    - cleanlink: True if we want links to be expanded and removed
-    - cleankey: Regexp to replace, for example tag=
-    - splitkarmaword: Set to 'False' to make that johndoe.linux.expert++ stops reporting karma to the word and to johndoe
+    - `currency`: EUR
+    - `modulo`: 1 (to just show karma every X/modulo points, 0 to disable)
+    - `stock`: stock tickers to check
+    - `cleanlink`: True if we want links to be expanded and removed
+    - `cleankey`: Regexp to replace, for example tag=
+    - `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
 - chat
-    - isolated: False, if true, allow link, all karma, etc is tied to GID
-    - link: empty, if defined, channel is slave to a mater
-    - admin: List of admins of channels, default empty: everyone
-    - maxage: chats older than this will be removed
-    - silent: makes stampy not to output messages to that chat
-    - welcome: outputs the text when a new user joins the chat, replacing "$username" by user name
+    - `isolated`: False, if true, allow link, all karma, etc is tied to GID
+    - `link`: empty, if defined, channel is slave to a mater
+    - `admin`: List of admins of channels, default empty: everyone
+    - `maxage`: chats older than this will be removed
+    - `silent`: makes stampy not to output messages to that chat
+    - `welcome`: outputs the text when a new user joins the chat, replacing "$username" by user name
 
 ## Extra commands
 
