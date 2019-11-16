@@ -45,8 +45,8 @@ TWITTER_USERNAME = "iranzop"
 # Update if you use amazon links
 # AMAZON_ONELINK = "23824450-ef77-4537-9259-8590465886f1"
 AMAZON_BESTAZON = """var BestAzon_Configuration = {
-"Amzn_AfiliateID_US": "redken01-20",
-"Amzn_AfiliateID_CA": "redken03-20",
+"Amzn_AfiliateID_US": "redken00-20",
+"Amzn_AfiliateID_CA": "redken05-20",
 "Amzn_AfiliateID_GB": "redken01-21",
 "Amzn_AfiliateID_DE": "redken02-21",
 "Amzn_AfiliateID_FR": "redken0c-21",
