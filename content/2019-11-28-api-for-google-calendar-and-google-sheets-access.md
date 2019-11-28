@@ -236,6 +236,6 @@ The final code, is able to use both api's to get access to the spreadsheet, read
 There's of course room for optimization, like just updating events if it's changing or not, but that would make code more complex and not adding much more functionality (as still calls would be needed for querying event, comparing, and then updating as needed).
 
 !!! Note
-If you wonder about why using environment variables for the credential files used... this jobs runs inside Jenkins instance that has the defined secrets exported in the Jenkinsfile as environment variables, allowing to 'secure' a bit more the access to the credentils itself (even if those have been scope-limited to only allow unharmful usage.)
+    If you wonder about why using environment variables for the credential files used... this jobs runs inside Jenkins instance that has the defined secrets exported in the Jenkinsfile as environment variables, allowing to 'secure' a bit more the access to the credentils itself (even if those have been scope-limited to only allow unharmful usage.)
 
 Enjoy!
