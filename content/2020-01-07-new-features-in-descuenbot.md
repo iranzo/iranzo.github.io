@@ -47,7 +47,7 @@ I've captured a small table with some of the data processed so far
 | 2020/01/04 |      119      |
 | 2020/01/05 |      245      |
 | 2020/01/06 |      148      |
-| 2020/01/07 |      114      |
+| 2020/01/07 |      300      |
 
 Easy to explain, for those first days of the year, having more products with more than 10 samples, resulted in the number of posts 'removed' as those were `fake deals`.
 
