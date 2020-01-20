@@ -54,7 +54,7 @@ AMAZON_BESTAZON = """var BestAzon_Configuration = {
 "Amzn_AfiliateID_DE": "redken02-21",
 "Amzn_AfiliateID_FR": "redken0c-21",
 "Amzn_AfiliateID_ES": "redken-21",
-"Amzn_AfiliateID_IT": "redken015-21",
+"Amzn_AfiliateID_IT": "redken0ac-21",
 "Amzn_AfiliateID_JP": "",
 "Amzn_AfiliateID_IN": "",
 "Amzn_AfiliateID_CN": "",
