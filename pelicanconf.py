@@ -23,6 +23,7 @@ CLAIM_GOOGLE = "Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ"
 CLAIM_BING = "8FF1B025212A47B5B27CC47163A042F0"
 CLAIM_YANDEX = "993ede96cdfbee95"
 SITE_DESCRIPTION = "Pablo Iranzo Gomez's personal blog on technology, python, lego, etc"
+FEATURED_IMAGE = "favicon.ico"
 
 LANDING_PAGE_ABOUT = {'title': 'A bunch of unrelated data',
                       'details': """<p>This website contains both documentation and setups that could be interesting to you.</p><p>I hope that this results interesting or at least you get some ideas :-)</p><p>You can find more information on me on <a href="https://iranzo.github.io/cv/">my profile</a></p>"""}
