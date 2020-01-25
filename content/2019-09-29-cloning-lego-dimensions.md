@@ -54,3 +54,5 @@ Doing this, you'll be able to clone or write the tags that were damaged and put 
 There was also a 'ready-to-print' set of pics for the tags in one of the forum posts at <http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip> which contains the images for each tag and possible vehicle.
 
 Enjoy!
+
+Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>

@@ -139,3 +139,5 @@ Los `Fun Pack` añaden personaje y un gadget o vehículo:
 El juego comparte parte de la metodología de los juegos lego: recoger 'monedas' y romper objetos para conseguir más monedas y descubrir objetos que 'montar', pero combinado con diversas habilidades de cada personaje o vehículo.
 
 En caso de no disponer de los personajes, usando un número de piezas, se pueden 'alquilar' por un intervalo de tiempo y así poder completar tareas pendientes para poder seguir avanzando en las historias.
+
+Sigue mi canal en Telegram de ofertas en LEGO en <https://t.me/brickchollo>
