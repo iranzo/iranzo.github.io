@@ -16,9 +16,9 @@ slug: lego-dimensions-cloning
 
 In the article [Lego Dimensions]({filename}2019-08-19-lego-dimensions.en.md), I covered all the available packs for playing with the console.
 
-Unfortunately not all of them are available for purchase anymore except from collectionists, <brickset.com> or some resellers.
+Unfortunately not all of them are available for purchase anymore except from collectors, <brickset.com> or some resellers.
 
-After some research, several pages provides instructions about the tags themselves and how to 'fix' or 'clone' them.
+After some research, several pages provide instructions about the tags themselves and how to 'fix' or 'clone' them.
 
 ## Materials
 

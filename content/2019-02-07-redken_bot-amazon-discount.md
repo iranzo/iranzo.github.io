@@ -119,4 +119,4 @@ The difference between 'gofertas' and 'ofertas', is that by default, ofertas add
 
 Enjoy and happy filtering!
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Follow telegram channels managed by bot at: <https://telegra.ph/Nuestros-canales-de-ofertas-06-21>
