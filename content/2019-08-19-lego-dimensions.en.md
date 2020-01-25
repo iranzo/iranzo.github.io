@@ -139,3 +139,5 @@ The `Team pack` add more characters and vehicles:
 Game shares the Lego metodology for other games: pickup `coins` and `break` objects to find more coins or things to `build`  to progress in the game, but also combined with `special abilities` like some objects being only `breakable` by specific characters, etc.
 
 If a character is required but not owned, it's possible to `rent` by using some of the earned pieces that character for some time interval, allowing us to complete certain tasks and keep progressing in the stories.
+
+Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>

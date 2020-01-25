@@ -118,3 +118,5 @@ A global replace from 'hilight' to 'ofertas', adding a few comparisons for 'gofe
 The difference between 'gofertas' and 'ofertas', is that by default, ofertas add the tracking to your 'userid', hence forwarding privately to you, while 'gofertas', when used on a group, will forward to the 'groupid', allowing for example that users interested in a topic, like let's say 'lego' or 'quadricopters', will receive as a group message any new listing published.
 
 Enjoy and happy filtering!
+
+Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
