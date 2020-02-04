@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
-title: Lego Dimensions
-tags: lego, xbox, playstation, ps3, ps4, wii, dimensions, nfc
+title: Lego Dimensions Review
+tags: lego, xbox, playstation, ps3, ps4, wii, dimensions, nfc, review
 layout: post
 date: 2019-08-19 22:00:36 +0200
 comments: true
