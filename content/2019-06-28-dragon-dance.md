@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego 80102 - Dragon dance
-tags: lego
+tags: lego, chinese, dragon dance, new year
 layout: post
 date: 2019-06-28 20:32:14 +0200
 comments: true
