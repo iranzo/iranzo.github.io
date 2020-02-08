@@ -26,3 +26,4 @@ after_success:
 - sed -i "s#https://github.com#https://${GHTOKEN}@github.com#g" .git/config
 - sed -i "s#git@github.com:#https://${GHTOKEN}@github.com/#g" .git/config
 - make github
+- touch output/.nojekyll
