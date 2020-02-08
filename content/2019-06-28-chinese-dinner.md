@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego 80101 - Chinese New Year's Eve
-tags: lego
+tags: lego, chinese, new year's eve, family
 layout: post
 date: 2019-06-28 20:00:14 +0200
 comments: true
