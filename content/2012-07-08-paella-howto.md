@@ -3,7 +3,7 @@ layout: post
 title: Paella Howto
 date: 2012-07-08 11:35:14 +0200
 comments: true
-tags: paella, receipt, cooking
+tags: paella, receipt, cooking, paela, howto
 category: blog
 description:
 lang: en
@@ -11,7 +11,7 @@ slug: paella-howto
 ---
 [TOC]
 
-This document is based on the original recipe and pictures that my colleague [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) assembled in an internal company document and that he kindly translated for increased reach.
+This document is based on the original recipe and pictures that I gave to my colleague [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) which he assembled in an internal company document and that he kindly translated for increased reach.
 
 # Ingredients:
 
