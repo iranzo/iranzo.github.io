@@ -3,7 +3,7 @@ layout: post
 title: Cómo hacer una Paella
 date: 2012-07-08 11:35:14 +0200
 comments: true
-tags: paella, receta
+tags: paella, receta, tutorial
 category: blog
 description:
 lang: es
