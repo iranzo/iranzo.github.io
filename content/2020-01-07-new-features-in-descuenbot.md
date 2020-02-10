@@ -5,7 +5,7 @@ tags: python, redken, descuenbot, deal, chollo, bargain, rabbate, soldes
 layout: post
 date: 2020-01-07 14:35:00 +0100
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 ---
@@ -15,7 +15,7 @@ lang: en
 
 Usually when one expects to see more 'deals', the goal is to see actually 'more information', but one of the goals when the bot was updated to check for *actual* deals the goal was to in fact, reduce them.
 
-In post about [the bot]({filename 2019-02-07-redken_bot-amazon-discount.md}) (now available on Telegram at [@descuenbot](https://t.me/descuenbot)), the internals of how it worked where shared, and in brief, the main advantage was to `avoid duplicates for the same deal in a 24 hour window`, this allows already to reduce 'a lot' the amount of deals that were received if you were following lot of channels and instead started following the one managed by the bot.
+In post about [the bot]({filename}2019-02-07-redken_bot-amazon-discount.md) (now available on Telegram at [@descuenbot](https://t.me/descuenbot)), the internals of how it worked where shared, and in brief, the main advantage was to `avoid duplicates for the same deal in a 24 hour window`, this allows already to reduce 'a lot' the amount of deals that were received if you were following lot of channels and instead started following the one managed by the bot.
 
 ## Improvements
 

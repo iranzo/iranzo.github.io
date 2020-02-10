@@ -5,7 +5,7 @@ tags: google calendar, google sheets, spreadsheet, ics, calendar, python, foss
 layout: post
 date: 2019-11-28 17:11:36 +0100
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 ---

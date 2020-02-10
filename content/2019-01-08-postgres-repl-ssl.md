@@ -5,7 +5,7 @@ tags: postgres, foss, ssl, replication, federation, kubernetes, openshift
 layout: post
 date: 2019-01-08 17:30:36 +0100
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 

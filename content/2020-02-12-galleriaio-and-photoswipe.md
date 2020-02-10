@@ -1,11 +1,11 @@
 ---
 author: Pablo Iranzo Gómez
 title: Galleria.io and PhotoSwipe
-tags: pelican, pelican-elegant, photography, gallery, instagram, opensource, open source
+tags: pelican, pelican-elegant, photography, gallery, instagram, opensource, open source, galleria.io, photoswipe
 layout: post
 date: 2020-02-12 07:30:24 +0100
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 ---

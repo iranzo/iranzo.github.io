@@ -72,4 +72,4 @@ Personalmente he utilizado "[keyconfig](https://addons.mozilla.org/es-ES/firefox
 
 Una muy interesante es "[publicfox](https://addons.mozilla.org/es-ES/firefox/addon/3911)", que permite proteger las opciones de about:config para que el usuario no pueda cambiar configuración de proxy, programas externos, etc
 
-[Firefox limitado]({filename}/imagen/firefox-reducido.jpg)
+[Firefox limitado]({static}/imagen/firefox-reducido.jpg)
