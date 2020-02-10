@@ -5,7 +5,7 @@ tags: python, telegram, linux, redken, ics, calendar, webcal
 layout: post
 date: 2019-09-17 7:00:36 +0200
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 ---

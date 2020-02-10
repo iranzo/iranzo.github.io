@@ -5,7 +5,7 @@ tags: quay, kubernetes, container, federation, openshift, foss
 layout: post
 date: 2019-01-08 17:30:36 +0100
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 ---
@@ -216,14 +216,14 @@ Now using the web interface of quay, we can start uploading the certificates req
 ***Custom SSL Certificates***
 Here, load the `quay.pem`
 
-![]({filename}imagen/postrepquay/2018-11-29-15-32-08.png)
+![]({static}imagen/postrepquay/2018-11-29-15-32-08.png)
 
 ***Server Configuration***
 ****TLS****
 Certificate: load the `quay-enterprise.pem`
 Key: load the `quay-enterprise-key.pem`
 
-![]({filename}imagen/postrepquay/2018-11-29-15-33-02.png)
+![]({static}imagen/postrepquay/2018-11-29-15-33-02.png)
 
 At this point Quay will be using the certificates, but by default the service created only works on port 80.
 
@@ -271,7 +271,7 @@ fae583f1d4e5: Pushed
 ### OpenShift certificate
 
 Unless we also load the SSL certificate from Quay into OpenShift, we'll be facing issues like this:
-![]({filename}imagen/postrepquay/2018-12-03-15-41-02.png)
+![]({static}imagen/postrepquay/2018-12-03-15-41-02.png)
 
 ## Wrap up
 

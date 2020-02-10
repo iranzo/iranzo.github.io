@@ -81,7 +81,7 @@ This will install and start jenkins and enable the firewall to access it.
 
 If you can get to the url of your server at the port 8080, you'll be presented an initial procedure for installing Jenkins.
 
-![Jenkins dashboard]({filename}/imagen/jenkins/dashboard.png)
+![Jenkins dashboard]({static}/imagen/jenkins/dashboard.png)
 
 During it, you'll be asked for a password on a file on disk and you'll be prompted to create an user we'll be using from now on to configure.
 
@@ -91,7 +91,7 @@ Also, we'll be offered to deploy the most common set of plugins, choose that opt
 
 Once we can login into gerrit, we need to enter the administration area, and install new plugins and install [Gerrit Trigger](https://wiki.jenkins.io/display/JENKINS/Gerrit+Trigger).
 
-![Manage Jenkins]({filename}/imagen/jenkins/manage.png)
+![Manage Jenkins]({static}/imagen/jenkins/manage.png)
 
 Above link details how to do most of the setup, in this case, for gerrithub, we required:
 
@@ -101,13 +101,13 @@ Above link details how to do most of the setup, in this case, for gerrithub, we 
 - Username: **our-github-jenkins-user**
 - SSH keyfile: **path_to_private_sshkey**
 
-![Gerrit trigger configuration]({filename}/imagen/jenkins/gerrit-trigger-config.png)
+![Gerrit trigger configuration]({static}/imagen/jenkins/gerrit-trigger-config.png)
 
 Once done, click on `Test Connection` and validate if it worked.
 
 At the time of this writing, version reported by plugin was `2.13.6-3044-g7e9c06d` when connected to gerrithub.io.
 
-![Gerrit servers]({filename}/imagen/jenkins/gerritconfig.png)
+![Gerrit servers]({static}/imagen/jenkins/gerritconfig.png)
 
 ### Creating a Job
 
@@ -149,11 +149,11 @@ os.chdir(os.getenv('WORKSPACE'))
 tox.cmdline()
 ~~~
 
-![Jenkins Job configuration]({filename}/imagen/jenkins/jobconfig.png)
+![Jenkins Job configuration]({static}/imagen/jenkins/jobconfig.png)
 
 From this point, any new push (review) made against gerrit will trigger a Jenkins build (in this case, running `tox`). Additionally, a manual trigger of the job can be executed to validate the behavior.
 
-![Manual trigger]({filename}/imagen/jenkins/manualtrigger.png)
+![Manual trigger]({static}/imagen/jenkins/manualtrigger.png)
 
 ### Checking execution
 
@@ -161,6 +161,6 @@ In our project, tox checks some UT's on `python 2.7`, and `python 3.5`, as well 
 
 Now, Jenkins will build, and post messages on the review, stating that the build has started and the results of it, setting also the 'Verified' flag.
 
-![Gerrithub commens by Jenkins]({filename}/imagen/jenkins/gitreview.png)
+![Gerrithub commens by Jenkins]({static}/imagen/jenkins/gitreview.png)
 
 Enjoy having automated validation of new reviews before accepting them into your code!
