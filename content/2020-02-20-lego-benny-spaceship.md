@@ -49,4 +49,5 @@ In this case, the spacecraft is an `adapted` version of the typical spaceship at
 </div>
 
 Hope you like it!
+
 Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
