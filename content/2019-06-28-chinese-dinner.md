@@ -14,6 +14,6 @@ This is the pictures of the set that my colleague Raúl brought back from his tr
 
 There are lot of printed pieces that look very nice, even the faces have been suited for the region.
 
-Model is [80101 Chinese New's Year Eve Dinner](https://www.amazon.es/dp/B07KRFLDLN?tag=redken-21).
+Model is [80101 Chinese New's Year Eve Dinner 🛒](https://www.amazon.es/dp/B07KRFLDLN?tag=redken-21).
 
 Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>

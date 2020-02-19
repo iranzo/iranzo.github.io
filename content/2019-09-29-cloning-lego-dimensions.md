@@ -36,7 +36,7 @@ In order to 'create' your own, the following bill of materials is useful:
 
 ## Insights
 
-Each tag can be read/written with an app on your mobile (I've tested it with [Nexus 5](https://www.amazon.es/dp/B016B7INC2?tag=redken-21), [Sony Xperia Z5](https://www.amazon.es/dp/B013WSM36A?tag=redken-21), [Samsung Galaxy S8](https://www.amazon.es/dp/B06XXFHG6J?tag=redken-21) and [Samsung Galaxy Note 9](https://www.amazon.es/dp/B07FT169LZ?tag=redken-21)), and the 'trick' is to always 'read' first the tag and then write it with the modified parameters.
+Each tag can be read/written with an app on your mobile (I've tested it with [Nexus 5 🛒](https://www.amazon.es/dp/B016B7INC2?tag=redken-21), [Sony Xperia Z5 🛒](https://www.amazon.es/dp/B013WSM36A?tag=redken-21), [Samsung Galaxy S8 🛒](https://www.amazon.es/dp/B06XXFHG6J?tag=redken-21) and [Samsung Galaxy Note 9 🛒](https://www.amazon.es/dp/B07FT169LZ?tag=redken-21)), and the 'trick' is to always 'read' first the tag and then write it with the modified parameters.
 
 Each tag has in at the beginning the serial number, so that it can't be changed and then, there's a 'password' field used to validate.
 
