@@ -2,7 +2,7 @@
 layout: post
 title: Auroras - Magia en el Cielo
 date: 2004-05-24T10:48:00Z
-tags: science
+tags: ciencia, science, astronomía, astronomy
 lang: es
 comments: true
 ---

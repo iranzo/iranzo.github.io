@@ -2,7 +2,7 @@
 layout: post
 title: Anillo Astronómico
 date: 2004-06-18T15:33:00Z
-tags: science, astronomy
+tags: science, astronomy, astronomía, ciencia
 lang: es
 comments: true
 ---
