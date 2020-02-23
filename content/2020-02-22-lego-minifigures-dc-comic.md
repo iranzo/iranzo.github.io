@@ -10,7 +10,7 @@ description:
 lang: en
 ---
 
-Here are my findings from today's 'hunt':
+Here are my findings from today's 'hunt' for [Lego Minifigures DC Comics 🛒](https://www.amazon.es/dp/B07YG7QVPX?tag=redken-21):
 
 <div class="elegant-instagram" data-instagram-id="B84P1gkooLi"></div>
 
