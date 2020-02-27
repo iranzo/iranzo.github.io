@@ -10,7 +10,7 @@ lang: en
 
 [TOC]
 
-### Introducion
+### Introduction
 
 LVM are the initials for Logical Volume Manager, a powerful tool present in actual Linux systems inspired in the implementation available in other systems like AIX and HP-UX.
 
