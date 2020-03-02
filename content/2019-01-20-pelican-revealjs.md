@@ -21,12 +21,11 @@ Since some time ago I started using Reveal-MD, so I could use MarkDown to create
 
 It does use pypandoc library and ['pandoc'](https://pandoc.org) for doing the conversion.
 
-
 ## The problems found
 
 After some test, it had 3 issues:
 
-- Images, specified with whatever *pelican* formatting, where rendered not alongside the html
+- Images, specified with whatever _pelican_ formatting, where rendered not alongside the html
 - Code blocks where not properly shown
 - Title was shown as 'Untitled' in the generated html
 

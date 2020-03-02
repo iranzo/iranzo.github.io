@@ -11,6 +11,7 @@ description:
 [TOC]
 
 ## Introduction
+
 In the article "[Contributing to OpenStack]({filename}2016-07-21-contributing-to-openstack.md)" we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find `low hanging fruits` to start contributing).
 
 Here, we'll cover what happens behind the scene to get change published.
@@ -27,12 +28,12 @@ Each project might have a different review platform, but usually for OSP it's <h
 
 A sample `.gitreview` file looks like:
 
-~~~ini
+```ini
 [gerrit]
 host=review.gerrithub.io
 port=29418
 project=citellusorg/citellus.git
-~~~
+```
 
 For a review example, we'll use one from gerrithub from [Citellus](https://citellus.org) project:
 
@@ -86,21 +87,21 @@ This vote will trigger another build by CI, and when finished, the change will b
 
 Sometimes, your change is doing changes on the same files that other programmers did on the code, so there's no way to automatically 'rebase' the change, in this case the bad news is that you need to:
 
-~~~sh
+```sh
 git checkout master # to change to master branch
 git pull # to push latest upstream changes
 git checkout yourbranch # to get back to your change branch
 git rebase master # to apply your changes on top of current master
-~~~
+```
 
 After this step, it might be required to manually fix the code to solve the conflicts and follow instructions given by git to mark them as reviewed.
 
 Once it's done, remember to do like with any patchset you submited afterwards:
 
-~~~sh
+```sh
 git commit --amend # to commit the new changes on the same commit Id you used
 git-review # to upload a new version of the patchset
-~~~
+```
 
 This will start over the progress, but will, once completed to get the change merged.
 

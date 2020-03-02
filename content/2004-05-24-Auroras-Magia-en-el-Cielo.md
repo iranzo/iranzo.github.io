@@ -40,7 +40,7 @@ El sol y su interacción con el campo magnético[^1] terrestre crean este fenóm
 
 En una primera aproximación, el campo terrestre, es el de una barra imantada situada a lo largo de la línea que une los polos magnéticos terrestres. Las líneas de campo de esta barra se curvan en forma de aros que rodean la Tierra y se abren/cierran en los polos.
 
-En realidad, esta aproximación sólo es válida muy cerca de la superficie de la Tierra, ya que el Sol, a la vez que nos proporciona luz, nos bombardea con partículas cargadas que componen el llamado Viento Solar.  El viento solar, altera la forma de este campo ideal y le da una forma que recuerda a la de un cometa, con la cola en dirección opuesta al Sol.
+En realidad, esta aproximación sólo es válida muy cerca de la superficie de la Tierra, ya que el Sol, a la vez que nos proporciona luz, nos bombardea con partículas cargadas que componen el llamado Viento Solar. El viento solar, altera la forma de este campo ideal y le da una forma que recuerda a la de un cometa, con la cola en dirección opuesta al Sol.
 
 El viento solar, como decíamos, son partículas cargadas procedentes del sol, que son una extensión de la atmósfera de la corona solar. Estas partículas se desplazan a velocidades supersónicas, creando una onda de choque al entrar en contacto con el campo terrestre. A esas velocidades, estos iones, pueden llegar a penetrar varios milímetros en el metal, que generalmente provocan la muerte prematura de muchos satélites, seres vivos no protegidos, etc.
 

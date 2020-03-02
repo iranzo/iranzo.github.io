@@ -6,6 +6,7 @@ comments: true
 tags: jekyll, markdown, octopress, foss
 category: tech
 ---
+
 After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.
 
 [Octopress](http://octopress.org) Makes this extra step so you can still focus on your contents and of course have a nice template as starting point with integrations for some social plugins, etc.
@@ -15,7 +16,7 @@ Setup is well done if you follow the provided steps, without jumping anything, i
 On Fedora and as my unprivileged user, I did:
 
 - Install [RVM](http://octopress.org/docs/setup/rvm/)
-    - Define in profile configuration to have RVM use 1.9.3 ruby as required by octopress
+  - Define in profile configuration to have RVM use 1.9.3 ruby as required by octopress
 - Install other required libraries for [Setting up octopress](http://octopress.org/docs/setup/)
 - [Configure Octopress](http://octopress.org/docs/configuring/)
 - [Set octopress for github](http://octopress.org/docs/deploying/github/)

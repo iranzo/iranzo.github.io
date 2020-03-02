@@ -8,10 +8,9 @@ comments: true
 category: tech
 description:
 lang: en
-
 ---
-[TOC]
 
+[TOC]
 
 # Postgres across clusters
 
@@ -20,7 +19,6 @@ For Postgres to work across clusters we do need to have the data being synchroni
 With some other databases we do have some master-master approach, but usually have very strict requirements on latency, bandwidth, etc that we cannot solve with On-Premise + external cloud providers.
 
 If the replication is based on the storage level instead, then you face that database servers don’t deal well if the data changes underneath it, so it leads to data corruption, on top of the storage-level issues/requirements as well on bandwidth, latency, etc.
-
 
 ## Other approaches
 
@@ -92,9 +90,9 @@ Now, we do have all the required certificates for postgres generated.
 
 Setup:
 
-- LEO will be the 'master' with $PGDATA at /var/lib/postgresql/data in a local volume
-- AIT will be the 'slave' with $PGDATA at /var/lib/postgresql/data in a local volume
-- PIT will be the 'slave' with $PGDATA at /var/lib/postgresql/data in a local volume
+- LEO will be the 'master' with \$PGDATA at /var/lib/postgresql/data in a local volume
+- AIT will be the 'slave' with \$PGDATA at /var/lib/postgresql/data in a local volume
+- PIT will be the 'slave' with \$PGDATA at /var/lib/postgresql/data in a local volume
 
 The first issue we found is that by default, PostDock Lack the SSL support, but as we were allowed to define settings for the configuration files we could override the settings via a variable named 'CONFIGS' set to `ssl:on,ssl_cert_file:'/etc/postgresql/server.crt',ssl_key_file:'/etc/postgresql/server.key'`.
 
@@ -155,8 +153,8 @@ We must configure some environment variables:
 - DB_USERS: `replication_user:replication_pass,quayuser:quaypass`
 - CONFIGS: `ssl:on,ssl_cert_file:'/etc/postgresql/server.crt',ssl_key_file:'/etc/postgresql/server.key'`
 - NODE_NAME: Identifying name for this instance
-- NODE_ID: $(NUMBER DIFFERENT FOR EACH NODE + 1000, f.e. 1002)
-- CLUSTER_NODE_NETWORK_NAME: $(SAME AS NODE_NAME that would go in PARTNER NODES)
+- NODE_ID: \$(NUMBER DIFFERENT FOR EACH NODE + 1000, f.e. 1002)
+- CLUSTER_NODE_NETWORK_NAME: \$(SAME AS NODE_NAME that would go in PARTNER NODES)
 - REPLICATION_HOST: "postgres" (name of app in deployment)
 
 We did raise/update some issues:
@@ -173,11 +171,11 @@ We did configure some more things to pass the certificates and key to the pods:
 
 As we're using a secret for storing the certificates, we'll use a volume exposing it to the host via the path `/pg-ssl`
 
-~~~yaml
+```yaml
     - mountPath: /pg-ssl
               name: volume-yisiz
               readOnly: true
-~~~
+```
 
 Our patched image, will find and move the certificates to their final destination (specified via environment variable in `CONFIGS`).
 
@@ -227,8 +225,8 @@ The final steps, outlined above in [Our setup configuration](#our-setup-configur
   - LEO: 10.19.227.153
   - AIT: 10.19.115.226
   - AWS: internal-aba91353afe1c11e89f350a50403e669-443870799.us-east-1.elb.amazonaws.com
-- NODE_ID: $(NUMBER DIFFERENT FOR EACH NODE + 1000, f.e. 1002)
-- CLUSTER_NODE_NETWORK_NAME: $(SAME AS NODE_NAME that would go in PARTNER NODES)
+- NODE_ID: \$(NUMBER DIFFERENT FOR EACH NODE + 1000, f.e. 1002)
+- CLUSTER_NODE_NETWORK_NAME: \$(SAME AS NODE_NAME that would go in PARTNER NODES)
 - REPLICATION_HOST: "postgres" (name of app in deployment)
 
 With this approach, the LoadBalancer effectively passes the data on port 5432 (even if it's not SSL), and the cluster can form and start replication of data.

@@ -9,6 +9,7 @@ category: tech
 description:
 lang: en
 ---
+
 [TOC]
 
 ## Introduction
@@ -23,7 +24,7 @@ I wanted to add ICS functionality to [@redken_bot](https://t.me/redken_bot) in T
 
 The ICS file is a text-based file which contains some definitions for the `calendar` itself:
 
-~~~ics
+```ics
 BEGIN:VCALENDAR
 PRODID:-//Google Inc//Google Calendar 70.9054//EN
 VERSION:2.0
@@ -113,10 +114,11 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
-~~~
+```
 
 And then, continues with the entries for the `events`:
-~~~ical
+
+```ical
 BEGIN:VEVENT
 DTSTART:20190928T100000Z
 DTEND:20190928T150000Z
@@ -133,7 +135,7 @@ STATUS:CONFIRMED
 SUMMARY:EVENTSUMMARY
 TRANSP:OPAQUE
 END:VEVENT
-~~~
+```
 
 In this case, we can see that there's an event starting on 28th September 2019, which lasts 5 hours in 'GMT' which also defines attendees (to get confirmations of assistance, etc), event location (so that you can click and use your maps app to 'navigate' to it, etc)
 
@@ -141,7 +143,7 @@ In this case, we can see that there's an event starting on 28th September 2019, 
 
 After some research (and trial-error), I found that `icalendar` library allowed to process the entries in a `simple` way:
 
-~~~py
+```py
 # coding: utf-8
 from datetime import datetime
 from datetime import timedelta
@@ -191,13 +193,13 @@ for event in gcal.walk('VEVENT'):
 
             if lenght:
                 print("🕑 start: %s for %s minutes" % (dtstart, lenght))
-~~~~
+```
 
 This code was working fine, but my calendar have several events that are recurring, hence, start date or end date is not 'today', which was causing a problem, as I was getting the events for today (started/stopped), but not the recurring ones that were having 'an iteration' today.
 
 After some more research, I found that 'dateutil' library contains 'rrule' which allows to process another field in the events:
 
-~~~ical
+```ical
 BEGIN:VEVENT
 DTSTART;TZID=Europe/Madrid:20190903T170000
 DTEND;TZID=Europe/Madrid:20190903T174500
@@ -215,13 +217,13 @@ STATUS:CONFIRMED
 SUMMARY:EVENT SUMMARY
 TRANSP:OPAQUE
 END:VEVENT
-~~~
+```
 
 This event, starts and ends on 3rd September, so in the above code it was not showing, however, we can see that it has a 'RRULE' field which says that happens weekly, with repeating days on Thursdays and Tuesdays.
 
 `Rrule` allows to process it:
 
-~~~py
+```py
 # <snip>
 
 import dateutil.rrule as rrule
@@ -236,14 +238,13 @@ if 'RRULE' in event:
     # This is the interesting part, where, based on actual date and rule for repetition, calculates 'next' occurrence for the event
     nextrule=rule.after(datetime.now().astimezone(timezone('Europe/Madrid')))
 # <snip>
-~~~
-
+```
 
 ## Wrapping-it-up
 
 So, with the above process 'in place', the final code is similar to this:
 
-~~~py
+```py
 # coding: utf-8
 from datetime import datetime
 from datetime import timedelta
@@ -304,7 +305,7 @@ for calendar in calendars:
                         print("🕑 start: %s for %s minutes" % (dtstart, lenght))
                 else:
                     print("🕑 start: %s for %s minutes" % (nextrule, lenght))
-~~~
+```
 
 This code is still not complete, as it for sure, lists 'single' events happening today, or 'recurring' events happening also today, but it doesn't take into consideration 'Excludes' to those rules, like for example, when a recurring event is cancelled for a specific date, etc.
 

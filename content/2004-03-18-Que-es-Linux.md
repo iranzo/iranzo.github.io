@@ -27,7 +27,7 @@ La definición de software libre se basa en las Debian Free Software Guidelines 
 - Código fuente El programa debe incluir el código fuente completo, y debe permitir distribución en código fuente y en forma compilada.
 - Trabajos Derivados La licencia debe permitir modificaciones y trabajos derivados, y debe permitir que éstos se distribuyan bajo los mismos términos que la licencia del programa original.
 - Integridad del Código Fuente del Autor La licencia puede restringir la distribución del código fuente en forma modificada _sólo_ si la licencia permite la distribución de «ficheros de parches» junto con el código fuente con la intención de modificar el programa en el momento de compilarlo. Proceso por el cual se convierte el código fuente o receta de un programa en un archivo que el ordenador entiende para poder ejecutarlo.
-- La licencia debe permitir explícitamente la distribución de software a partir de código fuente modificado. La licencia puede obligar a los trabajos derivados a llevar un nombre o número de versión diferentes del programa original.  (Esto es un compromiso. El grupo de Debian anima a todos los autores a no restringir ningún fichero, fuente o compilado, de ser modificado.)
+- La licencia debe permitir explícitamente la distribución de software a partir de código fuente modificado. La licencia puede obligar a los trabajos derivados a llevar un nombre o número de versión diferentes del programa original. (Esto es un compromiso. El grupo de Debian anima a todos los autores a no restringir ningún fichero, fuente o compilado, de ser modificado.)
 - No Discriminación contra Personas o Grupos La licencia no debe discriminar a ninguna persona o grupo de personas.
 - No Discriminación contra Campos de Trabajo: La licencia no puede restringir a nadie que trabaje en un determinado campo a no usar el programa. Por ejemplo, no puede restringir el uso del programa a empresas, o ser usado en investigación genética.
 - Distribución de Licencia: Los derechos unidos al programa deben aplicarse a todos aquellos a los que se redistribuya el programa, sin necesidad de pedir una licencia adicional para estas terceras partes.
@@ -56,43 +56,43 @@ Su transcripción es la siguiente:
 ### Linux: El futuro es abierto
 
 - Imagen inicial
-    - Hombre Pienso que deberías ver esto.
-    - Mujer Es sólo un niño
+  - Hombre Pienso que deberías ver esto.
+  - Mujer Es sólo un niño
 - Imagen Niño sentado enfrente de un músico de rock
-    - Rockero Este es el acorde G (y toca la guitarra)
-    - Hombre Está aprendiendo. Absorbiendo. Se hace más inteligente cada día.
+  - Rockero Este es el acorde G (y toca la guitarra)
+  - Hombre Está aprendiendo. Absorbiendo. Se hace más inteligente cada día.
 - Imagen Antropólogo sentado delante del niño
-    - Antropólogo El Homo Habilis fue el primero en utilizar herramientas
+  - Antropólogo El Homo Habilis fue el primero en utilizar herramientas
 - Imagen Entrenador John R. Wooden hablando al niño
-    - Entrenador Un jugador que hace grande un equipo es más valioso que un gran jugador.  Mezclarte con el grupo para el bien del grupo, eso es el trabajo en equipo.
+  - Entrenador Un jugador que hace grande un equipo es más valioso que un gran jugador. Mezclarte con el grupo para el bien del grupo, eso es el trabajo en equipo.
 - Imagen primer plano del niño
-    - Hombre Está ocurriendo rápido
+  - Hombre Está ocurriendo rápido
 - Imagen Astrónomo hablando al niño
-    - Astrónomo Siempre hemos observado las estrellas. Si miras al cielo verás el comienzo de los tiempos
+  - Astrónomo Siempre hemos observado las estrellas. Si miras al cielo verás el comienzo de los tiempos
 - Imagen Futbolista botando una pelota en frente del niño
 - Imagen Profesor Gates hablando al niño
-    - Profesor Recoger datos es el primer paso hacia la sabiduría, pero compartir los datos es el primer paso hacia la comunidad
+  - Profesor Recoger datos es el primer paso hacia la sabiduría, pero compartir los datos es el primer paso hacia la comunidad
 - Imagen Poeta hablando al niño
-    - Poeta Poesía. No hay mucha gloria en la poesía, sólo reconocimiento
+  - Poeta Poesía. No hay mucha gloria en la poesía, sólo reconocimiento
 - Imagen Plano superior del niño
-    - Voz Amplificación de conocimientos. Lo que él aprende, lo aprendemos todos. Lo que el conoce, nos beneficia a todos.
+  - Voz Amplificación de conocimientos. Lo que él aprende, lo aprendemos todos. Lo que el conoce, nos beneficia a todos.
 - Imagen Sylvia Nasar hablando al niño
-    - Sylvia Una pequeña cosa puede resolver un problema increíblemente complejo.
+  - Sylvia Una pequeña cosa puede resolver un problema increíblemente complejo.
 - Imagen Penny Marshall hablando al niño
-    - Penny Todo tiene que ver con el tiempo chico.
+  - Penny Todo tiene que ver con el tiempo chico.
 - Imagen Hombre de negocios hablando al niño
-    - CEO Esto es el negocio: Más rápido, mejor, más barato. Mejora constante
+  - CEO Esto es el negocio: Más rápido, mejor, más barato. Mejora constante
 - Imagen Piloto hablando al niño
-    - Piloto Así que quieres volar ¿eh?. Viento, velocidad, empuje, es física
+  - Piloto Así que quieres volar ¿eh?. Viento, velocidad, empuje, es física
 - Imagen Profesor de latín hablando
-    - Profesor Res Plublica non dominetur (Lo público no debe ser privado)
+  - Profesor Res Plublica non dominetur (Lo público no debe ser privado)
 - Imagen Fontanero hablando al niño
-    - Fontanero Fontanería: Todo gracias a las herramientas.
+  - Fontanero Fontanería: Todo gracias a las herramientas.
 - Imagen Muhammad Ali
-    - Ali Dí lo que piensas, no te achiques.
+  - Ali Dí lo que piensas, no te achiques.
 - Imagen Enfoque desde arriba al niño, volviendo la imagen en blanco.
-    - Mujer ¿Tiene un nombre?
-    - Hombre Su nombre es Linux
+  - Mujer ¿Tiene un nombre?
+  - Hombre Su nombre es Linux
 
 Este anuncio, es una introducción bastante buena de lo que es Linux, es un sistema que es pequeño (en edad) todavía (la primera versión publicada por Linus Torvalds es del año 1991), pero es un sistema que se ha beneficiado desde muy joven de las mejores aportaciones de los expertos en cada campo, gente que no buscaba gloria, sino sólo el reconocimiento de un trabajo bien hecho y han conseguido un producto más rápido, más barato, mejor que además está en continua mejora.
 
@@ -100,7 +100,7 @@ Una de las frases más identificadas con la filosofía es la del entrenador, don
 
 Siguiendo con el significado de free software, hay mucha gente que piensa que Linux es gratuito y aunque muchas veces el software "libre" es gratuito, no siempre es así.
 
-El software libre tampoco está libre de derechos de autor o copyright.  El Software libre tiene copyright como cualquier otra creación, pero como se indica en las DFSG, dispone de una licencia libre. Es más, la GPL defiende los derechos pues siempre solicita la cita del origen o fuente del código que contiene el programa al que acompaña.
+El software libre tampoco está libre de derechos de autor o copyright. El Software libre tiene copyright como cualquier otra creación, pero como se indica en las DFSG, dispone de una licencia libre. Es más, la GPL defiende los derechos pues siempre solicita la cita del origen o fuente del código que contiene el programa al que acompaña.
 
 La licencia libre más conocida es la GPL y la BSD, la más extendida, la GPL otorga unos derechos unas obligaciones al usuario del software al que acompaña.
 
@@ -144,7 +144,7 @@ El software Libre, al ser abierto (Open Source) permite que cualquier persona pu
 
 Como el coste del software tiende a ser nulo ya que el software está públicamente disponible en Internet, favorecemos a las economías oprimidas permitiéndoles acceso a nuevas tecnologías. El caso más conocido en España, es el de Extremadura que gracias a impulsar la implantación de Linux en los colegios y administraciones y al ahorro derivado de las inversiones en licencias de programas propietarios ha alcanzado que cada dos alumnos se disponga de un ordenador en las clases, permitiendo su familiarización con nuevas tecnologías.
 
-Hoy en día los países más atrasados económicamente, sufren además otro tipo de separación, y es la digital. El analfabetismo digital se hace cada vez más problemático conforme se plantea al ordenador como una herramienta necesaria en cualquier puesto de trabajo de cualquier sector de producción. En los países "pobres" se les une que además de las penurias económicas, tengan un retraso tecnológico que las atrapa todavía más en su situación.  Unión de culturas
+Hoy en día los países más atrasados económicamente, sufren además otro tipo de separación, y es la digital. El analfabetismo digital se hace cada vez más problemático conforme se plantea al ordenador como una herramienta necesaria en cualquier puesto de trabajo de cualquier sector de producción. En los países "pobres" se les une que además de las penurias económicas, tengan un retraso tecnológico que las atrapa todavía más en su situación. Unión de culturas
 
 Linux está desarrollado por particulares y empresas que colaboran alrededor de todo el mundo, sin importar sexo, raza, religión, política, etc. Linux es un proyecto a nivel mundial que elimina barreras y demuestra que el ser humano puede colaborar a pesar de todas las diferencias y a su vez lo enriquece gracias a ellas.
 
@@ -209,7 +209,7 @@ Vivimos en un mundo donde impera la ley del libre comercio, o al menos eso nos v
 
 Las consolas, leen en los discos que introducimos una "firma" de seguridad que las bloquea ante intentos de lectura de discos que no dispongan de esa forma, para así obligarnos a que si por ejemplo desarrollamos un juego por voluntad propia no podamos probarlo en una consola "real" a no ser que paguemos los royalties a la casa fabricante, es cierto que hoy en día se ha solventado con los llamados "modchips", pero son ilegales según la ley recientemente aprobada o la DMCA...
 
-Para el mundo de los ordenadores no tenemos mejores expectativas...  Microsoft junto con otros grandes fabricantes está desarrollando una especificación llamada TCPA: Trusted Computing Platform Alliance, que vendrá a hacer con nuestros ordenadores lo que pasa con los DVD's,... el ordenador nos dirá cómo debemos gastarlo impidiendo que se pueda utilizar de otra forma que no sea la prevista.
+Para el mundo de los ordenadores no tenemos mejores expectativas... Microsoft junto con otros grandes fabricantes está desarrollando una especificación llamada TCPA: Trusted Computing Platform Alliance, que vendrá a hacer con nuestros ordenadores lo que pasa con los DVD's,... el ordenador nos dirá cómo debemos gastarlo impidiendo que se pueda utilizar de otra forma que no sea la prevista.
 
 Una primera respuesta sería: "pues no compro ordenadores que soporten TCPA", de acuerdo, pero ¿qué pasará cuando para acceder a su banco "online" le haga falta un equipo que soporte TCPA?, o mejor aún, ¿qué pasará cuando para acceder a Internet, le haga falta usar un dispositivo compatible con TCPA?
 

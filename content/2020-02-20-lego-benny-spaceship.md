@@ -14,7 +14,6 @@ I bought [Lego 70821 Emmet Garage and Benny Spaceship 🛒](https://www.amazon.e
 
 In this case, the spacecraft is an `adapted` version of the typical spaceship at that time, the `497-Galaxy Explorer`.
 
-
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/69ePXLB.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">

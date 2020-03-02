@@ -6,6 +6,7 @@ comments: true
 tags: python, spip, markdown, html, foss
 description:
 ---
+
 I had my old blog based on [SPIP](http://www.spip.net), and I wanted to keep all the posts together, to make it easier to migrate in the future.
 
 Initially, I migrated my posts from blogger, where there's an option to export the contents and some plugins to allow easier importing to markdown files (to be used by Octopress), those were the recent posts, so part of the job was already done there.
@@ -22,7 +23,7 @@ So:
 
 At this point I needed some software for automating the initial conversion, so I went to python's `feedparser` libraries to perform this with a bit of coding:
 
-~~~python
+```python
 url="/path/to/your/xml/file.xml"
 
 import codecs
@@ -39,7 +40,7 @@ for item in feed["items"]:
             f.write("%s: %s\n" % (elem,item[elem]))
         f.write("---\n")
         f.write(item["content"][0].value)
-~~~
+```
 
 After each iteration, a new file was created using the old http link to the article (which already had stripped problematic characters).
 

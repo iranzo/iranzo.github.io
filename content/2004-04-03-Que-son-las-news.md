@@ -38,7 +38,7 @@ Si sólo dispone de acceso por correo electrónico, no puede acceder a USENET. D
 
 Si su proveedor le proporciona acceso a las news, sólo neesita utilizar uno de los numerosos paquetes de software disponibles para leer news (al menos uno está disponible probablemente en su ordenador). Estos paquetes o bien acceden a un servidor local o utilizan el Protcolo para la Red de Transferencia de Noticias (NNTP) para acceder a otros servidores en otros equipos de su red.
 
-En EARN, se ha desarrollado una red distribución de Netnews, proporcionando acceso eficiente a Usenet a la vez que se minimza la carga de la red de los países participantes. Si no dispone de acceso a internet y desea tener acceso, contacte a su administrador de red.  Debería leer también el artículo "Cómo formar parte de USENET" que se publica periódicamente en el grupo news.answers.
+En EARN, se ha desarrollado una red distribución de Netnews, proporcionando acceso eficiente a Usenet a la vez que se minimza la carga de la red de los países participantes. Si no dispone de acceso a internet y desea tener acceso, contacte a su administrador de red. Debería leer también el artículo "Cómo formar parte de USENET" que se publica periódicamente en el grupo news.answers.
 
 Está también disponible mediante FTP anónimo desde rtfm.mit.edu como /pub/usenet/news.answers/site-setup o por email a: [mail-server@rtfm.mit.edu](mailto:mail-server@rtfm.mit.edu) con la línea: send usetnet/news.answers/site-setup-
 

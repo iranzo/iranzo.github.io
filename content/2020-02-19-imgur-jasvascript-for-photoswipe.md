@@ -14,16 +14,20 @@ Hi,
 
 Using the following code from the Browser console:
 
-~~~js
-console.log('<div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">');
-runSlots.item.album_images.images.forEach(e => console.log(`<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+```js
+console.log(
+  '<div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">'
+);
+runSlots.item.album_images.images.forEach(e =>
+  console.log(`<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/${e.hash}${e.ext}.jpg" itemprop="contentUrl" data-size="4032x3024">
             <img src="https://i.imgur.com/${e.hash}${e.ext}" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
-    </figure>`));
-console.log('</div>');
-~~~
+    </figure>`)
+);
+console.log("</div>");
+```
 
 It will output a copy-paste ready code for integrating in your blogpost and leverage the picture gallery.
 

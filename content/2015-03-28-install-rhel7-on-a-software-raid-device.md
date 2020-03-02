@@ -6,6 +6,7 @@ comments: true
 tags: linux, centos, Fedora, rhel, foss
 description:
 ---
+
 [TOC]
 
 Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.
@@ -30,9 +31,9 @@ For this, I focused on using raid1 for the system disks (for greater redundancy/
 
 As I was installing on a HP Microserver G8 recently, I had to first disable the advanced mode for the included controller, so it behaved like a standard SATA one, once done, I was able to boot from my OS image (in this case EL7 iso).
 
-Once the ISO is booted in `rescue` mode, I could  switch to the second console with `ALT-F2` so I could start executing commands on the shell.
+Once the ISO is booted in `rescue` mode, I could switch to the second console with `ALT-F2` so I could start executing commands on the shell.
 
-First step is to setup partitioning, in this case I did two partitions, first one for holding `/boot` and the second one for setting up the *LVM physical volume* where the other `Logical Volumes` will be defined later.
+First step is to setup partitioning, in this case I did two partitions, first one for holding `/boot` and the second one for setting up the _LVM physical volume_ where the other `Logical Volumes` will be defined later.
 
 I've elected this setup over others because `mdadm` allows transparent support for booting (`grub` supports booting form it) and easy to manage setup.
 
@@ -40,7 +41,7 @@ For partitions, remember to allocate at least 500mb for `/boot` and as much as n
 
 For both partitions, set type with fdisk to `fd`: `Linux RAID autodetect`, and setup the two drives we'll use for initial setup using the same values, for example:
 
-~~~bash
+```bash
 fdisk /dev/sda
 n # for new partition
 p # for primary
@@ -63,7 +64,7 @@ t # for type
 3 # for third partition
 fd # for Linux RAID Autodetect
 w # for Writing changes
-~~~
+```
 
 And repeat that for `/dev/sdb`
 
@@ -75,15 +76,15 @@ Now, it's time to create the raid device on top, for simplicity, I tend to use `
 
 Let's create the raid devices for each system, starting with `/boot`:
 
-~~~bash
+```bash
 mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sda1 /dev/sdb1
 mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sda2 /dev/sdb2
 mdadm --create /dev/md2 --level=0 --raid-devices=2 /dev/sda3 /dev/sdb3
-~~~
+```
 
 Now, check the status of the raid device creation by issuing:
 
-~~~bash
+```bash
 cat /proc/mdstat
 
 Personalities : [raid1] [raid6] [raid5] [raid4]
@@ -94,7 +95,7 @@ md1 : active raid1 sda2[0] sdb2[1]
       20534760 blocks level 1, 64k chunk, algorithm 2 [2/2] [UU]
             [=====>...............]  recovery = 25.9% (37043392/692945152) finish=627.5min speed=13440K/sec
 ...
-~~~
+```
 
 When it finishes, all the devices will appear as synced, and we can start the installation of the operating system.
 

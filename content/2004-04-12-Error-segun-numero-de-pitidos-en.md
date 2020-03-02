@@ -14,19 +14,19 @@ Código de errores emitido por la BIOS para indicar los problemas que surgen dur
 
 ## Errores Fatales
 
-  |Número de Pitidos|   Significado|
-  |---|---|
-  |1|                   Error de refresco DRAM|
-  |2  |                 Fallo de los 640Kb Ram base|
-  |4   |                Error del timer de sistema|
-  |5    |               Fallo del procesador|
-  |6     |              Error de la puerta de teclado A20|
-  |7      |             Error de excepción del modo virtual|
-  |9       |            Error de checksum de la ROM-BIOS|
+| Número de Pitidos | Significado                         |
+| ----------------- | ----------------------------------- |
+| 1                 | Error de refresco DRAM              |
+| 2                 | Fallo de los 640Kb Ram base         |
+| 4                 | Error del timer de sistema          |
+| 5                 | Fallo del procesador                |
+| 6                 | Error de la puerta de teclado A20   |
+| 7                 | Error de excepción del modo virtual |
+| 9                 | Error de checksum de la ROM-BIOS    |
 
 ## Errores no fatales
 
-|  Número de Pitidos|   Significado|
-  |---|---|
-  |3|                   Fallo de comprobación de memoria convencional y extendida|
-  |8|                   Fallo de monitor y fallo de trazado vertical y horizontal|
+| Número de Pitidos | Significado                                               |
+| ----------------- | --------------------------------------------------------- |
+| 3                 | Fallo de comprobación de memoria convencional y extendida |
+| 8                 | Fallo de monitor y fallo de trazado vertical y horizontal |

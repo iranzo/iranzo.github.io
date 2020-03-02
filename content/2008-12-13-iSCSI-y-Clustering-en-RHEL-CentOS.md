@@ -6,6 +6,7 @@ author: Pablo Iranzo Gómez
 comments: true
 tags: cluster,rhel, centos, foss
 ---
+
 [TOC]
 
 ## Introducción
@@ -40,18 +41,18 @@ Esta utilidad contiene un comando `tgtadm` que podemos utilizar para definir las
 
 Deberemos activar el demonio de tgtd para que esté disponible en cada arranque con los comandos:
 
-~~~bash
+```bash
 #!bash
 chkconfig tgtd on
 service tgtd start
-~~~
+```
 
 Actualmente y como tech preview, debemos repetir cada vez los comandos que necesitamos para definir la unidad iSCSI, por ejemplo:
 
-~~~bash
+```bash
 #!bash
 tgtadm --lld iscsi --mode target --op new --tid=1 --targetname iqn.2008-12.tld.dominio.maquina:TARGET tgtadm --lld iscsi --mode logicalunit --op new --tid=1 --lun=1 -b /dev/vg0/TARGET tgtadm --mode target --op bind --tid=1 --initiator-address=14.14.14.14
-~~~
+```
 
 Con estos comandos definimos un nuevo target con ID 1, de nombre IQN `iqn.2008-12.tld.dominio.maquina:TARGET` y le añadimos una unidad lógica (LUN) que se basa en el contenido del volumen LVM /dev/vg0/TARGET.
 
@@ -65,20 +66,20 @@ El primer paso, es instalar en todas las máquinas los paquetes de `lvm2-cluster
 
 Para arrancar ricci tendremos que hacer algo parecido a lo que hicimos con tgtd
 
-~~~bash
+```bash
 #!bash
 chkconfig ricci on
 service ricci start`
-~~~
+```
 
 Por otro lado necesitaremos tener `kmod-gfs`, `gfs-util` y `iscsi-initiator-utils`.
 
 Las unidades iSCSI se reconocerán a partir de la primera detección de forma automática, para ello deberemos ejecutar los siguientes comandos:
 
-~~~bash
+```bash
 #!bash
 iscsiadm -m discovery -t sendtargets -p IPTARGETISCSI iscsiadm -m node -T iqn.2008-12.tld.dominio.maquina:TARGET -l
-~~~
+```
 
 Que descubrirá los targets disponibles para nuestra IP y luego hará 'login' en la máquina. A partir de este momento tendremos nuevas unidades disponibles que se presentarán como SCSI a nuestro pc, podremos
 particionarlas, etc.
@@ -93,11 +94,11 @@ Si tenemos las máquinas configuradas con los repositorios necesarios, `ricci` s
 
 Desde el interfaz web de luci podemos ir añadiendo cada uno de los nodos a utilizar, indicando sus claves de 'root' y se encargará de contactarlos y a través de ricci, instalar el software necesario y reiniciarlos para integrarlos en el cluster.
 
-Los nodos, una vez en el cluster pueden utilizarse para albergar servicios, que estén de forma exclusiva (por ejemplo una bbdd porque  necesite prioridad absoluta), o bien en failover para que no se deje de dar el servicio.
+Los nodos, una vez en el cluster pueden utilizarse para albergar servicios, que estén de forma exclusiva (por ejemplo una bbdd porque necesite prioridad absoluta), o bien en failover para que no se deje de dar el servicio.
 
 Por defecto tenemos una serie de servicios preconfigurados que podemos dar, como http, nfs, etc que podremos configurar rápidamente desde luci, que se encargará de desplegar dicha configuración a todo el cluster.
 
-La forma de hacerlo es sencilla, se definen recursos (IP, NFS Exports, NFS Clients, http, mount points) que luego se agrupan por cadenas de dependencia en servicios y se les asignan grupos de failover, para que  en caso de fallo, podamos definir prioridades.
+La forma de hacerlo es sencilla, se definen recursos (IP, NFS Exports, NFS Clients, http, mount points) que luego se agrupan por cadenas de dependencia en servicios y se les asignan grupos de failover, para que en caso de fallo, podamos definir prioridades.
 
 Imagina el caso de una empresa con dos servidores, uno con la bbdd y otro con la web. En caso de fallo de uno de ellos, podemos hacer 'saltar' los servicios a la máquina que está operativa hasta que arreglemos la dañada y luego, cada servicio, volvería a su máquina 'preferida' o en el orden necesario.
 
@@ -117,7 +118,7 @@ Por otro lado, CLVM y GFS permiten aumentar dinámicamente el tamaño de los vol
 
 Permite también crear enlaces simbólicos de forma que una unidad con FS GFS1 pueda quedar:
 
-~~~bash
+```bash
 hosts/
 hosts/host1/logs
 hosts/host2/logs
@@ -125,7 +126,7 @@ hosts/host3/logs
 hosts/host4/logs
 hosts/host5/logs
 logs -> hosts/@hostname/logs/
-~~~
+```
 
 Esto permite que diversos servidores web tengan configurado como ruta para los logs la carpeta 'logs' que se expandirá al hostname de la máquina, haciendo que queden todos recogidos en un lugar central para posterior análisis de estadísticas, etc
 

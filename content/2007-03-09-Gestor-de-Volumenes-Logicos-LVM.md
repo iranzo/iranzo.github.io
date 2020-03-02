@@ -9,6 +9,7 @@ lang: es
 save_as: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/index.html
 url: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/
 ---
+
 [TOC]
 
 ### Introducción
@@ -74,16 +75,16 @@ En sda, tenemos todo el disco duro disponible para utilizarlo con LVM, así que 
 
 Los volúmenes físicos son las unidades donde se asienta la estructura de las grupos de volúmenes, su creación, es tan sencilla como ejecutar:
 
-~~~bash
+```bash
 #!bash
 pvcreate /dev/hda2
 
 pvcreate /dev/sda1
-~~~
+```
 
 Si a continuación ejecutamos `pvscan`, podremos consultar un listado de los volúmenes físicos definidos en el sistema, así como el tipo de metadatos (lvm o lvm2) y su capacidad y un resumen de la capacidad total, la utilizada y la disponible.
 
-Para ver el estado detallado, podremos ejecutar pvdisplay, que nos mostrará más información como el tamaño, los PE'*s* disponibles, etc
+Para ver el estado detallado, podremos ejecutar pvdisplay, que nos mostrará más información como el tamaño, los PE'_s_ disponibles, etc
 
 ### Creación de grupos de volúmenes (VG)
 
@@ -91,10 +92,10 @@ Los grupos de volúmenes son los cajones, que ubicados sobre los volúmenes fís
 
 Para crear un grupo de volumen haremos:
 
-~~~bash
+```bash
 #!bash
 vgcreate Prueba /dev/sda1
-~~~
+```
 
 Este comando creará un grupo de volúmenes llamado `Prueba` sobre el volumen físico en `/dev/sda1`
 
@@ -106,10 +107,10 @@ Los volúmenes lógicos son el equivalente a las particiones, es el lugar donde 
 
 Los volúmenes lógicos se definen dentro de un grupo de volúmenes de la siguiente forma:
 
-~~~bash
+```bash
 #!bash
 lvcreate Prueba -n Inicial -L 2G
-~~~
+```
 
 Si ejecutamos a continuación lvscan, tendremos un listado de todos los grupos de volumen definidos y su tamaño, entre ellos, "Inicial", definido dentro de "Prueba" y con un tamaño de 2 Gb
 
@@ -117,10 +118,10 @@ Si ejecutamos a continuación lvscan, tendremos un listado de todos los grupos d
 
 Antes de poder utilizar el volumen lógico, deberemos prepararlo para contener datos y crear la estructura de un sistema de ficheros, esta vez, el comando es idéntico a cuando creamos un sistema de ficheros sobre un disco físico, pero especificando el volumen lógico, por ejemplo:
 
-~~~bash
+```bash
 #!bash
 mkfs.ext3 /dev/Prueba/Inicial
-~~~
+```
 
 Es muy recomendable hacer uso de un sistema de ficheros que podamos redimensionar, ya que como se comentó, una de las ventajas de LVM es la posibilidad de redimensionar las unidades lógicas, y hace falta en consecuencia, que el sistema de ficheros que está en ese "contenedor", sea capaz de crecer o de disminuir del mismo modo.
 
@@ -134,7 +135,7 @@ EXT3, el sistema de ficheros utilizado por defecto en la distribución, permite 
 
 A modo de ejemplo, y siguiendo con la dinámica de los ejemplos de creación de un sistema con LVM, vamos a extender el sistema de ficheros de "Inicial", aumentándolo en 250 Mb, para ello haremos:
 
-~~~bash
+```bash
 #!bash
 pvscan #(donde nos mostrará los volúmenes físicos y el espacio libre)
 # En caso de ser necesario, ampliaremos el vg añadiendo un nuevo pv:
@@ -143,17 +144,17 @@ vgextend Prueba /dev/disconuevo
 # A partir de ese momento, el vg tendrá el espacio disponible listo para ser usado por los lv y lo ampliaremos del siguiente modo:
 lvextend -L +250M /dev/Prueba/Inicial
 ext2online /dev/mapper/Prueba-Inicial
-~~~
+```
 
 Al acabar, el sistema de ficheros montado en /mnt habrá aumentado en 250 Mb su capacidad disponible
 
 También, podemos aumentar el volumen a un tamaño total, por ejemplo, aumentar el volumen a 4 Gb, ejecutando:
 
-~~~bash
+```bash
 #!bash
 lvextend -L 4G /dev/Prueba/Inicial
 ext2online /dev/mapper/Prueba-Inicial
-~~~
+```
 
 En el caso de Fedora Core 6 (FC6), la utilidad ext2online no existe, pues ha sido integrada en resize2fs, por lo que llevaremos a cabo el redimensionamiento con `resize2fs -p /dev/Prueba-Inicial [tamaño final]`.
 
@@ -161,22 +162,22 @@ ATENCIÓN: **Éste es un proceso muy peligroso, pues podemos perder datos**
 
 Si queremos reducir el tamaño de una unidad lógica, primero, deberemos anotar el espacio utilizado en el sistema de ficheros y proceder a desmontarlo:
 
-~~~bash
+```bash
 #!bash
 umount /dev/mapper/Prueba-Inicial
 #El siguiente paso, es reducir el sistema de ficheros:
 resize2fs /dev/mapper/Prueba-Inicial [Tamaño nuevo]
-~~~
+```
 
 Recomiendo reducir el tamaño del sistema de ficheros por debajo del tamaño final que deseamos alcanzar, para así tener un margen de seguridad. Este tamaño, deberá ser SIEMPRE mayor que la capacidad
 [^3] utilizada del volumen.
 
 Acabado el proceso, podemos redimensionar el volumen lógico:
 
-~~~bash
+```bash
 #!bash
 lvextend -L -2G /dev/mapper/Prueba-Inicial
-~~~
+```
 
 Y volveremos a estirar el sistema de ficheros de nuevo con `resize2fs /dev/mapper/Prueba-Inicial` para ocupar todo el espacio disponible en el volumen.
 
@@ -200,8 +201,6 @@ Vemos, al tener marcado el espacio libre del volumen lógico, dónde está ubica
 
 Quiero destacar mi agradecimiento a [Carlos Hergueta](mailto:chergueta@gmail.com) por su colaboración en la realización de este documento
 
-[^1]:Physical Extents
-
-[^2]:Multiple Devices: Es una tecnología que mediante software permite la creación de distintos niveles de agrupación de discos: linear, raid0, raid1, raid5. Los dispositivos se identifican en un sistema linux por la existencia de unidades /dev/md*0,1,2,3,etc* y un fichero de estado /proc/mdstat que indica el estado actual de los md's definidos y su estado de sincronía en caso de estar agrupados como RAID
-
-[^3]:El que hemos anotado en el paso previo a desmontarlo
+[^1]: Physical Extents
+[^2]: Multiple Devices: Es una tecnología que mediante software permite la creación de distintos niveles de agrupación de discos: linear, raid0, raid1, raid5. Los dispositivos se identifican en un sistema linux por la existencia de unidades /dev/md*0,1,2,3,etc* y un fichero de estado /proc/mdstat que indica el estado actual de los md's definidos y su estado de sincronía en caso de estar agrupados como RAID
+[^3]: El que hemos anotado en el paso previo a desmontarlo

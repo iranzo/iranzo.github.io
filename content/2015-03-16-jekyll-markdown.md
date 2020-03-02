@@ -2,17 +2,18 @@
 layout: post
 title: Jekyll and MarkDown
 author: Pablo Iranzo Gómez
-date: '2015-03-16T09:06:00.000+01:00'
-tags:  jekyll, foss, markdown
+date: 2015-03-16 09:06:00 +0100
+tags: jekyll, foss, markdown
 comments: true
 ---
+
 For my work I've been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the formating.
 
 On the other side I was willing to improve the ability to make it easier to post new entries to blog without having to wait too much time, and of course, be able to prepare them offline and then push them live.
 
-- Using [spip](http://www.spip.net) allowed me to focus on text without  caring too much about formatting, the CMS is not hard to administer, maybe  not as popular as wordpress, joomla lately, but definitely, good for the  work it's intended to do, and not like traditional webpages.
+- Using [spip](http://www.spip.net) allowed me to focus on text without caring too much about formatting, the CMS is not hard to administer, maybe not as popular as wordpress, joomla lately, but definitely, good for the work it's intended to do, and not like traditional webpages.
 
-- Using [blogger](http://www.blogger.com), formatting was also not a hard  part, and being a good platform improved the availability of tools, but  still required online access, and the firefox extensions for it, were still  not convinging me for daily usage.
+- Using [blogger](http://www.blogger.com), formatting was also not a hard part, and being a good platform improved the availability of tools, but still required online access, and the firefox extensions for it, were still not convinging me for daily usage.
 
 Yesterday, while I was reading some information about github, I got back to their 'hosting' solution (github.io) and like the idea of pushing the code via git (I love the offline commit and later push of all changes), and started reading about Jekyll and Poole.
 

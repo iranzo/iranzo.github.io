@@ -6,6 +6,7 @@ comments: true
 tags: Python, programming, telegram, foss, redken
 description:
 ---
+
 Hi,
 
 [Telegram.org](http://telegram.org) recently announced the support for writing bots for their platform, by providing details at [https://core.telegram.org/bots](https://core.telegram.org/bots).

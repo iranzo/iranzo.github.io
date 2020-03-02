@@ -39,7 +39,6 @@ Some pics about the 'almost' modular [Fisherman Store 🛒](https://www.amazon.e
     </figure>
  </div>
 
-
 Hope you like it!
 
 Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>

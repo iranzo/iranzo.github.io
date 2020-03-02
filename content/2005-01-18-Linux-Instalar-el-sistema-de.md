@@ -6,6 +6,7 @@ tags: linux, raid, mdadm, foss
 lang: es
 comments: true
 ---
+
 [TOC]
 
 ## Introducción
@@ -18,23 +19,24 @@ Los raid tienen varios niveles, aunque los más extendidos son los linear, 0, 1,
 
 Cada sistema de raid tiene sus ventajas y sus inconvenientes y deberemos escoger el más adecuado a la finalidad que le queramos aportar:
 
-|Nivel RAID   |Nombre   |Ventajas   |Desventajas   |Descripción extendida   |
-|---|---|---|---|---|
-|linear   |linear   |Permite unir varios discos en uno mayor, en caso de fallo permite recuperar datos al estar los datos a continuación como si cada disco fuera una parte de un disco mayor   |No proporciona incrementos de velocidad   |Este sistema permite que uniendo discos más asequibles (por ejemplo hoy en día varios discos de 160Gb son mucho más baratos que un sistema de almacenamiento de 1Tb). Estos discos se unen todos entre sí y permiten formar discos de mayor tamaño que de otra forma resultaría imposible|
-|0  |   Stripped (bandas)|Permite unir varios discos en uno mayor, aumenta la velocidad de lectura de los datos (se leen datos a la vez de varios discos)|En caso de fallo de un disco, no es posible recuperar los datos|Este sistema, al igual que el linear, permite unir muchos discos, pero va grabando alternativamente los datos en cada disco, de forma que la escritura se realiza a velocidad normal, pues debe escribir en cada disco por separado, pero a la hora de realizar la lectura, como se leen datos de varios discos a la vez, la velocidad es mucho mayor|
-|1  |   Espejo/mirror   |En caso de fallo fisico de un disco, los datos no se han perdido, pues existe una copia idéntica en el otro   |Pierde el 50% del espacio   | Este sistema popular porque permite tener copias exactas de los datos en caso de fallo mecánico del disco, tiene el gran inconveniente de ser lento escribiendo y leyendo (funciona como si hubiera un único disco) y que si se utilizan dos discos de 160 Gb, sólo estarán disponibles para su uso 160Gb, ya que los otros 160 serán una copia idéntica del otro disco|
-|2|2    Codificación de corrección de errores|Separa los datos a nivel de bits en lugar de a nivel de bloques|Raramente utilizado||
-|3|Paridad|Aporta posibilidades extra de seguridad, pero en caso de fallo simultáneo de dos discos los datos se pierden|Accesos muy lentos|Graba los datos separados en dos discos y un tercer disco extra donde almacena los datos de paridad, que pueden utilizarse para reconstruir cualquiera de los otros dos discos en el caso de que falle sólo uno|
-|4|Disco paridad dedicado|bandas a nivel de bloque|Puede crear cuellos de botella|Parecido al nivel 3|
-|5|Paridad distribuida en bloques|Gran rendimiento y bastante tolerante a fallos|En caso de fallo simultánteo de dos discos se pierden los datos, requiere al menos tres discos|Los datos se almacenan distribuidos entre tres discos, grabando en uno de ellos los datos de paridad, de forma que puede reconstruirse en caso de fallo de un solo disco|
-|0+1|Espejo bandas|Permite un acceso rápido a los datos|Es menos fiable que el 1+0 por lo que se utiliza menos|Se crean dos conjuntos de bandas y encima de ellas se crea un espejo|
-|1+0|Bandas de espejo|Es de los más extendidos por ser fiable y rápido|Requiere muchos discos|Se crean muchos conjuntos espejos y luego se crean conjuntos de bandas sobre ellos|
+| Nivel RAID | Nombre                                  | Ventajas                                                                                                                                                                 | Desventajas                                                                                    | Descripción extendida                                                                                                                                                                                                                                                                                                                                                   |
+| ---------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| linear     | linear                                  | Permite unir varios discos en uno mayor, en caso de fallo permite recuperar datos al estar los datos a continuación como si cada disco fuera una parte de un disco mayor | No proporciona incrementos de velocidad                                                        | Este sistema permite que uniendo discos más asequibles (por ejemplo hoy en día varios discos de 160Gb son mucho más baratos que un sistema de almacenamiento de 1Tb). Estos discos se unen todos entre sí y permiten formar discos de mayor tamaño que de otra forma resultaría imposible                                                                               |
+| 0          | Stripped (bandas)                       | Permite unir varios discos en uno mayor, aumenta la velocidad de lectura de los datos (se leen datos a la vez de varios discos)                                          | En caso de fallo de un disco, no es posible recuperar los datos                                | Este sistema, al igual que el linear, permite unir muchos discos, pero va grabando alternativamente los datos en cada disco, de forma que la escritura se realiza a velocidad normal, pues debe escribir en cada disco por separado, pero a la hora de realizar la lectura, como se leen datos de varios discos a la vez, la velocidad es mucho mayor                   |
+| 1          | Espejo/mirror                           | En caso de fallo fisico de un disco, los datos no se han perdido, pues existe una copia idéntica en el otro                                                              | Pierde el 50% del espacio                                                                      | Este sistema popular porque permite tener copias exactas de los datos en caso de fallo mecánico del disco, tiene el gran inconveniente de ser lento escribiendo y leyendo (funciona como si hubiera un único disco) y que si se utilizan dos discos de 160 Gb, sólo estarán disponibles para su uso 160Gb, ya que los otros 160 serán una copia idéntica del otro disco |
+| 2          | 2 Codificación de corrección de errores | Separa los datos a nivel de bits en lugar de a nivel de bloques                                                                                                          | Raramente utilizado                                                                            |                                                                                                                                                                                                                                                                                                                                                                         |
+| 3          | Paridad                                 | Aporta posibilidades extra de seguridad, pero en caso de fallo simultáneo de dos discos los datos se pierden                                                             | Accesos muy lentos                                                                             | Graba los datos separados en dos discos y un tercer disco extra donde almacena los datos de paridad, que pueden utilizarse para reconstruir cualquiera de los otros dos discos en el caso de que falle sólo uno                                                                                                                                                         |
+| 4          | Disco paridad dedicado                  | bandas a nivel de bloque                                                                                                                                                 | Puede crear cuellos de botella                                                                 | Parecido al nivel 3                                                                                                                                                                                                                                                                                                                                                     |
+| 5          | Paridad distribuida en bloques          | Gran rendimiento y bastante tolerante a fallos                                                                                                                           | En caso de fallo simultánteo de dos discos se pierden los datos, requiere al menos tres discos | Los datos se almacenan distribuidos entre tres discos, grabando en uno de ellos los datos de paridad, de forma que puede reconstruirse en caso de fallo de un solo disco                                                                                                                                                                                                |
+| 0+1        | Espejo bandas                           | Permite un acceso rápido a los datos                                                                                                                                     | Es menos fiable que el 1+0 por lo que se utiliza menos                                         | Se crean dos conjuntos de bandas y encima de ellas se crea un espejo                                                                                                                                                                                                                                                                                                    |
+| 1+0        | Bandas de espejo                        | Es de los más extendidos por ser fiable y rápido                                                                                                                         | Requiere muchos discos                                                                         | Se crean muchos conjuntos espejos y luego se crean conjuntos de bandas sobre ellos                                                                                                                                                                                                                                                                                      |
 
 En el kernel de Linux tenemos soporte para algunos tipos de RAID, en la carpeta /lib/modules/verkernel/drivers/md/ podremos ver los que soporta.
 
 Para utilizar el soporte de dispositivos múltiples (Multiple Devices: MD), la forma más sencilla de empezar, es definir las particiones del sistema de antemano y tener clara la estructura de RAID a montar.
 
 A partir de este punto tenemos tres posibilidades:
+
 - Utilizar la instalación manual del sistema (hablaré de Debian y su debootstrap)
 - Utilizar los nuevos instaladores de Debian (válido para Ubuntu)
 - Convertir un sistema en ejecución a sistema raid raíz
@@ -47,7 +49,7 @@ Dentro de fdisk deberemos establecer el tamaño de las particiones en cada uno d
 
 Una vez definidas todas, crearemos el fichero /etc/raidtab:
 
-`raiddev /dev/md0 raid-level 1 nr-raid-disks 2 chunk-size 64k persistent-superblock 1 nr-spare-disks 0 device /dev/hda2 raid-disk 0 device /dev/hdc2 raid-disk 1  raiddev /dev/md1 raid-level 0 nr-raid-disks 2 chunk-size 64k persistent-superblock 1 nr-spare-disks 0 device /dev/hda3 raid-disk 0 device /dev/hdc3 raid-disk 1`
+`raiddev /dev/md0 raid-level 1 nr-raid-disks 2 chunk-size 64k persistent-superblock 1 nr-spare-disks 0 device /dev/hda2 raid-disk 0 device /dev/hdc2 raid-disk 1 raiddev /dev/md1 raid-level 0 nr-raid-disks 2 chunk-size 64k persistent-superblock 1 nr-spare-disks 0 device /dev/hda3 raid-disk 0 device /dev/hdc3 raid-disk 1`
 
 En este caso, definimos dos unidades raid, en base a dos discos duros, la primera, md0, es un raid de nivel 1 (espejo), formado por dos particiones, con un tamaño de bloques de 64 kb, con superbloque persistente y sin discos de reserva, a continuación definimos el orden de los dispositivos y el disco que representan.
 
@@ -57,23 +59,23 @@ Para poder hacerlo, las particiones hda2, hdc2 deben tener el mismo tamaño y es
 
 Una vez creado el archivo y salvado, podemos ejecutar las órdenes:
 
-~~~bash
+```bash
 mkraid /dev/md0
 mkraid /dev/md1
 mkfs.ext3 /dev/md0
 mkfs.ext3 /dev/md1
-~~~
+```
 
 y a partir de ese momento, utilizar debootstrap tras montar las
 particiones:
 
-~~~bash
+```bash
 #!bash
 mount /dev/md0 /target
 mkdir /target/home
 mount /dev/md1 /target/home
 debootstrap woody /target #(es necesario haber iniciado previamente el bind en el cd de la knoppix)
-~~~
+```
 
 En este proceso de instalación se descargarán los paquetes y a continuación se instalarán utilizando un chroot.
 
@@ -85,9 +87,9 @@ Es conveniente añadir a lilo la siguiente opción: raid-extra-boot=mbr, con ell
 
 Para generar de nuevo el initrd, deberemos ejecutar
 
-~~~bash
+```bash
 mkinitrd -o /boot/initrd.img-`uname -r` /lib/modules/`uname -r`
-~~~
+```
 
 Tras el primer reinicio correcto arrancando desde el sistema raid, podremos quitar la línea ROOT=/dev/md0 del mkinitrd.conf y dejarlo en su predeterminada (PROBE).
 
@@ -101,9 +103,9 @@ En dicho paso, deberemos instalar el lilo, configurar el lilo.conf y adaptar el 
 
 Deberemos ejecutar mkinitrd como en el paso anterior:
 
-~~~bash
+```bash
 mkinitrd -o /boot/initrd.img-$verkernel /lib/modules/$verkernel
-~~~
+```
 
 Al finalizar la instalación y reiniciar, podremos cambiar al formato original el mkinitrd.conf, ya que Linux reconocerá que para poder montar el sistema raíz le hace falta el soporte para raidtools.
 
@@ -121,18 +123,18 @@ De esta forma, indicamos al sistema que el sistema RAID estará formado por dos 
 
 Crearemos el raid con:
 
-~~~bash
+```bash
 #!bash
 mkraid /dev/md0
 #y luego formatearemos la nueva unidad con
 mkfs.ext3 /dev/md0
-~~~
+```
 
 Una vez realizado este paso crearemos una nueva carpeta donde montar la unidad de raid recién creada:
 
-~~~bash
+```bash
 mkdir /target; mount /dev/md0 /target
-~~~
+```
 
 Ahora viene la tarea "larga", que es proceder a la copia de los archivos, lo primero, deberíamos crear el directorio sys, proc, tmp etc que no copiaremos desde nuestro sistema actual, y empezaremos a copiar cada una de las carpetas, recomendaría hacerlo con el Midnight Commander, ya que podremos escoger de un arbol de directorios las que queramos y procederemos a su copia.
 
@@ -144,13 +146,13 @@ Tras ejecutar lilo y asegurarnos de que no falla, podremos proceder a reiniciar 
 
 Ahora, deberemos proceder a la sincronización del raid, para ello, por un lado, modificaremos el /etc/raidtab y cambiaremos la palabra failed-disk por raid-disk, y en la línea de comandos, añadiremos las particiones de hda al raid con:
 
-~~~bash
+```bash
 raidhotadd /dev/md0 /dev/hda2
-~~~
+```
 
 Haciendo `cat /proc/mdstat`, podremos ir viendo el proceso de la sincronización de los contenidos de ambas particiones....
 
-Aunque pudiera parecer que ya está todo, queda un pequeño detalle...  generalmente initrd crea los raids montando e insertando individualmente las particiones, con el problema de que ese sistema implica que cuando creamos el raid, no había partición hda2 incoporada al raid, así que al reiniciar, el raid se habrá vuelto a romper... para solucionarlo, deberemos generar de nuevo el initrd y volver a ejecutar lilo, para que se instale en los dos discos para que en caso de fallo de uno, pueda arrancar desde el otro.
+Aunque pudiera parecer que ya está todo, queda un pequeño detalle... generalmente initrd crea los raids montando e insertando individualmente las particiones, con el problema de que ese sistema implica que cuando creamos el raid, no había partición hda2 incoporada al raid, así que al reiniciar, el raid se habrá vuelto a romper... para solucionarlo, deberemos generar de nuevo el initrd y volver a ejecutar lilo, para que se instale en los dos discos para que en caso de fallo de uno, pueda arrancar desde el otro.
 
 Sería interesante instalar también la utilidad mdadm, que informa mediante correo de fallos en el raid...
 

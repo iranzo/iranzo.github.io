@@ -33,34 +33,34 @@ dist: trusty
 sudo: required
 
 python:
-- '3.5'
+  - "3.5"
 
 # prepare and move data for execution
 
 before_install:
-- pip install -U pip
-- pip install -U setuptools
-- pip install -r tests/requirements.txt
-- pip install -r tests/test-requirements.txt
-- pip install peru
-- mkdir -p tests/themes/elegant
-- mv templates tests/themes/elegant/
-- mv static tests/themes/elegant/
-- cd tests && peru sync
+  - pip install -U pip
+  - pip install -U setuptools
+  - pip install -r tests/requirements.txt
+  - pip install -r tests/test-requirements.txt
+  - pip install peru
+  - mkdir -p tests/themes/elegant
+  - mv templates tests/themes/elegant/
+  - mv static tests/themes/elegant/
+  - cd tests && peru sync
 
 script:
-- pelican content/ -o output/
+  - pelican content/ -o output/
 ```
 
 Is then modified to add:
 
-~~~yaml
+```yaml
 before_script:
-- npm install travis-ci
+  - npm install travis-ci
 
 after_success:
-- node trigger-build.js
-~~~
+  - node trigger-build.js
+```
 
 This installs travis-ci utilities and runs a custom script 'trigger-build.js' with node, which in turn actually triggers Travis build.
 

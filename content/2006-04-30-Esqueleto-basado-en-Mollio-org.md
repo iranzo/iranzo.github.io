@@ -6,6 +6,7 @@ tags: spip, cms, foss
 lang: es
 comments: true
 ---
+
 [TOC]
 
 ### Introducción
@@ -70,7 +71,7 @@ Como requisitos adicionales, una vez instaladas las plantillas, es necesario:
 
 - Copiar la arpeta "plugins" de "mollio" al raíz del sitio, y luego, en la parte de gestión de SPIP, activar el plugin article_PDF
 - Crear enlaces simbólicos (o copias) de las plantillas: article-album.html, rubrique-album.html, rubrique-agenda.html y rubrique-synd.html a los correspondientes -(NUM#) según cúal sea el ID de nuestra sección para agenda, galería fotográfica y para titulares de otras webs.
-- Crear un grupo de palabras llamado "Design" con al menos estas palabras clave: "Notadeldia", "Agenda", "Frase", "Banner_cabecera", "Creditos", "rubrique1", "rubrique2", "rubrique3", "rubrique4", "rubrique5" *(Ver parte "Configuración con Palabras Clave")
+- Crear un grupo de palabras llamado "Design" con al menos estas palabras clave: "Notadeldia", "Agenda", "Frase", "Banner_cabecera", "Creditos", "rubrique1", "rubrique2", "rubrique3", "rubrique4", "rubrique5" \*(Ver parte "Configuración con Palabras Clave")
 - Crear una sección llamada agenda y asociarle tanto a la sección como a los artículos publicados en ella la palabra clave "Agenda" (si se publican artículos con la palabra clave Agenda aparecen en la miniagenda, aunque no en la de la sección)
 - Crear para la sección de titulares, una sección y dentro de ella, una nueva sección por cada web referenciada, de forma que dentro de dicha sección sólo se referencie un sitio web, para que así la plantilla muestre en esa sección, los artículos sindicados como artículos propios. (sólo si se van a referenciar webs externas)
 - Enviar a [Google Sitemaps](http://www.google.com/webmasters/sitemaps/) la url del sitio con la página sitemap (por ejemplo [http://Alufis35.uv.es/spip/spip.php...](http://Alufis35.uv.es/spip/spip.php?page=sitemap)) para que lo indexe
@@ -88,7 +89,7 @@ Además de los esqueletos normales de SPIP, estos tienen los siguientes módulos
 
 Actualmente está formado por los siguientes módulos:
 
-~~~text
+```text
   Módulo              Cometido
   ------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
   mod_agenda         Muestra la mini agenda con los eventos del mes en curso
@@ -125,7 +126,7 @@ Actualmente está formado por los siguientes módulos:
   mot                                         Sitio completo y artículos con esa palabra clave
   album                                       se comporta como article
   el resto                                    el sitio completo
-~~~
+```
 
 ### Configuración por palabras clave
 
@@ -135,7 +136,7 @@ Todas estas palabras deberán estar creadas en el grupo "Design" para que no int
 
 Palabras clave "BASE", dentro de Design, como todas las especiales
 
-~~~text
+```text
   Palabra        Descripción
   -------------- -----------------------------------------------------------------------------------------------------------------------------------------------------
   _is_config   Indica que este archivo debe ser tratado como un fichero de configuración (Debe asignarse a todos los que quieran incluir alguna de las siguientes)
@@ -195,21 +196,21 @@ Palabras clave "BASE", dentro de Design, como todas las especiales
   _has_rubriques    mod_rub.html
   _has_technorati   mod_technorati.html
   _has_contact      Incluirá un enlace al artículo marcado como _is_contact
-~~~
+```
 
 Por ejemplo, para crear una web con el juego de colores Rojo, crearemos un artículo al que le asignaremos las palabras:
 
-"_is_config" "_is_site" "_is_red"
+"\_is_config" "\_is_site" "\_is_red"
 
 Para crear una página de sommaire con nube de palabras clave, articulos populares y menu, haremos otro artículo con las palabras clave:
 
-"_is_config" "_is_sommaire" "_has_menu" "_has_popul" "_has_nube"
+"\_is_config" "\_is_sommaire" "\_has_menu" "\_has_popul" "\_has_nube"
 
 NOTA:
 
 Actualmente las plantillas sólo muestran los módulos que originalmente tenían, aunque se irán revisando para poder incluir más módulos con la intención de poder configurar mejor la apariencia sin necesidad de tocar el código HTML, así como, si fuera posible, elegir ubicación del módulo y orden
 
-En caso de no indicar _is_config o ninguno de los módulos a los que afecta, se utiliza la que hasta ahora era la disposición estándar de módulos, etc
+En caso de no indicar \_is_config o ninguno de los módulos a los que afecta, se utiliza la que hasta ahora era la disposición estándar de módulos, etc
 
 Los módulos, en caso de no tener datos que mostrar, no aparecen, por ejemplo el de traducciones, el de palabras clave o el de datos EXIF, de forma que sólo aparecerán en caso de que los hayamos inclido (y de que sean necesarios claro).
 

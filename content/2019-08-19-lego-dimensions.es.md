@@ -10,6 +10,7 @@ description:
 lang: es
 slug: lego-dimensions
 ---
+
 [TOC]
 
 ## Introducción
@@ -42,8 +43,8 @@ Así, en resumen tenemos los siguientes packs de inicio (específicos por consol
 
 Los `Promotional pack` añaden más personajes y vehículos y venían con alguna promoción (compra de consola, etc):
 
-| Lego ID | Tipo             | Nombre y enlace                                                  | Imagen                                                                        |
-| ------- | ---------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Lego ID | Tipo             | Nombre y enlace                                                     | Imagen                                                                        |
+| ------- | ---------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | 71340   | Promotional pack | [Supergirl 🛒](https://www.amazon.es/dp/B01M15X9BQ?tag=redken-21)   | ![](https://images-na.ssl-images-amazon.com/images/I/81Pxv7EINKL._SL200_.jpg) |
 | 71342   | Promotional pack | [Green Arrow 🛒](https://www.amazon.es/dp/B01KCVECCS?tag=redken-21) | ![](https://images-na.ssl-images-amazon.com/images/I/61J40bVPLvL._SL200_.jpg) |
 
@@ -51,8 +52,8 @@ Los `Promotional pack` añaden más personajes y vehículos y venían con alguna
 
 También tenemos los siguientes `story pack` (para todas las consolas) que añaden un nuevo portal y niveles para jugar:
 
-| Lego ID | Tipo       | Nombre y enlace                                                      | Imagen                                                                   |
-| ------- | ---------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Lego ID | Tipo       | Nombre y enlace                                                         | Imagen                                                                   |
+| ------- | ---------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | 71242   | Story pack | [Cazafantasmas 🛒](https://www.amazon.es/dp/B01H0GAGG4?tag=redken-21)   | ![](http://images.amazon.com/images/P/B01H0GAGG4.01._PI_SCMZZZZZZZ_.jpg) |
 | 71253   | Story pack | [Fantastic beats 🛒](https://www.amazon.es/dp/B01H0GAGGE?tag=redken-21) | ![](http://images.amazon.com/images/P/B01H0GAGGE.01._PI_SCMZZZZZZZ_.jpg) |
 | 71264   | Story pack | [Batman Movie 🛒](https://www.amazon.es/dp/B01M5CHWCV?tag=redken-21)    | ![](http://images.amazon.com/images/P/B01M5CHWCV.01._PI_SCMZZZZZZZ_.jpg) |
@@ -61,8 +62,8 @@ También tenemos los siguientes `story pack` (para todas las consolas) que añad
 
 Los `Level Pack` pack añaden un nuevo nivel y una nueva historia:
 
-| Lego ID | Tipo       | Nombre y enlace                                                         | Imagen                                                                   |
-| ------- | ---------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Lego ID | Tipo       | Nombre y enlace                                                            | Imagen                                                                   |
+| ------- | ---------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | 71201   | Level Pack | [Back to the Future 🛒](https://www.amazon.es/dp/B00VJWS3FC?tag=redken-21) | ![](http://images.amazon.com/images/P/B00VJWS3FC.01._PI_SCMZZZZZZZ_.jpg) |
 | 71202   | Level Pack | [The Simpsons 🛒](https://www.amazon.es/dp/B00ZWVGYD4?tag=redken-21)       | ![](http://images.amazon.com/images/P/B00ZWVGYD4.01._PI_SCMZZZZZZZ_.jpg) |
 | 71203   | Level Pack | [Portal 2 🛒](https://www.amazon.es/dp/B00ZWVG77W?tag=redken-21)           | ![](http://images.amazon.com/images/P/B00ZWVG77W.01._PI_SCMZZZZZZZ_.jpg) |
@@ -78,8 +79,8 @@ Los `Level Pack` pack añaden un nuevo nivel y una nueva historia:
 
 Los `Team pack` añaden más personajes y vehículos:
 
-| Lego ID | Tipo      | Nombre y enlace                                                         | Imagen                                                                   |
-| ------- | --------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Lego ID | Tipo      | Nombre y enlace                                                            | Imagen                                                                   |
+| ------- | --------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | 71205   | Team pack | [Jurassic World 🛒](https://www.amazon.es/dp/B00ZWVGMT0?tag=redken-21)     | ![](http://images.amazon.com/images/P/B00ZWVGMT0.01._PI_SCMZZZZZZZ_.jpg) |
 | 71206   | Team pack | [Scooby-Doo 🛒](https://www.amazon.es/dp/B00Z7ECFMU?tag=redken-21)         | ![](http://images.amazon.com/images/P/B00Z7ECFMU.01._PI_SCMZZZZZZZ_.jpg) |
 | 71207   | Team pack | [Ninjago 🛒](https://www.amazon.es/dp/B00VJWS3GG?tag=redken-21)            | ![](http://images.amazon.com/images/P/B00VJWS3GG.01._PI_SCMZZZZZZZ_.jpg) |
@@ -87,14 +88,14 @@ Los `Team pack` añaden más personajes y vehículos:
 | 71246   | Team pack | [Adventure Time 🛒](https://www.amazon.es/dp/B01H1QWVX4?tag=redken-21)     | ![](http://images.amazon.com/images/P/B01H1QWVX4.01._PI_SCMZZZZZZZ_.jpg) |
 | 71247   | Team pack | [Harry Potter 🛒](https://www.amazon.es/dp/B01FYJXHQU?tag=redken-21)       | ![](http://images.amazon.com/images/P/B01FYJXHQU.01._PI_SCMZZZZZZZ_.jpg) |
 | 71255   | Team pack | [Teen Titans Go! 🛒](https://www.amazon.com/dp/B072PTZR4T?tag=redken08-20) | ![](http://images.amazon.com/images/P/B072PTZR4T.01._PI_SCMZZZZZZZ_.jpg) |
-|71346|Team pack|[Powerpuff girls 🛒](https://www.amazon.es/dp/B071W71MM7?tag=redken-21) | ![](http://images.amazon.com/images/P/B071W71MM7.01._PI_SCMZZZZZZZ_.jpg) |
+| 71346   | Team pack | [Powerpuff girls 🛒](https://www.amazon.es/dp/B071W71MM7?tag=redken-21)    | ![](http://images.amazon.com/images/P/B071W71MM7.01._PI_SCMZZZZZZZ_.jpg) |
 
 ## Fun pack
 
 Los `Fun Pack` añaden personaje y un gadget o vehículo:
 
-| Lego ID | Tipo     | Nombre y enlace                                                                                   | Imagen                                                                   |
-| ------- | -------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Lego ID | Tipo     | Nombre y enlace                                                                                      | Imagen                                                                   |
+| ------- | -------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | 71209   | Fun pack | [Wonder Woman 🛒](https://www.amazon.es/dp/B00VJWS7YE?tag=redken-21)                                 | ![](http://images.amazon.com/images/P/B00VJWS7YE.01._PI_SCMZZZZZZZ_.jpg) |
 | 71210   | Fun pack | [Cyborg 🛒](https://www.amazon.es/dp/B00VJWS7Z8?tag=redken-21)                                       | ![](http://images.amazon.com/images/P/B00VJWS7Z8.01._PI_SCMZZZZZZZ_.jpg) |
 | 71211   | Fun pack | [Bart Simpson 🛒](https://www.amazon.es/dp/B00ZWVGSS0?tag=redken-21)                                 | ![](http://images.amazon.com/images/P/B00ZWVGSS0.01._PI_SCMZZZZZZZ_.jpg) |

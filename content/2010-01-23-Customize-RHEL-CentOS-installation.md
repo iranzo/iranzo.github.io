@@ -6,6 +6,7 @@ author: Pablo Iranzo Gómez
 comments: true
 tags: rhel, centos, linux, installation, foss
 ---
+
 [TOC]
 
 ## Introduction
@@ -57,37 +58,37 @@ Well, after having everthing in place, we'll start removing unused files. Usuall
 
 On BUILD system:
 
-~~~bash
+```bash
 #!bash
 for package in *.rpm
 do
     NAME=`rpm -q —queryformat '%NAME' $package` ssh TARGET "rpm -q $NAME >/dev/null 2>&1 || echo rm $package" |tee things-to-do
 done
-~~~
+```
 
 - If you don't have ssh password-less setup (using private/public key auth or kerberos), you can do something similar this way:
 
 On BUILD system:
 
-~~~bash
+```bash
 #!bash
 for package in *.rpm
 do
     NAME=`rpm -q —queryformat '%NAME' $package` echo "$package:$NAME" > packages-on-DVD
 done
-~~~
+```
 
 Then copy that file on your TARGET system and running:
 
 On TARGET system:
 
-~~~bash
+```bash
 #!bash
 for package in `cat packages-on-DVD`
 do
     QUERY=`echo $package|cut -d ":" -f 2` FILE=`echo $package|cut -d ":" -f 1` rpm -q —queryformat '%NAME' $QUERY >/dev/null 2>&1 || echo rm $FILE|tee things-to-do
 done
-~~~
+```
 
 After you finish, you'll have a file named `things-to-do`, in which you'll see commands like 'rm packagename-version.rpm'
 
@@ -107,38 +108,38 @@ This one is trickier, but it is still possible in a not so hard way, first of al
 
 Gererate first version of `hdlists`:
 
-~~~bash
+```bash
 #!bash
 export PYTHONPATH=/usr/lib/anaconda-runtime:/usr/lib/anaconda
 /usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/
 /usr/lib/anaconda-runtime/pkgorder /home/user/DVD/ i386 |tee /home/user/order.txt
-~~~
+```
 
 Review order.txt to check all packages added by hand to check correct or include missing packages and then continue with next commands:
 
-~~~bash
+```bash
 #!bash
 export PYTHONPATH=/usr/lib/anaconda-runtime:/usr/lib/anaconda
 /usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/ —fileorder /home/user/order.txt
-~~~
+```
 
 ### EL5
 
 Using createrepo we'll recreate metadata, but we've to keep care and use comps.xml to provide 'group' information to installer, so we'll need to run:
 
-~~~bash
+```bash
 #!bash
 createrepo -g /home/DVD/Server/repodata/groupsfile.xml /home/DVD/Server/
-~~~
+```
 
 ## Finishing
 
 At this step you'll have a DVD structure on your hard drive, and just need to get an ISO to burn and test:
 
-~~~bash
+```bash
 #!bash
 mkisofs -v -r -N -L -d -D -J -V NAME -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -x lost+found -m .svn -o MyCustomISO.iso /home/user/DVD/
-~~~
+```
 
 Now, it's time to burn MyCustomISO.iso and give it a try ;-)
 

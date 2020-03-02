@@ -5,6 +5,7 @@ date: 2006-07-27T20:29:00Z
 tags: hardware, linux, software, ocs, foss
 comments: true
 ---
+
 [TOC]
 
 ### Introduction
@@ -53,11 +54,11 @@ First of all, we need to create a private key and a CSR (Certificate Signing Req
 
 Having openssl installed, we will execute (please, double check that questions, specially CN exactly matches ServerName and "hostname", for it to work properly after) the following commands:
 
-~~~bash
+```bash
 #!bash
 openssl genrsa -out server.key 1024
 openssl req -new -key server.key -out server.csr
-~~~
+```
 
 First one, will create a private key called "server.key", second one, will create a CSR which we will paste at [https://www.cacert.org/account.php?id=10](https://www.cacert.org/account.php?id=10) to get our server certificate signed.
 
@@ -71,7 +72,7 @@ Let's then download [CACERT's root certificate](http://www.cacert.org/certs/root
 
 Next, we'll have to tell apache, to use this certificate for SSL support, in my case, I configured:
 
-~~~apache
+```apache
 #!apache
 /etc/apache2/conf.d/ssl:
 SSLProtocol all
@@ -80,13 +81,13 @@ SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
 SSLCACertificateFile /etc/apache2/ssl/cacert.pem
 SSLCertificateFile /etc/apache2/ssl/server.crt
 SSLCertificateKeyFile /etc/apache2/ssl/server.key
-~~~
+```
 
 So, I had to put server.crt, server.key and cacert.pem in `/etc/apache2/ssl/`
 
 Next one, was to configure a new site that requires SSL to work:
 
-~~~apache
+```apache
 #!apache
 /etc/apache2/sites-enabled/001-default:
 ServerName yourserver.no-ip.org
@@ -101,7 +102,7 @@ DocumentRoot /var/www
 SSLEngine on
 SSLOptions +StdEnvVars
 SetEnvIf User-Agent ".\*MSIE.\*" nokeepalive ssl-unclean-shutdown
-~~~
+```
 
 Afterthat... we have to reload apache configuration and try to connect to [https://yourserver.no-ip.org](https://yourserver.no-ip.org/) to check if everything is ok.
 
@@ -120,7 +121,7 @@ So... let's create a first package:
 1. We must login into OCS Web interface, and select (first menu option on first yellow icon) package creation
 1. We must assign a name for the package, Platform, Protocol and Priority (priority will allow us to decide package execution order in the client, the lower number, the higher priority)
 1. If we're going to upload files, we must ZIP it BEFORE, so OCS will unzip on client machine, and then run commands
-1. We choose an action, and then, a path (we  can use system variables like %SYSTEMDRIVE%, %TEMP%, %USERPROFILE%,%PROGRAMFILES%, etc) to store the file, or command to run
+1. We choose an action, and then, a path (we can use system variables like %SYSTEMDRIVE%, %TEMP%, %USERPROFILE%,%PROGRAMFILES%, etc) to store the file, or command to run
 1. We can choose if we want the user to be warned about package execution, and even to allow user to delay execution (useful for service pack deployments, etc)
 
 Next step, will allow us to specify fragments (pieces in wich the package will be splitted for allowing better deployment, making use of redownloading for only failed fragments, etc), as well as checksum for data validity
@@ -147,7 +148,7 @@ OCS will connect, and execute actions defined in priority order...
 
 #### How to get client side Package working
 
-Packages from client side, are as easy to setup, as having a working OCS Agent Service installed and a file called cacert.pem, which we got from the SSL Creation step... having them in the OCS Agent folder, and a package affected to a computer, will make computer to download, and do the actions specified.  ¿What are the pro's and con's of this method?
+Packages from client side, are as easy to setup, as having a working OCS Agent Service installed and a file called cacert.pem, which we got from the SSL Creation step... having them in the OCS Agent folder, and a package affected to a computer, will make computer to download, and do the actions specified. ¿What are the pro's and con's of this method?
 
 When installing OCSAgent, using: OCSAgentSetup.exe /S /SERVER:yourserver.no-ip.org, we have no cacert.pem file copied, so we must copy it by hand, or, as I did, use a scriptable install system whicho does this in one step.
 
@@ -162,18 +163,18 @@ First, we'll have to create a folder and put in it:
 
 service.ini like this:
 
-~~~ini
+```ini
 #!ini
 [OCS_SERVICE]
 TTO_WAIT=10
 PROLOG_FREQ=1
 OLD_PROLOG_FREQ=1
 Miscellaneous= /S /SERVER:yourserver.no-ip.org
-~~~
+```
 
 And NSIS script with:
 
-~~~batch
+```batch
 #!bat
 ; Script edited using HM NIS Edit Script Wizard.
 ; Creator Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
@@ -206,7 +207,7 @@ SectionEnd
 Section -Post
 SectionEnd`
 
-~~~
+```
 
 This script, when compiled, will create a ocs-inst.exe file, with all
 files needed packed in it, when executed, will:

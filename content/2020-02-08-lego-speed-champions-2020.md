@@ -73,7 +73,6 @@ front lights as the ones depicted here)
 
 <div class="elegant-instagram" data-instagram-id="B8T4jg-oluV"></div>
 
-
 ## Wrap up
 
 I liked the new models (except for the wheels and the price increase), and

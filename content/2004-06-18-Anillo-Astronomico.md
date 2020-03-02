@@ -17,7 +17,7 @@ El Anillo es un servicio accesible a todos (público y gratuito), que relaciona 
 
 ### ¿Para qué?
 
-Antes (y todavía) los administradores de webs sobre astronomía, se veían obligados a mantener listas de webs de asociaciones regionales, etc.  Esas largas listas estaban casi siempre incompletas y con multitud de enlaces que con el tiempo quedaban rotos por el ir y venir de los nacimientos de nuevas páginas y los traslados o fines de otras.
+Antes (y todavía) los administradores de webs sobre astronomía, se veían obligados a mantener listas de webs de asociaciones regionales, etc. Esas largas listas estaban casi siempre incompletas y con multitud de enlaces que con el tiempo quedaban rotos por el ir y venir de los nacimientos de nuevas páginas y los traslados o fines de otras.
 
 Todos los que hemos creado alguna web, para hacerla conocida y por tanto útil para los navegantes, hemos tenido que "darla de alta" en multitud de buscadores y páginas de conocidos.
 
@@ -46,7 +46,7 @@ NOTA: ** Para poder resultar beneficiado por el anillo, es NECESARIO que se pong
 
 Rellena los datos del siguiente enlace [Unirse](http://p.webring.com/wrman?ring=astron&addsite) y ya estarás apuntado. Recibirás una confirmación por e-mail de que has sido añadido a la cola de entrada junto a la dirección a la que debes dirigirte para obtener el código HTML que debes poner en tu web. Más adelante, recibirás otro correo informándote de que ya estás en el anillo.
 
-Para saber cuales son las líneas que debes poner en tu web para enlazar al anillo, debes consultar [modificar](http://d.webring.com/mbr?p=ms).  En esta dirección rellena tu ID y tu contraseá. Además de poder editar los datos relativos a tu página, tendrás el código HTML (GetNavBar) necesario para tu página, simplemente deberás copiarlo y colocarlo en tu web.
+Para saber cuales son las líneas que debes poner en tu web para enlazar al anillo, debes consultar [modificar](http://d.webring.com/mbr?p=ms). En esta dirección rellena tu ID y tu contraseá. Además de poder editar los datos relativos a tu página, tendrás el código HTML (GetNavBar) necesario para tu página, simplemente deberás copiarlo y colocarlo en tu web.
 
 Podrás comprobar que apareces utilizando la opción [Lista Completa](http://p.webring.com/hub?ring=astron) de los controles que hayas insertado en tu página web.
 
