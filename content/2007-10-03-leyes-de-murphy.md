@@ -14,8 +14,6 @@ lang: en
 
 # Las leyes de Murphy
 
-
-
 ## Introducción.
 
 ¿Nunca ha sonado el teléfono de su casa en el preciso instante en que usted se sentaba en el excusado? ¿Tampoco ha aparecido el autobús que llevaba horas esperando justo cuando se ha encendido un cigarrillo? ¿Nunca ha llovido a cántaros, precisamente el día que había llevado el coche a lavar, ni ha dejado de llover nada más comprar un paraguas? Es posible que usted se diera cuenta en ese momento de que se estaba tramando algo, que existía un principio universal más allá de su comprensión y que estaba muerto de rabia por que le pusieran un nombre. También, es posible que usted deseara recurrir a la Ley de Murphy, el Principio de Peter o la Ley de la Gravitación Selectiva, si es que había oído hablar de ellas, sólo para darse cuenta de que se le había olvidado el nombre exacto.
@@ -28,509 +26,465 @@ A lo largo de la historia, los eruditos y los sabios nos han divertido con las l
 
 LEY DE MURPHY.
 
-• Si algo puede salir mal, saldrá mal.
+- Si algo puede salir mal, saldrá mal.
 
 Corolarios.
 
 1. Nada es tan fácil como parece.
-
 2. Todo lleva más tiempo del que usted piensa.
-
 3. Si existe la posibilidad de que varias cosas vayan mal, la que cause más perjuicios será la única que vaya mal.
-
 4. Si usted intuye que hay cuatro posibilidades de que una gestión vaya mal y las evita, al momento aparecerá espontáneamente una quinta posibilidad.
-
 5. Cuando las cosas se dejan a su aire, suelen ir de mal en peor.
-
 6. En cuanto se ponga a hacer algo, se dará cuenta de que hay otra cosa que debería haber hecho antes.
-
 7. Cualquier solución entraña nuevos problemas.
-
 8. Es inútil hacer cualquier cosa a prueba de tontos, porque los tontos son muy ingeniosos.
-
 9. La naturaleza siempre está de parte de la imperfección oculta.
-
 10. La madre Naturaleza es una lagartona.
 
 FILOSOFÍA DE MURPHY.
 
-• Sonría. Mañana puede ser peor.
+- Sonría. Mañana puede ser peor.
 
 COMENTARIO DE O’TOOLE SOBRE LA LEY DE MURPHY.
 
-• Murphy era un optimista.
+- Murphy era un optimista.
 
 POSTULADO DE BOLING.
 
-• Si se encuentra bien, no se preocupe. Se le pasará.
+- Si se encuentra bien, no se preocupe. Se le pasará.
 
 PRIMERA LEY DE CHISHOLM.
 
-• Cuando las cosas vayan bien, algo habrá que haga que vayan mal.
+- Cuando las cosas vayan bien, algo habrá que haga que vayan mal.
 
 Corolarios.
 
 1. Cuando parece que ya nada puede ir peor, empeora.
-
 2. Cuando le parezca que las cosas van mejor, es que se le ha pasado algo por alto.
 
 LEY DE LA IDEA GENIAL.
 
-• Cuando a usted se le ocurra la solución ideal, alguien habrá resuelto ya el problema.
+- Cuando a usted se le ocurra la solución ideal, alguien habrá resuelto ya el problema.
 
 LEY DE LA MENTIRA.
 
-• No importa la frecuencia con que se demuestre que una mentira es falsa. Siempre habrá cierto porcentaje de gente que crea que es verdad.
+- No importa la frecuencia con que se demuestre que una mentira es falsa. Siempre habrá cierto porcentaje de gente que crea que es verdad.
 
 LEY DE KRANSKE.
 
-• Guárdese del día en que no tenga nada que lamentar.
+- Guárdese del día en que no tenga nada que lamentar.
 
 Corolarios.
 
 1. Si usted explica algo con tanta claridad que nadie lo pueda malinterpretar, no se preocupe, alguien lo hará.
-
 2. Si usted hace algo y está seguro de que contará con la aprobación de todo el mundo, a alguien le disgustará.
-
 3. Los métodos para conseguir más fácilmente el objetivo no suelen funcionar.
 
 PRIMERA LEY DE FINAGLE.
 
-• Si un experimento funciona, es que algo ha ido mal.
+- Si un experimento funciona, es que algo ha ido mal.
 
 SEGUNDA LEY DE FINAGLE.
 
 No importa cuál sea el resultado previsto. Siempre habrá alguien impaciente por:
 
-• malinterpretarlo;
-
-• imitarlo, o
-
-• creer que ha sido a causa de su teoría favorita.
+- malinterpretarlo;
+- imitarlo, o
+- creer que ha sido a causa de su teoría favorita.
 
 TERCERA LEY DE FINAGLE.
 
-• En cualquier grupo de datos, la cifra que evidentemente es correcta, sin ninguna necesidad de comprobación, es la errónea.
+- En cualquier grupo de datos, la cifra que evidentemente es correcta, sin ninguna necesidad de comprobación, es la errónea.
 
 Corolarios.
 
 1. Si le pide ayuda a alguien, no sabrá ver el error.
-
 2. Cualquiera que eche un vistazo, sin que usted se lo pida, lo verá inmediatamente.
 
 CUARTA LEY DE FINAGLE.
 
-• Si un trabajo se ha atascado, todo lo que haga para arreglarlo sólo conseguirá empeorarlo.
+- Si un trabajo se ha atascado, todo lo que haga para arreglarlo sólo conseguirá empeorarlo.
 
 REGLAS DE FINAGLE.
 
 1. Para estudiar mejor un asunto, entiéndalo en profundidad antes de empezar.
-
 2. Lleve siempre un registro de datos; así demostrará que ha estado trabajando.
-
 3. Primero dibuje curvas y después elabore el texto.
-
 4. En caso de duda, que suene muy convincente.
-
 5. Los experimentos deben ser análogos, es decir, todos deben fallar de la misma manera.
-
 6. No crea en los milagros, confíe en ellos.
 
 PRIMERA LEY DE SODD.
 
-• Cuando una persona emprende una tarea, la intervención inconsciente de otra presencia (animada o inanimada) desbaratará sus planes. Sin embargo, algunas tareas se pueden terminar debido a que esa presencia que interviene también está realizando una tarea y, evidentemente, también está expuesta a que usted intervenga.
+- Cuando una persona emprende una tarea, la intervención inconsciente de otra presencia (animada o inanimada) desbaratará sus planes. Sin embargo, algunas tareas se pueden terminar debido a que esa presencia que interviene también está realizando una tarea y, evidentemente, también está expuesta a que usted intervenga.
 
 SEGUNDA LEY DE SODD.
 
-• Antes o después, puede tener la más completa seguridad de que se producirán las circunstancias más desfavorables.
+- Antes o después, puede tener la más completa seguridad de que se producirán las circunstancias más desfavorables.
 
 Corolario.
 
-• Todo sistema se debe diseñar para que se pueda oponer a las circunstancias más desfavorables.
+- Todo sistema se debe diseñar para que se pueda oponer a las circunstancias más desfavorables.
 
 PARADOJA DE MURPHY.
 
-• Siempre es más fácil hacerlo de la forma más difícil.
+- Siempre es más fácil hacerlo de la forma más difícil.
 
 LEY DE MURPHY SOBRE LA TERMODINÁMICA.
 
-• Todo empeora a elevadas presiones.
+- Todo empeora a elevadas presiones.
 
 LEY DE PUDDER.
 
-• Todo lo que empieza bien, acaba mal.
-
-• Todo lo que empieza mal, acaba de puta pena.
+- Todo lo que empieza bien, acaba mal.
+- Todo lo que empieza mal, acaba de puta pena.
 
 POSTULADO DE TYLCZAK SOBRE LA PROBABILIDAD.
 
-• Los sucesos fortuitos tienden a suceder todos juntos.
+- Los sucesos fortuitos tienden a suceder todos juntos.
 
 ## Murphyología aplicada.
 
 LEY DE PATTISON SOBRE LA ELECTRÓNICA.
 
-• Si los cables se pueden conectar de dos o más formas diferentes, la primera de ellas es la que funde los plomos.
+- Si los cables se pueden conectar de dos o más formas diferentes, la primera de ellas es la que funde los plomos.
 
 LEYES UNIVERSALES SOBRE LOS MÉTODOS RECOMENDADOS POR EL COMITÉ DE LA SOCIEDAD DE LOS INGENIEROS FILÓSOFOS PARA INGENIEROS INGENUOS.
 
 1. En cualquier cálculo, si se tiene que colar un error, se colará.
-
 2. Cualquier error de cualquier cálculo, será el que más daños produzca.
-
 3. En cualquier fórmula, las constantes (especialmente las que se han sacado de libros de Ingeniería) se deben considerar como variables.
-
 4. La mejor aproximación a las condiciones de funcionamiento en el laboratorio, ni siquiera se aproximará a las condiciones reales de funcionamiento.
-
 5. La dimensión más importante de cualquier plano o proyecto es la que tiene más posibilidades de que la pasemos por alto.
-
 6. Si sólo existe una oferta para un determinado proyecto, lo más seguro es que el precio no sea razonable.
-
 7. Si una instalación de prueba funciona perfectamente, las unidades que produzca no funcionarán en absoluto.
-
-8 .Todas las promesas sobre los plazos de entrega deben multiplicarse por un factor igual a 2,0..
-
+8. Todas las promesas sobre los plazos de entrega deben multiplicarse por un factor igual a 2,0..
 9. Los cambios importantes de diseño se solicitarán cuando el proceso de fabricación esté a punto de terminar.
-
-10.Las piezas que no se puedan montar más que en un cierto orden, se podrán intercambiar.
-
-11. Las piezas intercambiables, por el contrario, demostrarán que no lo son.
-
-12. Las especificaciones del fabricante sobre el rendimiento se deben multiplicar por un factor igual a 0,5
-
-13. Las afirmaciones del personal del Departamento de Ventas sobre el rendimiento se deben multiplicar por un factor igual a 0,25.
-
-14. Las instrucciones de instalación y funcionamiento que vienen con el aparato, las habrán tirado los del Departamento de Recepción de Mercancías.
-
-15. La pieza que precise algún ajuste será la menos accesible.
-
-16. Las condiciones de servicio, tal y como vienen en las instrucciones, se quedarán cortas rápidamente.
-
-17. Si hay más de una persona a la que se le pueda echar la culpa de un error de cálculo, la culpa no será de nadie.
-
-18. Aparatos idénticos que han tenido el mismo comportamiento en las pruebas, no se comportarán igual en la práctica.
-
-19. Si, en la práctica existe un factor de seguridad que ha determinado la experiencia, siempre habrá algún idiota ingenioso que lo sobrepase.
-
-20. Las cláusulas de garantía expiran al pago de la factura.
+10. Las piezas que no se puedan montar más que en un cierto orden, se podrán intercambiar.
+10. Las piezas intercambiables, por el contrario, demostrarán que no lo son.
+11. Las especificaciones del fabricante sobre el rendimiento se deben multiplicar por un factor igual a 0,5
+12. Las afirmaciones del personal del Departamento de Ventas sobre el rendimiento se deben multiplicar por un factor igual a 0,25.
+13. Las instrucciones de instalación y funcionamiento que vienen con el aparato, las habrán tirado los del Departamento de Recepción de Mercancías.
+14. La pieza que precise algún ajuste será la menos accesible.
+15. Las condiciones de servicio, tal y como vienen en las instrucciones, se quedarán cortas rápidamente.
+16. Si hay más de una persona a la que se le pueda echar la culpa de un error de cálculo, la culpa no será de nadie.
+17. Aparatos idénticos que han tenido el mismo comportamiento en las pruebas, no se comportarán igual en la práctica.
+18. Si, en la práctica existe un factor de seguridad que ha determinado la experiencia, siempre habrá algún idiota ingenioso que lo sobrepase.
+19. Las cláusulas de garantía expiran al pago de la factura.
 
 PRINCIPIO DE HEISENBERG SOBRE LA INCERTIDUMBRE.
 
-• La localización de todos los objetos no se puede conocer de forma simultánea.
+- La localización de todos los objetos no se puede conocer de forma simultánea.
 
 Corolario.
 
-• Si encuentra un objeto que estaba perdido, desaparecerá otro.
+- Si encuentra un objeto que estaba perdido, desaparecerá otro.
 
 OBSERVACION DE OIENS.
 
-• La forma más rápida de encontrar algo es empezar a buscar otra cosa.
+- La forma más rápida de encontrar algo es empezar a buscar otra cosa.
 
 . LEY DE BOOB.
 
-• Las cosas siempre se encuentran en el último sitio en que se mira.
+- Las cosas siempre se encuentran en el último sitio en que se mira.
 
 FENÓMENOS TELEFÓNICOS DE FRANK.
 
 1. Si tiene lápiz, no tiene papel.
-
 2. Si tiene papel, no tiene lápiz.
-
 3. Si tiene las dos cosas, nadie le deja un recado.
 
 LEY DE PARK SOBRE PRIMAS DE SEGUROS E IMPUESTOS.
 
-• Todo lo que sube, permanece arriba.
+- Todo lo que sube, permanece arriba.
 
 PRIMERA LEY SOBRE LA DINÁMICA DEL DINERO.
 
-• Un ingreso imprevisto siempre viene acompañado de un gasto inesperado por la misma cantidad.
+- Un ingreso imprevisto siempre viene acompañado de un gasto inesperado por la misma cantidad.
 
 LEY DE HEID SOBRE LAS COLAS.
 
-• Llegue a la hora que llegue, siempre habrá más gente en la cola.
+- Llegue a la hora que llegue, siempre habrá más gente en la cola.
 
 LEY DE JOHNSON Y LAIRD.
 
-• Los dolores de muelas empiezan siempre los viernes por la noche.
+- Los dolores de muelas empiezan siempre los viernes por la noche.
 
 Corolario.
 
-• Si usted es el jefe, los dolores de muelas de sus empleados empiezan siempre los lunes por la mañana.
+- Si usted es el jefe, los dolores de muelas de sus empleados empiezan siempre los lunes por la mañana.
 
 LEY DE PARSON SOBRE LOS PASAPORTES.
 
-• Nadie es tan feo como en la foto del pasaporte.
+- Nadie es tan feo como en la foto del pasaporte.
 
 ## Murphyología avanzada.
 
 LEY DE MURPHY.
 
-• Si algo tiene que salir mal, saldrá mal.
+- Si algo tiene que salir mal, saldrá mal.
 
 SÍNTESIS DE SCHNATTERLY SOBRE LOS COROLARIOS.
 
-• Si algo no puede salir mal, saldrá mal.
+- Si algo no puede salir mal, saldrá mal.
 
 PARADOJA DE SIVERMAN.
 
-• Si la Ley de Murphy tiene que salir mal, saldrá mal.
+- Si la Ley de Murphy tiene que salir mal, saldrá mal.
 
 EXTENSIÓN A LA LEY DE MURPHY.
 
-• Si una serie de sucesos puede salir mal, saldrá mal en la peor secuencia posible.
+- Si una serie de sucesos puede salir mal, saldrá mal en la peor secuencia posible.
 
 COROLARIO DE FARNDICK DEL QUINTO COROLARIO.
 
-• Después de que las cosas hayan ido de mal en peor, el ciclo se repetirá.
+- Después de que las cosas hayan ido de mal en peor, el ciclo se repetirá.
 
 EXTENSIÓN DE GATTUSO DE LA LEY DE MURPHY.
 
-• Nada es tan malo nunca como para qué no pueda empeorar.
+- Nada es tan malo nunca como para qué no pueda empeorar.
 
 LEY DE MURPHY SOBRE EL GOBIERNO.
 
-• Si algo puede ir mal, lo hará por triplicado.
+- Si algo puede ir mal, lo hará por triplicado.
 
 ANEXO A LA LEY DE MURPHY.
 
-• En términos matemáticos precisos, 1 + 1 = 2, donde el símbolo "=" significa "rara vez, si acaso".
+- En términos matemáticos precisos, 1 + 1 = 2, donde el símbolo "=" significa "rara vez, si acaso".
 
 REGLA DE FAHNSTOCK SOBRE EL FRACASO.
 
-• Si no atina a la primera, destruya todas las evidencias de que lo ha intentado.
+- Si no atina a la primera, destruya todas las evidencias de que lo ha intentado.
 
 CITA EQUIVOCADA DE GROSSMAN SOBRE H.L. MENCKEN.
 
-• Los problemas complejos, tienen soluciones erróneas sencillas y fáciles de entender.
+- Los problemas complejos, tienen soluciones erróneas sencillas y fáciles de entender.
 
 LEY DE FLUGG.
 
-• Cuando se necesita tocar madera es cuando nos damos cuenta de que el mundo está compuesto de aluminio y vinilo.
+- Cuando se necesita tocar madera es cuando nos damos cuenta de que el mundo está compuesto de aluminio y vinilo.
 
 LEY DE IMBESI SOBRE LA CONSERVACIÓN DE LA SUCIEDAD.
 
-• Para limpiar algo, hay que ensuciar otra cosa.
+- Para limpiar algo, hay que ensuciar otra cosa.
 
 Extensión de Freeman.
 
-• Pero se puede ensuciar todo sin limpiar nada.
+- Pero se puede ensuciar todo sin limpiar nada.
 
 LEY AVANZADA DE LA BÚSQUEDA.
 
-• El primer sitio donde se debe empezar a buscar algo, es en el último donde se esperaría encontrarlo.
+- El primer sitio donde se debe empezar a buscar algo, es en el último donde se esperaría encontrarlo.
 
 LEY DE MARYANN.
 
-• Siempre se encuentra lo que no se busca.
+- Siempre se encuentra lo que no se busca.
 
 LEY INAPLICABLE.
 
-• Lavar el coche para que llueva no suele dar resultado.
+- Lavar el coche para que llueva no suele dar resultado.
 
 LEY DE NAESER.
 
-• Puede hacer algo a prueba de tontos, pero no puede hacer nada a prueba de ese maldito tonto.
+- Puede hacer algo a prueba de tontos, pero no puede hacer nada a prueba de ese maldito tonto.
 
 LEY DE DUDE SOBRE LA DUALIDAD.
 
-• De dos acontecimientos posibles, sólo ocurrirá el no deseado.
+- De dos acontecimientos posibles, sólo ocurrirá el no deseado.
 
 LEY DE HANE.
 
-• No existen límites para que las cosas vayan mal.
+- No existen límites para que las cosas vayan mal.
 
 LEY DE PERRUSEL.
 
-• No hay tarea tan simple que no pueda hacerse mal.
+- No hay tarea tan simple que no pueda hacerse mal.
 
 LEYES DE LACKLAND.
 
 1. Nunca sea el primero.
-
 2. Nunca sea el último.
-
 3. Nunca se presente voluntario para nada.
 
 PRINCIPIO DE PAROUZZI.
 
-• Dado un mal comienzo, los problemas se incrementarán en proporción exponencial.
+- Dado un mal comienzo, los problemas se incrementarán en proporción exponencial.
 
 EL FACTOR CHI.
 
-• Cantidad = 1 / Calidad ; o la cantidad es inversamente proporcional a la calidad.
+- Cantidad = 1 / Calidad ; o la cantidad es inversamente proporcional a la calidad.
 
 LEY DE KEN.
 
-• Una partícula que se desplaza, buscará el ojo más próximo.
+- Una partícula que se desplaza, buscará el ojo más próximo.
 
 LEY DE SCHOPENHAUER SOBRE LA ENTROPÍA.
 
-• Si se añade una cucharada de vino a un barril lleno de deshechos, se obtienen deshechos.
+- Si se añade una cucharada de vino a un barril lleno de deshechos, se obtienen deshechos.
 
-• Si se añade una cucharada de deshechos a un barril lleno de vino, se obtienen deshechos.
+- Si se añade una cucharada de deshechos a un barril lleno de vino, se obtienen deshechos.
 
 LEY DE ALLEN.
 
-• Casi siempre es más fácil entrar que salir.
+- Casi siempre es más fácil entrar que salir.
 
 LEY DE FROTHINGHAM.
 
-• La urgencia es algo inversamente proporcional a su importancia.
+- La urgencia es algo inversamente proporcional a su importancia.
 
 PRINCIPIO DE ROCKEFELLER.
 
-• Nunca haga nada que sólo le gustaría que le vieran haciéndolo una vez muerto.
+- Nunca haga nada que sólo le gustaría que le vieran haciéndolo una vez muerto.
 
 LEY DE YOUNG SOBRE LA MOVILIDAD INANIMADA.
 
-• Todos los objetos inanimados, pueden moverse lo suficiente como para estorbar.
+- Todos los objetos inanimados, pueden moverse lo suficiente como para estorbar.
 
 ## Burocracia, jerarqueología y comiteología.
 
 PRINCIPIO DE LA BUROCRACIA
 
-• Sólo la burocracia puede combatir a la burocracia.
+- Sólo la burocracia puede combatir a la burocracia.
 
 Corolario
 
-• Nunca se deje atrapar entre dos burocracias.
+- Nunca se deje atrapar entre dos burocracias.
 
 LEY DE YOUNG.
 
-• La madera muerta es la que sostiene al árbol.
+- La madera muerta es la que sostiene al árbol.
 
 Corolario.
 
-• Que esté en pie, no significa que no esté muerto.
+- Que esté en pie, no significa que no esté muerto.
 
 PRINCIPIO DE HOFFSTEDT SOBRE EL EMPLEO.
 
-• La confusión crea empleo.
+- La confusión crea empleo.
 
 LEY DE SOPER.
 
-• Cualquier burocracia que se reorganiza para incrementar la eficiencia, inmediatamente se hace indistinguible de su predecesora.
+- Cualquier burocracia que se reorganiza para incrementar la eficiencia, inmediatamente se hace indistinguible de su predecesora.
 
 TEORÍA DE OWEN SOBRE LA DESVIACIÓN ORGANIZATIVA.
 
-• Toda organización tiene asignado un cierto número de plazas para que las ocupen personas no cualificadas.
+- Toda organización tiene asignado un cierto número de plazas para que las ocupen personas no cualificadas.
 
 Corolario.
 
-• Cuando una de esas personas no cualificadas deja el puesto, se contrata a otra.
+- Cuando una de esas personas no cualificadas deja el puesto, se contrata a otra.
 
 TEORÍA DE GOIA.
 
-• La persona menos cualificada es la que da más opiniones.
+- La persona menos cualificada es la que da más opiniones.
 
 OBSERVACIÓN SOBRE LA DIRECCIÓN.
 
-• La ineficacia y la estupidez del personal corresponde a la ineficacia y estupidez de los directivos.
+- La ineficacia y la estupidez del personal corresponde a la ineficacia y estupidez de los directivos.
 
 LEY DE AMAND SOBRE DIRECCIÓN.
 
-• Todo el mundo está siempre en otro sitio.
+- Todo el mundo está siempre en otro sitio.
 
 EL PELIGRO DEL GENIO.
 
-• Cualquier jefe despedirá a un empleado que siempre tenga razón.
+- Cualquier jefe despedirá a un empleado que siempre tenga razón.
 
 LEMA DE LIPPMAN.
 
-• La gente se especializa siempre en el campo que menos conoce.
+- La gente se especializa siempre en el campo que menos conoce.
 
 LEY DE HUTCHINS.
 
-• No se puede hablar más que un hombre que no sabe de lo que está hablando.
+- No se puede hablar más que un hombre que no sabe de lo que está hablando.
 
 COSAS EN LAS QUE SE PUEDE CONFIAR EN UNA CRISIS.
 
-• Marketing dice que sí.
+- Marketing dice que sí.
 
-• Finanzas dice que no.
+- Finanzas dice que no.
 
-• El Departamento Legal tiene que revisarlo.
+- El Departamento Legal tiene que revisarlo.
 
-• El Departamento de Personal está preocupado.
+- El Departamento de Personal está preocupado.
 
-• El Departamento de Planificación está frenético.
+- El Departamento de Planificación está frenético.
 
-• Ingeniería pasa de todo.
+- Ingeniería pasa de todo.
 
-• Fabricación quiere más espacio.
+- Fabricación quiere más espacio.
 
-• Dirección quiere responsabilizar a alguien.
+- Dirección quiere responsabilizar a alguien.
 
 LEY DE FAHNSTOCK SOBRE EL DEBATE.
 
-• Todo tema que merezca la pena debatir, merece la pena evitarlo por completo.
+- Todo tema que merezca la pena debatir, merece la pena evitarlo por completo.
 
 LEYES DE MITCHELL SOBRE LA COMITEOLOGÍA.
 
-• Cualquier problema sencillo se puede convertir en insoluble si se celebran suficientes reuniones para discutirlo.
+- Cualquier problema sencillo se puede convertir en insoluble si se celebran suficientes reuniones para discutirlo.
 
-• Una vez que se presente al comité la forma de echar a perder el proyecto, será aceptada invariablemente como la solución más acertada.
+- Una vez que se presente al comité la forma de echar a perder el proyecto, será aceptada invariablemente como la solución más acertada.
 
-• Después de que esa solución haya hecho fracasar el proyecto, todos los que la apoyaron inicialmente dirán: "¡Ojalá hubiera expresado entonces mis dudas!".
+- Después de que esa solución haya hecho fracasar el proyecto, todos los que la apoyaron inicialmente dirán: "¡Ojalá hubiera expresado entonces mis dudas!".
 
 COMENTARIO DE KENNEDY SOBRE LOS COMITÉS.
 
-• Un comité lo constituyen doce hombres haciendo el trabajo de uno.
+- Un comité lo constituyen doce hombres haciendo el trabajo de uno.
 
 COMENTARIO DE KIRBY SOBRE LOS COMITÉS.
 
-• Un comité es la única forma de vida que tiene doce estómagos, pero carece de cerebro.
+- Un comité es la única forma de vida que tiene doce estómagos, pero carece de cerebro.
 
 PRINCIPIO DE COLLINS SOBRE LAS CONFERENCIAS.
 
-• El orador con voz más monótona siempre habla después de comer.
+- El orador con voz más monótona siempre habla después de comer.
 
 LEY DE LA DINÁMICA DE LOS COMITÉS.
 
-• Todos los que más se oponen a formar parte de un comité, son elegidos presidentes.
+- Todos los que más se oponen a formar parte de un comité, son elegidos presidentes.
 
 LEY DE MATILDA SOBRE LA FORMACIÓN DE UN SUBCOMITÉ.
 
-• Si abandona la sala, saldrá elegido.
+- Si abandona la sala, saldrá elegido.
 
 LEY DE JACOBSON.
 
-• Cuanto menos trabajo tiene una organización, con más frecuencia se reorganiza.
+- Cuanto menos trabajo tiene una organización, con más frecuencia se reorganiza.
 
 ## Jerarqueología y comiteología.
 
 POSTULADO DE PERKIN.
 
-• Cuanto más grandes son, más daño hacen.
+- Cuanto más grandes son, más daño hacen.
 
 POSTULADO DE HARRISON.
 
-• Para cualquier acción, existe una crítica igual y antagónica.
+- Para cualquier acción, existe una crítica igual y antagónica.
 
 REGLA DE ROGER.
 
-• Se concederá autorización para un proyecto únicamente cuando ninguno de los que lo autorizan pueda ser culpado si el proyecto fracasa, pero todos se lo puedan atribuir si resulta un éxito.
+- Se concederá autorización para un proyecto únicamente cuando ninguno de los que lo autorizan pueda ser culpado si el proyecto fracasa, pero todos se lo puedan atribuir si resulta un éxito.
 
 LEY DE CONWAY.
 
-• En una organización, siempre hay una persona que sabe qué es lo que se cuece. Hay que despedirla inmediatamente.
+- En una organización, siempre hay una persona que sabe qué es lo que se cuece. Hay que despedirla inmediatamente.
 
 TEOREMA DE BACHMAN SOBRE LA INEVITABILIDAD.
 
-• Cuanto mayor sea el coste para poner en práctica un plan, menor probabilidad existe de que se abandone, aunque posteriormente se demuestre que no era conveniente.
+- Cuanto mayor sea el coste para poner en práctica un plan, menor probabilidad existe de que se abandone, aunque posteriormente se demuestre que no era conveniente.
 
 Corolario.
 
-• Cuanto más alto sea el nivel de prestigio que un plan proporcionará a las personas que lo han ideado, menor será la posibilidad de abandonarlo.
+- Cuanto más alto sea el nivel de prestigio que un plan proporcionará a las personas que lo han ideado, menor será la posibilidad de abandonarlo.
 
 PRIMERA REGLA DE LA INFERIORIDAD SUPERIOR.
 
-• No permita que sus superiores se den cuenta de que usted es superior a ellos.
+- No permita que sus superiores se den cuenta de que usted es superior a ellos.
 
 LEY DE WHISTLER.
 
-• Nunca se sabe quien tiene razón, pero siempre se sabe quien manda.
+- Nunca se sabe quien tiene razón, pero siempre se sabe quien manda.
 
 LEYES DE SPENCER SOBRE LOS DATOS.
 
@@ -542,61 +496,61 @@ LEYES DE SPENCER SOBRE LOS DATOS.
 
 LEY DE DREW SOBRE LAS PRÁCTICAS PROFESIONALES.
 
-• El cliente que paga menos es el que más se queja.
+- El cliente que paga menos es el que más se queja.
 
 LEY DE COHN.
 
-• En cualquier burocracia, el trabajo de oficina aumentará a medida que usted pase cada vez más tiempo redactando informes sobre lo poco que hace. La estabilidad se alcanzará sólo cuando usted se pase todo el tiempo redactando informes sobre lo que, en absoluto, está haciendo.
+- En cualquier burocracia, el trabajo de oficina aumentará a medida que usted pase cada vez más tiempo redactando informes sobre lo poco que hace. La estabilidad se alcanzará sólo cuando usted se pase todo el tiempo redactando informes sobre lo que, en absoluto, está haciendo.
 
 LEY DE KUSHER.
 
-• Las probabilidades de que alguien haga algo son inversamente proporcionales al número de personas que pueden hacerlo en su lugar.
+- Las probabilidades de que alguien haga algo son inversamente proporcionales al número de personas que pueden hacerlo en su lugar.
 
 PRINCIPIO DE PFEIFER.
 
-• Nunca tome una decisión si puede lograr que la tome otro en su lugar.
+- Nunca tome una decisión si puede lograr que la tome otro en su lugar.
 
 Corolario.
 
-• Nadie lleva un registro de las decisiones que usted pudo haber tomado, pero se evitaron. Todo el mundo lleva un registro de las que tomó y resultaron un desastre.
+- Nadie lleva un registro de las decisiones que usted pudo haber tomado, pero se evitaron. Todo el mundo lleva un registro de las que tomó y resultaron un desastre.
 
 LEY DE McDONALD.
 
-• Es difícil que le cambien de departamento cuando, en realidad, sobra.
+- Es difícil que le cambien de departamento cuando, en realidad, sobra.
 
 LEY DE LA DISPERSIÓN PROBABLE.
 
-• Cualquier cosa que choque contra el ventilador no se distribuirá uniformemente.
+- Cualquier cosa que choque contra el ventilador no se distribuirá uniformemente.
 
 PRINCIPIO DE LUPOSCHAINSKI DE "DESE PRISA Y ESPERE".
 
-• Si llega pronto, lo suspenderán.
+- Si llega pronto, lo suspenderán.
 
-• Si se esfuerza demasiado por llegar a tiempo, tendrá que esperar.
+- Si se esfuerza demasiado por llegar a tiempo, tendrá que esperar.
 
-• Si llega con retraso, será demasiado tarde.
+- Si llega con retraso, será demasiado tarde.
 
 AXIOMA DE GOURD
 
-• Una reunión es una situación en la que se levantan actas y se pierden horas.
+- Una reunión es una situación en la que se levantan actas y se pierden horas.
 
 PRIMERA LEY DE LAS REUNIONES DE NEGOCIOS.
 
-• La rotura de la punta del lápiz es directamente proporcional a la importancia de las notas que haya que tomar.
+- La rotura de la punta del lápiz es directamente proporcional a la importancia de las notas que haya que tomar.
 
 SEGUNDA LEY DE LAS REUNIONES DE NEGOCIOS.
 
-• Si hay dos maneras de pronunciar el nombre de una persona, usted lo pronunciará de la que no es.
+- Si hay dos maneras de pronunciar el nombre de una persona, usted lo pronunciará de la que no es.
 
 LEY DE WELLINGTON SOBRE LA AUTORIDAD.
 
-• La crema sube a la superficie.
+- La crema sube a la superficie.
 
-• La mierda, también.
+- La mierda, también.
 
 PRINCIPIO DE PETER.
 
-• En cualquier jerarquía, todo empleado tiene a incrementar su nivel de incompetencia.
+- En cualquier jerarquía, todo empleado tiene a incrementar su nivel de incompetencia.
 
 Corolario.
 
@@ -606,39 +560,39 @@ Corolario.
 
 TEOREMA DE PETER.
 
-• Incompetencia + Incompetencia = Incompetencia.
+- Incompetencia + Incompetencia = Incompetencia.
 
 PLACEBO DE PETER.
 
-• Un gramo de imagen equivale a un kilo de rendimiento.
+- Un gramo de imagen equivale a un kilo de rendimiento.
 
 AXIOMA DE VAIL.
 
-• En cualquier empresa humana, el trabajo busca el nivel jerárquico inferior.
+- En cualquier empresa humana, el trabajo busca el nivel jerárquico inferior.
 
 LEY DE IMHOFF.
 
-• La organización de cualquier burocracia se parece mucho a un tanque séptico. Los trozos más grandes, siempre suben a la superficie.
+- La organización de cualquier burocracia se parece mucho a un tanque séptico. Los trozos más grandes, siempre suben a la superficie.
 
 PRIMERA LEY DE PARKINSON.
 
-• Cualquier trabajo se expande hasta agotar el tiempo destinado a que se haga. El incremento de la importancia de lo que hay que hacer es directamente proporcional al tiempo que se tarda en hacerlo.
+- Cualquier trabajo se expande hasta agotar el tiempo destinado a que se haga. El incremento de la importancia de lo que hay que hacer es directamente proporcional al tiempo que se tarda en hacerlo.
 
 SEGUNDA LEY DE PARKINSON.
 
-• Los gastos aumentan hasta cubrir los ingresos.
+- Los gastos aumentan hasta cubrir los ingresos.
 
 TERCERA LEY DE PARKINSON.
 
-• Expansión implica complejidad y la complejidad deterioro.
+- Expansión implica complejidad y la complejidad deterioro.
 
 CUARTA LEY DE PARKINSON.
 
-• El número de personas que integran un grupo de trabajo tiende a aumentar independientemente del trabajo que haya que realizar.
+- El número de personas que integran un grupo de trabajo tiende a aumentar independientemente del trabajo que haya que realizar.
 
 QUINTA LEY DE PARKINSON.
 
-• Si existe una manera de retrasar una decisión importante, una burocracia eficaz, pública o privada, la encontrará.
+- Si existe una manera de retrasar una decisión importante, una burocracia eficaz, pública o privada, la encontrará.
 
 AXIOMAS DE PARKINSON.
 
@@ -648,179 +602,156 @@ AXIOMAS DE PARKINSON.
 
 LEY DE CORNUELLE.
 
-• La autoridad tiende a asignar tareas a los menos capaces de realizarlas.
+- La autoridad tiende a asignar tareas a los menos capaces de realizarlas.
 
 PRIMERA LEY DE LOS ARTISTAS FREELANCE.
 
-• Los encargos urgentísimos, pero muy bien pagados, sólo llegan cuando usted ha aceptado un encargo urgentísimo, pero mal pagado.
+- Los encargos urgentísimos, pero muy bien pagados, sólo llegan cuando usted ha aceptado un encargo urgentísimo, pero mal pagado.
 
 SEGUNDA LEY DE LOS ARTISTAS FREELANCE.
 
-• Tendrá que entregar el mismo día todos los trabajos urgentísimos.
+- Tendrá que entregar el mismo día todos los trabajos urgentísimos.
 
 TERCERA LEY DE LOS ARTISTAS FREELANCE.
 
-• El trabajo urgentísimo con el que pasó la noche trabajando, no lo necesitan hasta pasado mañana.
+- El trabajo urgentísimo con el que pasó la noche trabajando, no lo necesitan hasta pasado mañana.
 
 LAS DIEZ REGLAS DE SPARK PARA EL DIRECTOR DE PROYECTOS.
 
 1. Esfuércese por tener siempre un aspecto tremendamente importante.
-
 2. Intente que le vean con gente importante.
-
 3. Hable con autoridad, pero sólo de hechos evidentes y comprobados.
-
 4. No entre en discusiones. Pero, si le acorralan, haga una pregunta intranscendente y eche el cuerpo hacia atrás con una sonrisa satisfecha. Cuando su oponente intente entender que es lo que pasa, aproveche para cambiar de tema.
-
 5. Escuche absorto como los demás discuten el problema. Ataque a un asunto trivial y apabulle a los otros.
-
 6. Si un subordinado le hace una pregunta inoportuna, mírele como si se hubiera vuelto loco. Cuando mire al suelo, diríjale a él la misma pregunta con otras palabras.
-
 7. Consiga un encargo importante, pero no se convierta en el centro de atención.
-
 8. Cuando salga de la oficina, camine con rapidez. Esto reduce al mínimo las posibilidades de preguntas de los subordinados y superiores.
-
 9. Mantenga cerrada siempre la puerta de su despacho. Esto hará que sus visitantes se pongan a la defensiva o piensen que usted está en una reunión importante.
-
 10. De siempre verbalmente todas las órdenes, que no queden pruebas escritas.
 
 DILEMA DEL TRABAJADOR.
 
 1. Haga lo que haga, nunca será suficiente.
-
 2. Lo que no haga, siempre será más importante que lo que haga.
 
 LEY DE COMUNICACIONES.
 
-• El inevitable resultado de la mejor y más amplia comunicación ente los distintos niveles jerárquicos es una zona cada vez más vasta de falta de entendimiento.
+- El inevitable resultado de la mejor y más amplia comunicación ente los distintos niveles jerárquicos es una zona cada vez más vasta de falta de entendimiento.
 
 AXIOMAS DEL DIRECTOR.
 
 1. Piense antes de actuar: ese dinero no es suyo.
-
 2. La buena dirección es la expresión de una buena idea.
-
 3. Ningún ejecutivo dedica ningún esfuerzo a comprobar que se ha equivocado.
-
 4. Si para justificar una acción necesita cálculos muy complicados, no la emprenda.
 
 MÁXIMA DE MATCH.
 
-• Un tonto en una posición elevada es como un hombre en la cima de una montaña. Al segundo, todo le parece pequeño y él le parece pequeño a todo el mundo.
+- Un tonto en una posición elevada es como un hombre en la cima de una montaña. Al segundo, todo le parece pequeño y él le parece pequeño a todo el mundo.
 
 LEYES DE MENCKEN.
 
-• El que puede, lo hace.
-
-• El que no puede, se dedica a la enseñanza.
+- El que puede, lo hace.
+- El que no puede, se dedica a la enseñanza.
 
 EXTENSION DE MARTIN
 
-• Los que no pueden dedicarse a la enseñanza, son funcionarios.
+- Los que no pueden dedicarse a la enseñanza, son funcionarios.
 
 LEY DE JONES.
 
-• El hombre capaz de sonreír cuando las cosas van mal, ya ha pensado a quien le echará la culpa.
+- El hombre capaz de sonreír cuando las cosas van mal, ya ha pensado a quien le echará la culpa.
 
 LEY DE SOCIOECONOMÍA.
 
-• En un sistema jerárquico, el aumento de la retribución por un trabajo dado es inversamente proporcional a la dificultad del mismo y lo desagradable que sea.
+- En un sistema jerárquico, el aumento de la retribución por un trabajo dado es inversamente proporcional a la dificultad del mismo y lo desagradable que sea.
 
 LAMENTO DE HARRIS.
 
-• Los buenos puestos de trabajo ya están ocupados.
+- Los buenos puestos de trabajo ya están ocupados.
 
 LEY DE PUTT.
 
 El mundo de la tecnología está dominado por dos tipos de personas:
 
-• Los que entienden lo que no dirigen.
-
-• Los que dirigen lo que no entienden.
+- Los que entienden lo que no dirigen.
+- Los que dirigen lo que no entienden.
 
 ## Comiteología.
 
 LEY DE OLD Y KAHN.
 
-• La eficiencia de un comité es inversamente proporcional al número de participantes que haya y al tiempo que se invierta en las deliberaciones.
+- La eficiencia de un comité es inversamente proporcional al número de participantes que haya y al tiempo que se invierta en las deliberaciones.
 
 LEY DE SHANAHAN.
 
-• La duración de una reunión es directamente proporcional al número de participantes.
+- La duración de una reunión es directamente proporcional al número de participantes.
 
 LEY DE LA TRIVIALIDAD.
 
-• El tiempo dedicado a discutir cualquier punto del orden del día es inversamente proporcional a la suma implicada.
+- El tiempo dedicado a discutir cualquier punto del orden del día es inversamente proporcional a la suma implicada.
 
 LEYES DE ISSAWI SOBRE LA COMITEODINÁMICA.
 
 1. Comitas comitatum, omnia comitas.
-
 2. Cuanto menos le guste participar en comités, más probable es que le insistan en que su presencia es indispensable.
 
 LEY DE HENDRICKSON.
 
-• Si a causa de un problema se convocan muchas reuniones, las reuniones llegarán a ser más importantes que el problema.
+- Si a causa de un problema se convocan muchas reuniones, las reuniones llegarán a ser más importantes que el problema.
 
 REGLA DE McNAUGHTON.
 
-• En un sistema burocrático, cualquier discusión que merezca la pena emprender, se debe poder expresar con una frase simple que se convertirá en verdad evidente una vez que se haya pronunciado.
+- En un sistema burocrático, cualquier discusión que merezca la pena emprender, se debe poder expresar con una frase simple que se convertirá en verdad evidente una vez que se haya pronunciado.
 
 LEY DE TRUMAN.
 
-• Si no puede convencerlos, confúndalos.
+- Si no puede convencerlos, confúndalos.
 
 PRIMERA LEY DEL DEBATE.
 
-• No discuta nunca con un tonto. Puede que la gente no aprecie la diferencia.
+- No discuta nunca con un tonto. Puede que la gente no aprecie la diferencia.
 
 LEYES DE LA INDECISIÓN.
 
 1. La indecisión acorta la tarea y traslada a otra persona (el jefe que puso la fecha límite) la responsabilidad de que se concluya.
-
 2. Reduce la ansiedad, ya que disminuye la calidad esperada del proyecto por tener que hacerlo en tan poco tiempo.
-
 3. Se gana prestigio ante los demás, y ante uno mismo, ya que se supone que la importancia del trabajo justifica la tensión nerviosa.
-
 4. Generalmente, también se puede conseguir evitar las interrupciones (por ejemplo, que le asignen nuevas tareas) para que el trabajador, evidentemente, agobiado se pueda concentrar en lo que está haciendo.
-
 5. La indecisión evita el aburrimiento. Nunca se tiene la sensación de que no hay nada importante que hacer.
-
 6. Se puede eliminar la tarea, en el caso de que deje de hacer falta antes de que esté concluida.
 
 LEY DE SWIPPLE SOBRE EL ORDEN.
 
-• El que grita más, tiene la palabra.
+- El que grita más, tiene la palabra.
 
 LEYES DE BOREN.
 
 1. Cuando tenga dudas, hable entre dientes.
-
 2. Cuando tenga problemas, delegue.
-
 3. Cuando sea el jefe, medite.
 
 LEY DE PATTON.
 
-• Un buen plan es mejor hoy que un plan perfecto mañana.
+- Un buen plan es mejor hoy que un plan perfecto mañana.
 
 ## Arte de dirigir y economurphyología.
 
 LEY DE LIEBERMAN.
 
-• Todo el mundo miente pero no importa, porque nadie escucha.
+- Todo el mundo miente pero no importa, porque nadie escucha.
 
 LEY DE LA MENTIRA.
 
-• No importa la frecuencia con que se demuestre que una mentira es falsa. Siempre habrá algunas personas que crean que es verdad.
+- No importa la frecuencia con que se demuestre que una mentira es falsa. Siempre habrá algunas personas que crean que es verdad.
 
 LEY DE LA SALCHICHA.
 
-• Hay personas a quienes les gustan las salchichas y respetan las leyes y es debido a que no han visto como se elaboran ninguna de las dos cosas.
+- Hay personas a quienes les gustan las salchichas y respetan las leyes y es debido a que no han visto como se elaboran ninguna de las dos cosas.
 
 LEY DE LA ACCIÓN LEGISLATIVA.
 
-• El tiempo necesario para que el Parlamento apruebe una ley es inversamente proporcional al número de grupos que la apoyan.
+- El tiempo necesario para que el Parlamento apruebe una ley es inversamente proporcional al número de grupos que la apoyan.
 
 LOS DOS PRINCIPIOS POLÍTICOS DE TODD.
 
@@ -830,47 +761,47 @@ LOS DOS PRINCIPIOS POLÍTICOS DE TODD.
 
 LEY DE KAMIN.
 
-• Si intenta predecir y pronosticar los movimientos macroeconómicos de la legislación económica con la ayuda de un político, no deje que le despiste lo que dice; fíjese en lo que hace.
+- Si intenta predecir y pronosticar los movimientos macroeconómicos de la legislación económica con la ayuda de un político, no deje que le despiste lo que dice; fíjese en lo que hace.
 
 PRINCIPIO DE WATERGATE.
 
-• Siempre que se informa sobre la corrupción del Gobierno, se hace en tiempo pasado.
+- Siempre que se informa sobre la corrupción del Gobierno, se hace en tiempo pasado.
 
 LEY DE EVANS.
 
-• Si consigue mantener la calma cuando todo el mundo pierde la cabeza, entonces es que no se entera del problema.
+- Si consigue mantener la calma cuando todo el mundo pierde la cabeza, entonces es que no se entera del problema.
 
 REGLA DE DEFACTUALIZACIÓN.
 
-• En las burocracias, la información se deteriora en sentido ascendente.
+- En las burocracias, la información se deteriora en sentido ascendente.
 
 LEY DE LAS PIRAÑAS.
 
-• Cuando los gastos escandalosos se dividen en porciones pequeñas, el público no tendrá intereses suficientes en ninguno de los capítulos como para reclamar.
+- Cuando los gastos escandalosos se dividen en porciones pequeñas, el público no tendrá intereses suficientes en ninguno de los capítulos como para reclamar.
 
 Corolario.
 
-• Un número suficiente de pirañas se puede comer el erario público.
+- Un número suficiente de pirañas se puede comer el erario público.
 
 REGLA DE GOOD PARA RELACIONARSE CON LAS BUROCRACIAS.
 
-• Cuando las soluciones de un departamento de Gobierno no se ajusten a su problema, usted modifica el problema, no la solución.
+- Cuando las soluciones de un departamento de Gobierno no se ajusten a su problema, usted modifica el problema, no la solución.
 
 PRINCIPIO DE HEISENBERG SOBRE LA INVERSIÓN.
 
-• Se puede saber hacia donde se dirige el mercado, pero lo que no hay forma de saber es que dirección tomará después de invertir.
+- Se puede saber hacia donde se dirige el mercado, pero lo que no hay forma de saber es que dirección tomará después de invertir.
 
 OBSERVACION DE HORNGREN.
 
-• Entre los economistas, con frecuencia, el mundo real es un caso especial.
+- Entre los economistas, con frecuencia, el mundo real es un caso especial.
 
 FÓRMULA DE GLYME DEL ÉXITO.
 
-• El secreto del éxito es la sinceridad. En cuanto pueda fingirla, lo habrá conseguido.
+- El secreto del éxito es la sinceridad. En cuanto pueda fingirla, lo habrá conseguido.
 
 REGLAS DE HELGA.
 
-• Diga no y luego negocie.
+- Diga no y luego negocie.
 
 REGLAS DE BROWN DEL LIDERAZGO.
 
@@ -880,101 +811,101 @@ REGLAS DE BROWN DEL LIDERAZGO.
 
 REGLA DE LA LEY.
 
-• Si los hechos están en su contra, invoque a la ley.
+- Si los hechos están en su contra, invoque a la ley.
 
-• Si la ley está en su contra, insista en los hechos.
+- Si la ley está en su contra, insista en los hechos.
 
-• Si los hechos y la ley están en su contra, grite como un poseso.
+- Si los hechos y la ley están en su contra, grite como un poseso.
 
 LEY DE MILES.
 
-• Si posición depende de donde se siente.
+- Si posición depende de donde se siente.
 
 EXTENSIÓN DE FIBLEY A LA LEY DE MILES.
 
-• El lugar donde se siente, depende de a quien conozca.
+- El lugar donde se siente, depende de a quien conozca.
 
 REGLA DE LA POLÍTICA.
 
-• Cuando un político tiene una idea, generalmente está equivocado.
+- Cuando un político tiene una idea, generalmente está equivocado.
 
 REGLA DE SHERMAN SOBRE LAS CONFERENCIAS DE PRENSA.
 
-• La explicación de un desastre, la dará un sustituto.
+- La explicación de un desastre, la dará un sustituto.
 
 LEY DE MILLER.
 
-• Las excepciones confirman la regla... y hunden el presupuesto.
+- Las excepciones confirman la regla... y hunden el presupuesto.
 
 LEY DE BUCKWALD.
 
-• A medida que la economía mejora, todo lo demás empeora.
+- A medida que la economía mejora, todo lo demás empeora.
 
 PRIMERA LEY DE LA POLÍTICA.
 
-• Sea fiel a los que no están en el poder.
+- Sea fiel a los que no están en el poder.
 
 LEY DE LOWE.
 
-• El éxito siempre tiene lugar en privado y el fracaso a la luz pública. Cuando sucede en política, se aplica la ley contraria.
+- El éxito siempre tiene lugar en privado y el fracaso a la luz pública. Cuando sucede en política, se aplica la ley contraria.
 
 ## Periciología.
 
 REGLA DE HOROWITZ.
 
-• La sabiduría consiste en saber cuándo se debe evitar la perfección.
+- La sabiduría consiste en saber cuándo se debe evitar la perfección.
 
 LEY DE DE NEVERS SOBRE LA COMPLEJIDAD.
 
-• Los temas más sencillos son aquellos de los que no sabe nada.
+- Los temas más sencillos son aquellos de los que no sabe nada.
 
 TEOREMA DE CHRISTIE-DAVIS.
 
-• Si sus datos son falsos, pero su lógica es perfecta, entonces sus conclusiones serán inevitablemente falsas. Por tanto, si comete errores con su lógica, tiene al menos una probabilidad aleatoria de llegar a la conclusión correcta.
+- Si sus datos son falsos, pero su lógica es perfecta, entonces sus conclusiones serán inevitablemente falsas. Por tanto, si comete errores con su lógica, tiene al menos una probabilidad aleatoria de llegar a la conclusión correcta.
 
 LEY DE DE NEVERS SOBRE EL DEBATE.
 
-• Dos monólogos no constituyen un diálogo.
+- Dos monólogos no constituyen un diálogo.
 
 LEY DE HIRAM.
 
-• Si se consultan suficientes expertos, se puede confirmar cualquier opinión.
+- Si se consultan suficientes expertos, se puede confirmar cualquier opinión.
 
 LEY DE JORDAN.
 
-• Un informante que nunca proporciona información equivocada es demasiado anormal como para confiar en él.
+- Un informante que nunca proporciona información equivocada es demasiado anormal como para confiar en él.
 
 LEY PERDIDA DE DE NEVERS.
 
-• Nunca especule sobre aquello que pueda saber con certeza.
+- Nunca especule sobre aquello que pueda saber con certeza.
 
 CLAVE DEL ÉXITO SEGÚN ELY.
 
-• Cree una necesidad y satisfágala.
+- Cree una necesidad y satisfágala.
 
 REGLA DE BRALEK SOBRE EL ÉXITO.
 
-• Confíe sólo en aquellos que perderían tanto como usted si las cosas fueran mal.
+- Confíe sólo en aquellos que perderían tanto como usted si las cosas fueran mal.
 
 LEY DE MALEK.
 
-• Cualquier idea simple se puede expresar de la manera más compleja que exista.
+- Cualquier idea simple se puede expresar de la manera más compleja que exista.
 
 COROLARIO DE WEINBERGER.
 
-• Un experto es la persona que evita los errores pequeños mientras sigue su avance inexorable hacia la gran falacia.
+- Un experto es la persona que evita los errores pequeños mientras sigue su avance inexorable hacia la gran falacia.
 
 PRIMERA LEY DE CLARKE.
 
-• Cuando un famoso, aunque anciano científico, asegura que algo es posible, suele tener razón. Cuando afirma que algo es imposible, suele estar equivocado.
+- Cuando un famoso, aunque anciano científico, asegura que algo es posible, suele tener razón. Cuando afirma que algo es imposible, suele estar equivocado.
 
 SEGUNDA LEY DE CLARKE.
 
-• La única forma de descubrir los límites de lo posible es traspasarlos en dirección a lo imposible.
+- La única forma de descubrir los límites de lo posible es traspasarlos en dirección a lo imposible.
 
 LEY DE CLARKE SOBRE LAS IDEAS REVOLUCIONARIAS.
 
-• Todo campo revolucionario - ciencia, política, arte o cualquier otro - produce tres formas de reacción. Se pueden resumir en tres frases:
+- Todo campo revolucionario - ciencia, política, arte o cualquier otro - produce tres formas de reacción. Se pueden resumir en tres frases:
 
 1. "Es imposible, no me haga perder el tiempo."
 
@@ -984,15 +915,15 @@ LEY DE CLARKE SOBRE LAS IDEAS REVOLUCIONARIAS.
 
 REGLA DE LOS GRANDES.
 
-• Cuando alguien a quien usted admira y respeta parezca ensimismado y pensativo, lo más probable es que esté pensando en la cena.
+- Cuando alguien a quien usted admira y respeta parezca ensimismado y pensativo, lo más probable es que esté pensando en la cena.
 
 TERCERA LEY DE CLARKE.
 
-• Cualquier tecnología avanzada es indistinguible de la magia.
+- Cualquier tecnología avanzada es indistinguible de la magia.
 
 LEY DE RUNAMOK.
 
-• Hay cuatro clases de personas:
+- Hay cuatro clases de personas:
 
 1. Las que se sientan en silencio y no hacen nada.
 
@@ -1004,59 +935,59 @@ LEY DE RUNAMOK.
 
 LEY DE SEGAL.
 
-• Un hombre con un reloj sabe qué hora es.
+- Un hombre con un reloj sabe qué hora es.
 
 Un hombre con dos relojes nunca está seguro.
 
 LEY DE MILLER.
 
-• No se puede saber la profundidad de un charco hasta que no se ha metido el pie.
+- No se puede saber la profundidad de un charco hasta que no se ha metido el pie.
 
 LEY DE WEILER.
 
-• Nada hay imposible para el hombre si no lo tiene que hacer él mismo.
+- Nada hay imposible para el hombre si no lo tiene que hacer él mismo.
 
 PRIMERA LEY DE WEINBERGER.
 
-• Si los constructores edificaran de la misma manera que los programadores elaboran los programas, el primer pájaro carpintero que pasara volando, acabaría con la civilización.
+- Si los constructores edificaran de la misma manera que los programadores elaboran los programas, el primer pájaro carpintero que pasara volando, acabaría con la civilización.
 
 ## Periciología avanzada.
 
 REGLA DE MARS.
 
-• Un experto es cualquiera que no sea de la ciudad.
+- Un experto es cualquiera que no sea de la ciudad.
 
 DEFINICIÓN DE WEBWER.
 
-• Un experto es aquel que sabe cada vez más sobre menos cosas, hasta que sabe absolutamente todo sobre nada.
+- Un experto es aquel que sabe cada vez más sobre menos cosas, hasta que sabe absolutamente todo sobre nada.
 
 REGLA DE WARREN.
 
-• Si quiere identificar al experto, escoja al que predice que el trabajo durará más tiempo y costará más.
+- Si quiere identificar al experto, escoja al que predice que el trabajo durará más tiempo y costará más.
 
 REGLA DE WINGER.
 
-• Si se sienta en su mesa durante quince minutos, usted acaba de convertirse en un experto.
+- Si se sienta en su mesa durante quince minutos, usted acaba de convertirse en un experto.
 
 LEY DE SCHROEDER.
 
-• La indecisión es el fundamento de la flexibilidad.
+- La indecisión es el fundamento de la flexibilidad.
 
 Corolario.
 
-• Cree problemas para los que sólo usted tenga la solución.
+- Cree problemas para los que sólo usted tenga la solución.
 
 MÁXIMA DE MATZ.
 
-• Una conclusión es el punto en el que usted se cansó de pensar.
+- Una conclusión es el punto en el que usted se cansó de pensar.
 
 REGLA DE FAGIN SOBRE LA PREDICCIÓN DEL PASADO.
 
-• La percepción retrospectiva es una ciencia exacta.
+- La percepción retrospectiva es una ciencia exacta.
 
 REGLA FUNDAMENTAL DE LA HISTORIA.
 
-• No es que la Historia se repita, es que los historiadores se copian unos a otros.
+- No es que la Historia se repita, es que los historiadores se copian unos a otros.
 
 LEYES DE DUNLAP SOBRE LA FÍSICA.
 
@@ -1068,93 +999,93 @@ LEYES DE DUNLAP SOBRE LA FÍSICA.
 
 MÁXIMA DE MERKIN.
 
-• En caso de duda, anuncie que la tendencia se mantendrá.
+- En caso de duda, anuncie que la tendencia se mantendrá.
 
 SOLUCION DE HALGREN.
 
-• Cuando tenga problemas, ofúsquese.
+- Cuando tenga problemas, ofúsquese.
 
 TEORIA DE HAWKINS SOBRE EL PROGRESO.
 
-• El progreso no consiste en sustituir una teoría equivocada por otra correcta, sino en sustituir una teoría falsa por otra más sutilmente errónea.
+- El progreso no consiste en sustituir una teoría equivocada por otra correcta, sino en sustituir una teoría falsa por otra más sutilmente errónea.
 
 LEY DE MEYER.
 
-• Es tarea fácil hacer que las cosas parezcan complejas, pero es complicado hacerlas sencillas.
+- Es tarea fácil hacer que las cosas parezcan complejas, pero es complicado hacerlas sencillas.
 
 LEY DE HLADE.
 
-• Si tiene una tarea difícil, confíesela a un hombre vago. El encontrará la forma más fácil de hacerla.
+- Si tiene una tarea difícil, confíesela a un hombre vago. El encontrará la forma más fácil de hacerla.
 
 LEY DE HUNT.
 
-• Cualquier gran idea tiene una desventaja mayor o igual a la grandeza de la misma.
+- Cualquier gran idea tiene una desventaja mayor o igual a la grandeza de la misma.
 
 NAVAJA DE HANLON.
 
-• No le atribuya nunca a la malicia lo que puede explicar la estupidez.
+- No le atribuya nunca a la malicia lo que puede explicar la estupidez.
 
 ## Contabilidología.
 
 FALACIA DE FROTHINGHAM.
 
-• El tiempo es oro.
+- El tiempo es oro.
 
 LEY DE CRANE.
 
-• No hay comidas gratuitas, tal cosa no existe.
+- No hay comidas gratuitas, tal cosa no existe.
 
 LEY DE WIKER.
 
-• El Gobierno se expande hasta absorber los beneficios y todo lo que caiga.
+- El Gobierno se expande hasta absorber los beneficios y todo lo que caiga.
 
 LEY DE TUCILLE SOBRE LA REALIDAD.
 
-• La industria siempre avanza para rellenar un vacío económico.
+- La industria siempre avanza para rellenar un vacío económico.
 
 REGLA DE WESTHEIMER.
 
 Cálculo del tiempo que se necesita para llevar a cabo una tarea:
 
-• Calcule el tiempo que usted considere necesario.
+- Calcule el tiempo que usted considere necesario.
 
-• Multiplíquelo por dos.
+- Multiplíquelo por dos.
 
-• Cambie a la unidad de medida inmediatamente superior.
+- Cambie a la unidad de medida inmediatamente superior.
 
 Así, le asignaremos dos días a un trabajo de media hora.
 
 LEY DE GRESHAM.
 
-• Los asuntos triviales se solucionan con rapidez. Los asuntos importantes no se resuelven nunca.
+- Los asuntos triviales se solucionan con rapidez. Los asuntos importantes no se resuelven nunca.
 
 LEY DE GRAY SOBRE LA PROGRAMACIÓN.
 
-• Se espera que se terminen n+1 tareas triviales en el mismo tiempo en que se concluirían n tareas.
+- Se espera que se terminen n+1 tareas triviales en el mismo tiempo en que se concluirían n tareas.
 
 REFUTACIÓN DE LOGG A LA LEY DE GRAY.
 
-• Para concluir n+1 tareas triviales hace falta el doble de tiempo que para n.
+- Para concluir n+1 tareas triviales hace falta el doble de tiempo que para n.
 
 LA REGLA 90/90 DE PROGRAMACIÓN DE PROYECTOS.
 
-• El primer 90 por 100 del trabajo requiere el 10 por 100 del tiempo y el último 10 por 100, el 90 por 100 restante.
+- El primer 90 por 100 del trabajo requiere el 10 por 100 del tiempo y el último 10 por 100, el 90 por 100 restante.
 
 REGLA DE WEINBERGER.
 
-• El progreso se lleva a cabo un viernes sí y otro no.
+- El progreso se lleva a cabo un viernes sí y otro no.
 
 PRINCIPIO DE LOS PEDIDOS.
 
-• Los materiales necesarios para el experimento de ayer no se deben encargar después de mañana al mediodía.
+- Los materiales necesarios para el experimento de ayer no se deben encargar después de mañana al mediodía.
 
 LEY DE KEOPS
 
-• No hay nada que se termine en los plazos previstos y que no se salga del presupuesto.
+- No hay nada que se termine en los plazos previstos y que no se salga del presupuesto.
 
 EXTENSIÓN DEL PRINCIPIO DE EPSTEIN-HEISENBERG.
 
-En una órbita R & D, sólo se pueden definir simultáneamente dos de los tres parámetros existentes. Estos parámetros son: la tarea, el tiempo y los recursos ($).
+En una órbita R & D, sólo se pueden definir simultáneamente dos de los tres parámetros existentes. Estos parámetros son: la tarea, el tiempo y los recursos (\$).
 
 1. Si se sabe cual es la tarea que se tiene que realizar y hay un tiempo límite para llevarla a cabo, entonces no se puede tener idea de lo que costará.
 
@@ -1164,83 +1095,83 @@ En una órbita R & D, sólo se pueden definir simultáneamente dos de los tres p
 
 LEY DE PARETO (LEY 20/80).
 
-• El 20 por 100 de los clientes justifica el 80 por 100 del volumen de ventas.
+- El 20 por 100 de los clientes justifica el 80 por 100 del volumen de ventas.
 
-• El 20 por 100 de los componentes justifica el 80 por 100 del coste, etc.
+- El 20 por 100 de los componentes justifica el 80 por 100 del coste, etc.
 
-PRINCIPIO DE O’BRIEN (TEORÍA DE LOS 357,73$).
+PRINCIPIO DE O’BRIEN (TEORÍA DE LOS 357,73\$).
 
-• Los auditores siempre rechazan cualquier cuenta de gastos cuyo total sea divisible por 5 o por 10.
+- Los auditores siempre rechazan cualquier cuenta de gastos cuyo total sea divisible por 5 o por 10.
 
 OBSERVACIÓN DE ISSAWI SOBRE EL CONSUMO DE PAPEL.
 
-• Todo sistema cuenta con su propia forma de consumir enormes cantidades de papel. En los sistemas socialistas hay que rellenar por cuadruplicado impresos kilométricos. En las sociedades capitalistas se colocan inmensas vallas publicitarias y se envuelve todo con cuatro capas de cartulina.
+- Todo sistema cuenta con su propia forma de consumir enormes cantidades de papel. En los sistemas socialistas hay que rellenar por cuadruplicado impresos kilométricos. En las sociedades capitalistas se colocan inmensas vallas publicitarias y se envuelve todo con cuatro capas de cartulina.
 
 COROLARIO COLATERAL DE JOHN.
 
-• Para conseguir un crédito, lo primero que tiene que hacer es demostrar que no lo necesita.
+- Para conseguir un crédito, lo primero que tiene que hacer es demostrar que no lo necesita.
 
 LEY DE BRIEN.
 
-• En algún momento del ciclo vital de, virtualmente, todas las organizaciones, desaparece su capacidad para tener éxito, a pesar de seguir siendo ellas mismas.
+- En algún momento del ciclo vital de, virtualmente, todas las organizaciones, desaparece su capacidad para tener éxito, a pesar de seguir siendo ellas mismas.
 
 LEY DE LAS INSTITUCIONES.
 
-• La magnificencia de la recepción es inversamente proporcional a la solvencia de la empresa.
+- La magnificencia de la recepción es inversamente proporcional a la solvencia de la empresa.
 
 LEY DE PAULG.
 
-• En EE.UU., lo importante no es lo que cuesta un artículo, sino lo que usted se ahorra.
+- En EE.UU., lo importante no es lo que cuesta un artículo, sino lo que usted se ahorra.
 
 LEY DE JUHANI.
 
-• El acuerdo siempre será más costoso que cualquiera de los puntos que se pacten.
+- El acuerdo siempre será más costoso que cualquiera de los puntos que se pacten.
 
 ## Diseñología.
 
 PROFECÍA DE POULSEN.
 
-• Si se usa cualquier cosa hasta su máxima capacidad, se rompe.
+- Si se usa cualquier cosa hasta su máxima capacidad, se rompe.
 
 LEY DE MAYNE.
 
-• Nadie nota los errores grandes.
+- Nadie nota los errores grandes.
 
 PRINCIPIO DE INERCIA DEL DISEÑO.
 
-• Al principio, todos los cambios parecen horribles.
+- Al principio, todos los cambios parecen horribles.
 
 LEY DE WRIGHT SOBRE LA CALIDAD.
 
-• La calidad es inversamente proporcional al tiempo que queda para terminar el proyecto.
+- La calidad es inversamente proporcional al tiempo que queda para terminar el proyecto.
 
 LEY DE LA PLANIFICACIÓN CORPORATIVA.
 
-• Cualquier cosa que se pueda cambiar, se cambiará hasta que no quede tiempo para cambiar nada
+- Cualquier cosa que se pueda cambiar, se cambiará hasta que no quede tiempo para cambiar nada
 
 . LEY DE BEACH.
 
-• No hay dos piezas idénticas que se parezcan.
+- No hay dos piezas idénticas que se parezcan.
 
 LEY DE EDWARDS SOBRE EL ESFUERZO/TIEMPO.
 
-• Esfuerzo x Tiempo = Constante.
+- Esfuerzo x Tiempo = Constante.
 
-• Dado un tiempo inicial grande para hacer algo, el esfuerzo inicial será pequeño.
+- Dado un tiempo inicial grande para hacer algo, el esfuerzo inicial será pequeño.
 
-• A medida que el tiempo se aproxima a cero, el esfuerzo tiende a infinito.
+- A medida que el tiempo se aproxima a cero, el esfuerzo tiende a infinito.
 
 Corolario.
 
-• Si no fuera por el último minuto, no se haría nada.
+- Si no fuera por el último minuto, no se haría nada.
 
 TEORÍA DE McPHERSON SOBRE LA ENTROPÍA.
 
-• Se requiere menos energía para sacar un objeto de su sitio que para volverlo a colocar.
+- Se requiere menos energía para sacar un objeto de su sitio que para volverlo a colocar.
 
 POSTULADO DE BITTON PARA LA ELECTRÓNICA.
 
-• Si lo entiende, es que se ha quedado antiguo.
+- Si lo entiende, es que se ha quedado antiguo.
 
 LEY DE MANUBAY PARA LOS PROGRAMADORES.
 
@@ -1250,23 +1181,23 @@ LEY DE MANUBAY PARA LOS PROGRAMADORES.
 
 AXIOMA DE JOSE.
 
-• No hay nada tan temporal como lo que se denomina permanente.
+- No hay nada tan temporal como lo que se denomina permanente.
 
 Corolario.
 
-• No hay nada tan permanente como lo que se denomina temporal.
+- No hay nada tan permanente como lo que se denomina temporal.
 
 LEY DE RAP SOBRE LA REPRODUCCIÓN INANIMADA.
 
-• Si usted desarma una cosa, la vuelve a montar y repite el proceso varias veces, al final tendrá dos cosas.
+- Si usted desarma una cosa, la vuelve a montar y repite el proceso varias veces, al final tendrá dos cosas.
 
 PRIMERA LEY DE LAS REVISIONES.
 
-• Al diseñador se le notificará que es necesario modificar el diseño después - y sólo después - de que haya terminado los planos. (A menudo, es denominada como la Ley de "¡Y nos lo dice ahora!".)
+- Al diseñador se le notificará que es necesario modificar el diseño después - y sólo después - de que haya terminado los planos. (A menudo, es denominada como la Ley de "¡Y nos lo dice ahora!".)
 
 Corolario.
 
-• En ciertos casos en los que se advierte que hay una forma correcta evidente y una errónea, se aconseja elegir la equivocada para acelerar la revisión posterior.
+- En ciertos casos en los que se advierte que hay una forma correcta evidente y una errónea, se aconseja elegir la equivocada para acelerar la revisión posterior.
 
 ECUACIONES DE SNAFU.
 
@@ -1280,7 +1211,7 @@ ECUACIONES DE SNAFU.
 
 CONSTANTE DE SKINNER (FACTOR CHANCHULLO DE FLANNAGAN).
 
-• Es esa cantidad que cuando se multiplica, divide, suma o resta del resultado que usted ha obtenido, le proporciona el resultado que debería haber obtenido.
+- Es esa cantidad que cuando se multiplica, divide, suma o resta del resultado que usted ha obtenido, le proporciona el resultado que debería haber obtenido.
 
 LEYES DE PROGRAMACIÓN DE ORDENADORES.
 
@@ -1308,139 +1239,139 @@ REGLAS DE GILB SOBRE LA NO FIABILIDAD.
 
 LEY DE BROOK.
 
-• Si añade mano de obra a un proyecto que va retrasado, se retrasa todavía más.
+- Si añade mano de obra a un proyecto que va retrasado, se retrasa todavía más.
 
 LEY DE LUBARSKY SOBRE LA ENTOMOLOGÍA CIBERNÉTICA.
 
-• Siempre queda algún virus.
+- Siempre queda algún virus.
 
 PRINCIPIO DE SHAW.
 
-• Construya un sistema que pueda utilizar hasta un tonto y sólo lo querrán utilizar los tontos.
+- Construya un sistema que pueda utilizar hasta un tonto y sólo lo querrán utilizar los tontos.
 
 ## Maquinología.
 
 PRINCIPIO DE POLLYANNA SOBRE LA IBM.
 
-• Las máquinas deben funcionar y las personas pensar.
+- Las máquinas deben funcionar y las personas pensar.
 
 LEY DE LA PERVERSIDAD DE LA NATURALEZA.
 
-• No se puede determinar a priori en que lado de la tostada hay que poner la mantequilla.
+- No se puede determinar a priori en que lado de la tostada hay que poner la mantequilla.
 
 LEY DE LA GRAVEDAD SELECTIVA.
 
-• Todos los objetos se caen al suelo de tal forma que causen más desperfectos.
+- Todos los objetos se caen al suelo de tal forma que causen más desperfectos.
 
 Corolario de Jenning.
 
-• La probabilidad de que la tostada caiga con la mantequilla hacia abajo es directamente proporcional al precio de la alfombra.
+- La probabilidad de que la tostada caiga con la mantequilla hacia abajo es directamente proporcional al precio de la alfombra.
 
 Corolario de Klipstein.
 
-• La pieza más delicada será la que se caiga antes.
+- La pieza más delicada será la que se caiga antes.
 
 LEY DE SPRINKEL.
 
-• Las cosas siempre caen en ángulo recto.
+- Las cosas siempre caen en ángulo recto.
 
 LEY DE LA MOLESTIA.
 
-• Cuando esté haciendo un trabajo manual, si guarda una herramienta porque está seguro de que no la utilizará más, la volverá a necesitar en breves momentos.
+- Cuando esté haciendo un trabajo manual, si guarda una herramienta porque está seguro de que no la utilizará más, la volverá a necesitar en breves momentos.
 
 LEY DE ANTHONY SOBRE EL TALLER.
 
-• Cualquier herramienta, cuando se suelta, rueda hasta el rincón más inaccesible de todo el taller.
+- Cualquier herramienta, cuando se suelta, rueda hasta el rincón más inaccesible de todo el taller.
 
 Corolario.
 
-• Cuando vaya a recogerla, tropezará con otras herramientas y se hará polvo los dedos de los pies.
+- Cuando vaya a recogerla, tropezará con otras herramientas y se hará polvo los dedos de los pies.
 
 PRINCIPIO DE LOS REPUESTOS.
 
-• Los repuestos son más o menos accesibles y esto es directamente proporcional a su tamaño e inversamente proporcional a la urgencia de terminar el trabajo.
+- Los repuestos son más o menos accesibles y esto es directamente proporcional a su tamaño e inversamente proporcional a la urgencia de terminar el trabajo.
 
 LEY DE PAUL.
 
-• Es imposible caerse del suelo.
+- Es imposible caerse del suelo.
 
 LEY DE JOHNSON.
 
-• Si un artilugio mecánico falla, lo hará en el momento más inoportuno.
+- Si un artilugio mecánico falla, lo hará en el momento más inoportuno.
 
 LEY DE WATSON.
 
-• La fiabilidad de la máquina es inversamente proporcional al número y a la categoría de las personas que la manejan.
+- La fiabilidad de la máquina es inversamente proporcional al número y a la categoría de las personas que la manejan.
 
 LEY DE WYSZKOWSKI.
 
-• Cualquier cosa puede llegar a funcionar si se tiene en las manos el tiempo suficiente.
+- Cualquier cosa puede llegar a funcionar si se tiene en las manos el tiempo suficiente.
 
 LEY DE SATTINGER.
 
-• Funcionaría mejor si la enchufara.
+- Funcionaría mejor si la enchufara.
 
 LEY DE LOWERY.
 
-• Si se traba, fuércela; si se rompe, es que había que cambiarla de todas maneras.
+- Si se traba, fuércela; si se rompe, es que había que cambiarla de todas maneras.
 
 REGLA DEL TOCADISCOS.
 
-• El accesorio más caro es el que menos se utiliza.
+- El accesorio más caro es el que menos se utiliza.
 
 LEY DE SCHMIDT.
 
-• Si manosea una cosa durante mucho tiempo, se romperá.
+- Si manosea una cosa durante mucho tiempo, se romperá.
 
 LEY DE FUDD SOBRE LA OPOSICIÓN.
 
-• Cuando se empuje algo con mucha fuerza, se caerá al suelo.
+- Cuando se empuje algo con mucha fuerza, se caerá al suelo.
 
 LEY DE ANTHONY SOBRE LA FUERZA.
 
-• No lo fuerce. Cómprese un martillo más grande.
+- No lo fuerce. Cómprese un martillo más grande.
 
 POSTULADO DE HORNER SOBRE LOS MANAZAS.
 
-• La destreza es directamente proporcional al número de aparatos que haya estropeado por completo.
+- La destreza es directamente proporcional al número de aparatos que haya estropeado por completo.
 
 AXIOMA DE CAHN.
 
-• Cuando todo falle, lea las instrucciones.
+- Cuando todo falle, lea las instrucciones.
 
 PRINCIPIO DE LOS APARATOS DE MÚLTIPLES USOS.
 
-• Cuantas menos cosas pueda hacer un aparato, mejor las hará.
+- Cuantas menos cosas pueda hacer un aparato, mejor las hará.
 
 PRINCIPIO DE COOPER.
 
-• Todas las máquinas son amplificadores.
+- Todas las máquinas son amplificadores.
 
 LEY DE JENKINSON.
 
-• De todas maneras, no funcionará.
+- De todas maneras, no funcionará.
 
 SUGERIDAS POR RODRIGO HERNÁNDEZ (rhernandez@nordson.com.mx)
 
-• Si al revisar un equipo, este funciona correctamente no implica que esté bien, sino que no ha revisado lo suficiente
+- Si al revisar un equipo, este funciona correctamente no implica que esté bien, sino que no ha revisado lo suficiente
 
 Corolario
 
-• El que lo haya revisado bien, no implica que vaya a encontrar la falla
+- El que lo haya revisado bien, no implica que vaya a encontrar la falla
 
 ## Investigacionología y academiología.
 
 LEY DE GORDON.
 
-• Si una investigación no merece la pena, tampoco merece la pena hacerla bien.
+- Si una investigación no merece la pena, tampoco merece la pena hacerla bien.
 
 LEY DE MURPHY SOBRE LA INVESTIGACIÓN.
 
-• Las investigaciones que realice, sobre todo si son muchas, tenderán a apoyar sus teorías.
+- Las investigaciones que realice, sobre todo si son muchas, tenderán a apoyar sus teorías.
 
 LEY DE MAIER.
 
-• Si los hechos no se ajustan a la teoría, tendrá que deshacerse de ellos.
+- Si los hechos no se ajustan a la teoría, tendrá que deshacerse de ellos.
 
 Corolarios.
 
@@ -1450,67 +1381,67 @@ Corolarios.
 
 LEY DE WILLIAMS Y HOLLAND.
 
-• Si se reúnen suficientes datos, se puede demostrar cualquier cosa con ayuda de la estadística.
+- Si se reúnen suficientes datos, se puede demostrar cualquier cosa con ayuda de la estadística.
 
 LEY DE PEER.
 
-• La solución de un problema cambia la naturaleza del mismo.
+- La solución de un problema cambia la naturaleza del mismo.
 
 LEY DE HARVARD.
 
-• En condiciones rigurosamente controladas de presión, temperatura, volumen, humedad y otras variables, el organismo actúa como le sale de las narices.
+- En condiciones rigurosamente controladas de presión, temperatura, volumen, humedad y otras variables, el organismo actúa como le sale de las narices.
 
 CUARTA LEY DE LAS REVISIONES.
 
-• Después de cuidadísimos y exactísimos análisis de una muestra, siempre resulta que no era esa la que se tenía que analizar.
+- Después de cuidadísimos y exactísimos análisis de una muestra, siempre resulta que no era esa la que se tenía que analizar.
 
 LEY DE HERSH.
 
-• La Bioquímica se expande hasta ocupar todo el espacio y tiempo disponibles en el campo editorial.
+- La Bioquímica se expande hasta ocupar todo el espacio y tiempo disponibles en el campo editorial.
 
 LEY DE FETT DEL LABORATORIO.
 
-• Nunca intente repetir un experimento que haya salido bien.
+- Nunca intente repetir un experimento que haya salido bien.
 
 LEY DE WYSZOWSKI.
 
-• Ningún experimento es reproducible.
+- Ningún experimento es reproducible.
 
 LEY DE LA EXACTITUD.
 
-• Cuando se está trabajando para encontrar la solución a un problema, siempre resulta de gran ayuda saber la respuesta.
+- Cuando se está trabajando para encontrar la solución a un problema, siempre resulta de gran ayuda saber la respuesta.
 
 LEY DE YOUNG.
 
-• Todos los grandes descubrimientos se hacen por error.
+- Todos los grandes descubrimientos se hacen por error.
 
 Corolario.
 
-• Cuanto mayor es la subvención, más tiempo hace falta para cometer el error.
+- Cuanto mayor es la subvención, más tiempo hace falta para cometer el error.
 
 FACTOR DE INUTILIDAD.
 
-• Ningún experimento es un fracaso absoluto. Siempre puede servir de ejemplo negativo.
+- Ningún experimento es un fracaso absoluto. Siempre puede servir de ejemplo negativo.
 
 LEY DE PARKINSON SOBRE LA INVESTIGACIÓN MÉDICA.
 
-• Las investigaciones que tienen éxito atraen las mayores subvenciones, y esto imposibilita las posteriores investigaciones en ese campo.
+- Las investigaciones que tienen éxito atraen las mayores subvenciones, y esto imposibilita las posteriores investigaciones en ese campo.
 
 LEY DE PARKINSON.
 
-• El progreso de la ciencia es inversamente proporcional al número de revistas especializadas que se publican.
+- El progreso de la ciencia es inversamente proporcional al número de revistas especializadas que se publican.
 
 LEY DE BROOKE.
 
-• Cuando un sistema está completamente definido, siempre hay algún estúpido que encuentra algo que, o bien lo anula, o bien lo expande hasta que no haya Dios que lo reconozca.
+- Cuando un sistema está completamente definido, siempre hay algún estúpido que encuentra algo que, o bien lo anula, o bien lo expande hasta que no haya Dios que lo reconozca.
 
 LEY DE TENENBAUN SOBRE LA REPLICABILIDAD.
 
-• Los resultados más interesantes tienen lugar sólo una vez.
+- Los resultados más interesantes tienen lugar sólo una vez.
 
 LEY DE SOUNDER.
 
-• La repetición de un experimento no asegura la validez del mismo.
+- La repetición de un experimento no asegura la validez del mismo.
 
 GUÍA DE HANDY PARA LA CIENCIA MODERNA.
 
@@ -1528,23 +1459,23 @@ EXTENSIONES DE CERF A LA GUÍA DE HANDY PARA LA CIENCIA MODERNA.
 
 PRINCIPIO DE BARR SOBRE LA INERCIA.
 
-• Pedirle a un grupo de científicos que revisen sus teorías es lo mismo que pedirle a un grupo de policías que revisen la ley.
+- Pedirle a un grupo de científicos que revisen sus teorías es lo mismo que pedirle a un grupo de policías que revisen la ley.
 
 LA FALACIA DE SAGAN.
 
-• Decir que un ser humano no es más que un conjunto de moléculas, es como decir que una obra de Shakespeare no es más que un conjunto de palabras.
+- Decir que un ser humano no es más que un conjunto de moléculas, es como decir que una obra de Shakespeare no es más que un conjunto de palabras.
 
 PRIMERA LEY DE LA FÍSICA DE PARTÍCULAS.
 
-• Cuanto más corta es la vida de una partícula, más caro resultará producirla.
+- Cuanto más corta es la vida de una partícula, más caro resultará producirla.
 
 SEGUNDA LEY DE LA FÍSICA DE PARTÍCULAS.
 
-• Los bloques básicos que constituyen la materia no se dan en la naturaleza.
+- Los bloques básicos que constituyen la materia no se dan en la naturaleza.
 
 PRIMERA LEY DEL PROGRESO CIENTÍFICO.
 
-• El avance de la ciencia se puede medir por la velocidad con que se acumulan las excepciones a las leyes anteriormente establecidas.
+- El avance de la ciencia se puede medir por la velocidad con que se acumulan las excepciones a las leyes anteriormente establecidas.
 
 Corolarios.
 
@@ -1598,7 +1529,7 @@ Lema publicitario: "Rumpelstiltskin".
 
 LEY DE FELSON.
 
-• Robar ideas a una persona es plagio. Robárselas a muchas es investigación.
+- Robar ideas a una persona es plagio. Robárselas a muchas es investigación.
 
 REGLAS DE PAVLU PARA LA ECONOMÍA EN LA INVESTIGACIÓN.
 
@@ -1610,65 +1541,65 @@ REGLAS DE PAVLU PARA LA ECONOMÍA EN LA INVESTIGACIÓN.
 
 LEY DEL SEÑOR COOPER.
 
-• Si no entiende un término específico en un texto técnico, páselo por alto. El texto tendrá sentido sin él.
+- Si no entiende un término específico en un texto técnico, páselo por alto. El texto tendrá sentido sin él.
 
 COROLARIO DE BOGOVICH A LA LEY DEL SEÑOR COOPER.
 
-• Si el texto no tiene sentido sin esa palabra, tampoco lo tendría con ella.
+- Si el texto no tiene sentido sin esa palabra, tampoco lo tendría con ella.
 
 LEY DE SUPERVIVENCIA EN LA UNIVERSIDAD DE MEREDITH.
 
-• Nunca permita que el profesor de su especialidad se entere de que usted existe.
+- Nunca permita que el profesor de su especialidad se entere de que usted existe.
 
 LEY DE ELLARD.
 
-• Los que quieren aprender, aprenderán.
+- Los que quieren aprender, aprenderán.
 
-• Los que no quieren aprender, serán directores de empresa.
+- Los que no quieren aprender, serán directores de empresa.
 
-• Los que sean incapaces de aprender y de dirigir empresas, serán los que controlen hasta la muerte la concesión de becas y empresas.
+- Los que sean incapaces de aprender y de dirigir empresas, serán los que controlen hasta la muerte la concesión de becas y empresas.
 
 LEY DE VILE PARA LOS EDUCADORES.
 
-• Nadie atiende en clase hasta que usted mete la pata.
+- Nadie atiende en clase hasta que usted mete la pata.
 
 LEY DE VILE SOBRE EL ORDEN DE LOS PAPELES.
 
-• Todos los papeles de un montón que van después del primero, están, o bien al revés, o bien boca abajo, hasta que usted los ordena. Luego, se repite el proceso.
+- Todos los papeles de un montón que van después del primero, están, o bien al revés, o bien boca abajo, hasta que usted los ordena. Luego, se repite el proceso.
 
 LEY DE WEINER SOBRE LAS BIBLIOTECAS.
 
-• Nunca hay respuestas, sino referencias a otros textos.
+- Nunca hay respuestas, sino referencias a otros textos.
 
 ## Investigacionología avanzada.
 
 LEY DEL TRABAJO DE LABORATORIO.
 
-• El vidrio caliente tiene la misma apariencia que el vidrio frío.
+- El vidrio caliente tiene la misma apariencia que el vidrio frío.
 
 REGLA BÁSICA PARA LOS TRABAJADORES DE LOS LABORATORIOS.
 
-• Cuando no sepa que es lo que esta haciendo, hágalo con esmero y primor.
+- Cuando no sepa que es lo que esta haciendo, hágalo con esmero y primor.
 
 REGLA DE FINAGLE.
 
-• El trabajo en equipo es esencial. Le permitirá echarle la culpa al otro.
+- El trabajo en equipo es esencial. Le permitirá echarle la culpa al otro.
 
 CREDO DE FINAGLE.
 
-• La ciencia es verídica, no deje que le engañen los hechos.
+- La ciencia es verídica, no deje que le engañen los hechos.
 
 LEY DE MUENCH.
 
-• No hay nada que perfeccione tanto una innovación como la falta de control.
+- No hay nada que perfeccione tanto una innovación como la falta de control.
 
 LEY DE LERMAN SOBRE LA TECNOLOGÍA.
 
-• Cualquier problema técnico se puede solucionar si se cuenta con suficiente tiempo y dinero.
+- Cualquier problema técnico se puede solucionar si se cuenta con suficiente tiempo y dinero.
 
 Corolario de Lerman.
 
-• Nunca se cuenta con suficiente tiempo y dinero.
+- Nunca se cuenta con suficiente tiempo y dinero.
 
 LEY DE VESILIND SOBRE LA EXPERIMENTACIÓN.
 
@@ -1678,51 +1609,51 @@ LEY DE VESILIND SOBRE LA EXPERIMENTACIÓN.
 
 PRIMER POSTULADO DE THUMB.
 
-• Es mejor resolver un problema con una aproximación grosera y conocer la verdad, 10 por 100 más o menos, que exigir una solución exacta y desconocer la verdad.
+- Es mejor resolver un problema con una aproximación grosera y conocer la verdad, 10 por 100 más o menos, que exigir una solución exacta y desconocer la verdad.
 
 SEGUNDO POSTULADO DE THUMB.
 
-• Una falsedad práctica y fácil de entender es más útil que una verdad compleja e incomprensible.
+- Una falsedad práctica y fácil de entender es más útil que una verdad compleja e incomprensible.
 
 LA REGLA DE LAS REGLAS.
 
-• La línea recta no existe.
+- La línea recta no existe.
 
 LEY DE JONES.
 
-• Cualquier persona que haga una contribución significativa en cualquier campo y permanezca en este campo el tiempo suficiente, se convierte en un obstáculo para su progreso y esto es directamente proporcional a la importancia de su contribución original.
+- Cualquier persona que haga una contribución significativa en cualquier campo y permanezca en este campo el tiempo suficiente, se convierte en un obstáculo para su progreso y esto es directamente proporcional a la importancia de su contribución original.
 
 LEY DE MANN (generalizada).
 
-• Si un científico descubre un hecho publicable, éste pasará a ser el centro de su teoría.
+- Si un científico descubre un hecho publicable, éste pasará a ser el centro de su teoría.
 
 Corolario.
 
-• Y, a la vez, su teoría se convertirá en el centro de todo su pensamiento científico.
+- Y, a la vez, su teoría se convertirá en el centro de todo su pensamiento científico.
 
 LEY DE GRELB SOBRE LOS ERRORES.
 
-• En cualquier serie de cálculos, los errores tienden a aparecer justo en el punto opuesto a aquel en el que usted empieza a comprobar si existen errores.
+- En cualquier serie de cálculos, los errores tienden a aparecer justo en el punto opuesto a aquel en el que usted empieza a comprobar si existen errores.
 
 AXIOMA DE ROBERT.
 
-• Lo único que existe son los errores.
+- Lo único que existe son los errores.
 
 COROLARIO DE BERMAN AL AXIOMA DE ROBERT.
 
-• El error de un hombre es la información de otro.
+- El error de un hombre es la información de otro.
 
 LEY DE LA FALTA DE FIABILIDAD.
 
-• Errar es humano, pero para liar las cosas de verdad, hace falta un ordenador.
+- Errar es humano, pero para liar las cosas de verdad, hace falta un ordenador.
 
 REGLA DE SUTIN.
 
-• De todas las cosas que se pueden hacer con un ordenador, las más inútiles son las más divertidas.
+- De todas las cosas que se pueden hacer con un ordenador, las más inútiles son las más divertidas.
 
 LEY DE GREER.
 
-• Un programa de ordenador hace lo que usted le ordena que haga, no lo que quiere usted que haga.
+- Un programa de ordenador hace lo que usted le ordena que haga, no lo que quiere usted que haga.
 
 AXIOMAS INFORMÁTICOS DE McCRISTY.
 
@@ -1732,11 +1663,11 @@ Los fallos de software se pueden corregir sólo cuando la industria considera qu
 
 AXIOMA INFORMÁTICO DE LEO BEISER.
 
-• Cuando archive algo en la memoria, acuérdese de donde lo guardo.
+- Cuando archive algo en la memoria, acuérdese de donde lo guardo.
 
 NORMA DE STEINBACH PARA LOS SISTEMAS DE PROGRAMACIÓN.
 
-• No trate nunca de verificar una condición de error que no sepa manejar.
+- No trate nunca de verificar una condición de error que no sepa manejar.
 
 ## Academiología.
 
@@ -1754,15 +1685,15 @@ Si, por casualidad, consigue tener dos clases seguidas, se impartirán en los do
 
 PRIMERA LEY DE LOS EXÁMENES FINALES.
 
-• Las pilas de la calculadora de bolsillo, que han durado todo el curso, se agotarán durante el examen final de matemáticas.
+- Las pilas de la calculadora de bolsillo, que han durado todo el curso, se agotarán durante el examen final de matemáticas.
 
 Corolario.
 
-• Si lleva pilas de recambio, serán defectuosos.
+- Si lleva pilas de recambio, serán defectuosos.
 
 SEGUNDA LEY DE LOS EXÁMENES FINALES.
 
-• En su examen final más difícil, la compañera de clase más maciza y atractiva se sentará a su lado por primera vez en todo el curso.
+- En su examen final más difícil, la compañera de clase más maciza y atractiva se sentará a su lado por primera vez en todo el curso.
 
 LEYES DEL TERROR APLICADO.
 
@@ -1788,11 +1719,11 @@ Si tiene que redactar un trabajo en casa, se le olvidará donde vive.
 
 LEY DE NATALIE SOBRE EL ÁLGEBRA.
 
-• No lo comprenderá hasta después del examen.
+- No lo comprenderá hasta después del examen.
 
 LEY DE SEIT SOBRE LA EDUCACIÓN SUPERIOR.
 
-• La única asignatura que le queda para licenciarse no se impartirá durante el segundo cuatrimestre.
+- La única asignatura que le queda para licenciarse no se impartirá durante el segundo cuatrimestre.
 
 NORMAS DE ROMINGER PARA LOS ESTUDIANTES.
 
@@ -1802,19 +1733,19 @@ NORMAS DE ROMINGER PARA LOS ESTUDIANTES.
 
 LEY DE MURPHY DEL TRABAJO DE FIN DE CURSO.
 
-• El libro o la revista fundamental para terminar su trabajo de fin de curso será el único que no esté en la biblioteca.
+- El libro o la revista fundamental para terminar su trabajo de fin de curso será el único que no esté en la biblioteca.
 
 Corolario.
 
-• Si no falta, le habrán arrancado las páginas más importante.
+- Si no falta, le habrán arrancado las páginas más importante.
 
 LEY DE DUGGAN SOBRE LA INVESTIGACIÓN ERUDITA.
 
-• No podrá determinar la fuente de la cita más valiosa.
+- No podrá determinar la fuente de la cita más valiosa.
 
 Corolario.
 
-• La fuente de la cita que usted olvidó consignar, aparecerá en la crítica más desfavorable a su trabajo.
+- La fuente de la cita que usted olvidó consignar, aparecerá en la crítica más desfavorable a su trabajo.
 
 REGLAS DE ROMINGER PARA LOS ENSEÑANTES.
 
@@ -1826,27 +1757,27 @@ REGLAS DE ROMINGER PARA LOS ENSEÑANTES.
 
 LEY DE HARDIN.
 
-• Nunca se puede hacer solamente una cosa.
+- Nunca se puede hacer solamente una cosa.
 
 LEY DE HETCH.
 
-• No hay mejor momento que el presente para que retrase lo que no quiere hacer.
+- No hay mejor momento que el presente para que retrase lo que no quiere hacer.
 
 LEMA DE GROSSMAN.
 
-• Cualquier cosa que vale la pena hacer, ayer también valía la pena hacerla.
+- Cualquier cosa que vale la pena hacer, ayer también valía la pena hacerla.
 
 DERIVADO DE KNAGG DE LA LEY DE MURPHY.
 
-• Cuanto más complicado y grandioso sea un plan, mayores serán las posibilidades de que se vaya al traste.
+- Cuanto más complicado y grandioso sea un plan, mayores serán las posibilidades de que se vaya al traste.
 
 AXIOMA DE DEHAY.
 
-• Los trabajos sencillos siempre se dejan para después, porque ya habrá tiempo de hacerlos.
+- Los trabajos sencillos siempre se dejan para después, porque ya habrá tiempo de hacerlos.
 
 LEY DE WESTHERN SOBRE EL JUICIO CONDICIONAL.
 
-• La suposición es la madre de todas las pifias.
+- La suposición es la madre de todas las pifias.
 
 REGLAS DE RAY SOBRE PRECISIÓN.
 
@@ -1858,11 +1789,11 @@ Corte con hacha.
 
 EXTENSIÓN DE EINSTEIN A LA LEY DE MURPHY.
 
-• Un proyecto de trabajo se expande hasta llenar todo el espacio disponible.
+- Un proyecto de trabajo se expande hasta llenar todo el espacio disponible.
 
 Corolario.
 
-• No importa lo grande que sea el espacio. Si hay dos proyectos que deben hacerse a la vez, los dos requerirán la misma porción de espacio de trabajo.
+- No importa lo grande que sea el espacio. Si hay dos proyectos que deben hacerse a la vez, los dos requerirán la misma porción de espacio de trabajo.
 
 CUATRO PRINCIPIOS DE TALLER.
 
@@ -1876,35 +1807,35 @@ CUATRO PRINCIPIOS DE TALLER.
 
 LEY DE LAS REPARACIONES.
 
-• Si no se ha roto, no lo podrá arreglar.
+- Si no se ha roto, no lo podrá arreglar.
 
 REGLA DEL PENSAMIENTO INTELIGENTE.
 
-• Guarde todas las piezas.
+- Guarde todas las piezas.
 
 LEY DE SMITH SOBRE LA REPARACIÓN DE ORDENADORES.
 
-• Los orificios de acceso tendrán medio milímetro menos de diámetro.
+- Los orificios de acceso tendrán medio milímetro menos de diámetro.
 
 Corolario.
 
-• Los que tengan el diámetro adecuado, no estarán en el sitio que les corresponda.
+- Los que tengan el diámetro adecuado, no estarán en el sitio que les corresponda.
 
 LEY DE JARUK.
 
-• Si fuera más barato comprar uno nuevo, la empresa insistiría en arreglar el viejo.
+- Si fuera más barato comprar uno nuevo, la empresa insistiría en arreglar el viejo.
 
 DILEMA DE DEVRIES.
 
-• Si golpea al mismo tiempo dos teclas de la máquina de escribir, la letra que sale en el papel es la otra.
+- Si golpea al mismo tiempo dos teclas de la máquina de escribir, la letra que sale en el papel es la otra.
 
 TEORÍA DE LA SUPERVISIÓN SELECTIVA.
 
-• El único momento del día en que uno se apoya cómodamente en el respaldo de la silla y se relaja es cuando el jefe se da una vuelta por la oficina.
+- El único momento del día en que uno se apoya cómodamente en el respaldo de la silla y se relaja es cuando el jefe se da una vuelta por la oficina.
 
 OBSERVACIÓN DE LAUNEGAYER.
 
-• Es más fácil hacer preguntas estúpidas que corregir errores estúpidos.
+- Es más fácil hacer preguntas estúpidas que corregir errores estúpidos.
 
 LEYES DE GORE SOBRE LA INGENIERÍA DE DISEÑO.
 
@@ -1940,23 +1871,23 @@ Los errores correspondientes aparecerán en la carta mientras la esté leyendo e
 
 LEY DE BOGOVICH.
 
-• El que duda, probablemente tiene razón.
+- El que duda, probablemente tiene razón.
 
 LEY DE BRINTALL.
 
-• Si le dan dos órdenes contradictorias, obedezca las dos.
+- Si le dan dos órdenes contradictorias, obedezca las dos.
 
 LEY DE JOHNSON.
 
-• El número de enfermedades menores entre los empleados es inversamente proporcional a la salud de la empresa.
+- El número de enfermedades menores entre los empleados es inversamente proporcional a la salud de la empresa.
 
 PRINCIPIO DE TILLIS SOBRE ORGANIZACIÓN.
 
-• Si lo archiva, sabrá donde está, pero nunca le hará falta. Si no lo archiva, lo necesitará pero nunca sabrá donde se encuentra.
+- Si lo archiva, sabrá donde está, pero nunca le hará falta. Si no lo archiva, lo necesitará pero nunca sabrá donde se encuentra.
 
 LEY DE SANDILAND.
 
-• El tiempo libre del que puede disponer de una forma imprevista, lo malgastará inevitablemente.
+- El tiempo libre del que puede disponer de una forma imprevista, lo malgastará inevitablemente.
 
 LEY DE DOANE SOBRE LA DEMORA.
 
@@ -1966,11 +1897,11 @@ LEY DE DOANE SOBRE LA DEMORA.
 
 LEY DE SCOTT SOBRE LOS NEGOCIOS.
 
-• No vaya nunca por el pasillo de su empresa sin llevar un papel en la mano.
+- No vaya nunca por el pasillo de su empresa sin llevar un papel en la mano.
 
 LEY DE EDDIE SOBRE LOS NEGOCIOS.
 
-• No negocie nada nunca antes de las diez de la mañana ni después de las cuatro de la tarde. Antes de las diez, pensarán que está muy impaciente y después de las cuatro, que está desesperado.
+- No negocie nada nunca antes de las diez de la mañana ni después de las cuatro de la tarde. Antes de las diez, pensarán que está muy impaciente y después de las cuatro, que está desesperado.
 
 TABLA DE EXCUSAS ÚTILES PARA LA OFICINA.
 
@@ -2000,45 +1931,45 @@ TABLA DE EXCUSAS ÚTILES PARA LA OFICINA.
 
 LEY DE CONOR.
 
-• Si hay un documento confidencial, alguien se lo dejará en la fotocopiadora.
+- Si hay un documento confidencial, alguien se lo dejará en la fotocopiadora.
 
 LEY DE DRUMMOND SOBRE LA CONTRATACIÓN DE PERSONAL.
 
-• El curriculum ideal llegará a sus manos un día después de que se haya cubierto la plaza.
+- El curriculum ideal llegará a sus manos un día después de que se haya cubierto la plaza.
 
 LEY DE GLUCK.
 
-• Dé las vueltas que dé antes de entrar en el ascensor, los botones siempre estarán a su espalda.
+- Dé las vueltas que dé antes de entrar en el ascensor, los botones siempre estarán a su espalda.
 
 LEY DE LYNCH.
 
-• En cuanto deje la cartera en el suelo, llegará el ascensor.
+- En cuanto deje la cartera en el suelo, llegará el ascensor.
 
 FOX SOBRE LOS QUE SIEMPRE DICEN QUE SÍ AL JEFE.
 
-• Vale la pena intrigar para ser portador de buenas noticias.
+- Vale la pena intrigar para ser portador de buenas noticias.
 
 Corolario.
 
-• No esté en el edificio cuando lleguen las malas noticias.
+- No esté en el edificio cuando lleguen las malas noticias.
 
 LEY DE PINTO.
 
-• Si le hace a alguien un favor, le tendrá que hacer muchos más.
+- Si le hace a alguien un favor, le tendrá que hacer muchos más.
 
 AXIOMA ORNITOLÓGICO DE LANGSAM.
 
-• Es difícil elevarse como las águilas cuando se trabaja con pavos.
+- Es difícil elevarse como las águilas cuando se trabaja con pavos.
 
 ## Sistemántica.
 
 TEOREMA FUNDAMENTAL.
 
-• Los nuevos sistemas generan nuevos problemas.
+- Los nuevos sistemas generan nuevos problemas.
 
 Corolario.
 
-• No es aconsejable multiplicar innecesariamente el número de sistemas.
+- No es aconsejable multiplicar innecesariamente el número de sistemas.
 
 PRINCIPIO DE LA INCERTIDUMBRE GENERALIZADA.
 
@@ -2052,23 +1983,23 @@ Formulaciones alternativas:
 
 Corolario: Teorema de la No Aditividad del Comportamiento de los Sistemas.
 
-• Un sistema grande, que se ha creado aumentando las dimensiones de un sistema pequeño, no se comporta de la misma manera que el sistema más pequeño
+- Un sistema grande, que se ha creado aumentando las dimensiones de un sistema pequeño, no se comporta de la misma manera que el sistema más pequeño
 
 ENGAÑO DEL FUNCIONARIO.
 
-• Las personas que trabajan con sistemas, no hacen lo que los sistemas dicen que están haciendo.
+- Las personas que trabajan con sistemas, no hacen lo que los sistemas dicen que están haciendo.
 
 FALACIA OPERATIVA.
 
-• El propio sistema no hace lo que dice que está haciendo.
+- El propio sistema no hace lo que dice que está haciendo.
 
 PRIMERA LEY DE LA SISTEMÁNTICA.
 
-• Está demostrado que un sistema complejo, que funciona, se ha creado siempre a partir de un sistema simple que funciona.
+- Está demostrado que un sistema complejo, que funciona, se ha creado siempre a partir de un sistema simple que funciona.
 
 SEGUNDA LEY DE LA SISTEMÁNTICA.
 
-• Un sistema complejo diseñado partiendo de cero, no funciona nunca y no se puede modificar para que funcione. Hay que volver a empezar, partiendo de un sistema sencillo que funcione.
+- Un sistema complejo diseñado partiendo de cero, no funciona nunca y no se puede modificar para que funcione. Hay que volver a empezar, partiendo de un sistema sencillo que funcione.
 
 POSTULADOS FUNDAMENTALES DE LA TEORÍA AVANZADA DE SISTEMAS.
 
@@ -2082,13 +2013,13 @@ POSTULADOS FUNDAMENTALES DE LA TEORÍA AVANZADA DE SISTEMAS.
 
 PRINCIPIO DE CHATELIER
 
-• Los sistemas complejos tienden a oponerse a sus propias funciones.
+- Los sistemas complejos tienden a oponerse a sus propias funciones.
 
 ## Murphyología situacional.
 
 LEY DE DRAZEN SOBRE LA RESTITUCIÓN.
 
-• El tiempo necesario para rectificar una situación es inversamente proporcional al tiempo que se tardó en crearla.
+- El tiempo necesario para rectificar una situación es inversamente proporcional al tiempo que se tardó en crearla.
 
 Ejemplo número 1:
 
@@ -2100,47 +2031,47 @@ Hace falta más tiempo para perder x kilos que para ganarlos.
 
 LEY DE LOS AUTOSERVICIOS.
 
-• El plato que le llamó la atención desde que se puso usted en la cola se lo llevará el que va delante de usted.
+- El plato que le llamó la atención desde que se puso usted en la cola se lo llevará el que va delante de usted.
 
 LEY DE DAVIS.
 
-• Si el titular de un periódico es una pregunta, la respuesta es "no".
+- Si el titular de un periódico es una pregunta, la respuesta es "no".
 
 OBSERVACIÓN DE ETORRE.
 
-• La otra cola es más rápida.
+- La otra cola es más rápida.
 
 VARIACIÓN DE O’BRIEN A LA OBSERVACIÓN DE ETORRE.
 
-• Si cambia de cola, la que acaba de dejar empezará a avanzar más deprisa que la nueva.
+- Si cambia de cola, la que acaba de dejar empezará a avanzar más deprisa que la nueva.
 
 Corolario de Kenton.
 
-• Si vuelve a la primera, lo único que conseguirá es que se produzca un tumulto y todo el mundo se mosquee con usted.
+- Si vuelve a la primera, lo único que conseguirá es que se produzca un tumulto y todo el mundo se mosquee con usted.
 
 PRINCIPIO DE LA ESPERA.
 
-• Cuanto más tiempo lleva en una cola, más probabilidades hay de que se haya equivocado de ventanilla.
+- Cuanto más tiempo lleva en una cola, más probabilidades hay de que se haya equivocado de ventanilla.
 
 REGLA DE FLUGG.
 
-• El cajero más lento siempre está en la caja rápida.
+- El cajero más lento siempre está en la caja rápida.
 
 REGLA DE WITTEN.
 
-• Siempre que se corte las uñas, le picará algo una hora después.
+- Siempre que se corte las uñas, le picará algo una hora después.
 
 LEY DE STORRY SOBRE EL PROCESAMIENTO CRIMINAL.
 
-• El grado de culpabilidad es directamente proporcional a la vehemencia con que se niega todo.
+- El grado de culpabilidad es directamente proporcional a la vehemencia con que se niega todo.
 
 OBSERVACIÓN DE TRACY SOBRE EL TIEMPO.
 
-• Los buenos momentos terminan enseguida. Los malos se prolongan hasta la eternidad.
+- Los buenos momentos terminan enseguida. Los malos se prolongan hasta la eternidad.
 
 LEY DE NORRIS.
 
-• La ola de calor aparece justo cuando se estropea el aire acondicionado de la oficina.
+- La ola de calor aparece justo cuando se estropea el aire acondicionado de la oficina.
 
 LEYES DEL REVERENDO CHICHESTER.
 
@@ -2152,21 +2083,21 @@ LEYES DEL REVERENDO CHICHESTER.
 
 LEY DEL EQUILIBRIO.
 
-• Los malos hábitos inutilizan a los buenos.
+- Los malos hábitos inutilizan a los buenos.
 
 Ejemplo: El zumo de naranja que se tomó para desayunar, quedará neutralizado por el cigarrillo que se fumó después y la chocolatina que se comió a media mañana.
 
 LEY DE JILLY.
 
-• Cuanto más horrendo sea el corte de pelo, más despacio le crecerá.
+- Cuanto más horrendo sea el corte de pelo, más despacio le crecerá.
 
 LEY DE JONES SOBRE LA IMPRENTA.
 
-• Hay errores que pasan desapercibidos hasta que el libro está en la imprenta.
+- Hay errores que pasan desapercibidos hasta que el libro está en la imprenta.
 
 Corolario de Block.
 
-• Cuando el autor recibe las pruebas y abre el libro al azar, se encuentra con el error más garrafal.
+- Cuando el autor recibe las pruebas y abre el libro al azar, se encuentra con el error más garrafal.
 
 LEY DE WALLACE WOOD SOBRE EL DIBUJO.
 
@@ -2178,11 +2109,11 @@ LEY DE WALLACE WOOD SOBRE EL DIBUJO.
 
 LEY DE HUTCHINSON.
 
-• Si una situación exige toda su atención, al mismo tiempo sucederá algo que le distraerá por completo.
+- Si una situación exige toda su atención, al mismo tiempo sucederá algo que le distraerá por completo.
 
 LEY DE FULLER SOBRE EL PERIODISMO.
 
-• Cuanto más lejos sucede un accidente, mayor número de muertos y heridos hace falta para que sea noticia.
+- Cuanto más lejos sucede un accidente, mayor número de muertos y heridos hace falta para que sea noticia.
 
 LEYES DE LA VERACIDAD EN LOS REPORTAJES.
 
@@ -2192,11 +2123,11 @@ LEYES DE LA VERACIDAD EN LOS REPORTAJES.
 
 LEY DE LA CARTA.
 
-• La mejor manera de inspirar nuevas ideas es sellar las cartas con lacre.
+- La mejor manera de inspirar nuevas ideas es sellar las cartas con lacre.
 
 LEY DE JONES SOBRE LOS ZOOLÓGICOS Y MUSEOS.
 
-• Los ejemplares más interesantes no tienen nombre.
+- Los ejemplares más interesantes no tienen nombre.
 
 LEYES DEL FOTÓGRAFO.
 
@@ -2208,47 +2139,47 @@ LEYES DEL FOTÓGRAFO.
 
 LEY DE DEDERA.
 
-• En un edificio de tres plantas con un único ascensor, éste se encontrará en otro piso nueve de cada diez veces.
+- En un edificio de tres plantas con un único ascensor, éste se encontrará en otro piso nueve de cada diez veces.
 
 LEY DE SIR WALTER.
 
-• La tendencia del humo de un cigarrillo, parrilla, fuego de campamento, etc., a dirigirse a la cara de una persona es directamente proporcional a la sensibilidad de esa persona al humo.
+- La tendencia del humo de un cigarrillo, parrilla, fuego de campamento, etc., a dirigirse a la cara de una persona es directamente proporcional a la sensibilidad de esa persona al humo.
 
 LEY DE KAUFFMAN SOBRE LOS AEROPUERTOS.
 
-• La distancia a la puerta de embarque es inversamente proporcional al tiempo que se dispone para no perder el vuelo.
+- La distancia a la puerta de embarque es inversamente proporcional al tiempo que se dispone para no perder el vuelo.
 
 LEY DE ROGERS.
 
-• En cuanto la azafata sirve el café, el avión entra en zona de turbulencias.
+- En cuanto la azafata sirve el café, el avión entra en zona de turbulencias.
 
 Explicación de Davis a la Ley de Rogers.
 
-• Servir café en un avión produce turbulencias.
+- Servir café en un avión produce turbulencias.
 
 PRINCIPIO BÁSICO DEL EQUIPAJE.
 
-• Se ponga junto a la cinta transportadora que se ponga, su equipaje vendrá por otra.
+- Se ponga junto a la cinta transportadora que se ponga, su equipaje vendrá por otra.
 
 AXIOMA DE ANGUS SOBRE CAMBIO DE MONEDA.
 
-• Cuando se viaja al extranjero, el tipo de cambio mejorará mucho al día siguiente de haber comprado las divisas.
+- Cuando se viaja al extranjero, el tipo de cambio mejorará mucho al día siguiente de haber comprado las divisas.
 
 Corolario.
 
-• Al regresar a casa, el tipo de cambio bajará de nuevo en cuanto se hayan cambiado todas las divisas sobrantes.
+- Al regresar a casa, el tipo de cambio bajará de nuevo en cuanto se hayan cambiado todas las divisas sobrantes.
 
 LEY DE WAGNER SOBRE LAS RETRANSMISIONES DEPORTIVAS.
 
-• Cuando la cámara se centra en un atleta, éste escupirá, se hurgará la nariz o se rascará.
+- Cuando la cámara se centra en un atleta, éste escupirá, se hurgará la nariz o se rascará.
 
 LEY DE CROSBY.
 
-• Se puede saber lo malo que es un musical por el número de veces que el coro grita "¡Amor!".
+- Se puede saber lo malo que es un musical por el número de veces que el coro grita "¡Amor!".
 
 LEY DE FULTON SOBRE LA GRAVEDAD.
 
-• El esfuerzo para recoger al vuelo un objeto que se puede romper, producirá un desastre mucho mayor que dejarlo caer.
+- El esfuerzo para recoger al vuelo un objeto que se puede romper, producirá un desastre mucho mayor que dejarlo caer.
 
 LEY AVANZADA DE VILE SOBRE EL ARTE DE HACER COLA.
 
@@ -2266,7 +2197,7 @@ LEY AVANZADA DE VILE SOBRE EL ARTE DE HACER COLA.
 
 LEY DE HOWDEN.
 
-• Sólo se acordará de que tiene que echar una carta cuando no haya ningún buzón cerca.
+- Sólo se acordará de que tiene que echar una carta cuando no haya ningún buzón cerca.
 
 LEYES DEL REPARTO DE CORREOS.
 
@@ -2276,21 +2207,21 @@ La publicidad siempre llega el mismo día en que la enviaron.
 
 LEY DE WRIGHT.
 
-• Un médico puede enterrar sus errores, pero un arquitecto sólo le puede aconsejar al cliente que plante geranios.
+- Un médico puede enterrar sus errores, pero un arquitecto sólo le puede aconsejar al cliente que plante geranios.
 
 LEY DE RUSH SOBRE LA GRAVEDAD.
 
-• Cuando una máquina de tabaco o de chicle le devuelve el cambio, los duros se le caerán a los pies, mientras que las monedas de veinticinco rodarán lejos de su vista.
+- Cuando una máquina de tabaco o de chicle le devuelve el cambio, los duros se le caerán a los pies, mientras que las monedas de veinticinco rodarán lejos de su vista.
 
 LEY DE REYNOLD SOBRE LA CLIMATOLOGÍA.
 
-• La velocidad del tiempo es directamente proporcional al coste de la factura que acaba de pagar en la peluquería.
+- La velocidad del tiempo es directamente proporcional al coste de la factura que acaba de pagar en la peluquería.
 
 ## Sociomurphyología (humanismo).
 
 LEY DE SHIRLEY.
 
-• La mayor parte de las personas se merecen a su pareja.
+- La mayor parte de las personas se merecen a su pareja.
 
 LEYES DE ARTHUR SOBRE EL AMOR.
 
@@ -2302,47 +2233,47 @@ LEYES DE ARTHUR SOBRE EL AMOR.
 
 LEY DE LAS PECULIARIDADES HUMANAS.
 
-• Todo el mundo quiere que le miren, pero nadie quiere que le observen.
+- Todo el mundo quiere que le miren, pero nadie quiere que le observen.
 
 LEY DE THOMAS SOBRE LA FELICIDAD EN EL MATRIMONIO.
 
-• La duración de un matrimonio es inversamente proporcional a la cantidad gastada en la boda.
+- La duración de un matrimonio es inversamente proporcional a la cantidad gastada en la boda.
 
 PRIMERA LEY DE MURPHY SOBRE LOS MARIDOS.
 
-• La primera vez que salga a la calle después del cumpleaños de su esposa, verá el regalo que le compró con un descuento del 50 por 100.
+- La primera vez que salga a la calle después del cumpleaños de su esposa, verá el regalo que le compró con un descuento del 50 por 100.
 
 Corolario.
 
-• Si ella va con usted, dará por sentado que lo compró porque era muy barato.
+- Si ella va con usted, dará por sentado que lo compró porque era muy barato.
 
 SEGUNDA LEY DE MURPHY SOBRE LOS MARIDOS.
 
-• Los regalos que usted le compra a su esposa nunca son tan aparentes como los que su vecino le compra a la suya.
+- Los regalos que usted le compra a su esposa nunca son tan aparentes como los que su vecino le compra a la suya.
 
 TERCERA LEY DE MURPHY SOBRE LOS MARIDOS.
 
-• Los cachivaches que atesora su esposa, siempre estarán colocados encima de los que atesora usted.
+- Los cachivaches que atesora su esposa, siempre estarán colocados encima de los que atesora usted.
 
 PRIMERA LEY DE MURPHY SOBRE LAS ESPOSAS.
 
-• Si le pide a su marido que compre cinco cosas en la tienda y luego añade otra más que se le acaba de ocurrir, se le olvidarán dos de las cinco primeras.
+- Si le pide a su marido que compre cinco cosas en la tienda y luego añade otra más que se le acaba de ocurrir, se le olvidarán dos de las cinco primeras.
 
 SEGUNDA LEY DE MURPHY SOBRE LAS ESPOSAS.
 
-• Su marido siempre sale más favorecido en las fotos que le hace usted que usted en las que le hace él.
+- Su marido siempre sale más favorecido en las fotos que le hace usted que usted en las que le hace él.
 
 TERCERA LEY DE MURPHY SOBRE LAS ESPOSAS.
 
-• Haga la división que haga de las tareas domésticas, a su marido siempre le tocarán las más sencillas.
+- Haga la división que haga de las tareas domésticas, a su marido siempre le tocarán las más sencillas.
 
 TEORÍA DE JANA SOBRE EL AMOR.
 
-• En el amor, la mujer nunca consigue lo que espera y el hombre nunca espera lo que consigue.
+- En el amor, la mujer nunca consigue lo que espera y el hombre nunca espera lo que consigue.
 
 REGLA SOBRE LOS COMPAÑEROS DE CAMA.
 
-• El que ronca es el que se duerme primero.
+- El que ronca es el que se duerme primero.
 
 LEYES (asexuadas) DE GILESON SOBRE LAS EXPECTATIVAS.
 
@@ -2352,31 +2283,31 @@ LEYES (asexuadas) DE GILESON SOBRE LAS EXPECTATIVAS.
 
 PREMISAS LÓGICAS DE COLVARD.
 
-• La probabilidad de que ocurra cualquier cosa es del 50 por 100. O sucede o no sucede.
+- La probabilidad de que ocurra cualquier cosa es del 50 por 100. O sucede o no sucede.
 
 Comentario desmedido de Colvard.
 
-• Esto es cierto, especialmente, en el caso de las mujeres.
+- Esto es cierto, especialmente, en el caso de las mujeres.
 
 CREDO DEL AGRICULTOR.
 
-• Siembra tu amor el sábado por la noche y... reza el domingo para que se pierda la cosecha.
+- Siembra tu amor el sábado por la noche y... reza el domingo para que se pierda la cosecha.
 
 PRINCIPIO DE RUBY SOBRE LOS ENCUENTROS.
 
-• La probabilidad de que se encuentre con un conocido aumenta cuando esté en compañía de alguien con quien no quiere que le vean.
+- La probabilidad de que se encuentre con un conocido aumenta cuando esté en compañía de alguien con quien no quiere que le vean.
 
 LAMENTO DE CHEIT.
 
-• Si ayuda a un amigo con problemas, se acordará de usted con toda seguridad.. la próxima vez que los tenga.
+- Si ayuda a un amigo con problemas, se acordará de usted con toda seguridad.. la próxima vez que los tenga.
 
 Corolario de Denniston.
 
-• Si hace algo bueno una vez, alguien le pedirá que lo repita.
+- Si hace algo bueno una vez, alguien le pedirá que lo repita.
 
 LEY DE MASON SOBRE LA SINERGIA.
 
-• El día que uno vendería su alma a cualquier precio, sobran almas.
+- El día que uno vendería su alma a cualquier precio, sobran almas.
 
 OBSERVACIONES DE RON PARA ADOLESCENTES.
 
@@ -2386,45 +2317,45 @@ OBSERVACIONES DE RON PARA ADOLESCENTES.
 
 LEY DE SCHRIMPTON SOBRE LA OPORTUNIDAD DE LOS ADOLESCENTES.
 
-• Cuando la oportunidad llame a su puerta, tendrá los auriculares puestos.
+- Cuando la oportunidad llame a su puerta, tendrá los auriculares puestos.
 
 LEMA DEL PROFESOR BLOCK.
 
-• Perdona y recuerda.
+- Perdona y recuerda.
 
 LEY DE JACOB.
 
-• Errar es humano. Echarle la culpa a otro es más humano todavía.
+- Errar es humano. Echarle la culpa a otro es más humano todavía.
 
 CONSEJO DE EDELSTEIN.
 
-• No se preocupe por lo que otros piensen de usted. Están demasiado ocupados preocupándose por lo que usted piensa de ellos.
+- No se preocupe por lo que otros piensen de usted. Están demasiado ocupados preocupándose por lo que usted piensa de ellos.
 
 LEY DE BLOCKAGE.
 
-• El que ríe el último... probablemente lo hace porque no ha entendido el chiste.
+- El que ríe el último... probablemente lo hace porque no ha entendido el chiste.
 
 PRINCIPIO DE BEIFELD.
 
 La probabilidad de que un hombre conozca a una joven receptiva y deseable aumenta en proporción piramidal cuando está en compañía de:
 
-• Otra joven.
+- Otra joven.
 
-• Su esposa.
+- Su esposa.
 
-• Un amigo más guapo y con dinero.
+- Un amigo más guapo y con dinero.
 
 PRIMERA LEY DE SOCIOGENÉTICA.
 
-• El celibato no es hereditario.
+- El celibato no es hereditario.
 
 LEY DE HARTLEY.
 
-• Nunca se acueste con nadie que esté más loco que usted.
+- Nunca se acueste con nadie que esté más loco que usted.
 
 LEY DE BECKHAP.
 
-• Belleza por cerebro igual a constante.
+- Belleza por cerebro igual a constante.
 
 POSTULADOS DE PARDO.
 
@@ -2436,103 +2367,103 @@ POSTULADOS DE PARDO.
 
 EXTENSIÓN DE STEINKOPFF AL PRIMER POSTULADO DE PARDO.
 
-• Las cosas buenas de la vida también producen cáncer a las ratas de laboratorio y tienen impuestos escandalosos.
+- Las cosas buenas de la vida también producen cáncer a las ratas de laboratorio y tienen impuestos escandalosos.
 
 LEY DE PARKER.
 
-• La belleza es interior. La fealdad aflora rápidamente a la superficie.
+- La belleza es interior. La fealdad aflora rápidamente a la superficie.
 
 LEY DEL CAPITÁN PENNY.
 
-• Podrá engañar algunas veces a todo el mundo, y a algunas personas siempre. Pero nunca podrá engañar a MAMÁ.
+- Podrá engañar algunas veces a todo el mundo, y a algunas personas siempre. Pero nunca podrá engañar a MAMÁ.
 
 LEY DE KATZ.
 
-• Los hombres y las naciones actúan razonablemente cuando ya han agotado todas las otras posibilidades.
+- Los hombres y las naciones actúan razonablemente cuando ya han agotado todas las otras posibilidades.
 
 LEY DE PARKER SOBRE LAS DECLARACIONES POLÍTICAS.
 
-• La veracidad de cualquier proposición no tiene nada que ver con su credibilidad y viceversa.
+- La veracidad de cualquier proposición no tiene nada que ver con su credibilidad y viceversa.
 
 AXIOMA DEL SEÑOR COLE.
 
-• La cantidad total de inteligencia del planeta permanece constante. La población, sin embargo, sigue aumentando.
+- La cantidad total de inteligencia del planeta permanece constante. La población, sin embargo, sigue aumentando.
 
 PLAGIO DE STEELE A LA FILOSOFÍA DE ALGUIEN.
 
-• Todos deberíamos creer en algo. Yo creo que me tomaré otra copa.
+- Todos deberíamos creer en algo. Yo creo que me tomaré otra copa.
 
 LA CONSTANTE DE KENNEDY.
 
-• No se enfade, vénguese.
+- No se enfade, vénguese.
 
 LEMA DE CANADA BILL JONES.
 
-• Es un desatino moral permitir que los primos conserven su dinero.
+- Es un desatino moral permitir que los primos conserven su dinero.
 
 LEMA DE JONES.
 
-• Los amigos van y vienen, pero los enemigos se amontonan.
+- Los amigos van y vienen, pero los enemigos se amontonan.
 
 ANEXO DE McCLAUGHRY AL LEMA DE JONES.
 
-• Si quiere tener un enemigo, haga un favor a alguien.
+- Si quiere tener un enemigo, haga un favor a alguien.
 
 LEY DE VIQUE.
 
-• Un hombre sin religión es como un pez sin bicicleta.
+- Un hombre sin religión es como un pez sin bicicleta.
 
 LEY DE HEIDI.
 
-• La liberación de la mujer no fue tal.
+- La liberación de la mujer no fue tal.
 
 OBSERVACIÓN DE DOOLEY.
 
-• Fíjese en todo el mundo, pero sea usted el que corte el bacalao.
+- Fíjese en todo el mundo, pero sea usted el que corte el bacalao.
 
 LEY DE ZAPPA.
 
-• Hay dos cosas en la tierra que son universales: el hidrógeno y la estupidez.
+- Hay dos cosas en la tierra que son universales: el hidrógeno y la estupidez.
 
 RECORDATORIO DE GRELB.
 
-• El 80 por 100 de las personas se consideran mejores conductores que la media.
+- El 80 por 100 de las personas se consideran mejores conductores que la media.
 
 TEOREMA DE MUNDER.
 
-• Por cada "10" hay diez "1".
+- Por cada "10" hay diez "1".
 
 LEY DE DYKSTRA.
 
-• Cada uno de nosotros es la persona más rara del mundo según el otro.
+- Cada uno de nosotros es la persona más rara del mundo según el otro.
 
 LEY DE MEYERS.
 
-• En una situación social, lo más difícil de hacer suele ser lo correcto.
+- En una situación social, lo más difícil de hacer suele ser lo correcto.
 
 REGLA DEL CRITERIO AMPLIO.
 
-• La gente que se resiste al cambio no puede resistir cambiar a peor.
+- La gente que se resiste al cambio no puede resistir cambiar a peor.
 
 POSTULADO DE WEATHERWAX.
 
-• La vehemencia con que usted reacciona ante una información es inversamente proporcional a la exactitud de la misma.
+- La vehemencia con que usted reacciona ante una información es inversamente proporcional a la exactitud de la misma.
 
 PRINCIPIO DE LA IRA.
 
-• No intente nunca calmar a nadie que se encuentre en el punto máximo de la ira.
+- No intente nunca calmar a nadie que se encuentre en el punto máximo de la ira.
 
 LEY DE KENT SOBRE LA FAMILIA.
 
-• No cambie nunca los planes a causa del tiempo.
+- No cambie nunca los planes a causa del tiempo.
 
 LEY DE ELY.
 
-• Use la ropa adecuada y el papel se representará sólo.
+- Use la ropa adecuada y el papel se representará sólo.
 
 PRIMERA REGLA DE LA ACTUACIÓN.
 
-• Pase lo que pase, haga creer que fue intencionado.
+- Pase lo que pase, haga creer que fue intencionado.
 
 LEY DE LIVINGSTONE SOBRE LA GORDURA.
 
@@ -2542,15 +2473,15 @@ LEY DE LIVINGSTONE SOBRE LA GORDURA.
 
 Corolario.
 
-• Dos personas obesas, se conozcan o no, caminarán siempre la una al lado de la otra.
+- Dos personas obesas, se conozcan o no, caminarán siempre la una al lado de la otra.
 
 LEY DE LA LLEGADA.
 
-• Los que viven más cerca, llegan más tarde.
+- Los que viven más cerca, llegan más tarde.
 
 LEY DE ZADRA SOBRE LA BIOMECÁNICA.
 
-• La intensidad del picor es inversamente proporcional a la facilidad de acceso del punto en que se produce.
+- La intensidad del picor es inversamente proporcional a la facilidad de acceso del punto en que se produce.
 
 LAS TRES FRASES MENOS CREÍBLES.
 
@@ -2562,7 +2493,7 @@ LAS TRES FRASES MENOS CREÍBLES.
 
 LEY DE VOLTAIRE.
 
-• No hay nada más respetable que una maldad antigua.
+- No hay nada más respetable que una maldad antigua.
 
 ## Murphyología médica.
 
@@ -2594,23 +2525,23 @@ LEYES DE SMITH SOBRE EL BRIDGE.
 
 LEY DE THOMAS.
 
-• El que no quiere jugar es el que gana todas las manos.
+- El que no quiere jugar es el que gana todas las manos.
 
 RASGO DE HENRY SOBRE LA NATURALEZA HUMANA.
 
-• Nadie ama a un ganador que gana siempre.
+- Nadie ama a un ganador que gana siempre.
 
 LEY DE TODD.
 
-• Si todo sigue igual, usted perderá.
+- Si todo sigue igual, usted perderá.
 
 Corolario.
 
-• Si todo se pone a su favor, perderá lo mismo.
+- Si todo se pone a su favor, perderá lo mismo.
 
 LEY DE JENSEN.
 
-• Gane o pierda, perderá.
+- Gane o pierda, perderá.
 
 LEYES DE PORKINGHAM SOBRE LA PESCA.
 
@@ -2626,31 +2557,31 @@ Cuanto más sofisticado y caro sea su equipo, más probabilidades tiene de parar
 
 LEY DE MITCHELL PARA LOS FUTUROS ESCALADORES.
 
-• La montaña parece más empinada a medida que se acerca.
+- La montaña parece más empinada a medida que se acerca.
 
 Corolario de Frothingam.
 
-• Parece que la montaña esté más cerca de lo que está.
+- Parece que la montaña esté más cerca de lo que está.
 
 LEY DE SHEDENHELM SOBRE LA MARCHA EN MONTAÑA.
 
-• Todos los senderos tienen más tramos cuesta arriba que cuesta abajo, independientemente del sentido de la marcha.
+- Todos los senderos tienen más tramos cuesta arriba que cuesta abajo, independientemente del sentido de la marcha.
 
 LEY DEL MUS.
 
-• El compañero siempre tiene la culpa.
+- El compañero siempre tiene la culpa.
 
 LEY INDISCUTIBLE DE LOS CONTRATOS DEPORTIVOS.
 
-• Cuanto mayor es la cantidad que figura en el contrato, menos eficaz es la temporada siguiente.
+- Cuanto mayor es la cantidad que figura en el contrato, menos eficaz es la temporada siguiente.
 
 PRINCIPIO DE KNOX SOBRE LA CALIDAD DE LA ESTRELLA.
 
-• Cuando traspasan a una superestrella a su equipo favorito, se apaga. Cuando su equipo traspasa a un desconocido inútil, inmediatamente se eleva al estrellato.
+- Cuando traspasan a una superestrella a su equipo favorito, se apaga. Cuando su equipo traspasa a un desconocido inútil, inmediatamente se eleva al estrellato.
 
 LEY DE HERTZBERG PARA CAMINAR SOBRE EL ALA.
 
-• Nunca se suelte de donde esté agarrado hasta que no se haya agarrado a otra cosa.
+- Nunca se suelte de donde esté agarrado hasta que no se haya agarrado a otra cosa.
 
 LEYES DE DEAL SOBRE LA NAVEGACIÓN.
 
@@ -2662,19 +2593,19 @@ LEYES DE DEAL SOBRE LA NAVEGACIÓN.
 
 LAMENTO DEL HINCHA SABIO.
 
-• Los tontos entran precipitadamente... y consiguen los mejores asientos.
+- Los tontos entran precipitadamente... y consiguen los mejores asientos.
 
 REGLA DE BREDA.
 
-• En todos los espectáculos, las personas cuyos asientos están más lejos del pasillo son las que llegan tarde.
+- En todos los espectáculos, las personas cuyos asientos están más lejos del pasillo son las que llegan tarde.
 
 LEY DE MOSER SOBRE LOS DEPORTES ESPECTÁCULO.
 
-• Las jugadas emocionantes siempre suceden cuando usted está mirando el marcador o ha salido a comprar palomitas.
+- Las jugadas emocionantes siempre suceden cuando usted está mirando el marcador o ha salido a comprar palomitas.
 
 LEY DE BOB SOBRE LOS DEPORTES TELEVISADOS.
 
-• Si durante un partido cambia de un canal a otro para no ver los anuncios, en el segundo canal también habrá anuncios.
+- Si durante un partido cambia de un canal a otro para no ver los anuncios, en el segundo canal también habrá anuncios.
 
 LEYES DE MURRAY SOBRE LA PISTA.
 
@@ -2690,7 +2621,7 @@ LEYES DE MURRAY SOBRE LA PISTA.
 
 COMENTARIO DE LORD COHEN.
 
-• La viabilidad de una operación no es el mejor indicativo de sus resultados.
+- La viabilidad de una operación no es el mejor indicativo de sus resultados.
 
 LEYES DE TELESCO SOBRE LA ENFERMERÍA.
 
@@ -2706,79 +2637,79 @@ LEYES DE TELESCO SOBRE LA ENFERMERÍA.
 
 LEY DE BARACH.
 
-• Un alcohólico es aquel que bebe más que su médico.
+- Un alcohólico es aquel que bebe más que su médico.
 
 ADVERTENCIA DE MATZ.
 
-• Tenga cuidado con el médico que es muy hábil para salir de dificultades.
+- Tenga cuidado con el médico que es muy hábil para salir de dificultades.
 
 LEY DE SILVER SOBRE LOS MÉDICOS.
 
-• Nunca cicatriza bien.
+- Nunca cicatriza bien.
 
 REGLA DE MATZ SOBRE LAS MEDICINAS.
 
-• Una medicina es una sustancia que, cuando se inyecta a una rata, produce un informe científico.
+- Una medicina es una sustancia que, cuando se inyecta a una rata, produce un informe científico.
 
 AFORISMO DE COCHRANE.
 
 Antes de hacerse un análisis, decida que es lo que hará si sale:
 
-• positivo.
+- positivo.
 
-• negativo.
+- negativo.
 
 Si las dos respuestas son iguales, no se lo haga.
 
 LEY DE EDD SOBRE LA RADIOLOGÍA.
 
-• Cuanto más fría esté la placa de las radiografías, más se la pegarán al cuerpo.
+- Cuanto más fría esté la placa de las radiografías, más se la pegarán al cuerpo.
 
 PRECEPTO DE BERNSTEIN.
 
-• La flor nacional de los radiólogos es la evasiva.
+- La flor nacional de los radiólogos es la evasiva.
 
 ## Cortesía en carretera.
 
 LEY DE OLIVER SOBRE LA POSICIÓN.
 
-• Vaya donde vaya, ahí está.
+- Vaya donde vaya, ahí está.
 
 PRIMERA LEY DEL VIAJE.
 
-• Siempre se tarda más en ir que en volver.
+- Siempre se tarda más en ir que en volver.
 
 LEY DEL AVIÓN.
 
-• Cuando tiene que hacer un transbordo, si el avión en el que va lleva retraso, el otro no lo lleva.
+- Cuando tiene que hacer un transbordo, si el avión en el que va lleva retraso, el otro no lo lleva.
 
 LEY DE KELLY SOBRE LA NAVEGACIÓN AÉREA.
 
-• La información más importante de cualquier carta de navegación está en el doblez.
+- La información más importante de cualquier carta de navegación está en el doblez.
 
 LEY DEL ABUELO CHARNOK.
 
-• No sabrá lo que es blasfemar hasta que no aprenda a conducir.
+- No sabrá lo que es blasfemar hasta que no aprenda a conducir.
 
 LEY DE VILE SOBRE LA CARRETERA.
 
-• Su coche gasta más gasolina y aceite que el de los demás.
+- Su coche gasta más gasolina y aceite que el de los demás.
 
 PRINCIPIO DE PHILLIP.
 
-• Conducir un vehículo de cuatro ruedas significa simplemente que puede quedarse atascado en los lugares más inverosímiles.
+- Conducir un vehículo de cuatro ruedas significa simplemente que puede quedarse atascado en los lugares más inverosímiles.
 
 LEY DE HUMPHRIES SOBRE CICLISMO.
 
-• El camino más corto es el que tiene las cuestas más empinadas.
+- El camino más corto es el que tiene las cuestas más empinadas.
 
 LEY DEL CAMINO DE LA VIDA.
 
-• Si todo viene hacia usted, es que se ha equivocado de carril.
+- Si todo viene hacia usted, es que se ha equivocado de carril.
 
 LEYES DE ATHENA DE LA CORTESÍA AL VOLANTE.
 
-• Si permite que alguien se ponga delante de usted:
+- Si permite que alguien se ponga delante de usted:
 
 1. El coche de delante será el último en atravesar un paso a nivel y usted se quedará sin poder moverse hasta que termine de pasar un tren largo y lento; o
 
@@ -2786,43 +2717,43 @@ LEYES DE ATHENA DE LA CORTESÍA AL VOLANTE.
 
 POSTULADO DE LEMAR SOBRE EL APARCAMIENTO.
 
-• Si tuvo que dejar el coche a seis manzanas, encontrará dos huecos justo a la entrada del edificio.
+- Si tuvo que dejar el coche a seis manzanas, encontrará dos huecos justo a la entrada del edificio.
 
 LEY DE GRAY PARA LOS AUTOBUSES.
 
-• Un autobús que no llega, sólo aparecerá cuando el pasajero potencial haya ido andando hasta un punto tan cercano al destino que ya no merezca la pena coger el autobús.
+- Un autobús que no llega, sólo aparecerá cuando el pasajero potencial haya ido andando hasta un punto tan cercano al destino que ya no merezca la pena coger el autobús.
 
 LEY DE McKEE.
 
-• Cuando no tenga prisa, el semáforo se pondrá verde antes de para el coche.
+- Cuando no tenga prisa, el semáforo se pondrá verde antes de para el coche.
 
 LEY DE QUIGLEY.
 
-• Un coche y un camión que se van a cruzar en una carretera desierta, se encontrarán siempre en el paso más estrecho.
+- Un coche y un camión que se van a cruzar en una carretera desierta, se encontrarán siempre en el paso más estrecho.
 
 PRIMERA LEY DEL TRÁFICO.
 
-• El carril lento en el que ha estado parado tanto tiempo, empezará a moverse cuando usted se haya cambiado al otro.
+- El carril lento en el que ha estado parado tanto tiempo, empezará a moverse cuando usted se haya cambiado al otro.
 
 SEGUNDA LEY DEL TRÁFICO.
 
-• La hora de margen que tomó por el tráfico se quedará corta, porque se pasará hora y media en un atasco.
+- La hora de margen que tomó por el tráfico se quedará corta, porque se pasará hora y media en un atasco.
 
 LEY DE REECE.
 
-• La velocidad de un vehículo que se acerca es directamente proporcional al espacio de la zona de cruce.
+- La velocidad de un vehículo que se acerca es directamente proporcional al espacio de la zona de cruce.
 
 LEY DE DREW SOBRE LA BIOLOGÍA EN LA AUTOPISTA.
 
-• El primer bicho que se estrella contra un parabrisas, lo hace siempre a la altura de los ojos.
+- El primer bicho que se estrella contra un parabrisas, lo hace siempre a la altura de los ojos.
 
 AXIOMA DE WINFIELD SOBRE EL ARTE DE DAR UNA DIRECCIÓN.
 
-• La posibilidad de perderse es directamente proporcional al número de veces que le digan "no puedes perderte".
+- La posibilidad de perderse es directamente proporcional al número de veces que le digan "no puedes perderte".
 
 LEY DE JEAN SOBRE LOS AUTOMÓVILES.
 
-• Todo coche que se utilice como "segundo vehículo" se romperá en cuanto el otro tenga una avería.
+- Todo coche que se utilice como "segundo vehículo" se romperá en cuanto el otro tenga una avería.
 
 LEYES DE BROMBERG SOBRE LA REPARACIÓN DE AUTOMÓVILES.
 
@@ -2834,11 +2765,11 @@ LEYES DE BROMBERG SOBRE LA REPARACIÓN DE AUTOMÓVILES.
 
 LEY DE MILLER SOBRE LOS SEGUROS.
 
-• El seguro lo cubre todo, excepto lo que pasa.
+- El seguro lo cubre todo, excepto lo que pasa.
 
 PRINCIPIO DE MILSTEAD SOBRE LA CONDUCCIÓN.
 
-• Si necesita parar un momento para retocarse el maquillaje, todos los semáforos estarán en verde.
+- Si necesita parar un momento para retocarse el maquillaje, todos los semáforos estarán en verde.
 
 LEYES DE BROMBERG SOBRE LA REPARACIÓN DEL MOTOR.
 
@@ -2852,7 +2783,7 @@ Murpyhología doméstica.
 
 LEY DE O’REILLY SOBRE LA COCINA.
 
-• La limpieza es algo casi imposible.
+- La limpieza es algo casi imposible.
 
 SIETE REGLAS DEL DESORDEN EN LA COCINA.
 
@@ -2882,13 +2813,13 @@ Ejemplo: Si hace "pato à l’orange" le felicitarán por las patatas asadas.
 
 LEYES DE TRABAJO DE LA COCINERA.
 
-• Si no recuerda si ha sacado la carne del congelador, es que no lo ha hecho.
+- Si no recuerda si ha sacado la carne del congelador, es que no lo ha hecho.
 
-• Si no recuerda si se ha dejado la cafetera enchufada, es que sí se la ha dejado.
+- Si no recuerda si se ha dejado la cafetera enchufada, es que sí se la ha dejado.
 
-• Si no recuerda si tiene que comprar pan y huevos, es que no quedan.
+- Si no recuerda si tiene que comprar pan y huevos, es que no quedan.
 
-• Si no sabe si tiene suficiente dinero para invitar a su familia a comer fuera, es que no tiene.
+- Si no sabe si tiene suficiente dinero para invitar a su familia a comer fuera, es que no tiene.
 
 LEYES DE ALICE HAMMOND SOBRE LA COCINA.
 
@@ -2904,31 +2835,31 @@ LEYES DE ALICE HAMMOND SOBRE LA COCINA.
 
 LEY DE LA FIESTA.
 
-• Cuantas más cosas prepare, menos comerán los invitados.
+- Cuantas más cosas prepare, menos comerán los invitados.
 
 LEY DE LA SEÑORA WEILER.
 
-• Se puede comer cualquier cosa siempre que se parta en trocitos muy pequeños.
+- Se puede comer cualquier cosa siempre que se parta en trocitos muy pequeños.
 
 DEFINICIÓN DE FAUSNER.
 
-• El trabajo doméstico es eso que no se nota a no ser que no se haya hecho.
+- El trabajo doméstico es eso que no se nota a no ser que no se haya hecho.
 
 LEY DE WALKER PARA EL TRABAJO DOMÉSTICO.
 
-• Siempre hay más ropa para lavar que ropa limpia.
+- Siempre hay más ropa para lavar que ropa limpia.
 
 REFUTACIÓN DE CLIVE A LA LEY DE WALKER.
 
-• Si está limpia, no es ropa.
+- Si está limpia, no es ropa.
 
 LEY DE SKOFF.
 
-• Un niño nunca derramará nada en un suelo sucio.
+- Un niño nunca derramará nada en un suelo sucio.
 
 LEY DE VAN ROY.
 
-• Un juguete irrompible sirve para romper otros.
+- Un juguete irrompible sirve para romper otros.
 
 LEYES DE WITZLING SOBRE EL COMPORTAMIENTO DE LA PROGENIE.
 
@@ -2938,27 +2869,27 @@ LEYES DE WITZLING SOBRE EL COMPORTAMIENTO DE LA PROGENIE.
 
 COROLARIO DE FISKE SOBRE LOS ADOLESCENTES PARA LA LEY DE PARKINSON.
 
-• El estómago se expande hasta alojar cantidades ingentes de porquerías.
+- El estómago se expande hasta alojar cantidades ingentes de porquerías.
 
 PRINCIPIO DEL PLÁTANO.
 
-• Si compra plátanos o aguacates antes de que estén maduros, no quedará ninguno para cuando estén maduros. Pero si los compra maduros, se pudren antes de que nadie se los coma.
+- Si compra plátanos o aguacates antes de que estén maduros, no quedará ninguno para cuando estén maduros. Pero si los compra maduros, se pudren antes de que nadie se los coma.
 
 LEY DE BALLANCE SOBRE LA RELATIVIDAD.
 
-• La duración de un minuto depende del lado de la puerta del baño en que se encuentre.
+- La duración de un minuto depende del lado de la puerta del baño en que se encuentre.
 
 POSTULADO DE BRITT SOBRE LAS PLANTAS.
 
-• La esperanza de vida de una planta es inversamente proporcional al precio y directamente proporcional a la fealdad de la misma.
+- La esperanza de vida de una planta es inversamente proporcional al precio y directamente proporcional a la fealdad de la misma.
 
 LEY DE MINTON SOBRE LA PINTURA.
 
-• Todas las pinturas, sea cual sea su composición, se adhieren permanentemente a cualquier superficie (preparada o no) si caen sobre ella accidentalmente.
+- Todas las pinturas, sea cual sea su composición, se adhieren permanentemente a cualquier superficie (preparada o no) si caen sobre ella accidentalmente.
 
 LEY DE LAS REPOSICIONES.
 
-• Si ha visto sólo una vez una serie de televisión, cuando la vuelva a ver será una reposición del mismo capítulo.
+- Si ha visto sólo una vez una serie de televisión, cuando la vuelva a ver será una reposición del mismo capítulo.
 
 LEY DE JONES SOBRE LA PROGRAMACIÓN DE TELEVISIÓN.
 
@@ -2976,47 +2907,47 @@ PRINCIPIOS UNIVERSALES DE BESS.
 
 PROBLEMA DE KOVAC.
 
-• Cuando se equivoca al marcar, nunca está comunicando.
+- Cuando se equivoca al marcar, nunca está comunicando.
 
 DILEMA DE DINER.
 
-• Las corbatas limpias atraen la sopa.
+- Las corbatas limpias atraen la sopa.
 
 LEY DE THIESSEN SOBRE LA GASTRONOMÍA.
 
-• La dureza de la mantequilla es directamente proporcional a la blandura de la tostada.
+- La dureza de la mantequilla es directamente proporcional a la blandura de la tostada.
 
 TEOREMA DE BELL.
 
-• Cuando un cuerpo se sumerge en agua suena el teléfono.
+- Cuando un cuerpo se sumerge en agua suena el teléfono.
 
 LEY DE LA BOLSA DE LA COMPRA.
 
-• La chocolatina que pensaba comerse por el camino siempre está en el fondo de la bolsa.
+- La chocolatina que pensaba comerse por el camino siempre está en el fondo de la bolsa.
 
 PRINCIPIO DE WOODSIDE SOBRE LA COMPRA.
 
-• La bolsa que se rompe siempre es la de los huevos.
+- La bolsa que se rompe siempre es la de los huevos.
 
 PRINCIPIO DE STITZER SOBRE LAS VACACIONES.
 
-• Cuando esté haciendo el equipaje, meta la mitad de la ropa que había pensado y el doble de dinero.
+- Cuando esté haciendo el equipaje, meta la mitad de la ropa que había pensado y el doble de dinero.
 
 LEY DE ESTHER.
 
-• A la persona más exigente siempre le tocará la taza de café desconchada, el vaso con restos de pintura de labios o el pelo en la sopa.
+- A la persona más exigente siempre le tocará la taza de café desconchada, el vaso con restos de pintura de labios o el pelo en la sopa.
 
 LEY DE HOROWITZ.
 
-• Siempre que ponga la radio, escuchará las últimas notas de su canción favorita.
+- Siempre que ponga la radio, escuchará las últimas notas de su canción favorita.
 
 LEY DE GERARD.
 
-• Cuando tiene fondos en su cuenta corriente, tardan dos semanas en pasarle los cheques. Cuando no tiene fondos, se los pasan el mismo día.
+- Cuando tiene fondos en su cuenta corriente, tardan dos semanas en pasarle los cheques. Cuando no tiene fondos, se los pasan el mismo día.
 
 LEY DE PANTUSO.
 
-• El libro por el que acaba de pagar 7.800 pesetas saldrá mañana en edición de bolsillo.
+- El libro por el que acaba de pagar 7.800 pesetas saldrá mañana en edición de bolsillo.
 
 LEYES DE RILEY SOBRE "LAS LEYES DE MURPHY".
 
@@ -3028,7 +2959,7 @@ LEYES DE RILEY SOBRE "LAS LEYES DE MURPHY".
 
 LEY DE VILE SOBRE EL VALOR.
 
-• Cuanto más caro es un artefacto, más lejos está el taller de reparaciones.
+- Cuanto más caro es un artefacto, más lejos está el taller de reparaciones.
 
 LEYES DE MURRAY.
 
@@ -3038,7 +2969,7 @@ LEYES DE MURRAY.
 
 LEY DE GLASER.
 
-• Si la etiqueta dice "Talla única", le quedará fatal a todo el mundo.
+- Si la etiqueta dice "Talla única", le quedará fatal a todo el mundo.
 
 REGLAS DE GOLDENSTERN.
 
@@ -3050,11 +2981,11 @@ Consumidorología y el arte de vender.
 
 LEY DE HERBLOCK.
 
-• Si es bueno, dejan de fabricarlo.
+- Si es bueno, dejan de fabricarlo.
 
 LEY DE GOLD.
 
-• Si el zapato le queda bien, es feísimo.
+- Si el zapato le queda bien, es feísimo.
 
 LEYES DE HADLEY SOBRE LA COMPRA DE ROPA.
 
@@ -3068,15 +2999,15 @@ LEYES DE HADLEY SOBRE LA COMPRA DE ROPA.
 
 PRINCIPIO DE FINMAN SOBRE LA SECCIÓN DE OPORTUNIDADES.
 
-• Lo que usted quiere nunca está rebajado.
+- Lo que usted quiere nunca está rebajado.
 
 Corolario de Baker al Principio de la Sección de Oportunidades de Finman.
 
-• Lo que puede comprar siempre es feo.
+- Lo que puede comprar siempre es feo.
 
 AXIOMA DE MADISON AVENUE DE McGOWAN.
 
-• Si se anuncia que el precio de un artículo es "menos de 15.000", se puede apostar la cabeza a que no costará 2.130.
+- Si se anuncia que el precio de un artículo es "menos de 15.000", se puede apostar la cabeza a que no costará 2.130.
 
 REGLAS DE HERSHISER.
 
@@ -3088,17 +3019,17 @@ REGLAS DE HERSHISER.
 
 LEY DE SINETO SOBRE EL CONSUMISMO.
 
-• Una garantía de sesenta días es la promesa de que el objeto se autodestruirá el día sexagésimo primero.
+- Una garantía de sesenta días es la promesa de que el objeto se autodestruirá el día sexagésimo primero.
 
 LEY DE SAVIGNANO SOBRE LOS PEDIDOS POR CORREO.
 
-• Si no escribe una carta de reclamación, no recibirá su pedido.
+- Si no escribe una carta de reclamación, no recibirá su pedido.
 
 Si la escribe, recibirá sus artículos antes de que la carta llegue a su destino.
 
 LEY DE BERYL.
 
-• El artículo sobre un producto en "La Revista del Consumidor" aparecerá justo una semana después de que lo haya comprado.
+- El artículo sobre un producto en "La Revista del Consumidor" aparecerá justo una semana después de que lo haya comprado.
 
 Corolarios.
 
@@ -3108,79 +3039,79 @@ Corolarios.
 
 LEY DE LEWIS.
 
-• La gente compra cualquier cosa de la que se venda un sólo artículo por comprador.
+- La gente compra cualquier cosa de la que se venda un sólo artículo por comprador.
 
 Problemática.
 
 LEY DE SMITH.
 
-• Ningún problema verdadero tiene solución.
+- Ningún problema verdadero tiene solución.
 
 LEY DE HOARE SOBRE LOS GRANDES PROBLEMAS.
 
-• En cada problema grande hay un problema pequeño que lucha por salir.
+- En cada problema grande hay un problema pequeño que lucha por salir.
 
 LEY INVERSA DE SCHAINKER A LA LEY DE HOARE SOBRE LOS GRANDES PROBLEMAS.
 
-• En cada problema pequeño hay un problema grande que lucha por salir.
+- En cada problema pequeño hay un problema grande que lucha por salir.
 
 OBSERVACIÓN DE BARUCH.
 
-• Si todo lo que tiene es un martillo, cualquier cosa que vea le parecerá un clavo.
+- Si todo lo que tiene es un martillo, cualquier cosa que vea le parecerá un clavo.
 
 LEY DE BIONDI.
 
-• Si su proyecto no funciona, investigue la parte que pensó que no tenía importancia.
+- Si su proyecto no funciona, investigue la parte que pensó que no tenía importancia.
 
 REGLA ROMANA.
 
-• El que afirma que no se puede hacer, no debe interrumpir al que lo está haciendo.
+- El que afirma que no se puede hacer, no debe interrumpir al que lo está haciendo.
 
 OBSERVACIÓN DE BLAIR.
 
-• Los mejores proyectos realizados por hombres y por ratones, suelen ser casi iguales.
+- Los mejores proyectos realizados por hombres y por ratones, suelen ser casi iguales.
 
 LEY DE SEAY.
 
-• Nada sale nunca como se planeó
+- Nada sale nunca como se planeó
 
 LEY DE RUCKERT.
 
-• No hay nada tan pequeño que no pueda explotar violentamente.
+- No hay nada tan pequeño que no pueda explotar violentamente.
 
 LEY DE VAN HERPEN.
 
-• La solución de un problema consiste en encontrar a alguien que lo resuelva.
+- La solución de un problema consiste en encontrar a alguien que lo resuelva.
 
 LEY DE BAXTER.
 
-• El error en la premisa aparecerá en la conclusión.
+- El error en la premisa aparecerá en la conclusión.
 
 LEY DE McGEE.
 
-• Es sorprendente el tiempo que se necesita para terminar algo en lo que no se está trabajando.
+- Es sorprendente el tiempo que se necesita para terminar algo en lo que no se está trabajando.
 
 LEY DE SEVAREID.
 
-• La causa principal de los problemas son las soluciones.
+- La causa principal de los problemas son las soluciones.
 
 Cosmomurphyología.
 
 LEY DE LA VIDA.
 
-• En cuanto se ponga a hacer lo que siempre ha deseado, se dará cuenta de que le apetece hacer otra cosa.
+- En cuanto se ponga a hacer lo que siempre ha deseado, se dará cuenta de que le apetece hacer otra cosa.
 
 LEY DE OLIVIER.
 
-• La experiencia es algo que se consigue cuando ya no se necesita.
+- La experiencia es algo que se consigue cuando ya no se necesita.
 
 OBSERVACIÓN DE GABITOL.
 
-• Los sabios están satisfechos cuando descubren la verdad; los necios, cuando descubren la falsedad.
+- Los sabios están satisfechos cuando descubren la verdad; los necios, cuando descubren la falsedad.
 
 PRIMER PRINCIPIO DE AUTODETERMINACIÓN
 
-• Si resiste, vencerá.
+- Si resiste, vencerá.
 
 PRECEPTOS DE STEINER.
 
@@ -3190,93 +3121,93 @@ PRECEPTOS DE STEINER.
 
 LEY DE HOFFER.
 
-• Cuando las personas son libres de hacer lo que quieran, suelen imitarse unas a otras.
+- Cuando las personas son libres de hacer lo que quieran, suelen imitarse unas a otras.
 
 SEGUNDA LEY DE BERRA.
 
-• Cualquiera que sea popular está condenado a caer antipático.
+- Cualquiera que sea popular está condenado a caer antipático.
 
 OBSERVACIÓN DE KIERKEGARD.
 
-• La vida sólo se comprende mirando hacia atrás, pero se debe vivir hacia delante.
+- La vida sólo se comprende mirando hacia atrás, pero se debe vivir hacia delante.
 
 Metaleyes.
 
 METALEY DE LOS MISERABLES.
 
-• Todas las leyes, buenas, malas o indiferentes, se deben obedecer al pie de la letra.
+- Todas las leyes, buenas, malas o indiferentes, se deben obedecer al pie de la letra.
 
 POSTULADO DE PERSIG.
 
-• El número de hipótesis que pueden explicar un fenómeno dado es infinito.
+- El número de hipótesis que pueden explicar un fenómeno dado es infinito.
 
 METALEY DE LILLY.
 
-• Todas las leyes son simulacros de la realidad.
+- Todas las leyes son simulacros de la realidad.
 
 LEY DE DIGIOVANNI.
 
-• El número de leyes se multiplicará hasta cubrir todo el espacio editorial disponible.
+- El número de leyes se multiplicará hasta cubrir todo el espacio editorial disponible.
 
 OBSERVACIÓN DE ROGERS SOBRE LAS LEYES.
 
-• En una jerarquía burocrática, cuanto más se asciende en el escalafón, menos se perciben las Leyes de Murphy, las Leyes de Peter, etc.
+- En una jerarquía burocrática, cuanto más se asciende en el escalafón, menos se perciben las Leyes de Murphy, las Leyes de Peter, etc.
 
 POSTULADO POLÍTICO DE ANDRA.
 
-• La fundación de un partido político señala la disolución del movimiento.
+- La fundación de un partido político señala la disolución del movimiento.
 
 REGLA POLÍTICA DE MARX.
 
-• En cuanto se hacen ricos, se vuelven conservadores.
+- En cuanto se hacen ricos, se vuelven conservadores.
 
 PRECEPTO DE JAFFE.
 
-• Es imposible conocer algunas cosas, pero es imposible saber cuáles son.
+- Es imposible conocer algunas cosas, pero es imposible saber cuáles son.
 
 REGLA DE LAS PROMESAS POLÍTICAS.
 
-• La verdad varía.
+- La verdad varía.
 
 LEY DE LA DISTINCIÓN ARBITRARIA.
 
-• Puede dividir cualquier cosa en tantas partes como desee.
+- Puede dividir cualquier cosa en tantas partes como desee.
 
 Corolario.
 
-• Todo se puede dividir en tantas partes como usted desee.
+- Todo se puede dividir en tantas partes como usted desee.
 
 Comentario al corolario.
 
-• En este caso, se puede considerar que todo es un subconjunto de cualquier cosa.
+- En este caso, se puede considerar que todo es un subconjunto de cualquier cosa.
 
 OBSERVACIÓN DE WALLACE.
 
-• Todas las cosas se encuentran en estado de desmelene absoluto.
+- Todas las cosas se encuentran en estado de desmelene absoluto.
 
 LEY DE WEAVER.
 
-• Cuando varios periodistas van en el mismo taxi a cubrir una noticia, paga el que va delante.
+- Cuando varios periodistas van en el mismo taxi a cubrir una noticia, paga el que va delante.
 
 Corolario de Doyle.
 
-• Vayan los que vayan y pague quien pague, todos incluyen el precio de la carrera en su cuenta de gastos.
+- Vayan los que vayan y pague quien pague, todos incluyen el precio de la carrera en su cuenta de gastos.
 
 LEY DE MATSCH.
 
-• Es mejor tener un horrible final que sufrir horrores sin fin.
+- Es mejor tener un horrible final que sufrir horrores sin fin.
 
 PARADOJA DE TRISCHMANN.
 
-• Una pipa proporciona tiempo al sabio para pensar y algo que llevarse a la boca al necio.
+- Una pipa proporciona tiempo al sabio para pensar y algo que llevarse a la boca al necio.
 
 COMENTARIO DE CHURCHILL SOBRE EL HOMBRE.
 
-• En ocasiones, el hombre tropieza con la verdad pero, casi siempre, evita caerse y sigue adelante.
+- En ocasiones, el hombre tropieza con la verdad pero, casi siempre, evita caerse y sigue adelante.
 
 LEY DE HALDANE.
 
-• El universo no sólo es más misterioso de lo que imaginamos, sino que lo es más de lo que podemos imaginar.
+- El universo no sólo es más misterioso de lo que imaginamos, sino que lo es más de lo que podemos imaginar.
 
 LEY DE KERR-MARTIN.
 
@@ -3286,6 +3217,6 @@ LEY DE KERR-MARTIN.
 
 TEOREMA DE CHAPPAQUIDICK DE WHITE.
 
-• Cuanto antes se anuncien las malas noticias y cuantos más detalles se den, mejor.
+- Cuanto antes se anuncien las malas noticias y cuantos más detalles se den, mejor.
 
-* * *
+---
