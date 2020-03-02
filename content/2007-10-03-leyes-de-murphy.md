@@ -161,16 +161,16 @@ LEYES UNIVERSALES SOBRE LOS MÉTODOS RECOMENDADOS POR EL COMITÉ DE LA SOCIEDAD 
 8. Todas las promesas sobre los plazos de entrega deben multiplicarse por un factor igual a 2,0..
 9. Los cambios importantes de diseño se solicitarán cuando el proceso de fabricación esté a punto de terminar.
 10. Las piezas que no se puedan montar más que en un cierto orden, se podrán intercambiar.
-10. Las piezas intercambiables, por el contrario, demostrarán que no lo son.
-11. Las especificaciones del fabricante sobre el rendimiento se deben multiplicar por un factor igual a 0,5
-12. Las afirmaciones del personal del Departamento de Ventas sobre el rendimiento se deben multiplicar por un factor igual a 0,25.
-13. Las instrucciones de instalación y funcionamiento que vienen con el aparato, las habrán tirado los del Departamento de Recepción de Mercancías.
-14. La pieza que precise algún ajuste será la menos accesible.
-15. Las condiciones de servicio, tal y como vienen en las instrucciones, se quedarán cortas rápidamente.
-16. Si hay más de una persona a la que se le pueda echar la culpa de un error de cálculo, la culpa no será de nadie.
-17. Aparatos idénticos que han tenido el mismo comportamiento en las pruebas, no se comportarán igual en la práctica.
-18. Si, en la práctica existe un factor de seguridad que ha determinado la experiencia, siempre habrá algún idiota ingenioso que lo sobrepase.
-19. Las cláusulas de garantía expiran al pago de la factura.
+11. Las piezas intercambiables, por el contrario, demostrarán que no lo son.
+12. Las especificaciones del fabricante sobre el rendimiento se deben multiplicar por un factor igual a 0,5
+13. Las afirmaciones del personal del Departamento de Ventas sobre el rendimiento se deben multiplicar por un factor igual a 0,25.
+14. Las instrucciones de instalación y funcionamiento que vienen con el aparato, las habrán tirado los del Departamento de Recepción de Mercancías.
+15. La pieza que precise algún ajuste será la menos accesible.
+16. Las condiciones de servicio, tal y como vienen en las instrucciones, se quedarán cortas rápidamente.
+17. Si hay más de una persona a la que se le pueda echar la culpa de un error de cálculo, la culpa no será de nadie.
+18. Aparatos idénticos que han tenido el mismo comportamiento en las pruebas, no se comportarán igual en la práctica.
+19. Si, en la práctica existe un factor de seguridad que ha determinado la experiencia, siempre habrá algún idiota ingenioso que lo sobrepase.
+20. Las cláusulas de garantía expiran al pago de la factura.
 
 PRINCIPIO DE HEISENBERG SOBRE LA INCERTIDUMBRE.
 
