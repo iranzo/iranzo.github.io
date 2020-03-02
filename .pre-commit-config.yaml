@@ -1,4 +1,4 @@
-exclude: '^static/(css|js)/elegant\.prod\.\w+\.(css|js)|^THANKS.md'
+exclude: ''
 fail_fast: true
 repos:
 - repo: meta
@@ -31,7 +31,7 @@ repos:
   - id: fix-encoding-pragma
   - id: forbid-new-submodules
   - id: no-commit-to-branch
-    args: [--branch, source, --branch, master]
+    args: [--branch, master]
   - id: requirements-txt-fixer
   - id: sort-simple-yaml
   - id: trailing-whitespace
