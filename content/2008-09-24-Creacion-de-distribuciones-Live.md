@@ -7,6 +7,7 @@ comments: true
 tags: linux, fedora, foss
 lang: es
 ---
+
 [TOC]
 
 ## Introducción
@@ -19,17 +20,17 @@ Según lo visto en el artículo [Kickstart]({filename}2008-05-11-Kickstart-insta
 
 Por ejemplo, podemos personalizar nuestro medio 'live' cambiando el mensaje de login con un:
 
-~~~bash
+```bash
 #!bash
 %post
 echo "Sistema personalizado Live" > /etc/issue
-~~~
+```
 
 Utilizando la sección `%packages` podemos por ejemplo instalar los paquetes openssh, o el entorno gráfico que luego tendremos disponibles en nuestro sistema.
 
 Un ejemplo de kickstart para un medio Live podría ser:
 
-~~~bash
+```bash
 #!bash
 install
 cdrom
@@ -130,16 +131,16 @@ echo "Medio Live personalizado" > /etc/issue
 echo "Inicie sesión como 'root' sin contraseña" >> /etc/issue
 echo " " >> /etc/issue
 
-~~~
+```
 
 ## Creación
 
 Para generar la imagen Live, ejecutaremos
 
-~~~bash
+```bash
 #!bash
 livecd-creator -c /root/usuario/ks.cfg -f MedioLive
-~~~
+```
 
 Al acabar, obtendremos un fichero ".iso" que contendrá un medio 'Vivo' basado en nuestro guión de instalación.
 

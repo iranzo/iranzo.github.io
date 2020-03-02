@@ -29,7 +29,7 @@ Using python we can come to approach this in several steps:
 
 - First we can expand the url to longer one (those channels tend to use url shorteners)
 
-~~~py
+```py
 def expandurl(url):
 """
 Expands short URL to long one
@@ -51,11 +51,11 @@ except:
 logger.debug(msg="Expanding url: %s to %s" % (url, newurl))
 
 return newurl
-~~~
+```
 
 - Second, restrict the links we process to the ones in amazon, as it's 'easy' to catch the product ID and perform a search. This leaves out lot of offers, but makes it easier to locate them as there's an API to use.
 
-~~~py
+```py
 def findamazonproductid(newurl):
     """
     Finds amazon product id and country in URL
@@ -79,7 +79,7 @@ def findamazonproductid(newurl):
         domain = r.groups()[0]
 
     return productid, domain
-~~~
+```
 
 - Now that we get product id an domain, we can use a database to store when was received (if before) and store as 'seen' to not repeat it.
 
@@ -87,11 +87,11 @@ Telegram bot api can help sending the messages or receiving them from a chat, so
 
 Additionally, python packages like [python-amazon-simple-product-api](https://github.com/yoavaviram/python-amazon-simple-product-api), with some simple steps, can help enhancing the database by querying additional details.
 
-~~~py
+```py
 from amazon.api import AmazonAPI
 amazon = AmazonAPI(amazon_access, amazon_key, tag, region=regdomain
 product = amazon.lookup(ItemId=productid)
-~~~
+```
 
 Above code with the productid obtained in the previous code snippet, allows us to query several aspects via amazon api, like `product.title`, `product.price_and_currency`, etc
 
@@ -103,7 +103,7 @@ In my case, the next step was to get rid of unwanted offers, but once I had all 
 
 A global replace from 'hilight' to 'ofertas', adding a few comparisons for 'gofertas' and now redken supports the following syntax:
 
-~~~
+```
 # Add tracking for a word in discounts
 /gofertas add <topic>
 /ofertas add <topic>
@@ -113,7 +113,7 @@ A global replace from 'hilight' to 'ofertas', adding a few comparisons for 'gofe
 
 # Get list of configured discoints
 /[g]ofertas list
-~~~
+```
 
 The difference between 'gofertas' and 'ofertas', is that by default, ofertas add the tracking to your 'userid', hence forwarding privately to you, while 'gofertas', when used on a group, will forward to the 'groupid', allowing for example that users interested in a topic, like let's say 'lego' or 'quadricopters', will receive as a group message any new listing published.
 

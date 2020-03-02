@@ -75,7 +75,6 @@ Overall: one of the best sets I built.
     </figure>
  </div>
 
-
 Hope you like it!
 
 Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>

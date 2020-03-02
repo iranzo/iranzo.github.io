@@ -20,10 +20,10 @@ The presentations already got several transformations, but in the actual status 
 Some software for the conversion, did generate them as 'screenshoots' for each slide, this however had some cons/pros:
 
 - Pros:
-    - Format was kept almost 100%
-    - Easy to showcase with any 'gallery' plugin
+  - Format was kept almost 100%
+  - Easy to showcase with any 'gallery' plugin
 - Cons:
-    - Text was lost, so no links, no indexation, etc
+  - Text was lost, so no links, no indexation, etc
 
 Alternatively, I could add and attach via a link to the odp file for end users to download and reproduce, but that will increase blog size (no constrains, but sounded like nonsense to me), so I continued my research for a solution or workaround to use.
 
@@ -31,21 +31,21 @@ Alternatively, I could add and attach via a link to the odp file for end users t
 
 Thanks to <https://github.com/cliffe/AwesomeSlides>, which uses perl and a set of common available libraries on any distro to do the job, I was able to convert my presentations from `odp` to `html` quite easily:
 
-~~~sh
+```sh
 for file in *.odp; do
     perl convert-to-awesome.pl $file
 done
-~~~
+```
 
 This resulted in 'master' html files in the `slides_out` folder, plus a folder containing the images and other media used by the presentation.
 
 AwesomeSlides does the conversion to 'revealjs' format, plus adds extra features, transitions, etc to make them fancier, but in my case I was interested in plain markdown, so the next one to the rescue has been `pandoc`
 
-~~~sh
+```sh
 for file in *.html; do
     pandoc -t markdown $file -o $file.md
 done
-~~~
+```
 
 The end result of course is not clean at all and not directly usable by the [pelican plugin](http://github.com/iranzo/pelican-revealmd/) to render the images, etc.
 
@@ -55,13 +55,13 @@ One of the things needed (and that I used for other slides) is to move the resul
 
 Once there, a set of find/replacements was required:
 
-| find | replacement | description |
-| - | - | - |
-| $folder | `{attach}` | Define images included as `{attach}` for pelican to pick them up |
-| --------- | | Remove underlining after titles |
-| stangechars | normalchar | Some characters were lost (accents, etc), replaced by another one, to later spellcheck |
-| `\n\n\n` | `\n\n` | Remove extra new lines |
-| `-⠀⠀⠀⠀⠀`| `-⠀` | Remove extra spaces before paragraph |
+| find        | replacement | description                                                                            |
+| ----------- | ----------- | -------------------------------------------------------------------------------------- |
+| \$folder    | `{attach}`  | Define images included as `{attach}` for pelican to pick them up                       |
+| ---------   |             | Remove underlining after titles                                                        |
+| stangechars | normalchar  | Some characters were lost (accents, etc), replaced by another one, to later spellcheck |
+| `\n\n\n`    | `\n\n`      | Remove extra new lines                                                                 |
+| `-⠀⠀⠀⠀⠀`    | `-⠀`        | Remove extra spaces before paragraph                                                   |
 
 Other manual steps involved
 

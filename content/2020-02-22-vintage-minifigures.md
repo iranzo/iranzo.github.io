@@ -33,7 +33,6 @@ Just some pics I made during some sorting of minifigs from my childhood.
     </figure>
  </div>
 
-
 Hope you like it!
 
 Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>

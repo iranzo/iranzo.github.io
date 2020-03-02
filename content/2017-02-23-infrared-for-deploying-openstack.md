@@ -7,6 +7,7 @@ tags: python, ansible, openstack, sysmgmt, InfraRed, foss
 category: tech
 description:
 ---
+
 [TOC]
 
 [InfraRed](https://github.com/redhat-openstack/infrared/) is tool that allows to install/provision OpenStack. You can find the documentation for the project at <http://infrared.readthedocs.io>.
@@ -29,29 +30,30 @@ Setting InfraRed is quite easy, at the moment the version 2 (branch on github) i
 We'll start with:
 
 - Clone GIT repo: `git clone https://github.com/redhat-openstack/infrared.git`
-- Create a virtual ENV so we can proceed with installation, later we'll need to source it before each use.    `cd infrared ;  virtualenv .venv && source .venv/bin/activate`
+- Create a virtual ENV so we can proceed with installation, later we'll need to source it before each use. `cd infrared ; virtualenv .venv && source .venv/bin/activate`
 - Proceed with upgrade of pip and setuptools (required) and installation of InfraRed
-    - `pip install --upgrade pip`
-    - `pip install --upgrade setuptools`
-    - `pip install .`
+  - `pip install --upgrade pip`
+  - `pip install --upgrade setuptools`
+  - `pip install .`
 
 ## Remote host setup
 
 Once done, we need to setup the requirements on the host we'll use to virtualize, this includes, having the system registered against a repository providing required packages.
 
 - Register RHEL7 and update:
-    - `subscription-manager register` (provide your credentials)
-    - `subscription-manager attach --pool=` (check pool number first)
-    - `subscription-manager repos --disable=*`
-    - `for canal in rhel-7-server-extras-rpms rhel-7-server-fastrack-rpms rhel-7-server-optional-fastrack-rpms rhel-7-server-optional-rpms rhel-7-server-rh-common-rpms rhel-7-server-rhn-tools-rpms rhel-7-server-rpms rhel-7-server-supplementary-rpms rhel-ha-for-rhel-7-server-rpms;do subscription-manager repos --enable=$canal; done`
+  - `subscription-manager register` (provide your credentials)
+  - `subscription-manager attach --pool=` (check pool number first)
+  - `subscription-manager repos --disable=*`
+  - `for canal in rhel-7-server-extras-rpms rhel-7-server-fastrack-rpms rhel-7-server-optional-fastrack-rpms rhel-7-server-optional-rpms rhel-7-server-rh-common-rpms rhel-7-server-rhn-tools-rpms rhel-7-server-rpms rhel-7-server-supplementary-rpms rhel-ha-for-rhel-7-server-rpms;do subscription-manager repos --enable=$canal; done`
 
 ## NOTES
 
 - OSP7 did not contain RPM packaged version of images, a repo with the images needs to be defined like:
-    - `time infrared tripleo-undercloud --version $VERSION --images-task import --images-url $REPO_URL`
 
-    !!! note "Check the parameter values"
-        --images-task `import` and `--images-url`
+  - `time infrared tripleo-undercloud --version $VERSION --images-task import --images-url $REPO_URL`
+
+  !!! note "Check the parameter values"
+  --images-task `import` and `--images-url`
 
 - Ceph failed to install unless `--storage-backend ceph` was provided (open bug for that)
 
@@ -71,7 +73,7 @@ Some bugs/RFE on the way to get implemented some day:
 
 This is something that I began testing to automate the basic setup, still is needed to decide version to use, and do deployment of infrastructure vm's but does some automation for setting up the hypervisors.
 
-~~~yaml
+```yaml
 ---
 - hosts: all
   user: root
@@ -111,8 +113,7 @@ This is something that I began testing to automate the basic setup, still is nee
       pip:
         virtualenv: "/root/infrared/.venv"
         name: file:///root/infrared/.
-
-~~~
+```
 
 This playbook will do checkout of git repo, setup extra pip commands to upgrade virtualenv's deployed pip and setuptools, etc.
 
@@ -122,23 +123,23 @@ This will show the commands that might be used to deploy some environments and s
 
 ### Common requirements
 
-~~~bash
+```bash
 export HOST=myserver.com
 export HOST_KEY=~/.ssh/id_rsa
 export ANSIBLE_LOG_PATH=deploy.log
-~~~
+```
 
 ## Cleanup
 
-~~~bash
+```bash
 time infrared virsh --cleanup True --host-address $HOST --host-key $HOST_KEY
-~~~
+```
 
 ### OSP 9 (3 + 2)
 
 #### Define version to use
 
-~~~bash
+```bash
 export VERSION=9
 
 time infrared virsh --host-address $HOST --host-key $HOST_KEY --topology-nodes "undercloud:1,controller:3,compute:2"
@@ -158,11 +159,11 @@ time infrared tripleo-overcloud --deployment-files virt --version 9 --introspect
 real    43m44.424s
 user    9m36.592s
 sys     4m39.188s
-~~~
+```
 
 ### OSP 8 (3+2)
 
-~~~bash
+```bash
 export VERSION=8
 
 time infrared virsh --host-address $HOST --host-key $HOST_KEY --topology-nodes "undercloud:1,controller:3,compute:2"
@@ -182,11 +183,11 @@ time infrared tripleo-overcloud --deployment-files virt --version $VERSION --int
 real    42m57.315s
 user    9m2.412s
 sys     4m25.840s
-~~~
+```
 
 ### OSP 10 (3+2)
 
-~~~bash
+```bash
 export VERSION=10
 
 time infrared virsh --host-address $HOST --host-key $HOST_KEY --topology-nodes "undercloud:1,controller:3,compute:2"
@@ -206,11 +207,11 @@ time infrared tripleo-overcloud --deployment-files virt --version $VERSION --int
 real    54m1.111s
 user    11m55.808s
 sys     6m1.023s
-~~~
+```
 
 ### OSP 7 (3+2+3)
 
-~~~bash
+```bash
 export VERSION=7
 
 time infrared virsh --host-address $HOST --host-key $HOST_KEY --topology-nodes "undercloud:1,controller:3,compute:2,ceph:3"
@@ -230,7 +231,7 @@ time infrared tripleo-overcloud --deployment-files virt --version $VERSION --int
 real    86m47.471s
 user    20m2.582s
 sys     9m42.577s
-~~~
+```
 
 ## Wrapping-up
 

@@ -17,19 +17,21 @@ As the goal was not to lose visits using the prior links, I contacted the team b
 
 - Remove the old folders in the katacoda-scenarios repo for your account
 - Place in the root folder a file `redirect.json` containing:
-~~~json
-[{
-        "scenario": "kubevirt",
-        "targetScenario": "kubevirt",
-        "targetUsername": "kubevirt"
-    },
-    {
-        "scenario": "citellus",
-        "targetScenario": "citellus",
-        "targetUsername": "citellus"
-    }
+
+```json
+[
+  {
+    "scenario": "kubevirt",
+    "targetScenario": "kubevirt",
+    "targetUsername": "kubevirt"
+  },
+  {
+    "scenario": "citellus",
+    "targetScenario": "citellus",
+    "targetUsername": "citellus"
+  }
 ]
-~~~
+```
 
 This file instructs to redirect 'scenario' `kubevirt` to another scenario (same name here), but on another username (`kubevirt` organization) and likewise for `citellus`.
 

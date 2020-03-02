@@ -31,7 +31,7 @@ VPNS, it's just a bunch of configuration files and three scripts that requires t
 - VPND (for the VPN establishing)
 - Ping (for resolving DNS names to Ip's)
 
-**CAUTION:**:   As this is just a gzipped-tar file by the moment, you'll have to check that the required software is installed before trying to use it.
+**CAUTION:**: As this is just a gzipped-tar file by the moment, you'll have to check that the required software is installed before trying to use it.
 
 This script has been created for a Debian GNU/Linux distribution, but as far as I can remember it's compatible with the schema used on Red Hat, SuSE, etc... but check before
 
@@ -45,7 +45,7 @@ As each VPND will require both static origin and target IP's there would be some
 
 ## Configuration files
 
-The configuration get's deployed on two directories: /etc/vpnd/ for the local host configuration (your host) and /etc/vpnd/hosts/* for the remote hosts configuration.
+The configuration get's deployed on two directories: /etc/vpnd/ for the local host configuration (your host) and /etc/vpnd/hosts/\* for the remote hosts configuration.
 
 There are also some rc?.d directories with symbolic links to vpns to start/stop the daemon at different runlevels, it's a good idea to copy them too, but as the main purpose of this script is to periodically test it, it should be included at crontab (as well as rc?.d to initial startup).
 
@@ -53,38 +53,38 @@ There are also some rc?.d directories with symbolic links to vpns to start/stop 
 
 Those files specify the configuration for the local host that will be used by all the other hosts.
 
-- **/etc/vpnd/master.resolv :** :   In this file you'll need to put the Dynamic DNS name of your machine (in my case "lacreu.no-ip.org"), so the update script will get your IP from it to be able to establish tunnels both if your IP changes or just if remote IP changes.
-- **/etc/vpnd/master.ip :** :   This file is created automatically with the results of resolving your Dynamic DNS to an IP to allow comparison between your last IP and your current to check if you need to relaunch VPN's (remember that the worst case is both local and remote IP's getting changed).
-- **/etc/vpnd/master.restart :** :   This file is created when local IP has changed, specifying a total VPND restart for all VPN's
+- **/etc/vpnd/master.resolv :** : In this file you'll need to put the Dynamic DNS name of your machine (in my case "lacreu.no-ip.org"), so the update script will get your IP from it to be able to establish tunnels both if your IP changes or just if remote IP changes.
+- **/etc/vpnd/master.ip :** : This file is created automatically with the results of resolving your Dynamic DNS to an IP to allow comparison between your last IP and your current to check if you need to relaunch VPN's (remember that the worst case is both local and remote IP's getting changed).
+- **/etc/vpnd/master.restart :** : This file is created when local IP has changed, specifying a total VPND restart for all VPN's
 
-### 4.2 Host configuration (/etc/vpnd/hosts/$HOST)
+### 4.2 Host configuration (/etc/vpnd/hosts/\$HOST)
 
 Each file in this subdir specifies a VPN to be launched and defines the name that the configuration files would have appended.
 
 We'll create a folder for each remote host with a descriptive name that would be use by the scripts.
 
-**CAUTION:** :   For creating the files you'll have to use "echo "client" > mode" or similar (for port, resolv, mode, etc), there have been some problems with files not created this way (and my perl knowledge doesn't allow me to do anything better).
+**CAUTION:** : For creating the files you'll have to use "echo "client" > mode" or similar (for port, resolv, mode, etc), there have been some problems with files not created this way (and my perl knowledge doesn't allow me to do anything better).
 
 Into this subdir there would be the following config files:
 
 #### 4.2.1 Static files
 
-- **vpnd.key :** :   Cipher key that would be used for the connection with the remote host. It gets created by VPND or copied from remote host.
-- **mode :** :   Mode that we use to get connected to remote host (server or client)
-- **port :** :   Port at wich the connection gets established
-- **resolv :** :   Dinamic DNS resolver name for the target host (used for resolving it's IP)
-- **master :** :   Master configuration file for HOST (the config that it's static)
+- **vpnd.key :** : Cipher key that would be used for the connection with the remote host. It gets created by VPND or copied from remote host.
+- **mode :** : Mode that we use to get connected to remote host (server or client)
+- **port :** : Port at wich the connection gets established
+- **resolv :** : Dinamic DNS resolver name for the target host (used for resolving it's IP)
+- **master :** : Master configuration file for HOST (the config that it's static)
 
 #### 4.2.2 Dinamic files
 
-- **vpnd.conf :** :   Configuration file for HOST, it gets created automatically when running /etc/vpnd/update.pl script
-- **restart :** :   This file gets created by the "compare.pl" script to indicate that VPNS should restart this host VPN. This file is created if the IP has changed since last launch
+- **vpnd.conf :** : Configuration file for HOST, it gets created automatically when running /etc/vpnd/update.pl script
+- **restart :** : This file gets created by the "compare.pl" script to indicate that VPNS should restart this host VPN. This file is created if the IP has changed since last launch
 
 #### 4.2.3 Scripts
 
-- **/etc/vpnd/update.pl :** :   Script to merge configuration files for host, resolve IP and then output a vpnd.conf file for that host
-- **/etc/vpnd/compare.pl :** :   Script to compare IP's between recorded one and current for preparing VPND restart
-- **/etc/init.d/vpns :** :   Script to start, stop, restart or restart-if-needed the VPNS based on hosts definitions
+- **/etc/vpnd/update.pl :** : Script to merge configuration files for host, resolve IP and then output a vpnd.conf file for that host
+- **/etc/vpnd/compare.pl :** : Script to compare IP's between recorded one and current for preparing VPND restart
+- **/etc/init.d/vpns :** : Script to start, stop, restart or restart-if-needed the VPNS based on hosts definitions
 
 ## Recommendations
 
@@ -92,10 +92,10 @@ As probably IP's will change, you'll need to put a crontab sentence for checking
 
 Sample crontab line would be:
 
-~~~cron
+```cron
 #!bash
 0-59/5 * * * * root /etc/init.d/vpns restart-if-needed
-~~~
+```
 
 This way, every five minutes, the script would be run and will restart VPNS that needed to do so.
 
@@ -107,7 +107,7 @@ update.pl will dump a vpnd.conf file containing the merge of "host/master" and t
 
 ### Version 0.43
 
-Added a check (chop $mode) with the mode definition to fix problems in systems that always configured mode as server (default check, because the if sentence at update.pl searched for "client" and sometimes it was not well compared)
+Added a check (chop \$mode) with the mode definition to fix problems in systems that always configured mode as server (default check, because the if sentence at update.pl searched for "client" and sometimes it was not well compared)
 
 Thanks to Hawkmoon
 
@@ -135,7 +135,7 @@ Added compare.pl script to compare IP's and to let inform the vpns that needs to
 
 ### Version 0.2
 
-Configuration files moved from /etc/vpnd/ to /etc/vpnd/hosts/*, so each host has it's configuration files into one subdirectory, allowing to tidy the things a bit. Old files were named vpnd-HOST.conf, vpnd-HOST.key, HOST.resolv,etc. They got renamed and moved to the actual location.
+Configuration files moved from /etc/vpnd/ to /etc/vpnd/hosts/\*, so each host has it's configuration files into one subdirectory, allowing to tidy the things a bit. Old files were named vpnd-HOST.conf, vpnd-HOST.key, HOST.resolv,etc. They got renamed and moved to the actual location.
 
 ### Version 0.1
 
@@ -167,27 +167,27 @@ Here you will see a sample files used at my host, the other files not dumped her
 
 #### 7.2.4 master
 
-- **local** :   172.16.97.78
-- **remote** :   172.16.97.77
-- **autoroute** :   **keepalive** :   10
-- **noanswer** :   3
-- **keyfile** :   vpnd.key
-- **randomdev** :   /dev/urandom mtu 1600
+- **local** : 172.16.97.78
+- **remote** : 172.16.97.77
+- **autoroute** : **keepalive** : 10
+- **noanswer** : 3
+- **keyfile** : vpnd.key
+- **randomdev** : /dev/urandom mtu 1600
 
 ### 7.3 Sample run for Oceano (resulting vpnd.conf)
 
-- **local** :   172.16.97.78
-- **remote** :   172.16.97.77
+- **local** : 172.16.97.78
+- **remote** : 172.16.97.77
 - **autoroute** :
-- **keepalive** :   10
-- **noanswer** :   3
-- **keyfile** :   vpnd.key
-- **pidfile** :   /var/run/vpnd-hawkmoon.pid
-- **randomdev** :   /dev/urandom
-- **mtu** :   1600
-- **client** :   81.202.20.245 2010
-- **server** :   81.202.117.88 2010
-- **mode** :   server
+- **keepalive** : 10
+- **noanswer** : 3
+- **keyfile** : vpnd.key
+- **pidfile** : /var/run/vpnd-hawkmoon.pid
+- **randomdev** : /dev/urandom
+- **mtu** : 1600
+- **client** : 81.202.20.245 2010
+- **server** : 81.202.117.88 2010
+- **mode** : server
 
 ## FAQ
 
@@ -211,4 +211,4 @@ Please, if you use this program, email me to know where it gets to and if it's u
 
 This document has been created using the LYX Editor and compiled with under Debian GNU/Linux, and then converted to the format you're viewing.
 
-File translated from T~E~X by [T~T~H](http://hutchinson.belmont.ma.us/tth/), version 3.67.  On 9 Mar 2007, 21:50.
+File translated from T~E~X by [T~T~H](http://hutchinson.belmont.ma.us/tth/), version 3.67. On 9 Mar 2007, 21:50.

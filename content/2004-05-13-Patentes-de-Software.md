@@ -13,7 +13,7 @@ comments: true
 
 Una [patente](http://es.wikipedia.org/wiki/patente) es la legitimación jurídica formal para la explotación de un recurso determinado.
 
-En realidad se trata de un modelo restringido de monopolio comercial.  Como dato histórico cabe recordar las famosas "patentes de corso", licencias de asesinato y expolio que los estados otorgaban a piratas (los corsarios) para que ejercieran impunemente sus actividades bajo determinadas condiciones beneficiosas para ambos. [¿No os suena de algo?](http://antisgae.internautas.org/)
+En realidad se trata de un modelo restringido de monopolio comercial. Como dato histórico cabe recordar las famosas "patentes de corso", licencias de asesinato y expolio que los estados otorgaban a piratas (los corsarios) para que ejercieran impunemente sus actividades bajo determinadas condiciones beneficiosas para ambos. [¿No os suena de algo?](http://antisgae.internautas.org/)
 
 ### ¿Qué es lo que se patenta en este caso?
 

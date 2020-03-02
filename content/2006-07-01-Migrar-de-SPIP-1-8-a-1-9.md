@@ -5,8 +5,8 @@ title: Migrar de SPIP 1.8 a 1.9
 date: 2006-07-01T14:48:00Z
 tags: spip, cms, foss
 lang: es
-
 ---
+
 [TOC]
 
 ### Introducción a SPIP 1.9
@@ -50,33 +50,33 @@ encargarse SPIP de adaptarlas a la nueva forma de hacerlo en cada caso.
 
 Por ejemplo, un INCLURE antes se hacía así:
 
-~~~spip
+```spip
 <INCLURE(cabecera.php3){id_rubrique=3}>
-~~~
+```
 
 y ahora se hace de la siguiente forma:
 
-~~~spip
+```spip
 <INCLURE{fond=cabecera}{id_rubrique=3}>
-~~~
+```
 
 Al igual que antes, por ejemplo para llamar a un album fotográfico, hacíamos:
 
-~~~spip
+```spip
 <INCLURE(album.php3){id_document=34}>
-~~~
+```
 
 Ahora, haremos:
 
-~~~spip
+```spip
 <INCLURE{fond=album}{id_rubrique=3}>
-~~~
+```
 
 que automáticamente spip transformará en:
 
-~~~spip
+```spip
 spip.php?page=album&id_rubrique=3
-~~~
+```
 
 Este nuevo sistema, además de facilitar la validación XHTML y hacerlo independiente del tipo de URL (propre, html, propres2, etc) que estemos utilizando, permite añadir y eliminar fácilmente parámetros de la url sin más que concatenar |parametre_url'variable',valor, separador o bien, eliminar parámetros sin más que dejar el valor vacío.
 

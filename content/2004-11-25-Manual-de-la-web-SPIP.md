@@ -19,7 +19,7 @@ Se analizaron los diversos sistemas libres de gestión de contenidos (la opción
 
 ### SPIP
 
-Al final se escogió a SPIP: Sistema para la Publicación en Internet.  SPIP es un gestor de contenido diseñado con la idea de crear los archivos digitales de Le Monde Diplomatique y se creó combinando otros sistemas ya utilizados en revistas online.
+Al final se escogió a SPIP: Sistema para la Publicación en Internet. SPIP es un gestor de contenido diseñado con la idea de crear los archivos digitales de Le Monde Diplomatique y se creó combinando otros sistemas ya utilizados en revistas online.
 
 Como características, cabe destacar, que debido a su orientación al mundo editorial SPIP contempla características muy interesantes:
 
@@ -114,7 +114,7 @@ Cursiva, texto entre llaves "`{`" y "`}`"
 
 Negrita, texto entre llaves dobles "`{ {`" y "`} }`"
 
-Subtítulos, precedido por tres  \#\#\#
+Subtítulos, precedido por tres \#\#\#
 
 Línea de separación horizontal, cuatro guiones seguidos "`----`"
 

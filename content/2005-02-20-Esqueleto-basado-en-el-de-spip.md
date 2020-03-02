@@ -6,6 +6,7 @@ tags: spip, cms, foss
 lang: es
 comments: true
 ---
+
 [TOC]
 
 ### Introducción
@@ -49,7 +50,7 @@ Los esqueletos están pensados para, y asumen, que el servidor tenga habilitada 
 
 Para su funcionamiento, necesita que las siguientes redirecciones estén habilitadas (se hizo así para facilitar la indexación por parte de buscadores):
 
-~~~apache
+```apache
 RewriteRule ^spip/rubrique([0-9]+).html$ rubrique.php3?id_rubrique=$1 [QSA,L]
 RewriteRule ^spip/article([0-9]+).html$ article.php3?id_article=$1 [QSA,L]
 RewriteRule ^spip/breve([0-9]+).html$ breve.php3?id_breve=$1 [QSA,L]
@@ -59,11 +60,11 @@ RewriteRule ^spip/plan.html$ plan.php3 [QSA,L]
 RewriteRule ^spip/mot([0-9]+).html$ mot.php3?id_mot=$1 [QSA,L]
 RewriteRule ^spip/imprimir([0-9]+).html$ imprimir.php3?id_article=$1 [QSA,L]
 RewriteRule ^spip/auteur([0-9]+).html$ auteur.php3?id_auteur=$1 [QSA,L]
-~~~
+```
 
 Actualmente y para usar las URL Propres (las URL Propres, permiten generar rutas de acceso a los artículos basadas en el título del mismo, facilitando que sean recordadas por los usuarios y mejorando la gestión por parte de los buscadores de Internet) de SPIP, las redirecciones que tengo habilitadas son las siguientes (adjunto el archivo htaccess por motivos de comodidad):
 
-~~~apache
+```apache
 RewriteRule ^spip/rubrique([0-9]+).html$ rubrique.php3?id_rubrique=$1 [QSA,L]
 RewriteRule ^spip/article([0-9]+).html$ article.php3?id_article=$1 [QSA,L]
 RewriteRule ^spip/breve([0-9]+).html$ breve.php3?id_breve=$1 [QSA,L]
@@ -79,7 +80,7 @@ RewriteRule ^-[^/.]+-?(.html)?$ rubrique.php3 [QSA,E=url_propre:$0,L]
 RewriteRule ^_[^/.]+_?(.html)?$ auteur.php3 [QSA,E=url_propre:$0,L]
 RewriteRule ^@[^/.]+@?(.html)?$ site.php3 [QSA,E=url_propre:$0,L]
 RewriteRule ^[^/.]+(.html)?$ article.php3 [QSA,E=url_propre:$0,L]
-~~~
+```
 
 La redirección para album, pdf.php3 e imprimir son las únicas no estándar, así que en caso de no poder o no querer hacer uso de este sistema, se deberían modificar los esqueletos de estas páginas (así como de los módulos relacionados) para utilizar la estándar con extensiones en php3
 
@@ -104,7 +105,7 @@ Además de los esqueletos normales de SPIP, estos tienen los siguientes módulos
 
 Actualmente está formado por los siguientes módulos laterales:
 
-~~~text
+```text
   ------------------------ ------------------------------------------------------------------------------------------------
   Módulo                   Cometido
   mod_agenda.html         Muestra la mini agenda con los eventos del mes en curso
@@ -132,14 +133,14 @@ Actualmente está formado por los siguientes módulos laterales:
   mod_clobl2.html         Cierra el estilo de bloque 2
   mod_clobl3.html         Cierra el estilo de bloque 3
   ------------------------ ------------------------------------------------------------------------------------------------
-~~~
+```
 
 Las plantillas generales (rubrique, -album, -synd, article, etc) llevan un div que se llama lefter y otro que se llama righter, esos son los paneles laterales, podremos incluir, activar o desactivar los módulos que queramos haciendo INCLURES.
 
 Los módulos, en caso de no tener datos que mostrar, no aparecen, por ejemplo el de traducciones, el de palabras clave o el de datos EXIF, de forma que sólo aparecerán en caso de que los hayamos inclido (y de que sean necesarios claro).
 
 En principio, una vez tenidas en cuenta las anteriores consideraciones, podremos trabajar con normalidad con el sitio web, con la única limitación o pega (que no he sabido resolver y de la que no he recibido respuesta en la lista de SPIP) de que los artículos deben obligatoriamente llevar al menos una palabra clave asociada, que no pertenezca al grupo de palabras "Design", que por otro lado, dado que las plantillas establecen los META KEYWORDS en función de las palabras clave indicadas, nos
-ayudará a que los buscadores visiten nuestras webs.  Te recomiendo en este caso que crees un grupo de palabras clave llamado "Tema" y que recomiendes (mediante la opción adecuada en la definición del grupo) que se escoja al menos una palabra de este grupo.
+ayudará a que los buscadores visiten nuestras webs. Te recomiendo en este caso que crees un grupo de palabras clave llamado "Tema" y que recomiendes (mediante la opción adecuada en la definición del grupo) que se escoja al menos una palabra de este grupo.
 
 Para utilizar la agenda, deberás publicar artículos en su sección y asignarles la fecha del evento en el campo de "Fecha de Publicación Anterior", para que así SPIP la coloque en el día apropiado
 

@@ -13,7 +13,7 @@ As a recipe, if you want to enable a custom domain name on [blog-o-matic]({filen
 
 In order to do so, edit `pelicanconf.py` and add the following differences:
 
-~~~diff
+```diff
 diff --git a/pelicanconf.py b/pelicanconf.py
 index 680abcb..fc3dd8f 100644
 --- a/pelicanconf.py
@@ -37,17 +37,17 @@ index 680abcb..fc3dd8f 100644
 
 
  ## ONLY TOUCH IF YOU KNOW WHAT YOU'RE DOING!
-~~~
+```
 
 This will copy the `CNAME` file created in `content/extra/CNAME` to the resulting 'master' branch as `/CNAME`.
 
 This file is interpreted by Github pages server as the domain name to listen for, so your website will start to be available from it (supposing that you followed usual requirements):
 
-~~~bind
+```bind
 yourcustomdomain.es.	1	IN	A	185.199.108.153
 yourcustomdomain.es.	1	IN	A	185.199.109.153
 yourcustomdomain.es.	1	IN	A	185.199.110.153
 yourcustomdomain.es.	1	IN	A	185.199.111.153
-~~~
+```
 
 Please, do review if the serving servers have been updated on github pages!

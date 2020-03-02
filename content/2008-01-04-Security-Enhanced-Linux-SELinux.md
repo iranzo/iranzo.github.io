@@ -5,18 +5,20 @@ date: 2008-01-04T18:14:03Z
 tags: linux, selinux, foss
 category: tech
 ---
+
 [TOC]
 
 ### Introduction
 
 SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel.
 
-SELinux, originally developed by N.S.A.  (National Security Agency) allows applications to be confined by the kernel.
+SELinux, originally developed by N.S.A. (National Security Agency) allows applications to be confined by the kernel.
 
 Inside that "confined area", much more grained than a standard chroot (system where basic executables are copied to another folder in order to have a small subsystem isolated from real system. The drawback is that a small subsystem could have enough utilities to reveal private information from our internal network),in which we can allow only certain operations, for example: adding information to a file, read from a directory but not writing, even just for one file in a standard directory,
 etc...
 
 #### Policies
+
 Each policy has different applications, and restrictions to the running system. The most extended ones are:
 
 - Targeted
@@ -51,11 +53,11 @@ For working with SELinux we have several tools available, most of them, are old 
 
 Most of those tools have been expanded to use SELinux and have extra parameters, for example, in our example:
 
-~~~bash
+```bash
 ls -lZ /usr/sbin/httpd\*
 rwxr-xr-x root root system_u:object_r:httpd_exec_t /usr/sbin/httpd
 rwxr-xr-x root root system_u:object_r:httpd_exec_t /usr/sbin/httpd.worker
-~~~
+```
 
 The "-Z" tells ls to show the SELinux attributes.
 
@@ -69,9 +71,9 @@ In the listing before, apache is listed as system user, object role and httpd_ex
 
 If we do a 'ps auxZ|grep httpd'
 
-~~~bash
+```bash
 root:system_r:httpd_t apache 2923 0.0 0.4 10424 2076 ? S 00:58 0:00 /usr/sbin/httpd
-~~~
+```
 
 We see that process httpd is being executed as root, system role, and httpd type.
 
@@ -83,10 +85,10 @@ Well, SELinux uses process transitions, in this case, httpd_exec_t, when execute
 
 We use a script at `/etc/init.d/httpd` which:
 
-~~~bash
+```bash
 ls -lZ /etc/init.d/httpd
 rwxr-xr-x root root system_u:object_r:initrc_exec_t /etc/init.d/httpd
-~~~
+```
 
 Is yet another type!!!
 
@@ -96,26 +98,26 @@ SELinux defines another kind of "domain transition" which allows that process st
 
 Not really ;-). There are several macros that automate this (for example, from /usr/share/selinux/devel/example.te), we can see:
 
-~~~selinux
+```selinux
 domain_type(myapp_t)
 domain_entry_file(myapp_t, myapp_exec_t)
-~~~
+```
 
 That automatically setup a domain type myapp_t, and a transition from myapp_exec_t to myapp_t when that executable is loaded for running it on our system.
 
 #### How does apache loads its config files
 
-~~~bash
+```bash
 ls -lZd /etc/httpd/
 drwxr-xr-x root root system_u:object_r:httpd_config_t /etc/httpd/
-~~~
+```
 
 As Apache wil need to use that directory, we need to put in our custom template that permission, so we will write on our template:
 
-~~~selinux
+```selinux
 allow httpd_t httpd_config_t:dir r_dir_perms;
 allow httpd_t httpd_config_t:file r_file_perms;
-~~~
+```
 
 This will give permission to access "dir"ectories with read-only permissions as well as read-only permission to "file"s with that type.
 
@@ -131,20 +133,20 @@ There is an command-line utility named "audit2allow" that will told us what we n
 
 #### What if we try to run httpd listening on port 27
 
-~~~bash
+```bash
 audit2allow -a
 #============= httpd_t ==============
 allow httpd_t reserved_port_t:tcp_socket name_bind;
-~~~
+```
 
 Well, this will be the "fix", but this is a "dirty" one, as will allow Apache to hook on any reserved port.
 
 SELinux provides "semanage" that allows to define several behaviors, for example, the ports available to use by httpd_t:
 
-~~~bash
+```bash
 semanage port -l|grep http
 http_port_t tcp 80, 443, 488, 8008, 8009, 8443
-~~~
+```
 
 Well, http_t uses http_port_t that enables Apache to hook on those ports, if we need to make apache to listen on 27, we'll need to execute:
 
@@ -154,10 +156,10 @@ This will add port 27 using tcp to http_port_t type, and this will make apache w
 
 semanage also helps into define clearance levels for users, and map user logins to security levels, so we can have users that get a specific clearance, that even root will not be able to access, so those files would be "private".
 
-~~~bash
+```bash
 semanage login -l
 Login Name SELinux User MLS/MCS Range __default__ user_u s0 root root SystemLow-SystemHigh
-~~~
+```
 
 In this case, any user gets mapped to user_u and s0 level, root instead, gets root user and s0.c0 to s0.c255 level
 
@@ -167,14 +169,14 @@ We can test with policies and disabling them or not using setenforce. Set enforc
 
 Well, in order to write a simple policy, we need the selinux-devel package on our system, and then:
 
-~~~bash
+```bash
 cp /usr/share/selinux/devel/Makefile /root
 cd /root
-~~~
+```
 
 Now we will need to edit a template and put something like this:
 
-~~~text
+```text
 policy_module(hello-world,1.0.0)
 type myapp_t;
 type myapp_exec_t;
@@ -183,14 +185,14 @@ domain_entry_file(myapp_t, myapp_exec_t) type myapp_log_t;
 logging_log_file(myapp_log_t) type myapp_tmp_t;
 files_tmp_file(myapp_tmp_t) allow myapp_t myapp_log_t:file ra_file_perms; allow myapp_t myapp_tmp_t:file manage_file_perms;
 files_tmp_filetrans(myapp_t,myapp_tmp_t,file)
-~~~
+```
 
 This was the sample template placed at
 `/usr/share/selinux/devel/example.te`, using it togther with example.fc:
 
-~~~bash
+```bash
 /usr/sbin/myapp — gen_context(system_u:object_r:myapp_exec_t,s0)
-~~~
+```
 
 Will provide a complete policy for our app:
 
@@ -201,7 +203,7 @@ loaded.
 
 #### How do we verify that a module has been loaded
 
-With `semodule -l` all loaded modules will be shown, remember that some policies allow booleans to enable or disable certain aspects of them. We can check all defined booleans for currently loaded modules with `getsebool -a`  and we can set them with `setsebool` , using "-P" in order to set that value as default after reboots.
+With `semodule -l` all loaded modules will be shown, remember that some policies allow booleans to enable or disable certain aspects of them. We can check all defined booleans for currently loaded modules with `getsebool -a` and we can set them with `setsebool` , using "-P" in order to set that value as default after reboots.
 
 We can switch a value using togglesebool value but this will not set it as default for next reboot.
 

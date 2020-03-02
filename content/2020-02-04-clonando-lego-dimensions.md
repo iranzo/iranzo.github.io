@@ -10,6 +10,7 @@ description:
 lang: es
 slug: lego-dimensions-cloning
 ---
+
 [TOC]
 
 ## Introducción
@@ -40,7 +41,7 @@ Cada etiqueta puede leerse/escribirse desde tu teléfono (Probado con un [Nexus 
 
 Cada etiqueta dispone de un campo al principio con el número de serie, que no puede ser modificado, y una contraseña que se utiliza para validarla.
 
-En este artículo [Manual para clonar figuras de Lego Dimensions](https://www.elotrolado.net/hilo_manual-para-clonar-figuras-de-lego-dimensions_2209995) habla de dos métodos, uno, usando una aplicación llamada `ldtageditor`, que puede localizarse en google mediante  <https://www.google.com/search?client=firefox-b-d&q=ldtageditor+apk> y otra, utilizando una aplicación de la Play Store de Android llamada [MIFARE++ Ultralight](https://play.google.com/store/apps/details?id=com.samsung.sprc.fileselector).
+En este artículo [Manual para clonar figuras de Lego Dimensions](https://www.elotrolado.net/hilo_manual-para-clonar-figuras-de-lego-dimensions_2209995) habla de dos métodos, uno, usando una aplicación llamada `ldtageditor`, que puede localizarse en google mediante <https://www.google.com/search?client=firefox-b-d&q=ldtageditor+apk> y otra, utilizando una aplicación de la Play Store de Android llamada [MIFARE++ Ultralight](https://play.google.com/store/apps/details?id=com.samsung.sprc.fileselector).
 
 El segundo método es más 'complicado', ya que incluye calcular manualmente los ID's mediante una web o mediante una aplicación (busca por `ldcharcrpyto` o lee este mensaje <http://www.proxmark.org/forum/viewtopic.php?id=2657&p=2>).
 

@@ -16,7 +16,7 @@ slug: Creating-Jigsaw-Download-Jigdo
 
 Jigdo (JIGsaw DOwnload) es una pequeña utilidad que permite ensamblar imágenes de CD/DVD a partir de los ficheros que las forman.
 
-Por ejemplo, [Debian](http://www.debian.org/) ha estado utilizándolo durante algún tiempo para distribuir sus imágenes: se descarga un fichero jigdo y utilizando la orden jigdo-lite (paquete jigdo-lite en Debian y en las basadas en RPM[^1].  De este modo, sólo de descargan ficheros pequeños de incluso varios servidores, repartiendo la carga, y haciendo uso de posibles proxyes, etc.
+Por ejemplo, [Debian](http://www.debian.org/) ha estado utilizándolo durante algún tiempo para distribuir sus imágenes: se descarga un fichero jigdo y utilizando la orden jigdo-lite (paquete jigdo-lite en Debian y en las basadas en RPM[^1]. De este modo, sólo de descargan ficheros pequeños de incluso varios servidores, repartiendo la carga, y haciendo uso de posibles proxyes, etc.
 
 Además, si ya disponíamos de ficheros descargados (por ejemplo si iniciamos con la versión X y hemos ido descargando y conservando los ficheros hasta la X.Y, jigdo puede utilizar dichos ficheros, comparándolos con los existentes en la plantilla y así, evitarnos descargar ficheros que ya tuviéramos...
 
@@ -32,10 +32,10 @@ Por ejemplo, si descargamos la imagen ISO de CentOS [mirror.centos.org](http://a
 
 (Supongamos que la iso está en /var/www/CentOS/isos/ y que la carpeta con el contenido de la iso en /var/www/CentOS/tree/, haremos:
 
-~~~bash
+```bash
 #!bash
 jigdo-file mt -i /var/www/CentOS/isos/CentOS-5.0-i386-bin-DVD/CentOS-5.0-i386-bin-DVD.iso -j /var/www/CentOS/Centos5-DVD.jigdo -t /var/www/CentOS/Centos5-DVD.template —uri Centosmirrors=[http://mirror.centos.org/centos-5/5/os/i386/](http://mirror.centos.org/centos-5/5/os/i386/) /var/www/CentOS/tree/
-~~~
+```
 
 Tras un rato de procesado y verificación de la imagen ISO<->Árbol de instalación, tendremos los dos nuevos ficheros listos para su uso.
 
@@ -53,9 +53,8 @@ JigDo descargará la descripción, buscará el fichero de plantilla, lo descarga
 
 Espero que te sea útil :)
 
-[^1]:[del repositorio de Dag](http://dag.wieers.com/rpm/packages/jigdo/)
-
-[^2]:Puede utilizarse para distribuir otro tipo de ficheros
+[^1]: [del repositorio de Dag](http://dag.wieers.com/rpm/packages/jigdo/)
+[^2]: Puede utilizarse para distribuir otro tipo de ficheros
 
 Puedes ver una plantilla de ejemplo (.jigdo y .template) que cree para este artículo, y que actualmente, permite obtener un DVD de instalación de CentOS 5 a partir de sus RPM's individuales.
 

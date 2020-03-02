@@ -6,6 +6,7 @@ tags: linux, kickstart, automation, unattended, foss
 comments: true
 lang: es
 ---
+
 [TOC]
 
 ### Instalar linux
@@ -31,7 +32,7 @@ opcionales, etc.
 
 La estructura de un kickstart podría ser:
 
-~~~bash
+```bash
 #!bash
 ## Queremos instalar un sistema
 install
@@ -84,7 +85,7 @@ screen
 mc
 joe
 
-~~~
+```
 
 Con esta estructura, el sistema quedará instalado y configurado de forma automática, se habrá detectado el hardware y cargado su soporte en caso de ser detectado y disponer los controladores apropiados.
 
@@ -100,7 +101,7 @@ Un uso típico es determinar dinámicamente la estructura de discos en base al t
 
 Por ejemplo, la forma típica sería crear el esquema de particiones como hemos hecho arriba, pero utilizando comandos "echo", por ejemplo:
 
-~~~bash
+```bash
 #!bash
 %pre
 #Obtener el primer disco del sistema y el total de discos
@@ -117,14 +118,14 @@ echo "logvol swap —fstype swap —name=Swap —vgname=$ORGANIZATION —size=10
 >> /tmp/part-include
 echo "logvol / —fstype ext3 —name=root —vgname=$ORGANIZATION —size=4096" >> /tmp/part-include
 echo "logvol /home —fstype ext3 —size=1024 —name=home —vgname=$ORGANIZATION" >> /tmp/part-include
-~~~
+```
 
 Se obtendrán los datos de los discos detectados por anaconda y se irá escribiendo esa información a un fichero temporal que luego, lo incluiremos, reemplazando la parte del perfil donde antes definíamos las
 particiones por :
 
-~~~bash
+```bash
 %include /tmp/part-include
-~~~
+```
 
 Así, para cada sistema podemos definir una organización basada en valores como la IP obtenida, etc y que sería procesador por un script, por ejemplo en PHP en el servidor.
 
@@ -132,14 +133,14 @@ Así, para cada sistema podemos definir una organización basada en valores como
 
 Un script de instalación tiene una ventaja sobre un script de pre instalación, y es que podemos ejecutarlo sobre el sistema instalado o sobre el entorno de instalación, de forma que podemos copiar archivos generados en el pre (como los logs), copiar archivos del medio de instalación si es un CD, NFS, etc y luego actuar sobre nuestro sistema, por ejemplo:
 
-~~~bash
+```bash
 #!bash
 %post
 #Sincronizar hora del sistema
 echo "Sincronizar hora del sistema"
 ntpdate pool.ntp.org
 hwclock —systohc
-~~~
+```
 
 ### Generación dinámica
 

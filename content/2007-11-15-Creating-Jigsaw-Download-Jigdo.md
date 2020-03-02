@@ -7,6 +7,7 @@ comments: true
 lang: en
 slug: Creating-Jigsaw-Download-Jigdo
 ---
+
 [TOC]
 
 ### Introduction
@@ -29,10 +30,10 @@ For example, if we download CentOS 5 DVD iso from [mirror.centos.org](http://alu
 
 (Suppossing that iso is at /var/www/CentOS/isos/ and that our exploded directory and file tree at /var/www/CentOS/tree/, we will do:
 
-~~~bash
+```bash
 #!bash
 jigdo-file mt -i /var/www/CentOS/isos/CentOS-5.0-i386-bin-DVD/CentOS-5.0-i386-bin-DVD.iso -j /var/www/CentOS/Centos5-DVD.jigdo -t /var/www/CentOS/Centos5-DVD.template —uri Centosmirrors=[http://mirror.centos.org/centos-5/5/os/i386/](http://mirror.centos.org/centos-5/5/os/i386/) /var/www/CentOS/tree/
-~~~
+```
 
 After some processing and ISO<->tree verification we will have two new files.
 
@@ -51,7 +52,6 @@ JigDo will download the descriptor, search it for the template file, download it
 I hope you find this useful :)
 
 [^1]: [From Dag's Repo](http://dag.wieers.com/rpm/packages/jigdo/)
-
 [^2]: It can also be used to deliver other kind of files
 
 Attached are the sample .jigdo and .template that I created for this document, right now it allows you to get a Centos 5 DVD using individual RPM files.

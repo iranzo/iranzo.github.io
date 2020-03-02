@@ -1,13 +1,10 @@
 ---
 layout: post
 title: Combinar correspondencia con OpenOffice.org
-date: '2010-04-05T21:50:00.001+02:00'
+date: 2010-04-05 21:50:00 +0200
 author: Pablo Iranzo Gómez
 tags: fedora, foss
 lang: es
-modified_time: '2010-04-05T22:16:08.804+02:00'
-blogger_id: tag:blogger.com,1999:blog-4564313404841923839.post-834340470617137892
-blogger_orig_url: http://iranzop.blogspot.com/2010/04/combinar-correspondencia-con.html
 comments: true
 ---
 

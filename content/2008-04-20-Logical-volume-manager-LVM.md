@@ -70,12 +70,12 @@ In sda we have the whole disk available for being used as LVM, so we will define
 
 Physical volumes are the places in which we put the structure for volume groups, it's creation is as easy as running:
 
-~~~bash
+```bash
 #!bash
 pvcreate /dev/hda2
 
 pvcreate /dev/sda1
-~~~
+```
 
 If we execute "pvscan", we can check the listing of physical volumes defined on the system, as well as the kind of metadata (lvm or lvm2) and it's size, and a briefing on total, used and available.
 
@@ -87,10 +87,10 @@ Volume groups are like drawers, which placed over physical volumes, that define 
 
 For creating the volume group we will execute:
 
-~~~bash
+```bash
 #!bash
 vgcreate Prueba /dev/sda1
-~~~
+```
 
 This command will create a volume group named "Prueba" over the physical volume at /dev/sda1
 
@@ -102,10 +102,10 @@ Logical volumes are the equivalent to partitions, is the place over which we wil
 
 Logical volumes are defined inside a volume group in the following way:
 
-~~~bash
+```bash
 #!bash
 lvcreate Prueba -n Inicial -L 2G
-~~~
+```
 
 If we execute "lvscan", we will have a listing of all the defined volume groups and it's size and between them, "Inicial", inside of "Prueba" and with a 2Gb size
 
@@ -113,19 +113,19 @@ If we execute "lvscan", we will have a listing of all the defined volume groups 
 
 Before using the logical volume we'll need to prepare it for data, and creating a filesystem, this time, the command is identical to the one we use over a physical disk, but specifying the logical volume, for example:
 
-~~~bash
+```bash
 #!bash
 mkfs.ext3 /dev/Prueba/Inicial
-~~~
+```
 
 It's recommendable to make use of a filesystem we can resize, as, one the improvements of LVM is the ability to resize logical units and, requires, as consequence that the filesystem works as a "container" able to grow or srink the same way.
 
 Now, we can mount the filesystem:
 
-~~~bash
+```bash
 #!bash
 mount /dev/Prueba/Inicial /mnt
-~~~
+```
 
 ### Resizing an LVM "drive"
 
@@ -133,7 +133,7 @@ EXT3, allows resizing of volumes, so they can grow while being used, but for red
 
 As an example, we're going to extend our "Inicial" filesystem, incresaing it in 250Mb, we'll execute:
 
-~~~bash
+```bash
 #!bash
 pvscan #(where we will be told about physical volumes and free space)
 #  In case of need, we can extend our volume group with:
@@ -142,17 +142,17 @@ vgextend Prueba /dev/disconuevo
 #  From now on, the vg will have the space ready for being used by lv and we will make it grow doing:
 lvextend -L +250M /dev/Prueba/Inicial
 ext2online /dev/mapper/Prueba-Inicial
-~~~
+```
 
 After it finishes, the filesystem at /mnt will have an extra 250Mb available.
 
 We can make the filesystem grow to a total size, for example, make it grow until 4Gb, to do so, we will do:
 
-~~~bash
+```bash
 #!bash
 lvextend -L 4G /dev/Prueba/Inicial
 ext2online /dev/mapper/Prueba-Inicial
-~~~
+```
 
 In Fedora Core 6 (FC6), the utility ext2online doesn't exists, as it has been integrated in resize2fs, so we will execute instead: resize2fs -p /dev/Prueba-Inicial [final size].
 
@@ -160,12 +160,12 @@ ATTENTION: **This is a dangerous step, we can lose data**
 
 If we want to reduce the size of a logical volume, first, we'll need to know how much space is used by the filesystem and then, umount it:
 
-~~~bash
+```bash
 #!bash
 umount /dev/mapper/Prueba-Inicial
 #Next step would be reduce the filesystem:
 resize2fs /dev/mapper/Prueba-Inicial [new size]
-~~~
+```
 
 I'm recommending reduce the filesystem under the final size we want to achieve, so we have a security margin. This size must ALWAYS be higher that the usage[^3] of the volume.
 
@@ -193,8 +193,6 @@ Here we can see the volume group "Test" and the logical and physical view create
 
 When we select the free space of the logical volume, the following is shown: number of extents, physical location for each physical volume.
 
-[^1]:Phyisical Extents
-
-[^2]:Multiple Devices: is a software techonlogy that allows creation of several disk grouping levels: linear, raid0, raid1, raid5. Devices will identify themselves to the system as /dev/md*0,1,2,3,etc*, and it's status (defined md's, sync status, etc) in the file /proc/mdstat
-
-[^3]:The one that we wrote down in the first step, before umountng
+[^1]: Phyisical Extents
+[^2]: Multiple Devices: is a software techonlogy that allows creation of several disk grouping levels: linear, raid0, raid1, raid5. Devices will identify themselves to the system as /dev/md*0,1,2,3,etc*, and it's status (defined md's, sync status, etc) in the file /proc/mdstat
+[^3]: The one that we wrote down in the first step, before umountng

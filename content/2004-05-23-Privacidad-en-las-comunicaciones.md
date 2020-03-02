@@ -93,10 +93,10 @@ GPG se basa en el sistema de llave pública/llave privada. En dicho sistema, cad
 
 Mediante este sistema, para enviar un mensaje cifrado, hacen falta cuatro claves para llevar a cabo la transferencia completa del mensaje:
 
-  |---|---|
-  |*Usuario 1*|       *Usuario 2*|
-  |Clave privada 1   |Clave privada 2|
-  |Clave pública 1   |Clave pública 2|
+|---|---|
+|_Usuario 1_| _Usuario 2_|
+|Clave privada 1 |Clave privada 2|
+|Clave pública 1 |Clave pública 2|
 
 El usuario 1, cuando quiere enviar un mensaje cifrado al usuario 2 debe, por un lado cifrar el mensaje con su clave privada y con la clave pública de la otra persona.
 

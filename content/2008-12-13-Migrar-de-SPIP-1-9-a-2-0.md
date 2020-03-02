@@ -7,6 +7,7 @@ comments: true
 tags: spip, foss
 lang: es
 ---
+
 Con la reciente salida de SPIP 2.0, llega el momento de considerar migrar.
 
 Como siempre es necesario que comprobemos si tenemos una copia de seguridad reciente, la compatibilidad de los plugins que utilizamos, etc

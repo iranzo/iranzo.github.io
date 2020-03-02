@@ -9,6 +9,7 @@ category: tech
 description:
 lang: en
 ---
+
 [TOC]
 
 ## Introduction
@@ -21,11 +22,11 @@ Since some time ago, I already experimented with ICS parsing from python because
 
 Doing some research, it seemed that `gspread` python library was the easiest one to get the access to the spread sheet and then be able to process it.
 
-Access requires setting up a `credentials.json` that is created using the [google developers console](https://console.developers.google.com/)  (we should create a new project, create new credentials, etc). Please, read [gspread documentation](https://gspread.readthedocs.io/en/latest/oauth2.html) on requisites and steps for obtaining this file.
+Access requires setting up a `credentials.json` that is created using the [google developers console](https://console.developers.google.com/) (we should create a new project, create new credentials, etc). Please, read [gspread documentation](https://gspread.readthedocs.io/en/latest/oauth2.html) on requisites and steps for obtaining this file.
 
 Once the file is there, the code can be as easy as:
 
-~~~py
+```py
 import os
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -47,7 +48,7 @@ records = sheet.get_all_records()
 
 for record in records:
     if record["name"] != "":
-~~~
+```
 
 In this case, we access the file via the file pointed in `GACREDENTIALS` environment variable and use the scope for defining the access level we need for this file.
 
@@ -67,7 +68,7 @@ Access to google calendar required to setup another method for accessing via usi
 
 As we're reading always from the same Google Sheet, we wanted to first cleanup the older entries, so we used the following code (taken from: <https://karenapp.io/articles/2019/07/how-to-automate-google-calendar-with-python-using-the-calendar-api/>):
 
-~~~py
+```py
 import os
 import os.path
 import pickle
@@ -115,11 +116,11 @@ def get_calendar_service():
 
     service = build("calendar", "v3", credentials=creds)
     return service
-~~~
+```
 
 We also wrote a function for writing new events to the calendar:
 
-~~~py
+```py
 
 def writeevent(service, summary, location, start, end, description):
     """
@@ -153,11 +154,11 @@ def writeevent(service, summary, location, start, end, description):
             .execute()
     )
     print("Event: %s written" % summary)
-~~~
+```
 
 And the main code:
 
-~~~py
+```py
 def main():
     """
     Main code for the program
@@ -227,7 +228,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-~~~
+```
 
 ## Wrap up
 
@@ -236,6 +237,6 @@ The final code, is able to use both api's to get access to the spreadsheet, read
 There's of course room for optimization, like just updating events if it's changing or not, but that would make code more complex and not adding much more functionality (as still calls would be needed for querying event, comparing, and then updating as needed).
 
 !!! Note
-    If you wonder about why using environment variables for the credential files used... this jobs runs inside Jenkins instance that has the defined secrets exported in the Jenkinsfile as environment variables, allowing to 'secure' a bit more the access to the credentils itself (even if those have been scope-limited to only allow unharmful usage.)
+If you wonder about why using environment variables for the credential files used... this jobs runs inside Jenkins instance that has the defined secrets exported in the Jenkinsfile as environment variables, allowing to 'secure' a bit more the access to the credentils itself (even if those have been scope-limited to only allow unharmful usage.)
 
 Enjoy!

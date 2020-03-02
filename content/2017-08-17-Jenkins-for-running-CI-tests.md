@@ -11,6 +11,7 @@ description:
 [TOC]
 
 ## Why?
+
 While working on [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.md) and [Magui]({filename}2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.md) it soon became evident that Unit testing for validating the changes was a requirement.
 
 Initially, using a `.travis.yml` file contained in the repo and the free service provided by <https://travis-ci.org> we soon got <https://github.com> repo providing information about if the builds succeded or not.
@@ -20,6 +21,7 @@ When it was decided to move to <https://gerrithub.io> to work in a more similar 
 After some research, it became more or less evident that another tool, like Jenkins was required to automate the UT process and report to individual reviews about the status.
 
 ## Setup
+
 Some initial steps are required for integration:
 
 - Create ssh keypair for jenkins to use
@@ -38,13 +40,14 @@ This VM was installed with:
 - Red Hat Enterprise Linux 7 'base install'
 
 ### Tuning the OS
+
 RHEL7 provides a stable environment for run on, but at the same time we were lacking some of the latest tools we're using for the builds.
 
 As a dirty hack, it was altered in what is not a recomended way, but helped to quickly check as proof of concept if it would work or not.
 
 Once OS was installed, some commands (**do not run in production**) were used:
 
-~~~bash
+```bash
 pip install pip # to upgrade pip
 pip install -U tox # To upgrade to 2.x version
 
@@ -60,13 +63,13 @@ make altinstall
 
 # this is required to later allow tox to find the command as 'jenkins' user
 ln -s /usr/local/bin/python3.5 /usr/bin/
-~~~
+```
 
 ## Installing Jenkins
 
 For the jenkins installation it's easier, there's a 'stable' repo for RHEL and the procedure is [documented](https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions):
 
-~~~bash
+```bash
 wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
 rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 yum install jenkins java
@@ -75,7 +78,7 @@ service jenkins start
 firewall-cmd --zone=public --add-port=8080/tcp --permanent
 firewall-cmd --zone=public --add-service=http --permanent
 firewall-cmd --reload
-~~~
+```
 
 This will install and start jenkins and enable the firewall to access it.
 
@@ -115,31 +118,31 @@ Now, we need to create a Job (first option in Jenkins list of jobs).
 
 - Name: **Citellus**
 - Discard older executions:
-    - Max number of executions to keep: **10**
+  - Max number of executions to keep: **10**
 - Source code Origin: ** Git**
-    - URL: **ssh://<username>@review.gerrithub.io:29418/citellusorg/citellus**
-    - Credentials: **jenkins** (Created based on the ssh keypair defined above)
-    - Branches to build: $GERRIT_BRANCH
-    - Advanced
-        - Refspec: **$GERRIT_REFSPEC**
-    - Add additional behaviours
-        - Strategy for choosing what to build:
-            - Choosing strategy **Gerrit Trigger**
+  - URL: **ssh://<username>@review.gerrithub.io:29418/citellusorg/citellus**
+  - Credentials: **jenkins** (Created based on the ssh keypair defined above)
+  - Branches to build: \$GERRIT_BRANCH
+  - Advanced
+    - Refspec: **\$GERRIT_REFSPEC**
+  - Add additional behaviours
+    - Strategy for choosing what to build:
+      - Choosing strategy **Gerrit Trigger**
 - Triggers for launch:
-    - Change Merged
-    - Commend added with regexp: .*recheck.*
-    - Patchset created
-    - Ref Updated
-    - Gerrit Project:
-        - Type: **plain**
-        - Pattern: **citellusorg/citellus**
-    - Branches:
-        - Type: **Path**
-        - Pattern: **`**`**
+  - Change Merged
+  - Commend added with regexp: ._recheck._
+  - Patchset created
+  - Ref Updated
+  - Gerrit Project:
+    - Type: **plain**
+    - Pattern: **citellusorg/citellus**
+  - Branches:
+    - Type: **Path**
+    - Pattern: **`**`\*\*
 - Execute:
-    - Python script:
+  - Python script:
 
-~~~python
+```python
 import os
 import tox
 
@@ -147,7 +150,7 @@ os.chdir(os.getenv('WORKSPACE'))
 
 # environment is selected by ``TOXENV`` env variable
 tox.cmdline()
-~~~
+```
 
 ![Jenkins Job configuration]({static}/imagen/jenkins/jobconfig.png)
 

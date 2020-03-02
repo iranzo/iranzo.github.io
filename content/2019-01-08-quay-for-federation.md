@@ -9,6 +9,7 @@ category: tech
 description:
 lang: en
 ---
+
 [TOC]
 
 ## Why this article?
@@ -60,11 +61,12 @@ At the beginning it was not easy to find out all the required configuration vari
 First we do need to create a swift container in OpenStack that will hold the information from Quay:
 
 - Create swift container for holding the storage:
-    ~~~sh
-        (overcloud) [stack@osp-ait-director ~]$ openstack container create quay-enterprise
-    ~~~
 
-    - Output:
+  ```sh
+      (overcloud) [stack@osp-ait-director ~]$ openstack container create quay-enterprise
+  ```
+
+  - Output:
 
 | account                                 | container       | x-trans-id                           |
 | --------------------------------------- | --------------- | ------------------------------------ |
@@ -72,24 +74,24 @@ First we do need to create a swift container in OpenStack that will hold the inf
 
 #### Configuration settings defined in Quay
 
-| Setting              | Value                                                                                     |
-| -------------------- | ----------------------------------------------------------------------------------------- |
-| Storage Engine       | Openstack Storage (Swift)                                                                 |
-| Swift Auth Version   | 3                                                                                         |
-| Switft Auth URL      | $YOURKEYSTONE PUBLIC ENDPOINT (like http://aaa.bbb.ccc.ddd:5000)                          |
-| Swift container name | $YOURCONTAINER (created with swift container create 'name')                               |
-| Storage path         | $WHATEVER (we did use `/quay`)                                                            |
-| Username             | $OSP_USERNAME (we did use `admin`)                                                        |
-| key/password         | $OSP_PASSWORD (we did use `redhat`)                                                       |
-| OS OPTIONS dropdown  | <----- This is an important one if not it will fail                                       |
-| tenant_id            | $YOURTENANTID (I did use 'admin' id as obtained with `openstack project list|grep admin`) |
+| Setting              | Value                                                                                      |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| Storage Engine       | Openstack Storage (Swift)                                                                  |
+| Swift Auth Version   | 3                                                                                          |
+| Switft Auth URL      | \$YOURKEYSTONE PUBLIC ENDPOINT (like http://aaa.bbb.ccc.ddd:5000)                          |
+| Swift container name | \$YOURCONTAINER (created with swift container create 'name')                               |
+| Storage path         | \$WHATEVER (we did use `/quay`)                                                            |
+| Username             | \$OSP_USERNAME (we did use `admin`)                                                        |
+| key/password         | \$OSP_PASSWORD (we did use `redhat`)                                                       |
+| OS OPTIONS dropdown  | <----- This is an important one if not it will fail                                        |
+| tenant_id            | \$YOURTENANTID (I did use 'admin' id as obtained with `openstack project list|grep admin`) |
 
 Once done, Quay should 'validate' the upload and `swift list $YOURCONTAINER` should give something like:
 
-~~~sh
+```sh
 (overcloud) [stack@osp-director ~]$ swift list quay-enterprise
 quay/_verify
-~~~
+```
 
 Showing that the verification file has been created succesfully.
 
@@ -112,7 +114,7 @@ For setting Google Cloud Storage, we did use the following values:
 
 | Setting           | Value                 |
 | ----------------- | --------------------- |
-| Location ID       | $yourvalue            |
+| Location ID       | \$yourvalue           |
 | Storage Engine    | Google Cloud Storage  |
 | Cloud Access Key  | GOOGXXXXXXXX          |
 | Cloud Secret Key  | pksXXXXXX             |
@@ -125,7 +127,7 @@ For setting Amazon S3 storage, we did use the following values:
 
 | Setting           | Value           |
 | ----------------- | --------------- |
-| Location ID       | $yourvalue      |
+| Location ID       | \$yourvalue     |
 | Storage Engine    | Amazon S3       |
 | S3 Bucket         | quay-enterprise |
 | Storage Directory | /quay/ait       |
@@ -213,13 +215,12 @@ Now, we have all the required certificates for Quay generated.
 
 Now using the web interface of quay, we can start uploading the certificates required for operation.
 
-***Custom SSL Certificates***
+**_Custom SSL Certificates_**
 Here, load the `quay.pem`
 
 ![]({static}imagen/postrepquay/2018-11-29-15-32-08.png)
 
-***Server Configuration***
-****TLS****
+**_Server Configuration_** \***\*TLS\*\***
 Certificate: load the `quay-enterprise.pem`
 Key: load the `quay-enterprise-key.pem`
 
@@ -236,7 +237,7 @@ So that both work on port 443 instead of port 80 that is used by default.
 
 We'll also need to load `ca.pem` and `quay-enterprise.pem` into our `/etc/pki/ca-trust/source/anchors` folder and then run:
 
-~~~sh
+```sh
 update-ca-trust extract
 service docker restart
 # Now let's go login into the registry
@@ -266,7 +267,7 @@ fae583f1d4e5: Pushed
 704a8634956f: Pushing [==================================================>]   127 MB
 05f0b6bcfa5c: Pushed
 0972cc82b682: Pushing [=============================>                     ]  74.2 MB/126.8 MB
-~~~
+```
 
 ### OpenShift certificate
 

@@ -10,11 +10,12 @@ description:
 lang: en
 slug: lego-dimensions
 ---
+
 [TOC]
 
 ## Introduction
 
-Lego Dimensions is a game for some platforms  (XBox, Wii U, PlayStation) which adds a base with NFC reader and colour leds that allows to interact with the videogame from the real world.
+Lego Dimensions is a game for some platforms (XBox, Wii U, PlayStation) which adds a base with NFC reader and colour leds that allows to interact with the videogame from the real world.
 
 The starter pack 'starter pack' has minifigs for SuperCool, Batman and Gandalf plus additional blocks to 'decorate' the base by building a portal.
 
@@ -22,7 +23,7 @@ The main story is based on how those characters (Gandalf, Batman and Supercool) 
 
 The game itself, mixing both on screen play plus 'real world' play works via `NFC` interaction with tags provided for each minifigure, vehicle or gadget, allowing console to recognize which one is on the base and in which position.
 
-Not only the base is used to add characters or vehicles to the game, it's also used for `playing`, for example, freeing characters when moving them in the base, or `transporting`  to different areas on screen, or even `succeed` at a puzzle moving the same character in a sequency trought the base positions.
+Not only the base is used to add characters or vehicles to the game, it's also used for `playing`, for example, freeing characters when moving them in the base, or `transporting` to different areas on screen, or even `succeed` at a puzzle moving the same character in a sequency trought the base positions.
 
 For enhancing the game, there are additional packs classified in `story pack`, `promotional pack`, `team pack`, `fun pack` or `level pack` which add new worlds, levels or characters depending of the different types.
 
@@ -40,10 +41,10 @@ Those are the starter packs depending on the platform (as it includes the game i
 
 ## Promotional pack
 
-The  `Promotional pack` adds more characters and vehicles and came with some promotions like console for a specific platform, etc:
+The `Promotional pack` adds more characters and vehicles and came with some promotions like console for a specific platform, etc:
 
-| Lego ID | Type             | Name and link                                                  | Image                                                                        |
-| ------- | ---------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Lego ID | Type             | Name and link                                                       | Image                                                                         |
+| ------- | ---------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | 71340   | Promotional pack | [Supergirl 🛒](https://www.amazon.es/dp/B01M15X9BQ?tag=redken-21)   | ![](https://images-na.ssl-images-amazon.com/images/I/81Pxv7EINKL._SL200_.jpg) |
 | 71342   | Promotional pack | [Green Arrow 🛒](https://www.amazon.es/dp/B01KCVECCS?tag=redken-21) | ![](https://images-na.ssl-images-amazon.com/images/I/61J40bVPLvL._SL200_.jpg) |
 
@@ -51,9 +52,9 @@ The  `Promotional pack` adds more characters and vehicles and came with some pro
 
 Story pack (for all platforms) add a new portal and new play levels:
 
-| Lego ID | Type       | Name and link                                                      | Image                                                                   |
-| ------- | ---------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| 71242   | Story pack | [Ghostbusters 🛒](https://www.amazon.es/dp/B01H0GAGG4?tag=redken-21)   | ![](http://images.amazon.com/images/P/B01H0GAGG4.01._PI_SCMZZZZZZZ_.jpg) |
+| Lego ID | Type       | Name and link                                                           | Image                                                                    |
+| ------- | ---------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| 71242   | Story pack | [Ghostbusters 🛒](https://www.amazon.es/dp/B01H0GAGG4?tag=redken-21)    | ![](http://images.amazon.com/images/P/B01H0GAGG4.01._PI_SCMZZZZZZZ_.jpg) |
 | 71253   | Story pack | [Fantastic beats 🛒](https://www.amazon.es/dp/B01H0GAGGE?tag=redken-21) | ![](http://images.amazon.com/images/P/B01H0GAGGE.01._PI_SCMZZZZZZZ_.jpg) |
 | 71264   | Story pack | [Batman Movie 🛒](https://www.amazon.es/dp/B01M5CHWCV?tag=redken-21)    | ![](http://images.amazon.com/images/P/B01M5CHWCV.01._PI_SCMZZZZZZZ_.jpg) |
 
@@ -61,8 +62,8 @@ Story pack (for all platforms) add a new portal and new play levels:
 
 The `Level Pack` pack add new level and a new story:
 
-| Lego ID | Type       | Name and link                                                         | Image                                                                   |
-| ------- | ---------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Lego ID | Type       | Name and link                                                              | Image                                                                    |
+| ------- | ---------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | 71201   | Level Pack | [Back to the Future 🛒](https://www.amazon.es/dp/B00VJWS3FC?tag=redken-21) | ![](http://images.amazon.com/images/P/B00VJWS3FC.01._PI_SCMZZZZZZZ_.jpg) |
 | 71202   | Level Pack | [The Simpsons 🛒](https://www.amazon.es/dp/B00ZWVGYD4?tag=redken-21)       | ![](http://images.amazon.com/images/P/B00ZWVGYD4.01._PI_SCMZZZZZZZ_.jpg) |
 | 71203   | Level Pack | [Portal 2 🛒](https://www.amazon.es/dp/B00ZWVG77W?tag=redken-21)           | ![](http://images.amazon.com/images/P/B00ZWVG77W.01._PI_SCMZZZZZZZ_.jpg) |
@@ -78,8 +79,8 @@ The `Level Pack` pack add new level and a new story:
 
 The `Team pack` add more characters and vehicles:
 
-| Lego ID | Type      | Name and link                                                         | Image                                                                   |
-| ------- | --------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Lego ID | Type      | Name and link                                                              | Image                                                                    |
+| ------- | --------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | 71205   | Team pack | [Jurassic World 🛒](https://www.amazon.es/dp/B00ZWVGMT0?tag=redken-21)     | ![](http://images.amazon.com/images/P/B00ZWVGMT0.01._PI_SCMZZZZZZZ_.jpg) |
 | 71206   | Team pack | [Scooby-Doo 🛒](https://www.amazon.es/dp/B00Z7ECFMU?tag=redken-21)         | ![](http://images.amazon.com/images/P/B00Z7ECFMU.01._PI_SCMZZZZZZZ_.jpg) |
 | 71207   | Team pack | [Ninjago 🛒](https://www.amazon.es/dp/B00VJWS3GG?tag=redken-21)            | ![](http://images.amazon.com/images/P/B00VJWS3GG.01._PI_SCMZZZZZZZ_.jpg) |
@@ -87,14 +88,14 @@ The `Team pack` add more characters and vehicles:
 | 71246   | Team pack | [Adventure Time 🛒](https://www.amazon.es/dp/B01H1QWVX4?tag=redken-21)     | ![](http://images.amazon.com/images/P/B01H1QWVX4.01._PI_SCMZZZZZZZ_.jpg) |
 | 71247   | Team pack | [Harry Potter 🛒](https://www.amazon.es/dp/B01FYJXHQU?tag=redken-21)       | ![](http://images.amazon.com/images/P/B01FYJXHQU.01._PI_SCMZZZZZZZ_.jpg) |
 | 71255   | Team pack | [Teen Titans Go! 🛒](https://www.amazon.com/dp/B072PTZR4T?tag=redken08-20) | ![](http://images.amazon.com/images/P/B072PTZR4T.01._PI_SCMZZZZZZZ_.jpg) |
-|71346|Team pack|[Powerpuff girls 🛒](https://www.amazon.es/dp/B071W71MM7?tag=redken-21) | ![](http://images.amazon.com/images/P/B071W71MM7.01._PI_SCMZZZZZZZ_.jpg) |
+| 71346   | Team pack | [Powerpuff girls 🛒](https://www.amazon.es/dp/B071W71MM7?tag=redken-21)    | ![](http://images.amazon.com/images/P/B071W71MM7.01._PI_SCMZZZZZZZ_.jpg) |
 
 ## Fun pack
 
 `Fun Pack` add character and a gadget or vehicle:
 
-| Lego ID | Type     | Name and link                                                                                   | Image                                                                   |
-| ------- | -------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Lego ID | Type     | Name and link                                                                                        | Image                                                                    |
+| ------- | -------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | 71209   | Fun pack | [Wonder Woman 🛒](https://www.amazon.es/dp/B00VJWS7YE?tag=redken-21)                                 | ![](http://images.amazon.com/images/P/B00VJWS7YE.01._PI_SCMZZZZZZZ_.jpg) |
 | 71210   | Fun pack | [Cyborg 🛒](https://www.amazon.es/dp/B00VJWS7Z8?tag=redken-21)                                       | ![](http://images.amazon.com/images/P/B00VJWS7Z8.01._PI_SCMZZZZZZZ_.jpg) |
 | 71211   | Fun pack | [Bart Simpson 🛒](https://www.amazon.es/dp/B00ZWVGSS0?tag=redken-21)                                 | ![](http://images.amazon.com/images/P/B00ZWVGSS0.01._PI_SCMZZZZZZZ_.jpg) |
@@ -124,7 +125,7 @@ The `Team pack` add more characters and vehicles:
 | 71241   | Fun pack | [Slimer 🛒](https://www.amazon.es/dp/B013WOAYHO?tag=redken-21)                                       | ![](http://images.amazon.com/images/P/B013WOAYHO.01._PI_SCMZZZZZZZ_.jpg) |
 | 71251   | Fun pack | [A-Team 🛒](https://www.amazon.es/dp/B01H1R5GZS?tag=redken-21)                                       | ![](http://images.amazon.com/images/P/B01H1R5GZS.01._PI_SCMZZZZZZZ_.jpg) |
 | 71257   | Fun pack | [Fantastic Beasts - Tina 🛒](https://www.amazon.es/dp/B01GG2ZAGY?tag=redken-21)                      | ![](http://images.amazon.com/images/P/B01GG2ZAGY.01._PI_SCMZZZZZZZ_.jpg) |
-| 71258   | Fun pack | [E.T.](https://www.amazon.es/dp/B01FYJXHYC?tag=redken-21)                                         | ![](http://images.amazon.com/images/P/B01FYJXHYC.01._PI_SCMZZZZZZZ_.jpg) |
+| 71258   | Fun pack | [E.T.](https://www.amazon.es/dp/B01FYJXHYC?tag=redken-21)                                            | ![](http://images.amazon.com/images/P/B01FYJXHYC.01._PI_SCMZZZZZZZ_.jpg) |
 | 71266   | Fun pack | [Lego City - Chase McCain 🛒](https://www.amazon.es/dp/B01N3B36TX?tag=redken-21&psc=1)               | ![](http://images.amazon.com/images/P/B01N3B36TX.01._PI_SCMZZZZZZZ_.jpg) |
 | 71285   | Fun pack | [Adventure Time - Marceline the Vampire Queen 🛒](https://www.amazon.es/dp/B01GG2ZAHI?tag=redken-21) | ![](http://images.amazon.com/images/P/B01GG2ZAHI.01._PI_SCMZZZZZZZ_.jpg) |
 | 71286   | Fun pack | [Knight Rider 🛒](https://www.amazon.es/dp/B01N2JPO9J?tag=redken-21)                                 | ![](http://images.amazon.com/images/P/B01N2JPO9J.01._PI_SCMZZZZZZZ_.jpg) |
@@ -136,7 +137,7 @@ The `Team pack` add more characters and vehicles:
 
 ## The videogame
 
-Game shares the Lego metodology for other games: pickup `coins` and `break` objects to find more coins or things to `build`  to progress in the game, but also combined with `special abilities` like some objects being only `breakable` by specific characters, etc.
+Game shares the Lego metodology for other games: pickup `coins` and `break` objects to find more coins or things to `build` to progress in the game, but also combined with `special abilities` like some objects being only `breakable` by specific characters, etc.
 
 If a character is required but not owned, it's possible to `rent` by using some of the earned pieces that character for some time interval, allowing us to complete certain tasks and keep progressing in the stories.
 

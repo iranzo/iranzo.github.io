@@ -6,6 +6,7 @@ comments: true
 tags: Linux, fencing, management, foss
 description:
 ---
+
 Hi,
 
 Some time ago, and after discussing with a colleague, I had a look on Intel's [AMT](http://en.wikipedia.org/wiki/Intel_Active_Management_Technology), and this week I demoed it for another colleague as a cheap-replacement for having power fencing capabilities on commodity hardware.
@@ -19,9 +20,9 @@ The steps used for configuring it, require to:
 - first enable the support in the BIOS, usually named 'Intel AMT' or 'Intel Active Management Technology'.
 - After this step it was possible to use the command to enter the special AMT firmware `Intel(R) Management Engine` which on this laptop is enabled with `CTRL-P`.
 - If this is the first time you enable it, you'll require to change the default `admin` password to something secure, usually mixed upper-lower case, symbol and numbers.
-    - For this example we'll be using `Qwer123$` as password.
+  - For this example we'll be using `Qwer123$` as password.
 - Explore the settings, enable it and validate network settings.
-    - I've enabled DHCP on both LAN and Wireless for IPv4 and IPv6, and enabled KVM redirection
+  - I've enabled DHCP on both LAN and Wireless for IPv4 and IPv6, and enabled KVM redirection
 - Once finished, save changes and exit from firmware screen and let the system boot.
 
 From another host, you can perform the remaining configuration steps, from now on, the 'target' system will be intercepting packets sent to specific port via the network cards and redirect to AMT firmware instead of going to target host. This is something important to note, the packets are only intercepting when coming from **OUTSIDE** the host so we'll use a second computer to access it.
@@ -32,7 +33,7 @@ From that web interface and once logging with `admin` and the password set `Qwer
 
 Now, for doing the 'command-line' part, we will need to install one package on our system and rum some scripts.
 
-~~~bash
+```bash
 # First we'll install amtterm wsmancli
 
 dnf -y install amtterm wsmancli
@@ -65,13 +66,13 @@ wsman invoke -a RequestStateChange http://schemas.dmtf.org/wbem/wscim/1/cim-sche
 # OPTIONAL: view settings (validate all the settings)
 wsman get http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h ${AMT_HOST} -P 16992 -u admin -p ${AMT_PASSWORD}
 
-~~~
+```
 
 After this step, we should be able to use `vinagre target` to access the KVM redirection and remotely control our system.
 
 For example, to control power of host you can use:
 
-~~~bash
+```bash
 # Check host status:
 amttool $AMT_HOST info
 
@@ -80,7 +81,7 @@ amttool $AMT_HOST powerup
 
 # Power down a powered-on host:
 amttool $AMT_HOST powerdown
-~~~
+```
 
 Check `man amttool` for other commands like `reset`, `powercycle`.
 

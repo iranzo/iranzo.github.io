@@ -25,7 +25,7 @@ Before contributing you need to:
 
 Submitting a change is quite easy:
 
-~~~bash
+```bash
 # Select the project, 'neutron-lbaas' for me
 each='neutron-lbaas'
 git clone git@github.com:openstack/$each.git
@@ -40,7 +40,7 @@ git add $files
 git commit -m "Descriptive message"
 # send  to upstream for review:
 git-review
-~~~
+```
 
 `git-review` will output an url you can use to preview your change, and the hooks will automatically add a 'Change-ID' so subsequent changes are linked to it.
 
@@ -49,8 +49,8 @@ NOTE: full reference is available at the [Developer's Guide](http://docs.opensta
 The biggest `issue` started here:
 
 - In order to not require a new function to validate integers, I've used the one for `non-negative` which already does this tests, but one of the reviewers suggested to write a function
-- Functions were imported from `neutron-lib` so  I submitted a second change to `neutron-lib` project
-- As the change in neutron-lib couldn't be marked as dependent as `neutron-lbaas` uses the  build the version already published, I had to define another *interim* version of the function so that `neutron-lbaas` can use it in the meantime and raise another bug, to later remove this interim function once than `neutron-lib` includes the validate_integer function
+- Functions were imported from `neutron-lib` so I submitted a second change to `neutron-lib` project
+- As the change in neutron-lib couldn't be marked as dependent as `neutron-lbaas` uses the build the version already published, I had to define another _interim_ version of the function so that `neutron-lbaas` can use it in the meantime and raise another bug, to later remove this interim function once than `neutron-lib` includes the validate_integer function
 - As part of the comments on `neutron-lib` review, it was found that it would be nice to validate values, so after some discussion, I moved to use the internal `validate_values`.
 - Of course, `validate_values` is just doing `data in valid_values`, so it fails if `data` or `valid_values` are not comparable and doesn't do conversion of depending on the values itselves, so this spin-off another review for improving the ´validate_values´ function.
 
@@ -68,7 +68,7 @@ To respectively, validate pep8 formatting (line length, spaces around operators,
 
 After each set of changes performed to apply the feedback received, ensure to:
 
-~~~bash
+```bash
 # Add the modified files to a commit
 
 git add $files_modified
@@ -92,8 +92,8 @@ git commit --amend
 # Submit changes again for review
 
 git-review
-~~~
+```
 
-Also, keep in mind that apart from submitting the code change is important to submit automated validation tests, which can be executed with  `tox -e py27` to view that the functions return the values we expect even if the input data is out of what it should be, or like coverage, to validate that the code is covered (check on `tox.ini` what is defined).
+Also, keep in mind that apart from submitting the code change is important to submit automated validation tests, which can be executed with `tox -e py27` to view that the functions return the values we expect even if the input data is out of what it should be, or like coverage, to validate that the code is covered (check on `tox.ini` what is defined).
 
 And last but not least, expect to have lot of comments on more serius changes like changes to stable libs, as lot of reviewers will come to ensure that everything looks good and might even discuss it on the regular meetings to ensure, that a change is a good fit for the product in the proposed approach.

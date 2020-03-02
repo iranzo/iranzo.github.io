@@ -9,7 +9,6 @@ category: blog
 description:
 ---
 
-
 I've uploaded those pics from the model, as it seems that people likes it.
 
 The model is [Lego 10242 Mini Cooper 🛒](https://www.amazon.es/dp/B00M0ETSWU?tag=redken-21)

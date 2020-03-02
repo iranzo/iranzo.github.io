@@ -82,19 +82,19 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
 ## User/chat configuration
 
 - common
-    - `currency`: EUR
-    - `modulo`: 1 (to just show karma every X/modulo points, 0 to disable)
-    - `stock`: stock tickers to check
-    - `cleanlink`: True if we want links to be expanded and removed
-    - `cleankey`: Regexp to replace, for example tag=
-    - `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
+  - `currency`: EUR
+  - `modulo`: 1 (to just show karma every X/modulo points, 0 to disable)
+  - `stock`: stock tickers to check
+  - `cleanlink`: True if we want links to be expanded and removed
+  - `cleankey`: Regexp to replace, for example tag=
+  - `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
 - chat
-    - `isolated`: False, if true, allow link, all karma, etc is tied to GID
-    - `link`: empty, if defined, channel is slave to a mater
-    - `admin`: List of admins of channels, default empty: everyone
-    - `maxage`: chats older than this will be removed
-    - `silent`: makes stampy not to output messages to that chat
-    - `welcome`: outputs the text when a new user joins the chat, replacing "$username" by user name
+  - `isolated`: False, if true, allow link, all karma, etc is tied to GID
+  - `link`: empty, if defined, channel is slave to a mater
+  - `admin`: List of admins of channels, default empty: everyone
+  - `maxage`: chats older than this will be removed
+  - `silent`: makes stampy not to output messages to that chat
+  - `welcome`: outputs the text when a new user joins the chat, replacing "\$username" by user name
 
 ## Extra commands
 
@@ -106,7 +106,7 @@ The bot, once token has been used and admin has been set, will store that inform
 
 - `/[g|l]config show` will list actual defined settings
 - `/[g|l]config set var=value` will set one of those settings with a new value
-    - As of this writing (verbosity, url for api, token, sleep timeout, owner, database, run in daemon mode)
+  - As of this writing (verbosity, url for api, token, sleep timeout, owner, database, run in daemon mode)
 - `/[g|l]config delete var` will delete that variable from configuration.
 
 ### Karma
@@ -134,14 +134,14 @@ Bot allows to trigger gif sending when a keyword is given.
 Bot allows to setup aliases, so when karma is given to a word, it will instead add it to a different one (and report that one)
 
 - `/alias key=value` Will create a new alias, so each time `key++` is used, it will instead do value++
-    - This operation, sums the previous karma of `key` and `value` and stores it in value so no karma is lost
-    - Recursive aliases can be defined, so doing:
-        - `/alias lettuce=vegetable`
-        - `/alias vegetable=food`
-        - `lettuce++` will give karma to `food`.
-    - Alias can be defined to groups of words so, it can be defined to have:
-        - `/alias friday=tgif tfsmif`
-        - `friday++` will increase karma on `tgif` and `tfsmif`.
+  - This operation, sums the previous karma of `key` and `value` and stores it in value so no karma is lost
+  - Recursive aliases can be defined, so doing:
+    - `/alias lettuce=vegetable`
+    - `/alias vegetable=food`
+    - `lettuce++` will give karma to `food`.
+  - Alias can be defined to groups of words so, it can be defined to have:
+    - `/alias friday=tgif tfsmif`
+    - `friday++` will increase karma on `tgif` and `tfsmif`.
 - `/alias list` Will show current defined aliases
 - `/alias delete key` will delete a previously defined alias so each word gets karma on its own
 

@@ -23,7 +23,7 @@ Android TV-Box: es como un tablet o un teléfono conectado a una TV y generalmen
 
 Android TV: es una versión de Android que incorpora cambios para TV en el sistema operativo, de forma que es posible controlarlo con un mando de cruceta así como teclas adicionales para ir atrás, ir al inicio y micrófono.
 
-El rango de aplicaciones también difiere, un TV Box dispone del amplio rango de aplicaciones  disponibles para android, pero con un coste asociado: no están optimizadas para utilizarlas en una pantalla y generalmente requiere de acciones moviendo un cursor virtual a modo de ratón y después 'pinchar' para poder trabajar, mientras que por el otro lado, Android TV dispone de un número menor de aplicaciones, pero preparadas para utilizarse mediante controles más sencillos más naturales para una televisión.
+El rango de aplicaciones también difiere, un TV Box dispone del amplio rango de aplicaciones disponibles para android, pero con un coste asociado: no están optimizadas para utilizarlas en una pantalla y generalmente requiere de acciones moviendo un cursor virtual a modo de ratón y después 'pinchar' para poder trabajar, mientras que por el otro lado, Android TV dispone de un número menor de aplicaciones, pero preparadas para utilizarse mediante controles más sencillos más naturales para una televisión.
 
 Android TV también tiene soporte de Chromecast, por lo que no sólo puedes replicar/espejar la imagen del móvil en el televisor, pero también 'enviar' (`cast`) contenido de aplicaciones soportadas, no sólo para reproducción de contenidos, pero también para jugar, por ejemplo con juegos en los que varios usuarios desde su móvil interactúan en la pantalla del televisor.
 
@@ -37,7 +37,7 @@ Tanto Nvidia como Xiaomi TV Box permiten convertir o 'actualizar' cualquier tele
 
 # Netflix
 
-Una de las características de Android TV es la posibilidad de utilizarlo con plataformas de video como  [Amazon Prime Video](https://www.primevideo.com/?tag=redken-21) o [Netflix](https://netflix.com).
+Una de las características de Android TV es la posibilidad de utilizarlo con plataformas de video como [Amazon Prime Video](https://www.primevideo.com/?tag=redken-21) o [Netflix](https://netflix.com).
 
 Lamentablemente, recientemente empecé a recibir este mensaje de error en el Xiaomi TV Box que compré para un televisor más antiguo:
 

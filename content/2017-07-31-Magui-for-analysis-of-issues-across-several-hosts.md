@@ -9,6 +9,7 @@ description:
 ---
 
 ## Background
+
 [Citellus]({filename}2017-07-26-Citellus-framework-for-detecting-known-issues.md) allows to check a sosreport against known problems identified on the provided tests.
 
 This approach is easy to implement and easy to test but has limitations when a problem can span across several hosts and only the problem reveals itself when a general analysis is performed.
@@ -17,7 +18,7 @@ Magui tries to solve that by running the analysis functions inside citellus acro
 
 At the moment, Magui just does the grouping of the data and visualization, for example, give it a try with the `seqno` plugin of citellus to report the sequence number in galera database:
 
-~~~
+```
 [user@host folder]$ magui.py * -f seqno # (filtering for ‘seqno’ plugins).
 {'/home/remote/piranzo/citellus/citellus/plugins/openstack/mysql/seqno.sh': {'ctrl0.localdomain': {'err': '08a94e67-bae0-11e6-8239-9a6188749d23:36117633\n',
                                                                                                    'out': '',
@@ -29,7 +30,7 @@ At the moment, Magui just does the grouping of the data and visualization, for e
                                                                                                    'out': '',
                                                                                                    'rc': 0}}}
 
-~~~
+```
 
 Here, we can see that the sequence number on the logs is the same for the hosts.
 
