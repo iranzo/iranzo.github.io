@@ -34,6 +34,7 @@ General usage:
 - `stock <ticker>` to get trading quote for ticker in stock market
 - `/hilight <add|delete|list> <word>` Adds/deletes word or lists words that will cause a forward to notify you
 - `/feed <add|delete|list> name url` Adds/deletes/lists a new feed form URL on channel
+- `/remind <add|delete|list> name interval text` Adds/deletes/lists a new reminder for interval in channel, interval can be specified as '1y2m3w5d'
 - `/ical <add|delete|list> name url` Adds/deletes/lists a new ical url to print events happening during the day
 - `/cn <word>` To get a random Chuck Norris fact related with provided word (or random)
 - `/excuse` To get a random excuse
