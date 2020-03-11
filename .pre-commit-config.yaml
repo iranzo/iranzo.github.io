@@ -1,4 +1,3 @@
-exclude: ''
 fail_fast: true
 repos:
 - repo: meta
@@ -35,3 +34,19 @@ repos:
   - id: requirements-txt-fixer
   - id: sort-simple-yaml
   - id: trailing-whitespace
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v1.2.3
+  hooks:
+  - id: flake8
+- repo: https://github.com/bemeurer/beautysh
+  rev:  master
+  hooks:
+  - id: beautysh
+- repo: https://github.com/openstack/bashate
+  rev:  master
+  hooks:
+  - id: bashate
+- repo: https://github.com/asottile/blacken-docs
+  rev:  master
+  hooks:
+  - id: blacken-docs
