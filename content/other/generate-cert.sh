@@ -6,7 +6,7 @@ if [[ "$1" == "" ]]; then
     exit 1
 fi
 
-for file in ca.pem ca-key.pem ca-config.json ; do
+for file in ca.pem ca-key.pem ca-config.json; do
     if [[ ! -f ${file} ]]; then
         echo "ERROR: File ${file} is missing, please run generate-ca.sh first"
     fi
@@ -20,8 +20,7 @@ ROUTE_HOST_AWS="${SERVICE_NAME}.${NAMESPACE}.apps.aws-fed.e2e.bos.redhat.com"
 
 sans="localhost,localhost.localdomain,127.0.0.1,${ROUTE_HOST_PIT},${ROUTE_HOST_LEO},${ROUTE_HOST_AWS},${SERVICE_NAME},${SERVICE_NAME}.${NAMESPACE},${SERVICE_NAME}.${NAMESPACE}.svc.cluster.local"
 
-
-cat > ${1}-csr.json <<EOF
+cat >${1}-csr.json <<EOF
 {
   "CN": "kubernetes",
   "key": {

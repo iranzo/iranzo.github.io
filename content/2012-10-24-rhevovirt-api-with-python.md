@@ -23,17 +23,17 @@ from ovirtsdk.xml import params
 from random import choice
 
 baseurl = "https://localhost:8443"
-api = API(url=baseurl, username="admin@internal",password="redhat",insecure=True)
+api = API(url=baseurl, username="admin@internal", password="redhat", insecure=True)
 
 for vm in api.vms.list():
-    print vm.name
-
+    print(vm.name)
 ```
 
 The `.list()` method works pretty well, but beware, it limits collections to 100 elements for performance reasons, so in those cases, we'll need to check how many results do we have, and paginate by passing an extra argument to our ".list()" invocation, for example:
 
 ```python
-for vm in api.vms.list(query="page 1")
+for vm in api.vms.list(query="page 1"):
+    print(vm)
 ```
 
 Furthermore, we can check the number of results by using:
@@ -48,7 +48,7 @@ And playing together, we could set a list that returns all results by running:
 vms = []
 page = 0
 length = 100
-while (length > 0):
+while length > 0:
     page = page + 1
     query = "%s page %s" % (oquery, page)
     tanda = api.vms.list(query=query)

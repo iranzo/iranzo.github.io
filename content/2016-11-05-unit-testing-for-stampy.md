@@ -82,20 +82,20 @@ except:
     pass
 
 # Define configuration for tests
-setconfig('token', '279488369:AAFqGVesZ-81n9sFafLQxUUCVO8_8L3JNEU')
-setconfig('owner', 'iranzo')
-setconfig('url', 'https://api.telegram.org/bot')
-setconfig('verbosity', 'DEBUG')
+setconfig("token", "279488369:AAFqGVesZ-81n9sFafLQxUUCVO8_8L3JNEU")
+setconfig("owner", "iranzo")
+setconfig("url", "https://api.telegram.org/bot")
+setconfig("verbosity", "DEBUG")
 
 # Empty karma database in case it contained some leftover
-dbsql('DELETE from karma')
-dbsql('DELETE from quote')
+dbsql("DELETE from karma")
+dbsql("DELETE from quote")
 dbsql('UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME="quote"')
 
 
 class TestStampy(TestCase):
     def test_owner(self):
-        self.assertEqual(config('owner'), 'iranzo')
+        self.assertEqual(config("owner"), "iranzo")
 ```
 
 This file creates the database if none is existing and defines some sample values, like DEBUG level, url for contacting telegram API servers, or even a token that can be used to test the functionality for sending messages.
@@ -119,20 +119,19 @@ from stampy.stampy import getkarma, updatekarma, putkarma
 
 class TestStampy(TestCase):
     def test_putkarma(self):
-        putkarma('patata', 0)
-        self.assertEqual(getkarma('patata'), 0)
+        putkarma("patata", 0)
+        self.assertEqual(getkarma("patata"), 0)
 
     def test_getkarma(self):
-        self.assertEqual(getkarma('patata'), 0)
+        self.assertEqual(getkarma("patata"), 0)
 
     def test_updatekarmaplus(self):
-        updatekarma('patata', 2)
-        self.assertEqual(getkarma('patata'), 2)
+        updatekarma("patata", 2)
+        self.assertEqual(getkarma("patata"), 2)
 
     def test_updatekarmarem(self):
-        updatekarma('patata', -1)
-        self.assertEqual(getkarma('patata'), 1)
-
+        updatekarma("patata", -1)
+        self.assertEqual(getkarma("patata"), 1)
 ```
 
 Which starts by putting a known karma on a word, validating, verifying the query, update the value by a positive number and later, decrease it with a negative one.
@@ -149,29 +148,28 @@ from stampy.stampy import getkarma, putkarma, createalias, getalias, deletealias
 
 
 class TestStampy(TestCase):
-
     def test_createalias(self):
-        createalias('patata', 'creilla')
-        self.assertEqual(getalias('patata'), 'creilla')
+        createalias("patata", "creilla")
+        self.assertEqual(getalias("patata"), "creilla")
 
     def test_getalias(self):
-        self.assertEqual(getalias('patata'), 'creilla')
+        self.assertEqual(getalias("patata"), "creilla")
 
     def test_increasealiaskarma(self):
-        updatekarma('patata', 1)
-        self.assertEqual(getkarma('patata'), 1)
+        updatekarma("patata", 1)
+        self.assertEqual(getkarma("patata"), 1)
 
         # Alias doesn't get increased as the 'aliases' modifications are in
         # process, not in the individual functions
-        self.assertEqual(getkarma('creilla'), 0)
+        self.assertEqual(getkarma("creilla"), 0)
 
     def test_removealias(self):
-        deletealias('patata')
-        self.assertEqual(getkarma('creilla'), 0)
+        deletealias("patata")
+        self.assertEqual(getkarma("creilla"), 0)
 
     def test_removekarma(self):
-        putkarma('patata', 0)
-        self.assertEqual(getkarma('patata'), 0)
+        putkarma("patata", 0)
+        self.assertEqual(getkarma("patata"), 0)
 ```
 
 Where an alias is created, verified, karma in creased on the word with an alias, and then the aliased value.

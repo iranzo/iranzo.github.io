@@ -1,7 +1,7 @@
 #!/bin/bash
 # Description: Generate CA for signing later certificates
 
-cat > ca-config.json <<EOF
+cat >ca-config.json <<EOF
 {
   "signing": {
     "default": {
@@ -17,7 +17,7 @@ cat > ca-config.json <<EOF
 }
 EOF
 
-cat > ca-csr.json <<EOF
+cat >ca-csr.json <<EOF
 {
   "CN": "Kubernetes",
   "key": {
