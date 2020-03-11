@@ -24,20 +24,23 @@ So:
 At this point I needed some software for automating the initial conversion, so I went to python's `feedparser` libraries to perform this with a bit of coding:
 
 ```python
-url="/path/to/your/xml/file.xml"
+url = "/path/to/your/xml/file.xml"
 
 import codecs
 import feedparser
-feed=feedparser.parse(url)
+
+feed = feedparser.parse(url)
 
 for item in feed["items"]:
-    filename=item["date"][0:10]+"-"+item["link"][23:] #remove the first 23 chars from article url http+domain
+    filename = (
+        item["date"][0:10] + "-" + item["link"][23:]
+    )  # remove the first 23 chars from article url http+domain
     print filename
-    with codecs.open(filename,'w','utf-8') as f:
+    with codecs.open(filename, "w", "utf-8") as f:
         f.write("---\n")
         f.write("layout: post\n")
-        for elem in ["title","date"]:
-            f.write("%s: %s\n" % (elem,item[elem]))
+        for elem in ["title", "date"]:
+            f.write("%s: %s\n" % (elem, item[elem]))
         f.write("---\n")
         f.write(item["content"][0].value)
 ```

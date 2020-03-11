@@ -146,7 +146,7 @@ Now, we need to create a Job (first option in Jenkins list of jobs).
 import os
 import tox
 
-os.chdir(os.getenv('WORKSPACE'))
+os.chdir(os.getenv("WORKSPACE"))
 
 # environment is selected by ``TOXENV`` env variable
 tox.cmdline()
