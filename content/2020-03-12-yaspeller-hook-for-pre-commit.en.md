@@ -11,18 +11,22 @@ lang: en
 slug: yaspeller-hook-for-pre-commit
 ---
 
-I've created a repository at <https://github.com/iranzo/precommit-hooks> which adds support for `pre-commit` to spell check your files.
+I've made a PR that got merged into Yaspeller repository which adds support for `pre-commit` to spell check your files.
 
 It requires simple configuration, just add this snippet to your `.pre-commit-config.yaml`:
 
 ```yaml
-- repo: https://github.com/iranzo/precommit-hooks.git
-  rev: master # Use the sha / tag you want to point at or master
+- repo: https://github.com/hcodes/yaspeller.git
+  rev: master
   hooks:
     - id: yaspeller
-      args: ["--find-repeat-words", "--ignore-digits", "--ignore-urls"]
+      files: "\\.en\\.md"
 ```
 
 The plugin will then initialize and spell check your files via `yaspeller`. It will use the standard `.yaspeller.json` file for dictionary and settings and automate it for each new commit you work on.
+
+!!! important
+
+    If you were checking this information, note that I've made and get merged a PR to yaspeller so that we now use directly their repository. The snippet above was updated to reflect my current settings on this site (and only check articles in English).
 
 Hope you like it!
