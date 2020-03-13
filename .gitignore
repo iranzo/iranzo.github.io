@@ -5,3 +5,4 @@ themes/
 .history/
 *.pid
 __pycache__/
+*~

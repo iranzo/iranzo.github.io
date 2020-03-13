@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego Dimensions Review
-tags: lego, xbox, playstation, ps3, ps4, wii, dimensions, nfc, review
+tags: Lego, Xbox, PlayStation, ps3, ps4, Wii, dimensions, NFS, review
 layout: post
 date: 2019-08-19 22:00:36 +0200
 comments: true
@@ -15,33 +15,50 @@ slug: lego-dimensions
 
 ## Introduction
 
-Lego Dimensions is a game for some platforms (XBox, Wii U, PlayStation) which adds a base with NFC reader and colour leds that allows to interact with the videogame from the real world.
+Lego Dimensions is a game for some platforms (Xbox, Wii U, PlayStation)
+which adds a base with NFC reader and colour LED that allows to interact
+with the video game from the real world.
 
-The starter pack 'starter pack' has minifigs for SuperCool, Batman and Gandalf plus additional blocks to 'decorate' the base by building a portal.
+The starter pack 'starter pack' has minifigs for Supercool, Batman and
+Gandalf plus additional blocks to 'decorate' the base by building a portal.
 
-The main story is based on how those characters (Gandalf, Batman and Supercool) meet and attempt to find and rescue their friends while visiting several `worlds`.
+The main story is based on how those characters (Gandalf, Batman and
+Supercool) meet and attempt to find and rescue their friends while visiting
+several `worlds`.
 
-The game itself, mixing both on screen play plus 'real world' play works via `NFC` interaction with tags provided for each minifigure, vehicle or gadget, allowing console to recognize which one is on the base and in which position.
+The game itself, mixing both on screen play plus 'real world' play works via
+`NFC` interaction with tags provided for each minifigure, vehicle or gadget,
+allowing console to recognize which one is on the base and in which
+position.
 
-Not only the base is used to add characters or vehicles to the game, it's also used for `playing`, for example, freeing characters when moving them in the base, or `transporting` to different areas on screen, or even `succeed` at a puzzle moving the same character in a sequency trought the base positions.
+Not only the base is used to add characters or vehicles to the game, it's
+also used for `playing`, for example, freeing characters when moving them in
+the base, or `transporting` to different areas on screen, or even `succeed`
+at a puzzle moving the same character in a sequence through the base
+positions.
 
-For enhancing the game, there are additional packs classified in `story pack`, `promotional pack`, `team pack`, `fun pack` or `level pack` which add new worlds, levels or characters depending of the different types.
+For enhancing the game, there are additional packs classified in `story pack`, `promotional pack`, `team pack`, `fun pack` or `level pack` which add
+new worlds, levels or characters depending of the different types.
 
-Packs with `vehicles` or `gadgets` come with additional pieces that allows `improving it` as we get trought the story and getting new instructions on screen on how to build them, being finally the console via the NFC base the one writing to the NFC Tag the improved transformation.
+Packs with `vehicles` or `gadgets` come with additional pieces that allows
+`improving it` as we get through the story and getting new instructions on
+screen on how to build them, being finally the console via the NFC base the
+one writing to the NFC Tag the improved transformation.
 
 ## Starter pack
 
 Those are the starter packs depending on the platform (as it includes the game itself):
 
-- [Microsoft XBox 🛒](https://www.amazon.es/dp/B01G3VWJ9O?tag=redken-21)
-- [Microsoft XBox 360 🛒](https://www.amazon.es/dp/B01G3VWGAG?tag=redken-21)
+- [Microsoft Xbox 🛒](https://www.amazon.es/dp/B01G3VWJ9O?tag=redken-21)
+- [Microsoft Xbox 360 🛒](https://www.amazon.es/dp/B01G3VWGAG?tag=redken-21)
 - [Sony PlayStation 4 (ps4) 🛒](https://www.amazon.es/dp/B01G3VWJ4E?tag=redken-21)
 - [Sony PlayStation 3 (ps3) 🛒](https://www.amazon.es/dp/B01G3VWJ58?tag=redken-21)
 - [Nintendo Wii U 🛒](https://www.amazon.es/dp/B01G3VWJ5S?tag=redken-21)
 
 ## Promotional pack
 
-The `Promotional pack` adds more characters and vehicles and came with some promotions like console for a specific platform, etc:
+The `Promotional pack` adds more characters and vehicles and came with some
+promotions like console for a specific platform, etc:
 
 | Lego ID | Type             | Name and link                                                       | Image                                                                         |
 | ------- | ---------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -67,7 +84,7 @@ The `Level Pack` pack add new level and a new story:
 | 71201   | Level Pack | [Back to the Future 🛒](https://www.amazon.es/dp/B00VJWS3FC?tag=redken-21) | ![](http://images.amazon.com/images/P/B00VJWS3FC.01._PI_SCMZZZZZZZ_.jpg) |
 | 71202   | Level Pack | [The Simpsons 🛒](https://www.amazon.es/dp/B00ZWVGYD4?tag=redken-21)       | ![](http://images.amazon.com/images/P/B00ZWVGYD4.01._PI_SCMZZZZZZZ_.jpg) |
 | 71203   | Level Pack | [Portal 2 🛒](https://www.amazon.es/dp/B00ZWVG77W?tag=redken-21)           | ![](http://images.amazon.com/images/P/B00ZWVG77W.01._PI_SCMZZZZZZZ_.jpg) |
-| 71204   | Level Pack | [Dr Who 🛒](https://www.amazon.es/dp/B0119RU28M?tag=redken-21)             | ![](http://images.amazon.com/images/P/B0119RU28M.01._PI_SCMZZZZZZZ_.jpg) |
+| 71204   | Level Pack | [Dr. Who 🛒](https://www.amazon.es/dp/B0119RU28M?tag=redken-21)            | ![](http://images.amazon.com/images/P/B0119RU28M.01._PI_SCMZZZZZZZ_.jpg) |
 | 71228   | Level Pack | [GhostBusters 🛒](https://www.amazon.es/dp/B013WOBCW0?tag=redken-21)       | ![](http://images.amazon.com/images/P/B013WOBCW0.01._PI_SCMZZZZZZZ_.jpg) |
 | 71235   | Level Pack | [Midway 🛒](https://www.amazon.es/dp/B0156C0FS8?tag=redken-21)             | ![](http://images.amazon.com/images/P/B0156C0FS8.01._PI_SCMZZZZZZZ_.jpg) |
 | 71244   | Level Pack | [Sonic The Hedgehog 🛒](https://www.amazon.es/dp/B01FYJXHW4?tag=redken-21) | ![](http://images.amazon.com/images/P/B01FYJXHW4.01._PI_SCMZZZZZZZ_.jpg) |
@@ -135,10 +152,15 @@ The `Team pack` add more characters and vehicles:
 | 71348   | Fun pack | [Harry Potter - Hermione Granger 🛒](https://www.amazon.es/dp/B01MTG7FX7?tag=redken-21)              | ![](http://images.amazon.com/images/P/B01MTG7FX7.01._PI_SCMZZZZZZZ_.jpg) |
 | 71349   | Fun pack | [Beetlejuice 🛒](https://www.amazon.es/dp/B071W71LTR?tag=redken-21)                                  | ![](http://images.amazon.com/images/P/B071W71LTR.01._PI_SCMZZZZZZZ_.jpg) |
 
-## The videogame
+## The video game
 
-Game shares the Lego metodology for other games: pickup `coins` and `break` objects to find more coins or things to `build` to progress in the game, but also combined with `special abilities` like some objects being only `breakable` by specific characters, etc.
+Game shares the Lego methodology for other games: pickup `coins` and `break`
+objects to find more coins or things to `build` for making progress in the game, but
+also combined with `special abilities` like some objects being only
+`breakable` by specific characters, etc.
 
-If a character is required but not owned, it's possible to `rent` by using some of the earned pieces that character for some time interval, allowing us to complete certain tasks and keep progressing in the stories.
+If a character is required but not owned, it's possible to `rent` by using
+some of the earned pieces that character for some time interval, allowing us
+to complete certain tasks and keep progressing in the stories.
 
 Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
