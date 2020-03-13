@@ -48,3 +48,8 @@ repos:
   rev:  master
   hooks:
   - id: blacken-docs
+- repo: https://github.com/hcodes/yaspeller.git
+  rev: master
+  hooks:
+  - id: yaspeller
+    files: "\\.en\\.md"
