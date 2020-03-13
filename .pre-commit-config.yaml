@@ -53,3 +53,4 @@ repos:
   hooks:
   - id: yaspeller
     files: "\\.en\\.md"
+    types: [markdown]
