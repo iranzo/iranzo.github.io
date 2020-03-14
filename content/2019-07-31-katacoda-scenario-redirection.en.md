@@ -38,7 +38,7 @@ This file instructs to redirect 'scenario' `kubevirt` to another scenario (same 
 The point here, is that old visitors from my prior post, going to either:
 
 - [How to use Citellus](https://www.katacoda.com/iranzo/scenarios/citellus)
-- [KubeVirt](https://www.katacoda.com/iranzo/scenarios/kubevirtn)
+- [KubeVirt](https://www.katacoda.com/iranzo/scenarios/kubevirt)
 
 will get instead to the updated URL for both scenarios, losing no visitors and ensuring that no 'old' copies are around.
 
