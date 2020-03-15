@@ -66,3 +66,11 @@ impedir entrada/salida excepto servicios de emergencia.
         <figcaption itemprop="caption description">Pasillos #2</figcaption>
     </figure>
 </div>
+
+## 2020/03/15
+
+Se ha visto poco movimiento por la calle y parece que el mensaje de
+permanecer en casa ha calado algo más.
+
+Por las noticias se sigue viendo gente no se lo toma en serio y la policía
+ha comenzado a tomar medidas y se han anunciado las sanciones.
