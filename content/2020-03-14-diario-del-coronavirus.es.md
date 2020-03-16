@@ -74,3 +74,26 @@ permanecer en casa ha calado algo más.
 
 Por las noticias se sigue viendo gente no se lo toma en serio y la policía
 ha comenzado a tomar medidas y se han anunciado las sanciones.
+
+## 2020/03/16
+
+Hoy han traído un paquete (UPS), el chico casi que me lo tira desde un metro de distancia, sin necesidad de firma, etc
+
+Primer día haciendo deberes del colegio, una ficha por día que nos dijeron parece 'poco' para llenar todo el día, hemos hecho dos y ahora 'jugar' a montar ciudades con Duplo.
+
+## 2020/03/17
+
+Pocos cambios en casa, hacer fichas del colegio, jugar, ver alguna película, actualizar a Fedora 32 los equipos y algo de ver las ruedas de prensa de medio día. Todavía aguantamos sin salir a buscar comida al supermercado.
+
+## 2020/03/18
+
+Se ha visto un coche de la policía por el parque con megáfonos. Fichas del
+cole.
+
+## 2020/03/19
+
+Un par de paquetes recibidos, magdalenas para celebrar el día del padre.
+
+## 2020/03/20
+
+Previsto: cita del médico y visita al supermercado
