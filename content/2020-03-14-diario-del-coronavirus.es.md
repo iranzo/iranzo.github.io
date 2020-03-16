@@ -84,16 +84,3 @@ Primer día haciendo deberes del colegio, una ficha por día que nos dijeron par
 ## 2020/03/17
 
 Pocos cambios en casa, hacer fichas del colegio, jugar, ver alguna película, actualizar a Fedora 32 los equipos y algo de ver las ruedas de prensa de medio día. Todavía aguantamos sin salir a buscar comida al supermercado.
-
-## 2020/03/18
-
-Se ha visto un coche de la policía por el parque con megáfonos. Fichas del
-cole.
-
-## 2020/03/19
-
-Un par de paquetes recibidos, magdalenas para celebrar el día del padre.
-
-## 2020/03/20
-
-Previsto: cita del médico y visita al supermercado
