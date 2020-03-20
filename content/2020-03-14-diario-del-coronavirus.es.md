@@ -84,3 +84,63 @@ Primer día haciendo deberes del colegio, una ficha por día que nos dijeron par
 ## 2020/03/17
 
 Pocos cambios en casa, hacer fichas del colegio, jugar, ver alguna película, actualizar a Fedora 32 los equipos y algo de ver las ruedas de prensa de medio día. Todavía aguantamos sin salir a buscar comida al supermercado.
+
+## 2020/03/18
+
+Se ha visto un coche de la policía por el parque con megáfonos. Fichas del
+cole.
+
+## 2020/03/19
+
+Un par de paquetes recibidos, magdalenas para celebrar el día del padre y desempolvar la [Wii](https://www.amazon.es/dp/B0007UATDG?tag=redken-21) y el Wii Sports (junto con el Wii Fit)
+
+## 2020/03/20
+
+Teníamos cita del médico para nada, porque nos han dicho que se paraban posteriores visitas (así que ya podrían haberlo dicho por teléfono y evitarnos el 'paseo').
+
+Control de la policía nacional al salir del pueblo, preguntando destino, etc.
+
+Aprovechamos para ir a comprar a un centro comercial cercano para volver a intentar aguantar 7 días sin salir de casa.
+
+<div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+<figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/On0A1lf.jpg" itemprop="contentUrl" data-size="4032x3024">
+            <img src="https://i.imgur.com/On0A1lf.jpg" width="100%" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description">Entradas a Valencia</figcaption>
+    </figure>
+<figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/fEdlETd.jpg" itemprop="contentUrl"data-size="4032x3024">
+            <img src="https://i.imgur.com/fEdlETd.jpg" width="100%" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description">Centro comercial</figcaption>
+    </figure>
+    <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/YZP4Re7.jpg" itemprop="contentUrl"data-size="4032x3024">
+            <img src="https://i.imgur.com/YZP4Re7.jpg" width="100%" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description">Calle principal</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/BxXpD1A.jpg" itemprop="contentUrl"data-size="4032x3024">
+            <img src="https://i.imgur.com/BxXpD1A.jpg" width="100%" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description">Entrada carrefour</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/hzKnoTN.jpg" itemprop="contentUrl"data-size="3024x4032">
+            <img src="https://i.imgur.com/hzKnoTN.jpg" width="100%" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description">Colas para pagar en carrefour</figcaption>
+    </figure>
+</div>
+
+La cosa más curiosa es que para entrar en Carrefour, se entraba poco a poco, pero una vez dentro no se vigilaba que se mantuvieran las distancias y la gente, tosiendo o palpando el pan para ver cúal coger, etc.
+
+Parece que está mejor organizado en otros sitios tipo Consum donde al parecer se controla más.
+
+En la calle, tanto en la farmacia como en la tienda de pollos se veía una persona en el interior y el resto esperando 'distanciados' en la parte de fuera.
+
+La pena es que se sigue viendo gente por la calle en grupos de 2-3 personas andando cerca o incluso en el supermercado comprando de dos en dos.
+
+Parece que sigue habiendo gente que no se conciencia :/
