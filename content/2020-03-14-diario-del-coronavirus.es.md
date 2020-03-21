@@ -135,12 +135,33 @@ Aprovechamos para ir a comprar a un centro comercial cercano para volver a inten
     </figure>
 </div>
 
-La cosa más curiosa es que para entrar en Carrefour, se entraba poco a poco, pero una vez dentro no se vigilaba que se mantuvieran las distancias y la gente, tosiendo o palpando el pan para ver cúal coger, etc.
+La cosa más curiosa es que para entrar en Carrefour, se entraba poco a poco,
+pero una vez dentro no se vigilaba que se mantuvieran las distancias y la
+gente, tosiendo o palpando el pan para ver cúal coger, etc.
 
-Parece que está mejor organizado en otros sitios tipo Consum donde al parecer se controla más.
+Parece que está mejor organizado en otros sitios tipo Consum donde al
+parecer se controla más.
 
-En la calle, tanto en la farmacia como en la tienda de pollos se veía una persona en el interior y el resto esperando 'distanciados' en la parte de fuera.
+En la calle, tanto en la farmacia como en la tienda de pollos se veía una
+persona en el interior y el resto esperando 'distanciados' en la parte de
+fuera.
 
-La pena es que se sigue viendo gente por la calle en grupos de 2-3 personas andando cerca o incluso en el supermercado comprando de dos en dos.
+La pena es que se sigue viendo gente por la calle en grupos de 2-3 personas
+andando cerca o incluso en el supermercado comprando de dos en dos.
 
 Parece que sigue habiendo gente que no se conciencia :/
+
+## 2020/03/21
+
+Hoy en casa, por la mañana cocinando algo de la carne que compramos el día
+anterior.
+
+Por la tarde montando el [Lego Volkswagen Beetle](https://www.amazon.es/dp/B01D9QO6TM?tag=redken-21)
+antes de cenar la sopa con las verduras que se habían comprado.
+
+En la comparecencia del gobierno, se sigue evitando dar fechas, así que
+tiene pinta de ir 'seguro' a incluir semana santa.
+
+De parte de la GVA y del colegio, mensajes acerca de formación a
+distancia...
+el lunes irán llegando más noticias...
