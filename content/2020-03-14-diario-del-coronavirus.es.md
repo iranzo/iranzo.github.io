@@ -165,3 +165,23 @@ tiene pinta de ir 'seguro' a incluir semana santa.
 De parte de la GVA y del colegio, mensajes acerca de formación a
 distancia...
 el lunes irán llegando más noticias...
+
+## 2020/03/22
+
+Día de 'relax', la comida hecha del día anterior, así que en plan tranquilo,
+jugando, montando el [Lego Fiat 500]({filename}2020-03-22-lego-fiat-500.en.md)
+y merendando un bizcocho.
+
+El niño no lo lleva mal, pero el no 'desfogar' fuera de casa se empieza a
+notar.
+
+Del colegio han ido llegando más mensajes para desde 'mañana' acceder via
+Web Familia a las instrucciones de los profesores.
+
+Por otro lado, se ha alargado 15 días más el estado de alarma (sobre los 7
+que nos quedaban todavía), así que todo sigue apuntando a que como minimo
+hasta finales de pascuas (20 de abril), estaremos así.
+
+Hemos ido adaptando un poco la distribución para tener más espacio para
+'jugar' y para poder ejercitar algo y así compensar las salidas que ahora no
+se hacen.
