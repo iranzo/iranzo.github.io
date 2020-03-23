@@ -185,3 +185,29 @@ hasta finales de pascuas (20 de abril), estaremos así.
 Hemos ido adaptando un poco la distribución para tener más espacio para
 'jugar' y para poder ejercitar algo y así compensar las salidas que ahora no
 se hacen.
+
+## 2020/03/23
+
+Primer día de 'tele-colegio', la web de la GVA caída cada 2x3, complicado
+bajar los materiales y algo incómomdo tener que ir descargando 'de un PDF'
+los diversos materiales.
+
+Algunos además, apuntaban a otros blogs en la misma web que estaba caída,
+por lo que se complicaba más.
+
+Quitado de estos problemas 'técnicos', hay que reconocer que la subida de
+materiales, preparación, etc se ha llevado a cabo en tiempo récord y que es
+comprensible que tenga fallos porque no creo que hubiera sido nunca probado
+a esta escala.
+
+La rutina de trabajo en casa con niños no es fácil, sobretodo si se quiere
+evitar estar todo el día pegados al televisor (por eso no me acababa de
+convencer la iniciativa de Clan), a ver cómo evoluciona esto en los próximos
+días.
+
+Como dice mi hijo acerca del virus:
+
+- El virus es malo
+- Hay que lavarlo con agua y con jabón
+- Pone malita a toda la gente
+- Y hace que tosa y no ponga el brazo delante
