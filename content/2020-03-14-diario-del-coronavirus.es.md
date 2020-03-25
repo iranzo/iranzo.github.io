@@ -189,7 +189,7 @@ se hacen.
 ## 2020/03/23
 
 Primer día de 'tele-colegio', la web de la GVA caída cada 2x3, complicado
-bajar los materiales y algo incómomdo tener que ir descargando 'de un PDF'
+bajar los materiales y algo incómodo tener que ir descargando 'de un PDF'
 los diversos materiales.
 
 Algunos además, apuntaban a otros blogs en la misma web que estaba caída,
@@ -211,3 +211,15 @@ Como dice mi hijo acerca del virus:
 - Hay que lavarlo con agua y con jabón
 - Pone malita a toda la gente
 - Y hace que tosa y no ponga el brazo delante
+
+## 2020/03/24
+
+Ayer, quitado de la dinámica normal, manteniendo la postura para evitar al máximo ver la televisión, hicimos algo de 'Wii' por la tarde-noche después de estar jugando, haciendo las fichas del cole, etc
+
+Estuve de madrugada _intentando_ hacer compra online, pero al final me cansé porque iba muy lento y al final, cuando ya era tarde, salió un aviso de que estaba 'en cola' antes de poder seguir, asi que me di por vencido. Lo que había puesto, al despertarme por la mañana aún seguía, pero en el rato de la comida que intenté continuarlo, fue imposible, se había vaciado la cesta, por lo que lo dejé definitivamente.
+
+## 2020/03/25
+
+Acabar la compra de ayer, volviendo a empezar de cero la lista tras esperar unos '20 minutos' de cola virtual para poder hacerla. Es bastante complicado planificar para comprar algo que hasta dentro de 15 días no te llega, máxime teniendo en cuenta que hay productos que comprarías y que no están ahora en existencias.
+
+Creo que debería potenciarse el canal online para evitar aglomeraciones y dejar el presencial para quien no se aclare con el online, por un lado facilitas planificación del centro, por otro, reduces la gente en la calle a los transportistas que pueden ir mejor protegidos, y evitas aglomeración en los puntos de compra. La pena es que parece ser que no se ha reforzado el canal online tanto como debería (y algunas empresas hasta lo han cerrado).
