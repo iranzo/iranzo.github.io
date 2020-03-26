@@ -223,3 +223,11 @@ Estuve de madrugada _intentando_ hacer compra online, pero al final me cansé po
 Acabar la compra de ayer, volviendo a empezar de cero la lista tras esperar unos '20 minutos' de cola virtual para poder hacerla. Es bastante complicado planificar para comprar algo que hasta dentro de 15 días no te llega, máxime teniendo en cuenta que hay productos que comprarías y que no están ahora en existencias.
 
 Creo que debería potenciarse el canal online para evitar aglomeraciones y dejar el presencial para quien no se aclare con el online, por un lado facilitas planificación del centro, por otro, reduces la gente en la calle a los transportistas que pueden ir mejor protegidos, y evitas aglomeración en los puntos de compra. La pena es que parece ser que no se ha reforzado el canal online tanto como debería (y algunas empresas hasta lo han cerrado).
+
+## 2020/03/26
+
+Día relativamente tranquilo, hoy vino un paquete y el chico lo subió hasta arriba, pero dejó a 3 metros o así de la puerta por 'seguridad'. Las webs de GVA de maestros (blogs) estaban caídas y se reactivaron luego por la tarde. Algunos profesores están organizando reuniones ya vía videoconferencia y se han podido ir preparando otras cosas.
+
+La falta de ejercicio, hace que los crios 'no se cansen' y estén luego más revoltosos a la hora de dormir...
+
+Hoy hace una semana desde la última salida de casa a comprar. Para celebrarlo tocará bajar la basura cuando no haya nadie.
