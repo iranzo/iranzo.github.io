@@ -72,6 +72,18 @@ Lists amazon bargains/deal published without duplicated during 24 hours, matchin
 - Use `!word` for regular substring exclude
 - Use `$word` for whole word matching in include
 
+### UIDEnforcer
+
+Adds UID (as reported via /info) to the list of safe members of a chat, anyone else, will be Kicked
+
+- `/uidenforcer add <UID>` to add a new UID to safe list
+- `/uidenforcer remove <UID>` to remove a UID from safe list
+- `/uidenforcer list` to show the UIDs in safe list
+
+Once the list of UID's is ready, and the bot is set as Group Administrator, enable the check (every hour) by running `/gconfig set safelist=True` on your group to have the bot start checking on next scheduled execution.
+
+BEWARE: If the list is created and setting enabled, bot will start kicking all other users in the chat, ensure that you're the creator or your user has been whitelisted or you might be kicked out too.
+
 ### Red Hat Jobs
 
 Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
