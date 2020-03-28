@@ -235,3 +235,8 @@ Hoy hace una semana desde la última salida de casa a comprar. Para celebrarlo t
 ## 2020/03/27
 
 No demasiadas novedades, estar en casa relajadamente viendo una película y jugando por la tarde.
+
+## 2020/03/28
+
+Pocos cambios, hoy día algo más tenso por no salir de casa que hace mella
+sobretodo con el peque.
