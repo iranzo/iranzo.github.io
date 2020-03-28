@@ -231,3 +231,7 @@ Día relativamente tranquilo, hoy vino un paquete y el chico lo subió hasta arr
 La falta de ejercicio, hace que los crios 'no se cansen' y estén luego más revoltosos a la hora de dormir...
 
 Hoy hace una semana desde la última salida de casa a comprar. Para celebrarlo tocará bajar la basura cuando no haya nadie.
+
+## 2020/03/27
+
+No demasiadas novedades, estar en casa relajadamente viendo una película y jugando por la tarde.
