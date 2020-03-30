@@ -244,3 +244,7 @@ sobretodo con el peque.
 ## 2020/03/29
 
 Otra rabieta y llamada al médico por unas manchas rojas en el nene.
+
+## 2020/03/30
+
+Videoconferencia con el cole, se nota la falta de quemar energías.
