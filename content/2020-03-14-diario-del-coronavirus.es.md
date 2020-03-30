@@ -240,3 +240,7 @@ No demasiadas novedades, estar en casa relajadamente viendo una película y juga
 
 Pocos cambios, hoy día algo más tenso por no salir de casa que hace mella
 sobretodo con el peque.
+
+## 2020/03/29
+
+Otra rabieta y llamada al médico por unas manchas rojas en el nene.
