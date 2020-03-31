@@ -248,3 +248,7 @@ Otra rabieta y llamada al médico por unas manchas rojas en el nene.
 ## 2020/03/30
 
 Videoconferencia con el cole, se nota la falta de quemar energías.
+
+## 2020/03/31
+
+Día de hacer pan en casa y comienzo de la campaña de la Renta!!.. y el viernes llega la compra que hicimos hace 2 semanas...
