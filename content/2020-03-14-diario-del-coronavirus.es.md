@@ -247,8 +247,14 @@ Otra rabieta y llamada al médico por unas manchas rojas en el nene.
 
 ## 2020/03/30
 
-Videoconferencia con el cole, se nota la falta de quemar energías.
+Videoconferencia con el cole, se nota la falta de quemar energías. En la bañera jugando con un barco de vapor con una vela que tenía de hace años similar a [este](https://s.click.aliexpress.com/e/_dTccmGy) o [este](https://s.click.aliexpress.com/e/_d7oRuMy).
 
 ## 2020/03/31
 
-Día de hacer pan en casa y comienzo de la campaña de la Renta!!.. y el viernes llega la compra que hicimos hace 2 semanas...
+Día de hacer pan en casa y comienzo de la campaña de la Renta!!... y el viernes llega la compra que hicimos hace 2 semanas...
+
+## 2020/04/01
+
+Dia complicado, mucho tiempo para hacer la ficha de la 'Primavera' del colegio.
+
+La web del supermercado (C4) ya no deja hacer compra online, asi que sólo hemos podido hacer dos hasta la fecha que llegan esta semana y la semana siguiente respectivamente.
