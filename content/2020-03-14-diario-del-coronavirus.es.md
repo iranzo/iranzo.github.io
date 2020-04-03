@@ -258,3 +258,13 @@ Día de hacer pan en casa y comienzo de la campaña de la Renta!!... y el vierne
 Dia complicado, mucho tiempo para hacer la ficha de la 'Primavera' del colegio.
 
 La web del supermercado (C4) ya no deja hacer compra online, asi que sólo hemos podido hacer dos hasta la fecha que llegan esta semana y la semana siguiente respectivamente.
+
+## 2020/04/02
+
+Llamada con los compañeros del cole y esperando ansiosos la compra de mañana.
+
+## 2020/04/03
+
+La compra tan esperada finalmente llegó, sin un producto que en teoría venía y que no apareció y sin casi la mitad de la compra (espárragos, fruta, etc) que un poco antes del comienzo de la franja de entrega llegó en un correo. Intenté hablar con atención al cliente y se le acabó la batería al teléfono inalámbrico antes de conseguir que me cogieran...
+
+Por la tarde tocó salir de 'emergencia' al saltar por los aires la planificación de compra que habíamos hecho 15 días atrás.
