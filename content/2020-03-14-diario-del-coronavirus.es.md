@@ -268,3 +268,7 @@ Llamada con los compañeros del cole y esperando ansiosos la compra de mañana.
 La compra tan esperada finalmente llegó, sin un producto que en teoría venía y que no apareció y sin casi la mitad de la compra (espárragos, fruta, etc) que un poco antes del comienzo de la franja de entrega llegó en un correo. Intenté hablar con atención al cliente y se le acabó la batería al teléfono inalámbrico antes de conseguir que me cogieran...
 
 Por la tarde tocó salir de 'emergencia' al saltar por los aires la planificación de compra que habíamos hecho 15 días atrás.
+
+## 2020/04/04
+
+Dia tranquilo, comiendo de nuevo carne y verduras compradas, el confinamiento se confirma hasta al menos el 26 de abril. Mañana tengo que ir a recoger un pedido online, a ver si no hacen como Carrefour que ni tan siquiera han contestado a lo del producto que según ellos habían entregado y no estaba ni al resto de comentarios/sugerencias sobre la experiencia.
