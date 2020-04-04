@@ -4,6 +4,7 @@ title: Telegram Redken bot documentation
 tags: foss, telegram, python, redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
+modified: 2020-04-04 20:29:00 +02:00
 comments: true
 category: tech
 description:
@@ -101,6 +102,7 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
   - `cleanlink`: True if we want links to be expanded and removed
   - `cleankey`: Regexp to replace, for example tag=
   - `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
+  - `lang`: set to language of choice to get some strings translated into supported languages <https://poeditor.com/join/project/ubTVkikm1R> and override autodetected language.
 - chat
   - `isolated`: False, if true, allow link, all karma, etc is tied to GID
   - `link`: empty, if defined, channel is slave to a mater
