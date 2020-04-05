@@ -4,7 +4,7 @@ title: Diario del coronavirus
 tags: covid19, coronavirus
 layout: post
 date: 2020-03-14 23:30:00 +0100
-modified: 2020-04-04 20:29:00 +02:00
+modified: 2020-04-05 22:08:00 +02:00
 comments: true
 category: blog
 description:
@@ -273,3 +273,9 @@ Por la tarde tocó salir de 'emergencia' al saltar por los aires la planificaci�
 ## 2020/04/04
 
 Dia tranquilo, comiendo de nuevo carne y verduras compradas, el confinamiento se confirma hasta al menos el 26 de abril. Mañana tengo que ir a recoger un pedido online, a ver si no hacen como Carrefour que ni tan siquiera han contestado a lo del producto que según ellos habían entregado y no estaba ni al resto de comentarios/sugerencias sobre la experiencia.
+
+## 2020/04/05
+
+Ir a recoger el click&collect de Hipercor y día en casa, esperemos que con
+las dos compras llegue para otros 15 días a pesar de las cosas que no venían
+en los pedidos.
