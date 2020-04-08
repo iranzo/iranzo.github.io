@@ -4,7 +4,7 @@ title: Diario del coronavirus
 tags: covid19, coronavirus
 layout: post
 date: 2020-03-14 23:30:00 +0100
-modified: 2020-04-06 22:56:00 +02:00
+modified: 2020-04-07 23:56:00 +02:00
 comments: true
 category: blog
 description:
@@ -283,3 +283,7 @@ en los pedidos.
 ## 2020/04/06
 
 Día tranquilo, pero con pescado fresco, mejor.
+
+## 2020/04/07
+
+Día tranquilo, acabando de montar el [autobús de Lego creator](https://www.amazon.es/dp/B073Q1V6JB?tag=redken-21) por la tarde.
