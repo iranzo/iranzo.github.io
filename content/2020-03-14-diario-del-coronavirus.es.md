@@ -4,7 +4,7 @@ title: Diario del coronavirus
 tags: covid19, coronavirus
 layout: post
 date: 2020-03-14 23:30:00 +0100
-modified: 2020-04-08 22:05:00 +02:00
+modified: 2020-04-09 22:41:00 +02:00
 comments: true
 category: blog
 description:
@@ -291,3 +291,12 @@ Día tranquilo, acabando de montar el [autobús de Lego creator](https://www.ama
 ## 2020/04/08
 
 Esta tarde haciendo algo de sitio y luego montando el [Lego Lunar Lander]({filename}2020-04-08-lego-lunar-lander.en.md).
+
+## 2020/04/09
+
+Comienzo de las vacaciones, todavía no se si las pasaré en la cocina, o el
+salón, o en el dormitorio...
+
+A ver cómo evoluciona el estado de confinamiento, esperemos que se mantenga
+para que haya servido de algo, no como esta gente que los fines de semana o
+por las noches intentan escapar a segundas residencias.
