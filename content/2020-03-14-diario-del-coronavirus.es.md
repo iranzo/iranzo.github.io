@@ -303,8 +303,9 @@ por las noches intentan escapar a segundas residencias.
 
 ## 2020/04/10
 
-Día tranquilo...
+Día de cocinar y aprovechar para hacer limpieza en casa.
 
 ## 2020/04/11
 
 Día de experimentos, monedas de cobre con vinagre, mezcla de colores básicos y preparar con cilindros de cartón para hacer un tren.
+
