@@ -300,3 +300,11 @@ salón, o en el dormitorio...
 A ver cómo evoluciona el estado de confinamiento, esperemos que se mantenga
 para que haya servido de algo, no como esta gente que los fines de semana o
 por las noches intentan escapar a segundas residencias.
+
+## 2020/04/10
+
+Día tranquilo...
+
+## 2020/04/11
+
+Día de experimentos, monedas de cobre con vinagre, mezcla de colores básicos y preparar con cilindros de cartón para hacer un tren.
