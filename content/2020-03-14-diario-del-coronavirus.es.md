@@ -309,3 +309,6 @@ Día de cocinar y aprovechar para hacer limpieza en casa.
 
 Día de experimentos, monedas de cobre con vinagre, mezcla de colores básicos y preparar con cilindros de cartón para hacer un tren.
 
+## 2020/04/12
+
+Día tranquilo, jugando, etc. Mañana toca ir a recoger pedido de compra y el viernes, en teoría, entrega de C4, que siguen sin haber dado sañales de vida de la mercancía que ponía como entregada y no sirvieron.
