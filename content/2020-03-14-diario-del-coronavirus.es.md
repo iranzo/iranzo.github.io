@@ -316,3 +316,7 @@ Día tranquilo, jugando, etc. Mañana toca ir a recoger pedido de compra y el vi
 ## 2020/04/13
 
 Recogido el pedido, faltaron algunas cosas, pero en general casi todo. Primer día que el crío se queja de que 'quiere salir al parque y no estar encerrado'.
+
+## 2020/04/14
+
+Noche complicada, el día más o menos llevadero, amenazaba lluvia pero al final hizo buen día. Algo de python para desestresar.
