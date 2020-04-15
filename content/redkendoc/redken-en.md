@@ -103,6 +103,10 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
   - `cleankey`: Regexp to replace, for example tag=
   - `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
   - `lang`: set to language of choice to get some strings translated into supported languages <https://poeditor.com/join/project/ubTVkikm1R> and override autodetected language.
+  - `privacy`: Enables privacy for forwarded messages, if a message is
+    forwarded and the config is set, redken will remove original message and
+    resend text to the chat so that the original sender is removed but
+    forwarder is credited
 - chat
   - `isolated`: False, if true, allow link, all karma, etc is tied to GID
   - `link`: empty, if defined, channel is slave to a mater
