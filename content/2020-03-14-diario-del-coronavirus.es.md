@@ -320,3 +320,7 @@ Recogido el pedido, faltaron algunas cosas, pero en general casi todo. Primer d�
 ## 2020/04/14
 
 Noche complicada, el día más o menos llevadero, amenazaba lluvia pero al final hizo buen día. Algo de python para desestresar.
+
+## 2020/04/15
+
+Jugando al [Just Dance](https://www.amazon.es/dp/B07T38N21K?tag=redken-21), haciendo recortables y jugando con el Duplo. Añadido un modo en el que [@redken_bot](https://t.me/redken_bot) elimina mensajes reenviados para ocultar el remitente original del contenido.
