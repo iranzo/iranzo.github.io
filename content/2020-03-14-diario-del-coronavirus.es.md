@@ -324,3 +324,7 @@ Noche complicada, el día más o menos llevadero, amenazaba lluvia pero al final
 ## 2020/04/15
 
 Jugando al [Just Dance](https://www.amazon.es/dp/B07T38N21K?tag=redken-21), haciendo recortables y jugando con el Duplo. Añadido un modo en el que [@redken_bot](https://t.me/redken_bot) elimina mensajes reenviados para ocultar el remitente original del contenido.
+
+## 2020/04/16
+
+Llegó bastante parte del pedido, pero aun así con las faltas de los otros tenemos que ir a recoger otro el domingo.
