@@ -328,3 +328,40 @@ Jugando al [Just Dance](https://www.amazon.es/dp/B07T38N21K?tag=redken-21), haci
 ## 2020/04/16
 
 Llegó bastante parte del pedido, pero aun así con las faltas de los otros tenemos que ir a recoger otro el domingo.
+
+## 2020/04/17
+
+Jugando algo con Duplos
+
+<div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/kHVtUt5.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
+            <img src="https://i.imgur.com/kHVtUt5.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/ny6atyF.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
+            <img src="https://i.imgur.com/ny6atyF.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/YyH3GM7.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
+            <img src="https://i.imgur.com/YyH3GM7.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/0knCtsg.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
+            <img src="https://i.imgur.com/0knCtsg.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://i.imgur.com/MyDRBQn.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
+            <img src="https://i.imgur.com/MyDRBQn.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+</div>
