@@ -365,3 +365,13 @@ Jugando algo con Duplos
         <figcaption itemprop="caption description"></figcaption>
     </figure>
 </div>
+
+## 2020/04/18
+
+Día traquilo jugando a hacer un modelo de lego de [Tensegridad](https://es.wikipedia.org/wiki/Tensegridad)
+
+<https://imgur.com/a/eusA7cx>
+
+## 2020/04/19
+
+Recogida de compra y tarde tranquila.
