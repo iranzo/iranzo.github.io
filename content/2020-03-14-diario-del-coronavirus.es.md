@@ -375,3 +375,7 @@ Día traquilo jugando a hacer un modelo de lego de [Tensegridad](https://es.wiki
 ## 2020/04/19
 
 Recogida de compra y tarde tranquila.
+
+## 2020/04/20
+
+Jugando en casa y algo de programación
