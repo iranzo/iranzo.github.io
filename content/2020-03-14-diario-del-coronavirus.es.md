@@ -379,3 +379,8 @@ Recogida de compra y tarde tranquila.
 ## 2020/04/20
 
 Jugando en casa y algo de programación
+
+## 2020/04/21
+
+Vuelta al trabajo. Anuncio del gobierno de que dejarán salir a niños a la
+calle.
