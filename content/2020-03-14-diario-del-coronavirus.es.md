@@ -384,3 +384,11 @@ Jugando en casa y algo de programación
 
 Vuelta al trabajo. Anuncio del gobierno de que dejarán salir a niños a la
 calle.
+
+## 2020/04/22-25
+
+Nada destacable, quitado de alguna salida a comprar.
+
+## 2020/04/26
+
+Celebración en casa de cumpleaños y con primer día de salida a la calle. Fue una vuelta alrededor de la manzana intentando evitar a la gente que no se apartaba.
