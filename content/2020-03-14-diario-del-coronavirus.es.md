@@ -392,3 +392,7 @@ Nada destacable, quitado de alguna salida a comprar.
 ## 2020/04/26
 
 Celebración en casa de cumpleaños y con primer día de salida a la calle. Fue una vuelta alrededor de la manzana intentando evitar a la gente que no se apartaba.
+
+## 2020/04/27
+
+Salida a la calle con la bicicleta a un parque cercano al que no va nadie, éramos total 4 personas en todo el recinto, así que 'genial' el distanciamiento social.
