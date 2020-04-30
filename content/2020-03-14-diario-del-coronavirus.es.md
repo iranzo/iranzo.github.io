@@ -396,3 +396,15 @@ Celebración en casa de cumpleaños y con primer día de salida a la calle. Fue 
 ## 2020/04/27
 
 Salida a la calle con la bicicleta a un parque cercano al que no va nadie, éramos total 4 personas en todo el recinto, así que 'genial' el distanciamiento social.
+
+## 2020/04/28
+
+Día tranquilo y pequeño paseo
+
+## 2020/04/29
+
+Salida a la calle con la bicicleta y montar uno de los dos coches de lego del set [Lamborghini]({filename}2020-04-30-lego-lamborghini.md)
+
+## 2020/04/30
+
+Paseo en patinete por la calle y a la vuelta montar el otro coche de Lego del set [Lamborghini]({filename}2020-04-30-lego-lamborghini.md)
