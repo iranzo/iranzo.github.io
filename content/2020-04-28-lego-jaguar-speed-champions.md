@@ -14,31 +14,31 @@ Today I built the [Jaguar Racing GEN2 car & Jaguar I-PACE eTROPHY 🛒](https://
 
 I also bought a [Light box](https://s.click.aliexpress.com/e/_bmC0MP) to take pictures, so here are my first attempts.
 
-<div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery"> debugger eval code:1:9
+<div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/B50sbOb.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
             <img src="https://i.imgur.com/B50sbOb.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
-    </figure> debugger eval code:2:56
+    </figure>
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/fYx5Jtr.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
             <img src="https://i.imgur.com/fYx5Jtr.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
-    </figure> debugger eval code:2:56
+    </figure>
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/KuB4tO6.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
             <img src="https://i.imgur.com/KuB4tO6.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
-    </figure> debugger eval code:2:56
+    </figure>
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/vg9yZ9m.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
             <img src="https://i.imgur.com/vg9yZ9m.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
-    </figure> debugger eval code:2:56
+    </figure>
 </div>
 
 Hope you like it!
