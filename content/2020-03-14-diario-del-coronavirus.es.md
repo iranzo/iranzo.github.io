@@ -408,3 +408,15 @@ Salida a la calle con la bicicleta y montar uno de los dos coches de lego del se
 ## 2020/04/30
 
 Paseo en patinete por la calle y a la vuelta montar el otro coche de Lego del set [Lamborghini]({filename}2020-04-30-lego-lamborghini.md)
+
+## 2020/05/01
+
+Paseo por la calle, empieza a hacer calor (33º), que dificulta el tema de las salidas.
+
+## 2020/05/02
+
+Dïa en casa, jugando, etc.
+
+## 2020/05/03
+
+Paseo en el parque en el horario, empieza a haber mosquitos :/
