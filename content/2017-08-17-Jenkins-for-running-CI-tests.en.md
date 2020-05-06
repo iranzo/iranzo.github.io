@@ -122,9 +122,9 @@ Now, we need to create a Job (first option in Jenkins list of jobs).
 - Source code Origin: `Git`
   - URL: `ssh://<username>@review.gerrithub.io:29418/citellusorg/citellus`
   - Credentials: `jenkins` (Created based on the ssh keypair defined above)
-  - Branches to build: `$GERRIT_BRANCH`
+  - Branches to build: `$GERRIT_REFNAME.`
   - Advanced
-    - Refspec: `\$GERRIT_REFSPEC`
+    - Refspec: `$GERRIT_REFSPEC`
   - Add additional behaviours
     - Strategy for choosing what to build:
       - Choosing strategy `Gerrit Trigger`
