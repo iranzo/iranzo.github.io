@@ -415,8 +415,12 @@ Paseo por la calle, empieza a hacer calor (33º), que dificulta el tema de las s
 
 ## 2020/05/02
 
-Dïa en casa, jugando, etc.
+Día en casa, jugando, etc.
 
 ## 2020/05/03
 
 Paseo en el parque en el horario, empieza a haber mosquitos :/
+
+## 2020/05/10
+
+Los días anteriores más o menos lo mismo, vida normal y paseo para que se acostumbre la salida. Por la calle, gente en la calle fuera de la 'franja horaria' y llevando la mascarilla cubriendo la barbilla, que debe ser la misma medida de seguridad que cuando la gente en moto lleva el casco en el codo...
