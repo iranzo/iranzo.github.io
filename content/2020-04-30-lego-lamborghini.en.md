@@ -12,7 +12,7 @@ lang: en
 
 Today I built the [Lamborghini Urus ST-X & Lamborghini Huracán Super Trofeo EVO 🛒](https://www.amazon.es/dp/B07W6Q9G1Y?tag=redken-21).
 
-I liked specially the Huracan and the Urus was also very well done, a lot of details!
+I liked specially the Huracán and the Urus was also very well done, a lot of details!
 
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
