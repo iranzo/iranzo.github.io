@@ -31,7 +31,7 @@ In order to 'create' your own, the following bill of materials is useful:
 
 |    Item    |                 AliExpress                 |                                               Amazon                                                |
 | :--------: | :----------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-|    Tags    | <http://s.click.aliexpress.com/e/dMeJ0gug> |  [![]({static}imagen/dimensions/ntag213.png)](https://www.amazon.es/dp/B00NG4W3K2?tag=redken-21>)   |
+|    Tags    | <http://s.click.aliexpress.com/e/dMeJ0gug> |   [![]({static}imagen/dimensions/ntag213.png)](https://www.amazon.es/dp/B00NG4W3K2?tag=redken-21)   |
 | Hole Punch | <http://s.click.aliexpress.com/e/5U3WF4fq> | [![]({static}imagen/dimensions/holepuncher.png)](https://www.amazon.es/dp/B007QJC8WG?tag=redken-21) |
 |   Holder   | <http://s.click.aliexpress.com/e/_ruEsf3>  | [![]({static}imagen/dimensions/coinholder.png)](https://www.amazon.es/dp/B07CNTTVF9?tag=redken-21)  |
 
