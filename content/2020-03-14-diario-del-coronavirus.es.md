@@ -4,7 +4,7 @@ title: Diario del coronavirus
 tags: covid19, coronavirus
 layout: post
 date: 2020-03-14 23:30:00 +0100
-modified: 2020-04-09 22:41:00 +02:00
+modified: 2020-06-06 23:57:00 +02:00
 comments: true
 category: blog
 description:
@@ -424,3 +424,7 @@ Paseo en el parque en el horario, empieza a haber mosquitos :/
 ## 2020/05/10
 
 Los días anteriores más o menos lo mismo, vida normal y paseo para que se acostumbre la salida. Por la calle, gente en la calle fuera de la 'franja horaria' y llevando la mascarilla cubriendo la barbilla, que debe ser la misma medida de seguridad que cuando la gente en moto lleva el casco en el codo...
+
+## 2020/06/06
+
+Estas dos últimas semanas con peor humor del crio, hace calor y cuesta más salir en las horas que 'toca' y la falta de ver niños, etc se nota.
