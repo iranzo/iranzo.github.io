@@ -4,7 +4,7 @@ repos:
   hooks:
   - id: check-useless-excludes
 - repo: https://github.com/prettier/prettier
-  rev: 1.19.1
+  rev: 2.0.5
   hooks:
   - id: prettier
     files: \.(css|js|md|markdown|json)
@@ -13,7 +13,7 @@ repos:
   hooks:
   - id: black
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v2.4.0
+  rev: v3.1.0
   hooks:
   - id: check-added-large-files
   - id: check-ast
@@ -34,22 +34,22 @@ repos:
   - id: requirements-txt-fixer
   - id: sort-simple-yaml
   - id: trailing-whitespace
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v1.2.3
+- repo: https://gitlab.com/pycqa/flake8
+  rev: 3.8.3
   hooks:
   - id: flake8
 - repo: https://github.com/pecigonzalo/pre-commit-shfmt.git
-  rev: master
+  rev: 9ee28e3f14556aa88dd5255f2e091d1d2f607bb7
   hooks:
   - id: shell-fmt
     args:
     - --indent=4
 - repo: https://github.com/asottile/blacken-docs
-  rev:  master
+  rev:  v1.7.0
   hooks:
   - id: blacken-docs
 - repo: https://github.com/hcodes/yaspeller.git
-  rev: master
+  rev: v7.0.0
   hooks:
   - id: yaspeller
     files: "\\.en\\.md"
