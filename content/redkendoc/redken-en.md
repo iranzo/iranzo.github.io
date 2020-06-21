@@ -106,7 +106,7 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
   - `privacy`: Enables privacy for forwarded messages, if a message is
     forwarded and the config is set, redken will remove original message and
     resend text to the chat so that the original sender is removed but
-    forwarder is credited
+    forwarder is credited. If value is set to `silent` it will just clean the message forwarder.
 - chat
   - `isolated`: False, if true, allow link, all karma, etc is tied to GID
   - `link`: empty, if defined, channel is slave to a mater
