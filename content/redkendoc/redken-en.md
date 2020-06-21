@@ -115,6 +115,7 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
   - `silent`: makes stampy not to output messages to that chat
   - `welcome`: outputs the text when a new user joins the chat, replacing "\$username" by user name
   - `usernamereminder`: Set this `False` to stop reminding new users to get a username to get the most out of karma commands.
+  - `inactivity`: Set this to the number of days without user activity before kicking it out.
 
 ## Extra commands
 
