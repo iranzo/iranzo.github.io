@@ -52,7 +52,7 @@ El truco aquí está en::
 
 Haciéndolo, serás capaz de clonar o escribir las etiquetas que estaban dañadas y poner las nuevas etiquetas en su lugar para permitirte seguir jugando como hacías!
 
-Existe también un conjuno de imágenes 'listas-para-imprimir' en uno de los posts en <http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip> que contiene las imágenes para cada etiqueta de personaje posible y sus vehículso con sus mejoras.
+Existe también un conjunto de imágenes 'listas-para-imprimir' en uno de los posts en <http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip> que contiene las imágenes para cada etiqueta de personaje posible y sus vehículso con sus mejoras.
 
 Disfruta!
 
