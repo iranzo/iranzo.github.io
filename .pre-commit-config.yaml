@@ -33,7 +33,7 @@ repos:
     -   id: no-commit-to-branch
         args:
         - --branch
-        - master
+        - gh-pages
     -   id: requirements-txt-fixer
     -   id: sort-simple-yaml
     -   id: trailing-whitespace
