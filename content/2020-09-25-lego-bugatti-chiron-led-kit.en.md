@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego Bugatti Chiron Led Kit
-tags: lego, 42083, Bugatti, Chiron, Lightailing, LED kit
+tags: lego, 42083, Bugatti, Chiron, Lightailing, LED kit, Bugatti Chiron
 layout: post
 date: 2020-09-25 19:30:24 +0200
 comments: true

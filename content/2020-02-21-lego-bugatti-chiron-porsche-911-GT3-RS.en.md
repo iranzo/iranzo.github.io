@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego Bugatti Chiron and Porsche 911 GT3 RS
-tags: Lego, review, 42083, 42056 Bugatti Chiron, Porsche 911
+tags: Lego, review, 42083, 42056, Bugatti, Chiron, Porsche, Porsche 911, Bugatti Chiron
 layout: post
 date: 2020-02-21 20:30:24 +0100
 comments: true
