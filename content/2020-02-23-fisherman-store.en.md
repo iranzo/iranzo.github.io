@@ -15,25 +15,25 @@ Some pics about the 'almost' modular [Fisherman Store 🛒](https://www.amazon.e
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/Y2sqxOq.jpg.jpg" itemprop="contentUrl" data-size="4032x1960">
-            <img src="https://i.imgur.com/Y2sqxOq.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/Y2sqxOqt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/JTF5Zax.jpg.jpg" itemprop="contentUrl" data-size="4032x1960">
-            <img src="https://i.imgur.com/JTF5Zax.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/JTF5Zaxt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/n0HIC2u.jpg.jpg" itemprop="contentUrl" data-size="4032x1960">
-            <img src="https://i.imgur.com/n0HIC2u.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/n0HIC2ut.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/JPUXy2M.jpg.jpg" itemprop="contentUrl" data-size="4032x1960">
-            <img src="https://i.imgur.com/JPUXy2M.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/JPUXy2Mt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>

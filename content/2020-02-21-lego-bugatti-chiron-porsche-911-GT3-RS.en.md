@@ -17,55 +17,55 @@ Both models have nice details, include a suitcase under the hood, sequential shi
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/f6Clxgf.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/f6Clxgf.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/f6Clxgft.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/bIQfCLi.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/bIQfCLi.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/bIQfCLit.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/Rbb5PpQ.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/Rbb5PpQ.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/Rbb5PpQt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/nwHJ62M.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/nwHJ62M.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/nwHJ62Mt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/XJVMBKA.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/XJVMBKA.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/XJVMBKAt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/oW7sPn4.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/oW7sPn4.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/oW7sPn4t.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/cGVSsMY.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/cGVSsMY.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/cGVSsMYt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/7bPMnuF.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/7bPMnuF.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/7bPMnuFt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/qdbWfKq.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/qdbWfKq.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/qdbWfKqt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>

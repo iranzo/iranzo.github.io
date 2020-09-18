@@ -21,7 +21,7 @@ console.log(
 runSlots.item.album_images.images.forEach(e) =>
   console.log(`<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/${e.hash}${e.ext}.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/${e.hash}${e.ext}" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/${e.hash}t${e.ext}" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>`)

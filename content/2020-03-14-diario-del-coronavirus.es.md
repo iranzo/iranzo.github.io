@@ -26,7 +26,7 @@ bastante gente para ser las 17:00.
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/Zg0grG9.png" itemprop="contentUrl" data-size="1280x960">
-            <img src="https://i.imgur.com/Zg0grG9.png" width="100%"  itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/Zg0grG9t.png" width="100%"  itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description">Piscina</figcaption>
     </figure>
@@ -56,13 +56,13 @@ impedir entrada/salida excepto servicios de emergencia.
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/yHL0gzu.png" itemprop="contentUrl" data-size="720x1280">
-            <img src="https://i.imgur.com/yHL0gzu.png" width="100%" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/yHL0gzut.png" width="100%" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description">Pasillos del supermercado</figcaption>
     </figure>
 <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/9QSkazy.png" itemprop="contentUrl" data-size="720x1280">
-            <img src="https://i.imgur.com/9QSkazy.png" width="100%" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/9QSkazyt.png" width="100%" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description">Pasillos #2</figcaption>
     </figure>
@@ -106,31 +106,31 @@ Aprovechamos para ir a comprar a un centro comercial cercano para volver a inten
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/On0A1lf.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/On0A1lf.jpg" width="100%" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/On0A1lft.jpg" width="100%" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description">Entradas a Valencia</figcaption>
     </figure>
 <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/fEdlETd.jpg" itemprop="contentUrl"data-size="4032x3024">
-            <img src="https://i.imgur.com/fEdlETd.jpg" width="100%" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/fEdlETdt.jpg" width="100%" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description">Centro comercial</figcaption>
     </figure>
     <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/YZP4Re7.jpg" itemprop="contentUrl"data-size="4032x3024">
-            <img src="https://i.imgur.com/YZP4Re7.jpg" width="100%" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/YZP4Re7t.jpg" width="100%" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description">Calle principal</figcaption>
     </figure>
         <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/BxXpD1A.jpg" itemprop="contentUrl"data-size="4032x3024">
-            <img src="https://i.imgur.com/BxXpD1A.jpg" width="100%" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/BxXpD1At.jpg" width="100%" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description">Entrada carrefour</figcaption>
     </figure>
         <figure itemprop="associatedMedia" itemscope itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/hzKnoTN.jpg" itemprop="contentUrl"data-size="3024x4032">
-            <img src="https://i.imgur.com/hzKnoTN.jpg" width="100%" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/hzKnoTNt.jpg" width="100%" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description">Colas para pagar en carrefour</figcaption>
     </figure>
@@ -336,31 +336,31 @@ Jugando algo con Duplos
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/kHVtUt5.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/kHVtUt5.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/kHVtUt5t.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/ny6atyF.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/ny6atyF.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/ny6atyFt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/YyH3GM7.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/YyH3GM7.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/YyH3GM7t.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/0knCtsg.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/0knCtsg.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/0knCtsgt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/MyDRBQn.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/MyDRBQn.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/MyDRBQnt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
     </figure>
