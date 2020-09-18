@@ -12,7 +12,13 @@ lang: en
 
 I got some pieces that were part of a [Lego Volkswagen T1 🛒](https://www.amazon.es/dp/B00PGZP8HE?tag=redken-21) but couldn't make for the complete set (which I already owned), so I was checking what mods I could build based on it, and best one, based on the amount of pieces was this one found on [Rebrickable](https://rebrickable.com/mocs/MOC-46121/tobowski/caravan-camping-trailer-for-10220-t1-bus/).
 
-As I found it to be a bit sad to leave the wheel, and some other elements outside I did some minor changes to expand the window are, so that I can add the curtains, lift a bit the sink so that I could put the fold-able table there and put a sliding roof that can help to cover the area over the door, as well as adding a rear bumper.
+As I found it to be a bit sad to leave the wheel, and some other elements outside I did some minor changes:
+
+- Add a replacement wheel
+- Expand the area for windows so that I can add more curtains
+- Lift a bit the sink so that I could put the fold-able table there
+- Put a sliding roof that can help to cover the area over the door
+- Adding a rear bumper.
 
 The pics bellow show some of the evolution from the original model in Rebrickable to the changes I've incorporated, hope you enjoy them!
 
