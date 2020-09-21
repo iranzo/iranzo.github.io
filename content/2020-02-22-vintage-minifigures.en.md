@@ -35,4 +35,4 @@ Just some pics I made during some sorting of minifigs from my childhood.
 
 Hope you like it!
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Find Lego deals at Telegram at <https://t.me/brickchollo>

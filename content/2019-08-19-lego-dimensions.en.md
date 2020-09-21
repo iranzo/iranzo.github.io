@@ -163,4 +163,4 @@ If a character is required but not owned, it's possible to `rent` by using
 some of the earned pieces that character for some time interval, allowing us
 to complete certain tasks and keep progressing in the stories.
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Find Lego deals at Telegram at <https://t.me/brickchollo>

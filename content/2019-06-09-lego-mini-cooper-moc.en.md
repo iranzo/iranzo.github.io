@@ -106,4 +106,4 @@ PayPal complained on the web site), I decided to make my own based on what I cou
 
 Hope you like it!
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Find Lego deals at Telegram at <https://t.me/brickchollo>

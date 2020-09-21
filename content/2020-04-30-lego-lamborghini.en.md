@@ -67,4 +67,4 @@ I liked specially the Huracán and the Urus was also very well done, a lot of de
 
 Hope you like it!
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Find Lego deals at Telegram at <https://t.me/brickchollo>

@@ -73,4 +73,4 @@ Both models have nice details, include a suitcase under the hood, sequential shi
 
 Hope you like it!
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Find Lego deals at Telegram at <https://t.me/brickchollo>

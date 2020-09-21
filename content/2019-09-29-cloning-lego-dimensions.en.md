@@ -56,4 +56,4 @@ There was also a 'ready-to-print' set of pics for the tags in one of the forum p
 
 Enjoy!
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Find Lego deals at Telegram at <https://t.me/brickchollo>

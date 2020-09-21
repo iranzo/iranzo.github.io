@@ -16,11 +16,14 @@ As I found it to be a bit sad to leave the wheel, and some other elements outsid
 
 - Add a replacement wheel
 - Expand the area for windows so that I can add more curtains
+- Add a kitchen clock and smoke extractor
 - Lift a bit the sink so that I could put the fold-able table there
 - Put a sliding roof that can help to cover the area over the door
 - Adding a rear bumper.
 
-The pics bellow show some of the evolution from the original model in Rebrickable to the changes I've incorporated, hope you enjoy them!
+The pics bellow show the evolution from the original model in Rebrickable to the changes I've incorporated, hope you enjoy them!
+
+I didn't have more pieces, but the sliding roof has a whole, so that I could replace the top area with the original 'elevating' roof, that will be reachable from the interior trough that hole
 
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -107,4 +110,4 @@ The pics bellow show some of the evolution from the original model in Rebrickabl
 
 Hope you like it!
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Find Lego deals at Telegram at <https://t.me/brickchollo>

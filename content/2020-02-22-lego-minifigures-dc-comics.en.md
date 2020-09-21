@@ -16,4 +16,4 @@ Here are my findings from today's 'hunt' for [Lego Minifigures DC Comics 🛒](h
 
 Love the three I got, was looking for superman and batman but no luck at this shop :/
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Find Lego deals at Telegram at <https://t.me/brickchollo>

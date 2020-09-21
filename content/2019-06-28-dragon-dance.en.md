@@ -48,4 +48,4 @@ Model is [80102 Dragon Dance 🛒](https://www.amazon.es/dp/B07KRJJFY8?tag=redke
     </figure>
 </div>
 
-Follow my channel on Telegram on Lego deals at <https://t.me/brickchollo>
+Find Lego deals at Telegram at <https://t.me/brickchollo>
