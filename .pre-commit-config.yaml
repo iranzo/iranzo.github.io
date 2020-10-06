@@ -4,12 +4,12 @@ repos:
     hooks:
     -   id: check-useless-excludes
 -   repo: https://github.com/prettier/prettier
-    rev: 2.0.5
+    rev: 2.1.2
     hooks:
     -   id: prettier
         files: \.(css|js|md|markdown|json)
 -   repo: https://github.com/python/black
-    rev: 19.10b0
+    rev: 20.8b1
     hooks:
     -   id: black
 -   repo: https://github.com/pre-commit/pre-commit-hooks
@@ -38,7 +38,7 @@ repos:
     -   id: sort-simple-yaml
     -   id: trailing-whitespace
 -   repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.3
+    rev: 3.8.4
     hooks:
     -   id: flake8
 -   repo: local
@@ -57,7 +57,7 @@ repos:
         types:
         - shell
 -   repo: https://github.com/asottile/blacken-docs
-    rev: v1.7.0
+    rev: v1.8.0
     hooks:
     -   id: blacken-docs
 -   repo: https://github.com/hcodes/yaspeller.git
