@@ -76,17 +76,17 @@ First we do need to create a swift container in OpenStack that will hold the inf
 
 #### Configuration settings defined in Quay
 
-| Setting                | Value                                                                                        |
-| ---------------------- | -------------------------------------------------------------------------------------------- |
-| `Storage Engine`       | OpenStack Storage (Swift)                                                                    |
-| `Swift Auth Version`   | 3                                                                                            |
-| `Swift Auth URL`       | `\$YOURKEYSTONE PUBLIC ENDPOINT` (like http://aaa.bbb.ccc.ddd:5000)                          |
-| `Swift container name` | `\$YOURCONTAINER` (created with swift container create 'name')                               |
-| `Storage path`         | `\$WHATEVER` (we did use `/quay`)                                                            |
-| `Username`             | `\$OSP_USERNAME` (we did use `admin`)                                                        |
-| `key/password`         | `\$OSP_PASSWORD`(we did use `redhat`)                                                        |
-| OS OPTIONS drop-down   | <----- This is an important one if not it will fail                                          |
-| `tenant_id`            | `\$YOURTENANTID` (I did use 'admin' id as obtained with `openstack project list|grep admin`) |
+| Setting                | Value                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| `Storage Engine`       | OpenStack Storage (Swift)                                                       |
+| `Swift Auth Version`   | 3                                                                               |
+| `Swift Auth URL`       | `\$YOURKEYSTONE PUBLIC ENDPOINT` (like http://aaa.bbb.ccc.ddd:5000)             |
+| `Swift container name` | `\$YOURCONTAINER` (created with swift container create 'name')                  |
+| `Storage path`         | `\$WHATEVER` (we did use `/quay`)                                               |
+| `Username`             | `\$OSP_USERNAME` (we did use `admin`)                                           |
+| `key/password`         | `\$OSP_PASSWORD`(we did use `redhat`)                                           |
+| OS OPTIONS drop-down   | <----- This is an important one if not it will fail                             |
+| `tenant_id`            | `\$YOURTENANTID` (I did use 'admin' id as obtained with `openstack project list | grep admin`) |
 
 Once done, Quay should 'validate' the upload and `swift list $YOURCONTAINER` should give something like:
 
