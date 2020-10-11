@@ -105,6 +105,7 @@ The `Team pack` add more characters and vehicles:
 | 71246   | Team pack | [Adventure Time 🛒](https://www.amazon.es/dp/B01H1QWVX4?tag=redken-21)     | [![](http://images.amazon.com/images/P/B01H1QWVX4.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01H1QWVX4?tag=redken-21)    |
 | 71247   | Team pack | [Harry Potter 🛒](https://www.amazon.es/dp/B01FYJXHQU?tag=redken-21)       | [![](http://images.amazon.com/images/P/B01FYJXHQU.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01FYJXHQU?tag=redken-21)    |
 | 71255   | Team pack | [Teen Titans Go! 🛒](https://www.amazon.com/dp/B072PTZR4T?tag=redken08-20) | [![](http://images.amazon.com/images/P/B072PTZR4T.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.com/dp/B072PTZR4T?tag=redken08-20) |
+| 71256   | Team pack | [Gremlins 🛒](https://www.amazon.es/dp/B01IG33KGI?tag=redken-21)           | [![](http://images.amazon.com/images/P/B01IG33KGI.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01IG33KGI?tag=redken-21)    |
 | 71346   | Team pack | [Powerpuff girls 🛒](https://www.amazon.es/dp/B071W71MM7?tag=redken-21)    | [![](http://images.amazon.com/images/P/B071W71MM7.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B071W71MM7?tag=redken-21)    |
 
 ## Fun pack
