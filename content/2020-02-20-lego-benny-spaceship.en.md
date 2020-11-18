@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego Benny Spaceship 70821
-tags: lego, review, 70821, lego 70821, lego movie, benny, spaceship
+tags: lego, review, 70821, lego movie, benny, spaceship
 layout: post
 date: 2020-02-20 19:30:24 +0100
 comments: true

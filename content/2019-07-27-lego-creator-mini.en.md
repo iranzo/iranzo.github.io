@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego 10242 - Mini Cooper Lego Creator
-tags: lego, mini, lego 10242, review
+tags: lego, mini,  10242, review
 layout: post
 date: 2019-07-27 14:39:14 +0200
 comments: true

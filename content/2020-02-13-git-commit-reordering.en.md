@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Git commit reordering
-tags: git, FOSS, FLOSS, Linux
+tags: git, FOSS, Linux
 layout: post
 date: 2020-02-13 20:30:24 +0100
 comments: true

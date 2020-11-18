@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego 75894 - 1967 Mini Cooper S Rally and Buggy MOC adaptation as Mini Transporter
-tags: lego, MOC, mini, speed champions, review, lego 75894
+tags: lego, MOC, mini, speed champions, review, 75894
 layout: post
 date: 2019-06-09 01:16:14 +0200
 comments: true
