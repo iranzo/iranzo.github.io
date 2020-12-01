@@ -187,6 +187,7 @@ PLUGINS = [
     "post_stats",
     "revealmd",
     "photos",
+    "liquid_tags.graphviz",
 ]
 
 THEME = "themes/elegant"
