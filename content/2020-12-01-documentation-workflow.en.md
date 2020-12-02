@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Upstream/Downstream documentation workflow
-tags: GitHub Actions, Netlify, AsciiDoctor, automation, dit
+tags: GitHub Actions, Netlify, AsciiDoctor, automation, dit, foss
 layout: post
 date: 2020-12-01 14:10:34 +0200
 comments: true
@@ -65,7 +65,7 @@ This whole process has automated our workflow, reducing the time spent on checki
     }
 %}
 
-Good practices:
+Best practices:
 
 - Reuse as much as possible and keep the process simple: both for contributors and for reviewers, with this, you're fostering collaboration: This is the way.
 - Use automation wherever is possible, it might make things more complicated (like failing a PR because of a typo), but the end result will be worth it... if not, you can perform those checks periodically and have extra work to do:
