@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Upstream/Downstream documentation workflow
-tags: GitHub Actions, Netlify, AsciiDoctor, automation
+tags: GitHub Actions, Netlify, AsciiDoctor, automation, dit
 layout: post
 date: 2020-12-01 14:10:34 +0200
 comments: true
