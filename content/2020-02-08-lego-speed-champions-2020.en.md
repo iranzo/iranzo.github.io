@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego Speed Champions 2020 review
-tags: Lego, review, speed champions, car, Audi, Quattro, Ferrari, Tributo, Nissan, Nismo, Lego 76897, Lego 76896, Lego 76895
+tags: Lego, review, speed champions, car, Audi, Quattro, Ferrari, Tributo, Nissan, Nismo, 76897, 76896, 76895
 layout: post
 date: 2020-02-08 16:30:24 +0100
 comments: true
