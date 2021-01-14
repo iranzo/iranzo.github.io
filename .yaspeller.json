@@ -407,6 +407,9 @@
     "NanoHD",
     "VLAN",
     "APs",
-    "dir"
+    "dir",
+    "Sian",
+    "fixable",
+    "liftable"
   ]
 }
