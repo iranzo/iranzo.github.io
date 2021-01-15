@@ -18,14 +18,15 @@ Using the following code from the Browser console:
 console.log(
   '<div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">'
 );
-runSlots.item.album_images.images.forEach(e) =>
+var images = $$("img");
+for (each in images) {
   console.log(`<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="https://i.imgur.com/${e.hash}${e.ext}.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/${e.hash}t${e.ext}" width="403" height="302" itemprop="thumbnail" alt="" />
+        <a href="${images[each].src}" itemprop="contentUrl" data-size="4032x3024">
+            <img src="${images[each].src}" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
         <figcaption itemprop="caption description"></figcaption>
-    </figure>`)
-);
+    </figure>`);
+}
 console.log("</div>");
 ```
 
