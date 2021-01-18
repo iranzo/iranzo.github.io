@@ -35,7 +35,7 @@ port=29418
 project=citellusorg/citellus.git
 ```
 
-For a review example, we'll use one from gerrithub from [Citellus](https://citellus.org) project:
+For a review example, we'll use one from gerrithub from [Citellus](https://citellusorg.github.io) project:
 
 <https://review.gerrithub.io/#/c/380646/>
 
@@ -107,7 +107,7 @@ This will start over the progress, but will, once completed to get the change me
 
 ## How do we do it with Citellus?
 
-In [Citellus](https://citellus.org/) we've replicated more or less what we've upstream... even the use of `tox`.
+In [Citellus](https://citellusorg.github.io/) we've replicated more or less what we've upstream... even the use of `tox`.
 
 Citellus does use <https://gerrithub.io> (free service that hooks on github and allows to do PR)
 

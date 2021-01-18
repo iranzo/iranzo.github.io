@@ -23,6 +23,6 @@ Since April 1st 2018, I got promoted to Principal Software Maintenance Engineer 
 
 Since September 1st 2018, I moved to the Solutions Engineering team, working on Kubernetes/OpenShift Federation and Quay registry among other topics.
 
-I'm also contributing on regular basis to [Citellus project](https://citellus.org) to help automating diagnosis on known issues at system configuration, package sets, etc.
+I'm also contributing on regular basis to [Citellus project](https://citellusorg.github.io) to help automating diagnosis on known issues at system configuration, package sets, etc.
 
 You can check my updated profile at [LinkedIn](http://linkedin.com/in/iranzo) and my current [RH Certifications](https://www.redhat.com/rhtapps/certification/verify/?certId=110-215-852)

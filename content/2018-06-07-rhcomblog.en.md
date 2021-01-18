@@ -10,7 +10,7 @@ description:
 
 ## New blog post!
 
-After some great help and collaboration from all the colleagues reviewing, suggesting edits, we were able to prepare a blog post on [Citellus](https://citellus.org), the tool we develop as part of our daily work solving cases.
+After some great help and collaboration from all the colleagues reviewing, suggesting edits, we were able to prepare a blog post on [Citellus](https://citellusorg.github.io), the tool we develop as part of our daily work solving cases.
 
 Check it out at [Citellus: System configuration validation tool](https://www.redhat.com/en/blog/citellus-system-configuration-validation-tool?scid=701f2000000tnTlAAI)
 
