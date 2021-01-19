@@ -104,6 +104,7 @@ DISQUS_DISPLAY_COUNTS = True
 EXTRA_PATH_METADATA = {
     "extra/keybase.txt": {"path": "keybase.txt"},
     "extra/robots.txt": {"path": "robots.txt"},
+    "extra/CNAME": {"path": "CNAME"},
     "extra/favicon.ico": {"path": "favicon.ico"},
     "extra/favicon.png": {"path": "favicon.png"},
 }
@@ -121,6 +122,7 @@ STATIC_PATHS = [
     "extra/favicon.ico",
     "extra/keybase.txt",
     "extra/favicon.png",
+    "extra/CNAME",
 ]
 
 # Photo Gallery plugin

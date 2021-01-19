@@ -11,7 +11,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = "https://iranzo.github.io/"
+SITEURL = "https://iranzo.io/"
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = False
