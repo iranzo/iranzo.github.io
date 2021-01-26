@@ -19,9 +19,14 @@ imports:
     revealmd: plugins/revealmd/
 
 
+# git module elegant:
+#     url: https://github.com/Pelican-Elegant/elegant.git
+#     rev: next
+
+# Use fork in the meantime
 git module elegant:
-    url: https://github.com/Pelican-Elegant/elegant.git
-    rev: next
+     url: https://github.com/iranzo/elegant.git
+     rev: iranzo
 
 git module revealmd:
     url: https://github.com/iranzo/pelican-revealmd/
