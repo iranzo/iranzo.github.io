@@ -47,5 +47,3 @@ Model is [80102 Dragon Dance 🛒](https://www.amazon.es/dp/B07KRJJFY8?tag=redke
     <figcaption itemprop="caption description">Year of the pig figure</figcaption>
     </figure>
 </div>
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>

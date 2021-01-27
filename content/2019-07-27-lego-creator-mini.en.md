@@ -66,5 +66,3 @@ and the pics are for the standard instructions build.
 </div>
 
 Hope you like it!
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>

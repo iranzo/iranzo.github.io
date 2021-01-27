@@ -105,5 +105,3 @@ PayPal complained on the web site), I decided to make my own based on what I cou
  </div>
 
 Hope you like it!
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>

@@ -42,5 +42,3 @@ I also bought a [Light box](https://s.click.aliexpress.com/e/_bmC0MP) to take pi
 </div>
 
 Hope you like it!
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>

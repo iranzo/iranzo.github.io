@@ -55,5 +55,3 @@ Haciéndolo, serás capaz de clonar o escribir las etiquetas que estaban dañada
 Existe también un conjunto de imágenes 'listas-para-imprimir' en uno de los posts en <http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip> que contiene las imágenes para cada etiqueta de personaje posible y sus vehículso con sus mejoras.
 
 Disfruta!
-
-Sigue mi canal de ofertas en Lego en Telegram aquí: <https://t.me/brickchollo>

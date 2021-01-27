@@ -80,5 +80,3 @@ will probably consider the Jaguar and Lamborghini (I specially like the
 Lamborghini Huracán Super Trofeo).
 
 Regards and enjoy your builds!
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>

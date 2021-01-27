@@ -97,5 +97,3 @@ Also, the module has two opening closets, one for the camera used to record the 
 </div>
 
 Hope you like it!
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>

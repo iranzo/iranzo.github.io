@@ -163,5 +163,3 @@ also combined with `special abilities` like some objects being only
 If a character is required but not owned, it's possible to `rent` by using
 some of the earned pieces that character for some time interval, allowing us
 to complete certain tasks and keep progressing in the stories.
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>

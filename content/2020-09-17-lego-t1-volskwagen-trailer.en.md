@@ -109,5 +109,3 @@ I didn't have more pieces, but the sliding roof has a whole, so that I could rep
 </div>
 
 Hope you like it!
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>
