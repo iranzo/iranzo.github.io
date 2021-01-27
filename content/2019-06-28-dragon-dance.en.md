@@ -18,33 +18,33 @@ Model is [80102 Dragon Dance 🛒](https://www.amazon.es/dp/B07KRJJFY8?tag=redke
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/8j1Drm8.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/8j1Drm8t.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/8j1Drm8t.jpg" width="403" height="302" itemprop="thumbnail" alt="Side view" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Side view</figcaption>
     </figure>
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="https://i.imgur.com/y72cWUS.jpg" itemprop="contentUrl" data-size="4032x3024">
-        <img src="https://i.imgur.com/y72cWUSt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+        <img src="https://i.imgur.com/y72cWUSt.jpg" width="403" height="302" itemprop="thumbnail" alt="Rear view details" />
     </a>
-    <figcaption itemprop="caption description"></figcaption>
+    <figcaption itemprop="caption description">Rear view details</figcaption>
     </figure>
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="https://i.imgur.com/EOD2WXW.jpg" itemprop="contentUrl" data-size="4032x3024">
-        <img src="https://i.imgur.com/EOD2WXWt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+        <img src="https://i.imgur.com/EOD2WXWt.jpg" width="403" height="302" itemprop="thumbnail" alt="Minifigures detail" />
     </a>
-    <figcaption itemprop="caption description"></figcaption>
+    <figcaption itemprop="caption description">Minifigures detail</figcaption>
     </figure>
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="https://i.imgur.com/XCjG4TR.jpg" itemprop="contentUrl" data-size="4032x3024">
-        <img src="https://i.imgur.com/XCjG4TRt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+        <img src="https://i.imgur.com/XCjG4TRt.jpg" width="403" height="302" itemprop="thumbnail" alt="Front minifigure" />
     </a>
-    <figcaption itemprop="caption description"></figcaption>
+    <figcaption itemprop="caption description">Front minifigure</figcaption>
     </figure>
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="https://i.imgur.com/sY9a1Qd.jpg" itemprop="contentUrl" data-size="4032x3024">
-        <img src="https://i.imgur.com/sY9a1Qdt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+        <img src="https://i.imgur.com/sY9a1Qdt.jpg" width="403" height="302" itemprop="thumbnail" alt="Year of the pig figure" />
     </a>
-    <figcaption itemprop="caption description"></figcaption>
+    <figcaption itemprop="caption description">Year of the pig figure</figcaption>
     </figure>
 </div>
 

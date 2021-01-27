@@ -27,51 +27,51 @@ Overall: one of the best sets I built.
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/v5ulbTA.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/v5ulbTAt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/v5ulbTAt.jpg" width="403" height="302" itemprop="thumbnail" alt="Ninjago city bridge" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Ninjago city bridge</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/abpvOek.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/abpvOekt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/abpvOekt.jpg" width="403" height="302" itemprop="thumbnail" alt="Lower floor" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Lower floor</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/nP9tgZM.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/nP9tgZMt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/nP9tgZMt.jpg" width="403" height="302" itemprop="thumbnail" alt="Dock area" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Dock area</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/DqvUYTA.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/DqvUYTAt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/DqvUYTAt.jpg" width="403" height="302" itemprop="thumbnail" alt="1st floor aerial view" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">1st floor aerial view</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/zA0iozM.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/zA0iozMt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/zA0iozMt.jpg" width="403" height="302" itemprop="thumbnail" alt="lower floor aerial view" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">lower floor aerial view</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/pjODgY9.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/pjODgY9t.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/pjODgY9t.jpg" width="403" height="302" itemprop="thumbnail" alt="1st floor details" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">1st floor details</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/VIcgZNa.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/VIcgZNat.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/VIcgZNat.jpg" width="403" height="302" itemprop="thumbnail" alt="Minifigure with Diamond" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Minifigure with Diamond</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/M4dTBYu.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/M4dTBYut.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/M4dTBYut.jpg" width="403" height="302" itemprop="thumbnail" alt="Docks view with robot" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Docks view with robot</figcaption>
     </figure>
  </div>
 

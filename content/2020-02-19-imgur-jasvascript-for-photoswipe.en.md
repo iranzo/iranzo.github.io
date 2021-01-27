@@ -22,9 +22,9 @@ var images = $$("img");
 for (each in images) {
   console.log(`<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="${images[each].src}" itemprop="contentUrl" data-size="4032x3024">
-            <img src="${images[each].src}" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="${images[each].src}" width="403" height="302" itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Image description</figcaption>
     </figure>`);
 }
 console.log("</div>");

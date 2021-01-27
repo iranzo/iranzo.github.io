@@ -17,33 +17,33 @@ In this case, the spacecraft is an `adapted` version of the typical spaceship at
 <div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery">
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/69ePXLB.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/69ePXLBt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/69ePXLBt.jpg" width="403" height="302" itemprop="thumbnail" alt="Front side view" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Front side view</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/3iMki6z.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/3iMki6zt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/3iMki6zt.jpg" width="403" height="302" itemprop="thumbnail" alt="Rear view with bay area for rover" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Rear view with bay area for rover</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/nov158s.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/nov158st.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/nov158st.jpg" width="403" height="302" itemprop="thumbnail" alt="Cockpit view rear" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Cockpit view rear</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/gXfNh1I.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/gXfNh1It.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/gXfNh1It.jpg" width="403" height="302" itemprop="thumbnail" alt="Cockpit view" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Cockpit view</figcaption>
     </figure>
  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/9juBiAV.jpg.jpg" itemprop="contentUrl" data-size="4032x3024">
-            <img src="https://i.imgur.com/9juBiAVt.jpg" width="403" height="302" itemprop="thumbnail" alt="" />
+            <img src="https://i.imgur.com/9juBiAVt.jpg" width="403" height="302" itemprop="thumbnail" alt="Side view" />
         </a>
-        <figcaption itemprop="caption description"></figcaption>
+        <figcaption itemprop="caption description">Side view</figcaption>
     </figure>
 </div>
 
