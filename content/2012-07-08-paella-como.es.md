@@ -34,15 +34,15 @@ Se pone junto al tomate un ajo para rallar y se deja junto hasta la hora de sofr
 
 Se corta el pollo en trozos pequeños
 
-![ ]({static}imagen/paella/2012-07-08 12.35.48.jpg)
+![Pollo troceado]({static}imagen/paella/2012-07-08 12.35.48.jpg)
 
 Se cubre el suelo con papel de periódico, revistas, etc para evitar las salpicaduras
 
-![]({static}imagen/paella/2012-07-08 12.36.05.jpg)
+![Suelo forrado con periodicos]({static}imagen/paella/2012-07-08 12.36.05.jpg)
 
 Ahora, en paralelo, se pone la olla el agua a hervir con la verdura y empezamos a sofreir el pollo. Al agua, de hervir, le podemos añadir algo de romero para que le de algo de sabor.
 
-![]({static}imagen/paella/2012-07-08 12.48.16.jpg)
+![Primeras imagenes de aceite al freir]({static}imagen/paella/2012-07-08 12.48.16.jpg)
 
 # Olla:
 
