@@ -48,5 +48,3 @@ Check the results:
 </div>
 
 Hope you like it!
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>

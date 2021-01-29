@@ -66,5 +66,3 @@ I liked especially the Huracán and the Urus was also very well done, a lot of d
 </div>
 
 Hope you like it!
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>

@@ -77,5 +77,3 @@ Model is [80101 Chinese New's Year Eve Dinner 🛒](https://www.amazon.es/dp/B07
         <figcaption itemprop="caption description">Aerial view</figcaption>
     </figure>
  </div>
-
-Find Lego deals at Telegram at <https://t.me/brickchollo>
