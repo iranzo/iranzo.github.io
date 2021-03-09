@@ -4,7 +4,7 @@ title: Telegram Redken bot documentation
 tags: foss, telegram, python, redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
-modified: 2020-04-04 20:29:00 +02:00
+modified: 2021-03-09 10:07:00 +02:00
 comments: true
 category: tech
 description:
@@ -116,6 +116,7 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
   - `welcome`: outputs the text when a new user joins the chat, replacing "\$username" by user name
   - `usernamereminder`: Set this `False` to stop reminding new users to get a username to get the most out of karma commands.
   - `inactivity`: Set this to the number of days without user activity before kicking it out.
+  - `removejoinparts`: Set this to automatically remove 'User XXX has joined' or 'User XXX has left' messages from the groups.
 
 ## Extra commands
 
