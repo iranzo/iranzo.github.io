@@ -53,20 +53,6 @@ On the channel to become `master` execute: `/admin link master` and it will gene
 
 On the channel to be linked against `master`, a.k.a. `slave`, execute: `/admin link slave <token>` where `token` is the code received as reply to the command in master channel.
 
-### Bargains/Deals
-
-Lists amazon bargains/deals published without duplicated during 24 hours, matching ones will be sent privately by <https://t.me/descuenbot>
-
-- `/ofertas add <words>` to add a new word to the ofertas watch
-- `/ofertas remove <words>` to remove a new word to the ofertas watch
-- `/ofertas list` to show the words being watched
-
-Lists amazon bargains/deal published without duplicated during 24 hours, matching ones will be sent to GROUP by <https://t.me/descuenbot>
-
-- `/gofertas add <words>` to add a new word to the ofertas watch
-- `/gofertas remove <words>` to remove a new word to the ofertas watch
-- `/gofertas list` to show the words being watched
-
 #### Special notes
 
 - Use `word` for regular substring match in include

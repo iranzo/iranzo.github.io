@@ -35,7 +35,7 @@ This of course, solved on of the problems (no-configured language by users), sti
 
 - `langdetect` does a guess based on common words, accents, characters, etc but it's just that: a guess.
 
-The approach then was to use something that was introduced in [@descuenbot](https://t.me/descuenbot) and was described in [this article]({filename}2020-01-07-new-features-in-descuenbot.en.md): calculate averages based on prior count and new value.
+The approach then was to use it to calculate averages based on prior count and new value.
 
 In this way, the language moved from being just a string to become a dictionary, storing `count` and `lang: %` values, for example:
 
