@@ -38,7 +38,7 @@ PROJECTS = [
     },
     {
         "name": "Citellus",
-        "url": "https://citellus.org",
+        "url": "https://citellus.github.io",
         "description": "Troubleshooting automation tool with easy to contribute rules",
     },
     {
