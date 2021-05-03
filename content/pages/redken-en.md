@@ -84,28 +84,31 @@ The bot, once token has been used and admin has been set, will store that inform
 
 The available list of configuration options that can be used depending on private or chats is listed below:
 
-- common
-  - `currency`: EUR
-  - `modulo`: 1 (to just show karma every X/modulo points, 0 to disable)
-  - `stock`: stock tickers to check
-  - `cleanlink`: True if we want links to be expanded and removed
-  - `cleankey`: Regexp to replace, for example tag=
-  - `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
-  - `lang`: set to language of choice to get some strings translated into supported languages <https://poeditor.com/join/project/ubTVkikm1R> and override autodetected language.
-  - `privacy`: Enables privacy for forwarded messages, if a message is
-    forwarded and the config is set, redken will remove original message and
-    resend text to the chat so that the original sender is removed but
-    forwarder is credited. If value is set to `silent` it will just clean the message forwarder.
-- chat
-  - `isolated`: False, if true, allow link, all karma, etc is tied to GID
-  - `link`: empty, if defined, channel is slave to a mater
-  - `admin`: List of admins of channels, default empty: everyone
-  - `maxage`: chats older than this will be removed
-  - `silent`: makes stampy not to output messages to that chat
-  - `welcome`: outputs the text when a new user joins the chat, replacing "\$username" by user name
-  - `usernamereminder`: Set this `False` to stop reminding new users to get a username to get the most out of karma commands.
-  - `inactivity`: Set this to the number of days without user activity before kicking it out.
-  - `removejoinparts`: Set this to automatically remove 'User XXX has joined' or 'User XXX has left' messages from the groups.
+### common
+
+- `currency`: EUR
+- `modulo`: 1 (to just show karma every X/modulo points, 0 to disable)
+- `stock`: stock tickers to check
+- `cleanlink`: True if we want links to be expanded and removed
+- `cleankey`: Regexp to replace, for example tag=
+- `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
+- `lang`: set to language of choice to get some strings translated into supported languages <https://poeditor.com/join/project/ubTVkikm1R> and override autodetected language.
+- `privacy`: Enables privacy for forwarded messages, if a message is
+  forwarded and the config is set, redken will remove original message and
+  resend text to the chat so that the original sender is removed but
+  forwarder is credited. If value is set to `silent` it will just clean the message forwarder.
+
+### chat
+
+- `isolated`: False, if true, allow link, all karma, etc is tied to GID
+- `link`: empty, if defined, channel is slave to a mater
+- `admin`: List of admins of channels, default empty: everyone
+- `maxage`: chats older than this will be removed
+- `silent`: makes stampy not to output messages to that chat
+- `welcome`: outputs the text when a new user joins the chat, replacing "\$username" by user name
+- `usernamereminder`: Set this `False` to stop reminding new users to get a username to get the most out of karma commands.
+- `inactivity`: Set this to the number of days without user activity before kicking it out.
+- `removejoinparts`: Set this to automatically remove 'User XXX has joined' or 'User XXX has left' messages from the groups.
 
 ## Extra commands
 
