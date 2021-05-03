@@ -53,12 +53,6 @@ On the channel to become `master` execute: `/admin link master` and it will gene
 
 On the channel to be linked against `master`, a.k.a. `slave`, execute: `/admin link slave <token>` where `token` is the code received as reply to the command in master channel.
 
-#### Special notes
-
-- Use `word` for regular substring match in include
-- Use `!word` for regular substring exclude
-- Use `$word` for whole word matching in include
-
 ### UIDEnforcer
 
 Adds UID (as reported via /info) to the list of safe members of a chat, anyone else, will be Kicked
@@ -80,6 +74,15 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
 - `/rhjobs list` to show the words being watched
 
 ## User/chat configuration
+
+The bot, once token has been used and admin has been set, will store that information in the database, so you can control it from a chat window
+
+- `/[g|l]config show` will list actual defined settings
+- `/[g|l]config set var=value` will set one of those settings with a new value
+  - As of this writing (verbosity, url for api, token, sleep timeout, owner, database, run in daemon mode)
+- `/[g|l]config delete var` will delete that variable from configuration.
+
+The available list of configuration options that can be used depending on private or chats is listed below:
 
 - common
   - `currency`: EUR
@@ -107,15 +110,6 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
 ## Extra commands
 
 Only for admin user in groups or for individuals against the bot
-
-### Configuration
-
-The bot, once token has been used and admin has been set, will store that information in the database, so you can control it from a chat window
-
-- `/[g|l]config show` will list actual defined settings
-- `/[g|l]config set var=value` will set one of those settings with a new value
-  - As of this writing (verbosity, url for api, token, sleep timeout, owner, database, run in daemon mode)
-- `/[g|l]config delete var` will delete that variable from configuration.
 
 ### Karma
 
