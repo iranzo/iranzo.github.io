@@ -410,6 +410,11 @@
     "dir",
     "Sian",
     "fixable",
-    "liftable"
+    "liftable",
+    "NYM",
+    "mixnode",
+    "Asciinema",
+    "crypto",
+    "mixnodes"
   ]
 }
