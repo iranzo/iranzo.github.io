@@ -1,0 +1,73 @@
+---
+author: Pablo Iranzo Gómez
+title: How to run a NYM Validator
+tags: NYM, crypto, validator, fedora, Linux, CentOS, RHEL
+layout: post
+date: 2021-05-09 12:40:34 +0200
+comments: true
+category: tech
+description:
+lang: en
+---
+
+As said in the article about [mixnodes]({filename}2021-05-09-run-a-nym-mixnode.en.md), NYM is a technology aiming for providing privacy for the communications.
+
+Apart of the mixnodes, other key piece in the infrastructure are the validators.
+
+As said, the project uses Open Source technology to run, and they have a nice docs with details on how to run a node at <https://nymtech.net/docs/>, and the one relevant for mixnodes at <https://nymtech.net/docs/run-nym-nodes/validators/>.
+
+In this case, we can follow the instructions for compiling, but I faced some issues (compiling went fine, but initial sync failed), so in this case, we will use the pre-compiled version provided with the `0.10.0` release.
+
+Let's now clone the repository:
+
+```sh
+git clone  https://github.com/nymtech/nym.git
+cd nym
+git checkout tags/v0.10.0
+```
+
+The binaries we're interested are inside the `validator` folder, and two of them are important:
+
+- `libwasmvm.so`
+- `nymd`
+
+The official guide, already provides enough information about creating a systemd unit file, setting the `LD_LIBRARY_PATH` environment variable in our `.bashrc`, etc. So we will use them after installing the required packages:
+
+```sh
+dnf -y install certbot nginx
+systemctl enable nginx
+systemctl start nginx
+```
+
+Those packages will enable our system to serve secure web pages using a domain name validated with let's encrypt.
+
+Pay special attention to the required steps:
+
+- Initialize the validator as described using `nymd init $SERVER --chain-id testnet-finney`
+- Run `wget -O $HOME/.nymd/config/genesis.json https://nymtech.net/testnets/finney/genesis.json` to overwrite the created file with the one for `finney` release.
+- Edit the `$HOME/.nymd/config/config.toml` file as described (`persistent_peers`, `cors_allowed_origins` and `create_empty_blocks`)
+- Edit the `$HOME/.nymd/config/app.toml` to set the proper values for `minimum-gas-prices` and enabling `[API]`
+
+Once this is performed, initialize an user, and remember the key that you typed and of course, store the mnemonic properly.
+
+Follow the steps on the guide for setting the systemd service so that the process starts automatically after each reboot:
+
+- `systemctl enable nymd`
+- `systemctl start nymd`
+
+After a while, with the process started, you can create the validator using the command at the documentation by creating a transaction and staking (you'll need tokens for that, and the program will ask your confirmation and password before signing and broadcasting the request).
+
+Before it, remember to open the firewall ports:
+
+```sh
+for port in 1317/tcp 9090/tcp 26656/tcp; do
+firewall-cmd --add-port=${port}
+firewall-cmd --add-port=${port} --permanent
+done
+```
+
+Once it's finished, you're ready to run the mixnode
+
+The compiled files will be now inside the `./target/release/` folder, so you're ready to continue with the official guide at <https://nymtech.net/docs/run-nym-nodes/mixnodes/> , just remember to run `cd target/release` before, so that it will find the commands as described in the official guide.
+
+Enjoy!
