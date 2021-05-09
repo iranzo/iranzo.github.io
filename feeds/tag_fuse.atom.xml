@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - fuse</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_fuse.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2008-07-01T20:13:16+00:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>FUSE</title><link href="https://iranzo.io/blog/2008/07/01/fuse-es/" rel="alternate"></link><published>2008-07-01T20:13:16+00:00</published><updated>2008-07-01T20:13:16+00:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2008-07-01:/blog/2008/07/01/fuse-es/</id><summary type="html">
+&lt;h3 id="introduccion"&gt;Introducción&lt;a class="headerlink" href="#introduccion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a “hibernar” la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en “pausa” y al volver al día siguiente a …&lt;/p&gt;</summary><content type="html">
+&lt;h3 id="introduccion"&gt;Introducción&lt;a class="headerlink" href="#introduccion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a “hibernar” la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en “pausa” y al volver al día siguiente a utilizar el &lt;span class="caps"&gt;PC&lt;/span&gt; y encenderlo, recuperarlo todo tal cual estaba, listo para trabajar. Cuando pasé a &lt;a href="https://iranzo.io/blog/2008/06/14/fedora-es/"&gt;Fedora&lt;/a&gt; esta función junto con el &lt;span class="caps"&gt;LVM&lt;/span&gt; cifrado no iban a faltar en mi sistema :-)&lt;/p&gt;
+&lt;p&gt;La hibernación utiliza la partición swap del sistema para almacenar el contenido de la &lt;span class="caps"&gt;RAM&lt;/span&gt; y así guardar el estado del sistema, y al siguiente arranque, se verifica si tiene información en dicha partición que se puede recuperar, y de ser así, gestiona la recuperación.&lt;/p&gt;
+&lt;p&gt;Por facilidad en la gestión y funcionamiento entre mi servidor y mi pc utilizo &lt;span class="caps"&gt;NFS&lt;/span&gt; para acceder a los ficheros y para facilitar la utilización, en mi equipo utilizo autofs con el mapa para redes, que me permite acceder a equipos automáticamente por nfs usando la ruta local /net/nombremaquina/recurso.&lt;/p&gt;
+&lt;p&gt;Durante muuuuuuchos años he estado utilizando ese funcionamiento para trabajar con mis equipos, pero el sistema &lt;span class="caps"&gt;NFS&lt;/span&gt; con autofs y más desde que hiberno mi equipo presenta un problema, al restaurar el equipo, es necesario restaurar autofs porque si no, tarda más en tener un timeout y liberar los puntos de montaje.&lt;/p&gt;
+&lt;p&gt;Ésto me animó a probar otras alternativas y fue cuando &lt;span class="caps"&gt;FUSE&lt;/span&gt; volvió a mis manos.&lt;/p&gt;
+&lt;h3 id="fuse"&gt;&lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;a class="headerlink" href="#fuse" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://fuse.sourceforge.net/"&gt;&lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;/a&gt;(“Filesystem in userspace”) es un proyecto que permite cargar sistemas de ficheros a nivel de usuario, para ello, dispone de un controlador en kernel, y una serie de utilidades ejecutables por usuarios para poder cargar esos sistemas de ficheros.&lt;/p&gt;
+&lt;p&gt;En el caso de &lt;span class="caps"&gt;RHEL&lt;/span&gt;/CentOS 5 tenemos los paquetes de &lt;span class="caps"&gt;FUSE&lt;/span&gt; en RPMForge y en Fedora los tenemos en la propia distribución. Por ejemplo, en Fedora tenemos:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    fuse.i386 : File System in Userspace (FUSE) utilities
+    fuse-convmvfs.i386 : FUSE-Filesystem to convert filesystem encodings
+    fuse-devel.i386 : File System in Userspace (FUSE) devel files
+    fuse-emulator.i386 : The Free UNIX Spectrum Emulator
+    fuse-emulator-utils.i386 : Additional utils for the Fuse spectrum emulator
+    fuse-encfs.i386 : Encrypted pass-thru filesystem in userspace
+    fuse-gmailfs.noarch : Gmail Filesystem
+    fuse-libs.i386 : File System in Userspace (FUSE) libraries
+    fuse-python.i386 : Python bindings for FUSE - filesystem in userspace
+    fuse-s3fs.noarch : FUSE filesystem using Amazon Simple Storage Service as storage
+    fuse-smb.i386 : FUSE-Filesystem to fast and easy access remote resources via SMB
+    fuse-sshfs.i386 : FUSE-Filesystem to access remote filesystems via SSH
+    fusecompress.i386 : FUSE based compressed filesystem implementation
+    fuseiso.i386 : FUSE support for ISO filesystem images
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Yo actualmente estoy utilizando &lt;code&gt;fuse-sshfs&lt;/code&gt; para solventar mi necesidad, y bueno, la cumple perfectamente :)&lt;/p&gt;
+&lt;p&gt;Lo que hago es lanzar desde un terminal el siguiente comando:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+sshfs host:/ruta/a/la/carpeta carpeta-de-montaje
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;A partir de ese momento, cada vez que accedo a la carpeta “carpeta-de-montaje”, los ficheros sobre los que opero, están en otro equipo, al que se ha conectado por ssh y se le envian los comandos para abrir ficheros, renombrarlos, etc.&lt;/p&gt;
+&lt;h3 id="extendiendo-fuse"&gt;Extendiendo &lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;a class="headerlink" href="#extendiendo-fuse" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;El meollo de este artículo es un artículo “&lt;span class="caps"&gt;WEB&lt;/span&gt; &lt;span class="caps"&gt;LOCAL&lt;/span&gt;: Pythoneando con &lt;span class="caps"&gt;FUSE&lt;/span&gt;” de &lt;a href="http://www.linux-magazine.es/"&gt;Linux Magazine&lt;/a&gt; (número 37) que me pasó un compañero (Fran Gimeno) en el que se analizaba por parte de “Jose María Ruiz” el funcionamiento de &lt;span class="caps"&gt;FUSE&lt;/span&gt; La parte interesante de dicho artículo, así como en este artículo de &lt;a href="http://www.redhatmagazine.com/2008/01/29/open-source-project-zmugfs/"&gt;Red Hat Magazine&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;El punto interesante del artículo de Jose María Ruíz es que implementan un nuevo sistema de ficheros en python, un lenguaje sencillo de aprender en el que se ve claramente lo necesario para utilizar &lt;span class="caps"&gt;FUSE&lt;/span&gt;: implementar las directivas de operación sobre ficheros.&lt;/p&gt;
+&lt;p&gt;En un sistema de ficheros estándar, utilizamos funciones como opendir, open, read, getattr para trabajar con ficheros, para utilizar &lt;span class="caps"&gt;FUSE&lt;/span&gt;, creamos métodos con esos nombres que realizan las operaciones que queremos, por ejemplo:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!python&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;readdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;offset&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# read the next directory entry&lt;/span&gt;
+    &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"readdir (&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;) (&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;offset&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+    &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_nodes_by_path&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_nodes&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"would return (&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;) for path (&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;fuse&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Direntry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"ascii"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;(Obtenido de &lt;a href="http://zmugtools.svn.sourceforge.net/viewvc/zmugtools/tags/zmugfs/release-0.1/src/zmugfs.py?view=markup"&gt;http://zmugtools.svn.sourceforge.net/viewvc/zmugtools/tags/zmugfs/release-0.1/src/zmugfs.py?view=markup&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Así pues, aparte de los múltiples sistemas de ficheros ya disponibles con &lt;span class="caps"&gt;FUSE&lt;/span&gt; (entre ellos uno de los más conocidos inicialmente fue gmailfs que permitía utilizar el espacio de una cuenta de gmail como almacén de ficheros accesible de forma remota), podremos crear los que podamos necesitar de forma sencilla utilizando python (o el lenguaje de nuestra preferencia) para implementar las funciones de acceso.&lt;/p&gt;</content><category term="tech"></category><category term="linux"></category><category term="fuse"></category><category term="foss"></category></entry></feed>

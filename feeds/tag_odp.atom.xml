@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - odp</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_odp.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2019-01-22T20:51:27+01:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>AwesomeSlides for converting LibreOffice ODP into revealjs</title><link href="https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/" rel="alternate"></link><published>2019-01-22T20:51:27+01:00</published><updated>2019-01-22T20:51:27+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2019-01-22:/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/</id><summary type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;For some time now, I wanted to put the presentations I did in the past to be available, and since I’ve added support to &lt;a href="https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/"&gt;my blog to render revealjs slides&lt;/a&gt;, I wanted to also put other presentations that I did in the past, probably (or for sure) outdated …&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;For some time now, I wanted to put the presentations I did in the past to be available, and since I’ve added support to &lt;a href="https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/"&gt;my blog to render revealjs slides&lt;/a&gt;, I wanted to also put other presentations that I did in the past, probably (or for sure) outdated, but that were sitting in my computer drive.&lt;/p&gt;
+&lt;p&gt;The presentations already got several transformations, but in the actual status they are stored as LibreOffice &lt;span class="caps"&gt;ODP&lt;/span&gt; files, that made it a bit difficult.&lt;/p&gt;
+&lt;p&gt;Some software for the conversion, did generate them as ‘screenshoots’ for each slide, this however had some cons/pros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pros:&lt;/li&gt;
+&lt;li&gt;Format was kept almost 100%&lt;/li&gt;
+&lt;li&gt;Easy to showcase with any ‘gallery’ plugin&lt;/li&gt;
+&lt;li&gt;Cons:&lt;/li&gt;
+&lt;li&gt;Text was lost, so no links, no indexation, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Alternatively, I could add and attach via a link to the odp file for end users to download and reproduce, but that will increase blog size (no constrains, but sounded like nonsense to me), so I continued my research for a solution or workaround to use.&lt;/p&gt;
+&lt;h1 id="the-approach"&gt;The approach&lt;a class="headerlink" href="#the-approach" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Thanks to &lt;a href="https://github.com/cliffe/AwesomeSlides"&gt;https://github.com/cliffe/AwesomeSlides&lt;/a&gt;, which uses perl and a set of common available libraries on any
+distribution to do the job, I was able to convert my presentations from &lt;code&gt;odp&lt;/code&gt; to &lt;code&gt;html&lt;/code&gt; quite easily:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; file &lt;span class="k"&gt;in&lt;/span&gt; *.odp&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    perl convert-to-awesome.pl &lt;span class="nv"&gt;$file&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This resulted in ‘master’ html files in the &lt;code&gt;slides_out&lt;/code&gt; folder, plus a folder containing the images and other media used by the presentation.&lt;/p&gt;
+&lt;p&gt;AwesomeSlides does the conversion to ‘revealjs’ format, plus adds extra features, transitions, etc to make them fancier, but in my case I was interested in plain markdown, so the next one to the rescue has been &lt;code&gt;pandoc&lt;/code&gt;&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; file &lt;span class="k"&gt;in&lt;/span&gt; *.html&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    pandoc -t markdown &lt;span class="nv"&gt;$file&lt;/span&gt; -o &lt;span class="nv"&gt;$file&lt;/span&gt;.md
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;The end result of course is not clean at all and not directly usable by the &lt;a href="http://github.com/iranzo/pelican-revealmd/"&gt;pelican plugin&lt;/a&gt; to render the images, etc.&lt;/p&gt;
+&lt;h1 id="the-post-processing"&gt;The post-processing&lt;a class="headerlink" href="#the-post-processing" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;One of the things needed (and that I used for other slides) is to move the resulting
+&lt;code&gt;md&lt;/code&gt; file to the same folder as the images and move them into the &lt;code&gt;content/presentations&lt;/code&gt; folder of my website source.&lt;/p&gt;
+&lt;p&gt;Once there, a set of find/replacements was required:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;find&lt;/th&gt;
+&lt;th&gt;replacement&lt;/th&gt;
+&lt;th&gt;description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;\$folder&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{attach}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Define images included as &lt;code&gt;{attach}&lt;/code&gt; for pelican to pick them up&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;————-&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Remove underlining after titles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;stangechars&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;normalchar&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Some characters were lost (accents, etc), replaced by another one, to later spell check&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\n\n\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\n\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Remove extra new lines&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-⠀⠀⠀⠀⠀&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-⠀&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Remove extra spaces before paragraph&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Other manual steps involved&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Put ## in front of each title&lt;/li&gt;
+&lt;li&gt;Adjust empty slides (—- followed by another —-)&lt;/li&gt;
+&lt;li&gt;And a lot more :-)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The good thing, in the end, is that with some additional work, I was able to bring back ‘online’ my older presentations, now listed in the &lt;a href="https://iranzo.io/blog/category/presentations/"&gt;presentations category&lt;/a&gt;.&lt;/p&gt;</content><category term="tech"></category><category term="Pelican"></category><category term="FOSS"></category><category term="blog"></category><category term="Linux"></category><category term="pandoc"></category><category term="LibreOffice"></category><category term="odp"></category><category term="ppt"></category><category term="presentations"></category></entry></feed>

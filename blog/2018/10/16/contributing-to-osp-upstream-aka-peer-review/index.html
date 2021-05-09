@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='en'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Introduction¶ In the article “Contributing to OpenStack” we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find low hanging fruits to start contributing). Here, we’ll cover what happens behind the scene to get change published. Upstream workflow¶ Peer review …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="python, OpenStack, foss, git, Gerrit, RDO, fedora, citellus, tech, " />
+
+<meta property="og:title" content="Contributing to OSP upstream a.k.a. Peer Review "/>
+<meta property="og:url" content="https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/" />
+<meta property="og:description" content="Introduction¶ In the article “Contributing to OpenStack” we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find low hanging fruits to start contributing). Here, we’ll cover what happens behind the scene to get change published. Upstream workflow¶ Peer review …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2018-10-16T07:32:47+02:00" />
+<meta name="twitter:title" content="Contributing to OSP upstream a.k.a. Peer Review ">
+<meta name="twitter:description" content="Introduction¶ In the article “Contributing to OpenStack” we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find low hanging fruits to start contributing). Here, we’ll cover what happens behind the scene to get change published. Upstream workflow¶ Peer review …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2018-10-16T07:32:47+02:00",
+        "description": "Introduction¶ In the article “Contributing to OpenStack” we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find low hanging fruits to start contributing). Here, we’ll cover what happens behind the scene to get change published. Upstream workflow¶ Peer review …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/"
+        },
+
+        "headline": "Contributing to OSP upstream a.k.a. Peer Review",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>Contributing to OSP upstream a.k.a. Peer Review  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/">
+                Contributing to <span class="caps">OSP</span> upstream a.k.a. Peer&nbsp;Review
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#upstream-workflow">Upstream workflow</a><ul>
+<li><a href="#peer-review">Peer review</a></li>
+<li><a href="#ci-tests-verified-1"><span class="caps">CI</span> tests (Verified +1)</a></li>
+<li><a href="#code-review2">Code Review+2</a></li>
+<li><a href="#workflow1">Workflow+1</a></li>
+<li><a href="#cannot-merge-please-rebase">Cannot merge, please rebase</a></li>
+</ul>
+</li>
+<li><a href="#how-do-we-do-it-with-citellus">How do we do it with Citellus?</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>In the article “<a href="https://iranzo.io/blog/2016/07/21/contributing-to-openstack/">Contributing to OpenStack</a>” we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find <code>low hanging fruits</code> to start contributing).</p>
+<p>Here, we’ll cover what happens behind the scene to get change published.</p>
+<h2 id="upstream-workflow">Upstream workflow<a class="headerlink" href="#upstream-workflow" title="Permanent link">¶</a></h2>
+<h3 id="peer-review">Peer review<a class="headerlink" href="#peer-review" title="Permanent link">¶</a></h3>
+<p>Upstream contributions to <span class="caps">OSP</span> and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.</p>
+<p>The last command executed (<code>git-review</code>) on the submit sequence (in the prior article) will effectively submit the patch to the defined git review service (<code>git-review -s</code> does the required setup process) and will print an <span class="caps">URL</span> that can be used to access the review.</p>
+<p>Each project might have a different review platform, but usually for <span class="caps">OSP</span> it’s <a href="https://review.openstack.org">https://review.openstack.org</a> while for other projects it can be <a href="https://gerrit.ovirt.org">https://gerrit.ovirt.org</a>, <a href="https://gerrithub.io">https://gerrithub.io</a>, etc (this is defined in <code>.gitreview</code> file in the repository).</p>
+<p>A sample <code>.gitreview</code> file looks like:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">[gerrit]</span>
+<span class="na">host</span><span class="o">=</span><span class="s">review.gerrithub.io</span>
+<span class="na">port</span><span class="o">=</span><span class="s">29418</span>
+<span class="na">project</span><span class="o">=</span><span class="s">citellusorg/citellus.git</span>
+</code></pre></div>
+</td></tr></table>
+<p>For a review example, we’ll use one from gerrithub from <a href="https://citellusorg.github.io">Citellus</a> project:</p>
+<p><a href="https://review.gerrithub.io/#/c/380646/">https://review.gerrithub.io/#/c/380646/</a></p>
+<p>Here, we can see that we’re on review <code>380646</code> and that’s the link that allows us to check the changes submitted (the one printed when executing <code>git-review</code>).</p>
+<h3 id="ci-tests-verified-1"><span class="caps">CI</span> tests (Verified +1)<a class="headerlink" href="#ci-tests-verified-1" title="Permanent link">¶</a></h3>
+<p>Once a review has been submitted, usually the bots are the first ones to pick them and run the defined unit testing on the new changes, to ensure that it doesn’t break anything (based on what is defined to be tested).</p>
+<p>This is a critical point as:</p>
+<ul>
+<li>Tests need to be defined if new code is added or modified to ensure that later updates doesn’t break this new code without someone being aware.</li>
+<li>Infrastructure should be able to test it (for example you might need some specific hardware to test a card or network configuration)</li>
+<li>Environment should be sane so that prior runs doesn’t affect the validation.</li>
+</ul>
+<p><span class="caps">OSP</span> <span class="caps">CI</span> can be checked at ‘Zuul’ <a href="http://zuul.openstack.org/">http://zuul.openstack.org/</a> where you can ‘input’ the number for your review and see how the different bots are running <span class="caps">CI</span> tests on it or if it’s still queued.</p>
+<p>If everything is <span class="caps">OK</span>, the bot will ‘vote’ your change as <code>Verified +1</code> allowing others to see that it should not break anything based on the tests performed</p>
+<p>In the case of <span class="caps">OSP</span>, there’s also third-party <span class="caps">CI</span>’s that can validate other changes by third party systems. For some of them, the votes are counting towards or against the proposed change, for others it’s just a comment to take into account.</p>
+<p>Even if sometimes you know that your code is right, there’s a failure because of the infrastructure, in those cases, writing a new comment saying <code>recheck</code>, will schedule a new <span class="caps">CI</span> test run.</p>
+<p>This is common usually during busy periods when it’s harder for the scheduler to get available resources for the review validation. Also, sometimes there are errors in the configuration of <span class="caps">CI</span> that must be fixed in order to validate those changes.</p>
+<p>Note: you can run some of the tests on your system to validate faster if you’ve issues by running <code>tox</code> this will setup virtual environment for tests to be run so it’s easier to catch issues before upstream <span class="caps">CI</span> does (so it’s always a good idea to run <code>tox</code> even before submitting the review with <code>git-review</code> to detect early errors).</p>
+<p>This is however not always possible as some changes include requirements like testing upgrades, full environment deployments, etc that cannot be done without the required preparation steps or even the infrastructure.</p>
+<h3 id="code-review2">Code Review+2<a class="headerlink" href="#code-review2" title="Permanent link">¶</a></h3>
+<p>This is probably the ‘longest’ process, it requires peers to be added as ‘reviewer’ (you can get an idea on the names based on other reviews submitted for the same component) or they will pick up new reviews as the pop un on notification channels or pending queues.</p>
+<p>On this, you must prepare mentally for everything… developers could suggest to use a different approach, or highlight other problems or just do some small <code>nit</code> comments to fixes like formating, spacing, var naming, etc.</p>
+<p>After each comment/change suggested, repeat the workflow for submitting a new patchset, but make sure you’re using the same review id (that’s by keeping the commit id that is appended): this allows the Code Review platform to identify this change as an update to a prior one, and allow you for example to compare changes across versions, etc. (and also notify the prior reviewers of new changes).</p>
+<p>Once reviewers are <span class="caps">OK</span> with your code, and with some ‘Core’ developers also agreeing, you’ll see some voting happening (-2..+2) meaning they like the change in its actual form or not.</p>
+<p>Once you get <code>Code Review +2</code> and with the prior <code>Verified +1</code> you’re almost ready to get the change merged.</p>
+<h3 id="workflow1">Workflow+1<a class="headerlink" href="#workflow1" title="Permanent link">¶</a></h3>
+<p>Ok, last step is to have someone with Workflow permissions to give a +1, this will ‘seal’ the change saying that everything is ok (as it had <span class="caps">CR</span>+2 and Verified+1) and change is valid…</p>
+<p>This vote will trigger another build by <span class="caps">CI</span>, and when finished, the change will be merged into the code upstream, congratulations!</p>
+<h3 id="cannot-merge-please-rebase">Cannot merge, please rebase<a class="headerlink" href="#cannot-merge-please-rebase" title="Permanent link">¶</a></h3>
+<p>Sometimes, your change is doing changes on the same files that other programmers did on the code, so there’s no way to automatically ‘rebase’ the change, in this case the bad news is that you need to:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git checkout master <span class="c1"># to change to master branch</span>
+git pull <span class="c1"># to push latest upstream changes</span>
+git checkout yourbranch <span class="c1"># to get back to your change branch</span>
+git rebase master <span class="c1"># to apply your changes on top of current master</span>
+</code></pre></div>
+</td></tr></table>
+<p>After this step, it might be required to manually fix the code to solve the conflicts and follow instructions given by git to mark them as reviewed.</p>
+<p>Once it’s done, remember to do like with any patchset you submitted afterwards:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git commit --amend <span class="c1"># to commit the new changes on the same commit Id you used</span>
+git-review <span class="c1"># to upload a new version of the patchset</span>
+</code></pre></div>
+</td></tr></table>
+<p>This will start over the progress, but will, once completed to get the change merged.</p>
+<h2 id="how-do-we-do-it-with-citellus">How do we do it with Citellus?<a class="headerlink" href="#how-do-we-do-it-with-citellus" title="Permanent link">¶</a></h2>
+<p>In <a href="https://citellusorg.github.io/">Citellus</a> we’ve replicated more or less what we’ve upstream… even the use of <code>tox</code>.</p>
+<p>Citellus does use <a href="https://gerrithub.io">https://gerrithub.io</a> (free service that hooks on github and allows to do <span class="caps">PR</span>)</p>
+<p>We’ve setup a machine that runs <a href="https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/">Jenkins</a> to do ‘<span class="caps">CI</span>’ on the tests we’ve defined (mostly for python wrapper and some tests) and what effectively does is to run <code>tox</code>, and also, we do use <a href="https://travis-ci.org">https://travis-ci.org</a> free Tier to repeat the same on other platform.</p>
+<p><code>tox</code> is a tool that allows to define several commands that are executed inside python virtual environments, so without touching your system libraries, it can get installed new ones or removed just for the boundaries of that test, helping into running:</p>
+<ul>
+<li>pep8 (python formating compliance)</li>
+<li>py27 (python 2.7 environment test)</li>
+<li>py35 (python 3.5 environment test)</li>
+</ul>
+<p>The <code>py*</code> tests are just to validate the code can run on both base python versions, and what they do is to run the defined unit testing scripts under each interpreter to validate.</p>
+<p>For local test, you can run <code>tox</code> and it will go trough the different tests defined and report status… if everything is ok, it should be possible that your new code review passes also <span class="caps">CI</span>.</p>
+<p>Jenkins will do the +1 on verified and ‘core’ reviewers will give +2 and ‘merge’ the change once validated.</p>
+<p>Hope you enjoy!</p>
+<p>Pablo</p>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=Contributing%20to%20OSP%20upstream%20a.k.a.%20Peer%C2%A0Review&url=https%3A//iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/&via=iranzop&hashtags=python,openstack,foss,git,gerrit,rdo,fedora,citellus" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=Contributing%20to%20OSP%20upstream%20a.k.a.%20Peer%C2%A0Review&amp;body=https%3A//iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/"
+                   href="https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/';
+    var disqus_url = 'https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts/" title="Magui for analysis of issues across several hosts.">Magui for analysis of issues across several hosts.</a></li>
+<li><a href="https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/" title="Jenkins for running CI tests">Jenkins for running CI tests</a></li>
+<li><a href="https://iranzo.io/blog/2018/01/27/devconfcz-2018-citellus-detecting-common-pitfalls-of-deployments/" title="DevConf.cz 2018: Citellus - Detecting common pitfalls of deployments">DevConf.cz 2018: Citellus - Detecting common pitfalls of deployments</a></li>
+<li><a href="https://iranzo.io/blog/2018/05/13/supersec-2018-citellus-herramienta-para-validar-sistemasficheros-de-configuracion-logs-etc-mediante-scripts-en-bash-python-ruby-etc/" title="SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de configuración, logs etc mediante scripts en bash, python, ruby, etc">SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de configuración, logs etc mediante scripts en bash, python, ruby, etc</a></li>
+<li><a href="https://iranzo.io/blog/2019/05/30/emerging-tech-vlc19-citellus-automatizacion-de-comprobaciones/" title="Emerging Tech VLC‘19 - Citellus - Automatización de comprobaciones">Emerging Tech VLC‘19 - Citellus - Automatización de comprobaciones</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2018/09/25/peru-for-syncing-specific-git-repo-files/" title="Previous: Peru for syncing specific git repository files">Peru for syncing specific git repository files</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/" title="Next: How to automate via Travis CI publishing of new pelican pages to GitHub pages">How to automate via Travis CI publishing of new pelican pages to GitHub pages</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~5 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2018-10-16T07:32:47+02:00">Tue 16 October 2018</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#citellus-ref">citellus
+                    <span class="superscript">16</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#fedora-ref">fedora
+                    <span class="superscript">18</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#foss-ref">foss
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#gerrit-ref">Gerrit
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#git-ref">git
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#openstack-ref">OpenStack
+                    <span class="superscript">13</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#python-ref">python
+                    <span class="superscript">27</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#rdo-ref">RDO
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

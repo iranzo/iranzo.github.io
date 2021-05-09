@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - fencing</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_fencing.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2015-05-01T11:35:14+02:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Intel AMT on Linux for remote control/fencing</title><link href="https://iranzo.io/blog/2015/05/01/intel-amt-on-linux-for-remote-controlfencing/" rel="alternate"></link><published>2015-05-01T11:35:14+02:00</published><updated>2015-05-01T11:35:14+02:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2015-05-01:/blog/2015/05/01/intel-amt-on-linux-for-remote-controlfencing/</id><summary type="html">&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;Some time ago, and after discussing with a colleague, I had a look on Intel&amp;#8217;s &lt;a href="http://en.wikipedia.org/wiki/Intel_Active_Management_Technology"&gt;&lt;span class="caps"&gt;AMT&lt;/span&gt;&lt;/a&gt;, and this week I
+did a demo for another colleague as a cheap-replacement for having power fencing capabilities on commodity&amp;nbsp;hardware.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;AMT&lt;/span&gt; provides a server-like Out of band management like iLO, iDRAC …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;Some time ago, and after discussing with a colleague, I had a look on Intel&amp;#8217;s &lt;a href="http://en.wikipedia.org/wiki/Intel_Active_Management_Technology"&gt;&lt;span class="caps"&gt;AMT&lt;/span&gt;&lt;/a&gt;, and this week I
+did a demo for another colleague as a cheap-replacement for having power fencing capabilities on commodity&amp;nbsp;hardware.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;AMT&lt;/span&gt; provides a server-like Out of band management like iLO, iDRAC, &lt;span class="caps"&gt;RSB&lt;/span&gt; etc and it&amp;#8217;s included in i3 with vPro processors/chipsets of some&amp;nbsp;equipment.&lt;/p&gt;
+&lt;p&gt;I did the test on a Lenovo X200/201 system I had as old&amp;nbsp;laptop.&lt;/p&gt;
+&lt;p&gt;The steps used for configuring it, require&amp;nbsp;to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;first enable the support in the &lt;span class="caps"&gt;BIOS&lt;/span&gt;, usually named &amp;#8216;Intel &lt;span class="caps"&gt;AMT&lt;/span&gt;&amp;#8217; or &amp;#8216;Intel Active Management&amp;nbsp;Technology&amp;#8217;.&lt;/li&gt;
+&lt;li&gt;After this step it was possible to use the command to enter the special &lt;span class="caps"&gt;AMT&lt;/span&gt; firmware &lt;code&gt;Intel(R) Management Engine&lt;/code&gt; which on this laptop is enabled with &lt;code&gt;CTRL-P&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If this is the first time you enable it, you&amp;#8217;ll require to change the default &lt;code&gt;admin&lt;/code&gt; password to something secure, usually mixed upper-lower case, symbol and&amp;nbsp;numbers.&lt;/li&gt;
+&lt;li&gt;For this example we&amp;#8217;ll be using &lt;code&gt;Qwer123$&lt;/code&gt; as&amp;nbsp;password.&lt;/li&gt;
+&lt;li&gt;Explore the settings, enable it and validate network&amp;nbsp;settings.&lt;/li&gt;
+&lt;li&gt;I&amp;#8217;ve enabled &lt;span class="caps"&gt;DHCP&lt;/span&gt; on both &lt;span class="caps"&gt;LAN&lt;/span&gt; and Wireless for IPv4 and IPv6, and enabled &lt;span class="caps"&gt;KVM&lt;/span&gt;&amp;nbsp;redirection&lt;/li&gt;
+&lt;li&gt;Once finished, save changes and exit from firmware screen and let the system&amp;nbsp;boot.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From another host, you can perform the remaining configuration steps, from now on, the &amp;#8216;target&amp;#8217; system will be intercepting packets sent to specific port via the network cards and redirect to &lt;span class="caps"&gt;AMT&lt;/span&gt; firmware instead of going to target host. This is something important to note, the packets are only intercepting when coming from &lt;strong&gt;&lt;span class="caps"&gt;OUTSIDE&lt;/span&gt;&lt;/strong&gt; the host so we&amp;#8217;ll use a second computer to access&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;You can use a browser pointing to target system&amp;#8217;s &lt;span class="caps"&gt;IP&lt;/span&gt; at port &lt;code&gt;16992&lt;/code&gt;, for example: &lt;a href="http://target:16992"&gt;http://target:16992&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;From that web interface and once logging with &lt;code&gt;admin&lt;/code&gt; and the password set &lt;code&gt;Qwer123$&lt;/code&gt; we can continue doing some configuration, like the power states to control (for example, this laptop could be remotely powered when it was with the charger connected even if laptop was powered&amp;nbsp;off).&lt;/p&gt;
+&lt;p&gt;Now, for doing the &amp;#8216;command-line&amp;#8217; part, we will need to install one package on our system and rum some&amp;nbsp;scripts.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# First we&amp;#39;ll install amtterm wsmancli&lt;/span&gt;
+
+dnf -y install amtterm wsmancli
+
+&lt;span class="c1"&gt;# This will provide the two commands we&amp;#39;ll later use, wsman for configuration and amttool for power control&lt;/span&gt;
+
+&lt;span class="c1"&gt;# We need to define the host to use and password as well as the password we&amp;#39;ll use for console redirection (via VNC)&lt;/span&gt;
+
+&lt;span class="nv"&gt;AMT_PASSWORD&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Qwer123$&amp;#39;&lt;/span&gt;
+&lt;span class="nv"&gt;AMT_HOST&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;target
+&lt;span class="nv"&gt;VNC_PASSWORD&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Qwer123$&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# we can define those vars (specially AMT_PASSWORD) in our .profile or .bash_profile in order to avoid typing them everytime&lt;/span&gt;
+
+&lt;span class="c1"&gt;# set the vnc password (must be 8 characters MAX)&lt;/span&gt;
+wsman put http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_HOST&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -P &lt;span class="m"&gt;16992&lt;/span&gt; -u admin -p &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_PASSWORD&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -k &lt;span class="nv"&gt;RFBPassword&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;VNC_PASSWORD&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# enable KVM redirection to port 5900 (this will also intercept 5900 port for console redirection, so make it sure you&amp;#39;ll not need it later)&lt;/span&gt;
+wsman put http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_HOST&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -P &lt;span class="m"&gt;16992&lt;/span&gt; -u admin -p &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_PASSWORD&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -k &lt;span class="nv"&gt;Is5900PortEnabled&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+
+&lt;span class="c1"&gt;# disable opt-in policy (do not ask user for console access)&lt;/span&gt;
+wsman put http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_HOST&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -P &lt;span class="m"&gt;16992&lt;/span&gt; -u admin -p &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_PASSWORD&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -k &lt;span class="nv"&gt;OptInPolicy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+
+&lt;span class="c1"&gt;# disable session timeout (do not timeout sessions)&lt;/span&gt;
+wsman put http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_HOST&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -P &lt;span class="m"&gt;16992&lt;/span&gt; -u admin -p &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_PASSWORD&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -k &lt;span class="nv"&gt;SessionTimeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;
+
+&lt;span class="c1"&gt;# enable KVM (enable keyboard/video/monitor redirection)&lt;/span&gt;
+wsman invoke -a RequestStateChange http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_KVMRedirectionSAP -h &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_HOST&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -P &lt;span class="m"&gt;16992&lt;/span&gt; -u admin -p &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_PASSWORD&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -k &lt;span class="nv"&gt;RequestedState&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;
+
+&lt;span class="c1"&gt;# OPTIONAL: view settings (validate all the settings)&lt;/span&gt;
+wsman get http://intel.com/wbem/wscim/1/ips-schema/1/IPS_KVMRedirectionSettingData -h &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_HOST&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -P &lt;span class="m"&gt;16992&lt;/span&gt; -u admin -p &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;AMT_PASSWORD&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After this step, we should be able to use &lt;code&gt;vinagre target&lt;/code&gt; to access the &lt;span class="caps"&gt;KVM&lt;/span&gt; redirection and remotely control our&amp;nbsp;system.&lt;/p&gt;
+&lt;p&gt;For example, to control power of host you can&amp;nbsp;use:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Check host status:&lt;/span&gt;
+amttool &lt;span class="nv"&gt;$AMT_HOST&lt;/span&gt; info
+
+&lt;span class="c1"&gt;# Power up a powered-off host:&lt;/span&gt;
+amttool &lt;span class="nv"&gt;$AMT_HOST&lt;/span&gt; powerup
+
+&lt;span class="c1"&gt;# Power down a powered-on host:&lt;/span&gt;
+amttool &lt;span class="nv"&gt;$AMT_HOST&lt;/span&gt; powerdown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Check &lt;code&gt;man amttool&lt;/code&gt; for other commands like &lt;code&gt;reset&lt;/code&gt;, &lt;code&gt;powercycle&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;IMPORTANT&lt;/span&gt;: note that some power state changes can only be performed based on previous status, you can check with &lt;code&gt;info&lt;/code&gt; the available ones and current status of&amp;nbsp;system.&lt;/p&gt;
+&lt;p&gt;As a bonus, there&amp;#8217;s a &lt;span class="caps"&gt;RFE&lt;/span&gt;&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; for requesting this tool to be incorporated as power fencing mechanism in fence-agents once &amp;#8216;amtterm&amp;#8217; is included in &lt;span class="caps"&gt;RHEL&lt;/span&gt;, in the meantime it&amp;#8217;s already available in Fedora, and when it comes to &lt;span class="caps"&gt;RHEL&lt;/span&gt;, &lt;strong&gt;hopefully&lt;/strong&gt; could also be used as fence agent for Clusters and &lt;span class="caps"&gt;RHEV&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Request for Enhancement: a bugzilla request oriented not to fix a bug, but to incorporate new functionality/software into a product.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="tech"></category><category term="Linux"></category><category term="fencing"></category><category term="management"></category><category term="foss"></category></entry></feed>

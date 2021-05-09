@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - pre-commit</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Thu, 12 Mar 2020 14:38:00 +0100</lastBuildDate><item><title>Yaspeller hook for pre-commit</title><link>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</link><description>&lt;p&gt;I&amp;#8217;ve made a &lt;span class="caps"&gt;PR&lt;/span&gt; that got merged into Yaspeller repository which adds support for &lt;code&gt;pre-commit&lt;/code&gt; to spell check your&amp;nbsp;files.&lt;/p&gt;
+&lt;p&gt;It requires simple configuration, just add this snippet to your &lt;code&gt;.pre-commit-config.yaml&lt;/code&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;https://github.com/hcodes/yaspeller.git&lt;/span&gt;
+  &lt;span class="nt"&gt;rev&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;master&lt;/span&gt;
+  &lt;span class="nt"&gt;hooks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;yaspeller&lt;/span&gt;
+      &lt;span class="nt"&gt;files&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;\\.en\\.md&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;The plugin will then initialize and spell check your files via &lt;code&gt;yaspeller&lt;/code&gt;. It will use the standard &lt;code&gt;.yaspeller.json&lt;/code&gt; file for dictionary and settings and automate it for each new commit you work&amp;nbsp;on.&lt;/p&gt;
+&lt;div class="admonition important"&gt;
+&lt;p class="admonition-title"&gt;Important&lt;/p&gt;
+&lt;p&gt;If you were checking this information, note that I&amp;#8217;ve made and get merged a &lt;span class="caps"&gt;PR&lt;/span&gt; to yaspeller so that we now use directly their repository. The snippet above was updated to reflect my current settings on this site (and only check articles in&amp;nbsp;English).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Hope you like&amp;nbsp;it!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2020-03-12:/blog/2020/03/12/yaspeller-hook-for-pre-commit/</guid><category>tech</category><category>node</category><category>pre-commit</category><category>git</category><category>foss</category><category>yaspeller</category></item></channel></rss>

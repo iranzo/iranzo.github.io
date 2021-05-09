@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - quay</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_quay.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2019-01-16T16:00:00+01:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Project automation with Travis, GitHub Pages and Quay</title><link href="https://iranzo.io/blog/2019/01/16/project-automation-with-travis-github-pages-and-quay/" rel="alternate"></link><published>2019-01-16T16:00:00+01:00</published><updated>2019-01-16T16:00:00+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2019-01-16:/blog/2019/01/16/project-automation-with-travis-github-pages-and-quay/</id><summary type="html">&lt;section id="project-hosting-and-automation" class="slide level2"&gt;
+&lt;h2&gt;Project hosting and&amp;nbsp;automation&lt;/h2&gt;
+&lt;p&gt;/me: Pablo Iranzo Gómez ( &lt;a href="https://iranzo.github.io" class="uri"&gt;https://iranzo.github.io&lt;/a&gt;&amp;nbsp;)&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="you-got-a-shinny-new-project-what-now" class="slide level2"&gt;
+&lt;h2&gt;You got a shinny new project? What&amp;nbsp;now?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Code usually also requires a webpage
+&lt;ul&gt;
+&lt;li&gt;Documentation, General Information, Developer information,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Web costs money
+&lt;ul&gt;
+&lt;li&gt;Hosting, Domain, Maintenance,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="some-philosophy" class="slide level2"&gt;
+&lt;h2&gt;&lt;a href="https://www.youtube.com/watch?v=cJMwBwFj5nQ"&gt;Some&amp;nbsp;Philosophy&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Empty your mind, be shapeless, formless, like water. Now …&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;</summary><content type="html">&lt;section id="project-hosting-and-automation" class="slide level2"&gt;
+&lt;h2&gt;Project hosting and&amp;nbsp;automation&lt;/h2&gt;
+&lt;p&gt;/me: Pablo Iranzo Gómez ( &lt;a href="https://iranzo.github.io" class="uri"&gt;https://iranzo.github.io&lt;/a&gt;&amp;nbsp;)&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="you-got-a-shinny-new-project-what-now" class="slide level2"&gt;
+&lt;h2&gt;You got a shinny new project? What&amp;nbsp;now?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Code usually also requires a webpage
+&lt;ul&gt;
+&lt;li&gt;Documentation, General Information, Developer information,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Web costs money
+&lt;ul&gt;
+&lt;li&gt;Hosting, Domain, Maintenance,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="some-philosophy" class="slide level2"&gt;
+&lt;h2&gt;&lt;a href="https://www.youtube.com/watch?v=cJMwBwFj5nQ"&gt;Some&amp;nbsp;Philosophy&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Empty your mind, be shapeless, formless, like water. Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle You put water in a teacup, it becomes the teapot Now water can flow or it can crash. Be water my&amp;nbsp;friend&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Note: Automation: Be lazy, have someone else doing it for&amp;nbsp;you.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="git-hub-gitlab" class="slide level2"&gt;
+&lt;h2&gt;Git Hub /&amp;nbsp;Gitlab&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Lot of source code is hosted at github or gitlab, but it’s a code&amp;nbsp;repository.&lt;/li&gt;
+&lt;li&gt;We want a&amp;nbsp;website!!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="pages-come-to-play" class="slide level2"&gt;
+&lt;h2&gt;Pages come to&amp;nbsp;play&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Git Hub provides a service called &lt;a href="https://pages.github.com/"&gt;GitHub&amp;nbsp;Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Git lab provides &lt;a href="https://about.gitlab.com/product/pages/"&gt;Gitlab&amp;nbsp;pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both provide a ‘static’ webserver to be used for your projects &lt;strong&gt;for free&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;G(H/L) serve from a branch in your repo (usually ‘yourusername.github.io’&amp;nbsp;repo)&lt;/p&gt;
+&lt;p&gt;You can buy a domain and point it to your&amp;nbsp;website.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="static-doesnt-mean-end-of-fun" class="slide level2"&gt;
+&lt;h2&gt;Static doesn’t mean end of&amp;nbsp;fun&lt;/h2&gt;
+&lt;p&gt;There are many ‘static’ content generators that provide rich&amp;nbsp;features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;styles&lt;/li&gt;
+&lt;li&gt;links&lt;/li&gt;
+&lt;li&gt;image&amp;nbsp;resizing&lt;/li&gt;
+&lt;li&gt;even&amp;nbsp;‘search’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="some-static-generators" class="slide level2"&gt;
+&lt;h2&gt;Some static&amp;nbsp;generators&lt;/h2&gt;
+&lt;p&gt;Importance of language is for developing ‘plugins’, not&amp;nbsp;content.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jekyll&amp;nbsp;(Ruby)&lt;/li&gt;
+&lt;li&gt;Pelican&amp;nbsp;(Python)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;They ‘render’ markdown into&amp;nbsp;html&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="theres-even-more-fun" class="slide level2"&gt;
+&lt;h2&gt;There’s even more&amp;nbsp;fun&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Github provides Jekyll&amp;nbsp;support&lt;/li&gt;
+&lt;li&gt;Github, Gitlab, etc allow to plug in third-party &lt;span class="caps"&gt;CI&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Think about endless&amp;nbsp;possibilities!!!&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="some-food-for-thought" class="slide level2"&gt;
+&lt;h2&gt;Some food for&amp;nbsp;thought&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Repos have&amp;nbsp;branches&lt;/li&gt;
+&lt;li&gt;Repos can have&amp;nbsp;automation&lt;/li&gt;
+&lt;li&gt;External automation like Travis &lt;span class="caps"&gt;CI&lt;/span&gt; can do things for&amp;nbsp;you&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: We’ve all the pieces to push a new markdown file and have it triggering a website update and&amp;nbsp;publish&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="is-a-static-webpage-ugly" class="slide level2"&gt;
+&lt;h2&gt;Is a static webpage&amp;nbsp;ugly?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;There are lot of templates &lt;a href="http://www.pelicanthemes.com" class="uri"&gt;http://www.pelicanthemes.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Each theme have different feature&amp;nbsp;set&lt;/li&gt;
+&lt;li&gt;Choose wisely! (Small screens, html5, etc)
+&lt;ul&gt;
+&lt;li&gt;If not, changing themes is quite easy: update, and ‘render’ using new&amp;nbsp;one.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level2"&gt;
+
+&lt;p&gt;** &lt;span class="caps"&gt;DEMO&lt;/span&gt; on Pelican + Theme&amp;nbsp;**&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="travis-ci.org" class="slide level2"&gt;
+&lt;h2&gt;Travis-ci.org&lt;/h2&gt;
+&lt;p&gt;Automation for&amp;nbsp;projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Free for OpenSource&amp;nbsp;projects&lt;/li&gt;
+&lt;li&gt;Configured via &lt;code&gt;.travis.yml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Some other settings via Web &lt;span class="caps"&gt;UI&lt;/span&gt; (env vars,&amp;nbsp;etc)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level2"&gt;
+
+&lt;p&gt;Example (setup&amp;nbsp;environment)&lt;/p&gt;
+&lt;div class="sourceCode" id="cb1"&gt;&lt;pre class="sourceCode yml"&gt;&lt;code class="sourceCode yaml"&gt;&lt;a class="sourceLine" id="cb1-1" title="1"&gt;&lt;span class="fu"&gt;language:&lt;/span&gt;&lt;span class="at"&gt; python&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-2" title="2"&gt;&lt;span class="fu"&gt;dist:&lt;/span&gt;&lt;span class="at"&gt; trusty&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-3" title="3"&gt;&lt;span class="fu"&gt;sudo:&lt;/span&gt;&lt;span class="at"&gt; required&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-4" title="4"&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-5" title="5"&gt;&lt;span class="fu"&gt;python:&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-6" title="6"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; &lt;span class="st"&gt;&amp;#39;3.5&amp;#39;&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-7" title="7"&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-8" title="8"&gt;&lt;span class="fu"&gt;before_install:&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-9" title="9"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; pip install -U pip&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-10" title="10"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; pip install -U setuptools&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-11" title="11"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; pip install -r tests/requirements.txt&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-12" title="12"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; pip install -r tests/test-requirements.txt&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-13" title="13"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; pip install peru&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-14" title="14"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; mkdir -p tests/themes/elegant&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-15" title="15"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; mv templates tests/themes/elegant/&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-16" title="16"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; mv static tests/themes/elegant/&lt;/a&gt;
+&lt;a class="sourceLine" id="cb1-17" title="17"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; cd tests &amp;amp;&amp;amp; peru sync&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;section id="example-continuation-actions" class="slide level2"&gt;
+&lt;h2&gt;Example continuation&amp;nbsp;(actions!)&lt;/h2&gt;
+&lt;div class="sourceCode" id="cb2"&gt;&lt;pre class="sourceCode yaml"&gt;&lt;code class="sourceCode yaml"&gt;&lt;a class="sourceLine" id="cb2-1" title="1"&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb2-2" title="2"&gt;&lt;span class="fu"&gt;before_script:&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb2-3" title="3"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; npm install travis-ci&lt;/a&gt;
+&lt;a class="sourceLine" id="cb2-4" title="4"&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb2-5" title="5"&gt;&lt;span class="fu"&gt;script:&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb2-6" title="6"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; pelican content/ -o output/&lt;/a&gt;
+&lt;a class="sourceLine" id="cb2-7" title="7"&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb2-8" title="8"&gt;&lt;span class="fu"&gt;after_success:&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb2-9" title="9"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; node trigger-build.js&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;section id="publish-to-remote-repo" class="slide level2"&gt;
+&lt;h2&gt;Publish to remote&amp;nbsp;repo&lt;/h2&gt;
+&lt;div class="sourceCode" id="cb3"&gt;&lt;pre class="sourceCode yaml"&gt;&lt;code class="sourceCode yaml"&gt;&lt;a class="sourceLine" id="cb3-1" title="1"&gt;&lt;span class="fu"&gt;after_success:&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb3-2" title="2"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; rm -rf .git/&lt;/a&gt;
+&lt;a class="sourceLine" id="cb3-3" title="3"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; git init&lt;/a&gt;
+&lt;a class="sourceLine" id="cb3-4" title="4"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; git config user.name &lt;span class="st"&gt;&amp;quot;Travis CI&amp;quot;&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb3-5" title="5"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; git config user.email &lt;span class="st"&gt;&amp;quot;travis@domain.com&amp;quot;&lt;/span&gt;&lt;/a&gt;
+&lt;a class="sourceLine" id="cb3-6" title="6"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; git config --global push.default simple&lt;/a&gt;
+&lt;a class="sourceLine" id="cb3-7" title="7"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; git remote add origin https://$&lt;span class="kw"&gt;{&lt;/span&gt;GITHUB_TOKEN&lt;span class="kw"&gt;}&lt;/span&gt;@github.com/Pelican-Elegant/pelican-elegant.github.io.git&lt;/a&gt;
+&lt;a class="sourceLine" id="cb3-8" title="8"&gt;&lt;span class="kw"&gt;-&lt;/span&gt; make github&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;section id="fancy-things" class="slide level2"&gt;
+&lt;h2&gt;Fancy&amp;nbsp;things&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Build one repo and deploy to another&amp;nbsp;branch/repo&lt;/li&gt;
+&lt;li&gt;Upload pypi&amp;nbsp;package&lt;/li&gt;
+&lt;li&gt;Call&amp;nbsp;triggers&lt;/li&gt;
+&lt;li&gt;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="real-world-use-cases" class="slide level2"&gt;
+&lt;h2&gt;Real world use&amp;nbsp;cases&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Run ‘tox’ for &lt;span class="caps"&gt;UT&lt;/span&gt;’s&lt;/li&gt;
+&lt;li&gt;Test latest theme and plugins&amp;nbsp;render&lt;/li&gt;
+&lt;li&gt;Render documentation website on docs&amp;nbsp;update&lt;/li&gt;
+&lt;li&gt;Render latest &lt;span class="caps"&gt;CV&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Build and publish&amp;nbsp;container&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="wrap-up" class="slide level2"&gt;
+&lt;h2&gt;Wrap&amp;nbsp;up&lt;/h2&gt;
+&lt;p&gt;Ok, automation is ready, our project validates commits, &lt;span class="caps"&gt;PR&lt;/span&gt;’s, website&amp;nbsp;generation…&lt;/p&gt;
+&lt;p&gt;What&amp;nbsp;else?&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="containers" class="slide level2"&gt;
+&lt;h2&gt;Containers!!&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src="https://iranzo.io/blog/2019/01/16/project-automation-with-travis-github-pages-and-quay/2018-12-24-13-12-19.png" /&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="container-creation---quay" class="slide level2"&gt;
+&lt;h2&gt;Container creation -&amp;nbsp;Quay&lt;/h2&gt;
+&lt;p&gt;Quay and DockerHub allow to automate build on branch commit &lt;img data-src="https://iranzo.io/blog/2019/01/16/project-automation-with-travis-github-pages-and-quay/2018-12-24-12-22-08.png" /&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="docker-hub" class="slide level2"&gt;
+&lt;h2&gt;Docker&amp;nbsp;Hub&lt;/h2&gt;
+&lt;p&gt;On each commit, a new container will be built &lt;img data-src="https://iranzo.io/blog/2019/01/16/project-automation-with-travis-github-pages-and-quay/2018-12-24-12-25-49.png" /&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="you-said-to-be-water" class="slide level2"&gt;
+&lt;h2&gt;You said to be&amp;nbsp;water…&lt;/h2&gt;
+&lt;p&gt;Yes!&lt;/p&gt;
+&lt;p&gt;Try &lt;a href="https://github.com/iranzo/blog-o-matic/" class="uri"&gt;https://github.com/iranzo/blog-o-matic/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fork to your repo and get: - minimal setup steps (github token, travis-ci activation) - Automated setup of Pelican + Elegant theme via travis-ci job that builds on each commit. - Ready to be submitted to search engines via sitemap, and web&amp;nbsp;claiming&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="questions" class="slide level2"&gt;
+&lt;h2&gt;Questions?&lt;/h2&gt;
+&lt;p&gt;Pablo.Iranzo@gmail.com &lt;a href="https://iranzo.github.io" class="uri"&gt;https://iranzo.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;
+</content><category term="presentations"></category><category term="pelican"></category><category term="foss"></category><category term="travis"></category><category term="quay"></category><category term="docker"></category><category term="dockerhub"></category></entry><entry><title>Quay for Federation</title><link href="https://iranzo.io/blog/2019/01/08/quay-for-federation/" rel="alternate"></link><published>2019-01-08T17:30:36+01:00</published><updated>2019-01-08T17:30:36+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2019-01-08:/blog/2019/01/08/quay-for-federation/</id><summary type="html">
+&lt;h2 id="why-this-article"&gt;Why this article?&lt;a class="headerlink" href="#why-this-article" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment.&lt;/p&gt;
+&lt;p&gt;Colleagues in the Solutions Engineering team have been working on
+demonstrating an application running on different clusters over …&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="why-this-article"&gt;Why this article?&lt;a class="headerlink" href="#why-this-article" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment.&lt;/p&gt;
+&lt;p&gt;Colleagues in the Solutions Engineering team have been working on
+demonstrating an application running on different clusters over a Federated Control Plane, allowing it to ‘roam’ between clusters with shared data access as a way to demonstrate how an application can ‘scale’ from on-premise deployment to external clouds in order to satisfy business requirements for peak demands.&lt;/p&gt;
+&lt;p&gt;This article tries to demonstrate on how to setup Quay, as a container registry for your applications, in a way that can work both for this Federated approach as well as High-Availability setup.&lt;/p&gt;
+&lt;h2 id="what-is-quay"&gt;What is Quay?&lt;a class="headerlink" href="#what-is-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The one liner would be: &lt;code&gt;Quay is a container registry&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The extended one, would be more in the lines of:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Quay is a container registry that can be used via the provided service at &lt;a href="https://quay.io"&gt;https://quay.io&lt;/a&gt; or can be used via Quay Enterprise as ‘on premise’ registry.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A container registry provides a point for containers to be downloaded or uploaded for later consumption.&lt;/p&gt;
+&lt;h2 id="why-quay"&gt;Why quay?&lt;a class="headerlink" href="#why-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Quay allows to be configured either to use the provided service via &lt;a href="https://quay.io"&gt;https://quay.io&lt;/a&gt; or deploy it on premise, so that you gain additional control over the setup like which namespaces to replicate, policies, etc.&lt;/p&gt;
+&lt;p&gt;Quay features &lt;code&gt;clair&lt;/code&gt; analysis of images, allowing to detect known vulnerabilities from different sources to later check the images.&lt;/p&gt;
+&lt;p&gt;Also, allows to automate builds when a push to a repository has happened, allowing to quickly spawn an update container image when our tracked repository has a new commit that can be later updated in our OpenShift/Kubernetes image stream.&lt;/p&gt;
+&lt;p&gt;Quay can also, when having several storage backends defined, do &lt;a href="#georeplication"&gt;geo-replication&lt;/a&gt;, that allows OpenShift to grab the needed bytes from the closest backend while handling in the background the copy of new data to the other replicas.&lt;/p&gt;
+&lt;h2 id="what-is-swift"&gt;What is Swift?&lt;a class="headerlink" href="#what-is-swift" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Swift is object storage provided by OpenStack Environment, defined at &lt;a href="https://wiki.openstack.org/wiki/Swift"&gt;https://wiki.openstack.org/wiki/Swift&lt;/a&gt; as:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The OpenStack Object Store project, known as Swift, offers cloud storage software so that you can store and retrieve lots of data with a simple &lt;span class="caps"&gt;API&lt;/span&gt;. It’s built for scale and optimized for durability, availability, and concurrency across the entire data set. Swift is ideal for storing unstructured data that can grow without bound.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Swift allows to define a &lt;code&gt;container&lt;/code&gt; (not in the &lt;a href="https://www.opencontainers.org/"&gt;https://www.opencontainers.org/&lt;/a&gt; sense but in a ‘data storage’).&lt;/p&gt;
+&lt;h3 id="how-does-it-come-to-play-with-quay"&gt;How does it come to play with Quay?&lt;a class="headerlink" href="#how-does-it-come-to-play-with-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Quay allows to define storage backend based on swift that can be used together with other backends to provide
+geo-replication for availability.&lt;/p&gt;
+&lt;h3 id="the-setup-process-of-swift-for-quay"&gt;The Setup process of Swift for Quay&lt;a class="headerlink" href="#the-setup-process-of-swift-for-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;At the beginning it was not easy to find out all the required configuration variables or settings to define, but what finally worked for the setup described in this article was:&lt;/p&gt;
+&lt;h4 id="create-the-swift-container"&gt;Create the Swift container&lt;a class="headerlink" href="#create-the-swift-container" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;First we do need to create a swift container in OpenStack that will hold the information from Quay:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create swift container for holding the storage:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;sh
+      (overcloud) [stack@osp-ait-director ~]$ openstack container create quay-enterprise&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Output:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;account&lt;/th&gt;
+&lt;th&gt;container&lt;/th&gt;
+&lt;th&gt;&lt;code&gt;x-trans-id&lt;/code&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;AUTH_b3b8ce2eca3c4556ac01c12772b0d141&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;quay-enterprise&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;txd7d654f499db457da0fa0-005bf53d32&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="configuration-settings-defined-in-quay"&gt;Configuration settings defined in Quay&lt;a class="headerlink" href="#configuration-settings-defined-in-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Setting&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Storage Engine&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;OpenStack Storage (Swift)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Swift Auth Version&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Swift Auth URL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$YOURKEYSTONE PUBLIC ENDPOINT&lt;/code&gt; (like http://aaa.bbb.ccc.ddd:5000)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Swift container name&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$YOURCONTAINER&lt;/code&gt; (created with swift container create ‘name’)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Storage path&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$WHATEVER&lt;/code&gt; (we did use &lt;code&gt;/quay&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Username&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$OSP_USERNAME&lt;/code&gt; (we did use &lt;code&gt;admin&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;key/password&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$OSP_PASSWORD&lt;/code&gt;(we did use &lt;code&gt;redhat&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="caps"&gt;OS&lt;/span&gt; &lt;span class="caps"&gt;OPTIONS&lt;/span&gt; drop-down&lt;/td&gt;
+&lt;td&gt;&amp;lt;——- This is an important one if not it will fail&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;tenant_id&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$YOURTENANTID&lt;/code&gt; (I did use ‘admin’ id as obtained with &lt;code&gt;openstack project list\|grep admin&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Once done, Quay should ‘validate’ the upload and &lt;code&gt;swift list $YOURCONTAINER&lt;/code&gt; should give something like:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;(&lt;/span&gt;overcloud&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;stack@osp-director ~&lt;span class="o"&gt;]&lt;/span&gt;$ swift list quay-enterprise
+quay/_verify
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Showing that the verification file has been created succesfully.&lt;/p&gt;
+&lt;h2 id="georeplication"&gt;Georeplication&lt;a class="headerlink" href="#georeplication" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Quay allows to define several backends that can be also configured as a foundation for GeoReplication.&lt;/p&gt;
+&lt;p&gt;Georeplication in quay, is used to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;define a ‘zone name’ for a storage backend&lt;/li&gt;
+&lt;li&gt;when booting Quay containers or apps, define which backend is ‘closest’ (via environment variable &lt;code&gt;QUAY_DISTRIBUTED_STORAGE_PREFERENCE&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Quay will store and replicate on the different backends defined the information uploaded. The requirement is that the backend is an object storage, but you can also define ‘mixed’ backends like for example &lt;span class="caps"&gt;GCE&lt;/span&gt;, &lt;span class="caps"&gt;AWS&lt;/span&gt;, Swift, Ceph RadosGW, etc. Quay will take care of the copy and once the backend ‘closest’ to the quay instance is ready, it will serve from that one (or fallback to the one having the actual data).&lt;/p&gt;
+&lt;p&gt;For each one of the configured backends, a different number of settings will be requested to do the proper configuration.&lt;/p&gt;
+&lt;h3 id="google-cloud-storage"&gt;Google Cloud Storage&lt;a class="headerlink" href="#google-cloud-storage" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For setting Google Cloud Storage, we did use the following values:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Setting&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Location &lt;span class="caps"&gt;ID&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;\$yourvalue&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Storage Engine&lt;/td&gt;
+&lt;td&gt;Google Cloud Storage&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloud Access Key&lt;/td&gt;
+&lt;td&gt;&lt;span class="caps"&gt;GOOGXXXXXXXX&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloud Secret Key&lt;/td&gt;
+&lt;td&gt;pksXXXXXX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="caps"&gt;GCS&lt;/span&gt; Bucket&lt;/td&gt;
+&lt;td&gt;quay-enterprise&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Storage Directory&lt;/td&gt;
+&lt;td&gt;/datastorage/registry&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="amazon-s3"&gt;Amazon S3&lt;a class="headerlink" href="#amazon-s3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For setting Amazon S3 storage, we did use the following values:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Setting&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Location &lt;span class="caps"&gt;ID&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;\$yourvalue&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Storage Engine&lt;/td&gt;
+&lt;td&gt;Amazon S3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;S3 Bucket&lt;/td&gt;
+&lt;td&gt;quay-enterprise&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Storage Directory&lt;/td&gt;
+&lt;td&gt;/quay/ait&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt; Access Key&lt;/td&gt;
+&lt;td&gt;&lt;span class="caps"&gt;AKIAXXXXXXXX&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt; Secret Key&lt;/td&gt;
+&lt;td&gt;/9bkfXXXXXXXXXX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="validation-of-the-replication"&gt;Validation of the replication&lt;a class="headerlink" href="#validation-of-the-replication" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Once all the defined storage backends have been configured, there’s a button in the interface that will validate access and create the ‘marker’ files on each storage backend to verify the access permissions to them similar to what was shown on Swift configuration.&lt;/p&gt;
+&lt;h2 id="quay-ssl-deployment"&gt;Quay &lt;span class="caps"&gt;SSL&lt;/span&gt; deployment&lt;a class="headerlink" href="#quay-ssl-deployment" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This procedure will guide you through the configuration of Quay with &lt;span class="caps"&gt;SSL&lt;/span&gt; certificates so the deployment is both secure and deployed in a highly available enterprise way.&lt;/p&gt;
+&lt;h3 id="ssl-certificates"&gt;&lt;span class="caps"&gt;SSL&lt;/span&gt; Certificates&lt;a class="headerlink" href="#ssl-certificates" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Setting up certificates requires several steps involving:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating a &lt;span class="caps"&gt;CA&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Create a Certificate Signing Request with all the possible quay hostnames&lt;/li&gt;
+&lt;li&gt;Sign the certificates&lt;/li&gt;
+&lt;li&gt;Upload the certificates on Quay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="create-ca"&gt;Create &lt;span class="caps"&gt;CA&lt;/span&gt;&lt;a class="headerlink" href="#create-ca" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Execution of &lt;a href="https://iranzo.io/blog/2019/01/08/quay-for-federation/other/generate-ca.sh"&gt;generate-ca.sh&lt;/a&gt;&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./generate-ca.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;With output:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; generating a new CA key and certificate from CSR
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; generate received request
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; received CSR
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; generating key: rsa-2048
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; encoded CSR
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; signed certificate with serial number &lt;span class="m"&gt;432855461933024796113382064222588753737107796958&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;And creates:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo  &lt;span class="m"&gt;232&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca-config.json
+-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1001&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca.csr
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo  &lt;span class="m"&gt;208&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca-csr.json
+-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1679&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca-key.pem
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1359&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h4 id="create-quay-certs"&gt;Create Quay Certs&lt;a class="headerlink" href="#create-quay-certs" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;We are going to use the same certificate for each replica, we need to know the hostname that will be used on the &lt;span class="caps"&gt;OCP&lt;/span&gt; routes beforehand in order to use it for the &lt;span class="caps"&gt;SAN&lt;/span&gt; property in the certificate.&lt;/p&gt;
+&lt;p&gt;Having each of the routes in the &lt;span class="caps"&gt;SAN&lt;/span&gt; makes it possible to use the same cert for each replica, so we can federate a single secret containing those certs rather than creating one &lt;span class="caps"&gt;SSL&lt;/span&gt; secret for each cluster.&lt;/p&gt;
+&lt;p&gt;Execution of &lt;a href="https://iranzo.io/blog/2019/01/08/quay-for-federation/other/generate-cert.sh"&gt;generate-cert.sh&lt;/a&gt;&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./generate-cert.sh quay-enterprise
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;With output:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;received&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;received&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CSR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generating&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;key&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;rsa&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2048&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;encoded&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CSR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;signed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;certificate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;serial&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;570248288515480165542553575432827729263232937534&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Now, we have all the required certificates for Quay generated.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1001&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 quay-enterprise.csr
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo  &lt;span class="m"&gt;208&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 quay-enterprise-csr.json
+-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1675&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 quay-enterprise-key.pem
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1809&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 quay-enterprise.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h4 id="load-quay-certificates"&gt;Load Quay certificates&lt;a class="headerlink" href="#load-quay-certificates" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Now using the web interface of quay, we can start uploading the certificates required for operation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Custom &lt;span class="caps"&gt;SSL&lt;/span&gt; Certificates&lt;/em&gt;&lt;/strong&gt;
+Here, load the &lt;code&gt;quay.pem&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Certificate load" src="https://iranzo.io/imagen/postrepquay/2018-11-29-15-32-08.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Server Configuration&lt;/em&gt;&lt;/strong&gt; *&lt;strong&gt;*&lt;span class="caps"&gt;TLS&lt;/span&gt;**&lt;/strong&gt;
+Certificate: load the &lt;code&gt;quay-enterprise.pem&lt;/code&gt;
+Key: load the &lt;code&gt;quay-enterprise-key.pem&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Certificate configuration" src="https://iranzo.io/imagen/postrepquay/2018-11-29-15-33-02.png"/&gt;&lt;/p&gt;
+&lt;p&gt;At this point Quay will be using the certificates, but by default the service created only works on port 80.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;REMEMBER&lt;/span&gt;&lt;/strong&gt;: We’ll need to edit:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the app&lt;/li&gt;
+&lt;li&gt;the route&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So that both work on port 443 instead of port 80 that is used by default.&lt;/p&gt;
+&lt;p&gt;We’ll also need to load &lt;code&gt;ca.pem&lt;/code&gt; and &lt;code&gt;quay-enterprise.pem&lt;/code&gt; into our &lt;code&gt;/etc/pki/ca-trust/source/anchors&lt;/code&gt; folder and then run:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;update-ca-trust extract
+service docker restart
+&lt;span class="c1"&gt;# Now let's go login into the registry&lt;/span&gt;
+docker login https://quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com
+&lt;span class="c1"&gt;# Let's download a container:&lt;/span&gt;
+docker pull quay.io/mavazque/pacman
+&lt;span class="c1"&gt;# let's tag and upload to our registry&lt;/span&gt;
+docker images&lt;span class="p"&gt;|&lt;/span&gt;grep pacman
+quay.io/mavazque/pacman                                                          latest              6c5211874850        &lt;span class="m"&gt;29&lt;/span&gt; hours ago        &lt;span class="m"&gt;689&lt;/span&gt; MB
+&lt;span class="c1"&gt;# Tag and upload&lt;/span&gt;
+&lt;span class="c1"&gt;# Find image&lt;/span&gt;
+docker images&lt;span class="p"&gt;|&lt;/span&gt;grep pacman
+quay.io/mavazque/pacman                                                          latest              6c5211874850        &lt;span class="m"&gt;29&lt;/span&gt; hours ago        &lt;span class="m"&gt;689&lt;/span&gt; MB
+&lt;span class="c1"&gt;# Tag image&lt;/span&gt;
+docker tag 6c5211874850 quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com/admin/pacman:latest
+&lt;span class="c1"&gt;# Upload image&lt;/span&gt;
+docker push quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com/admin/pacman
+The push refers to a repository &lt;span class="o"&gt;[&lt;/span&gt;quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com/admin/pacman&lt;span class="o"&gt;]&lt;/span&gt;
+fb2d3be23d30: Pushed
+c02d067bd364: Pushed
+3edd111b03f2: Pushed
+2221babd26ac: Pushed
+911d290ce59f: Pushed
+fae583f1d4e5: Pushed
+9d22e51f0c6d: Pushed
+58b8d417193d: Pushing &lt;span class="o"&gt;[===================================&lt;/span&gt;&amp;gt;               &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;225&lt;/span&gt;.5 MB/320.1 MB
+704a8634956f: Pushing &lt;span class="o"&gt;[==================================================&lt;/span&gt;&amp;gt;&lt;span class="o"&gt;]&lt;/span&gt;   &lt;span class="m"&gt;127&lt;/span&gt; MB
+05f0b6bcfa5c: Pushed
+0972cc82b682: Pushing &lt;span class="o"&gt;[=============================&lt;/span&gt;&amp;gt;                     &lt;span class="o"&gt;]&lt;/span&gt;  &lt;span class="m"&gt;74&lt;/span&gt;.2 MB/126.8 MB
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="openshift-certificate"&gt;OpenShift certificate&lt;a class="headerlink" href="#openshift-certificate" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Unless we also load the &lt;span class="caps"&gt;SSL&lt;/span&gt; certificate from Quay into OpenShift, we’ll be facing issues like this:
+&lt;img alt="Failure when Certificate has not been imported" src="https://iranzo.io/imagen/postrepquay/2018-12-03-15-41-02.png"/&gt;&lt;/p&gt;
+&lt;h2 id="wrap-up"&gt;Wrap up&lt;a class="headerlink" href="#wrap-up" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;At this point, we’ve Quay setup for using geo-replication for &lt;span class="caps"&gt;HA&lt;/span&gt; and faster speeds from each cluster, we do have an underlying postgres setup using replication across sites and the &lt;span class="caps"&gt;URL&lt;/span&gt;’s have been secured for being used by our servers downloading images from there to deploy our applications.&lt;/p&gt;
+&lt;p&gt;Hope that you’ve enjoyed it!&lt;/p&gt;</content><category term="tech"></category><category term="Quay"></category><category term="Kubernetes"></category><category term="container"></category><category term="federation"></category><category term="OpenShift"></category><category term="FOSS"></category></entry></feed>

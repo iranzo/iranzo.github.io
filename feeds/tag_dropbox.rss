@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - dropbox</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Thu, 08 Dec 2011 11:52:00 +0100</lastBuildDate><item><title>Herramientas de sincronización/backup</title><link>https://iranzo.io/blog/2011/12/08/herramientas-de-sincronizacionbackup-es/</link><description>&lt;p&gt;Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de &amp;#8216;backup&amp;#8217; en caso de fallo hardware de algún&amp;nbsp;equipo.&lt;/p&gt;
+&lt;p&gt;Estuve probando y evaluando diversas herramientas multiplataforma y junto a algunas más, las que más probé fueron&amp;nbsp;estas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.aerofs.com/"&gt;AeroFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://db.tt/NV5zDvs"&gt;Dropbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.syncany.org/"&gt;Syncany&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://sparkleshare.org/"&gt;Sparkleshare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.wuala.com/"&gt;Wuala&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spideroak.com/download/referral/dfba22f9764b55ab68427da014e9f0e5"&gt;SpiderOak&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Actualmente necesito &amp;#8216;salvar/sincronizar&amp;#8217; unos 35Gb de datos (fotos la gran mayoría y no precisamente en &lt;span class="caps"&gt;RAW&lt;/span&gt;), lo que provocó estas comparativas, preferiblemente de servicios que ofrecieran espacio&amp;nbsp;gratuito.&lt;/p&gt;
+&lt;p&gt;En resumen, de las opensource (Syncany/Sparkleshare), están todavía bastante en pañales, aunque prometen mucho, más syncany por la variedad de posibles destinos de copias que sparkleshare (necesidad de repositorio git,&amp;nbsp;etc).&lt;/p&gt;
+&lt;p&gt;De las &amp;#8216;comerciales&amp;#8217;, Wuala ofrecía posibilidad de compartir espacio local a cambio de espacio en la nube que permitía compartir esos &lt;span class="caps"&gt;GB&lt;/span&gt; no utilizados por &lt;span class="caps"&gt;GB&lt;/span&gt; fuera de donde tenías tus ordenadores, garantizando que en caso de problemas fisicos, ambientales,etc, poder acceder a los datos, pero en Octubre de 2011, con la salida de la nueva versión, dejaron de ofrecer el servicio, convirtiendo el espacio conseguido en un &amp;#8216;vale&amp;#8217; hasta Octubre de 2012&amp;#8230; que ha provocado que tenga que reemplazar esa solución que venía&amp;nbsp;utilizando.&lt;/p&gt;
+&lt;p&gt;Dropbox, a pesar de los referrals y de cuenta de email &amp;#8220;.edu&amp;#8221;, no ofrece más de 16 Gb a no ser que sean planes de pago, que por ahora la deja fuera (además del hecho de no permitir especificar clave de cifrado de los datos, que por otro lado aporta que si alguien había subido el fichero antes, la subida es&amp;nbsp;instantánea).&lt;/p&gt;
+&lt;p&gt;SpiderOak ofrece menos espacio (pero parte de 5Gb y ahora es posible subir hasta 50Gb por referrals), tiene repositorio para yum para las actualizaciones y se puede ejecutar tanto en modo &amp;#8216;&lt;span class="caps"&gt;GUI&lt;/span&gt;&amp;#8217; como en línea de comandos (por contra la sincronización se lanza cada x tiempo, no parece tan fluida como&amp;nbsp;Dropbox).&lt;/p&gt;
+&lt;p&gt;AeroFS: una recién llegada, que sigue en versión alpha, basada en Java, multiplataforma (&lt;span class="caps"&gt;EL6&lt;/span&gt; o superior) y que no ofrece de &amp;#8216;salida&amp;#8217; espacio online, simplemente la sincronización entre tus equipos, pudiendo hacer cambios en cualquiera de ellos y luego sincronizándolos entre sí, incluso sin conectividad a Internet (sólo hace falta internet para dar de alta una carpeta nueva en un equipo o dar de alta un equipo (para sincronización de autorizaciones con el servidor de&amp;nbsp;Aerofs)).&lt;/p&gt;
+&lt;p&gt;Actualmente AeroFS es la que más promete por no limitar el espacio excepto al que dispongas en tus equipos, pero con mi colección de documentos y 4 equipos a la vez he tenido problemas de ficheros renombrados &amp;#8220;terminados con números entre paréntesis&amp;#8221;, sincronizaciones lentas (utilizar un interfaz vía hamachi en lugar del interfaz de red local), no sincronización de enlaces simbólicos y destrucción de ficheros con enlaces duros (deja sólo una copia), pero es la única que cubre por ahora mis necesidades con respecto a lo que hacía wuala (a excepción de no tener aplicaciones para móvil y claro está, no funcionar si ningún equipo con los datos está&amp;nbsp;conectado).&lt;/p&gt;
+&lt;p&gt;De como evolucionen syncany y aerofs de aquí a octubre, decidirá si escojo una de estas dos o sigo evaluando alternativas para los backups&amp;#8230; por ahora sigo con Dropbox para cosas rápidas que no necesito excesiva privacidad y para el resto Wuala y he añadido duplicity para hacer backup a un &lt;span class="caps"&gt;NAS&lt;/span&gt; en mi red local a la espera de ir probando mejor AeroFS y ver cómo respira&amp;nbsp;syncany&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 08 Dec 2011 11:52:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2011-12-08:/blog/2011/12/08/herramientas-de-sincronizacionbackup-es/</guid><category>tech</category><category>fedora</category><category>dropbox</category><category>foss</category></item><item><title>Dropbox en Fedora</title><link>https://iranzo.io/blog/2010/04/01/dropbox-en-fedora-es/</link><description>&lt;p&gt;Para instalar dropbox en Fedora, no es necesario realizar excesivos&amp;nbsp;pasos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Abrir una cuenta&amp;nbsp;en&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dropbox.com/referrals/NTM4OTM3ODI5"&gt;Dropbox&lt;/a&gt; (o si prefieres, en una empresa alternativa&amp;nbsp;como&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spideroak.com/download/referral/dfba22f9764b55ab68427da014e9f0e5"&gt;SpiderOak&lt;/a&gt; (O &lt;a href="http://www.wuala.com/referral/FK4KF3PFHJAF64A74KMB"&gt;Wuala&lt;/a&gt; que ofrece espacio adicional por compartir espacio en tu propio&amp;nbsp;disco)&lt;/li&gt;
+&lt;li&gt;Instalar en nuestra fedora el paquete correspondiente para &lt;a href="https://www.dropbox.com/downloading?os=lnx"&gt;Nautilus&lt;/a&gt; (aunque ponga que es para Fedora 10, funciona perfectamente en superiores (probado en 12 y&amp;nbsp;13))&lt;/li&gt;
+&lt;li&gt;Al volver a iniciar sesión (o la lanzar el programa), aparecerá un icono en la bandeja de sistema y comenzará el proceso de configuración en el que se asocia el &amp;#8216;escritorio&amp;#8217; a la cuenta de dropbox que creamos&amp;nbsp;anteriormente.&lt;/li&gt;
+&lt;li&gt;Durante el asistente, podremos escoger la ubicación de la carpeta que empezará a sincronizarse, utilizando los &amp;#8216;emblemas&amp;#8217; de Gnome para indicar el estado de sincronización con &amp;#8216;la nube&amp;#8217;. Adicionalmente, en los menús contextuales, podremos copiar un enlace público para compartir ese fichero con otros usuarios sin necesidad de compartir una carpeta, o bien compartir una carpeta entera y que se pueda colaborar en ella con un grupo de&amp;nbsp;personas.&lt;/li&gt;
+&lt;li&gt;Repitiendo los pasos 2 a 4 podremos ir enlazando otros pc&amp;#8217;s entre los que se replicarán automáticamente los ficheros que&amp;nbsp;compartamos.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SELinux: Si tienes problemas con SELinux, revisa la discusión en &lt;a href="http://forums.dropbox.com/topic.php?id=26808&amp;amp;replies=24"&gt;http://forums.dropbox.com/topic.php?id=26808&amp;amp;replies=24&lt;/a&gt; en la que se apunta a que realices los siguientes&amp;nbsp;pasos:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pasos a&amp;nbsp;ejecutar:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash
+ cd .drobpox-dist/
+ [.dropbox-dist]$ execstack -q _ctypes.so X _ctypes.so
+ [.dropbox-dist]$ execstack -c _ctypes.so
+ [.dropbox-dist]$ execstack -q _ctypes.so - _ctypes.so
+ [.dropbox-dist]$ getenforce
+ Enforcing&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Y que, de esta forma, consigas que funcione dropbox con SELinux en modo&amp;nbsp;enforcing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LANSync&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Abre en tu cortafuegos los puertos 17500 por &lt;span class="caps"&gt;TCP&lt;/span&gt; y por &lt;span class="caps"&gt;UDP&lt;/span&gt; para que la funcionalidad de sincronización en la &lt;span class="caps"&gt;LAN&lt;/span&gt; funcione (permitiendo que los equipos con dropbox en la misma red sincronicen mucho más rápido entre&amp;nbsp;ellos)&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 01 Apr 2010 11:54:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-04-01:/blog/2010/04/01/dropbox-en-fedora-es/</guid><category>tech</category><category>fedora</category><category>dropbox</category><category>foss</category></item></channel></rss>

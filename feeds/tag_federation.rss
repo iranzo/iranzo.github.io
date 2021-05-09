@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - federation</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Tue, 08 Jan 2019 17:30:36 +0100</lastBuildDate><item><title>Postgres repl SSL replication</title><link>https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/</link><description>
+&lt;h1 id="postgres-across-clusters"&gt;Postgres across clusters&lt;a class="headerlink" href="#postgres-across-clusters" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;For Postgres to work across clusters we do need to have the data being synchronized.&lt;/p&gt;
+&lt;p&gt;With some other databases we do have some master-master approach, but
+usually have very strict requirements on latency, bandwidth, etc that we
+cannot solve with On-Premise + external cloud providers.&lt;/p&gt;
+&lt;p&gt;If the replication is based on the storage level instead, then you face that database servers don’t deal well if the data changes underneath it, so it leads to data corruption, on top of the storage-level issues/requirements as well on bandwidth, latency, etc.&lt;/p&gt;
+&lt;h2 id="other-approaches"&gt;Other approaches&lt;a class="headerlink" href="#other-approaches" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://evol-monkey.blogspot.com/2015/10/postgresql-94-streaming-replication.html"&gt;http://evol-monkey.blogspot.com/2015/10/postgresql-94-streaming-replication.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hackernoon.com/postgresql-cluster-into-kubernetes-cluster-f353cde212de"&gt;https://hackernoon.com/postgresql-cluster-into-kubernetes-cluster-f353cde212de&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="postgresql-streaming-replication-over-ssl"&gt;PostgreSQL streaming replication over &lt;span class="caps"&gt;SSL&lt;/span&gt;&lt;a class="headerlink" href="#postgresql-streaming-replication-over-ssl" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;There are several ways to accomplish this if you do a quick search on a web crawler, but we’ve gone the &lt;span class="caps"&gt;PSQL&lt;/span&gt; Streaming replication over &lt;span class="caps"&gt;SSL&lt;/span&gt; for our environment.&lt;/p&gt;
+&lt;p&gt;A replication slot is (as defined in &lt;a href="https://www.postgresql.org/docs/9.4/warm-standby.html#STREAMING-REPLICATION-SLOTS"&gt;documentation&lt;/a&gt;)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Replication slots provide an automated way to ensure that the master does not remove &lt;span class="caps"&gt;WAL&lt;/span&gt; segments until they have been received by all
+standby’s, and that the master does not remove rows which could cause a recovery conflict even when the standby is disconnected.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="background"&gt;Background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Quay requires a database that is available for each instance and provides required redundancy/replication&lt;/li&gt;
+&lt;li&gt;Replicating via storage can lead to issues as the files will change underneath postgres&lt;/li&gt;
+&lt;li&gt;Galera approach for MySQL (multi-master) is known to have issues even when running on the same cluster&lt;/li&gt;
+&lt;li&gt;For Federation we do want applications to run in different clusters, so an approach where a hot-standby is ready will probably overcome the limitations of master-master and the requirements for available database for all quay instances.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="investigation"&gt;Investigation&lt;a class="headerlink" href="#investigation" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We started to investigate &lt;a href="#other-approach"&gt;how others approached&lt;/a&gt; this situation and similar to what was done for another part of the setup for
+MongoDB, we went testing via replication over &lt;span class="caps"&gt;SSL&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;We also checked several of the approaches, but one of them, PostDock images were lacking &lt;span class="caps"&gt;SSL&lt;/span&gt; support, but still had a nice way to do several overrides for configuration, etc via environment variables, which made them ideal for testing in an OpenShift/Kubernetes environment.&lt;/p&gt;
+&lt;p&gt;The environments we plan to use are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AIT&lt;/span&gt; cluster&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LEO&lt;/span&gt; cluster&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PIT&lt;/span&gt; cluster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ssl"&gt;&lt;span class="caps"&gt;SSL&lt;/span&gt;&lt;a class="headerlink" href="#ssl" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For the &lt;span class="caps"&gt;SSL&lt;/span&gt; setup side we did:&lt;/p&gt;
+&lt;h3 id="create-postgres-certs"&gt;Create Postgres Certs&lt;a class="headerlink" href="#create-postgres-certs" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Seems that Postgres doesn’t check the certificate for the host ‘by default’, but just uses the certificate to encrypt, but still we did create the certificates using the name of the application in it for future usage.&lt;/p&gt;
+&lt;p&gt;Using the same certificate with all server names, we can also federate a
+single secret containing those certs rather than creating one &lt;span class="caps"&gt;SSL&lt;/span&gt; secret for
+each cluster.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./generate-cert.sh postgres
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;With output:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;received&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;received&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CSR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generating&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;key&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;rsa&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2048&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;encoded&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CSR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;signed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;certificate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;serial&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;34111709152443674697969629831350216041253590538&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Now, we do have all the required certificates for postgres generated.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1001&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:04 postgres.csr
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo  &lt;span class="m"&gt;208&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:04 postgres-csr.json
+-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1679&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:04 postgres-key.pem
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1753&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:04 postgres.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="our-setup-configuration"&gt;Our setup configuration&lt;a class="headerlink" href="#our-setup-configuration" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Setup:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LEO&lt;/span&gt; will be the ‘master’ with &lt;code&gt;$PGDATA&lt;/code&gt; at &lt;code&gt;/var/lib/postgresql/data&lt;/code&gt; in a local volume&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AIT&lt;/span&gt; will be the ‘slave’ with &lt;code&gt;$PGDATA&lt;/code&gt; at &lt;code&gt;/var/lib/postgresql/data&lt;/code&gt; in a local volume&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PIT&lt;/span&gt; will be the ‘slave’ with &lt;code&gt;$PGDATA&lt;/code&gt; at &lt;code&gt;/var/lib/postgresql/data&lt;/code&gt; in a local volume&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first issue we found is that by default, PostDock lacks the &lt;span class="caps"&gt;SSL&lt;/span&gt; support,
+but as we were allowed to define settings for the configuration files we
+could override the settings via a variable named &lt;code&gt;CONFIGS&lt;/code&gt; set to
+&lt;code&gt;ssl:on,ssl_cert_file:'/etc/postgresql/server.crt',ssl_key_file:'/etc/postgresql/server.key'&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This required to craft a custom image (&lt;code&gt;quay.io/iranzo/postdock:sslkeyschown&lt;/code&gt;) that we submitted as &lt;a href="https://github.com/paunin/PostDock/pull/205"&gt;&lt;span class="caps"&gt;PR&lt;/span&gt; to PostDock&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the meantime, we did use &lt;a href="https://quay.io"&gt;https://quay.io&lt;/a&gt; to store our image and rebuild whenever we changed the code at our custom repo.&lt;/p&gt;
+&lt;p&gt;The changes in our image are very simple:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gh"&gt;diff --git a/src/pgsql/bin/postgres/entrypoint.sh b/src/pgsql/bin/postgres/entrypoint.sh&lt;/span&gt;
+&lt;span class="gh"&gt;index b09652c..1298dcb 100755&lt;/span&gt;
+&lt;span class="gd"&gt;--- a/src/pgsql/bin/postgres/entrypoint.sh&lt;/span&gt;
+&lt;span class="gi"&gt;+++ b/src/pgsql/bin/postgres/entrypoint.sh&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -42,7 +42,25 @@ else&lt;/span&gt;
+     fi
+ fi
+
+&lt;span class="gd"&gt;-KEYS=$(egrep '(ssl_cert_file|ssl_key_file)' $PGDATA/postgresql.conf|cut -d "=" -f 2-)&lt;/span&gt;
+&lt;span class="gi"&gt;+&lt;/span&gt;
+&lt;span class="gi"&gt;+echo "&amp;gt;&amp;gt;&amp;gt; Trying to configure SSL"&lt;/span&gt;
+&lt;span class="gi"&gt;+# Tweak keys to avoid permission issues:&lt;/span&gt;
+&lt;span class="gi"&gt;+ORIGKEYS=$(echo $CONFIGS|tr "," "\n"|egrep '(ssl_cert_file|ssl_key_file)'|cut -d ":" -f 2-|tr "\n" " "|tr -d "\'")&lt;/span&gt;
+&lt;span class="gi"&gt;+KEYS=""&lt;/span&gt;
+&lt;span class="gi"&gt;+&lt;/span&gt;
+&lt;span class="gi"&gt;+echo "&amp;gt;&amp;gt;&amp;gt; Trying to move ${ORIGKEYS} to proper folder"&lt;/span&gt;
+&lt;span class="gi"&gt;+for file in ${ORIGKEYS}; do&lt;/span&gt;
+&lt;span class="gi"&gt;+    # Check for file or link pointing to file&lt;/span&gt;
+&lt;span class="gi"&gt;+    if [ -e /pg-ssl/$(basename ${file}) ]; then&lt;/span&gt;
+&lt;span class="gi"&gt;+        echo "&amp;gt;&amp;gt;&amp;gt; Copying SSL file from /pg-ssl/$(basename ${file}) to ${file}"&lt;/span&gt;
+&lt;span class="gi"&gt;+        mkdir -p $(dirname ${file})&lt;/span&gt;
+&lt;span class="gi"&gt;+        cat /pg-ssl/$(basename ${file}) &amp;gt; ${file}&lt;/span&gt;
+&lt;span class="gi"&gt;+        KEYS="$KEYS ${file}"&lt;/span&gt;
+&lt;span class="gi"&gt;+    else&lt;/span&gt;
+&lt;span class="gi"&gt;+        echo "&amp;gt;&amp;gt;&amp;gt; ERROR: SSL File ${file} doesn't exist on disk"&lt;/span&gt;
+&lt;span class="gi"&gt;+    fi&lt;/span&gt;
+&lt;span class="gi"&gt;+done&lt;/span&gt;
+&lt;span class="gi"&gt;+&lt;/span&gt;
+ chown -R postgres $PGDATA $KEYS &amp;amp;&amp;amp; chmod -R 0700 $PGDATA $KEYS
+
+ source /usr/local/bin/cluster/repmgr/configure.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;From this, and once ‘Quay’ builds our image, we should, in the namespace for
+our project, add a new application via ‘Deploy image’ with
+&lt;code&gt;quay.io/iranzo/postdock:sslkeyschown&lt;/code&gt; (sources at
+&lt;a href="https://github.com/iranzo/PostDock"&gt;https://github.com/iranzo/PostDock&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The application will ask for some configuration options, name for the new application, etc&lt;/p&gt;
+&lt;p&gt;We must configure some environment variables:&lt;/p&gt;
+&lt;h3 id="environment-configuration"&gt;Environment configuration&lt;a class="headerlink" href="#environment-configuration" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PARTNER_NODES&lt;/code&gt;: &lt;span class="caps"&gt;IP&lt;/span&gt;’s of: postgres-leo.apps.e2e.bos.example.com,postgres-ait.apps.e2e.bos.example.com,postgres-aws.apps.e2e.bos.example.com (from below, but &lt;span class="caps"&gt;EXCLUDING&lt;/span&gt; the one we’re that we’ll be putting in CLUSTER_NODE_NETWORK_NAME)&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LEO&lt;/span&gt;: 10.19.227.153&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AIT&lt;/span&gt;: 10.19.115.226&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt;: internal-aba91353afe1c11e89f350a50403e669-443870799.us-east-1.elb.amazonaws.com&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CLUSTER_NAME&lt;/code&gt;: &lt;code&gt;quaydatabase&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;POSTGRES_DB&lt;/code&gt;: &lt;code&gt;quaydb&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DB_USERS&lt;/code&gt;: &lt;code&gt;replication_user:replication_pass,quayuser:quaypass&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CONFIGS&lt;/code&gt;: &lt;code&gt;ssl:on,ssl_cert_file:'/etc/postgresql/server.crt',ssl_key_file:'/etc/postgresql/server.key'&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NODE_NAME&lt;/code&gt;: Identifying name for this instance&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NODE_ID&lt;/code&gt;: \$(&lt;span class="caps"&gt;NUMBER&lt;/span&gt; &lt;span class="caps"&gt;DIFFERENT&lt;/span&gt; &lt;span class="caps"&gt;FOR&lt;/span&gt; &lt;span class="caps"&gt;EACH&lt;/span&gt; &lt;span class="caps"&gt;NODE&lt;/span&gt; + 1000, f.e. 1002)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CLUSTER_NODE_NETWORK_NAME&lt;/code&gt;: \$(&lt;span class="caps"&gt;SAME&lt;/span&gt; &lt;span class="caps"&gt;AS&lt;/span&gt; NODE_NAME that would go in &lt;span class="caps"&gt;PARTNER&lt;/span&gt; &lt;span class="caps"&gt;NODES&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;REPLICATION_HOST&lt;/code&gt;: “postgres” (name of app in deployment)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We did raise/update some issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/paunin/PostDock/issues/124"&gt;https://github.com/paunin/PostDock/issues/124&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/paunin/PostDock/issues/202"&gt;https://github.com/paunin/PostDock/issues/202&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/paunin/PostDock/issues/203"&gt;https://github.com/paunin/PostDock/issues/203&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But finally as we had to build our own modified image we were able to circumvent them.&lt;/p&gt;
+&lt;p&gt;We did configure some more things to pass the certificates and key to the pods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure a secret with &lt;code&gt;server.crt&lt;/code&gt; and &lt;code&gt;server.key&lt;/code&gt; based on the &lt;code&gt;postgres.pem&lt;/code&gt; and &lt;code&gt;postgres-key.pem&lt;/code&gt; for each one of them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As we’re using a secret for storing the certificates, we’ll use a volume exposing it to the host via the path &lt;code&gt;/pg-ssl&lt;/code&gt;&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;mountPath&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;/pg-ssl&lt;/span&gt;
+              &lt;span class="l l-Scalar l-Scalar-Plain"&gt;name&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;volume-yisiz&lt;/span&gt;
+              &lt;span class="l l-Scalar l-Scalar-Plain"&gt;readOnly&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Our patched image, will find and move the certificates to their final destination (specified via environment variable in &lt;code&gt;CONFIGS&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;This image, also ensures valid permissions and ownership so that postgres can start and answer ‘&lt;span class="caps"&gt;SSL&lt;/span&gt;’ via a:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; iranzo   iranzo-save  …  RH  syseng  pit-hybrid  psql -h localhost -U replication_user -W replication_db -p &lt;span class="m"&gt;5432&lt;/span&gt;
+Password &lt;span class="k"&gt;for&lt;/span&gt; user replication_user:
+psql &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.6&lt;span class="o"&gt;)&lt;/span&gt;
+SSL connection &lt;span class="o"&gt;(&lt;/span&gt;protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: &lt;span class="m"&gt;256&lt;/span&gt;, compression: disabled&lt;span class="o"&gt;)&lt;/span&gt;
+
+&lt;span class="nv"&gt;replication_db&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c1"&gt;# \dt&lt;/span&gt;
+Did not find any relations.
+&lt;span class="nv"&gt;replication_db&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="additional-settings"&gt;Additional settings&lt;a class="headerlink" href="#additional-settings" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure a volume for storing permanent data in &lt;code&gt;/var/lib/postgresql/data&lt;/code&gt; so that is kept and not destroyed on pod destroy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="the-bittersweet-wrap-up"&gt;The bittersweet wrap-up&lt;a class="headerlink" href="#the-bittersweet-wrap-up" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;At this point we do have the postgres image started with &lt;span class="caps"&gt;SSL&lt;/span&gt;, however:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In order to use replication between environments, we need a way to access postgres&lt;/li&gt;
+&lt;li&gt;The creation and configuration of &lt;span class="caps"&gt;SSL&lt;/span&gt; setup gets us a bit closer to it&lt;/li&gt;
+&lt;li&gt;OpenShift &lt;code&gt;HAPROXY&lt;/code&gt; requires &lt;span class="caps"&gt;SNI&lt;/span&gt;-capable client, which is not&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; the case, hence we still cannot have the traffic get into the postgres instance and hence, replication doesn’t start as there’s no communication.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All attempts to use a router (that only permits http and https or &lt;span class="caps"&gt;TLS&lt;/span&gt;-with-&lt;span class="caps"&gt;SNI&lt;/span&gt;) failed completely, as &lt;span class="caps"&gt;PSQL&lt;/span&gt; doesn’t yet have the support in place, failed, even some other hacks on initialization scripts to use the alternate port instead.&lt;/p&gt;
+&lt;p&gt;Unfortunately, this became a major blocker at this time, not allowing us to setup a replicated postgres cluster across different OpenShift Clusters to have it as a database we can rely for setting up Quay on top.&lt;/p&gt;
+&lt;h2 id="the-plot-twist"&gt;The plot twist&lt;a class="headerlink" href="#the-plot-twist" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;After finding no more ways, we discussed with our team members for putting more brains in this, and in conversations with Pep, Mario and Ryan, it was suggested to instead use a LoadBalancer &lt;span class="caps"&gt;IP&lt;/span&gt;, that imposes no restrictions on the traffic, this however could only be accomplished on 3 environments (&lt;span class="caps"&gt;LEO&lt;/span&gt;, &lt;span class="caps"&gt;AIT&lt;/span&gt; and &lt;span class="caps"&gt;AWS&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;As &lt;span class="caps"&gt;AWS&lt;/span&gt; seems to have no &lt;span class="caps"&gt;DNS&lt;/span&gt; resolution, we’re limited to use &lt;span class="caps"&gt;IP&lt;/span&gt;’s in the server name (for the CLUSTER_NODE_NETWORK_NAME) so that in case of failover, &lt;span class="caps"&gt;AWS&lt;/span&gt; can reach them.&lt;/p&gt;
+&lt;p&gt;With the current setup, we only needed to define ‘persistent’ storage for postgres so in case all three pods were destroyed at the same time, we do have some data to start over.&lt;/p&gt;
+&lt;p&gt;The final steps, outlined above in &lt;a href="#our-setup-configuration"&gt;Our setup configuration&lt;/a&gt;, were updated to use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PARTNER_NODES containing the &lt;span class="caps"&gt;LB&lt;/span&gt; &lt;span class="caps"&gt;IP&lt;/span&gt; address for the Load Balancer defined in each environment &lt;span class="caps"&gt;EXCEPT&lt;/span&gt; our own&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CLUSTER_NODE_NETWORK_NAME: our &lt;span class="caps"&gt;LB&lt;/span&gt; &lt;span class="caps"&gt;IP&lt;/span&gt; as it would go in PARTNER_NODES for other clusters&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PARTNER_NODES: &lt;span class="caps"&gt;IP&lt;/span&gt;’s of: postgres-leo.apps.e2e.bos.example.com,postgres-ait.apps.e2e.bos.example.com,postgres-aws.apps.e2e.bos.example.com (from below, but &lt;span class="caps"&gt;EXCLUDING&lt;/span&gt; the one we’re that we’ll be putting in CLUSTER_NODE_NETWORK_NAME)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LEO&lt;/span&gt;: 10.19.227.153&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AIT&lt;/span&gt;: 10.19.115.226&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt;: internal-aba91353afe1c11e89f350a50403e669-443870799.us-east-1.elb.amazonaws.com&lt;/li&gt;
+&lt;li&gt;NODE_ID: \$(&lt;span class="caps"&gt;NUMBER&lt;/span&gt; &lt;span class="caps"&gt;DIFFERENT&lt;/span&gt; &lt;span class="caps"&gt;FOR&lt;/span&gt; &lt;span class="caps"&gt;EACH&lt;/span&gt; &lt;span class="caps"&gt;NODE&lt;/span&gt; + 1000, f.e. 1002)&lt;/li&gt;
+&lt;li&gt;CLUSTER_NODE_NETWORK_NAME: \$(&lt;span class="caps"&gt;SAME&lt;/span&gt; &lt;span class="caps"&gt;AS&lt;/span&gt; NODE_NAME that would go in &lt;span class="caps"&gt;PARTNER&lt;/span&gt; &lt;span class="caps"&gt;NODES&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;REPLICATION_HOST: “postgres” (name of app in deployment)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With this approach, the LoadBalancer effectively passes the data on port 5432 (even if it’s not &lt;span class="caps"&gt;SSL&lt;/span&gt;), and the cluster can form and start replication of data.&lt;/p&gt;
+&lt;p&gt;So next steps are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define &lt;span class="caps"&gt;DNS&lt;/span&gt; name pointing to all 3 &lt;span class="caps"&gt;IP&lt;/span&gt;’s that we can configure on apps&lt;/li&gt;
+&lt;li&gt;Rely on psql standby to work in read-only mode and providing service&lt;/li&gt;
+&lt;li&gt;Setup Quay to use that psql &lt;span class="caps"&gt;DNS&lt;/span&gt; name&lt;/li&gt;
+&lt;li&gt;Automate the setup, including Quay &lt;code&gt;ENV&lt;/code&gt; variable for storage ‘closer’ to each cluster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="https://www.postgresql.org/message-id/CAPPwrB_tsOw8MtVaA_DFyOFRY2ohNdvMnLoA_JRr3yB67Rggmg%40mail.gmail.com"&gt;Thread on psql-hackers&lt;/a&gt; and &lt;a href="https://www.postgresql.org/message-id/20181211145240.GL20222%40redhat.com"&gt;pinged by us&lt;/a&gt; &lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2019-01-08:/blog/2019/01/08/postgres-repl-ssl-replication/</guid><category>tech</category><category>postgres</category><category>FOSS</category><category>SSL</category><category>replication</category><category>federation</category><category>Kubernetes</category><category>OpenShift</category></item><item><title>Quay for Federation</title><link>https://iranzo.io/blog/2019/01/08/quay-for-federation/</link><description>
+&lt;h2 id="why-this-article"&gt;Why this article?&lt;a class="headerlink" href="#why-this-article" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment.&lt;/p&gt;
+&lt;p&gt;Colleagues in the Solutions Engineering team have been working on
+demonstrating an application running on different clusters over a Federated Control Plane, allowing it to ‘roam’ between clusters with shared data access as a way to demonstrate how an application can ‘scale’ from on-premise deployment to external clouds in order to satisfy business requirements for peak demands.&lt;/p&gt;
+&lt;p&gt;This article tries to demonstrate on how to setup Quay, as a container registry for your applications, in a way that can work both for this Federated approach as well as High-Availability setup.&lt;/p&gt;
+&lt;h2 id="what-is-quay"&gt;What is Quay?&lt;a class="headerlink" href="#what-is-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The one liner would be: &lt;code&gt;Quay is a container registry&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The extended one, would be more in the lines of:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Quay is a container registry that can be used via the provided service at &lt;a href="https://quay.io"&gt;https://quay.io&lt;/a&gt; or can be used via Quay Enterprise as ‘on premise’ registry.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A container registry provides a point for containers to be downloaded or uploaded for later consumption.&lt;/p&gt;
+&lt;h2 id="why-quay"&gt;Why quay?&lt;a class="headerlink" href="#why-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Quay allows to be configured either to use the provided service via &lt;a href="https://quay.io"&gt;https://quay.io&lt;/a&gt; or deploy it on premise, so that you gain additional control over the setup like which namespaces to replicate, policies, etc.&lt;/p&gt;
+&lt;p&gt;Quay features &lt;code&gt;clair&lt;/code&gt; analysis of images, allowing to detect known vulnerabilities from different sources to later check the images.&lt;/p&gt;
+&lt;p&gt;Also, allows to automate builds when a push to a repository has happened, allowing to quickly spawn an update container image when our tracked repository has a new commit that can be later updated in our OpenShift/Kubernetes image stream.&lt;/p&gt;
+&lt;p&gt;Quay can also, when having several storage backends defined, do &lt;a href="#georeplication"&gt;geo-replication&lt;/a&gt;, that allows OpenShift to grab the needed bytes from the closest backend while handling in the background the copy of new data to the other replicas.&lt;/p&gt;
+&lt;h2 id="what-is-swift"&gt;What is Swift?&lt;a class="headerlink" href="#what-is-swift" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Swift is object storage provided by OpenStack Environment, defined at &lt;a href="https://wiki.openstack.org/wiki/Swift"&gt;https://wiki.openstack.org/wiki/Swift&lt;/a&gt; as:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The OpenStack Object Store project, known as Swift, offers cloud storage software so that you can store and retrieve lots of data with a simple &lt;span class="caps"&gt;API&lt;/span&gt;. It’s built for scale and optimized for durability, availability, and concurrency across the entire data set. Swift is ideal for storing unstructured data that can grow without bound.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Swift allows to define a &lt;code&gt;container&lt;/code&gt; (not in the &lt;a href="https://www.opencontainers.org/"&gt;https://www.opencontainers.org/&lt;/a&gt; sense but in a ‘data storage’).&lt;/p&gt;
+&lt;h3 id="how-does-it-come-to-play-with-quay"&gt;How does it come to play with Quay?&lt;a class="headerlink" href="#how-does-it-come-to-play-with-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Quay allows to define storage backend based on swift that can be used together with other backends to provide
+geo-replication for availability.&lt;/p&gt;
+&lt;h3 id="the-setup-process-of-swift-for-quay"&gt;The Setup process of Swift for Quay&lt;a class="headerlink" href="#the-setup-process-of-swift-for-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;At the beginning it was not easy to find out all the required configuration variables or settings to define, but what finally worked for the setup described in this article was:&lt;/p&gt;
+&lt;h4 id="create-the-swift-container"&gt;Create the Swift container&lt;a class="headerlink" href="#create-the-swift-container" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;First we do need to create a swift container in OpenStack that will hold the information from Quay:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create swift container for holding the storage:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;sh
+      (overcloud) [stack@osp-ait-director ~]$ openstack container create quay-enterprise&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Output:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;account&lt;/th&gt;
+&lt;th&gt;container&lt;/th&gt;
+&lt;th&gt;&lt;code&gt;x-trans-id&lt;/code&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;AUTH_b3b8ce2eca3c4556ac01c12772b0d141&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;quay-enterprise&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;txd7d654f499db457da0fa0-005bf53d32&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id="configuration-settings-defined-in-quay"&gt;Configuration settings defined in Quay&lt;a class="headerlink" href="#configuration-settings-defined-in-quay" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Setting&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Storage Engine&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;OpenStack Storage (Swift)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Swift Auth Version&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Swift Auth URL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$YOURKEYSTONE PUBLIC ENDPOINT&lt;/code&gt; (like http://aaa.bbb.ccc.ddd:5000)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Swift container name&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$YOURCONTAINER&lt;/code&gt; (created with swift container create ‘name’)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Storage path&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$WHATEVER&lt;/code&gt; (we did use &lt;code&gt;/quay&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Username&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$OSP_USERNAME&lt;/code&gt; (we did use &lt;code&gt;admin&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;key/password&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$OSP_PASSWORD&lt;/code&gt;(we did use &lt;code&gt;redhat&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="caps"&gt;OS&lt;/span&gt; &lt;span class="caps"&gt;OPTIONS&lt;/span&gt; drop-down&lt;/td&gt;
+&lt;td&gt;&amp;lt;——- This is an important one if not it will fail&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;tenant_id&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\$YOURTENANTID&lt;/code&gt; (I did use ‘admin’ id as obtained with &lt;code&gt;openstack project list\|grep admin&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Once done, Quay should ‘validate’ the upload and &lt;code&gt;swift list $YOURCONTAINER&lt;/code&gt; should give something like:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;(&lt;/span&gt;overcloud&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;stack@osp-director ~&lt;span class="o"&gt;]&lt;/span&gt;$ swift list quay-enterprise
+quay/_verify
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Showing that the verification file has been created succesfully.&lt;/p&gt;
+&lt;h2 id="georeplication"&gt;Georeplication&lt;a class="headerlink" href="#georeplication" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Quay allows to define several backends that can be also configured as a foundation for GeoReplication.&lt;/p&gt;
+&lt;p&gt;Georeplication in quay, is used to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;define a ‘zone name’ for a storage backend&lt;/li&gt;
+&lt;li&gt;when booting Quay containers or apps, define which backend is ‘closest’ (via environment variable &lt;code&gt;QUAY_DISTRIBUTED_STORAGE_PREFERENCE&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Quay will store and replicate on the different backends defined the information uploaded. The requirement is that the backend is an object storage, but you can also define ‘mixed’ backends like for example &lt;span class="caps"&gt;GCE&lt;/span&gt;, &lt;span class="caps"&gt;AWS&lt;/span&gt;, Swift, Ceph RadosGW, etc. Quay will take care of the copy and once the backend ‘closest’ to the quay instance is ready, it will serve from that one (or fallback to the one having the actual data).&lt;/p&gt;
+&lt;p&gt;For each one of the configured backends, a different number of settings will be requested to do the proper configuration.&lt;/p&gt;
+&lt;h3 id="google-cloud-storage"&gt;Google Cloud Storage&lt;a class="headerlink" href="#google-cloud-storage" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For setting Google Cloud Storage, we did use the following values:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Setting&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Location &lt;span class="caps"&gt;ID&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;\$yourvalue&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Storage Engine&lt;/td&gt;
+&lt;td&gt;Google Cloud Storage&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloud Access Key&lt;/td&gt;
+&lt;td&gt;&lt;span class="caps"&gt;GOOGXXXXXXXX&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cloud Secret Key&lt;/td&gt;
+&lt;td&gt;pksXXXXXX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="caps"&gt;GCS&lt;/span&gt; Bucket&lt;/td&gt;
+&lt;td&gt;quay-enterprise&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Storage Directory&lt;/td&gt;
+&lt;td&gt;/datastorage/registry&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="amazon-s3"&gt;Amazon S3&lt;a class="headerlink" href="#amazon-s3" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For setting Amazon S3 storage, we did use the following values:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Setting&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Location &lt;span class="caps"&gt;ID&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;\$yourvalue&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Storage Engine&lt;/td&gt;
+&lt;td&gt;Amazon S3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;S3 Bucket&lt;/td&gt;
+&lt;td&gt;quay-enterprise&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Storage Directory&lt;/td&gt;
+&lt;td&gt;/quay/ait&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt; Access Key&lt;/td&gt;
+&lt;td&gt;&lt;span class="caps"&gt;AKIAXXXXXXXX&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt; Secret Key&lt;/td&gt;
+&lt;td&gt;/9bkfXXXXXXXXXX&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="validation-of-the-replication"&gt;Validation of the replication&lt;a class="headerlink" href="#validation-of-the-replication" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Once all the defined storage backends have been configured, there’s a button in the interface that will validate access and create the ‘marker’ files on each storage backend to verify the access permissions to them similar to what was shown on Swift configuration.&lt;/p&gt;
+&lt;h2 id="quay-ssl-deployment"&gt;Quay &lt;span class="caps"&gt;SSL&lt;/span&gt; deployment&lt;a class="headerlink" href="#quay-ssl-deployment" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This procedure will guide you through the configuration of Quay with &lt;span class="caps"&gt;SSL&lt;/span&gt; certificates so the deployment is both secure and deployed in a highly available enterprise way.&lt;/p&gt;
+&lt;h3 id="ssl-certificates"&gt;&lt;span class="caps"&gt;SSL&lt;/span&gt; Certificates&lt;a class="headerlink" href="#ssl-certificates" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Setting up certificates requires several steps involving:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating a &lt;span class="caps"&gt;CA&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Create a Certificate Signing Request with all the possible quay hostnames&lt;/li&gt;
+&lt;li&gt;Sign the certificates&lt;/li&gt;
+&lt;li&gt;Upload the certificates on Quay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="create-ca"&gt;Create &lt;span class="caps"&gt;CA&lt;/span&gt;&lt;a class="headerlink" href="#create-ca" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Execution of &lt;a href="https://iranzo.io/blog/2019/01/08/quay-for-federation/other/generate-ca.sh"&gt;generate-ca.sh&lt;/a&gt;&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./generate-ca.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;With output:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; generating a new CA key and certificate from CSR
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; generate received request
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; received CSR
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; generating key: rsa-2048
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; encoded CSR
+&lt;span class="m"&gt;2018&lt;/span&gt;/11/29 &lt;span class="m"&gt;15&lt;/span&gt;:01:13 &lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; signed certificate with serial number &lt;span class="m"&gt;432855461933024796113382064222588753737107796958&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;And creates:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo  &lt;span class="m"&gt;232&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca-config.json
+-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1001&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca.csr
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo  &lt;span class="m"&gt;208&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca-csr.json
+-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1679&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca-key.pem
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1359&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 ca.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h4 id="create-quay-certs"&gt;Create Quay Certs&lt;a class="headerlink" href="#create-quay-certs" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;We are going to use the same certificate for each replica, we need to know the hostname that will be used on the &lt;span class="caps"&gt;OCP&lt;/span&gt; routes beforehand in order to use it for the &lt;span class="caps"&gt;SAN&lt;/span&gt; property in the certificate.&lt;/p&gt;
+&lt;p&gt;Having each of the routes in the &lt;span class="caps"&gt;SAN&lt;/span&gt; makes it possible to use the same cert for each replica, so we can federate a single secret containing those certs rather than creating one &lt;span class="caps"&gt;SSL&lt;/span&gt; secret for each cluster.&lt;/p&gt;
+&lt;p&gt;Execution of &lt;a href="https://iranzo.io/blog/2019/01/08/quay-for-federation/other/generate-cert.sh"&gt;generate-cert.sh&lt;/a&gt;&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./generate-cert.sh quay-enterprise
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;With output:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;received&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;received&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CSR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generating&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;key&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;rsa&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2048&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;encoded&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CSR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;26&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;signed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;certificate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;serial&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;570248288515480165542553575432827729263232937534&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Now, we have all the required certificates for Quay generated.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1001&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 quay-enterprise.csr
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo  &lt;span class="m"&gt;208&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 quay-enterprise-csr.json
+-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1675&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 quay-enterprise-key.pem
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1809&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:01 quay-enterprise.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h4 id="load-quay-certificates"&gt;Load Quay certificates&lt;a class="headerlink" href="#load-quay-certificates" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Now using the web interface of quay, we can start uploading the certificates required for operation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Custom &lt;span class="caps"&gt;SSL&lt;/span&gt; Certificates&lt;/em&gt;&lt;/strong&gt;
+Here, load the &lt;code&gt;quay.pem&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Certificate load" src="https://iranzo.io/imagen/postrepquay/2018-11-29-15-32-08.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Server Configuration&lt;/em&gt;&lt;/strong&gt; *&lt;strong&gt;*&lt;span class="caps"&gt;TLS&lt;/span&gt;**&lt;/strong&gt;
+Certificate: load the &lt;code&gt;quay-enterprise.pem&lt;/code&gt;
+Key: load the &lt;code&gt;quay-enterprise-key.pem&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Certificate configuration" src="https://iranzo.io/imagen/postrepquay/2018-11-29-15-33-02.png"/&gt;&lt;/p&gt;
+&lt;p&gt;At this point Quay will be using the certificates, but by default the service created only works on port 80.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;REMEMBER&lt;/span&gt;&lt;/strong&gt;: We’ll need to edit:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the app&lt;/li&gt;
+&lt;li&gt;the route&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So that both work on port 443 instead of port 80 that is used by default.&lt;/p&gt;
+&lt;p&gt;We’ll also need to load &lt;code&gt;ca.pem&lt;/code&gt; and &lt;code&gt;quay-enterprise.pem&lt;/code&gt; into our &lt;code&gt;/etc/pki/ca-trust/source/anchors&lt;/code&gt; folder and then run:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;update-ca-trust extract
+service docker restart
+&lt;span class="c1"&gt;# Now let's go login into the registry&lt;/span&gt;
+docker login https://quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com
+&lt;span class="c1"&gt;# Let's download a container:&lt;/span&gt;
+docker pull quay.io/mavazque/pacman
+&lt;span class="c1"&gt;# let's tag and upload to our registry&lt;/span&gt;
+docker images&lt;span class="p"&gt;|&lt;/span&gt;grep pacman
+quay.io/mavazque/pacman                                                          latest              6c5211874850        &lt;span class="m"&gt;29&lt;/span&gt; hours ago        &lt;span class="m"&gt;689&lt;/span&gt; MB
+&lt;span class="c1"&gt;# Tag and upload&lt;/span&gt;
+&lt;span class="c1"&gt;# Find image&lt;/span&gt;
+docker images&lt;span class="p"&gt;|&lt;/span&gt;grep pacman
+quay.io/mavazque/pacman                                                          latest              6c5211874850        &lt;span class="m"&gt;29&lt;/span&gt; hours ago        &lt;span class="m"&gt;689&lt;/span&gt; MB
+&lt;span class="c1"&gt;# Tag image&lt;/span&gt;
+docker tag 6c5211874850 quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com/admin/pacman:latest
+&lt;span class="c1"&gt;# Upload image&lt;/span&gt;
+docker push quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com/admin/pacman
+The push refers to a repository &lt;span class="o"&gt;[&lt;/span&gt;quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com/admin/pacman&lt;span class="o"&gt;]&lt;/span&gt;
+fb2d3be23d30: Pushed
+c02d067bd364: Pushed
+3edd111b03f2: Pushed
+2221babd26ac: Pushed
+911d290ce59f: Pushed
+fae583f1d4e5: Pushed
+9d22e51f0c6d: Pushed
+58b8d417193d: Pushing &lt;span class="o"&gt;[===================================&lt;/span&gt;&amp;gt;               &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="m"&gt;225&lt;/span&gt;.5 MB/320.1 MB
+704a8634956f: Pushing &lt;span class="o"&gt;[==================================================&lt;/span&gt;&amp;gt;&lt;span class="o"&gt;]&lt;/span&gt;   &lt;span class="m"&gt;127&lt;/span&gt; MB
+05f0b6bcfa5c: Pushed
+0972cc82b682: Pushing &lt;span class="o"&gt;[=============================&lt;/span&gt;&amp;gt;                     &lt;span class="o"&gt;]&lt;/span&gt;  &lt;span class="m"&gt;74&lt;/span&gt;.2 MB/126.8 MB
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="openshift-certificate"&gt;OpenShift certificate&lt;a class="headerlink" href="#openshift-certificate" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Unless we also load the &lt;span class="caps"&gt;SSL&lt;/span&gt; certificate from Quay into OpenShift, we’ll be facing issues like this:
+&lt;img alt="Failure when Certificate has not been imported" src="https://iranzo.io/imagen/postrepquay/2018-12-03-15-41-02.png"/&gt;&lt;/p&gt;
+&lt;h2 id="wrap-up"&gt;Wrap up&lt;a class="headerlink" href="#wrap-up" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;At this point, we’ve Quay setup for using geo-replication for &lt;span class="caps"&gt;HA&lt;/span&gt; and faster speeds from each cluster, we do have an underlying postgres setup using replication across sites and the &lt;span class="caps"&gt;URL&lt;/span&gt;’s have been secured for being used by our servers downloading images from there to deploy our applications.&lt;/p&gt;
+&lt;p&gt;Hope that you’ve enjoyed it!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2019-01-08:/blog/2019/01/08/quay-for-federation/</guid><category>tech</category><category>Quay</category><category>Kubernetes</category><category>container</category><category>federation</category><category>OpenShift</category><category>FOSS</category></item></channel></rss>

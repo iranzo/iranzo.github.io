@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='en'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Why this article?¶ For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment. Colleagues in the Solutions Engineering team have been working on demonstrating an application running on different clusters over …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Quay, Kubernetes, container, federation, OpenShift, FOSS, tech, " />
+
+<meta property="og:title" content="Quay for Federation "/>
+<meta property="og:url" content="https://iranzo.io/blog/2019/01/08/quay-for-federation/" />
+<meta property="og:description" content="Why this article?¶ For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment. Colleagues in the Solutions Engineering team have been working on demonstrating an application running on different clusters over …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2019-01-08T17:30:36+01:00" />
+<meta name="twitter:title" content="Quay for Federation ">
+<meta name="twitter:description" content="Why this article?¶ For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment. Colleagues in the Solutions Engineering team have been working on demonstrating an application running on different clusters over …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2019-01-08T17:30:36+01:00",
+        "description": "Why this article?¶ For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment. Colleagues in the Solutions Engineering team have been working on demonstrating an application running on different clusters over …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2019/01/08/quay-for-federation/"
+        },
+
+        "headline": "Quay for Federation",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>Quay for Federation  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2019/01/08/quay-for-federation/">
+                Quay for&nbsp;Federation
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#why-this-article">Why this article?</a></li>
+<li><a href="#what-is-quay">What is Quay?</a></li>
+<li><a href="#why-quay">Why quay?</a></li>
+<li><a href="#what-is-swift">What is Swift?</a><ul>
+<li><a href="#how-does-it-come-to-play-with-quay">How does it come to play with Quay?</a></li>
+<li><a href="#the-setup-process-of-swift-for-quay">The Setup process of Swift for Quay</a><ul>
+<li><a href="#create-the-swift-container">Create the Swift container</a></li>
+<li><a href="#configuration-settings-defined-in-quay">Configuration settings defined in Quay</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#georeplication">Georeplication</a><ul>
+<li><a href="#google-cloud-storage">Google Cloud Storage</a></li>
+<li><a href="#amazon-s3">Amazon S3</a></li>
+<li><a href="#validation-of-the-replication">Validation of the replication</a></li>
+</ul>
+</li>
+<li><a href="#quay-ssl-deployment">Quay <span class="caps">SSL</span> deployment</a><ul>
+<li><a href="#ssl-certificates"><span class="caps">SSL</span> Certificates</a><ul>
+<li><a href="#create-ca">Create <span class="caps">CA</span></a></li>
+<li><a href="#create-quay-certs">Create Quay Certs</a></li>
+<li><a href="#load-quay-certificates">Load Quay certificates</a></li>
+</ul>
+</li>
+<li><a href="#openshift-certificate">OpenShift certificate</a></li>
+</ul>
+</li>
+<li><a href="#wrap-up">Wrap up</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h2 id="why-this-article">Why this article?<a class="headerlink" href="#why-this-article" title="Permanent link">¶</a></h2>
+<p>For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment.</p>
+<p>Colleagues in the Solutions Engineering team have been working on
+demonstrating an application running on different clusters over a Federated Control Plane, allowing it to ‘roam’ between clusters with shared data access as a way to demonstrate how an application can ‘scale’ from on-premise deployment to external clouds in order to satisfy business requirements for peak demands.</p>
+<p>This article tries to demonstrate on how to setup Quay, as a container registry for your applications, in a way that can work both for this Federated approach as well as High-Availability setup.</p>
+<h2 id="what-is-quay">What is Quay?<a class="headerlink" href="#what-is-quay" title="Permanent link">¶</a></h2>
+<p>The one liner would be: <code>Quay is a container registry</code>.</p>
+<p>The extended one, would be more in the lines of:</p>
+<blockquote>
+<p>Quay is a container registry that can be used via the provided service at <a href="https://quay.io">https://quay.io</a> or can be used via Quay Enterprise as ‘on premise’ registry.</p>
+</blockquote>
+<p>A container registry provides a point for containers to be downloaded or uploaded for later consumption.</p>
+<h2 id="why-quay">Why quay?<a class="headerlink" href="#why-quay" title="Permanent link">¶</a></h2>
+<p>Quay allows to be configured either to use the provided service via <a href="https://quay.io">https://quay.io</a> or deploy it on premise, so that you gain additional control over the setup like which namespaces to replicate, policies, etc.</p>
+<p>Quay features <code>clair</code> analysis of images, allowing to detect known vulnerabilities from different sources to later check the images.</p>
+<p>Also, allows to automate builds when a push to a repository has happened, allowing to quickly spawn an update container image when our tracked repository has a new commit that can be later updated in our OpenShift/Kubernetes image stream.</p>
+<p>Quay can also, when having several storage backends defined, do <a href="#georeplication">geo-replication</a>, that allows OpenShift to grab the needed bytes from the closest backend while handling in the background the copy of new data to the other replicas.</p>
+<h2 id="what-is-swift">What is Swift?<a class="headerlink" href="#what-is-swift" title="Permanent link">¶</a></h2>
+<p>Swift is object storage provided by OpenStack Environment, defined at <a href="https://wiki.openstack.org/wiki/Swift">https://wiki.openstack.org/wiki/Swift</a> as:</p>
+<blockquote>
+<p>The OpenStack Object Store project, known as Swift, offers cloud storage software so that you can store and retrieve lots of data with a simple <span class="caps">API</span>. It’s built for scale and optimized for durability, availability, and concurrency across the entire data set. Swift is ideal for storing unstructured data that can grow without bound.</p>
+</blockquote>
+<p>Swift allows to define a <code>container</code> (not in the <a href="https://www.opencontainers.org/">https://www.opencontainers.org/</a> sense but in a ‘data storage’).</p>
+<h3 id="how-does-it-come-to-play-with-quay">How does it come to play with Quay?<a class="headerlink" href="#how-does-it-come-to-play-with-quay" title="Permanent link">¶</a></h3>
+<p>Quay allows to define storage backend based on swift that can be used together with other backends to provide
+geo-replication for availability.</p>
+<h3 id="the-setup-process-of-swift-for-quay">The Setup process of Swift for Quay<a class="headerlink" href="#the-setup-process-of-swift-for-quay" title="Permanent link">¶</a></h3>
+<p>At the beginning it was not easy to find out all the required configuration variables or settings to define, but what finally worked for the setup described in this article was:</p>
+<h4 id="create-the-swift-container">Create the Swift container<a class="headerlink" href="#create-the-swift-container" title="Permanent link">¶</a></h4>
+<p>First we do need to create a swift container in OpenStack that will hold the information from Quay:</p>
+<ul>
+<li>Create swift container for holding the storage:</li>
+</ul>
+<p><code>sh
+      (overcloud) [stack@osp-ait-director ~]$ openstack container create quay-enterprise</code></p>
+<ul>
+<li>Output:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>account</th>
+<th>container</th>
+<th><code>x-trans-id</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AUTH_b3b8ce2eca3c4556ac01c12772b0d141</code></td>
+<td>quay-enterprise</td>
+<td><code>txd7d654f499db457da0fa0-005bf53d32</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="configuration-settings-defined-in-quay">Configuration settings defined in Quay<a class="headerlink" href="#configuration-settings-defined-in-quay" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Storage Engine</code></td>
+<td>OpenStack Storage (Swift)</td>
+</tr>
+<tr>
+<td><code>Swift Auth Version</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>Swift Auth URL</code></td>
+<td><code>\$YOURKEYSTONE PUBLIC ENDPOINT</code> (like http://aaa.bbb.ccc.ddd:5000)</td>
+</tr>
+<tr>
+<td><code>Swift container name</code></td>
+<td><code>\$YOURCONTAINER</code> (created with swift container create ‘name’)</td>
+</tr>
+<tr>
+<td><code>Storage path</code></td>
+<td><code>\$WHATEVER</code> (we did use <code>/quay</code>)</td>
+</tr>
+<tr>
+<td><code>Username</code></td>
+<td><code>\$OSP_USERNAME</code> (we did use <code>admin</code>)</td>
+</tr>
+<tr>
+<td><code>key/password</code></td>
+<td><code>\$OSP_PASSWORD</code>(we did use <code>redhat</code>)</td>
+</tr>
+<tr>
+<td><span class="caps">OS</span> <span class="caps">OPTIONS</span> drop-down</td>
+<td>&lt;——- This is an important one if not it will fail</td>
+</tr>
+<tr>
+<td><code>tenant_id</code></td>
+<td><code>\$YOURTENANTID</code> (I did use ‘admin’ id as obtained with <code>openstack project list\|grep admin</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Once done, Quay should ‘validate’ the upload and <code>swift list $YOURCONTAINER</code> should give something like:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">(</span>overcloud<span class="o">)</span> <span class="o">[</span>stack@osp-director ~<span class="o">]</span>$ swift list quay-enterprise
+quay/_verify
+</code></pre></div>
+</td></tr></table>
+<p>Showing that the verification file has been created succesfully.</p>
+<h2 id="georeplication">Georeplication<a class="headerlink" href="#georeplication" title="Permanent link">¶</a></h2>
+<p>Quay allows to define several backends that can be also configured as a foundation for GeoReplication.</p>
+<p>Georeplication in quay, is used to:</p>
+<ul>
+<li>define a ‘zone name’ for a storage backend</li>
+<li>when booting Quay containers or apps, define which backend is ‘closest’ (via environment variable <code>QUAY_DISTRIBUTED_STORAGE_PREFERENCE</code>)</li>
+</ul>
+<p>Quay will store and replicate on the different backends defined the information uploaded. The requirement is that the backend is an object storage, but you can also define ‘mixed’ backends like for example <span class="caps">GCE</span>, <span class="caps">AWS</span>, Swift, Ceph RadosGW, etc. Quay will take care of the copy and once the backend ‘closest’ to the quay instance is ready, it will serve from that one (or fallback to the one having the actual data).</p>
+<p>For each one of the configured backends, a different number of settings will be requested to do the proper configuration.</p>
+<h3 id="google-cloud-storage">Google Cloud Storage<a class="headerlink" href="#google-cloud-storage" title="Permanent link">¶</a></h3>
+<p>For setting Google Cloud Storage, we did use the following values:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location <span class="caps">ID</span></td>
+<td>\$yourvalue</td>
+</tr>
+<tr>
+<td>Storage Engine</td>
+<td>Google Cloud Storage</td>
+</tr>
+<tr>
+<td>Cloud Access Key</td>
+<td><span class="caps">GOOGXXXXXXXX</span></td>
+</tr>
+<tr>
+<td>Cloud Secret Key</td>
+<td>pksXXXXXX</td>
+</tr>
+<tr>
+<td><span class="caps">GCS</span> Bucket</td>
+<td>quay-enterprise</td>
+</tr>
+<tr>
+<td>Storage Directory</td>
+<td>/datastorage/registry</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amazon-s3">Amazon S3<a class="headerlink" href="#amazon-s3" title="Permanent link">¶</a></h3>
+<p>For setting Amazon S3 storage, we did use the following values:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location <span class="caps">ID</span></td>
+<td>\$yourvalue</td>
+</tr>
+<tr>
+<td>Storage Engine</td>
+<td>Amazon S3</td>
+</tr>
+<tr>
+<td>S3 Bucket</td>
+<td>quay-enterprise</td>
+</tr>
+<tr>
+<td>Storage Directory</td>
+<td>/quay/ait</td>
+</tr>
+<tr>
+<td><span class="caps">AWS</span> Access Key</td>
+<td><span class="caps">AKIAXXXXXXXX</span></td>
+</tr>
+<tr>
+<td><span class="caps">AWS</span> Secret Key</td>
+<td>/9bkfXXXXXXXXXX</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validation-of-the-replication">Validation of the replication<a class="headerlink" href="#validation-of-the-replication" title="Permanent link">¶</a></h3>
+<p>Once all the defined storage backends have been configured, there’s a button in the interface that will validate access and create the ‘marker’ files on each storage backend to verify the access permissions to them similar to what was shown on Swift configuration.</p>
+<h2 id="quay-ssl-deployment">Quay <span class="caps">SSL</span> deployment<a class="headerlink" href="#quay-ssl-deployment" title="Permanent link">¶</a></h2>
+<p>This procedure will guide you through the configuration of Quay with <span class="caps">SSL</span> certificates so the deployment is both secure and deployed in a highly available enterprise way.</p>
+<h3 id="ssl-certificates"><span class="caps">SSL</span> Certificates<a class="headerlink" href="#ssl-certificates" title="Permanent link">¶</a></h3>
+<p>Setting up certificates requires several steps involving:</p>
+<ul>
+<li>Creating a <span class="caps">CA</span></li>
+<li>Create a Certificate Signing Request with all the possible quay hostnames</li>
+<li>Sign the certificates</li>
+<li>Upload the certificates on Quay</li>
+</ul>
+<h4 id="create-ca">Create <span class="caps">CA</span><a class="headerlink" href="#create-ca" title="Permanent link">¶</a></h4>
+<p>Execution of <a href="https://iranzo.io/blog/2019/01/08/quay-for-federation/other/generate-ca.sh">generate-ca.sh</a></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>./generate-ca.sh
+</code></pre></div>
+</td></tr></table>
+<p>With output:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="m">2018</span>/11/29 <span class="m">15</span>:01:13 <span class="o">[</span>INFO<span class="o">]</span> generating a new CA key and certificate from CSR
+<span class="m">2018</span>/11/29 <span class="m">15</span>:01:13 <span class="o">[</span>INFO<span class="o">]</span> generate received request
+<span class="m">2018</span>/11/29 <span class="m">15</span>:01:13 <span class="o">[</span>INFO<span class="o">]</span> received CSR
+<span class="m">2018</span>/11/29 <span class="m">15</span>:01:13 <span class="o">[</span>INFO<span class="o">]</span> generating key: rsa-2048
+<span class="m">2018</span>/11/29 <span class="m">15</span>:01:13 <span class="o">[</span>INFO<span class="o">]</span> encoded CSR
+<span class="m">2018</span>/11/29 <span class="m">15</span>:01:13 <span class="o">[</span>INFO<span class="o">]</span> signed certificate with serial number <span class="m">432855461933024796113382064222588753737107796958</span>
+</code></pre></div>
+</td></tr></table>
+<p>And creates:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>-rw-rw-r--. <span class="m">1</span> iranzo iranzo  <span class="m">232</span> nov <span class="m">29</span> <span class="m">15</span>:01 ca-config.json
+-rw-r--r--. <span class="m">1</span> iranzo iranzo <span class="m">1001</span> nov <span class="m">29</span> <span class="m">15</span>:01 ca.csr
+-rw-rw-r--. <span class="m">1</span> iranzo iranzo  <span class="m">208</span> nov <span class="m">29</span> <span class="m">15</span>:01 ca-csr.json
+-rw-------. <span class="m">1</span> iranzo iranzo <span class="m">1679</span> nov <span class="m">29</span> <span class="m">15</span>:01 ca-key.pem
+-rw-rw-r--. <span class="m">1</span> iranzo iranzo <span class="m">1359</span> nov <span class="m">29</span> <span class="m">15</span>:01 ca.pem
+</code></pre></div>
+</td></tr></table>
+<h4 id="create-quay-certs">Create Quay Certs<a class="headerlink" href="#create-quay-certs" title="Permanent link">¶</a></h4>
+<p>We are going to use the same certificate for each replica, we need to know the hostname that will be used on the <span class="caps">OCP</span> routes beforehand in order to use it for the <span class="caps">SAN</span> property in the certificate.</p>
+<p>Having each of the routes in the <span class="caps">SAN</span> makes it possible to use the same cert for each replica, so we can federate a single secret containing those certs rather than creating one <span class="caps">SSL</span> secret for each cluster.</p>
+<p>Execution of <a href="https://iranzo.io/blog/2019/01/08/quay-for-federation/other/generate-cert.sh">generate-cert.sh</a></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>./generate-cert.sh quay-enterprise
+</code></pre></div>
+</td></tr></table>
+<p>With output:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">01</span><span class="err">:</span><span class="mi">26</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">received</span><span class="w"> </span><span class="n">request</span><span class="w"></span>
+<span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">01</span><span class="err">:</span><span class="mi">26</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">received</span><span class="w"> </span><span class="n">CSR</span><span class="w"></span>
+<span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">01</span><span class="err">:</span><span class="mi">26</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">generating</span><span class="w"> </span><span class="k">key</span><span class="err">:</span><span class="w"> </span><span class="n">rsa</span><span class="o">-</span><span class="mi">2048</span><span class="w"></span>
+<span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">01</span><span class="err">:</span><span class="mi">26</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">encoded</span><span class="w"> </span><span class="n">CSR</span><span class="w"></span>
+<span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">01</span><span class="err">:</span><span class="mi">26</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">signed</span><span class="w"> </span><span class="n">certificate</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="mi">570248288515480165542553575432827729263232937534</span><span class="w"></span>
+</code></pre></div>
+</td></tr></table>
+<p>Now, we have all the required certificates for Quay generated.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>-rw-r--r--. <span class="m">1</span> iranzo iranzo <span class="m">1001</span> nov <span class="m">29</span> <span class="m">15</span>:01 quay-enterprise.csr
+-rw-rw-r--. <span class="m">1</span> iranzo iranzo  <span class="m">208</span> nov <span class="m">29</span> <span class="m">15</span>:01 quay-enterprise-csr.json
+-rw-------. <span class="m">1</span> iranzo iranzo <span class="m">1675</span> nov <span class="m">29</span> <span class="m">15</span>:01 quay-enterprise-key.pem
+-rw-rw-r--. <span class="m">1</span> iranzo iranzo <span class="m">1809</span> nov <span class="m">29</span> <span class="m">15</span>:01 quay-enterprise.pem
+</code></pre></div>
+</td></tr></table>
+<h4 id="load-quay-certificates">Load Quay certificates<a class="headerlink" href="#load-quay-certificates" title="Permanent link">¶</a></h4>
+<p>Now using the web interface of quay, we can start uploading the certificates required for operation.</p>
+<p><strong><em>Custom <span class="caps">SSL</span> Certificates</em></strong>
+Here, load the <code>quay.pem</code></p>
+<p><img alt="Certificate load" src="https://iranzo.io/imagen/postrepquay/2018-11-29-15-32-08.png"/></p>
+<p><strong><em>Server Configuration</em></strong> *<strong>*<span class="caps">TLS</span>**</strong>
+Certificate: load the <code>quay-enterprise.pem</code>
+Key: load the <code>quay-enterprise-key.pem</code></p>
+<p><img alt="Certificate configuration" src="https://iranzo.io/imagen/postrepquay/2018-11-29-15-33-02.png"/></p>
+<p>At this point Quay will be using the certificates, but by default the service created only works on port 80.</p>
+<p><strong><span class="caps">REMEMBER</span></strong>: We’ll need to edit:</p>
+<ul>
+<li>the app</li>
+<li>the route</li>
+</ul>
+<p>So that both work on port 443 instead of port 80 that is used by default.</p>
+<p>We’ll also need to load <code>ca.pem</code> and <code>quay-enterprise.pem</code> into our <code>/etc/pki/ca-trust/source/anchors</code> folder and then run:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>update-ca-trust extract
+service docker restart
+<span class="c1"># Now let's go login into the registry</span>
+docker login https://quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com
+<span class="c1"># Let's download a container:</span>
+docker pull quay.io/mavazque/pacman
+<span class="c1"># let's tag and upload to our registry</span>
+docker images<span class="p">|</span>grep pacman
+quay.io/mavazque/pacman                                                          latest              6c5211874850        <span class="m">29</span> hours ago        <span class="m">689</span> MB
+<span class="c1"># Tag and upload</span>
+<span class="c1"># Find image</span>
+docker images<span class="p">|</span>grep pacman
+quay.io/mavazque/pacman                                                          latest              6c5211874850        <span class="m">29</span> hours ago        <span class="m">689</span> MB
+<span class="c1"># Tag image</span>
+docker tag 6c5211874850 quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com/admin/pacman:latest
+<span class="c1"># Upload image</span>
+docker push quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com/admin/pacman
+The push refers to a repository <span class="o">[</span>quay-enterprise-quay-enterprise.apps.leo-fed.e2e.bos.example.com/admin/pacman<span class="o">]</span>
+fb2d3be23d30: Pushed
+c02d067bd364: Pushed
+3edd111b03f2: Pushed
+2221babd26ac: Pushed
+911d290ce59f: Pushed
+fae583f1d4e5: Pushed
+9d22e51f0c6d: Pushed
+58b8d417193d: Pushing <span class="o">[===================================</span>&gt;               <span class="o">]</span> <span class="m">225</span>.5 MB/320.1 MB
+704a8634956f: Pushing <span class="o">[==================================================</span>&gt;<span class="o">]</span>   <span class="m">127</span> MB
+05f0b6bcfa5c: Pushed
+0972cc82b682: Pushing <span class="o">[=============================</span>&gt;                     <span class="o">]</span>  <span class="m">74</span>.2 MB/126.8 MB
+</code></pre></div>
+</td></tr></table>
+<h3 id="openshift-certificate">OpenShift certificate<a class="headerlink" href="#openshift-certificate" title="Permanent link">¶</a></h3>
+<p>Unless we also load the <span class="caps">SSL</span> certificate from Quay into OpenShift, we’ll be facing issues like this:
+<img alt="Failure when Certificate has not been imported" src="https://iranzo.io/imagen/postrepquay/2018-12-03-15-41-02.png"/></p>
+<h2 id="wrap-up">Wrap up<a class="headerlink" href="#wrap-up" title="Permanent link">¶</a></h2>
+<p>At this point, we’ve Quay setup for using geo-replication for <span class="caps">HA</span> and faster speeds from each cluster, we do have an underlying postgres setup using replication across sites and the <span class="caps">URL</span>’s have been secured for being used by our servers downloading images from there to deploy our applications.</p>
+<p>Hope that you’ve enjoyed it!</p>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=Quay%20for%C2%A0Federation&url=https%3A//iranzo.io/blog/2019/01/08/quay-for-federation/&via=iranzop&hashtags=quay,kubernetes,container,federation,openshift,foss" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2019/01/08/quay-for-federation/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=Quay%20for%C2%A0Federation&amp;body=https%3A//iranzo.io/blog/2019/01/08/quay-for-federation/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2019/01/08/quay-for-federation/"
+                   href="https://iranzo.io/blog/2019/01/08/quay-for-federation/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2019/01/08/quay-for-federation/';
+    var disqus_url = 'https://iranzo.io/blog/2019/01/08/quay-for-federation/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/" title="Postgres repl SSL replication">Postgres repl SSL replication</a></li>
+<li><a href="https://iranzo.io/blog/2019/01/16/project-automation-with-travis-github-pages-and-quay/" title="Project automation with Travis, GitHub Pages and Quay">Project automation with Travis, GitHub Pages and Quay</a></li>
+<li><a href="https://iranzo.io/blog/2019/05/30/emerging-tech-vlc19-citellus-automatizacion-de-comprobaciones/" title="Emerging Tech VLC‘19 - Citellus - Automatización de comprobaciones">Emerging Tech VLC‘19 - Citellus - Automatización de comprobaciones</a></li>
+<li><a href="https://iranzo.io/blog/2019/06/11/katacoda-scenario-creation/" title="Katacoda scenario creation">Katacoda scenario creation</a></li>
+<li><a href="https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/" title="Configuring OpenShift with self-contained NTP">Configuring OpenShift with self-contained NTP</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2018/12/30/AndroidTV-and-Netflix-tvq-pm-100/" title="Previous: Android TV and Netflix’s tvq-pm-100 (5.2.5) error">Android TV and Netflix’s tvq-pm-100 (5.2.5) error</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/" title="Next: Postgres repl SSL replication">Postgres repl SSL replication</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~7 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2019-01-08T17:30:36+01:00">Tue 08 January 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#container-ref">container
+                    <span class="superscript">4</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#federation-ref">federation
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#foss-ref">FOSS
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#kubernetes-ref">Kubernetes
+                    <span class="superscript">4</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#openshift-ref">OpenShift
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#quay-ref">Quay
+                    <span class="superscript">2</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='en'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Introduction¶ I’ve started to get familiar with Ansible because, apart of getting more and more accepted for OSP-related tasks and installation, I wanted to automate some tasks we needed to setup some servers for the OpenStack group I work for. First of all, it’s recommended to get …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="python, ansible, OpenStack, sysmgmt, foss, tech, " />
+
+<meta property="og:title" content="Getting started with Ansible "/>
+<meta property="og:url" content="https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/" />
+<meta property="og:description" content="Introduction¶ I’ve started to get familiar with Ansible because, apart of getting more and more accepted for OSP-related tasks and installation, I wanted to automate some tasks we needed to setup some servers for the OpenStack group I work for. First of all, it’s recommended to get …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2017-02-20T23:10:00+01:00" />
+<meta name="twitter:title" content="Getting started with Ansible ">
+<meta name="twitter:description" content="Introduction¶ I’ve started to get familiar with Ansible because, apart of getting more and more accepted for OSP-related tasks and installation, I wanted to automate some tasks we needed to setup some servers for the OpenStack group I work for. First of all, it’s recommended to get …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2017-02-20T23:10:00+01:00",
+        "description": "Introduction¶ I’ve started to get familiar with Ansible because, apart of getting more and more accepted for OSP-related tasks and installation, I wanted to automate some tasks we needed to setup some servers for the OpenStack group I work for. First of all, it’s recommended to get …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/"
+        },
+
+        "headline": "Getting started with Ansible",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>Getting started with Ansible  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/">
+                Getting started with&nbsp;Ansible
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#virtualenvs">virtualenvs</a></li>
+<li><a href="#pipsi">pipsi</a></li>
+<li><a href="#prepare-for-ansible-utilization">Prepare for ansible utilization</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>I’ve started to get familiar with <a href="http://www.ansible.com">Ansible</a> because,
+apart of getting more and more accepted for <span class="caps">OSP</span>-related tasks and
+installation, I wanted to automate some tasks we needed to setup some servers
+for the OpenStack group I work for.</p>
+<p>First of all, it’s recommended to get latest version of ansible (tested on
+<span class="caps">RHEL7</span> and Fedora), but in order not to mess with the system python libraries, it’s convenient to use python’s virtual environments.</p>
+<p>A virtual Environment allows to create a ‘chroot’-like environment that might contain different library versions to the one installed with the system (but be careful as if it’s not kept track as part of the usually system patching process, it might become a security concern).</p>
+<h2 id="virtualenvs">virtualenvs<a class="headerlink" href="#virtualenvs" title="Permanent link">¶</a></h2>
+<p>For creating a virtualenv, we require the package <code>python-virtualenv</code> installed on our system and executing <code>virtualenv</code> and a target folder, for example:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">[</span>iranzo@iranzo ~<span class="o">]</span>$ virtualenv .venv
+New python executable <span class="k">in</span> /home/iranzo/.venv/bin/python2
+Also creating executable <span class="k">in</span> /home/iranzo/.venv/bin/python
+Installing setuptools, pip, wheel...done.
+</code></pre></div>
+</td></tr></table>
+<p>From this point, we’ve a base virtualenv installed, but as we would like to install more packages inside we’ll first need to ‘enter’ into it:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>. .venv/bin/activate
+</code></pre></div>
+</td></tr></table>
+<p>And from there, we can list the available/installed packages:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">[</span>iranzo@iranzo ~<span class="o">]</span>$ pip list
+DEPRECATION: The default format will switch to columns <span class="k">in</span> the future. You can use --format<span class="o">=(</span>legacy<span class="p">|</span>columns<span class="o">)</span> <span class="o">(</span>or define a <span class="nv">format</span><span class="o">=(</span>legacy<span class="p">|</span>columns<span class="o">)</span> <span class="k">in</span> your pip.conf under the <span class="o">[</span>list<span class="o">]</span> section<span class="o">)</span> to disable this warning.
+appdirs <span class="o">(</span><span class="m">1</span>.4.0<span class="o">)</span>
+packaging <span class="o">(</span><span class="m">16</span>.8<span class="o">)</span>
+pip <span class="o">(</span><span class="m">9</span>.0.1<span class="o">)</span>
+pyparsing <span class="o">(</span><span class="m">2</span>.1.10<span class="o">)</span>
+setuptools <span class="o">(</span><span class="m">34</span>.2.0<span class="o">)</span>
+six <span class="o">(</span><span class="m">1</span>.10.0<span class="o">)</span>
+wheel <span class="o">(</span><span class="m">0</span>.30.0a0<span class="o">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Now, all packages we install using <code>pip</code> will get installed to this folder, leaving system libraries intact.</p>
+<p>Once we finished, to return back to system’s environment, we’ll execute <code>deactivate</code>.</p>
+<h2 id="pipsi"><code>pipsi</code><a class="headerlink" href="#pipsi" title="Permanent link">¶</a></h2>
+<p>In order to simplify the management we can make use of <code>pipsi</code> which not only allows to install Python packages as we’ll normally do with <code>pip</code>, but also, takes care of doing proper symlinks so the installed packages are available directly for execution.</p>
+<p>If our distribution provides it, we can install <code>pipsi</code> on our system:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>dnf -y install pipsi
+</code></pre></div>
+</td></tr></table>
+<p>But if not, we can use this workaround (for example, on <span class="caps">RHEL7</span>)</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Use pip to install pipsi on the system (should be minor change not affecting other software installed)</span>
+pip install pipsi
+</code></pre></div>
+</td></tr></table>
+<p>From this point, we can use <code>pipsi</code> to take care of installation and maintenance (can do upgrades, removal, etc) of our python packages.</p>
+<p>For example, we can install <code>ansible</code> by executing:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pipsi install ansible
+</code></pre></div>
+</td></tr></table>
+<p>This might fail, as ansible, does some compiling and for doing so, it might require some development libraries on your system, have care of that to satisfy requirements for the packages.</p>
+<h2 id="prepare-for-ansible-utilization">Prepare for ansible utilization<a class="headerlink" href="#prepare-for-ansible-utilization" title="Permanent link">¶</a></h2>
+<p>At this point we’ve the <code>ansible</code> binary available for execution as <code>pipsi</code> did take care of setting up the required symlinks, etc</p>
+<p>Ansible uses an inventory file (can be provided on command line) so it can connect to the hosts listed there and apply <code>playbooks</code> which define the different actions to perform.</p>
+<p>This file, for example, can consist of just a simple list of hosts to connect to like:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="mf">192.168.1.1</span>
+<span class="mf">192.168.1.2</span>
+<span class="n">myhostname</span><span class="mf">.</span><span class="n">net</span>
+</code></pre></div>
+</td></tr></table>
+<p>And for starting we create a simple playbook, for example a hardware asset inventory:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="p p-Indicator">-</span> <span class="nt">hosts</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">all</span>
+  <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">root</span>
+
+  <span class="nt">tasks</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Display inventory of host</span>
+      <span class="nt">debug</span><span class="p">:</span>
+        <span class="nt">msg</span><span class="p">:</span> <span class="s">"{{</span><span class="nv"> </span><span class="s">inventory_hostname</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">ansible_default_ipv4.address</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">ansible_memtotal_mb</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">ansible_bios_date</span><span class="nv"> </span><span class="s">}}"</span>
+</code></pre></div>
+</td></tr></table>
+<p>This will act on all hosts, as user root and will run a task which prints a debug message crafted based on the contents of some of the <code>facts</code> that ansible gathers on the execution host.</p>
+<p>To run it is quite easy:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">[</span>iranzo@iranzo labs<span class="o">]</span>$ ansible-playbook -i myhost.net, inventory.yaml
+
+PLAY <span class="o">[</span>all<span class="o">]</span> *********************************************************************
+
+TASK <span class="o">[</span>setup<span class="o">]</span> *******************************************************************
+ok: <span class="o">[</span>myhost.net<span class="o">]</span>
+
+TASK <span class="o">[</span>Display inventory of host<span class="o">]</span> ***********************************************
+ok: <span class="o">[</span>myhost.net<span class="o">]</span> <span class="o">=</span>&gt; <span class="o">{</span>
+    <span class="s2">"msg"</span>: <span class="s2">"myhost.net | 192.168.1.1 | | | 14032 | | | 01/01/2011"</span>
+<span class="o">}</span>
+
+PLAY RECAP *********************************************************************
+myhost.net             : <span class="nv">ok</span><span class="o">=</span><span class="m">2</span>    <span class="nv">changed</span><span class="o">=</span><span class="m">0</span>    <span class="nv">unreachable</span><span class="o">=</span><span class="m">0</span>    <span class="nv">failed</span><span class="o">=</span><span class="m">0</span>
+</code></pre></div>
+</td></tr></table>
+<p>This has connected to the target host, and returned a message with hostname, ip address, some empty fields, total memory and bios date.</p>
+<p>This is a quite simple script, but for example, we can use <code>ansible</code> to deploy <code>ansible</code> binary on our target host using other modules available, in this case, for simplicity, we’ll not be using <code>pipsi</code> for ansible installation.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="p p-Indicator">-</span> <span class="nt">hosts</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">all</span>
+  <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">root</span>
+
+  <span class="nt">tasks</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install git</span>
+      <span class="nt">yum</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="s">"git"</span>
+          <span class="p p-Indicator">-</span> <span class="s">"python-virtualenv"</span>
+          <span class="p p-Indicator">-</span> <span class="s">"openssl-devel"</span>
+        <span class="nt">state</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">latest</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install virtualenv</span>
+      <span class="nt">pip</span><span class="p">:</span>
+        <span class="nt">virtualenv</span><span class="p">:</span> <span class="s">"/root/infrared/.venv"</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pipsi</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Upgrade virtualenv pip</span>
+      <span class="nt">pip</span><span class="p">:</span>
+        <span class="nt">virtualenv</span><span class="p">:</span> <span class="s">"/root/infrared/.venv"</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pip</span>
+        <span class="nt">extra_args</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">--upgrade</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Upgrade virtualenv setuptools</span>
+      <span class="nt">pip</span><span class="p">:</span>
+        <span class="nt">virtualenv</span><span class="p">:</span> <span class="s">"/root/infrared/.venv"</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">setuptools</span>
+        <span class="nt">extra_args</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">--upgrade</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install Ansible</span>
+      <span class="nt">pip</span><span class="p">:</span>
+        <span class="nt">virtualenv</span><span class="p">:</span> <span class="s">"/root/infrared/.venv"</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ansible</span>
+</code></pre></div>
+</td></tr></table>
+<p>At this point, the system should have ansible available from within the virtualenv we’ve created and should be available when executing:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Activate python virtualenv</span>
+. .venv/bin/activate
+<span class="c1"># execute ansible</span>
+ansible-playbook -i hosts ansible.yaml
+</code></pre></div>
+</td></tr></table>
+<p>Have fun!</p>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=Getting%20started%20with%C2%A0Ansible&url=https%3A//iranzo.io/blog/2017/02/20/getting-started-with-ansible/&via=iranzop&hashtags=python,ansible,openstack,sysmgmt,foss" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2017/02/20/getting-started-with-ansible/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=Getting%20started%20with%C2%A0Ansible&amp;body=https%3A//iranzo.io/blog/2017/02/20/getting-started-with-ansible/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/"
+                   href="https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/';
+    var disqus_url = 'https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/" title="InfraRed for deploying OpenStack">InfraRed for deploying OpenStack</a></li>
+<li><a href="https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems/" title="Citellus: framework for detecting known issues in systems.">Citellus: framework for detecting known issues in systems.</a></li>
+<li><a href="https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts/" title="Magui for analysis of issues across several hosts.">Magui for analysis of issues across several hosts.</a></li>
+<li><a href="https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/" title="Jenkins for running CI tests">Jenkins for running CI tests</a></li>
+<li><a href="https://iranzo.io/blog/2019/05/30/emerging-tech-vlc19-citellus-automatizacion-de-comprobaciones/" title="Emerging Tech VLC‘19 - Citellus - Automatización de comprobaciones">Emerging Tech VLC‘19 - Citellus - Automatización de comprobaciones</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2016/11/05/unit-testing-for-stampy/" title="Previous: Unit testing for stampy">Unit testing for stampy</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/" title="Next: InfraRed for deploying OpenStack">InfraRed for deploying OpenStack</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2017-02-20T23:10:00+01:00">Mon 20 February 2017</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#ansible-ref">ansible
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#foss-ref">foss
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#openstack-ref">OpenStack
+                    <span class="superscript">13</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#python-ref">python
+                    <span class="superscript">27</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#sysmgmt-ref">sysmgmt
+                    <span class="superscript">5</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

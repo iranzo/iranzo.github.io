@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - shell</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Thu, 27 Jun 2019 23:16:14 +0200</lastBuildDate><item><title>Argos extension writing for Gnome3</title><link>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</link><description>&lt;p&gt;I was using from time ago this extension for Gnome named &lt;a href="https://github.com/p-e-w/argos"&gt;Argos&lt;/a&gt; which allows to create useful data views using scripts written in whatever language of choice available, bash&amp;nbsp;included.&lt;/p&gt;
+&lt;p&gt;So far I had just a simple extension writing a &lt;span class="caps"&gt;UNICODE&lt;/span&gt; character, but with the suggestion of my colleague &lt;a href="http://www.sombrerorojo.com/"&gt;Javi Ramírez&lt;/a&gt;, I decided to use the motivational idea to write a simple script to calculate how much you&amp;#8217;ve earned so far in the day and show that information at a glance on your menu&amp;nbsp;bar.&lt;/p&gt;
+&lt;p&gt;File is available &lt;a href="https://gist.github.com/iranzo/1c01c1296cf20c13d954562c39d36466"&gt;here&lt;/a&gt;, and must be named like &lt;code&gt;showmethemoney.1s.sh&lt;/code&gt; inside your argos&amp;nbsp;folder.&lt;/p&gt;
+&lt;p&gt;Content is very&amp;nbsp;simple:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;
+&lt;span class="normal"&gt;32&lt;/span&gt;
+&lt;span class="normal"&gt;33&lt;/span&gt;
+&lt;span class="normal"&gt;34&lt;/span&gt;
+&lt;span class="normal"&gt;35&lt;/span&gt;
+&lt;span class="normal"&gt;36&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+&lt;span class="c1"&gt;# Author: Pablo Iranzo Gómez (Pablo.Iranzo@gmail.com)&lt;/span&gt;
+&lt;span class="c1"&gt;# Description: Script to calculate earned money so far in the day&lt;/span&gt;
+&lt;span class="c1"&gt;# Adjust DAILY to the daily income, adjust DAYSTART hour and DAYEND hour to your working schedule&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Customize to suit your details&lt;/span&gt;
+&lt;span class="nv"&gt;DAYSTART&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;8:00&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;DAYEND&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;17:00&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;DAILY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1000&lt;/span&gt;
+&lt;span class="nv"&gt;SYMBOL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;€&amp;quot;&lt;/span&gt;
+
+
+
+&lt;span class="nv"&gt;URL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;github.com/p-e-w/argos&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;dirname &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$0&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;DAILYTOTAL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;scale=4; &lt;/span&gt;&lt;span class="nv"&gt;$DAILY&lt;/span&gt;&lt;span class="s2"&gt;/(9*60*60)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt; bc&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;UNIXSTART&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;date --date&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;DAYSTART&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; +&lt;span class="s2"&gt;&amp;quot;%s&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;UNIXNOW&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;date +&lt;span class="s2"&gt;&amp;quot;%s&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;UNIXEND&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;date --date&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;DAYEND&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; +&lt;span class="s2"&gt;&amp;quot;%s&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXNOW&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -gt &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXEND&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;DAILY&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXNOW&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -gt &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXSTART&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;scale=2; &lt;/span&gt;&lt;span class="nv"&gt;$DAILYTOTAL&lt;/span&gt;&lt;span class="s2"&gt; * (&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXNOW&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;-&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXSTART&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;)&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; bc&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;0&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="nv"&gt;STRING&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;💰 &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="si"&gt;}${&lt;/span&gt;&lt;span class="nv"&gt;SYMBOL&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; 💰&amp;quot;&lt;/span&gt;
+
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$STRING&lt;/span&gt;&lt;span class="s2"&gt; | refresh=true&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;---&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$URL&lt;/span&gt;&lt;span class="s2"&gt; | iconName=help-faq-symbolic href=&amp;#39;https://&lt;/span&gt;&lt;span class="nv"&gt;$URL&lt;/span&gt;&lt;span class="s2"&gt;&amp;#39;&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$DIR&lt;/span&gt;&lt;span class="s2"&gt; | iconName=folder-symbolic href=&amp;#39;file://&lt;/span&gt;&lt;span class="nv"&gt;$DIR&lt;/span&gt;&lt;span class="s2"&gt;&amp;#39;&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;It checks if day has started or it&amp;#8217;s over and if in between, it calculates the amount based on Unix&amp;nbsp;epoch.&lt;/p&gt;
+&lt;p&gt;For more details about developing them, check argos link&amp;nbsp;above!&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2019-06-27:/blog/2019/06/27/argos-extension-writing-for-gnome3/</guid><category>tech</category><category>Linux</category><category>Fedora</category><category>Gnome</category><category>Argos</category><category>bash</category><category>shell</category></item></channel></rss>

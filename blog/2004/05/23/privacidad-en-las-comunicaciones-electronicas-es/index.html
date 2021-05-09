@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='es'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto. Orígenes¶ Desde tiempos inmemoriales …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="software, privacy, tech, " />
+
+<meta property="og:title" content="Privacidad en las comunicaciones electrónicas "/>
+<meta property="og:url" content="https://iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/" />
+<meta property="og:description" content="Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto. Orígenes¶ Desde tiempos inmemoriales …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2004-05-23T20:40:00+00:00" />
+<meta name="twitter:title" content="Privacidad en las comunicaciones electrónicas ">
+<meta name="twitter:description" content="Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto. Orígenes¶ Desde tiempos inmemoriales …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2004-05-23T20:40:00+00:00",
+        "description": "Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto. Orígenes¶ Desde tiempos inmemoriales …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/"
+        },
+
+        "headline": "Privacidad en las comunicaciones electrónicas",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>Privacidad en las comunicaciones electrónicas  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/">
+                Privacidad en las comunicaciones&nbsp;electrónicas
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#origenes">Orígenes</a></li>
+<li><a href="#actualidad">Actualidad</a></li>
+<li><a href="#como-proteger-nuestra-privacidad-entonces">¿Cómo proteger nuestra privacidad entonces?</a><ul>
+<li><a href="#web">Web</a></li>
+<li><a href="#redes">Redes</a></li>
+<li><a href="#correo-electronico">Correo Electrónico</a></li>
+<li><a href="#redes-inalambricas">Redes inalámbricas</a></li>
+</ul>
+</li>
+<li><a href="#marco-legal">Marco legal</a></li>
+<li><a href="#consideraciones">Consideraciones</a></li>
+<li><a href="#enlaces">Enlaces</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<p>Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto.</p>
+<h3 id="origenes">Orígenes<a class="headerlink" href="#origenes" title="Permanent link">¶</a></h3>
+<p>Desde tiempos inmemoriales, a la vez que se avanzaba en la comunicación, se avanzaba también en la necesidad de mantener la privacidad de las mismas…</p>
+<p>Cuando la escritura fue dejando de ser un privilegio de unas minorías y comenzó a utilizarse más ampliamente, era necesario también una firma, algo que indicase que el mensaje provenía de una persona y el lacre hizo perfectamente su función, una vez terminado un escrito, se plegaba sobre sí mismo y se dejaba caer unas gotas de lacre sobre la junta y se presionaba con un sello sobre el papel, dejando por un lado las dos partes del escrito unidas y sólo separables rompiendo el sello y por otro
+lado, con un sello identificativo de cada persona que certificaba que ese mensaje había salido de sus manos.</p>
+<p>El lacre ha permitido que los mensajes fueran firmados y que se supiera si habían sido leídos o no de antemano, pero no permitía proteger la privadidad, ya que siempre podía ser interceptado y leído y ya nunca entregado, lo que lo convertía en poco fiable para transmitir grandes secretos.</p>
+<p>Se hacía necesaria una forma de codificación que a ojos de extraños fuera ininteligible, pero para los receptores y emisores legítimos fuera clara.</p>
+<p>Uno de los métodos más utilizados era la permutación de letras, si en un mensaje cambiábamos de orden todas las letras, siguiendo por ejemplo el orden del abecedario tendríamos un mensaje completamente distinto:</p>
+<p>Siguiendo el abecedario: abcdefghijklmnñopqrstuvwxyz y una semilla de permutación, el mensaje:</p>
+<ul>
+<li>Hola, este es un mensaje de saludo</li>
+</ul>
+<p>…quedaría con una clave de permutación 13 (rot13)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:</p>
+<ul>
+<li>Ubyn, rfgr rf ha zrafnwr qr fnyhqb</li>
+</ul>
+<p>Que a simple vista parece algo ininteligible.</p>
+<p>Estos sistemas se basaban en un secreto común, un código o llave que aplicada dos veces sobre el mismo mensaje en un sentido o en otro, lo descifraba o cifraba. Lo que se hacía entonces era transmitir una clave de cifrado y aplicarla por ambas partes para poder leer el mensaje.</p>
+<p>Los problemas aparecían cuando la clave era interceptada, ya que así, si se interceptaban los mensajes, aplicando la clave era posible descifrarlo.</p>
+<p>Un buen sistema de cifrado debe ser “fuerte”, existen algunos, que mediante un análisis del texto cifrado puede romperse, por ejemplo, sabiendo las frecuencias de aparición de las letras en un texto suficientemente grande de un idioma, si repetimos la estadística con un mensaje cifrado, podríamos asociar en base a las presencias relativas de cada carácter, su equivalencia entre el cifrado y el descifrado, pudiendo así romper la protección del mensaje.</p>
+<p>Uno de los sistemas “modernos” más conocidos fue la máquina <a href="http://es.wikipedia.org/wiki/Enigma">Enigma</a> famosa por ser utilizada por las fuerzas militares alemanas durante la <a href="http://es.wikipedia.org/wiki/Segunda_Guerra_Mundial">Segunda Guerra Mundial</a> y permitir, tras romper su cifrado, adelantar el fin de la guerra.</p>
+<p>La máquina Enigma se basaba en una clave que una vez introducida cambiaba mediante unos tambores rotatorios el resultado de apretar una tecla, de forma que al apretar varias veces una misma tecla, se obtenían resultados diferentes, dificultando enormemente el descifrado de un mensaje si no se conocía la clave inicial.</p>
+<h3 id="actualidad">Actualidad<a class="headerlink" href="#actualidad" title="Permanent link">¶</a></h3>
+<p>Hoy en día las comunicaciones siguen siendo algo necesario y la privacidad de las mismas es, si cabe, aún más necesaria.</p>
+<p>Con la aparición de nuevos medios técnicos, y el fomento del uso de las comunicaciones electrónicas (teléfono, fax, internet, email), ha aumentado considerablemente el flujo de las comunicaciones, pero paralelamente ha aumentado la potencia de cálculo de los ordenadores y por tanto, de la posibilidad de analizar el tráfico que pasa por ellos.</p>
+<p>Prácticamente todo el tráfico de Internet pasa por unos cuanto servidores, lo que posibilita que un programa espía ubicado en ellos capture y registre información de todo tipo.</p>
+<p>Echelon <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> era hasta hace unos años una simple sospecha, pero fue reconocido por haber sido utilizado por el gobierno Americano, así como los Ingleses (con sus respectivas “colonias”) y que, en los casos declarados, hay sospechas de haber favorecido notablemente a empresas Americanas frente a Europeas en grandes acuerdos comerciales (por ejemplo a Boing frente a Airbus)…</p>
+<p>Echelon se rumoreaba que registraba las comunicaciones telefónicas, emails, etc.</p>
+<p>Todos conocemos los sistemas de reconocimiento de voz para <span class="caps">PC</span> que permiten dictarle al ordenador un texto, también conocemos el sistema de las compañías telefónicas, que a través de la voz nos permiten ir entrando en diversas opciones de sus menús para facilitarnos la búsqueda de información y por otro lado conocemos la potencia de buscadores de internet para encontrar en base a un texto que escribamos… si se combinan ambas podemos tener un potente sistema que catalogue nuestras conversaciones
+y permita realizar búsquedas sobre ellas…</p>
+<p>Se rumorea que en Alemania, si durante una conversación telefónica se cita un número de palabras “prohibidas”, automáticamente la conversación pasa a ser registrada para posterior análisis…</p>
+<p>Se rumorea también que operadores de telefonía escuchan aleatoriamente conversaciones para comprobar la calidad de la comunicación…</p>
+<h3 id="como-proteger-nuestra-privacidad-entonces">¿Cómo proteger nuestra privacidad entonces?<a class="headerlink" href="#como-proteger-nuestra-privacidad-entonces" title="Permanent link">¶</a></h3>
+<h4 id="web">Web<a class="headerlink" href="#web" title="Permanent link">¶</a></h4>
+<p>Para las páginas web, el estándar adoptado son las <span class="caps">SSL</span> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> que cifran la comunicación entre el cliente y un servidor web autentificado con un certificado digital firmado por ciertas compañías consideradas de confianza y utiliza un cifrado de 56 ó 128 bits. Este cifrado es el más conocido, ya que es el que utilizan bancos, comercios, etc</p>
+<p>Como medida adicional de seguridad, los bancos utilizan tarjetas de claves, solicitar carácteres al azar de una clave definida por el usuario, etc.</p>
+<p>El uso de esta medida de seguridad viene indicado en los navegadores por el prefijo “<strong>https</strong>” en la barra de direcciones de la página que estamos visitando, así como un símbolo de un candadito en la barra de estado.</p>
+<p>Este sistema tiene un inconveniente y es que las empresas que firman los certificados y están reconocidas por los navegadores más habituales son unas pocas y cobran por sus servicios, de forma que muchos particulares o servidores gratuitos no pueden ofrecer certificados que sean auntomáticamente validados ya que son generados individualmente.</p>
+<p>Como alternativa libre surgió <a href="http://www.cacert.org/"><span class="caps">CACERT</span></a> que ofrece un servicio gratuito de firma de certificados, de forma que el día en que <span class="caps">CACERT</span> sea añadida a todos los navegadores<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>, automáticamente sus certificados sean validados sin molestias para el visitante (teniendo que aceptar manualmente el certificado).</p>
+<p>Estos certificados se basan en cadenas de confianza: tu navegador confía en unas empresas de certificado (<span class="caps">CA</span> <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> y todos los certificados “firmados” por esas empesas son válidos ante el navegador…. algo así como la frase “los amigos de mis amigos son mis amigos”</p>
+<h4 id="redes">Redes<a class="headerlink" href="#redes" title="Permanent link">¶</a></h4>
+<p>Para las conexiones entre diversas redes, se utilizan <span class="caps">VPN</span><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>. Una <span class="caps">VPN</span> enlaza dos equipos a través de otra red (generalmente internet) y permite utilizar un sencillo cifrado, para que los datos enviados no estén desprotegidos,mediante una <span class="caps">VPN</span> es fácil unir distintas redes como si fueran una sola a la vez que se crea un poco más de seguridad para los datos que se transmiten<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>.</p>
+<h4 id="correo-electronico">Correo Electrónico<a class="headerlink" href="#correo-electronico" title="Permanent link">¶</a></h4>
+<p>El tema del correo electrónico es un aspecto muy importante, pero poco explorado por los usuarios. El más integrado en los programas más comerciales, es el basado en certificados, al estilo de las <span class="caps">SSL</span>, con el inconveniente de que requiere de un certificado firmado por una <span class="caps">CA</span> de confianza que es costoso en el caso de una comercial, o poco extendido en el caso de <span class="caps">CACERT</span>.</p>
+<p>El otro sistema, más ampliamente utilizado y uno de los más potentes existente es el <span class="caps">GPG</span><sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>, un derivado libre de <span class="caps">PGP</span><sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>.</p>
+<p><span class="caps">GPG</span> se basa en el sistema de llave pública/llave privada. En dicho sistema, cada interlocutor dispone de dos claves complementarias, una que todo el mundo conoce y otra que sólo el conoce, y que a su vez, están protegidas por una contraseña.</p>
+<p>Mediante este sistema, para enviar un mensaje cifrado, hacen falta cuatro claves para llevar a cabo la transferencia completa del mensaje:</p>
+<p>|—-|—-|
+|<em>Usuario 1</em>| <em>Usuario 2</em>|
+|Clave privada 1 |Clave privada 2|
+|Clave pública 1 |Clave pública 2|</p>
+<p>El usuario 1, cuando quiere enviar un mensaje cifrado al usuario 2 debe, por un lado cifrar el mensaje con su clave privada y con la clave pública de la otra persona.</p>
+<p>Al recibir el usuario 2 el mensaje, utiliza su clave privada para deshacer el cifrado de su clave pública y la clave pública del usuario 1 para deshacer el cifrado de la clave privada del usuario 1.</p>
+<p>Siguiendo este esquema, al ser necesarias las claves privadas de cada usuario y una clave que todo el mundo conoce, nos aseguramos que sólo el receptor podrá abrir el mensaje cifrado, de forma que aunque fuera interceptado, no se podría hacer nada con él.</p>
+<p>Este sistema se basa en las mencionadas cadenas de confianza. Una clave pública de una persona es firmada a su vez por personas que tienen constancia de que realmente dicha clave pública pertenece a quien dice ser, en el momento que se ha realizado esa comprobación (encuentro personal, linea de comunicación segura, etc), se pasa a firmar la clave pública de dicha persona con tu clave pública, de modo que cualquier persona que confíe en tí, confía a su vez con los usuarios de los que has firmado su clave.</p>
+<p>A cada firma, se le puede asignar también una “fiabilidad”, por ejemplo, puedo recibir un mensaje de una “persona 1” que conozco, pero no estoy seguro de si su clave es o no esa, así que la acepto, pero le asigno poca confianza… si a su vez, en mi “anillo de claves” tengo a otros usuarios que han firmado a su vez la firma de la persona 1 y yo confío en los otros usuarios, estoy indirectamente confiando en la “persona 1”…</p>
+<p>Las claves públicas se suelen ubicar en webs de fácil acceso, así como en una red mundial de servidores de claves, que a partir del email o nombre de una persona, nos proporciona su clave pública para poder enviarles mensajes cifrados.</p>
+<p>Una característica muy importante es la “firma” de los mensajes, que es el equivalente a estampar nuestro sello personal sobre el lacre fundido de los mensajes, deja una marca que aunque cualquiera pueda ver el mensaje, en caso de cualquier modificación del mismo (por ejemplo una falsificación de un mensaje, alteración, etc), indica al receptor que la verifique que el mensaje permanece inalterado desde su envío (por lo tanto es un mensaje legítimo), o bien que ha sido modificado (por lo que deberemos hablar con el remitente para solicitarle el reenvío del mismo).</p>
+<p>Si combinamos la firma de mensajes con el cifrado, dispondremos de un sistema muy bueno de cifrado que nos asegurará privacidad en las comunicaciones.</p>
+<h4 id="redes-inalambricas">Redes inalámbricas<a class="headerlink" href="#redes-inalambricas" title="Permanent link">¶</a></h4>
+<p><span class="caps">WEP</span><sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup> Es un sistema de cifrado equivalente a las <span class="caps">SSL</span> pero para redes inalámbricas, pero que ha demostrado ser fácilmente “rompible” y por lo tanto insuficiente para asegurar los datos enviados en una conexión.</p>
+<p>En muchos casos se refuerza el <span class="caps">WEP</span> con túneles <span class="caps">VPN</span> cifrados con <a href="http://www.freeswan.org/">FreeSWAN</a> además del uso de aplicaciones seguras (<span class="caps">SSH</span>, etc)</p>
+<p>Actualmente poca gente protege sus redes inalámbricas y son numerosos los informes, incluso de empresas como Hewlett-Packard avisando sobre cómo haciendo wardriving<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup> es posible ntrar a las redes internas de muchas empresas.</p>
+<p>Incluso utilizando <span class="caps">WEP</span>, una red inalámbrica no es segura, ya que debido a fallos de diseño, es posible acceder a ella saltándose la clave de cifrado.</p>
+<h3 id="marco-legal">Marco legal<a class="headerlink" href="#marco-legal" title="Permanent link">¶</a></h3>
+<p>Uno de los principales escollos para la criptografía fue y sigue siendo las leyes de exportación<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup> americanas, que impedían su exportación al extranjero de programas que incorporaran cifrado “fuerte” y que provocó situaciones tan ridículas como que el código fuente del programa <span class="caps">PGP</span> no pudiera ser exportado electrónicamente y que por lo tanto fuera impreso completamente en muchísimos volúmenes de texto, que se sacaron legalmente (sólo era ilegal en formato binario) del país, permitiendo que a su llegada a Europa, fueran escaneados y convertidos de nuevo a código de ordenador para crear la versión Europea de <span class="caps">PGP</span> (sin la restricción de exportación americana).</p>
+<p>Los gobiernos argumentan que el uso de cifrado es indicativo de actividades delictivas y gran parte de la gente piensa que si no va a hacer nada malo, no tiene porqué ocultarlo, el problema no viene de aquí, sino que en parte, la dignidad de las personas se basa en la privacidad, la intimidad, que es un derecho otorgado por la constitución y que no debemos consentir en perder.</p>
+<p>Se ha demostrado sobradamente que muy a pesar de los intentos de los gobiernos por impedir la criptografía, los terroristas<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup> siguen atentando, por lo tanto, quien tenga que hacer algo, lo hará de igual modo a pesar del atropello hacia nuestros derechos y libertades de impedirnos el secreto de las comunicaciones.</p>
+<p>El gobierno Francés, conocido otrora como el de la “Legalité, Fraternité, Equalité”, prohibió en su país el uso del sistema de cifrado <span class="caps">PGP</span> ya que no podían leer el contenido de los mensajes… Permitiendo juzgar como terroristas a los usuarios de cifrados que ellos no controlaran (es amplia la historia de puertas traseras(backdoors)<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup> en los programas informáticos para permitir accesos no autorizados)</p>
+<p>Más recientemente y también por parte del <a href="http://barrapunto.com/article.pl?sid=04/04/27/1654246&amp;mode=thread">gobierno francés</a> se ha juzgado a un investigador por publicar en una web un informe acerca de un antivirus francés que se jactaba de ser invulnerable y 100% eficaz frente a virus conocidos y desconocidos.</p>
+<p>El <a href="http://ciberderechos.barrapunto.com/article.pl?sid=04/05/20/1956239">Científico acusado</a> mediante varias pruebas conceptuales, demostró que esa publicidad que hacían del antivirus no era cierta y a pesar de ello, se enfrenta a una pena de hasta dos años de cárcel<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup> y 15.000 Euros de multa además de los gastos económicos en abogados y viajes de Boston a París para asistir al juicio…</p>
+<p>Según el método científico, es la discusión sobre los experimentos y los problemas encontrados los que ayudan a mejorarlos y a llegar a soluciones, y en el caso de la computación, ha demostrado que sí, gracias a encontrarse fallos de seguridad, los programas han ido mejorando corrigiéndolos, por un lado los afectados y por otro lado los relacionados, para evitar los errores que otros han cometido… según la ley francesa, cualquier persona que informe sobre fallos de seguridad será denunciada…</p>
+<p>En España si no recuerdo mal, era necesario comunicar las claves de cifrado a las fuerzas policiales en caso de requerimiento…</p>
+<p>En fin, se intenta proteger a la gente haciéndolos ignorantes<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup>.</p>
+<p>El Software Libre ya ha demostrado que su fuerza se basa en que al estar disponible a la revisión y mejora de millones de personas en todo el mundo resulta más robusto y confiable… y cada vez más, aporta un grado de privacidad (debido a la no existencia de puertas traseras) que otros sistemas no ofrecen.</p>
+<p>Hoy en día, en nombre de la “Seguridad”, se están instalando cámaras en las calles (en Central Park, con reconocimiento facial, para saber quién entra y quien sale), chips en los coches para pasar por las aduanas o bien reconocerlos por la matrícula, se espían correos, webs visitadas, y ahora, en nombre de “Los derechos de Autor”, se están espiando las comunicaciones de otros programas como los <span class="caps">P2P</span><sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup>.</p>
+<p>En Grecia, según una reciente <a href="http://barrapunto.com/article.pl?sid=04/05/22/231200">noticia</a> será delito la compra de <span class="caps">CD</span>’s del top-manta con penas de hasta 3 meses de cárcel… Con la excusa de la seguridad, los derechos de autor y demás, gestión digital de derechos <sup id="fnref:18"><a class="footnote-ref" href="#fn:18">18</a></sup> se han creado protocolos como <span class="caps">TCPA</span><sup id="fnref:19"><a class="footnote-ref" href="#fn:19">19</a></sup>/Palladium<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">20</a></sup> que relegan al poseedor de un ordenador a ser un simple usuario que sólo puede hacer lo que se le ofrece, muy al estilo de lo que pasa con los <span class="caps">DVD</span>’s promocionales, que obligan a ver los anuncios sin posibilidad alguna de saltarlos…</p>
+<p>Existen alternativas como <a href="http://freenetproject.org/index.php?page=faq">Freenet</a> que a costa de hacernos perder velocidad en nuestras conexiones, nos garantizan una mayor seguridad (los datos viajan por varios servidores antes de alcanzar realmente al destino, de forma similar a como cuando se utilizan redes de proxies para acceder a los servidores web), de forma que dificultan notablemente la posibilidad de trazarlos.</p>
+<h3 id="consideraciones">Consideraciones<a class="headerlink" href="#consideraciones" title="Permanent link">¶</a></h3>
+<p>El software de cifrado no debe utilizarse sólo cuando haya algo privado que decir ya que llamará la atención, debe utilizarse por costumbre y de contínuo, dada la potencia actual de los ordenadores, el cifrado sólo es útil hasta que saquen máquinas suficientemente potentes como para romperlo en un plazo razonable de tiempo (un escrito cifrado que necesite un año para romperlo, no es útil, pues estará muy desfasado cuando se complete el descifrado). Por eso, al utilizar con normalidad el cifrado y la firma de los mensajes, estaremos contribuyendo a mantener nuestra privacidad para los momentos donde realmente sea necesaria.</p>
+<p>Debemos dejar de asociar el uso de cifrado, o de programas que oculten nuestras actividades en Internet a actividades/actitudes delictivas, estamos en nuestro derecho constitucional a la privacidad y como derecho, debemos ejercerlo siempre que podamos, para que no caiga en el olvido ni sea moneda de cambio ante empresas, monopolios, etc</p>
+<p>Se puede conseguir “seguridad” sin sacrificar la privacidad, puede que no sea tan sencillo, pero ya se ha demostrado en multitud de ocasiones que a pesar de los grandes recortes de libertades, no tenemos “paz”, sino al contrario, obtenemos radicalización por parte de la gente que quiere seguir haciendo “mal” (que lo van a seguir haciendo si quieren) y represión para el resto de nosotros.</p>
+<p>¡Utiliza el cifrado!</p>
+<h3 id="enlaces">Enlaces<a class="headerlink" href="#enlaces" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="http://www.kriptopolis.org/">Kriptopolis</a>]</li>
+<li><a href="http://www.pgpi.org/"><span class="caps">PGP</span> Internacional</a></li>
+<li><a href="http://bulma.net/body.phtml?nIdNoticia=1684">Introducción a <span class="caps">GPG</span>: Necesidad y guía rápida en siete pasos</a></li>
+<li><a href="http://www.hispasec.com/unaaldia/2034">Noticia en HispaSec del científico acusado</a> <a href="https://iranzo.io/blog/2004/05/13/patentes-de-software-es/">Patentes de Software</a></li>
+<li><a href="http://www.nodedb.com/index.php?country=europe&amp;state=es&amp;city=">Redes Inalámbricas (declaradas) en España</a></li>
+<li><a href="http://linuca.org/body.phtml?nIdNoticia=207">Preguntas frecuentes sobre informática fiable</a></li>
+</ul>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Web con un programa que cifra y descifra en <a href="http://www.rot13.com/">www.rot13.com</a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p><a href="http://altavoz.nodo50.org/echelon2000.htm">Informe Echeclon</a>, <a href="http://www.ugt.es/globalizacion/echelon.htm">El Programa Echelon</a> <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p>Secure Socket Layers: Capas de sockets seguras <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p>Existe una petición a Mozilla foundation para incluir estos certificados con su navegador <a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:5">
+<p>Certification Authority <a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:6">
+<p>Virtual Private Network <a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:7">
+<p>Por lo que son ampliamente utilizadas para interconectar organismos con diversas delegaciones <a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+<li id="fn:8">
+<p><span class="caps">GNU</span> Privacy Guard <a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">↩</a></p>
+</li>
+<li id="fn:9">
+<p>Pretty Good Privacy: Privacidad bastante buena <a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">↩</a></p>
+</li>
+<li id="fn:10">
+<p>Wired Equivalent Privacy <a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">↩</a></p>
+</li>
+<li id="fn:11">
+<p>Técnica consistente en viajar con un vehículo y un equipo con posibilidad de conexión inalámbrica detectando las redes accesibles y marcándolas para su posterior acceso <a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">↩</a></p>
+</li>
+<li id="fn:12">
+<p>Leyes que actualmente impiden a científicos de países “no buenos” publicar en revistas americanas, congresos, etc… <a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">↩</a></p>
+</li>
+<li id="fn:13">
+<p>Los pongo aqui porque es el argumento recientemente utilizado desde los atentados del 11 de Septiembre para cualquier cosa que se aleje del pensamiento único: Antipatriotismo, terrorista, etc (un poco al igual que antes los “malos” eran los “comunistas”) <a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">↩</a></p>
+</li>
+<li id="fn:14">
+<p>Por eso el Software Libre aventaja al Privativo, en que al haber libre disponibilidad del código, se puede analizar en busca de puertas traseras <a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">↩</a></p>
+</li>
+<li id="fn:15">
+<p>Le acusan con cargos de Terrorismo <a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">↩</a></p>
+</li>
+<li id="fn:16">
+<p>Seguridad por ocultación: aunque muchas empresas basan el modelo de seguridad en este sitema, se corre el riesgo de que el día que alguien de “dentro” difunda la información, se vean todos los fallos y alguien lo aproveche malintencionadamente ya que los fallos existen, sólo se han “tapado” <a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">↩</a></p>
+</li>
+<li id="fn:17">
+<p>Peer to Peer: Programas utilizados para el intercambio de archivos de igual a igual <a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">↩</a></p>
+</li>
+<li id="fn:18">
+<p><span class="caps">DRM</span>:Digital Rights Management <a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text">↩</a></p>
+</li>
+<li id="fn:19">
+<p>Trusted Computing Platform Alliance <a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 19 in the text">↩</a></p>
+</li>
+<li id="fn:20">
+<p>Nombre en Clave del sistema operativo de <span class="caps">MS</span> que permitiría un control absoluto bajo las políticas de “seguridad” de <span class="caps">TCPA</span> <a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 20 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=Privacidad%20en%20las%20comunicaciones%C2%A0electr%C3%B3nicas&url=https%3A//iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/&via=iranzop&hashtags=software,privacy" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=Privacidad%20en%20las%20comunicaciones%C2%A0electr%C3%B3nicas&amp;body=https%3A//iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/"
+                   href="https://iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/';
+    var disqus_url = 'https://iranzo.io/blog/2004/05/23/privacidad-en-las-comunicaciones-electronicas-es/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2004/05/13/patentes-de-software-es/" title="Patentes de Software">Patentes de Software</a></li>
+<li><a href="https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/" title="OCS Inventory Package deployment">OCS Inventory Package deployment</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2004/05/13/patentes-de-software-es/" title="Previous: Patentes de Software">Patentes de Software</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2004/05/24/auroras-magia-en-el-cielo-es/" title="Next: Auroras - Magia en el Cielo">Auroras - Magia en el Cielo</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~13 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2004-05-23T20:40:00+00:00">Sun 23 May 2004</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#privacy-ref">privacy
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#software-ref">software
+                    <span class="superscript">3</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

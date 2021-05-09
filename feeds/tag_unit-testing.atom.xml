@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - unit testing</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_unit-testing.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2017-08-17T23:54:00+02:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Jenkins for running CI tests</title><link href="https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/" rel="alternate"></link><published>2017-08-17T23:54:00+02:00</published><updated>2017-08-17T23:54:00+02:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2017-08-17:/blog/2017/08/17/jenkins-for-running-ci-tests/</id><summary type="html">
+&lt;h2 id="why"&gt;Why?&lt;a class="headerlink" href="#why" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;While working on &lt;a href="https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems/"&gt;Citellus&lt;/a&gt; and &lt;a href="https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts/"&gt;Magui&lt;/a&gt; it soon became evident that Unit testing for validating the changes was a requirement.&lt;/p&gt;
+&lt;p&gt;Initially, using a &lt;code&gt;.travis.yml&lt;/code&gt; file contained in the repo and the free service provided by &lt;a href="https://travis-ci.org"&gt;https://travis-ci.org&lt;/a&gt; we soon got &lt;a href="https://github.com"&gt;https://github.com&lt;/a&gt; repo providing information about …&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="why"&gt;Why?&lt;a class="headerlink" href="#why" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;While working on &lt;a href="https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems/"&gt;Citellus&lt;/a&gt; and &lt;a href="https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts/"&gt;Magui&lt;/a&gt; it soon became evident that Unit testing for validating the changes was a requirement.&lt;/p&gt;
+&lt;p&gt;Initially, using a &lt;code&gt;.travis.yml&lt;/code&gt; file contained in the repo and the free service provided by &lt;a href="https://travis-ci.org"&gt;https://travis-ci.org&lt;/a&gt; we soon got &lt;a href="https://github.com"&gt;https://github.com&lt;/a&gt; repo providing information about if the builds succeeded or not.&lt;/p&gt;
+&lt;p&gt;When it was decided to move to &lt;a href="https://gerrithub.io"&gt;https://gerrithub.io&lt;/a&gt; to work in a more similar way to what is being done in upstream, we improved on the code commenting (peer review), but we lost the ability to run the tests in an automated way until the change was merged into github.&lt;/p&gt;
+&lt;p&gt;After some research, it became more or less evident that another tool, like Jenkins was required to automate the &lt;span class="caps"&gt;UT&lt;/span&gt; process and report to individual reviews about the status.&lt;/p&gt;
+&lt;h2 id="setup"&gt;Setup&lt;a class="headerlink" href="#setup" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Some initial steps are required for integration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create ssh keypair for Jenkins to use&lt;/li&gt;
+&lt;li&gt;Creating github account to be used by Jenkins and configuring above ssh keypair&lt;/li&gt;
+&lt;li&gt;Login into gerrithub with that account&lt;/li&gt;
+&lt;li&gt;Setup Jenkins and build jobs&lt;/li&gt;
+&lt;li&gt;Allow on the parent project, access to Jenkins github account permission to +1/-1 on Verify&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In order to setup the Jenkins environment a new &lt;span class="caps"&gt;VM&lt;/span&gt; was spawned in one of our &lt;span class="caps"&gt;RHV&lt;/span&gt; servers.&lt;/p&gt;
+&lt;p&gt;This &lt;span class="caps"&gt;VM&lt;/span&gt; was installed with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;20 Gigabytes of &lt;span class="caps"&gt;HDD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;2 Gigabytes of &lt;span class="caps"&gt;RAM&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;2 &lt;span class="caps"&gt;VCPU&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Red Hat Enterprise Linux 7 ‘base install’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="tuning-the-os"&gt;Tuning the &lt;span class="caps"&gt;OS&lt;/span&gt;&lt;a class="headerlink" href="#tuning-the-os" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RHEL7&lt;/span&gt; provides a stable environment for run on, but at the same time we were lacking some of the latest tools we’re using for the builds.&lt;/p&gt;
+&lt;p&gt;As a dirty hack, it was altered in what is not a recommended way, but helped to quickly check as proof of concept if it would work or not.&lt;/p&gt;
+&lt;p&gt;Once &lt;span class="caps"&gt;OS&lt;/span&gt; was installed, some commands (&lt;strong&gt;do not run in production&lt;/strong&gt;) were used:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pip &lt;span class="c1"&gt;# to upgrade pip&lt;/span&gt;
+pip install -U tox &lt;span class="c1"&gt;# To upgrade to 2.x version&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Install python 3.5 on the system&lt;/span&gt;
+yum -y install openssl-devel gcc
+wget https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz
+tar xvzf Python-3.5-0.tgz
+&lt;span class="nb"&gt;cd&lt;/span&gt; Python*
+./configure
+
+&lt;span class="c1"&gt;# This will install in alternate  folder in system not to replace user-wide python version&lt;/span&gt;
+make altinstall
+
+&lt;span class="c1"&gt;# this is required to later allow tox to find the command as 'jenkins' user&lt;/span&gt;
+ln -s /usr/local/bin/python3.5 /usr/bin/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="installing-jenkins"&gt;Installing Jenkins&lt;a class="headerlink" href="#installing-jenkins" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For the Jenkins installation it’s easier, there’s a ‘stable’ repo for &lt;span class="caps"&gt;RHEL&lt;/span&gt; and the procedure is &lt;a href="https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions"&gt;documented&lt;/a&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+yum install jenkins java
+chkconfig jenkins on
+service jenkins start
+firewall-cmd --zone&lt;span class="o"&gt;=&lt;/span&gt;public --add-port&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8080&lt;/span&gt;/tcp --permanent
+firewall-cmd --zone&lt;span class="o"&gt;=&lt;/span&gt;public --add-service&lt;span class="o"&gt;=&lt;/span&gt;http --permanent
+firewall-cmd --reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This will install and start Jenkins and enable the firewall to access it.&lt;/p&gt;
+&lt;p&gt;If you can get to the url of your server at the port 8080, you’ll be presented an initial procedure for installing Jenkins.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Jenkins dashboard" src="https://iranzo.io/imagen/jenkins/dashboard.png"/&gt;&lt;/p&gt;
+&lt;p&gt;During it, you’ll be asked for a password on a file on disk and you’ll be prompted to create an user we’ll be using from now on to configure.&lt;/p&gt;
+&lt;p&gt;Also, we’ll be offered to deploy the most common set of plugins, choose that option, and later we’ll add the &lt;code&gt;gerrit&lt;/code&gt; plugin and &lt;code&gt;Python&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="configure-jenkins"&gt;Configure Jenkins&lt;a class="headerlink" href="#configure-jenkins" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Once we can login into gerrit, we need to enter the administration area, and install new plugins and install &lt;a href="https://wiki.jenkins.io/display/JENKINS/Gerrit+Trigger"&gt;Gerrit Trigger&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Manage Jenkins" src="https://iranzo.io/imagen/jenkins/manage.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Above link details how to do most of the setup, in this case, for gerrithub, we required:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hostname: &lt;code&gt;our hostname&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Frontend &lt;span class="caps"&gt;URL&lt;/span&gt;: &lt;code&gt;https://review.gerrithub.io&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Port: &lt;code&gt;29418&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Username: &lt;code&gt;our-github-jenkins-user&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; private key: &lt;code&gt;path_to_private_sshkey&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Gerrit trigger configuration" src="https://iranzo.io/imagen/jenkins/gerrit-trigger-config.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Once done, click on &lt;code&gt;Test Connection&lt;/code&gt; and validate if it worked.&lt;/p&gt;
+&lt;p&gt;At the time of this writing, version reported by plugin was &lt;code&gt;2.13.6-3044-g7e9c06d&lt;/code&gt; when connected to gerrithub.io.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Gerrit servers" src="https://iranzo.io/imagen/jenkins/gerritconfig.png"/&gt;&lt;/p&gt;
+&lt;h3 id="creating-a-job"&gt;Creating a Job&lt;a class="headerlink" href="#creating-a-job" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Now, we need to create a Job (first option in Jenkins list of jobs).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name: &lt;code&gt;Citellus&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Discard older executions:&lt;/li&gt;
+&lt;li&gt;Max number of executions to keep: &lt;code&gt;10&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Source code Origin: &lt;code&gt;Git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;URL&lt;/span&gt;: &lt;code&gt;ssh://&amp;lt;username&amp;gt;@review.gerrithub.io:29418/citellusorg/citellus&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Credentials: &lt;code&gt;jenkins&lt;/code&gt; (Created based on the ssh keypair defined above)&lt;/li&gt;
+&lt;li&gt;Branches to build: &lt;code&gt;$GERRIT_REFNAME.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Advanced&lt;ul&gt;
+&lt;li&gt;Refspec: &lt;code&gt;$GERRIT_REFSPEC&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add additional behaviours&lt;ul&gt;
+&lt;li&gt;Strategy for choosing what to build:&lt;/li&gt;
+&lt;li&gt;Choosing strategy &lt;code&gt;Gerrit Trigger&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Triggers for launch:&lt;/li&gt;
+&lt;li&gt;Change Merged&lt;/li&gt;
+&lt;li&gt;Commend added with regexp: &lt;code&gt;recheck&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Patchset created&lt;/li&gt;
+&lt;li&gt;Ref Updated&lt;/li&gt;
+&lt;li&gt;Gerrit Project:&lt;ul&gt;
+&lt;li&gt;Type: &lt;code&gt;plain&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Pattern: &lt;code&gt;citellusorg/citellus&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Branches:&lt;ul&gt;
+&lt;li&gt;Type: &lt;code&gt;Path&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Pattern: &lt;code&gt;**&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Execute:&lt;/li&gt;
+&lt;li&gt;Python script:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tox&lt;/span&gt;
+
+&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getenv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"WORKSPACE"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="c1"&gt;# environment is selected by ``TOXENV`` env variable&lt;/span&gt;
+&lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cmdline&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;&lt;img alt="Jenkins Job configuration" src="https://iranzo.io/imagen/jenkins/jobconfig.png"/&gt;&lt;/p&gt;
+&lt;p&gt;From this point, any new push (review) made against Gerrit will trigger a Jenkins build (in this case, running &lt;code&gt;tox&lt;/code&gt;). Additionally, a manual trigger of the job can be executed to validate the behavior.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Manual trigger" src="https://iranzo.io/imagen/jenkins/manualtrigger.png"/&gt;&lt;/p&gt;
+&lt;h3 id="checking-execution"&gt;Checking execution&lt;a class="headerlink" href="#checking-execution" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In our project, &lt;code&gt;tox&lt;/code&gt; checks some &lt;span class="caps"&gt;UT&lt;/span&gt;’s on &lt;code&gt;python 2.7&lt;/code&gt;, and &lt;code&gt;python 3.5&lt;/code&gt;, as well as python’s &lt;code&gt;Flake8&lt;/code&gt; compliance.&lt;/p&gt;
+&lt;p&gt;Now, Jenkins will build, and post messages on the review, stating that the build has started and the results of it, setting also the ‘Verified’ flag.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Gerrithub commens by Jenkins" src="https://iranzo.io/imagen/jenkins/gitreview.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Enjoy having automated validation of new reviews before accepting them into your code!&lt;/p&gt;</content><category term="tech"></category><category term="python"></category><category term="OpenStack"></category><category term="sysmgmt"></category><category term="bash"></category><category term="sosreport"></category><category term="citellus"></category><category term="Jenkins"></category><category term="unit testing"></category><category term="Gerrit"></category><category term="magui"></category><category term="foss"></category></entry></feed>

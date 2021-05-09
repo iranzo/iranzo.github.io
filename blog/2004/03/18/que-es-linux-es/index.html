@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='es'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Introducción¶ Linux técnicamente hablando es sólo el núcleo de un sistema operativo, formado por la unión de ese núcleo y una serie de utilidades llamadas GNU. Linux fue creado por un estudiante finlandés llamado Linus Torvalds debido a su interés por aprender sobre sistemas operativos y verse limitado por los …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="linux, general, foss, tech, " />
+
+<meta property="og:title" content="¿Qué es Linux? "/>
+<meta property="og:url" content="https://iranzo.io/blog/2004/03/18/que-es-linux-es/" />
+<meta property="og:description" content="Introducción¶ Linux técnicamente hablando es sólo el núcleo de un sistema operativo, formado por la unión de ese núcleo y una serie de utilidades llamadas GNU. Linux fue creado por un estudiante finlandés llamado Linus Torvalds debido a su interés por aprender sobre sistemas operativos y verse limitado por los …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2004-03-18T22:50:00+00:00" />
+<meta name="twitter:title" content="¿Qué es Linux? ">
+<meta name="twitter:description" content="Introducción¶ Linux técnicamente hablando es sólo el núcleo de un sistema operativo, formado por la unión de ese núcleo y una serie de utilidades llamadas GNU. Linux fue creado por un estudiante finlandés llamado Linus Torvalds debido a su interés por aprender sobre sistemas operativos y verse limitado por los …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2004-03-18T22:50:00+00:00",
+        "description": "Introducción¶ Linux técnicamente hablando es sólo el núcleo de un sistema operativo, formado por la unión de ese núcleo y una serie de utilidades llamadas GNU. Linux fue creado por un estudiante finlandés llamado Linus Torvalds debido a su interés por aprender sobre sistemas operativos y verse limitado por los …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2004/03/18/que-es-linux-es/"
+        },
+
+        "headline": "¿Qué es Linux?",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>¿Qué es Linux?  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2004/03/18/que-es-linux-es/">
+                ¿Qué es&nbsp;Linux?
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduccion">Introducción</a></li>
+<li><a href="#dfsg-debian-free-software-guidelines-y-contrato-social-de-debian"><span class="caps">DFSG</span> Debian Free Software Guidelines y Contrato social de Debian)</a></li>
+<li><a href="#software-libre">Software Libre</a></li>
+<li><a href="#linux-el-futuro-es-abierto">Linux: El futuro es abierto</a></li>
+<li><a href="#gpl-general-public-license"><span class="caps">GPL</span>: General Public License</a></li>
+<li><a href="#linux-y-la-sociedad">Linux y la sociedad</a></li>
+<li><a href="#el-negocio-de-linux">El negocio de Linux</a></li>
+<li><a href="#linux-en-nuestros-alrededores">Linux en nuestros alrededores</a></li>
+<li><a href="#democratizacion-de-la-tecnologia">Democratización de la tecnología</a></li>
+<li><a href="#una-pequena-torre-de-babel">Una pequeña torre de babel</a></li>
+<li><a href="#compatibilidad">Compatibilidad</a></li>
+<li><a href="#seguridad-nacional">Seguridad Nacional</a></li>
+<li><a href="#tcpapalladium-intenciones-fiables-detras-de-la-trusted-computing"><span class="caps">TCPA</span>/Palladium - ¿Intenciones fiables detrás de la Trusted Computing?</a></li>
+<li><a href="#open-source-shared-source">Open Source / Shared Source</a></li>
+<li><a href="#escalabilidad-de-lo-mas-pequeno-a-lo-mas-grande-de-lo-mas-sencillo-a-lo-mas-complejo">Escalabilidad: De lo más pequeño a lo más grande, de lo más sencillo a lo más complejo</a></li>
+<li><a href="#enlaces-recomendados">Enlaces recomendados</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h3 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">¶</a></h3>
+<p>Linux técnicamente hablando es sólo el núcleo de un sistema operativo, formado por la unión de ese núcleo y una serie de utilidades llamadas <span class="caps">GNU</span>.</p>
+<p>Linux fue creado por un estudiante finlandés llamado Linus Torvalds debido a su interés por aprender sobre sistemas operativos y verse limitado por los disponibles en la época.</p>
+<p>La revolución de Linux fue precisamente que en sus primeros pasos fue publicado ante los ojos de todo el mundo presentándolo y solicitando que cualquiera que pudiera, lo mejorase y publicase las mejoras realizadas.</p>
+<p>Esa revolución, fue principalmente ideológica y unida a la filosofía iniciada por Richard Stallman con el movimiento <span class="caps">GNU</span> ha dado lugar a lo que se conoce como “Free Software”.</p>
+<h3 id="dfsg-debian-free-software-guidelines-y-contrato-social-de-debian"><span class="caps">DFSG</span> Debian Free Software Guidelines y Contrato social de Debian)<a class="headerlink" href="#dfsg-debian-free-software-guidelines-y-contrato-social-de-debian" title="Permanent link">¶</a></h3>
+<p>La definición de software libre se basa en las Debian Free Software Guidelines (<span class="caps">DFSG</span>) que dicen lo siguiente:</p>
+<ul>
+<li>Libre Redistribución La licencia de un componente de Debian no puede restringir a un tercero de vender o entregar el programa como componente de una distribución agregada conteniendo programas de diferentes fuentes. La licencia no debe solicitar «royalties» u otras comisiones para esta venta.</li>
+<li>Código fuente El programa debe incluir el código fuente completo, y debe permitir distribución en código fuente y en forma compilada.</li>
+<li>Trabajos Derivados La licencia debe permitir modificaciones y trabajos derivados, y debe permitir que éstos se distribuyan bajo los mismos términos que la licencia del programa original.</li>
+<li>Integridad del Código Fuente del Autor La licencia puede restringir la distribución del código fuente en forma modificada <em>sólo</em> si la licencia permite la distribución de «ficheros de parches» junto con el código fuente con la intención de modificar el programa en el momento de compilarlo. Proceso por el cual se convierte el código fuente o receta de un programa en un archivo que el ordenador entiende para poder ejecutarlo.</li>
+<li>La licencia debe permitir explícitamente la distribución de software a partir de código fuente modificado. La licencia puede obligar a los trabajos derivados a llevar un nombre o número de versión diferentes del programa original. (Esto es un compromiso. El grupo de Debian anima a todos los autores a no restringir ningún fichero, fuente o compilado, de ser modificado.)</li>
+<li>No Discriminación contra Personas o Grupos La licencia no debe discriminar a ninguna persona o grupo de personas.</li>
+<li>No Discriminación contra Campos de Trabajo: La licencia no puede restringir a nadie que trabaje en un determinado campo a no usar el programa. Por ejemplo, no puede restringir el uso del programa a empresas, o ser usado en investigación genética.</li>
+<li>Distribución de Licencia: Los derechos unidos al programa deben aplicarse a todos aquellos a los que se redistribuya el programa, sin necesidad de pedir una licencia adicional para estas terceras partes.</li>
+<li>Licencia No Específica a Debian: Los derechos adjuntos al programa no deben depender de que el programa sea parte del sistema Debian. Si el programa es extraído de Debian y usado o distribuido sin Debian, pero manteniendo el resto de las condiciones de la licencia, todos aquellos a los que el programa se redistribuya deben tener los mismos derechos que los dados cuando forma parte de Debian.</li>
+<li>Licencia No Contaminante a Otros Programas. La licencia no debe poner restricciones sobre otros programas que se distribuyan junto con el programa licenciado. Por ejemplo, la licencia no puede insistir que todos los demás programas distribuidos sobre el mismo medio deben ser software libre.</li>
+</ul>
+<p>Ejemplos de Licencia: Las licencias «<span class="caps">GPL</span>», «<span class="caps">BSD</span>», y «Artística» son ejemplos de licencias que nosotros consideramos «libres».</p>
+<p>Si un programa cumple todas esas condiciones es considerado Free Software.</p>
+<h3 id="software-libre">Software Libre<a class="headerlink" href="#software-libre" title="Permanent link">¶</a></h3>
+<p>En español, la palabra “free” tiene dos significados “libre” y “gratuito”, lo que lleva a confusiones.</p>
+<p>Por Libre se entiende a que como indican las “<span class="caps">DFSG</span>” que el software da total libertad para ver su “receta”, poder modificarla y/o mejorarla y volverla a distribuir.</p>
+<p>Por así decirlo, el software libre utiliza la misma filosofía que la ciencia, el conocimiento, el saber, debe ser del pueblo, ser un bien común, patrimonio cultural para que con la aportación de todos, siga evolucionando y enriqueciendo la “cultura”.</p>
+<p>En <span class="caps">EEUU</span> hicieron hace tiempo un anuncio que tuvo gran repercusión, tanto entre la comunidad Linux como entre otras, debido a que el anuncio, además de ser patrocinado por <span class="caps">IBM</span> y hablando únicamente sobre Linux, duraba el doble de lo normal para los anuncios estadounidenses, además de utilizar a grandes personalidades.</p>
+<p>Ya no está en <span class="caps">IBM</span>, en youtube:
+<a href="http://youtube.com/watch?v=4Gf6hq8J_DQ">http://youtube.com/watch?v=4Gf6hq8J_DQ</a></p>
+<p>Su transcripción es la siguiente:</p>
+<h3 id="linux-el-futuro-es-abierto">Linux: El futuro es abierto<a class="headerlink" href="#linux-el-futuro-es-abierto" title="Permanent link">¶</a></h3>
+<ul>
+<li>Imagen inicial</li>
+<li>Hombre Pienso que deberías ver esto.</li>
+<li>Mujer Es sólo un niño</li>
+<li>Imagen Niño sentado enfrente de un músico de rock</li>
+<li>Rockero Este es el acorde G (y toca la guitarra)</li>
+<li>Hombre Está aprendiendo. Absorbiendo. Se hace más inteligente cada día.</li>
+<li>Imagen Antropólogo sentado delante del niño</li>
+<li>Antropólogo El Homo Habilis fue el primero en utilizar herramientas</li>
+<li>Imagen Entrenador John R. Wooden hablando al niño</li>
+<li>Entrenador Un jugador que hace grande un equipo es más valioso que un gran jugador. Mezclarte con el grupo para el bien del grupo, eso es el trabajo en equipo.</li>
+<li>Imagen primer plano del niño</li>
+<li>Hombre Está ocurriendo rápido</li>
+<li>Imagen Astrónomo hablando al niño</li>
+<li>Astrónomo Siempre hemos observado las estrellas. Si miras al cielo verás el comienzo de los tiempos</li>
+<li>Imagen Futbolista botando una pelota en frente del niño</li>
+<li>Imagen Profesor Gates hablando al niño</li>
+<li>Profesor Recoger datos es el primer paso hacia la sabiduría, pero compartir los datos es el primer paso hacia la comunidad</li>
+<li>Imagen Poeta hablando al niño</li>
+<li>Poeta Poesía. No hay mucha gloria en la poesía, sólo reconocimiento</li>
+<li>Imagen Plano superior del niño</li>
+<li>Voz Amplificación de conocimientos. Lo que él aprende, lo aprendemos todos. Lo que el conoce, nos beneficia a todos.</li>
+<li>Imagen Sylvia Nasar hablando al niño</li>
+<li>Sylvia Una pequeña cosa puede resolver un problema increíblemente complejo.</li>
+<li>Imagen Penny Marshall hablando al niño</li>
+<li>Penny Todo tiene que ver con el tiempo chico.</li>
+<li>Imagen Hombre de negocios hablando al niño</li>
+<li><span class="caps">CEO</span> Esto es el negocio: Más rápido, mejor, más barato. Mejora constante</li>
+<li>Imagen Piloto hablando al niño</li>
+<li>Piloto Así que quieres volar ¿eh?. Viento, velocidad, empuje, es física</li>
+<li>Imagen Profesor de latín hablando</li>
+<li>Profesor Res Plublica non dominetur (Lo público no debe ser privado)</li>
+<li>Imagen Fontanero hablando al niño</li>
+<li>Fontanero Fontanería: Todo gracias a las herramientas.</li>
+<li>Imagen Muhammad Ali</li>
+<li>Ali Dí lo que piensas, no te achiques.</li>
+<li>Imagen Enfoque desde arriba al niño, volviendo la imagen en blanco.</li>
+<li>Mujer ¿Tiene un nombre?</li>
+<li>Hombre Su nombre es Linux</li>
+</ul>
+<p>Este anuncio, es una introducción bastante buena de lo que es Linux, es un sistema que es pequeño (en edad) todavía (la primera versión publicada por Linus Torvalds es del año 1991), pero es un sistema que se ha beneficiado desde muy joven de las mejores aportaciones de los expertos en cada campo, gente que no buscaba gloria, sino sólo el reconocimiento de un trabajo bien hecho y han conseguido un producto más rápido, más barato, mejor que además está en continua mejora.</p>
+<p>Una de las frases más identificadas con la filosofía es la del entrenador, donde dice que dejar de despuntar en un equipo por el bien del equipo es trabajo en equipo (que caracteriza a Linux como máximo exponente de la colaboración entre millones de personas de todo el mundo) y por otro el del profesor, donde indica que una comunidad se consigue gracias al compartimiento de conocimientos.</p>
+<p>Siguiendo con el significado de free software, hay mucha gente que piensa que Linux es gratuito y aunque muchas veces el software “libre” es gratuito, no siempre es así.</p>
+<p>El software libre tampoco está libre de derechos de autor o copyright. El Software libre tiene copyright como cualquier otra creación, pero como se indica en las <span class="caps">DFSG</span>, dispone de una licencia libre. Es más, la <span class="caps">GPL</span> defiende los derechos pues siempre solicita la cita del origen o fuente del código que contiene el programa al que acompaña.</p>
+<p>La licencia libre más conocida es la <span class="caps">GPL</span> y la <span class="caps">BSD</span>, la más extendida, la <span class="caps">GPL</span> otorga unos derechos unas obligaciones al usuario del software al que acompaña.</p>
+<h3 id="gpl-general-public-license"><span class="caps">GPL</span>: General Public License<a class="headerlink" href="#gpl-general-public-license" title="Permanent link">¶</a></h3>
+<p>La <span class="caps">GPL</span> otorga el permiso para copiar, distribuir y/o modificar los programas a los que acompaña bajo los términos de la <span class="caps">GPL</span>, que obligan a que cualquier trabajo mantenga los créditos, una copia completa de la <span class="caps">GPL</span> y a que cualquier trabajo derivado de uno basado en la <span class="caps">GPL</span> deba ser forzosamente basado también en la licencia <span class="caps">GPL</span>, de ese modo obliga a que el programa derivado del trabajo de otros, repercuta de nuevo en la sociedad.</p>
+<p>La <span class="caps">GPL</span> sólo obliga a que el trabajo esté disponible también bajo la <span class="caps">GPL</span> y a la dar la posibilidad de acceder al código modificado, pero no necesariamente debe acompañarlo (aunque es lo habitual).</p>
+<h3 id="linux-y-la-sociedad">Linux y la sociedad<a class="headerlink" href="#linux-y-la-sociedad" title="Permanent link">¶</a></h3>
+<h3 id="el-negocio-de-linux">El negocio de Linux<a class="headerlink" href="#el-negocio-de-linux" title="Permanent link">¶</a></h3>
+<p>El lugar para Linux existía en la sociedad desde hacía mucho tiempo, en realidad siempre ha existido, pero en un mundo movido por intereses económicos siempre se ha intentado ocultar.</p>
+<p>Las grandes empresas nos han intentado convencer mediante patentes de que el conocimiento es algo propiedad de grandes empresas, cuando desde siempre, el conocimiento se ha transmitido de generación en generación, enriqueciéndonos y aumentando nuestra sabiduría.</p>
+<p>¿Dónde estaría hoy en día nuestra civilización si no se hubiesen transferido los conocimientos de padres a hijos?</p>
+<p>El principal argumento contra la filosofía del libre conocimiento es que las empresas justifican que los desarrollos les suponen costes económicos y que deben rentabilizar dicha inversión.</p>
+<p>Según Ricardo Galli, de la Universitat de les Illes Balears, en su artículo de Bulma titulado <a href="http://bulma.net/impresion.phtml?nIdNoticia=1961">“De qué viviremos los informáticos”</a> los abogados por ejemplo o los médicos e incluso los profesores, viven (y bien pagados) de la transmisión de conocimientos que son libremente accesibles a todos.</p>
+<p>Las leyes por ejemplo, son conocidas por todos y es ese hecho lo que les da valor, que son conocidas y a pesar de poder todos leerlas, preferimos pagar a un abogado.</p>
+<p>Los médicos también aplican conocimientos públicos y también cobran bien, hasta los profesores, sólo se limitan a repetir los conocimientos a los que cualquiera tiene acceso y a pesar de eso se les paga por transmitirlos… ¿por qué en informática debería ser distinto?</p>
+<p>Esta filosofía tal y como demuestra el artículo lleva a demostrar que el negocio no está en mantener un secreto, sino todo lo contrario, cuanto más difundido está más útil es el conocimiento y a su vez más necesario.</p>
+<p>Si tomamos como ejemplo los móviles, si sólo unas pocas personas tuvieran teléfonos móviles, no serían de utilidad, teniéndolos como los tienen todos, es cuando más valiosos se hacen.</p>
+<p>Aplicándolo al tema del software, un software, al igual que un idioma se más valioso cuanta más gente lo conoce y lo utiliza y el verdadero negocio no está en su posesión, sino en lo servicios asociados.</p>
+<h3 id="linux-en-nuestros-alrededores">Linux en nuestros alrededores<a class="headerlink" href="#linux-en-nuestros-alrededores" title="Permanent link">¶</a></h3>
+<p>Actualmente, con grandes empresas monopolizando el negocio del software (principalmente norteamericanas), mucho del dinero gastado en el software “huye” de nuestro país, de nuestra comunidad para ir a parar a las arcas de personas en países extraños, de forma que no repercuten en nuestra economía.</p>
+<p>El software Libre, al ser abierto (Open Source) permite que cualquier persona pueda mantenerlo de forma que favorece y fomenta la economía local ya que se contratan “servicios” basados en ese software como por ejemplo mantenimiento del software, personalización de determinados aspectos, etc y se encargan a empresas locales.</p>
+<h3 id="democratizacion-de-la-tecnologia">Democratización de la tecnología<a class="headerlink" href="#democratizacion-de-la-tecnologia" title="Permanent link">¶</a></h3>
+<p>Como el coste del software tiende a ser nulo ya que el software está públicamente disponible en Internet, favorecemos a las economías oprimidas permitiéndoles acceso a nuevas tecnologías. El caso más conocido en España, es el de Extremadura que gracias a impulsar la implantación de Linux en los colegios y administraciones y al ahorro derivado de las inversiones en licencias de programas propietarios ha alcanzado que cada dos alumnos se disponga de un ordenador en las clases, permitiendo su familiarización con nuevas tecnologías.</p>
+<p>Hoy en día los países más atrasados económicamente, sufren además otro tipo de separación, y es la digital. El analfabetismo digital se hace cada vez más problemático conforme se plantea al ordenador como una herramienta necesaria en cualquier puesto de trabajo de cualquier sector de producción. En los países “pobres” se les une que además de las penurias económicas, tengan un retraso tecnológico que las atrapa todavía más en su situación. Unión de culturas</p>
+<p>Linux está desarrollado por particulares y empresas que colaboran alrededor de todo el mundo, sin importar sexo, raza, religión, política, etc. Linux es un proyecto a nivel mundial que elimina barreras y demuestra que el ser humano puede colaborar a pesar de todas las diferencias y a su vez lo enriquece gracias a ellas.</p>
+<p>Distintas personas en distintos entornos contrastan ideas, encuentran las mejores soluciones y las aplican al producto final que al estar formado de esa forma colaborativa, se adapta a multitud de entornos.</p>
+<h3 id="una-pequena-torre-de-babel">Una pequeña torre de babel<a class="headerlink" href="#una-pequena-torre-de-babel" title="Permanent link">¶</a></h3>
+<p>Otra de las ventajas de esta unión de culturas es que Linux es una verdadera torre de babel, los principales programas están traducidos a multitud de idiomas Traducciones <span class="caps">OO</span> y en los casos donde no ha sido traducido, al disponer del código fuente del programa, es posible adaptarlo por grupos locales para necesidades concretas.</p>
+<p>Linux permite así que los usuarios de pequeñas comunidades lingüísticas puedan desarrollar sus propias versiones del software y evitar así la pérdida de la identidad cultural subyacente en su idioma o dialecto.</p>
+<h3 id="compatibilidad">Compatibilidad<a class="headerlink" href="#compatibilidad" title="Permanent link">¶</a></h3>
+<p>Linux además de las características ya comentadas dispone de una que es estar basado en estándares abiertos (de no ser así habría sido imposible la coordinación de tan diversos grupos alrededor del mundo).</p>
+<p>Una de las mayores lacras de la sociedad actual en el ámbito electrónico es la diversidad de formatos, de los que muchos de ellos “atan” a un fabricante de programas o a un producto en concreto, resultando “obligado” para la persona que quiere acceder a adquirir ese programa con el importante desembolso económico (o a entrar en la ilegalidad utilizando copias piratas).</p>
+<p>Existen webs como GnuWIN o cdlibre que recopilan diverso software libre que funciona tanto sobre Linux como sobre otros sistemas como Windows.</p>
+<p>Tenemos grandes programas como OpenOffice que ofrecen una completa suite informática con procesador de textos, hoja de cálculo, programa de presentaciones, editor web, etc que además de ser completamente libres, son multiplafatorma, facilitando que usuarios con cualquier tipo de equipo pueda ejecutarlo en sus máquinas, independientemente del sistema operativo y plataforma , facilitando a los usuarios una misma herramienta con la que están familiarizados y poder trabajar sin perder más tiempo en habituación, aprendizaje, etc.</p>
+<p>Cada vez que publicamos un documento, etc en un formato no estándar o no abierto, estamos obligando a otras personas a tener problemas para leer nuestra información o peor aún, obligándoles a realizar un desembolso económico para poder acceder a la información.</p>
+<p>En documentos que publiquemos que nadie deba modificar, disponemos del formato <span class="caps">PDF</span> que se puede generar con software libre desde Linux y puede ser leido en cualquier otra plataforma, bien con programas cerrados como Acrobat Reader o bien con sus equivalentes libres.</p>
+<p>Cuando debamos publicar cosas que se puedan/deban modificar podremos utilizar OpenOffice</p>
+<p>OpenOffice utiliza como formato de fichero un archivo <span class="caps">XML</span> junto con las hojas de estilo donde se definen el formato y comprimidos con el estándar gzip. , o simplemente <span class="caps">HTML</span> estándar.</p>
+<p>Es habitual ver páginas web que sólo se visualizan bien con tal o cual versión de Internet Explorer. Este tipo de páginas son un problema para el libre acceso a la información, ya que Internet Explorer no cumple todos los estándares (de hecho se salta muchos a la torera) y por supuesto, no está disponible bajo cualquier plataforma. Hoy en día el navegador más estándar es Mozilla, heredero del antiguo Netscape, pero en versión libre.</p>
+<p>Con estándares abiertos como <span class="caps">XHTML</span>+<span class="caps">CSS</span> el acceso a la información se puede realizar desde cualquier plataforma y por cualquier persona, incluidas las personas con deficiencias visuales, que con las páginas actuales basadas en animaciones, vídeos y tecnologías propietarias, cierran su acceso a un gran colectivo mundial.</p>
+<p>El problema por ejemplo de los formatos cerrados es lo que por ejemplo lo que pasó con el llamado efecto 2000</p>
+<h3 id="seguridad-nacional">Seguridad Nacional<a class="headerlink" href="#seguridad-nacional" title="Permanent link">¶</a></h3>
+<p>En las cercanías del año 2000 hubo un gran revuelo porque muchas empresas utilizaban software muy antiguo que por economizar memoria (cuando era muy cara y escasa) utilizaban sólo 2 dígitos para indicar el año, haciendo que “00” pudiera ser bien 1900 o bien 2000 con todos los problemas en contabilidad, funcionamiento, etc que podría causar.</p>
+<p>La mayor parte del problema residía en que muchas empresas no habían adaptado su parque informático a programas más modernos porque los antiguos funcionaban bien, llegado el momento, el problema fue que mucho de ese software había sido desarrollado por empresas que habían desaparecido hace años, habían abandonado el desarrollo de ese software etc, de forma que esos programas se estaban convirtiendo en una cuenta atrás hacia el desastre.</p>
+<p>Con el modelo de desarrollo de programas del software libre, las empresas “usuarias” dispondrían del código fuente de ese software y podrían haber contrado a cualquier persona capacitada para modificar el programa para solventar dicho problema y no habría sido tan traumático…</p>
+<p>Pensemos en el futuro, ahora mucha documentación de organismos públicos, etc se genera en formato de Microsoft Word, el famoso “.doc”. ..</p>
+<p>Microsoft siempre ha favorecido que sus programas pudiesen leer archivos de otras plataformas como el procesador que antes era el más extendido: WordPerfect. Con el paso del tiempo, sus programas van dejando de soportar la posibilidad de exportar a otros formatos, haciendo que el que “entre” en su juego, ya no pueda salir, al menos con facilidad…</p>
+<p>Cierto es que existen muchos programas que pueden leer los formatos “.doc”, pero normalmente pierden parte del formato, etc porque no son compatibles al cien por cien.</p>
+<p>Hace poco se aprobó una ley mediante la cual, el saltarse cualquier sistema de protección fuera por hardware o por software podía terminar en penas de cárcel… el enfoque que más se extendió fue respecto a “piratear” las consolas para que aceptasen cd’s no originales… hoy en día eso es perseguible por la ley, y aplicado al mundo informático, significa que si alguien lee documentos de formato “.<span class="caps">DOC</span>” de Microsoft Office sin utilizar un permiso especial, etc está incumpliendo la ley…</p>
+<p>¿Qué pasará en el futuro cuando alguien quiera buscar documentos de la época actual y ya no existan programas que puedan leer los formatos de ahora? ¿no sería mejor que estuvieran cumpliendo un estándar y así poder leerlos siempre bajo especificaciones abiertas?</p>
+<p>Si todos los formatos fueran abiertos, podríamos leerlos siempre, o en caso de no disponer del programa para ello, podríamos programarlos siguiendo el estándar y saber que funcionarán a la perfección, por lo que no habrá pérdida alguna de datos.</p>
+<h3 id="tcpapalladium-intenciones-fiables-detras-de-la-trusted-computing"><span class="caps">TCPA</span>/Palladium - ¿Intenciones fiables detrás de la Trusted Computing?<a class="headerlink" href="#tcpapalladium-intenciones-fiables-detras-de-la-trusted-computing" title="Permanent link">¶</a></h3>
+<p>El tema de las consolas, al igual que los reproductores de <span class="caps">DVD</span>, comparten una misma raíz. Disponen de dispositivos electrónicos que impiden la libertad de uso. Por ejemplo, si disponemos de algún <span class="caps">DVD</span> de alguna colección de estas que regalan con periódicos, veremos que al principio, de forma irremediable debemos ver una publicidad sobre dicha colección…. estos dispositivos están controlando la forma en la que podemos disfrutar/acceder a la cultura, nos obligan a ver ciertas partes aunque no
+queramos… antes con el <span class="caps">VHS</span> podíamos pasar los anuncios e ir a la película, ahora no, ahora debemos verlo todo aunque no queramos…</p>
+<p>Vivimos en un mundo donde impera la ley del libre comercio, o al menos eso nos venden, ya que en realidad el mundo ha sido dividido en zonas para mantener monopolios… por ejemplo, si compramos en <span class="caps">EUA</span> una película y queremos verla en nuestro reproductor de <span class="caps">DVD</span> en España, no podremos, los aparatos van preparados para impedir ver discos que no sean de nuestra zona del mundo… ¿es eso libre mercado?</p>
+<p>Las consolas, leen en los discos que introducimos una “firma” de seguridad que las bloquea ante intentos de lectura de discos que no dispongan de esa forma, para así obligarnos a que si por ejemplo desarrollamos un juego por voluntad propia no podamos probarlo en una consola “real” a no ser que paguemos los royalties a la casa fabricante, es cierto que hoy en día se ha solventado con los llamados “modchips”, pero son ilegales según la ley recientemente aprobada o la <span class="caps">DMCA</span>…</p>
+<p>Para el mundo de los ordenadores no tenemos mejores expectativas… Microsoft junto con otros grandes fabricantes está desarrollando una especificación llamada <span class="caps">TCPA</span>: Trusted Computing Platform Alliance, que vendrá a hacer con nuestros ordenadores lo que pasa con los <span class="caps">DVD</span>’s,… el ordenador nos dirá cómo debemos gastarlo impidiendo que se pueda utilizar de otra forma que no sea la prevista.</p>
+<p>Una primera respuesta sería: “pues no compro ordenadores que soporten <span class="caps">TCPA</span>”, de acuerdo, pero ¿qué pasará cuando para acceder a su banco “online” le haga falta un equipo que soporte <span class="caps">TCPA</span>?, o mejor aún, ¿qué pasará cuando para acceder a Internet, le haga falta usar un dispositivo compatible con <span class="caps">TCPA</span>?</p>
+<p>Con <span class="caps">TCPA</span> seremos usuarios de lo que nuestro ordenador nos deje hacer, y a su vez el ordenador será controlado por reglas de uso que descargará automáticamente de internet de los diversos fabricantes.</p>
+<p>Uno de los escenarios planteados es una de las características que incluye en reciente Microsoft Office 2003, que permite bloquear la lectura de archivos fuera de los equipos de una empresa, o incluso caducidad de los correos electrónicos… se imagina que su jefe le ordena por correo electrónico a que obedezca bajo amenaza de despido a realizar alguna acción ilegal como por ejemplo destrucción de documentos y el día del juicio, se ve inculpado y la prueba, ese correo donde se le obliga ha desaparecido por arte de magia?</p>
+<p>¿Se imagina que se recibe una nueva regla por parte de <span class="caps">TCPA</span> que impide que abra documentos “.<span class="caps">DOC</span>” si no es con un programa de Microsoft? ¿y si en caso de que lo intente se le desinstala el programa que intentaba abrirlo o se elimine el documento?</p>
+<p>Con <span class="caps">TCPA</span> estaremos controlados por los ordenadores y no los controlaremos nosotros a ellos.</p>
+<p>¿Le parece adecuado que secretos de estado sean accesibles por gobiernos extranjeros? ¿empresas sean espiadas para ganar acuerdos comerciales con otras? [<a href="#nb3-3" title="La Eurocámara reconoce que Echelon espía a Europa">3</a>]</p>
+<h3 id="open-source-shared-source">Open Source / Shared Source<a class="headerlink" href="#open-source-shared-source" title="Permanent link">¶</a></h3>
+<p>El código abierto, o Open Source es lo que caracteriza a Linux, se tiene acceso total al mismo para su revisión y auditoria y ha demostrado mayores cotas de seguridad y fiabilidad que alternativas cerradas, tanto a nivel de sistema operativo como de aplicaciones.</p>
+<p>Microsoft amenazada por el gran uso de sistemas abiertos como Linux ha empezado una iniciativa llamada Shared Source en la que muestran bajo estrictos contratos y medidas de seguridad parte de su código fuente…</p>
+<p>El código fuente puede ser muy bonito, pero para estar seguros de lo que estamos ejecutando, debemos poder compilarlo nosotros mismos en base al código al que hemos tenido acceso, y con la iniciativa de Microsoft no se puede, es más, el código que Microsoft “muestra”, antes de llegar al usuario final, pasa por las manos de la <span class="caps">NSA</span> (Agencia de Seguridad Nacional de <span class="caps">EEUU</span>) que lo compila pudiendo realizar las modificaciones que quiera y luego lo devuelve en forma compilada a Microsoft para que lo distribuya a sus usuarios.</p>
+<p>¿De qué le sirve tener acceso al código de un sistema más o menos seguro si no tiene la certeza de que lo que ejecuta es lo mismo?</p>
+<p>Por muchas empresas se está intentando difundir la imagen de que Linux puede ayudar a terroristas, o es antipatriótico, pero no por nada en especial, sino porque le otorga al usuario la libertad para saber lo que ejecuta, poder modificarlo y no depender para ello de gobiernos o personas con intereses económicos creados.</p>
+<h3 id="escalabilidad-de-lo-mas-pequeno-a-lo-mas-grande-de-lo-mas-sencillo-a-lo-mas-complejo">Escalabilidad: De lo más pequeño a lo más grande, de lo más sencillo a lo más complejo<a class="headerlink" href="#escalabilidad-de-lo-mas-pequeno-a-lo-mas-grande-de-lo-mas-sencillo-a-lo-mas-complejo" title="Permanent link">¶</a></h3>
+<p>Linux ha demostrado que se adapta muy bien, desde pequeñas <span class="caps">PDA</span>’s o dispositivos integrados a grandes supercomputadores
+[<a href="#nb3-4" title="Presentación del Supercomputador de la UV en las 3ª Jornadas del Software (...)">4</a>]
+y desde cosas muy sencillas como routers a complejas como robots destinados a exploración espacial…</p>
+<p>Recordando el anuncio comentado antes, Linux ha recibido mejoras y demostrado su valía en los más diversos campos gracias a las aportaciones de gente en cualquier sector…</p>
+<p>La ventaja en la Calidad de Linux, es que al disponer de distribuciones (Linux propiamente es el núcleo del sistema, pero se entiende por Linux al núcleo y a un conjunto de utilidades que lo acompañan (por eso algunos lo llaman <span class="caps">GNU</span>/Linux)).</p>
+<p>Una distribución es un núcleo de Linux y un subconjunto de programas de todos los existentes adaptados a un determinado tipo de público (gran variedad). gratuitas, no están obligados a cumplir con plazos comerciales para rentabilizar (así que no esperes encontrar Linux 95, Linux 98, Linux 2000, Linux Millenium, Linux <span class="caps">XP</span>, Linux 2003, etc), al no depender de plazos, los programas salen cuando están listos para ser utilizados.</p>
+<p>Las distribuciones comerciales más conocidas incluyen últimas versiones de los programas para poder probar las últimas características.</p>
+<p>Dentro de Linux tenemos desde versiones muy estables orientadas a servidores a versiones de última generación orientadas a los usuarios que quieren ver las últimas novedades… y lo mejor de todo:</p>
+<p>Linux está hecha por usuarios, por gente que sugiere, gente que ayuda traduciendo, gente que crea documentación, cada uno aporta su granito de arena y hace que Linux gire hacia sus intereses, teniendo un sistema que puede adaptarse a miles de necesidades de los usuarios, es por así decirlo, una especie de navaja suiza…</p>
+<h3 id="enlaces-recomendados">Enlaces recomendados<a class="headerlink" href="#enlaces-recomendados" title="Permanent link">¶</a></h3>
+<p>Además de los enlaces que ya se han ido indicando en el documento, recomiendo estas páginas web por estar relacionadas con los derechos y libertades en el mundo “electónico” .</p>
+<ul>
+<li><a href="http://www.kriptopolis.org/">Kriptópolis</a></li>
+<li><a href="http://www.eff.org/">Electronic Frontier Foundation</a></li>
+<li>Debian Free Software Guidelines y Contrato social de Debian <a href="http://www.debian.org/social_contract.es.html">http://www.debian.org/social_contract.es.html</a></li>
+<li><a href="http://www.kriptopolis.com/more.php?id=A118_0_1_0_M">¿Intenciones fiables detrás de la Trusted Computing?</a></li>
+<li><a href="http://www.ciberpais.elpais.es/d/20010913/cibersoc/soc1.htm">La Eurocámara reconoce que Echelon espía a Europa</a></li>
+<li><a href="http://linuv.uv.es/jornadas/horarios">Presentación del Supercomputador de la <span class="caps">UV</span> en las 3ª Jornadas del Software Libre en la Universidad de Valencia</a></li>
+</ul>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=%C2%BFQu%C3%A9%20es%C2%A0Linux%3F&url=https%3A//iranzo.io/blog/2004/03/18/que-es-linux-es/&via=iranzop&hashtags=linux,general,foss" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2004/03/18/que-es-linux-es/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=%C2%BFQu%C3%A9%20es%C2%A0Linux%3F&amp;body=https%3A//iranzo.io/blog/2004/03/18/que-es-linux-es/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2004/03/18/que-es-linux-es/"
+                   href="https://iranzo.io/blog/2004/03/18/que-es-linux-es/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2004/03/18/que-es-linux-es/';
+    var disqus_url = 'https://iranzo.io/blog/2004/03/18/que-es-linux-es/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/" title="AwesomeSlides for converting LibreOffice ODP into revealjs">AwesomeSlides for converting LibreOffice ODP into revealjs</a></li>
+<li><a href="https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/" title="Use custom domain name with Blog-O-Matic">Use custom domain name with Blog-O-Matic</a></li>
+<li><a href="https://iranzo.io/blog/2019/06/11/katacoda-scenario-creation/" title="Katacoda scenario creation">Katacoda scenario creation</a></li>
+<li><a href="https://iranzo.io/blog/2020/02/13/git-commit-reordering/" title="Git commit reordering">Git commit reordering</a></li>
+<li><a href="https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/" title="Dell racadm remote ISO load">Dell racadm remote ISO load</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2004/02/06/configurar-exim3-con-mailscanner-y-clamav-es/" title="Previous: Configurar Exim3 con MailScanner y ClamAV">Configurar Exim3 con MailScanner y ClamAV</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2004/04/03/que-son-las-news-es/" title="Next: ¿Qué son las news?">¿Qué son las news?</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~18 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2004-03-18T22:50:00+00:00">Thu 18 March 2004</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#foss-ref">foss
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#general-ref">general
+                    <span class="superscript">6</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#linux-ref">linux
+                    <span class="superscript">37</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

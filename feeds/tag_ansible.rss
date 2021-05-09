@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - ansible</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Thu, 23 Feb 2017 23:27:00 +0100</lastBuildDate><item><title>InfraRed for deploying OpenStack</title><link>https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/</link><description>
+&lt;p&gt;&lt;a href="https://github.com/redhat-openstack/infrared/"&gt;InfraRed&lt;/a&gt; is tool that allows to install/provision OpenStack. You can find the documentation for the project at &lt;a href="http://infrared.readthedocs.io"&gt;http://infrared.readthedocs.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, developers and users are online in FreeNode at #infrared channel.&lt;/p&gt;
+&lt;h2 id="why-infrared"&gt;Why InfraRed?&lt;a class="headerlink" href="#why-infrared" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Deploying &lt;span class="caps"&gt;OSP&lt;/span&gt; with &lt;span class="caps"&gt;OSP&lt;/span&gt;-d (TripleO) requires several setup steps for preparation, deployment, etc. InfraRed simplifies them by automating with ansible most of those steps and configuration.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It allows to deploy several &lt;span class="caps"&gt;OSP&lt;/span&gt; versions&lt;/li&gt;
+&lt;li&gt;Allows to ease connection to installed vm roles (Ceph, Computes, Controllers, Undercloud)&lt;/li&gt;
+&lt;li&gt;Allows to define working environments so one InfraRed-running host can be used to manage different environments&lt;/li&gt;
+&lt;li&gt;and much more…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="setup-of-infrared-running-host"&gt;Setup of InfraRed-running host&lt;a class="headerlink" href="#setup-of-infrared-running-host" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Setting InfraRed is quite easy, at the moment the version 2 (branch on github) is working pretty well.&lt;/p&gt;
+&lt;p&gt;We’ll start with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone &lt;span class="caps"&gt;GIT&lt;/span&gt; repo: &lt;code&gt;git clone https://github.com/redhat-openstack/infrared.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a virtualenv so we can proceed with installation, later we’ll need to source it before each use. &lt;code&gt;cd infrared ; virtualenv .venv &amp;amp;&amp;amp; source .venv/bin/activate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Proceed with upgrade of pip and &lt;code&gt;setuptools&lt;/code&gt; (required) and installation of InfraRed&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip install --upgrade pip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip install --upgrade setuptools&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip install .&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="remote-host-setup"&gt;Remote host setup&lt;a class="headerlink" href="#remote-host-setup" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Once done, we need to setup the requirements on the host we’ll use to virtualize, this includes, having the system registered against a repository providing required packages.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Register &lt;span class="caps"&gt;RHEL7&lt;/span&gt; and update:&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;subscription-manager register&lt;/code&gt; (provide your credentials)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;subscription-manager attach --pool=&lt;/code&gt; (check pool number first)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;subscription-manager repos --disable=*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;for canal in rhel-7-server-extras-rpms rhel-7-server-fastrack-rpms rhel-7-server-optional-fastrack-rpms rhel-7-server-optional-rpms rhel-7-server-rh-common-rpms rhel-7-server-rhn-tools-rpms rhel-7-server-rpms rhel-7-server-supplementary-rpms rhel-ha-for-rhel-7-server-rpms;do subscription-manager repos --enable=$canal; done&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="notes"&gt;&lt;span class="caps"&gt;NOTES&lt;/span&gt;&lt;a class="headerlink" href="#notes" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OSP7&lt;/span&gt; did not contain &lt;span class="caps"&gt;RPM&lt;/span&gt; packaged version of images, a repo with the images needs to be defined like:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;time infrared tripleo-undercloud --version $VERSION --images-task import --images-url $REPO_URL&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;!!! note “Check the parameter values”
+  —images-task &lt;code&gt;import&lt;/code&gt; and &lt;code&gt;--images-url&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ceph failed to install unless &lt;code&gt;--storage-backend ceph&lt;/code&gt; was provided (open bug for that)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="error-reporting"&gt;Error reporting&lt;a class="headerlink" href="#error-reporting" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;IRC&lt;/span&gt; or github&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="rfebugs"&gt;&lt;span class="caps"&gt;RFE&lt;/span&gt;/&lt;span class="caps"&gt;BUGS&lt;/span&gt;&lt;a class="headerlink" href="#rfebugs" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Some bugs/&lt;span class="caps"&gt;RFE&lt;/span&gt; on the way to get implemented some day:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow use of localhost to launch installation against local host&lt;/li&gt;
+&lt;li&gt;Multi &lt;code&gt;env&lt;/code&gt; creation, so several &lt;span class="caps"&gt;OSP&lt;/span&gt;-d versions are deployed on the same hypervisor but one launched&lt;/li&gt;
+&lt;li&gt;Automatically add &lt;code&gt;--storage-backend ceph&lt;/code&gt; when Ceph nodes defined&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="using-ansible-to-deploy-infrared"&gt;Using Ansible to deploy InfraRed&lt;a class="headerlink" href="#using-ansible-to-deploy-infrared" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This is something that I began testing to automate the basic setup, still is needed to decide version to use, and do deployment of infrastructure &lt;span class="caps"&gt;VM&lt;/span&gt;’s but does some automation for setting up the hypervisors.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;
+&lt;span class="normal"&gt;32&lt;/span&gt;
+&lt;span class="normal"&gt;33&lt;/span&gt;
+&lt;span class="normal"&gt;34&lt;/span&gt;
+&lt;span class="normal"&gt;35&lt;/span&gt;
+&lt;span class="normal"&gt;36&lt;/span&gt;
+&lt;span class="normal"&gt;37&lt;/span&gt;
+&lt;span class="normal"&gt;38&lt;/span&gt;
+&lt;span class="normal"&gt;39&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;hosts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;all&lt;/span&gt;
+  &lt;span class="nt"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;root&lt;/span&gt;
+
+  &lt;span class="nt"&gt;tasks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Install git&lt;/span&gt;
+      &lt;span class="nt"&gt;yum&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;"git"&lt;/span&gt;
+          &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;"python-virtualenv"&lt;/span&gt;
+          &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;"openssl-devel"&lt;/span&gt;
+        &lt;span class="nt"&gt;state&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;latest&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"Checkout&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;InfraRed&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;to&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;/root/infrared&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;folder"&lt;/span&gt;
+      &lt;span class="nt"&gt;git&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;https://github.com/redhat-openstack/infrared.git&lt;/span&gt;
+        &lt;span class="nt"&gt;dest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;/root/infrared&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Initialize virtualenv&lt;/span&gt;
+      &lt;span class="nt"&gt;pip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;virtualenv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"/root/infrared/.venv"&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;setuptools, pip&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Upgrade virtualenv pip&lt;/span&gt;
+      &lt;span class="nt"&gt;pip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;virtualenv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"/root/infrared/.venv"&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip&lt;/span&gt;
+        &lt;span class="nt"&gt;extra_args&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;--upgrade&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Upgrade virtualenv setuptools&lt;/span&gt;
+      &lt;span class="nt"&gt;pip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;virtualenv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"/root/infrared/.venv"&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;setuptools&lt;/span&gt;
+        &lt;span class="nt"&gt;extra_args&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;--upgrade&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Install InfraRed&lt;/span&gt;
+      &lt;span class="nt"&gt;pip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;virtualenv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"/root/infrared/.venv"&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;file:///root/infrared/.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This playbook will do checkout of git repo, setup extra pip commands to upgrade virtualenv’s deployed pip and
+&lt;code&gt;setuptools&lt;/code&gt;, etc.&lt;/p&gt;
+&lt;h2 id="deploy-environment-examples"&gt;Deploy environment examples&lt;a class="headerlink" href="#deploy-environment-examples" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This will show the commands that might be used to deploy some environments and some sample timings on a 64Gb &lt;span class="caps"&gt;RAM&lt;/span&gt; host.&lt;/p&gt;
+&lt;h3 id="common-requirements"&gt;Common requirements&lt;a class="headerlink" href="#common-requirements" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HOST&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;myserver.com
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;HOST_KEY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;~/.ssh/id_rsa
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;ANSIBLE_LOG_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;deploy.log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="cleanup"&gt;Cleanup&lt;a class="headerlink" href="#cleanup" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;time&lt;/span&gt; infrared virsh --cleanup True --host-address &lt;span class="nv"&gt;$HOST&lt;/span&gt; --host-key &lt;span class="nv"&gt;$HOST_KEY&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="osp-9-3-2"&gt;&lt;span class="caps"&gt;OSP&lt;/span&gt; 9 (3 + 2)&lt;a class="headerlink" href="#osp-9-3-2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="define-version-to-use"&gt;Define version to use&lt;a class="headerlink" href="#define-version-to-use" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;VERSION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;9&lt;/span&gt;
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared virsh --host-address &lt;span class="nv"&gt;$HOST&lt;/span&gt; --host-key &lt;span class="nv"&gt;$HOST_KEY&lt;/span&gt; --topology-nodes &lt;span class="s2"&gt;"undercloud:1,controller:3,compute:2"&lt;/span&gt;
+
+real    11m19.665s
+user    3m7.013s
+sys     1m27.941s
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared tripleo-undercloud --version &lt;span class="nv"&gt;$VERSION&lt;/span&gt; --images-task rpm
+
+real    48m8.742s
+user    10m35.800s
+sys     5m23.126s
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared tripleo-overcloud --deployment-files virt --version &lt;span class="m"&gt;9&lt;/span&gt; --introspect yes --tagging yes --post yes
+
+real    43m44.424s
+user    9m36.592s
+sys     4m39.188s
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="osp-8-32"&gt;&lt;span class="caps"&gt;OSP&lt;/span&gt; 8 (3+2)&lt;a class="headerlink" href="#osp-8-32" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;VERSION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8&lt;/span&gt;
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared virsh --host-address &lt;span class="nv"&gt;$HOST&lt;/span&gt; --host-key &lt;span class="nv"&gt;$HOST_KEY&lt;/span&gt; --topology-nodes &lt;span class="s2"&gt;"undercloud:1,controller:3,compute:2"&lt;/span&gt;
+
+real    11m29.478s
+user    3m10.174s
+sys     1m28.276s
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared tripleo-undercloud --version &lt;span class="nv"&gt;$VERSION&lt;/span&gt; --images-task rpm
+
+real    40m47.387s
+user    9m14.151s
+sys     4m24.820s
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared tripleo-overcloud --deployment-files virt --version &lt;span class="nv"&gt;$VERSION&lt;/span&gt; --introspect yes --tagging yes --post yes
+
+real    42m57.315s
+user    9m2.412s
+sys     4m25.840s
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="osp-10-32"&gt;&lt;span class="caps"&gt;OSP&lt;/span&gt; 10 (3+2)&lt;a class="headerlink" href="#osp-10-32" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;VERSION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared virsh --host-address &lt;span class="nv"&gt;$HOST&lt;/span&gt; --host-key &lt;span class="nv"&gt;$HOST_KEY&lt;/span&gt; --topology-nodes &lt;span class="s2"&gt;"undercloud:1,controller:3,compute:2"&lt;/span&gt;
+
+real    10m54.710s
+user    2m42.761s
+sys     1m12.844s
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared tripleo-undercloud --version &lt;span class="nv"&gt;$VERSION&lt;/span&gt; --images-task rpm
+
+real    43m10.474s
+user    8m34.905s
+sys     4m3.732s
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared tripleo-overcloud --deployment-files virt --version &lt;span class="nv"&gt;$VERSION&lt;/span&gt; --introspect yes --tagging yes --post yes
+
+real    54m1.111s
+user    11m55.808s
+sys     6m1.023s
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="osp-7-323"&gt;&lt;span class="caps"&gt;OSP&lt;/span&gt; 7 (3+2+3)&lt;a class="headerlink" href="#osp-7-323" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;VERSION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared virsh --host-address &lt;span class="nv"&gt;$HOST&lt;/span&gt; --host-key &lt;span class="nv"&gt;$HOST_KEY&lt;/span&gt; --topology-nodes &lt;span class="s2"&gt;"undercloud:1,controller:3,compute:2,ceph:3"&lt;/span&gt;
+
+real    13m46.205s
+user    3m46.753s
+sys     1m47.422s
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared tripleo-undercloud --version &lt;span class="nv"&gt;$VERSION&lt;/span&gt; --images-task import    --images-url &lt;span class="nv"&gt;$URLTOIMAGES&lt;/span&gt;
+
+real    43m14.471s
+user    9m45.479s
+sys     4m53.126s
+
+&lt;span class="nb"&gt;time&lt;/span&gt; infrared tripleo-overcloud --deployment-files virt --version &lt;span class="nv"&gt;$VERSION&lt;/span&gt; --introspect yes --tagging yes --post yes     --storage-backend ceph
+
+real    86m47.471s
+user    20m2.582s
+sys     9m42.577s
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="wrapping-up"&gt;Wrapping-up&lt;a class="headerlink" href="#wrapping-up" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Please do refer to the InfraRed documentation to get deeper in its possibilities and if interested, consider contributing!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 23 Feb 2017 23:27:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2017-02-23:/blog/2017/02/23/infrared-for-deploying-openstack/</guid><category>tech</category><category>python</category><category>ansible</category><category>OpenStack</category><category>sysmgmt</category><category>InfraRed</category><category>foss</category></item><item><title>Getting started with Ansible</title><link>https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/</link><description>
+&lt;h2 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I’ve started to get familiar with &lt;a href="http://www.ansible.com"&gt;Ansible&lt;/a&gt; because,
+apart of getting more and more accepted for &lt;span class="caps"&gt;OSP&lt;/span&gt;-related tasks and
+installation, I wanted to automate some tasks we needed to setup some servers
+for the OpenStack group I work for.&lt;/p&gt;
+&lt;p&gt;First of all, it’s recommended to get latest version of ansible (tested on
+&lt;span class="caps"&gt;RHEL7&lt;/span&gt; and Fedora), but in order not to mess with the system python libraries, it’s convenient to use python’s virtual environments.&lt;/p&gt;
+&lt;p&gt;A virtual Environment allows to create a ‘chroot’-like environment that might contain different library versions to the one installed with the system (but be careful as if it’s not kept track as part of the usually system patching process, it might become a security concern).&lt;/p&gt;
+&lt;h2 id="virtualenvs"&gt;virtualenvs&lt;a class="headerlink" href="#virtualenvs" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For creating a virtualenv, we require the package &lt;code&gt;python-virtualenv&lt;/code&gt; installed on our system and executing &lt;code&gt;virtualenv&lt;/code&gt; and a target folder, for example:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;iranzo@iranzo ~&lt;span class="o"&gt;]&lt;/span&gt;$ virtualenv .venv
+New python executable &lt;span class="k"&gt;in&lt;/span&gt; /home/iranzo/.venv/bin/python2
+Also creating executable &lt;span class="k"&gt;in&lt;/span&gt; /home/iranzo/.venv/bin/python
+Installing setuptools, pip, wheel...done.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;From this point, we’ve a base virtualenv installed, but as we would like to install more packages inside we’ll first need to ‘enter’ into it:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;. .venv/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;And from there, we can list the available/installed packages:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;
+&lt;span class="normal"&gt;9&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;iranzo@iranzo ~&lt;span class="o"&gt;]&lt;/span&gt;$ pip list
+DEPRECATION: The default format will switch to columns &lt;span class="k"&gt;in&lt;/span&gt; the future. You can use --format&lt;span class="o"&gt;=(&lt;/span&gt;legacy&lt;span class="p"&gt;|&lt;/span&gt;columns&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;or define a &lt;span class="nv"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt;legacy&lt;span class="p"&gt;|&lt;/span&gt;columns&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; your pip.conf under the &lt;span class="o"&gt;[&lt;/span&gt;list&lt;span class="o"&gt;]&lt;/span&gt; section&lt;span class="o"&gt;)&lt;/span&gt; to disable this warning.
+appdirs &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;.4.0&lt;span class="o"&gt;)&lt;/span&gt;
+packaging &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;.8&lt;span class="o"&gt;)&lt;/span&gt;
+pip &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;9&lt;/span&gt;.0.1&lt;span class="o"&gt;)&lt;/span&gt;
+pyparsing &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;.1.10&lt;span class="o"&gt;)&lt;/span&gt;
+setuptools &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;34&lt;/span&gt;.2.0&lt;span class="o"&gt;)&lt;/span&gt;
+six &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;.10.0&lt;span class="o"&gt;)&lt;/span&gt;
+wheel &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;.30.0a0&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Now, all packages we install using &lt;code&gt;pip&lt;/code&gt; will get installed to this folder, leaving system libraries intact.&lt;/p&gt;
+&lt;p&gt;Once we finished, to return back to system’s environment, we’ll execute &lt;code&gt;deactivate&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="pipsi"&gt;&lt;code&gt;pipsi&lt;/code&gt;&lt;a class="headerlink" href="#pipsi" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In order to simplify the management we can make use of &lt;code&gt;pipsi&lt;/code&gt; which not only allows to install Python packages as we’ll normally do with &lt;code&gt;pip&lt;/code&gt;, but also, takes care of doing proper symlinks so the installed packages are available directly for execution.&lt;/p&gt;
+&lt;p&gt;If our distribution provides it, we can install &lt;code&gt;pipsi&lt;/code&gt; on our system:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;dnf -y install pipsi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;But if not, we can use this workaround (for example, on &lt;span class="caps"&gt;RHEL7&lt;/span&gt;)&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Use pip to install pipsi on the system (should be minor change not affecting other software installed)&lt;/span&gt;
+pip install pipsi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;From this point, we can use &lt;code&gt;pipsi&lt;/code&gt; to take care of installation and maintenance (can do upgrades, removal, etc) of our python packages.&lt;/p&gt;
+&lt;p&gt;For example, we can install &lt;code&gt;ansible&lt;/code&gt; by executing:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pipsi install ansible
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This might fail, as ansible, does some compiling and for doing so, it might require some development libraries on your system, have care of that to satisfy requirements for the packages.&lt;/p&gt;
+&lt;h2 id="prepare-for-ansible-utilization"&gt;Prepare for ansible utilization&lt;a class="headerlink" href="#prepare-for-ansible-utilization" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;At this point we’ve the &lt;code&gt;ansible&lt;/code&gt; binary available for execution as &lt;code&gt;pipsi&lt;/code&gt; did take care of setting up the required symlinks, etc&lt;/p&gt;
+&lt;p&gt;Ansible uses an inventory file (can be provided on command line) so it can connect to the hosts listed there and apply &lt;code&gt;playbooks&lt;/code&gt; which define the different actions to perform.&lt;/p&gt;
+&lt;p&gt;This file, for example, can consist of just a simple list of hosts to connect to like:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;192.168.1.1&lt;/span&gt;
+&lt;span class="mf"&gt;192.168.1.2&lt;/span&gt;
+&lt;span class="n"&gt;myhostname&lt;/span&gt;&lt;span class="mf"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;And for starting we create a simple playbook, for example a hardware asset inventory:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;hosts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;all&lt;/span&gt;
+  &lt;span class="nt"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;root&lt;/span&gt;
+
+  &lt;span class="nt"&gt;tasks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Display inventory of host&lt;/span&gt;
+      &lt;span class="nt"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"{{&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;inventory_hostname&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;}}&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;|&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;{{&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;ansible_default_ipv4.address&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;}}&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;|&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;|&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;|&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;{{&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;ansible_memtotal_mb&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;}}&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;|&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;|&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;|&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;{{&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;ansible_bios_date&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;}}"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This will act on all hosts, as user root and will run a task which prints a debug message crafted based on the contents of some of the &lt;code&gt;facts&lt;/code&gt; that ansible gathers on the execution host.&lt;/p&gt;
+&lt;p&gt;To run it is quite easy:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;iranzo@iranzo labs&lt;span class="o"&gt;]&lt;/span&gt;$ ansible-playbook -i myhost.net, inventory.yaml
+
+PLAY &lt;span class="o"&gt;[&lt;/span&gt;all&lt;span class="o"&gt;]&lt;/span&gt; *********************************************************************
+
+TASK &lt;span class="o"&gt;[&lt;/span&gt;setup&lt;span class="o"&gt;]&lt;/span&gt; *******************************************************************
+ok: &lt;span class="o"&gt;[&lt;/span&gt;myhost.net&lt;span class="o"&gt;]&lt;/span&gt;
+
+TASK &lt;span class="o"&gt;[&lt;/span&gt;Display inventory of host&lt;span class="o"&gt;]&lt;/span&gt; ***********************************************
+ok: &lt;span class="o"&gt;[&lt;/span&gt;myhost.net&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&amp;gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;"msg"&lt;/span&gt;: &lt;span class="s2"&gt;"myhost.net | 192.168.1.1 | | | 14032 | | | 01/01/2011"&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+PLAY RECAP *********************************************************************
+myhost.net             : &lt;span class="nv"&gt;ok&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;    &lt;span class="nv"&gt;changed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;    &lt;span class="nv"&gt;unreachable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;    &lt;span class="nv"&gt;failed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This has connected to the target host, and returned a message with hostname, ip address, some empty fields, total memory and bios date.&lt;/p&gt;
+&lt;p&gt;This is a quite simple script, but for example, we can use &lt;code&gt;ansible&lt;/code&gt; to deploy &lt;code&gt;ansible&lt;/code&gt; binary on our target host using other modules available, in this case, for simplicity, we’ll not be using &lt;code&gt;pipsi&lt;/code&gt; for ansible installation.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;
+&lt;span class="normal"&gt;32&lt;/span&gt;
+&lt;span class="normal"&gt;33&lt;/span&gt;
+&lt;span class="normal"&gt;34&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;hosts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;all&lt;/span&gt;
+  &lt;span class="nt"&gt;user&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;root&lt;/span&gt;
+
+  &lt;span class="nt"&gt;tasks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Install git&lt;/span&gt;
+      &lt;span class="nt"&gt;yum&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;"git"&lt;/span&gt;
+          &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;"python-virtualenv"&lt;/span&gt;
+          &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;"openssl-devel"&lt;/span&gt;
+        &lt;span class="nt"&gt;state&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;latest&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Install virtualenv&lt;/span&gt;
+      &lt;span class="nt"&gt;pip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;virtualenv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"/root/infrared/.venv"&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pipsi&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Upgrade virtualenv pip&lt;/span&gt;
+      &lt;span class="nt"&gt;pip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;virtualenv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"/root/infrared/.venv"&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip&lt;/span&gt;
+        &lt;span class="nt"&gt;extra_args&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;--upgrade&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Upgrade virtualenv setuptools&lt;/span&gt;
+      &lt;span class="nt"&gt;pip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;virtualenv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"/root/infrared/.venv"&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;setuptools&lt;/span&gt;
+        &lt;span class="nt"&gt;extra_args&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;--upgrade&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Install Ansible&lt;/span&gt;
+      &lt;span class="nt"&gt;pip&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;virtualenv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;"/root/infrared/.venv"&lt;/span&gt;
+        &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ansible&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;At this point, the system should have ansible available from within the virtualenv we’ve created and should be available when executing:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Activate python virtualenv&lt;/span&gt;
+. .venv/bin/activate
+&lt;span class="c1"&gt;# execute ansible&lt;/span&gt;
+ansible-playbook -i hosts ansible.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Have fun!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Mon, 20 Feb 2017 23:10:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2017-02-20:/blog/2017/02/20/getting-started-with-ansible/</guid><category>tech</category><category>python</category><category>ansible</category><category>OpenStack</category><category>sysmgmt</category><category>foss</category></item></channel></rss>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - RHEL</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Sat, 28 Mar 2015 18:46:42 +0100</lastBuildDate><item><title>Install RHEL7/Centos/Fedora on a software raid device</title><link>https://iranzo.io/blog/2015/03/28/install-rhel7centosfedora-on-a-software-raid-device/</link><description>
+&lt;p&gt;Installing Linux on a &lt;span class="caps"&gt;RAID&lt;/span&gt; has lot of advantages, from using &lt;span class="caps"&gt;RAID1&lt;/span&gt; to enjoy protection against drive failures or &lt;span class="caps"&gt;RAID0&lt;/span&gt; to combine the size of several drives to create bigger space for files with all the smaller disks we have.&lt;/p&gt;
+&lt;p&gt;There are several &lt;a href="http://en.wikipedia.org/wiki/RAID"&gt;&lt;span class="caps"&gt;RAID&lt;/span&gt;&lt;/a&gt; level definitions and may have different uses depending on our needs and hardware availability.&lt;/p&gt;
+&lt;p&gt;For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data)..&lt;/p&gt;
+&lt;h2 id="why-or-why-not-use-a-raid-via-software"&gt;Why or why not use a &lt;span class="caps"&gt;RAID&lt;/span&gt; via software&lt;a class="headerlink" href="#why-or-why-not-use-a-raid-via-software" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="pros"&gt;Pros&lt;a class="headerlink" href="#pros" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;There’s no proprietary data on the disks that could require this specific controller in case the hardware fails.&lt;/li&gt;
+&lt;li&gt;Can be performed on any system, disk combination, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="cons"&gt;Cons&lt;a class="headerlink" href="#cons" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The use of dedicated hardware &lt;span class="caps"&gt;RAID&lt;/span&gt; cards allows to offload the &lt;span class="caps"&gt;CPU&lt;/span&gt; intensive tasks for raid calculation, etc to the dedicated processor, freeing internal &lt;span class="caps"&gt;CPU&lt;/span&gt; for system/user usage.&lt;/li&gt;
+&lt;li&gt;Dedicated cards may have fancier features that require no support from the operating system as are all implemented by the card itself and presented to the &lt;span class="caps"&gt;OS&lt;/span&gt; as a standard drive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="performing-the-setup"&gt;Performing the setup&lt;a class="headerlink" href="#performing-the-setup" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;As I was installing on a &lt;code&gt;HP Microserver G8&lt;/code&gt; recently, I had to first disable the advanced mode for the included controller, so it behaved like a standard &lt;span class="caps"&gt;SATA&lt;/span&gt; one, once done, I was able to boot from my &lt;span class="caps"&gt;OS&lt;/span&gt; image (in this case &lt;span class="caps"&gt;EL7&lt;/span&gt; &lt;span class="caps"&gt;ISO&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;Once the &lt;span class="caps"&gt;ISO&lt;/span&gt; is booted in &lt;code&gt;rescue&lt;/code&gt; mode, I could switch to the second console with &lt;code&gt;ALT-F2&lt;/code&gt; so I could start executing commands on the shell.&lt;/p&gt;
+&lt;p&gt;First step is to setup partitioning, in this case I did two partitions, first one for holding &lt;code&gt;/boot&lt;/code&gt; and the second one for setting up the &lt;em&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt; physical volume&lt;/em&gt; where the other &lt;code&gt;Logical Volumes&lt;/code&gt; will be defined later.&lt;/p&gt;
+&lt;p&gt;I’ve elected this setup over others because &lt;code&gt;mdadm&lt;/code&gt; allows transparent support for booting (&lt;code&gt;grub&lt;/code&gt; supports booting form it) and easy to manage setup.&lt;/p&gt;
+&lt;p&gt;For partitions, remember to allocate at least 500mb for &lt;code&gt;/boot&lt;/code&gt; and as much
+as needed for your &lt;span class="caps"&gt;SO&lt;/span&gt;, for example, if only base &lt;span class="caps"&gt;OS&lt;/span&gt; is expected to have &lt;span class="caps"&gt;RAID&lt;/span&gt;
+protection, having a 20Gb partition will be enough, leaving the remaining
+disk to be used for a &lt;span class="caps"&gt;RAID0&lt;/span&gt; device for allocating non-critical files.&lt;/p&gt;
+&lt;p&gt;For both partitions, set type with &lt;code&gt;fdisk&lt;/code&gt; to &lt;code&gt;fd&lt;/code&gt;: &lt;code&gt;Linux RAID autodetect&lt;/code&gt;,
+and setup the two drives we’ll use for initial setup using the same values,
+for example:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fdisk /dev/sda
+n &lt;span class="c1"&gt;# for new partition&lt;/span&gt;
+p &lt;span class="c1"&gt;# for primary&lt;/span&gt;
+&amp;lt;ENTER&amp;gt; &lt;span class="c1"&gt;# for first sector&lt;/span&gt;
++500M &lt;span class="c1"&gt;# for size&lt;/span&gt;
+t &lt;span class="c1"&gt;# for type&lt;/span&gt;
+fd &lt;span class="c1"&gt;# for Linux RAID autodetect&lt;/span&gt;
+n &lt;span class="c1"&gt;# new partition&lt;/span&gt;
+p &lt;span class="c1"&gt;# primary&lt;/span&gt;
+&amp;lt;ENTER&amp;gt;
++20G &lt;span class="c1"&gt;#for size&lt;/span&gt;
+t &lt;span class="c1"&gt;#for type&lt;/span&gt;
+&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="c1"&gt;# for select 2nd partition&lt;/span&gt;
+fd &lt;span class="c1"&gt;# for Linux RAID autodetect&lt;/span&gt;
+&lt;span class="c1"&gt;# n for new partition&lt;/span&gt;
+p &lt;span class="c1"&gt;# for primary&lt;/span&gt;
+&amp;lt;ENTER&amp;gt; &lt;span class="c1"&gt;# for first sector&lt;/span&gt;
+&amp;lt;ENTER&amp;gt; &lt;span class="c1"&gt;# for remaining disk&lt;/span&gt;
+t &lt;span class="c1"&gt;# for type&lt;/span&gt;
+&lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="c1"&gt;# for third partition&lt;/span&gt;
+fd &lt;span class="c1"&gt;# for Linux RAID Autodetect&lt;/span&gt;
+w &lt;span class="c1"&gt;# for Writing changes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;And repeat that for &lt;code&gt;/dev/sdb&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;At this point, we’ll have both &lt;code&gt;sda&lt;/code&gt; and &lt;code&gt;sdb&lt;/code&gt; with the same partitions defined: &lt;code&gt;sd{a,b}1&lt;/code&gt; with 500Mb for &lt;code&gt;/boot&lt;/code&gt; and &lt;code&gt;sd{a,b}2&lt;/code&gt; with 20Gb for &lt;code&gt;LVM&lt;/code&gt; and the remaining disk for &lt;span class="caps"&gt;RAID0&lt;/span&gt; &lt;span class="caps"&gt;LVM&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Now, it’s time to create the raid device on top, for simplicity, I tend to use &lt;code&gt;md0&lt;/code&gt; for /boot, so let’s start with it.&lt;/p&gt;
+&lt;h2 id="creating-the-raid-devices-with-multiple-devices-mdadm"&gt;Creating the raid devices with Multiple Devices &lt;code&gt;mdadm&lt;/code&gt;&lt;a class="headerlink" href="#creating-the-raid-devices-with-multiple-devices-mdadm" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Let’s create the raid devices for each system, starting with &lt;code&gt;/boot&lt;/code&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mdadm --create /dev/md0 --level&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --raid-devices&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; /dev/sda1 /dev/sdb1
+mdadm --create /dev/md1 --level&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --raid-devices&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; /dev/sda2 /dev/sdb2
+mdadm --create /dev/md2 --level&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; --raid-devices&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; /dev/sda3 /dev/sdb3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Now, check the status of the raid device creation by issuing:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cat /proc/mdstat
+
+Personalities : &lt;span class="o"&gt;[&lt;/span&gt;raid1&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;raid6&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;raid5&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;raid4&lt;span class="o"&gt;]&lt;/span&gt;
+md0 : active raid1 sda1&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; sdb1&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+      &lt;span class="m"&gt;534760&lt;/span&gt; blocks level &lt;span class="m"&gt;1&lt;/span&gt;, 64k chunk, algorithm &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;/2&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;UU&lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="o"&gt;[==&lt;/span&gt;&amp;gt;..................&lt;span class="o"&gt;]&lt;/span&gt;  &lt;span class="nv"&gt;recovery&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt;.6% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;37043392&lt;/span&gt;/292945152&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;finish&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;127&lt;/span&gt;.5min &lt;span class="nv"&gt;speed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;33440K/sec
+md1 : active raid1 sda2&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; sdb2&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+      &lt;span class="m"&gt;20534760&lt;/span&gt; blocks level &lt;span class="m"&gt;1&lt;/span&gt;, 64k chunk, algorithm &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;/2&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;UU&lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="o"&gt;[=====&lt;/span&gt;&amp;gt;...............&lt;span class="o"&gt;]&lt;/span&gt;  &lt;span class="nv"&gt;recovery&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;25&lt;/span&gt;.9% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;37043392&lt;/span&gt;/692945152&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;finish&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;627&lt;/span&gt;.5min &lt;span class="nv"&gt;speed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;13440K/sec
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;When it finishes, all the devices will appear as synced, and we can start the installation of the operating system.&lt;/p&gt;
+&lt;p&gt;What I did, after this point, is to reboot the install media, so I could use &lt;code&gt;anaconda&lt;/code&gt; installer to select manually the filesystems, creating &lt;code&gt;/boot&lt;/code&gt; on &lt;code&gt;/dev/md0&lt;/code&gt;, then the Physical Volume on &lt;code&gt;/dev/md1&lt;/code&gt; for the operating system.&lt;/p&gt;
+&lt;p&gt;Select the &lt;code&gt;manual partitioning&lt;/code&gt; during the installation to define above devices as their intended usage, and once it has been installed, create the additional Physical volume on &lt;code&gt;/dev/md2&lt;/code&gt; and define the intended mount points, etc.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sat, 28 Mar 2015 18:46:42 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2015-03-28:/blog/2015/03/28/install-rhel7centosfedora-on-a-software-raid-device/</guid><category>tech</category><category>Linux</category><category>centos</category><category>Fedora</category><category>RHEL</category><category>FOSS</category></item><item><title>Customize RHEL/CentOS installation media (EL4/EL5+)</title><link>https://iranzo.io/blog/2010/01/23/customize-rhelcentos-installation-media-el4el5/</link><description>
+&lt;h2 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A standard install media, (let’s talk about a &lt;span class="caps"&gt;DVD&lt;/span&gt; for easier start) has several files/folders at his root, but most important are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;isolinux&lt;/code&gt; (where the loader lives)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;images&lt;/code&gt; (for extra files for installer to load)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Packages&lt;/code&gt; for installation (&lt;code&gt;RedHat/&lt;/code&gt; for &lt;span class="caps"&gt;EL4&lt;/span&gt;, &lt;code&gt;Server&lt;/code&gt;/&lt;code&gt;Client&lt;/code&gt; for &lt;span class="caps"&gt;EL5&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usually, a distribution has, for its main binaries, more than 2 gigabytes of data, that enables one target to act as a multifunction server/workstation, but that you will not usually load on the same system. Furthermore, since the &lt;span class="caps"&gt;DVD&lt;/span&gt; creation, there have been so many updates/patches that make your installation a ‘outdated’ install that you’ll need to upgrade to have recent patches.&lt;/p&gt;
+&lt;p&gt;Wouldn’t it be better to have one install media suited for your target systems with all available updates applied?&lt;/p&gt;
+&lt;h2 id="preparing-everything"&gt;Preparing everything&lt;a class="headerlink" href="#preparing-everything" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;First, we’ll need to copy all of our &lt;span class="caps"&gt;DVD&lt;/span&gt; media to a folder in our hard drive, including those hidden files on &lt;span class="caps"&gt;DVD&lt;/span&gt; root (the ones telling installer which &lt;span class="caps"&gt;CD&lt;/span&gt;-sets are included and some other info).&lt;/p&gt;
+&lt;p&gt;Let’s assume that we’ll work on /home/user/&lt;span class="caps"&gt;DVD&lt;/span&gt;/&lt;/p&gt;
+&lt;p&gt;After we’ve copied everything from our install media, we’ll start customizing :)&lt;/p&gt;
+&lt;h2 id="dvd-background-image-at-boot-prompt"&gt;&lt;span class="caps"&gt;DVD&lt;/span&gt; background image at boot prompt&lt;a class="headerlink" href="#dvd-background-image-at-boot-prompt" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We can customize &lt;span class="caps"&gt;DVD&lt;/span&gt; background image and even keyboard layout by tweaking &lt;code&gt;isolinux/isolinux.cfg&lt;/code&gt; with all required fields (Check &lt;a href="http://syslinux.zytor.com/wiki/index.php/SYSLINUX"&gt;&lt;code&gt;Syslinux&lt;/code&gt;&lt;/a&gt; Documentation to check proper syntax)&lt;/p&gt;
+&lt;p&gt;On &lt;a href="https://iranzo.io/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda-es/"&gt;&lt;code&gt;Kickstart: instalaciones automatizadas para anaconda&lt;/code&gt;&lt;/a&gt; (Spanish) you can also check how to create a kickstart, so you can embed it on this &lt;span class="caps"&gt;DVD&lt;/span&gt; and configure &lt;code&gt;isolinux.cfg&lt;/code&gt; to automatic provision a system&lt;/p&gt;
+&lt;h2 id="including-updates"&gt;Including updates&lt;a class="headerlink" href="#including-updates" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The easiest way would be to install a system with all required package set from original &lt;span class="caps"&gt;DVD&lt;/span&gt; media, and then connect that system to an update server to fetch but not install them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;EL4&lt;/span&gt;: &lt;code&gt;up2date -du # yum upgrade —downloadonly&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;EL5&lt;/span&gt;: &lt;code&gt;yum upgrade —downloadonly&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After you download every single update, you’ll need to copy them to a folder like &lt;code&gt;/home/user/DVD/updates/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Well, now let’s start the funny work:&lt;/p&gt;
+&lt;p&gt;For each package in updates/, you’ll need to remove old version from original folder (remember: &lt;code&gt;Client/&lt;/code&gt; &lt;code&gt;Server/&lt;/code&gt; or &lt;code&gt;RedHat/RPMS&lt;/code&gt; ), and place in that folder the updated one…&lt;/p&gt;
+&lt;p&gt;After some minutes, you’ll have all updates in place… and you can remove the &lt;span class="caps"&gt;DVD&lt;/span&gt;/updates/ folder as it will be empty after placing each updated &lt;span class="caps"&gt;RPM&lt;/span&gt; in the folder where the previous versions was.&lt;/p&gt;
+&lt;h2 id="removing-unused-packages"&gt;Removing unused packages&lt;a class="headerlink" href="#removing-unused-packages" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Well, after having everything in place, we’ll start removing unused files. Usually, we could check every package install status on ‘test’ system by checking rpm, but that’s going to be a way lengthy task, so we can ‘automate’ it a bit by doing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you have &lt;code&gt;ssh&lt;/code&gt; password-less connection between your systems (&lt;span class="caps"&gt;BUILD&lt;/span&gt; and &lt;span class="caps"&gt;TARGET&lt;/span&gt;):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On &lt;span class="caps"&gt;BUILD&lt;/span&gt; system:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; package &lt;span class="k"&gt;in&lt;/span&gt; *.rpm
+&lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="nv"&gt;NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;rpm -q —queryformat &lt;span class="s1"&gt;'%NAME'&lt;/span&gt; &lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt; ssh TARGET &lt;span class="s2"&gt;"rpm -q &lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt; &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 || echo rm &lt;/span&gt;&lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;tee things-to-do
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;If you don’t have &lt;code&gt;ssh&lt;/code&gt; password-less setup (using private/public key authentication or Kerberos), you can do something similar this way:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On &lt;span class="caps"&gt;BUILD&lt;/span&gt; system:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; package &lt;span class="k"&gt;in&lt;/span&gt; *.rpm
+&lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="nv"&gt;NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;rpm -q —queryformat &lt;span class="s1"&gt;'%NAME'&lt;/span&gt; &lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="s2"&gt;:&lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &amp;gt; packages-on-DVD
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Then copy that file on your &lt;span class="caps"&gt;TARGET&lt;/span&gt; system and running:&lt;/p&gt;
+&lt;p&gt;On &lt;span class="caps"&gt;TARGET&lt;/span&gt; system:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; package &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;cat packages-on-DVD&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="nv"&gt;QUERY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;cut -d &lt;span class="s2"&gt;":"&lt;/span&gt; -f &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="nv"&gt;FILE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;cut -d &lt;span class="s2"&gt;":"&lt;/span&gt; -f &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt; rpm -q —queryformat &lt;span class="s1"&gt;'%NAME'&lt;/span&gt; &lt;span class="nv"&gt;$QUERY&lt;/span&gt; &amp;gt;/dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; rm &lt;span class="nv"&gt;$FILE&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;tee things-to-do
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After you finish, you’ll have a file named &lt;code&gt;things-to-do&lt;/code&gt;, in which you’ll see commands like &lt;code&gt;rm packagename-version.rpm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you’re confident about it’s contents, you can run &lt;code&gt;sh things-to-do&lt;/code&gt; and have all ‘not installed on &lt;span class="caps"&gt;TARGET&lt;/span&gt;’ packages removed from your &lt;span class="caps"&gt;DVD&lt;/span&gt; folder.&lt;/p&gt;
+&lt;h2 id="adding-extra-software"&gt;Adding extra software&lt;a class="headerlink" href="#adding-extra-software" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In the same way we added updates, we can also add new software to be deployed along base system like monitoring utilities, custom software, hardware drivers, etc, just add packages to desired folders before going through next steps.&lt;/p&gt;
+&lt;h2 id="recreating-metadata"&gt;Recreating metadata&lt;a class="headerlink" href="#recreating-metadata" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;After all our adds and removals, we need to tell installer that we changed packages, and update it’s dependencies, install order, etc.&lt;/p&gt;
+&lt;h3 id="el4"&gt;&lt;span class="caps"&gt;EL4&lt;/span&gt;&lt;a class="headerlink" href="#el4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This one is trickier, but it is still possible in a not so hard way, first of all, we need to update some metadata files (&lt;code&gt;hdlist&lt;/code&gt;) and Package order for installation, it can be difficult if we add extra packages, as we’ll have special care:&lt;/p&gt;
+&lt;p&gt;Generate first version of &lt;code&gt;hdlists&lt;/code&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PYTHONPATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/lib/anaconda-runtime:/usr/lib/anaconda
+/usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/
+/usr/lib/anaconda-runtime/pkgorder /home/user/DVD/ i386 &lt;span class="p"&gt;|&lt;/span&gt;tee /home/user/order.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Review order.txt to check all packages added by hand to check correct or include missing packages and then continue with next commands:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PYTHONPATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/lib/anaconda-runtime:/usr/lib/anaconda
+/usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/ —fileorder /home/user/order.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="el5"&gt;&lt;span class="caps"&gt;EL5&lt;/span&gt;&lt;a class="headerlink" href="#el5" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Using &lt;code&gt;createrepo&lt;/code&gt; we’ll recreate metadata, but we’ve to keep care and use comps.xml to provide ‘group’ information to installer, so we’ll need to run:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+createrepo -g /home/DVD/Server/repodata/groupsfile.xml /home/DVD/Server/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="finishing"&gt;Finishing&lt;a class="headerlink" href="#finishing" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;At this step you’ll have a &lt;span class="caps"&gt;DVD&lt;/span&gt; structure on your hard drive, and just need to get an &lt;span class="caps"&gt;ISO&lt;/span&gt; to burn and test:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+mkisofs -v -r -N -L -d -D -J -V NAME -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size &lt;span class="m"&gt;4&lt;/span&gt; -boot-info-table -x lost+found -m .svn -o MyCustomISO.iso /home/user/DVD/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Now, it’s time to burn MyCustomISO.iso and give it a try ;-)&lt;/p&gt;
+&lt;p&gt;Post Datum: While testing is just better to keep using rewritable media until you want to get a ‘release’&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sat, 23 Jan 2010 08:25:00 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-01-23:/blog/2010/01/23/customize-rhelcentos-installation-media-el4el5/</guid><category>tech</category><category>RHEL</category><category>CentOS</category><category>Linux</category><category>installation</category><category>FOSS</category></item><item><title>iSCSI y Clustering en RHEL/CentOS</title><link>https://iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/</link><description>
+&lt;h2 id="introduccion"&gt;Introducción&lt;a class="headerlink" href="#introduccion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Durante la última semana estuve jugando de nuevo con iSCSI en el curso de &lt;a href="http://www.redhat.es/training/course/RH436"&gt;&lt;span class="caps"&gt;RH436&lt;/span&gt; Enterprise Clustering and Storage Management&lt;/a&gt;. Hace tiempo había seguido dos artículos &lt;a href="http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/"&gt;Instalando un target iSCSI&lt;/a&gt; y su continuación &lt;a href="http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/"&gt;Montando un iniciador iSCSI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel ‘barato’, podemos utilizar el espacio de un sevidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.&lt;/p&gt;
+&lt;p&gt;Con la entrada en juego de las ofertas de virtualización integradas con el &lt;span class="caps"&gt;SO&lt;/span&gt;, como por ejemplo Xen, podemos tener un servidor ‘grande’ y potente que albergue distintas máquinas virtuales que sirvan las páginas de dicho volumen en red, actualizarlo centralmente y tener muchos servidores actualizados….&lt;/p&gt;
+&lt;p&gt;Bueno, a medias :-)&lt;/p&gt;
+&lt;p&gt;Siempre es complicado compartir sistemas de ficheros, existen problemas de bloqueos de ficheros, accesos recurrentes, etc, en el caso de iSCSI no sólo es el &lt;span class="caps"&gt;FS&lt;/span&gt; sino la unidad, desde cualquier equipo podemos particionarla, etc, es por ello que se necesitan algunas utilidades preparadas para dicho funcionamiento en red, así como por supuesto, un sistema de ficheros que soporte dicho uso simultáneo.&lt;/p&gt;
+&lt;p&gt;Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster &lt;a href="https://iranzo.io/blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/"&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt;&lt;/a&gt;) como de &lt;span class="caps"&gt;GFS&lt;/span&gt; (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.&lt;/p&gt;
+&lt;p&gt;Piensa por un momento, la posibilidad de tener ese host tan potente o una &lt;span class="caps"&gt;SAN&lt;/span&gt; con copias de seguridad bien controladas, etc&lt;/p&gt;
+&lt;p&gt;Añádele la posibilidad de tener máquinas virtuales que monten por la red una unidad iSCSI.&lt;/p&gt;
+&lt;p&gt;Añádele que esa unidad iSCSI puede ser de Lectura escritura, y que puedes utilizar enlaces simbólicos con variables que según el host que acceda guarde los logs en una carpeta.&lt;/p&gt;
+&lt;p&gt;Imagina lanzar tantas máquinas virtuales como sea necesario para atender la demanda, poder distribuirlas en la red.&lt;/p&gt;
+&lt;h2 id="manos-a-la-obra"&gt;Manos a la obra&lt;a class="headerlink" href="#manos-a-la-obra" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="target-iscsi"&gt;Target iSCSI&lt;a class="headerlink" href="#target-iscsi" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Si no tenemos un target iSCSI, podemos definirlo en nuestro anfitrión, utilizando la versión Tech Preview de iSCSI Target llamada: &lt;code&gt;scsi-target-utils&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Esta utilidad contiene un comando &lt;code&gt;tgtadm&lt;/code&gt; que podemos utilizar para definir las unidades.&lt;/p&gt;
+&lt;p&gt;Deberemos activar el demonio de tgtd para que esté disponible en cada arranque con los comandos:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+chkconfig tgtd on
+service tgtd start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Actualmente y como tech preview, debemos repetir cada vez los comandos que necesitamos para definir la unidad iSCSI, por ejemplo:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+tgtadm --lld iscsi --mode target --op new --tid&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --targetname iqn.2008-12.tld.dominio.maquina:TARGET tgtadm --lld iscsi --mode logicalunit --op new --tid&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --lun&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; -b /dev/vg0/TARGET tgtadm --mode target --op &lt;span class="nb"&gt;bind&lt;/span&gt; --tid&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --initiator-address&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;14&lt;/span&gt;.14.14.14
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Con estos comandos definimos un nuevo target con &lt;span class="caps"&gt;ID&lt;/span&gt; 1, de nombre &lt;span class="caps"&gt;IQN&lt;/span&gt; &lt;code&gt;iqn.2008-12.tld.dominio.maquina:TARGET&lt;/code&gt; y le añadimos una unidad lógica (&lt;span class="caps"&gt;LUN&lt;/span&gt;) que se basa en el contenido del volumen &lt;span class="caps"&gt;LVM&lt;/span&gt; /dev/vg0/&lt;span class="caps"&gt;TARGET&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Además, le permitimos el acceso a dicho target desde la ip &lt;code&gt;14.14.14.14&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Si todo esto está bien, deberemos, hasta que salga de la Tech Preview, añadir estos comandos al fichero &lt;code&gt;/etc/rc.local&lt;/code&gt; para que se ejecuten en cada arranque&lt;/p&gt;
+&lt;h3 id="resto-de-equipos"&gt;Resto de equipos&lt;a class="headerlink" href="#resto-de-equipos" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;El primer paso, es instalar en todas las máquinas los paquetes de &lt;code&gt;lvm2-cluster&lt;/code&gt;, así como &lt;code&gt;ricci&lt;/code&gt;. En todas ellas deberemos ejecutar &lt;code&gt;lvm —enable-cluster&lt;/code&gt; para modificar los parámetros de locking para utilizarlo en red.&lt;/p&gt;
+&lt;p&gt;Para arrancar ricci tendremos que hacer algo parecido a lo que hicimos con tgtd&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+chkconfig ricci on
+service ricci start&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Por otro lado necesitaremos tener &lt;code&gt;kmod-gfs&lt;/code&gt;, &lt;code&gt;gfs-util&lt;/code&gt; y &lt;code&gt;iscsi-initiator-utils&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Las unidades iSCSI se reconocerán a partir de la primera detección de forma automática, para ello deberemos ejecutar los siguientes comandos:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+iscsiadm -m discovery -t sendtargets -p IPTARGETISCSI iscsiadm -m node -T iqn.2008-12.tld.dominio.maquina:TARGET -l
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Que descubrirá los targets disponibles para nuestra &lt;span class="caps"&gt;IP&lt;/span&gt; y luego hará ‘login’ en la máquina. A partir de este momento tendremos nuevas unidades disponibles que se presentarán como &lt;span class="caps"&gt;SCSI&lt;/span&gt; a nuestro pc, podremos
+particionarlas, etc.&lt;/p&gt;
+&lt;h3 id="el-cluster"&gt;El clúster&lt;a class="headerlink" href="#el-cluster" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Si queremos hacer las cosas de la forma ‘sencilla’, deberemos instalar &lt;code&gt;luci&lt;/code&gt; en una de las máquinas, ya sea en un nodo de control, o en el anfitrión Xen.&lt;/p&gt;
+&lt;p&gt;Luci es un interfaz web que permite la gestión y creación de clusters y para ello utiliza el demonio ‘ricci’ que hemos instalado en cada máquina.&lt;/p&gt;
+&lt;p&gt;Si tenemos las máquinas configuradas con los repositorios necesarios, &lt;code&gt;ricci&lt;/code&gt; se hará cargo de la instalación de los paquetes necesarios para configurar todo.&lt;/p&gt;
+&lt;p&gt;Desde el interfaz web de luci podemos ir añadiendo cada uno de los nodos a utilizar, indicando sus claves de ‘root’ y se encargará de contactarlos y a través de ricci, instalar el software necesario y reiniciarlos para integrarlos en el cluster.&lt;/p&gt;
+&lt;p&gt;Los nodos, una vez en el cluster pueden utilizarse para albergar servicios, que estén de forma exclusiva (por ejemplo una bbdd porque necesite prioridad absoluta), o bien en failover para que no se deje de dar el servicio.&lt;/p&gt;
+&lt;p&gt;Por defecto tenemos una serie de servicios preconfigurados que podemos dar, como http, nfs, etc que podremos configurar rápidamente desde luci, que se encargará de desplegar dicha configuración a todo el cluster.&lt;/p&gt;
+&lt;p&gt;La forma de hacerlo es sencilla, se definen recursos (&lt;span class="caps"&gt;IP&lt;/span&gt;, &lt;span class="caps"&gt;NFS&lt;/span&gt; Exports, &lt;span class="caps"&gt;NFS&lt;/span&gt; Clients, http, mount points) que luego se agrupan por cadenas de dependencia en servicios y se les asignan grupos de failover, para que en caso de fallo, podamos definir prioridades.&lt;/p&gt;
+&lt;p&gt;Imagina el caso de una empresa con dos servidores, uno con la bbdd y otro con la web. En caso de fallo de uno de ellos, podemos hacer ‘saltar’ los servicios a la máquina que está operativa hasta que arreglemos la dañada y luego, cada servicio, volvería a su máquina ‘preferida’ o en el orden necesario.&lt;/p&gt;
+&lt;p&gt;En el caso de máquinas virtuales, en caso de que dejen de responder, &lt;span class="caps"&gt;CMAN&lt;/span&gt; realizará un reinicio (siempre que hayamos distribuido las claves de xen que podemos crear en la interfaz tanto a los guests como al anfitrión que estará escuchando con el demonio de fencing para &lt;span class="caps"&gt;XVM&lt;/span&gt; activado).&lt;/p&gt;
+&lt;p&gt;En el caso de tener enchufes ‘con red’ o bien máquinas con tarjetas de gestión remota (iLO, RemoteView Service Board, etc), definiremos los parámetros de acceso.&lt;/p&gt;
+&lt;p&gt;En caso de detectar un problema con cualquier equipo, el resto de ellos hará votaciones y si la mayoría considera que no responde, lo reiniciarán, por un lado para liberar cualquier tipo de acceso a disco, etc que hubiera estado haciendo a los recursos del cluster, como para intentar recuperarlo.&lt;/p&gt;
+&lt;h3 id="gfs-global-file-system"&gt;&lt;span class="caps"&gt;GFS&lt;/span&gt;: Global File System&lt;a class="headerlink" href="#gfs-global-file-system" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;¿Qué pinta &lt;span class="caps"&gt;GFS&lt;/span&gt; en todo esto?&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;GFS1&lt;/span&gt; nos permite crear un sistema de ficheros que tendrá un journal para cada nodo del cluster y que si lo creamos sobre el volumen iSCSI podemos hacer disponible a todos los equipos, si un equipo se bloquea, otro toma el control del journal no acabado, lo verifica y aplica sobre el &lt;span class="caps"&gt;FS&lt;/span&gt; hasta que la máquina retorna para dejarlo en un estado limpio.&lt;/p&gt;
+&lt;p&gt;Por otro lado, &lt;span class="caps"&gt;CLVM&lt;/span&gt; y &lt;span class="caps"&gt;GFS&lt;/span&gt; permiten aumentar dinámicamente el tamaño de los volúmenes, de forma que no tenemos que dejar inoperativos nuestros sistemas para hacer mantenimientos par añadir más capacidad, etc.&lt;/p&gt;
+&lt;p&gt;Permite también crear enlaces simbólicos de forma que una unidad con &lt;span class="caps"&gt;FS&lt;/span&gt; &lt;span class="caps"&gt;GFS1&lt;/span&gt; pueda quedar:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;hosts/
+hosts/host1/logs
+hosts/host2/logs
+hosts/host3/logs
+hosts/host4/logs
+hosts/host5/logs
+logs -&amp;gt; hosts/@hostname/logs/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Esto permite que diversos servidores web tengan configurado como ruta para los logs la carpeta ‘logs’ que se expandirá al hostname de la máquina, haciendo que queden todos recogidos en un lugar central para posterior análisis de estadísticas, etc&lt;/p&gt;
+&lt;p&gt;Este tipo de enlaces se denominan &lt;span class="caps"&gt;CDPN&lt;/span&gt;: Context-dependent pathnames y nos permiten jugar con este tipo de cosas y aprovechar las ventajas de un almacenamiento único.&lt;/p&gt;
+&lt;h3 id="y-si-falla-la-red"&gt;¿Y si falla la red&lt;a class="headerlink" href="#y-si-falla-la-red" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Como siempre podemos tener problemas con la red, la forma de solucionarlos consiste en tener varios interfaces de red en los equipos a través de distintos switches, etc y en las máquinas, una vez descubiertos los targets, configurar el fichero &lt;code&gt;/etc/multipathd.conf&lt;/code&gt; y habilitar el demonio.&lt;/p&gt;
+&lt;p&gt;Nos creará las rutas necesarias y una serie de dipositivos &lt;code&gt;/dev/mpath/*&lt;/code&gt; para acceder de forma tolerante a fallos a nuestros recursos, si configuramos las tarjetas de red en modo bonding, ya tenemos el acceso más o menos asegurado ante las catástrofes más comunes y nuestros datos disponibles&lt;/p&gt;
+&lt;h3 id="conclusion"&gt;Conclusión&lt;a class="headerlink" href="#conclusion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Tenemos a nuestro alcance muchas herramientas para hacer sencilla la utilización y creación de sistemas equivalentes a lo que hace años sólo tenía una alternativa excesivamente cara.&lt;/p&gt;
+&lt;p&gt;Sinceramente vale la pena perder un rato y probar estas cosas y maravillarnos de las posibilidades que abre de cara a la gestión de los equipos, la información y su acceso y lo mejor de todo, siempre con Software Libre.&lt;/p&gt;
+&lt;p&gt;Espero que esta introducción os despierte el gusanillo para explorar las diversas funcionalidades que estas tecnologías nos ofrecen!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sat, 13 Dec 2008 17:59:41 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2008-12-13:/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/</guid><category>tech</category><category>cluster</category><category>rhel</category><category>centos</category><category>foss</category></item></channel></rss>

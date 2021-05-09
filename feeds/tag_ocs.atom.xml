@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - OCS</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_ocs.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2006-07-29T20:13:00+00:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>OCS Deployment Tips and tricks</title><link href="https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/" rel="alternate"></link><published>2006-07-29T20:13:00+00:00</published><updated>2006-07-29T20:13:00+00:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2006-07-29:/blog/2006/07/29/ocs-deployment-tips-and-tricks/</id><summary type="html">
+&lt;p&gt;Prior to using the following info for creating own-made packages, let’s test if everything is working fine.&lt;/p&gt;
+&lt;p&gt;I’ve created a &lt;span class="caps"&gt;NSIS&lt;/span&gt; script that writes into registry in a key called &lt;code&gt;HKLMSOFTWAREOCS&lt;/code&gt; and puts a key named “cert” with value &lt;code&gt;creilla&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If we create a package with action “&lt;span class="caps"&gt;LAUNCH …&lt;/span&gt;&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;Prior to using the following info for creating own-made packages, let’s test if everything is working fine.&lt;/p&gt;
+&lt;p&gt;I’ve created a &lt;span class="caps"&gt;NSIS&lt;/span&gt; script that writes into registry in a key called &lt;code&gt;HKLMSOFTWAREOCS&lt;/code&gt; and puts a key named “cert” with value &lt;code&gt;creilla&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If we create a package with action “&lt;span class="caps"&gt;LAUNCH&lt;/span&gt;”, and attach the &lt;code&gt;regcert.zip&lt;/code&gt; with command to execute &lt;code&gt;regcert.exe&lt;/code&gt;, all clients with functional package deployment, will add that key to registry, so we can check, using &lt;span class="caps"&gt;OCS&lt;/span&gt; registry query function for a key named “cert” into: &lt;code&gt;HKLM&lt;/code&gt; &lt;code&gt;SOFTWAREOCS&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;After some time, affected and with working software deployment (Read &lt;a href="https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/"&gt;&lt;span class="caps"&gt;OCS&lt;/span&gt; Inventory Package deployment&lt;/a&gt; to learn how to set up it properly), we could know in which ones it’s working and in which ones it doesn’t work, just doing a search for computers with a special value in that registry key. (I’ve also uploaded the precompiled version I use for your testing purposes).&lt;/p&gt;
+&lt;h3 id="software"&gt;Software&lt;a class="headerlink" href="#software" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  &lt;span class="o"&gt;-------------------------------------------------------------------&lt;/span&gt; &lt;span class="o"&gt;-----------------------------------------------------------------&lt;/span&gt; &lt;span class="o"&gt;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------&lt;/span&gt;
+  &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;Software&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;                                                        &lt;span class="n"&gt;Command&lt;/span&gt; &lt;span class="n"&gt;switches&lt;/span&gt;                                                  &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;Result&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;OCS&lt;/span&gt; &lt;span class="n"&gt;Inventory&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//ocsinventory.sf.net/)                        /S /SERVER:serverip                                               Installs new OCS version on top of older one, this is only recommended if package deployment was setup successfully, if not, use NSIS script referred at OCS Inventory Package Deployment&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;VNC&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.realvnc.com/)                                      /SP- /VERYSILENT                                                  Installs VNC without any user intervention&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;PowerOff&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//users.pandora.be/jbosman/poweroff/poweroff.htm)   Just copy to desired folder                                       Allows to shutdown, reboot hibernate, etc remotely or from command line&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;EICAR&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.eicar.org/)                                      Copy and run from any folder                                      This file is detected by antivirus as a virus, but it isn't harmful (read [http://www.eicar.org](http://www.eicar.org/)), if execution fails... target computer has a working antivirus engine running&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.mozilla.com/)                                  -ms -ira                                                          Installs Mozilla Firefox silently (with 1.5 it show uncompressing dialog, but with 2b2 it's totally invisible)&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Java&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.java.com/)                                        /S /v/qn" WEBSTARTICON=0 REBOOT=Suppress MOZILLA=1 IEXPLORER=1"   Installs Java Runtime Environment (tested on 1.5.0.0.6) silently, totally invisible&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Acrobat&lt;/span&gt; &lt;span class="n"&gt;Reader&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.adobe.com/)                             msiexec.exe /i acrobat.msi /qb-!                                  Silent install, must first uncompress installation and copy extracted files to a folder, zip them, and upload to OCS (you can extract Acrobat components doing: AdbeRdr80.exe -nos_s -nos_ne -nos_oC:temp)&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Flash&lt;/span&gt; &lt;span class="n"&gt;Player&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.adobe.com/)                               msiexec /i fp9.msi /qn                                            Silent install using windows installer interface (it's ok for other programs distributed in msi files&lt;/span&gt;
+  &lt;span class="o"&gt;-------------------------------------------------------------------&lt;/span&gt; &lt;span class="o"&gt;-----------------------------------------------------------------&lt;/span&gt; &lt;span class="o"&gt;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="registry"&gt;Registry&lt;a class="headerlink" href="#registry" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  &lt;span class="n"&gt;Hive&lt;/span&gt;   &lt;span class="n"&gt;Path&lt;/span&gt;                                                                             &lt;span class="n"&gt;Value&lt;/span&gt;          &lt;span class="n"&gt;Utility&lt;/span&gt;
+  &lt;span class="o"&gt;------&lt;/span&gt; &lt;span class="o"&gt;--------------------------------------------------------------------------------&lt;/span&gt; &lt;span class="o"&gt;--------------&lt;/span&gt; &lt;span class="o"&gt;---------------------------------------------------------------------------&lt;/span&gt;
+  &lt;span class="n"&gt;HKLM&lt;/span&gt;   &lt;span class="n"&gt;SOFTWAREMicrosoftWindowsCurrentVersionRun&lt;/span&gt;                                &lt;span class="o"&gt;*&lt;/span&gt;             &lt;span class="n"&gt;Know&lt;/span&gt; &lt;span class="n"&gt;which&lt;/span&gt; &lt;span class="n"&gt;programs&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;executed&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;startup&lt;/span&gt;
+  &lt;span class="n"&gt;HKCU&lt;/span&gt;   &lt;span class="n"&gt;SOFTWAREMicrosoftWindowsCurrentVersionRun&lt;/span&gt;                                &lt;span class="o"&gt;*&lt;/span&gt;             &lt;span class="n"&gt;Know&lt;/span&gt; &lt;span class="n"&gt;which&lt;/span&gt; &lt;span class="n"&gt;programs&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;executed&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="n"&gt;login&lt;/span&gt;
+  &lt;span class="n"&gt;HKLM&lt;/span&gt;   &lt;span class="n"&gt;SOFTWARENetwork&lt;/span&gt; &lt;span class="n"&gt;AssociatesTVDShared&lt;/span&gt; &lt;span class="n"&gt;ComponentsVirusScan&lt;/span&gt; &lt;span class="n"&gt;Engine4&lt;/span&gt;&lt;span class="mf"&gt;.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xx&lt;/span&gt;   &lt;span class="n"&gt;szVirDefDate&lt;/span&gt;   &lt;span class="n"&gt;Know&lt;/span&gt; &lt;span class="n"&gt;Mcafee&lt;/span&gt; &lt;span class="n"&gt;Virus&lt;/span&gt; &lt;span class="n"&gt;Definitions&lt;/span&gt; &lt;span class="n"&gt;date&lt;/span&gt;
+  &lt;span class="n"&gt;HKLM&lt;/span&gt;   &lt;span class="n"&gt;SoftwareSymantecSharedDefs&lt;/span&gt;                                                   &lt;span class="o"&gt;*&lt;/span&gt;             &lt;span class="n"&gt;Shows&lt;/span&gt; &lt;span class="n"&gt;different&lt;/span&gt; &lt;span class="n"&gt;norton&lt;/span&gt; &lt;span class="n"&gt;products&lt;/span&gt; &lt;span class="n"&gt;definitions&lt;/span&gt;
+  &lt;span class="n"&gt;HKLM&lt;/span&gt;   &lt;span class="n"&gt;SoftwareMicrosoftWindowsCurrentVersion&lt;/span&gt;                                     &lt;span class="n"&gt;ProductKey&lt;/span&gt;     &lt;span class="n"&gt;Windows&lt;/span&gt; &lt;span class="mh"&gt;9&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;Install&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;
+  &lt;span class="n"&gt;HKLM&lt;/span&gt;   &lt;span class="n"&gt;SoftwareMicrosoftWindowsCurrentVersionRunServices&lt;/span&gt;                        &lt;span class="o"&gt;*&lt;/span&gt;             &lt;span class="n"&gt;Services&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;machine&lt;/span&gt;
+  &lt;span class="n"&gt;HKLM&lt;/span&gt;   &lt;span class="n"&gt;SoftwareMicrosoftWindowsCurrentVersionRunServices&lt;/span&gt;                        &lt;span class="o"&gt;*&lt;/span&gt;             &lt;span class="n"&gt;Windows&lt;/span&gt; &lt;span class="mh"&gt;9&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;Services&lt;/span&gt;
+  &lt;span class="n"&gt;HKLM&lt;/span&gt;   &lt;span class="n"&gt;SoftwareOCS&lt;/span&gt;                                                                    &lt;span class="n"&gt;cert&lt;/span&gt;           &lt;span class="n"&gt;Allows&lt;/span&gt; &lt;span class="n"&gt;us&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;package&lt;/span&gt; &lt;span class="n"&gt;deployment&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;working&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;regcert&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="packages"&gt;Packages&lt;a class="headerlink" href="#packages" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;  Action   File   Command line                                                 Description&lt;/span&gt;
+&lt;span class="c"&gt;  &lt;/span&gt;&lt;span class="nb"&gt;--------&lt;/span&gt;&lt;span class="c"&gt; &lt;/span&gt;&lt;span class="nb"&gt;------&lt;/span&gt;&lt;span class="c"&gt; &lt;/span&gt;&lt;span class="nb"&gt;------------------------------------------------------------&lt;/span&gt;&lt;span class="c"&gt; &lt;/span&gt;&lt;span class="nb"&gt;-----------------------------------------------------------------------------------------------&lt;/span&gt;&lt;span class="c"&gt;&lt;/span&gt;
+&lt;span class="c"&gt;  RUN             "%PROGRAMFILES%RealVNCVNC4winvnc4&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;exe" &lt;/span&gt;&lt;span class="nb"&gt;-&lt;/span&gt;&lt;span class="c"&gt;connect HOST   Launches a new VNC client to HOST&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; allowing to watch Desktop as HOST initiated the connection&lt;/span&gt;
+&lt;span class="c"&gt;  RUN             netsh firewall add portopening TCP 5900 VNC                  Opens 5900 port on TCP in Windows Firewall (XP SP2) (for using with VNC)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Please, feel free to contribute with your Registry Keys or command line commands to improve this guide.&lt;/p&gt;
+&lt;p&gt;Using win-get (an apt-get clone for Win32), you can use &lt;a href="http://windows-get.sourceforge.net/listapps.php"&gt;this big list&lt;/a&gt; of supported applications for installation doing &lt;code&gt;win-get sinstall APPNAME&lt;/code&gt;&lt;/p&gt;</content><category term="tech"></category><category term="OCS"></category><category term="Linux"></category><category term="FOSS"></category></entry><entry><title>OCS Inventory Package deployment</title><link href="https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/" rel="alternate"></link><published>2006-07-27T20:29:00+02:00</published><updated>2006-07-27T20:29:00+02:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2006-07-27:/blog/2006/07/27/ocs-inventory-package-deployment/</id><summary type="html">
+&lt;h3 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OCS&lt;/span&gt; Inventory is an excellent piece of &lt;span class="caps"&gt;GPL&lt;/span&gt; Software for getting info from hardware components, and software installed on computers running Windows or &lt;span class="caps"&gt;UNIX&lt;/span&gt;-like operating systems (there are also some unofficial clients for running on other platforms).&lt;/p&gt;
+&lt;p&gt;Since New Generation (&lt;code&gt;OCS-NG&lt;/code&gt;), a new architecture was implemented: server were …&lt;/p&gt;</summary><content type="html">
+&lt;h3 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OCS&lt;/span&gt; Inventory is an excellent piece of &lt;span class="caps"&gt;GPL&lt;/span&gt; Software for getting info from hardware components, and software installed on computers running Windows or &lt;span class="caps"&gt;UNIX&lt;/span&gt;-like operating systems (there are also some unofficial clients for running on other platforms).&lt;/p&gt;
+&lt;p&gt;Since New Generation (&lt;code&gt;OCS-NG&lt;/code&gt;), a new architecture was implemented: server were contacted using standard &lt;span class="caps"&gt;TCP&lt;/span&gt;/&lt;span class="caps"&gt;IP&lt;/span&gt; connection (Previous versions, used an &lt;span class="caps"&gt;MDB&lt;/span&gt; file to store information, and required a &lt;span class="caps"&gt;SMB&lt;/span&gt; share to inventory computers ), allowing remote computers to connect as well as providing a new web interface for computer administration, and inventory query.&lt;/p&gt;
+&lt;p&gt;Within new features, a new small client (about 64kb), was able to contact inventory server, and download from it the full set of required files (&lt;code&gt;OcsAgent.exe&lt;/code&gt;) which was expanded to &lt;code&gt;%SYSTEMDRIVE%ocs-ng&lt;/code&gt;, then executed, an inventory sent to server.&lt;/p&gt;
+&lt;p&gt;This approach had a little problem, if you had a small outgoing connection, serving a 700 Kb file was painful… but at least, despite some minor revision changes, machines were able to upgrade automatically (In many other times, you had to manually redeploy or force with &lt;code&gt;/DEPLOY:#VERNUMBER#&lt;/code&gt; the new deployment) when new version was deployed on the server.&lt;/p&gt;
+&lt;p&gt;With &lt;span class="caps"&gt;RC3&lt;/span&gt;, agent for installation uses near double that size, about 1.5 megabytes, but the ability for after first installed, use external servers with a bigger upload bandwidth, eases installation of new versions in computers.&lt;/p&gt;
+&lt;h3 id="release-candidate-3-and-10"&gt;Release Candidate 3, and 1.0&lt;a class="headerlink" href="#release-candidate-3-and-10" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;OCS-NG&lt;/code&gt; &lt;span class="caps"&gt;RC3&lt;/span&gt; came with important architectural changes, including several major and minor improvements, being these the more important ones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now the Windows client works as a service (for the first time it includes a Windows agent)&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;RC3&lt;/span&gt; includes a component for software/files deployment/distribution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The new tool is called package deployment. This feature it is managed using the also improved admin web interface.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;OCS-NG&lt;/code&gt; could be setup on different machines hosting each service:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An Inventory-receiving machine&lt;/li&gt;
+&lt;li&gt;An Admin web interface&lt;/li&gt;
+&lt;li&gt;A site with information about packages&lt;/li&gt;
+&lt;li&gt;A site with package fragments for deployment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;or, as I did in my setup, use a Debian Linux machine for doing the four tasks, but I plan to relay the fourth task to other machines, when packages are bigger than expected.&lt;/p&gt;
+&lt;h3 id="setting-it-up-and-running"&gt;Setting it up and running&lt;a class="headerlink" href="#setting-it-up-and-running" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;I’ll assume that you’ve running Apache, &lt;span class="caps"&gt;PHP&lt;/span&gt;, and were able to set up &lt;span class="caps"&gt;OCS&lt;/span&gt; using the bundled instructions, so you only have to enable new features for using package deployment.&lt;/p&gt;
+&lt;p&gt;First of all, we need &lt;span class="caps"&gt;SSL&lt;/span&gt; support in Apache.&lt;/p&gt;
+&lt;p&gt;Package deployment infrastructure, is too much powerful, so it requires &lt;span class="caps"&gt;SSL&lt;/span&gt; access to validate server before trying to download from it, so… we’ll need some &lt;span class="caps"&gt;SSL&lt;/span&gt; certificates for use with our server.&lt;/p&gt;
+&lt;p&gt;I like &lt;a href="http://www.cacert.org/"&gt;http://www.cacert.org&lt;/a&gt; services: they sign your certificates, and provide one certificate aiming to be used with many &lt;span class="caps"&gt;FOSS&lt;/span&gt; projects, because it’s free instead of paid certificates like the ones from Thawte or Verisign.&lt;/p&gt;
+&lt;h3 id="getting-ssl-certificates"&gt;Getting &lt;span class="caps"&gt;SSL&lt;/span&gt; Certificates&lt;a class="headerlink" href="#getting-ssl-certificates" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;First of all, we need to create a private key and a &lt;code&gt;CSR&lt;/code&gt; (Certificate Signing Request) which we will send to &lt;code&gt;CACERT&lt;/code&gt; for signing (please, note that if you don’t have a domain name, will make it impossible to use &lt;span class="caps"&gt;OCS&lt;/span&gt; Package Deployment if your &lt;span class="caps"&gt;IP&lt;/span&gt; is also dynamic, so if that is your case (as was mine too), open an account at No-&lt;span class="caps"&gt;IP&lt;/span&gt; and create an &lt;span class="caps"&gt;URL&lt;/span&gt;-redirect to your machine, you’ll have to install an update client, but this will allow you to use certificates) it.&lt;/p&gt;
+&lt;p&gt;Having OpenSSL installed, we will execute (please, double check that questions, specially &lt;span class="caps"&gt;CN&lt;/span&gt; exactly matches ServerName and &lt;code&gt;hostname&lt;/code&gt;, for it to work properly after) the following commands:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+openssl genrsa -out server.key &lt;span class="m"&gt;1024&lt;/span&gt;
+openssl req -new -key server.key -out server.csr
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;First one, will create a private key called “server.key”, second one, will create a &lt;span class="caps"&gt;CSR&lt;/span&gt; which we will paste at &lt;a href="https://www.cacert.org/account.php?id=10"&gt;https://www.cacert.org/account.php?id=10&lt;/a&gt; to get our server certificate signed.&lt;/p&gt;
+&lt;p&gt;For being able to use &lt;a href="http://www.cacert.org/"&gt;http://www.cacert.org&lt;/a&gt; services, we’ll have to create an account and add a domain to it, this is verified sending an email to an account like webmaster, root or so, clicking on the supplied link, will entitle to work in representation of that domain.&lt;/p&gt;
+&lt;p&gt;After that, Cacert.org will show you a certificate for your server that you’ll have to copy to a file named &lt;code&gt;server.crt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s then download &lt;a href="http://www.cacert.org/certs/root.crt"&gt;&lt;span class="caps"&gt;CACERT&lt;/span&gt;’s root certificate&lt;/a&gt; to &lt;code&gt;cacert.pem&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id="configuring-apache-for-using-that-certificates"&gt;Configuring apache for using that certificates&lt;a class="headerlink" href="#configuring-apache-for-using-that-certificates" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Next, we’ll have to tell apache, to use this certificate for &lt;span class="caps"&gt;SSL&lt;/span&gt; support, in my case, I configured:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;#!apache&lt;/span&gt;
+&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;etc&lt;/span&gt;&lt;span class="sx"&gt;/apache2/conf.d/ssl&lt;/span&gt;:
+&lt;span class="nb"&gt;SSLProtocol&lt;/span&gt; &lt;span class="k"&gt;all&lt;/span&gt;
+&lt;span class="nb"&gt;SSLOptions&lt;/span&gt; +StdEnvVars
+&lt;span class="nb"&gt;SSLCipherSuite&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt;:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
+&lt;span class="nb"&gt;SSLCACertificateFile&lt;/span&gt; &lt;span class="sx"&gt;/etc/apache2/ssl/cacert.pem&lt;/span&gt;
+&lt;span class="nb"&gt;SSLCertificateFile&lt;/span&gt; &lt;span class="sx"&gt;/etc/apache2/ssl/server.crt&lt;/span&gt;
+&lt;span class="nb"&gt;SSLCertificateKeyFile&lt;/span&gt; &lt;span class="sx"&gt;/etc/apache2/ssl/server.key&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;So, I had to put &lt;code&gt;server.crt&lt;/code&gt;, &lt;code&gt;server.key&lt;/code&gt; and &lt;code&gt;cacert.pem&lt;/code&gt; in &lt;code&gt;/etc/apache2/ssl/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Next one, was to configure a new site that requires &lt;span class="caps"&gt;SSL&lt;/span&gt; to work:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;#!apache&lt;/span&gt;
+&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;etc&lt;/span&gt;&lt;span class="sx"&gt;/apache2/sites-enabled/001-default&lt;/span&gt;:
+&lt;span class="nb"&gt;ServerName&lt;/span&gt; yourserver.no-ip.org
+&lt;span class="nb"&gt;NameVirtualHost&lt;/span&gt; \*:443
+&lt;span class="nb"&gt;ErrorLog&lt;/span&gt; &lt;span class="sx"&gt;/var/log/apache2/errssl.log&lt;/span&gt;
+&lt;span class="c"&gt;# Possible values include: debug, info, notice, warn, error, crit,&lt;/span&gt;
+&lt;span class="c"&gt;# alert, emerg.&lt;/span&gt;
+&lt;span class="nb"&gt;LogLevel&lt;/span&gt; &lt;span class="k"&gt;warn&lt;/span&gt;
+&lt;span class="nb"&gt;CustomLog&lt;/span&gt; &lt;span class="sx"&gt;/var/log/apache2/ssl.log&lt;/span&gt; combined
+&lt;span class="nb"&gt;ServerSignature&lt;/span&gt; &lt;span class="k"&gt;On&lt;/span&gt;
+&lt;span class="nb"&gt;DocumentRoot&lt;/span&gt; &lt;span class="sx"&gt;/var/www&lt;/span&gt;
+&lt;span class="nb"&gt;SSLEngine&lt;/span&gt; &lt;span class="k"&gt;on&lt;/span&gt;
+&lt;span class="nb"&gt;SSLOptions&lt;/span&gt; +StdEnvVars
+&lt;span class="nb"&gt;SetEnvIf&lt;/span&gt; &lt;span class="k"&gt;User&lt;/span&gt;-Agent &lt;span class="s2"&gt;".\*MSIE.\*"&lt;/span&gt; nokeepalive ssl-unclean-shutdown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After that… we have to reload Apache configuration and try to connect to &lt;a href="https://yourserver.no-ip.org/"&gt;https://yourserver.no-ip.org&lt;/a&gt; to check if everything is ok.&lt;/p&gt;
+&lt;p&gt;Well, if this works, we had the first and harder step done ;)&lt;/p&gt;
+&lt;h3 id="creating-a-package"&gt;Creating a package&lt;a class="headerlink" href="#creating-a-package" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;There are three types of packages: &lt;span class="caps"&gt;RUN&lt;/span&gt;, &lt;span class="caps"&gt;STORE&lt;/span&gt; and &lt;span class="caps"&gt;LAUNCH&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Each of them has different behavior, one runs a command, the other downloads a file and stores it on a folder, and the other does a combined thing: downloads a file, unzips it, and then runs a command.&lt;/p&gt;
+&lt;p&gt;For Package creating, we must have write access to Apache’s DocumentRoot/download folder, and after creation, copy contents of “/download” to “/”, or as I did, gave write access to “/var/www”, and create (&lt;code&gt;ln -s . download&lt;/code&gt;) a symbolic link for download.&lt;/p&gt;
+&lt;p&gt;So… let’s create a first package:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;We must login into &lt;span class="caps"&gt;OCS&lt;/span&gt; Web interface, and select (first menu option on first yellow icon) package creation&lt;/li&gt;
+&lt;li&gt;We must assign a name for the package, Platform, Protocol and Priority (priority will allow us to decide package execution order in the client, the lower number, the higher priority)&lt;/li&gt;
+&lt;li&gt;If we’re going to upload files, we must &lt;span class="caps"&gt;ZIP&lt;/span&gt; it &lt;span class="caps"&gt;BEFORE&lt;/span&gt;, so &lt;span class="caps"&gt;OCS&lt;/span&gt; will unzip on client machine, and then run commands&lt;/li&gt;
+&lt;li&gt;We choose an action, and then, a path (we can use system variables like &lt;code&gt;%SYSTEMDRIVE%&lt;/code&gt;, &lt;code&gt;%TEMP%&lt;/code&gt;, &lt;code&gt;%USERPROFILE%&lt;/code&gt;, &lt;code&gt;%PROGRAMFILES%&lt;/code&gt;, etc) to store the file, or command to run&lt;/li&gt;
+&lt;li&gt;We can choose if we want the user to be warned about package execution, and even to allow user to delay execution (useful for service pack deployments, etc)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Next step, will allow us to specify fragments (pieces in which the package will be split for allowing better deployment, making use of re-downloading for only failed fragments, etc), as well as checksum for data validity&lt;/p&gt;
+&lt;p&gt;Your package, will be created then on &lt;code&gt;/var/www/download/#pkgid#&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="activating-a-package"&gt;Activating a package&lt;a class="headerlink" href="#activating-a-package" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Once a package has been defined, we have an “info” file, describing package actions, and package fragments, we can have them together or split it between different servers, and we will have to specify where is located each piece, before using it on our machines. That process is called “Activation”.&lt;/p&gt;
+&lt;p&gt;When we select that option, we have to specify the &lt;code&gt;pkgid&lt;/code&gt;, so we use the second menu entry in the package deployment icon, and we’ll get a list of packages ready for activation, and then, we select “Activate” from the one we’re interested in.&lt;/p&gt;
+&lt;p&gt;On package activation, we will be asked for two &lt;span class="caps"&gt;SERVERS&lt;/span&gt; (thanks to the development team, specially to Pascal who helped in determining that we require to specify server name, not &lt;span class="caps"&gt;URL&lt;/span&gt;) one with https (for downloading info file) and one with http for downloading fragments (if any).&lt;/p&gt;
+&lt;p&gt;After sending server names, &lt;span class="caps"&gt;OCS&lt;/span&gt; will check availability of “info” and fragment files (if any (On &lt;span class="caps"&gt;RUN&lt;/span&gt; packages, there is nothing to download prior to running the commands) and then, package will be activated and ready for next step.&lt;/p&gt;
+&lt;h4 id="affecting-a-package"&gt;Affecting a package&lt;a class="headerlink" href="#affecting-a-package" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;In this step, we can select a computer in the main view, or do a search using specific criteria, and as a result, apply a package on listed computers.&lt;/p&gt;
+&lt;p&gt;We can affect a package to several computers at once, just to one, and even, have different packages affect to the same computer….&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OCS&lt;/span&gt; will connect, and execute actions defined in priority order…&lt;/p&gt;
+&lt;h4 id="how-to-get-client-side-package-working"&gt;How to get client side Package working&lt;a class="headerlink" href="#how-to-get-client-side-package-working" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Packages from client side, are as easy to setup, as having a working &lt;span class="caps"&gt;OCS&lt;/span&gt; Agent Service installed and a file called &lt;code&gt;cacert.pem&lt;/code&gt;, which we got from the &lt;span class="caps"&gt;SSL&lt;/span&gt; Creation step… having them in the &lt;span class="caps"&gt;OCS&lt;/span&gt; Agent folder, and a package affected to a computer, will make computer to download, and do the actions specified. ¿What are the pro’s and con’s of this method?&lt;/p&gt;
+&lt;p&gt;When installing OCSAgent, using: &lt;code&gt;OCSAgentSetup.exe /S /SERVER:yourserver.no-ip.org&lt;/code&gt;, we have no &lt;code&gt;cacert.pem&lt;/code&gt; file copied, so we must copy it by hand, or, as I did, use an install script which does this in one step.&lt;/p&gt;
+&lt;p&gt;I’ve used &lt;a href="http://nsis.sourceforge.net/"&gt;&lt;span class="caps"&gt;NSIS&lt;/span&gt;&lt;/a&gt; to create a script for doing this:&lt;/p&gt;
+&lt;p&gt;First, we’ll have to create a folder and put in it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;OcsAgentSetup.exe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cacert.pem&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NSIS Script&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;service.ini&lt;/code&gt; (in my case, for accelerating first inventory creation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The file &lt;code&gt;service.ini&lt;/code&gt; could look like this:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;#!ini&lt;/span&gt;
+&lt;span class="k"&gt;[OCS_SERVICE]&lt;/span&gt;
+&lt;span class="na"&gt;TTO_WAIT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;10&lt;/span&gt;
+&lt;span class="na"&gt;PROLOG_FREQ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;1&lt;/span&gt;
+&lt;span class="na"&gt;OLD_PROLOG_FREQ&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;1&lt;/span&gt;
+&lt;span class="na"&gt;Miscellaneous&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;/S /SERVER:yourserver.no-ip.org&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;And &lt;code&gt;NSIS&lt;/code&gt; script with:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;#!bat
+; Script edited using HM NIS Edit Script Wizard.
+; Creator Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
+; Homepage: http://Alufis35.uv.es/~iranzo/
+; License: http://creativecommons.org/licenses/by-sa/2.5/
+; HM NIS Edit Wizard helper
+defines
+!define PRODUCT_NAME &lt;span class="s2"&gt;"OCS"&lt;/span&gt;
+!define PRODUCT_VERSION &lt;span class="s2"&gt;"RC3"&lt;/span&gt;
+!define PRODUCT_PUBLISHER &lt;span class="s2"&gt;"Pablo Iranzo Gomez (Pablo.Iranzo@uv.es)"&lt;/span&gt;
+!define PRODUCT_WEB_SITE &lt;span class="s2"&gt;"http://Alufis35.uv.es/~iranzo/"&lt;/span&gt;
+SetCompressor zlib
+Name &lt;span class="s2"&gt;"${PRODUCT_NAME} ${PRODUCT_VERSION}"&lt;/span&gt;
+OutFile &lt;span class="s2"&gt;"ocs-inst.exe"&lt;/span&gt;
+InstallDir &lt;span class="s2"&gt;"$TEMP"&lt;/span&gt;
+Icon &lt;span class="s2"&gt;"${NSISDIR}ContribGraphicsIconsmodern-install.ico"&lt;/span&gt;
+SilentInstall silent
+InstallDirRegKey HKLM &lt;span class="s2"&gt;"${PRODUCT_DIR_REGKEY}"&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;  Section &lt;span class="s2"&gt;"Principal"&lt;/span&gt; SEC01
+SetOverwrite on
+SetOutPath &lt;span class="s2"&gt;"$TEMP"&lt;/span&gt;
+File &lt;span class="s2"&gt;"OcsAgentSetup.exe"&lt;/span&gt;
+Exec &lt;span class="s2"&gt;"$TEMPOcsAgentSetup.exe /S /SERVER:yourserver.no-ip.org"&lt;/span&gt;
+Exec &lt;span class="s2"&gt;"$PROGRAMFILESOCS Inventory AgentOCSService.exe -stop"&lt;/span&gt;
+SetOutPath &lt;span class="s2"&gt;"$PROGRAMFILESOCS Inventory Agent"&lt;/span&gt;
+File &lt;span class="s2"&gt;"cacert.pem"&lt;/span&gt;
+File &lt;span class="s2"&gt;"service.ini"&lt;/span&gt;
+Exec &lt;span class="s2"&gt;"$PROGRAMFILESOCS Inventory AgentOCSService.exe -start"&lt;/span&gt;
+Exec &lt;span class="s2"&gt;"$PROGRAMFILESOCS Inventory AgentOCSInventory.exe /SERVER:yourserver.no-ip.org /DEBUG"&lt;/span&gt;
+SectionEnd
+Section -Post
+SectionEnd`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This script, when compiled, will create a ocs-inst.exe file, with all
+files needed to be packed in it, when executed, will:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;silently run&lt;/li&gt;
+&lt;li&gt;extract OCSAgentSetup&lt;/li&gt;
+&lt;li&gt;install it using silent install&lt;/li&gt;
+&lt;li&gt;then, stop service&lt;/li&gt;
+&lt;li&gt;output &lt;code&gt;cacert.pem&lt;/code&gt; certificate in &lt;span class="caps"&gt;OCS&lt;/span&gt; Service folder&lt;/li&gt;
+&lt;li&gt;replace &lt;code&gt;service.ini&lt;/code&gt; for faster inventory, and then,&lt;/li&gt;
+&lt;li&gt;start service&lt;/li&gt;
+&lt;li&gt;Force &lt;span class="caps"&gt;DEBUG&lt;/span&gt; and hand-started inventory&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This will leave us with a working &lt;span class="caps"&gt;OCS&lt;/span&gt; Agent Setup, with a valid certificate for authenticating against our deployment server, and ready for creating more packages.&lt;/p&gt;
+&lt;p&gt;I hope this document is good for you to test this excellent software.&lt;/p&gt;
+&lt;p&gt;Thanks (again) to the &lt;span class="caps"&gt;OCS&lt;/span&gt; Developing team (specially to Pascal Danek) for creating such a nice program, and helping in diagnosing problems found and setup procedures for correctly using it.&lt;/p&gt;
+&lt;p&gt;Thanks to Pablo Chamorro for reviewing this article too ;)&lt;/p&gt;
+&lt;p&gt;Have a look at &lt;a href="https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/"&gt;&lt;span class="caps"&gt;OCS&lt;/span&gt; Deployment Tips and tricks&lt;/a&gt; to get ideas on how to use package deployment&lt;/p&gt;</content><category term="tech"></category><category term="hardware"></category><category term="Linux"></category><category term="software"></category><category term="OCS"></category><category term="FOSS"></category></entry></feed>

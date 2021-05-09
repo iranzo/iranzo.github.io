@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - Peru</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_peru.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2018-09-25T22:17:00+02:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Peru for syncing specific git repository files</title><link href="https://iranzo.io/blog/2018/09/25/peru-for-syncing-specific-git-repo-files/" rel="alternate"></link><published>2018-09-25T22:17:00+02:00</published><updated>2018-09-25T22:17:00+02:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2018-09-25:/blog/2018/09/25/peru-for-syncing-specific-git-repo-files/</id><summary type="html">&lt;h2 id="peru-a-repository-synchronizer"&gt;Peru a repository synchronizer&lt;a class="headerlink" href="#peru-a-repository-synchronizer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Some projects upstream &lt;code&gt;bind&lt;/code&gt; together lot of files which might not be of interest, but still the
+convenience of a &lt;code&gt;git pull&lt;/code&gt; to get latest updates, makes you to download the whole
+repository for just a bunch of files or&amp;nbsp;folders.&lt;/p&gt;
+&lt;p&gt;For example, this website uses …&lt;/p&gt;</summary><content type="html">&lt;h2 id="peru-a-repository-synchronizer"&gt;Peru a repository synchronizer&lt;a class="headerlink" href="#peru-a-repository-synchronizer" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Some projects upstream &lt;code&gt;bind&lt;/code&gt; together lot of files which might not be of interest, but still the
+convenience of a &lt;code&gt;git pull&lt;/code&gt; to get latest updates, makes you to download the whole
+repository for just a bunch of files or&amp;nbsp;folders.&lt;/p&gt;
+&lt;p&gt;For example, this website uses &lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt; to generate the webpages out of markdown files. Pelican does have a rich set of &lt;a href="https://github.com/getpelican/pelican-plugins"&gt;plugins&lt;/a&gt; but all of them are in the same folder in the &lt;code&gt;git checkout&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Here, is where &lt;code&gt;peru&lt;/code&gt; comes in to play. Peru (hosted at &lt;a href="https://github.com/buildinspace/peru"&gt;https://github.com/buildinspace/peru&lt;/a&gt;) comes handy at this&amp;nbsp;task.&lt;/p&gt;
+&lt;p&gt;You can install &lt;code&gt;peru&lt;/code&gt; from &lt;code&gt;pipsi&lt;/code&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pipsi install peru
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;And will provide you a command-line tool that uses a yaml file for definition of repositories, like the one I do use&amp;nbsp;here:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="c1"&gt;# The dircolors file just goes at the root of our project.&lt;/span&gt;
+  &lt;span class="nt"&gt;sitemap&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;plugins/&lt;/span&gt;
+  &lt;span class="nt"&gt;better_codeblock_line_numbering&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;plugins/&lt;/span&gt;
+  &lt;span class="nt"&gt;better_figures_and_images&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;plugins/&lt;/span&gt;
+  &lt;span class="nt"&gt;yuicompressor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;plugins/&lt;/span&gt;
+
+&lt;span class="nt"&gt;git module sitemap&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git@github.com:getpelican/pelican-plugins.git&lt;/span&gt;
+  &lt;span class="nt"&gt;pick&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;sitemap&lt;/span&gt;
+  &lt;span class="nt"&gt;rev&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ead70548ce2c78ed999273e265e3ebe13b747d83&lt;/span&gt;
+
+&lt;span class="nt"&gt;git module yuicompressor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git@github.com:getpelican/pelican-plugins.git&lt;/span&gt;
+  &lt;span class="nt"&gt;pick&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;yuicompressor&lt;/span&gt;
+  &lt;span class="nt"&gt;rev&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ead70548ce2c78ed999273e265e3ebe13b747d83&lt;/span&gt;
+
+&lt;span class="nt"&gt;git module better_figures_and_images&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git@github.com:getpelican/pelican-plugins.git&lt;/span&gt;
+  &lt;span class="nt"&gt;pick&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;better_figures_and_images&lt;/span&gt;
+  &lt;span class="nt"&gt;rev&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ead70548ce2c78ed999273e265e3ebe13b747d83&lt;/span&gt;
+
+&lt;span class="nt"&gt;git module better_codeblock_line_numbering&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git@github.com:getpelican/pelican-plugins.git&lt;/span&gt;
+  &lt;span class="nt"&gt;pick&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;better_codeblock_line_numbering&lt;/span&gt;
+  &lt;span class="nt"&gt;rev&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ead70548ce2c78ed999273e265e3ebe13b747d83&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;In this way, &lt;code&gt;peru sync&lt;/code&gt; will download from the provided repositories the specified folder into the destination indicated, allowing you to integrate &amp;#8220;other
+repositories files&amp;#8221; in your own&amp;nbsp;workflow.&lt;/p&gt;
+&lt;p&gt;For example, if you want to use citellus repository at one specific point in time, to be integrated in your code, you could&amp;nbsp;use:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;imports&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;citellus&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./&lt;/span&gt;
+
+&lt;span class="nt"&gt;git module citellus&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git@github.com:citellusorg/citellus.git&lt;/span&gt;
+  &lt;span class="nt"&gt;pick&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;citellusclient/plugins/&lt;/span&gt;
+  &lt;span class="nt"&gt;rev&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;1ee1c6a36f51e8a7c809d5162004fb57ee99b168&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This will checkout citellus repository at one specific point in time and merge in your current&amp;nbsp;folder.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+&lt;p&gt;Pablo&lt;/p&gt;</content><category term="tech"></category><category term="citellus"></category><category term="Peru"></category><category term="Python"></category><category term="FOSS"></category></entry></feed>

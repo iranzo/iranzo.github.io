@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='en'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Postgres across clusters¶ For Postgres to work across clusters we do need to have the data being synchronized. With some other databases we do have some master-master approach, but usually have very strict requirements on latency, bandwidth, etc that we cannot solve with On-Premise + external cloud providers. If the replication …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="postgres, FOSS, SSL, replication, federation, Kubernetes, OpenShift, tech, " />
+
+<meta property="og:title" content="Postgres repl SSL replication "/>
+<meta property="og:url" content="https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/" />
+<meta property="og:description" content="Postgres across clusters¶ For Postgres to work across clusters we do need to have the data being synchronized. With some other databases we do have some master-master approach, but usually have very strict requirements on latency, bandwidth, etc that we cannot solve with On-Premise + external cloud providers. If the replication …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2019-01-08T17:30:36+01:00" />
+<meta name="twitter:title" content="Postgres repl SSL replication ">
+<meta name="twitter:description" content="Postgres across clusters¶ For Postgres to work across clusters we do need to have the data being synchronized. With some other databases we do have some master-master approach, but usually have very strict requirements on latency, bandwidth, etc that we cannot solve with On-Premise + external cloud providers. If the replication …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2019-01-08T17:30:36+01:00",
+        "description": "Postgres across clusters¶ For Postgres to work across clusters we do need to have the data being synchronized. With some other databases we do have some master-master approach, but usually have very strict requirements on latency, bandwidth, etc that we cannot solve with On-Premise + external cloud providers. If the replication …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/"
+        },
+
+        "headline": "Postgres repl SSL replication",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>Postgres repl SSL replication  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/">
+                Postgres repl <span class="caps">SSL</span>&nbsp;replication
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#postgres-across-clusters">Postgres across clusters</a><ul>
+<li><a href="#other-approaches">Other approaches</a></li>
+</ul>
+</li>
+<li><a href="#postgresql-streaming-replication-over-ssl">PostgreSQL streaming replication over <span class="caps">SSL</span></a><ul>
+<li><a href="#background">Background</a></li>
+<li><a href="#investigation">Investigation</a></li>
+<li><a href="#ssl"><span class="caps">SSL</span></a><ul>
+<li><a href="#create-postgres-certs">Create Postgres Certs</a></li>
+<li><a href="#our-setup-configuration">Our setup configuration</a></li>
+<li><a href="#environment-configuration">Environment configuration</a></li>
+</ul>
+</li>
+<li><a href="#additional-settings">Additional settings</a></li>
+<li><a href="#the-bittersweet-wrap-up">The bittersweet wrap-up</a></li>
+<li><a href="#the-plot-twist">The plot twist</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h1 id="postgres-across-clusters">Postgres across clusters<a class="headerlink" href="#postgres-across-clusters" title="Permanent link">¶</a></h1>
+<p>For Postgres to work across clusters we do need to have the data being synchronized.</p>
+<p>With some other databases we do have some master-master approach, but
+usually have very strict requirements on latency, bandwidth, etc that we
+cannot solve with On-Premise + external cloud providers.</p>
+<p>If the replication is based on the storage level instead, then you face that database servers don’t deal well if the data changes underneath it, so it leads to data corruption, on top of the storage-level issues/requirements as well on bandwidth, latency, etc.</p>
+<h2 id="other-approaches">Other approaches<a class="headerlink" href="#other-approaches" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="http://evol-monkey.blogspot.com/2015/10/postgresql-94-streaming-replication.html">http://evol-monkey.blogspot.com/2015/10/postgresql-94-streaming-replication.html</a></li>
+<li><a href="https://hackernoon.com/postgresql-cluster-into-kubernetes-cluster-f353cde212de">https://hackernoon.com/postgresql-cluster-into-kubernetes-cluster-f353cde212de</a></li>
+</ul>
+<h1 id="postgresql-streaming-replication-over-ssl">PostgreSQL streaming replication over <span class="caps">SSL</span><a class="headerlink" href="#postgresql-streaming-replication-over-ssl" title="Permanent link">¶</a></h1>
+<p>There are several ways to accomplish this if you do a quick search on a web crawler, but we’ve gone the <span class="caps">PSQL</span> Streaming replication over <span class="caps">SSL</span> for our environment.</p>
+<p>A replication slot is (as defined in <a href="https://www.postgresql.org/docs/9.4/warm-standby.html#STREAMING-REPLICATION-SLOTS">documentation</a>)</p>
+<blockquote>
+<p>Replication slots provide an automated way to ensure that the master does not remove <span class="caps">WAL</span> segments until they have been received by all
+standby’s, and that the master does not remove rows which could cause a recovery conflict even when the standby is disconnected.</p>
+</blockquote>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
+<ul>
+<li>Quay requires a database that is available for each instance and provides required redundancy/replication</li>
+<li>Replicating via storage can lead to issues as the files will change underneath postgres</li>
+<li>Galera approach for MySQL (multi-master) is known to have issues even when running on the same cluster</li>
+<li>For Federation we do want applications to run in different clusters, so an approach where a hot-standby is ready will probably overcome the limitations of master-master and the requirements for available database for all quay instances.</li>
+</ul>
+<h2 id="investigation">Investigation<a class="headerlink" href="#investigation" title="Permanent link">¶</a></h2>
+<p>We started to investigate <a href="#other-approach">how others approached</a> this situation and similar to what was done for another part of the setup for
+MongoDB, we went testing via replication over <span class="caps">SSL</span>.</p>
+<p>We also checked several of the approaches, but one of them, PostDock images were lacking <span class="caps">SSL</span> support, but still had a nice way to do several overrides for configuration, etc via environment variables, which made them ideal for testing in an OpenShift/Kubernetes environment.</p>
+<p>The environments we plan to use are:</p>
+<ul>
+<li><span class="caps">AIT</span> cluster</li>
+<li><span class="caps">LEO</span> cluster</li>
+<li><span class="caps">PIT</span> cluster</li>
+</ul>
+<h2 id="ssl"><span class="caps">SSL</span><a class="headerlink" href="#ssl" title="Permanent link">¶</a></h2>
+<p>For the <span class="caps">SSL</span> setup side we did:</p>
+<h3 id="create-postgres-certs">Create Postgres Certs<a class="headerlink" href="#create-postgres-certs" title="Permanent link">¶</a></h3>
+<p>Seems that Postgres doesn’t check the certificate for the host ‘by default’, but just uses the certificate to encrypt, but still we did create the certificates using the name of the application in it for future usage.</p>
+<p>Using the same certificate with all server names, we can also federate a
+single secret containing those certs rather than creating one <span class="caps">SSL</span> secret for
+each cluster.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>./generate-cert.sh postgres
+</code></pre></div>
+</td></tr></table>
+<p>With output:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">04</span><span class="err">:</span><span class="mi">29</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">received</span><span class="w"> </span><span class="n">request</span><span class="w"></span>
+<span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">04</span><span class="err">:</span><span class="mi">29</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">received</span><span class="w"> </span><span class="n">CSR</span><span class="w"></span>
+<span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">04</span><span class="err">:</span><span class="mi">29</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">generating</span><span class="w"> </span><span class="k">key</span><span class="err">:</span><span class="w"> </span><span class="n">rsa</span><span class="o">-</span><span class="mi">2048</span><span class="w"></span>
+<span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">04</span><span class="err">:</span><span class="mi">29</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">encoded</span><span class="w"> </span><span class="n">CSR</span><span class="w"></span>
+<span class="mi">2018</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span><span class="w"> </span><span class="mi">15</span><span class="err">:</span><span class="mi">04</span><span class="err">:</span><span class="mi">29</span><span class="w"> </span><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="n">signed</span><span class="w"> </span><span class="n">certificate</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="mi">34111709152443674697969629831350216041253590538</span><span class="w"></span>
+</code></pre></div>
+</td></tr></table>
+<p>Now, we do have all the required certificates for postgres generated.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>-rw-r--r--. <span class="m">1</span> iranzo iranzo <span class="m">1001</span> nov <span class="m">29</span> <span class="m">15</span>:04 postgres.csr
+-rw-rw-r--. <span class="m">1</span> iranzo iranzo  <span class="m">208</span> nov <span class="m">29</span> <span class="m">15</span>:04 postgres-csr.json
+-rw-------. <span class="m">1</span> iranzo iranzo <span class="m">1679</span> nov <span class="m">29</span> <span class="m">15</span>:04 postgres-key.pem
+-rw-rw-r--. <span class="m">1</span> iranzo iranzo <span class="m">1753</span> nov <span class="m">29</span> <span class="m">15</span>:04 postgres.pem
+</code></pre></div>
+</td></tr></table>
+<h3 id="our-setup-configuration">Our setup configuration<a class="headerlink" href="#our-setup-configuration" title="Permanent link">¶</a></h3>
+<p>Setup:</p>
+<ul>
+<li><span class="caps">LEO</span> will be the ‘master’ with <code>$PGDATA</code> at <code>/var/lib/postgresql/data</code> in a local volume</li>
+<li><span class="caps">AIT</span> will be the ‘slave’ with <code>$PGDATA</code> at <code>/var/lib/postgresql/data</code> in a local volume</li>
+<li><span class="caps">PIT</span> will be the ‘slave’ with <code>$PGDATA</code> at <code>/var/lib/postgresql/data</code> in a local volume</li>
+</ul>
+<p>The first issue we found is that by default, PostDock lacks the <span class="caps">SSL</span> support,
+but as we were allowed to define settings for the configuration files we
+could override the settings via a variable named <code>CONFIGS</code> set to
+<code>ssl:on,ssl_cert_file:'/etc/postgresql/server.crt',ssl_key_file:'/etc/postgresql/server.key'</code>.</p>
+<p>This required to craft a custom image (<code>quay.io/iranzo/postdock:sslkeyschown</code>) that we submitted as <a href="https://github.com/paunin/PostDock/pull/205"><span class="caps">PR</span> to PostDock</a>.</p>
+<p>In the meantime, we did use <a href="https://quay.io">https://quay.io</a> to store our image and rebuild whenever we changed the code at our custom repo.</p>
+<p>The changes in our image are very simple:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="gh">diff --git a/src/pgsql/bin/postgres/entrypoint.sh b/src/pgsql/bin/postgres/entrypoint.sh</span>
+<span class="gh">index b09652c..1298dcb 100755</span>
+<span class="gd">--- a/src/pgsql/bin/postgres/entrypoint.sh</span>
+<span class="gi">+++ b/src/pgsql/bin/postgres/entrypoint.sh</span>
+<span class="gu">@@ -42,7 +42,25 @@ else</span>
+     fi
+ fi
+
+<span class="gd">-KEYS=$(egrep '(ssl_cert_file|ssl_key_file)' $PGDATA/postgresql.conf|cut -d "=" -f 2-)</span>
+<span class="gi">+</span>
+<span class="gi">+echo "&gt;&gt;&gt; Trying to configure SSL"</span>
+<span class="gi">+# Tweak keys to avoid permission issues:</span>
+<span class="gi">+ORIGKEYS=$(echo $CONFIGS|tr "," "\n"|egrep '(ssl_cert_file|ssl_key_file)'|cut -d ":" -f 2-|tr "\n" " "|tr -d "\'")</span>
+<span class="gi">+KEYS=""</span>
+<span class="gi">+</span>
+<span class="gi">+echo "&gt;&gt;&gt; Trying to move ${ORIGKEYS} to proper folder"</span>
+<span class="gi">+for file in ${ORIGKEYS}; do</span>
+<span class="gi">+    # Check for file or link pointing to file</span>
+<span class="gi">+    if [ -e /pg-ssl/$(basename ${file}) ]; then</span>
+<span class="gi">+        echo "&gt;&gt;&gt; Copying SSL file from /pg-ssl/$(basename ${file}) to ${file}"</span>
+<span class="gi">+        mkdir -p $(dirname ${file})</span>
+<span class="gi">+        cat /pg-ssl/$(basename ${file}) &gt; ${file}</span>
+<span class="gi">+        KEYS="$KEYS ${file}"</span>
+<span class="gi">+    else</span>
+<span class="gi">+        echo "&gt;&gt;&gt; ERROR: SSL File ${file} doesn't exist on disk"</span>
+<span class="gi">+    fi</span>
+<span class="gi">+done</span>
+<span class="gi">+</span>
+ chown -R postgres $PGDATA $KEYS &amp;&amp; chmod -R 0700 $PGDATA $KEYS
+
+ source /usr/local/bin/cluster/repmgr/configure.sh
+</code></pre></div>
+</td></tr></table>
+<p>From this, and once ‘Quay’ builds our image, we should, in the namespace for
+our project, add a new application via ‘Deploy image’ with
+<code>quay.io/iranzo/postdock:sslkeyschown</code> (sources at
+<a href="https://github.com/iranzo/PostDock">https://github.com/iranzo/PostDock</a>)</p>
+<p>The application will ask for some configuration options, name for the new application, etc</p>
+<p>We must configure some environment variables:</p>
+<h3 id="environment-configuration">Environment configuration<a class="headerlink" href="#environment-configuration" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>PARTNER_NODES</code>: <span class="caps">IP</span>’s of: postgres-leo.apps.e2e.bos.example.com,postgres-ait.apps.e2e.bos.example.com,postgres-aws.apps.e2e.bos.example.com (from below, but <span class="caps">EXCLUDING</span> the one we’re that we’ll be putting in CLUSTER_NODE_NETWORK_NAME)</li>
+<li><span class="caps">LEO</span>: 10.19.227.153</li>
+<li><span class="caps">AIT</span>: 10.19.115.226</li>
+<li><span class="caps">AWS</span>: internal-aba91353afe1c11e89f350a50403e669-443870799.us-east-1.elb.amazonaws.com</li>
+<li><code>CLUSTER_NAME</code>: <code>quaydatabase</code></li>
+<li><code>POSTGRES_DB</code>: <code>quaydb</code></li>
+<li><code>DB_USERS</code>: <code>replication_user:replication_pass,quayuser:quaypass</code></li>
+<li><code>CONFIGS</code>: <code>ssl:on,ssl_cert_file:'/etc/postgresql/server.crt',ssl_key_file:'/etc/postgresql/server.key'</code></li>
+<li><code>NODE_NAME</code>: Identifying name for this instance</li>
+<li><code>NODE_ID</code>: \$(<span class="caps">NUMBER</span> <span class="caps">DIFFERENT</span> <span class="caps">FOR</span> <span class="caps">EACH</span> <span class="caps">NODE</span> + 1000, f.e. 1002)</li>
+<li><code>CLUSTER_NODE_NETWORK_NAME</code>: \$(<span class="caps">SAME</span> <span class="caps">AS</span> NODE_NAME that would go in <span class="caps">PARTNER</span> <span class="caps">NODES</span>)</li>
+<li><code>REPLICATION_HOST</code>: “postgres” (name of app in deployment)</li>
+</ul>
+<p>We did raise/update some issues:</p>
+<ul>
+<li><a href="https://github.com/paunin/PostDock/issues/124">https://github.com/paunin/PostDock/issues/124</a></li>
+<li><a href="https://github.com/paunin/PostDock/issues/202">https://github.com/paunin/PostDock/issues/202</a></li>
+<li><a href="https://github.com/paunin/PostDock/issues/203">https://github.com/paunin/PostDock/issues/203</a></li>
+</ul>
+<p>But finally as we had to build our own modified image we were able to circumvent them.</p>
+<p>We did configure some more things to pass the certificates and key to the pods:</p>
+<ul>
+<li>Configure a secret with <code>server.crt</code> and <code>server.key</code> based on the <code>postgres.pem</code> and <code>postgres-key.pem</code> for each one of them.</li>
+</ul>
+<p>As we’re using a secret for storing the certificates, we’ll use a volume exposing it to the host via the path <code>/pg-ssl</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p p-Indicator">-</span> <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/pg-ssl</span>
+              <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">volume-yisiz</span>
+              <span class="l l-Scalar l-Scalar-Plain">readOnly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+</td></tr></table>
+<p>Our patched image, will find and move the certificates to their final destination (specified via environment variable in <code>CONFIGS</code>).</p>
+<p>This image, also ensures valid permissions and ownership so that postgres can start and answer ‘<span class="caps">SSL</span>’ via a:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code> iranzo   iranzo-save  …  RH  syseng  pit-hybrid  psql -h localhost -U replication_user -W replication_db -p <span class="m">5432</span>
+Password <span class="k">for</span> user replication_user:
+psql <span class="o">(</span><span class="m">10</span>.6<span class="o">)</span>
+SSL connection <span class="o">(</span>protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: <span class="m">256</span>, compression: disabled<span class="o">)</span>
+
+<span class="nv">replication_db</span><span class="o">=</span><span class="c1"># \dt</span>
+Did not find any relations.
+<span class="nv">replication_db</span><span class="o">=</span><span class="c1">#</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="additional-settings">Additional settings<a class="headerlink" href="#additional-settings" title="Permanent link">¶</a></h2>
+<ul>
+<li>Configure a volume for storing permanent data in <code>/var/lib/postgresql/data</code> so that is kept and not destroyed on pod destroy.</li>
+</ul>
+<h2 id="the-bittersweet-wrap-up">The bittersweet wrap-up<a class="headerlink" href="#the-bittersweet-wrap-up" title="Permanent link">¶</a></h2>
+<p>At this point we do have the postgres image started with <span class="caps">SSL</span>, however:</p>
+<ul>
+<li>In order to use replication between environments, we need a way to access postgres</li>
+<li>The creation and configuration of <span class="caps">SSL</span> setup gets us a bit closer to it</li>
+<li>OpenShift <code>HAPROXY</code> requires <span class="caps">SNI</span>-capable client, which is not<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> the case, hence we still cannot have the traffic get into the postgres instance and hence, replication doesn’t start as there’s no communication.</li>
+</ul>
+<p>All attempts to use a router (that only permits http and https or <span class="caps">TLS</span>-with-<span class="caps">SNI</span>) failed completely, as <span class="caps">PSQL</span> doesn’t yet have the support in place, failed, even some other hacks on initialization scripts to use the alternate port instead.</p>
+<p>Unfortunately, this became a major blocker at this time, not allowing us to setup a replicated postgres cluster across different OpenShift Clusters to have it as a database we can rely for setting up Quay on top.</p>
+<h2 id="the-plot-twist">The plot twist<a class="headerlink" href="#the-plot-twist" title="Permanent link">¶</a></h2>
+<p>After finding no more ways, we discussed with our team members for putting more brains in this, and in conversations with Pep, Mario and Ryan, it was suggested to instead use a LoadBalancer <span class="caps">IP</span>, that imposes no restrictions on the traffic, this however could only be accomplished on 3 environments (<span class="caps">LEO</span>, <span class="caps">AIT</span> and <span class="caps">AWS</span>)</p>
+<p>As <span class="caps">AWS</span> seems to have no <span class="caps">DNS</span> resolution, we’re limited to use <span class="caps">IP</span>’s in the server name (for the CLUSTER_NODE_NETWORK_NAME) so that in case of failover, <span class="caps">AWS</span> can reach them.</p>
+<p>With the current setup, we only needed to define ‘persistent’ storage for postgres so in case all three pods were destroyed at the same time, we do have some data to start over.</p>
+<p>The final steps, outlined above in <a href="#our-setup-configuration">Our setup configuration</a>, were updated to use:</p>
+<ul>
+<li>PARTNER_NODES containing the <span class="caps">LB</span> <span class="caps">IP</span> address for the Load Balancer defined in each environment <span class="caps">EXCEPT</span> our own</li>
+<li>
+<p>CLUSTER_NODE_NETWORK_NAME: our <span class="caps">LB</span> <span class="caps">IP</span> as it would go in PARTNER_NODES for other clusters</p>
+</li>
+<li>
+<p>PARTNER_NODES: <span class="caps">IP</span>’s of: postgres-leo.apps.e2e.bos.example.com,postgres-ait.apps.e2e.bos.example.com,postgres-aws.apps.e2e.bos.example.com (from below, but <span class="caps">EXCLUDING</span> the one we’re that we’ll be putting in CLUSTER_NODE_NETWORK_NAME)</p>
+</li>
+<li><span class="caps">LEO</span>: 10.19.227.153</li>
+<li><span class="caps">AIT</span>: 10.19.115.226</li>
+<li><span class="caps">AWS</span>: internal-aba91353afe1c11e89f350a50403e669-443870799.us-east-1.elb.amazonaws.com</li>
+<li>NODE_ID: \$(<span class="caps">NUMBER</span> <span class="caps">DIFFERENT</span> <span class="caps">FOR</span> <span class="caps">EACH</span> <span class="caps">NODE</span> + 1000, f.e. 1002)</li>
+<li>CLUSTER_NODE_NETWORK_NAME: \$(<span class="caps">SAME</span> <span class="caps">AS</span> NODE_NAME that would go in <span class="caps">PARTNER</span> <span class="caps">NODES</span>)</li>
+<li>REPLICATION_HOST: “postgres” (name of app in deployment)</li>
+</ul>
+<p>With this approach, the LoadBalancer effectively passes the data on port 5432 (even if it’s not <span class="caps">SSL</span>), and the cluster can form and start replication of data.</p>
+<p>So next steps are:</p>
+<ul>
+<li>Define <span class="caps">DNS</span> name pointing to all 3 <span class="caps">IP</span>’s that we can configure on apps</li>
+<li>Rely on psql standby to work in read-only mode and providing service</li>
+<li>Setup Quay to use that psql <span class="caps">DNS</span> name</li>
+<li>Automate the setup, including Quay <code>ENV</code> variable for storage ‘closer’ to each cluster.</li>
+</ul>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.postgresql.org/message-id/CAPPwrB_tsOw8MtVaA_DFyOFRY2ohNdvMnLoA_JRr3yB67Rggmg%40mail.gmail.com">Thread on psql-hackers</a> and <a href="https://www.postgresql.org/message-id/20181211145240.GL20222%40redhat.com">pinged by us</a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=Postgres%20repl%20SSL%C2%A0replication&url=https%3A//iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/&via=iranzop&hashtags=postgres,foss,ssl,replication,federation,kubernetes,openshift" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=Postgres%20repl%20SSL%C2%A0replication&amp;body=https%3A//iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/"
+                   href="https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/';
+    var disqus_url = 'https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2019/01/08/quay-for-federation/" title="Quay for Federation">Quay for Federation</a></li>
+<li><a href="https://iranzo.io/blog/2019/06/11/katacoda-scenario-creation/" title="Katacoda scenario creation">Katacoda scenario creation</a></li>
+<li><a href="https://iranzo.io/blog/2020/12/01/upstreamdownstream-documentation-workflow/" title="Upstream/Downstream documentation workflow">Upstream/Downstream documentation workflow</a></li>
+<li><a href="https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/" title="Configuring OpenShift with self-contained NTP">Configuring OpenShift with self-contained NTP</a></li>
+<li><a href="https://iranzo.io/blog/2021/01/14/be-lazy-automate-github-actions-for-static-blogging/" title="Be lazy, automate: GitHub actions for static blogging">Be lazy, automate: GitHub actions for static blogging</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2019/01/08/quay-for-federation/" title="Previous: Quay for Federation">Quay for Federation</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2019/01/08/osp-director-baremetal-hypervisor-for-coreos/" title="Next: OSP Director baremetal hypervisor for CoreOS">OSP Director baremetal hypervisor for CoreOS</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~7 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2019-01-08T17:30:36+01:00">Tue 08 January 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#federation-ref">federation
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#foss-ref">FOSS
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#kubernetes-ref">Kubernetes
+                    <span class="superscript">4</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#openshift-ref">OpenShift
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#postgres-ref">postgres
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#replication-ref">replication
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#ssl-ref">SSL
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

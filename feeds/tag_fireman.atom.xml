@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - fireman</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_fireman.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2020-02-22T20:30:24+01:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Some Lego vintage minifigures</title><link href="https://iranzo.io/blog/2020/02/22/some-lego-vintage-minifigures/" rel="alternate"></link><published>2020-02-22T20:30:24+01:00</published><updated>2020-02-22T20:30:24+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2020-02-22:/blog/2020/02/22/some-lego-vintage-minifigures/</id><content type="html">&lt;p&gt;Just some pics I made during some sorting of minifigs from my&amp;nbsp;childhood.&lt;/p&gt;
+&lt;div class="elegant-gallery" itemscope itemtype="http://schema.org/ImageGallery"&gt;
+ &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+        &lt;a href="https://i.imgur.com/CeV61xr.jpg.jpg" itemprop="contentUrl" data-size="4032x3024"&gt;
+            &lt;img src="https://i.imgur.com/CeV61xrt.jpg" width="403" height="302" itemprop="thumbnail" alt="Space minifigures" /&gt;
+        &lt;/a&gt;
+        &lt;figcaption itemprop="caption description"&gt;Space minifigures&lt;/figcaption&gt;
+    &lt;/figure&gt;
+ &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+        &lt;a href="https://i.imgur.com/pfYEfGJ.jpg.jpg" itemprop="contentUrl" data-size="4032x3024"&gt;
+            &lt;img src="https://i.imgur.com/pfYEfGJt.jpg" width="403" height="302" itemprop="thumbnail" alt="Pirates, doctors and fire-fighters" /&gt;
+        &lt;/a&gt;
+        &lt;figcaption itemprop="caption description"&gt;Pirates, doctors and fire-fighters&lt;/figcaption&gt;
+    &lt;/figure&gt;
+ &lt;figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"&gt;
+        &lt;a href="https://i.imgur.com/4X7sNU8.jpg.jpg" itemprop="contentUrl" data-size="4032x3024"&gt;
+            &lt;img src="https://i.imgur.com/4X7sNU8t.jpg" width="403" height="302" itemprop="thumbnail" alt="Archer, ghost, soldiers and tribal" /&gt;
+        &lt;/a&gt;
+        &lt;figcaption itemprop="caption description"&gt;Archer, ghost, soldiers and tribal&lt;/figcaption&gt;
+    &lt;/figure&gt;
+ &lt;/div&gt;
+
+&lt;p&gt;Hope you like&amp;nbsp;it!&lt;/p&gt;</content><category term="blog"></category><category term="lego"></category><category term="minifigure vintage"></category><category term="pirates"></category><category term="space"></category><category term="fireman"></category><category term="ghost"></category><category term="doctor"></category><category term="tribes"></category><category term="archer"></category></entry></feed>

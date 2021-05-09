@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - iso</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_iso.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2008-01-04T18:43:29+00:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Creando plantillas Jigdo (Jigsaw Download) para descargar ISO’s</title><link href="https://iranzo.io/blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/" rel="alternate"></link><published>2008-01-04T18:43:29+00:00</published><updated>2008-01-04T18:43:29+00:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2008-01-04:/blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/</id><summary type="html">
+&lt;h3 id="introduccion"&gt;Introducción&lt;a class="headerlink" href="#introduccion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Jigdo (JIGsaw DOwnload) es una pequeña utilidad que permite ensamblar imágenes de &lt;span class="caps"&gt;CD&lt;/span&gt;/&lt;span class="caps"&gt;DVD&lt;/span&gt; a partir de los ficheros que las forman.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, &lt;a href="http://www.debian.org/"&gt;Debian&lt;/a&gt; ha estado utilizándolo durante algún tiempo para distribuir sus imágenes: se descarga un fichero jigdo y utilizando la orden jigdo-lite (paquete jigdo-lite en Debian …&lt;/p&gt;</summary><content type="html">
+&lt;h3 id="introduccion"&gt;Introducción&lt;a class="headerlink" href="#introduccion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Jigdo (JIGsaw DOwnload) es una pequeña utilidad que permite ensamblar imágenes de &lt;span class="caps"&gt;CD&lt;/span&gt;/&lt;span class="caps"&gt;DVD&lt;/span&gt; a partir de los ficheros que las forman.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, &lt;a href="http://www.debian.org/"&gt;Debian&lt;/a&gt; ha estado utilizándolo durante algún tiempo para distribuir sus imágenes: se descarga un fichero jigdo y utilizando la orden jigdo-lite (paquete jigdo-lite en Debian y en las basadas en &lt;span class="caps"&gt;RPM&lt;/span&gt;&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;. De este modo, sólo de descargan ficheros pequeños de incluso varios servidores, repartiendo la carga, y haciendo uso de posibles proxyes, etc.&lt;/p&gt;
+&lt;p&gt;Además, si ya disponíamos de ficheros descargados (por ejemplo si iniciamos con la versión X y hemos ido descargando y conservando los ficheros hasta la X.Y, jigdo puede utilizar dichos ficheros, comparándolos con los existentes en la plantilla y así, evitarnos descargar ficheros que ya tuviéramos…&lt;/p&gt;
+&lt;h3 id="como-funciona"&gt;Cómo funciona&lt;a class="headerlink" href="#como-funciona" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Una plantilla Jigdo contiene dos partes: una, el archivo .jigdo que contiene la información de los ficheros que conforman la &lt;span class="caps"&gt;ISO&lt;/span&gt;&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; y una plantilla que se crea en base al análisis que jigdo-file hace de la imagen original al crear las plantillas.&lt;/p&gt;
+&lt;p&gt;Al ejecutar jigdo-lite “archivo.jigdo”, se nos preguntará por posibles ubicaciones (carpetas) que podrían tener ya los archivos que descargamos, y utilizará las &lt;span class="caps"&gt;URL&lt;/span&gt;’s especificadas en el fichero “.jigdo” para descargar todos aquellos que no tuviéramos disponibles. Al final del proceso, jigdo ensamblará de nuevo la imagen con todos los ficheros, obteniendo una imagen idéntica a la original desde la que se crearon las plantillas. Como aliciente, sólo se habrán descargado los archivos realmente necesarios y en caso de fallos de conectividad, será necesario sólo descargar pequeñas partes en lugar de toda una &lt;span class="caps"&gt;ISO&lt;/span&gt; como se haría con métodos tradicionales.&lt;/p&gt;
+&lt;h3 id="como-creo-un-fichero-jigdo-y-un-template"&gt;¿Cómo creo un fichero .jigdo y un .template?&lt;a class="headerlink" href="#como-creo-un-fichero-jigdo-y-un-template" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Por ejemplo, si descargamos la imagen &lt;span class="caps"&gt;ISO&lt;/span&gt; de CentOS &lt;a href="http://alufis35.uv.es/mirror.centos.org"&gt;mirror.centos.org&lt;/a&gt;, podemos montarla usando loopback y colocarla en una carpeta (por ejemplo para proporcionar nuestro propio servidor espejo o árbol de instalación), podremos hacer:&lt;/p&gt;
+&lt;p&gt;(Supongamos que la iso está en /var/www/CentOS/isos/ y que la carpeta con el contenido de la iso en /var/www/CentOS/tree/, haremos:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+jigdo-file mt -i /var/www/CentOS/isos/CentOS-5.0-i386-bin-DVD/CentOS-5.0-i386-bin-DVD.iso -j /var/www/CentOS/Centos5-DVD.jigdo -t /var/www/CentOS/Centos5-DVD.template —uri &lt;span class="nv"&gt;Centosmirrors&lt;/span&gt;&lt;span class="o"&gt;=[&lt;/span&gt;http://mirror.centos.org/centos-5/5/os/i386/&lt;span class="o"&gt;](&lt;/span&gt;http://mirror.centos.org/centos-5/5/os/i386/&lt;span class="o"&gt;)&lt;/span&gt; /var/www/CentOS/tree/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Tras un rato de procesado y verificación de la imagen &lt;span class="caps"&gt;ISO&lt;/span&gt;&amp;lt;-&amp;gt;Árbol de instalación, tendremos los dos nuevos ficheros listos para su uso.&lt;/p&gt;
+&lt;p&gt;Utilizando un editor de texto, podemos editar nuestro fichero .jigdo y establecer la &lt;span class="caps"&gt;URL&lt;/span&gt; para nuestros paquetes (por ejemplo: &lt;a href="http://mirror.centos.org/centos-5/5/os/i386"&gt;http://mirror.centos.org/centos-5/5/os/i386&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Proporcionando estos dos ficheros a alguien, disfrutará de mejores descargas de nuestras &lt;span class="caps"&gt;ISO&lt;/span&gt;’s que se reconstruirán en su máquina.&lt;/p&gt;
+&lt;h3 id="como-obtengo-una-iso-desde-un-fichero-jigdo"&gt;¿Cómo obtengo una &lt;span class="caps"&gt;ISO&lt;/span&gt; desde un fichero .jigdo?&lt;a class="headerlink" href="#como-obtengo-una-iso-desde-un-fichero-jigdo" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Fácil:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;jigdo-lite http://SERVIDOR/RUTA/file.jigdo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;JigDo descargará la descripción, buscará el fichero de plantilla, lo descargará y comenzará la creación de la imagen &lt;span class="caps"&gt;ISO&lt;/span&gt;, descargando los ficheros que no encuentre en la carpeta opcional que podemos indicarle.&lt;/p&gt;
+&lt;p&gt;Espero que te sea útil :)&lt;/p&gt;
+&lt;p&gt;Puedes ver una plantilla de ejemplo (.jigdo y .template) que cree para este artículo, y que actualmente, permite obtener un &lt;span class="caps"&gt;DVD&lt;/span&gt; de instalación de CentOS 5 a partir de sus &lt;span class="caps"&gt;RPM&lt;/span&gt;’s individuales.&lt;/p&gt;
+&lt;p&gt;Puedes probarlo utilizando: jigdo-lite &lt;a href="http://alufis35.uv.es/deploy/Centos5-DVD.jigdo"&gt;http://alufis35.uv.es/deploy/Centos5-&lt;span class="caps"&gt;DVD&lt;/span&gt;.jigdo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Or: jigdo-lite &lt;a href="http://alufis35.uv.es/deploy/CentOS51-DVD.jigdo"&gt;http://alufis35.uv.es/deploy/CentOS51-&lt;span class="caps"&gt;DVD&lt;/span&gt;.jigdo&lt;/a&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="http://dag.wieers.com/rpm/packages/jigdo/"&gt;del repositorio de Dag&lt;/a&gt; &lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Puede utilizarse para distribuir otro tipo de ficheros &lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="tech"></category><category term="linux"></category><category term="iso"></category><category term="foss"></category></entry><entry><title>Creating Jigsaw Download (JigDo) files for downloading ISO’s</title><link href="https://iranzo.io/blog/2007/11/15/Creating-Jigsaw-Download-JigDo/" rel="alternate"></link><published>2007-11-15T21:50:25+00:00</published><updated>2007-11-15T21:50:25+00:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2007-11-15:/blog/2007/11/15/Creating-Jigsaw-Download-JigDo/</id><summary type="html">
+&lt;h3 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;JigDo (&lt;code&gt;JIGsaw DOwnload&lt;/code&gt;) is a small utility that can assemble a &lt;span class="caps"&gt;CD&lt;/span&gt;/&lt;span class="caps"&gt;DVD&lt;/span&gt; image from it’s internal files.&lt;/p&gt;
+&lt;p&gt;For example, &lt;a href="http://www.debian.org/"&gt;Debian&lt;/a&gt; has been using it for years for distributing the entire distribution: you downloaded a
+&lt;code&gt;.jigdo&lt;/code&gt; file, and then, using the utility &lt;code&gt;jigdo-lite&lt;/code&gt; (package
+&lt;code&gt;jigdo-file&lt;/code&gt; on Debian like …&lt;/p&gt;</summary><content type="html">
+&lt;h3 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;JigDo (&lt;code&gt;JIGsaw DOwnload&lt;/code&gt;) is a small utility that can assemble a &lt;span class="caps"&gt;CD&lt;/span&gt;/&lt;span class="caps"&gt;DVD&lt;/span&gt; image from it’s internal files.&lt;/p&gt;
+&lt;p&gt;For example, &lt;a href="http://www.debian.org/"&gt;Debian&lt;/a&gt; has been using it for years for distributing the entire distribution: you downloaded a
+&lt;code&gt;.jigdo&lt;/code&gt; file, and then, using the utility &lt;code&gt;jigdo-lite&lt;/code&gt; (package
+&lt;code&gt;jigdo-file&lt;/code&gt; on Debian like and &lt;span class="caps"&gt;RPM&lt;/span&gt; based&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;. This way, you only downloaded small files from servers, preventing line failures, spreading load between several servers, etc.&lt;/p&gt;
+&lt;p&gt;Furthermore, if you already had some files (for example if you started at version X and have been downloading and keeping
+all files until X.Y,
+&lt;code&gt;jigdo&lt;/code&gt;, can use those updated files to compare them against the &lt;code&gt;.jigdo&lt;/code&gt; file and avoid downloading duplicated files…&lt;/p&gt;
+&lt;h3 id="how-it-works"&gt;¿How it works?&lt;a class="headerlink" href="#how-it-works" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;A JigDo download contains two parts, one, the &lt;code&gt;.jigdo&lt;/code&gt; file which contains the files part of the &lt;span class="caps"&gt;ISO&lt;/span&gt;&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; image and a template file automatically generated when creating the
+&lt;code&gt;.jigdo&lt;/code&gt; using &lt;code&gt;jigdo-file&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;When specified &lt;code&gt;jigdo-lite file.jigdo&lt;/code&gt; will ask for previous locations (folders) that could contain required packages, and will use the &lt;span class="caps"&gt;URL&lt;/span&gt;’s described in
+&lt;code&gt;.jigdo&lt;/code&gt; file to download any missing package and reassemble an &lt;span class="caps"&gt;ISO&lt;/span&gt; image with same MD5sum of original, but saving on bandwidth and avoiding re-downloads from network failures (just small file compared to a full &lt;span class="caps"&gt;DVD&lt;/span&gt; &lt;span class="caps"&gt;ISO&lt;/span&gt;)&lt;/p&gt;
+&lt;h3 id="how-do-i-create-a-jigdo-and-a-template-file"&gt;¿How do I create a &lt;code&gt;.jigdo&lt;/code&gt; and a .template file?&lt;a class="headerlink" href="#how-do-i-create-a-jigdo-and-a-template-file" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For example, if we download CentOS 5 &lt;span class="caps"&gt;DVD&lt;/span&gt; &lt;span class="caps"&gt;ISO&lt;/span&gt; from &lt;a href="http://alufis35.uv.es/mirror.centos.org"&gt;mirror.centos.org&lt;/a&gt; and then mount it
+&lt;code&gt;loopback&lt;/code&gt; and put on a folder (for example for providing our own mirror, or
+kickstart-able tree) we can do:&lt;/p&gt;
+&lt;p&gt;(Supposing that &lt;span class="caps"&gt;ISO&lt;/span&gt; is at &lt;code&gt;/var/www/CentOS/isos/&lt;/code&gt; and that our exploded directory and file tree at /var/www/CentOS/tree/, we will do:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+jigdo-file mt -i /var/www/CentOS/isos/CentOS-5.0-i386-bin-DVD/CentOS-5.0-i386-bin-DVD.iso -j /var/www/CentOS/Centos5-DVD.jigdo -t /var/www/CentOS/Centos5-DVD.template —uri &lt;span class="nv"&gt;Centosmirrors&lt;/span&gt;&lt;span class="o"&gt;=[&lt;/span&gt;http://mirror.centos.org/centos-5/5/os/i386/&lt;span class="o"&gt;](&lt;/span&gt;http://mirror.centos.org/centos-5/5/os/i386/&lt;span class="o"&gt;)&lt;/span&gt; /var/www/CentOS/tree/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After some processing and &lt;span class="caps"&gt;ISO&lt;/span&gt;&amp;lt;-&amp;gt;tree verification we will have two new files.&lt;/p&gt;
+&lt;p&gt;Using a text editor we can modify our &lt;code&gt;.jigdo&lt;/code&gt; file and set the &lt;span class="caps"&gt;URL&lt;/span&gt; for our source packages (for example: &lt;a href="http://mirror.centos.org/centos-5/5/os/i386"&gt;http://mirror.centos.org/centos-5/5/os/i386&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;After that, if we provide those files to anyone, he/she could enjoy faster and better downloads of our &lt;span class="caps"&gt;ISO&lt;/span&gt;’s that will get reconstructed automatically on target system&lt;/p&gt;
+&lt;h3 id="how-do-i-get-an-iso-from-a-jigdo-file"&gt;¿How do I get an &lt;span class="caps"&gt;ISO&lt;/span&gt; from a &lt;code&gt;.jigdo&lt;/code&gt; file?&lt;a class="headerlink" href="#how-do-i-get-an-iso-from-a-jigdo-file" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Easy:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;jigdo-lite http://SOMESERVER/PATH/file.jigdo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;JigDo will download the descriptor, search it for the template file, download it and begin creation of &lt;span class="caps"&gt;ISO&lt;/span&gt; by downloading packages not found on optional local folder (to avoid re-download of packages).&lt;/p&gt;
+&lt;p&gt;I hope you find this useful :)&lt;/p&gt;
+&lt;p&gt;Attached are the sample &lt;code&gt;.jigdo&lt;/code&gt; and .template that I created for this document, right now it allows you to get a Centos 5 &lt;span class="caps"&gt;DVD&lt;/span&gt; using individual &lt;span class="caps"&gt;RPM&lt;/span&gt; files.&lt;/p&gt;
+&lt;p&gt;You can test it using &lt;code&gt;jigdo-lite&lt;/code&gt;
+&lt;a href="http://alufis35.uv.es/deploy/Centos5-DVD.jigdo"&gt;&lt;code&gt;http://alufis35.uv.es/deploy/Centos5-DVD.jigdo&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Or: &lt;code&gt;jigdo-lite&lt;/code&gt; &lt;a href="http://alufis35.uv.es/deploy/CentOS51-DVD.jigdo"&gt;&lt;code&gt;http://alufis35.uv.es/deploy/CentOS51-DVD.jigdo&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="http://dag.wieers.com/rpm/packages/jigdo/"&gt;From Dag’s Repo&lt;/a&gt; &lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;It can also be used to deliver other kind of files &lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="tech"></category><category term="Linux"></category><category term="ISO"></category><category term="foss"></category></entry></feed>

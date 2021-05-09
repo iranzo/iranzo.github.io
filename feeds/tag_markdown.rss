@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - markdown</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Fri, 03 Jun 2016 17:23:47 +0200</lastBuildDate><item><title>New blog rendering engine: Pelican</title><link>https://iranzo.io/blog/2016/06/03/new-blog-rendering-engine-pelican/</link><description>&lt;p&gt;As always, I don&amp;#8217;t usually find myself keen to write about things I do, until I later realize they might be helpful for others, and that&amp;#8217;s why in the past I decided to switch the place I was putting the information about why did to Github and also, take benefit of practicing markdown for writing the&amp;nbsp;entries.&lt;/p&gt;
+&lt;p&gt;At that time, I moved my old blog posts to markdown to be used in conjunction with Jekyll and to use OctoPress as the engine rendering the contents into a static website. The setup and migration was not difficult, but still require to use some ruby, while I was more familiar with&amp;nbsp;Python.&lt;/p&gt;
+&lt;p&gt;Since some time ago, I was checking other platforms, following the same approach of rendering markdown files and sticker to Pelican, it&amp;#8217;s included in Fedora
+repositories (python-pelican). Pelican offers a similar behaviour, having also a server for allowing you to quickly test the new settings (plugins, themes, etc) and to publish the resulting website to a hosting&amp;nbsp;provider.&lt;/p&gt;
+&lt;p&gt;As I did with Jekyll+OctoPress, I&amp;#8217;m still using github.io for it, and I&amp;#8217;m in the process of adapting some changes like additional plugins, theme tweaks and consider to develop one of my&amp;nbsp;own.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Fri, 03 Jun 2016 17:23:47 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2016-06-03:/blog/2016/06/03/new-blog-rendering-engine-pelican/</guid><category>tech</category><category>pelican</category><category>python</category><category>markdown</category><category>foss</category></item><item><title>Migrate SPIP-RSS post feed to HTML</title><link>https://iranzo.io/blog/2015/04/01/migrate-spip-rss-post-feed-to-html/</link><description>&lt;p&gt;I had my old blog based on &lt;a href="http://www.spip.net"&gt;&lt;span class="caps"&gt;SPIP&lt;/span&gt;&lt;/a&gt;, and I wanted to keep all the posts together, to make it easier to migrate in the&amp;nbsp;future.&lt;/p&gt;
+&lt;p&gt;Initially, I migrated my posts from blogger, where there&amp;#8217;s an option to export the contents and some plugins to allow easier importing to markdown files (to be used by OctoPress), those were the recent posts, so part of the job was already done&amp;nbsp;there.&lt;/p&gt;
+&lt;p&gt;Next step, was to migrate old posts on my &lt;span class="caps"&gt;SPIP&lt;/span&gt;&amp;nbsp;site.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;SPIP&lt;/span&gt;, being not as popular as other solutions, might lack plugins for importing the data, but has a nice feature: it allows to provide full article contents via &lt;span class="caps"&gt;RSS&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;So:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I entered into my site private area &lt;code&gt;/ecrire/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Entered to the administration section and under &lt;code&gt;Content&lt;/code&gt;, I temporarily changed the syndication settings to provide full articles instead of just&amp;nbsp;summary.&lt;/li&gt;
+&lt;li&gt;Then, I visited the url for my user, but on the &lt;span class="caps"&gt;RSS&lt;/span&gt; generator template: &lt;code&gt;spip.php?page=backend&amp;amp;id_rubrique=6&lt;/code&gt;, and saved it as&amp;nbsp;file.xml&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At this point I needed some software for automating the initial conversion, so I went to python&amp;#8217;s &lt;code&gt;feedparser&lt;/code&gt; libraries to perform this with a bit of&amp;nbsp;coding:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/path/to/your/xml/file.xml&amp;quot;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;codecs&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;feedparser&lt;/span&gt;
+
+&lt;span class="n"&gt;feed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;feedparser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;feed&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;items&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="n"&gt;filename&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;date&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;-&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;link&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# remove the first 23 chars from article url http+domain&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;w&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;---&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;layout: post&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;elem&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;date&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+            &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;elem&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;elem&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;---&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;content&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After each iteration, a new file was created using the old http link to the article (which already had stripped problematic&amp;nbsp;characters).&lt;/p&gt;
+&lt;p&gt;Just moving those files to &lt;code&gt;source/_posts&lt;/code&gt; allows me to re-publish them on a different site, and later work the conversion to markdown by using &lt;code&gt;pandoc&lt;/code&gt; and some manual&amp;nbsp;tuning.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Wed, 01 Apr 2015 16:49:13 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2015-04-01:/blog/2015/04/01/migrate-spip-rss-post-feed-to-html/</guid><category>tech</category><category>python</category><category>SPIP</category><category>markdown</category><category>html</category><category>foss</category></item><item><title>OctoPress for Jekyll blogging</title><link>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</link><description>&lt;p&gt;After testing for some days Jekyll and github.io for blog posting, I was missing some features of other &lt;span class="caps"&gt;CMS&lt;/span&gt;, so I started doing some search on how to automate many other topics while keeping simplicity on blog&amp;nbsp;posting.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://octopress.org"&gt;OctoPress&lt;/a&gt; Makes this extra step so you can still focus on your contents and of course have a nice template as starting point with integrations for some social plugins,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;Setup is well done if you follow the provided steps, without jumping anything, in my case, I moved my old pages (plain &lt;code&gt;jekyll + poole&lt;/code&gt;) to&amp;nbsp;OctoPress.&lt;/p&gt;
+&lt;p&gt;On Fedora and as my unprivileged user, I&amp;nbsp;did:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href="http://octopress.org/docs/setup/rvm/"&gt;&lt;code&gt;RVM&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Define in profile configuration to have &lt;code&gt;RVM&lt;/code&gt; use 1.9.3 ruby as required by&amp;nbsp;OctoPress&lt;/li&gt;
+&lt;li&gt;Install other required libraries for &lt;a href="http://octopress.org/docs/setup/"&gt;Setting up&amp;nbsp;OctoPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://octopress.org/docs/configuring/"&gt;Configure&amp;nbsp;OctoPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://octopress.org/docs/deploying/github/"&gt;Set OctoPress for&amp;nbsp;github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;And from there, the &lt;code&gt;generate&lt;/code&gt;, &lt;code&gt;preview&lt;/code&gt; and &lt;code&gt;deploy&lt;/code&gt; basics &lt;a href="http://octopress.org/docs/blogging/"&gt;for&amp;nbsp;blogging&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One of the interesting things it that it uses two branches on git, &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;source&lt;/code&gt;, where &lt;code&gt;master&lt;/code&gt; is the one that github publishes (your live environment) and &lt;code&gt;source&lt;/code&gt; is the actual code for your blog, templates, posts, etc that are later generated, previewed and deployed from above&amp;nbsp;steps.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ll be testing it for a while to see how it works, but so far, so&amp;nbsp;good.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Tue, 24 Mar 2015 13:23:15 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2015-03-24:/blog/2015/03/24/octopress-for-jekyll-blogging/</guid><category>tech</category><category>Jekyll</category><category>Markdown</category><category>OctoPress</category><category>FOSS</category></item><item><title>Jekyll and Markdown</title><link>https://iranzo.io/blog/2015/03/16/jekyll-and-markdown/</link><description>&lt;p&gt;For my work I&amp;#8217;ve been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the&amp;nbsp;formating.&lt;/p&gt;
+&lt;p&gt;On the other side I was willing to improve the ability to make it easier to post new entries to blog without having to wait too much time, and of course, be able to prepare them offline and then push them&amp;nbsp;live.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Using &lt;a href="http://www.spip.net"&gt;&lt;span class="caps"&gt;SPIP&lt;/span&gt;&lt;/a&gt; allowed me to focus on text without caring too much about formatting, the &lt;span class="caps"&gt;CMS&lt;/span&gt; is not hard to administer, maybe not as popular as
+  WordPress, Joomla lately, but definitely, good for the work it&amp;#8217;s intended to do, and not like traditional&amp;nbsp;webpages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Using &lt;a href="http://www.blogger.com"&gt;Blogger&lt;/a&gt;, formatting was also not a hard part, and being a good platform improved the availability of tools, but still required online access, and the
+  Firefox extensions for it, were still not
+  convincing me for daily&amp;nbsp;usage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yesterday, while I was reading some information about github, I got back to their &amp;#8216;hosting&amp;#8217; solution (github.io) and like the idea of pushing the code via git (I love the offline commit and later push of all changes), and started reading about Jekyll and&amp;nbsp;Poole.&lt;/p&gt;
+&lt;p&gt;Jekyll and Poole enhance the creation of webpage posts using Markdown with some automation for automatic generation of links, reusability of common elements, etc which creates a set of static pages, fast to serve, upload,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve also used Jekyll-Import to gather my old posts at blogger and I will still convert some of them to markdown and try to get back the auto-code coloring I had in place (using external
+JavaScript&amp;nbsp;library).&lt;/p&gt;
+&lt;p&gt;Well, let&amp;#8217;s see how this goes and will try to implement some template to website not to use the standard one&amp;nbsp;soon.&lt;/p&gt;
+&lt;p&gt;Post Datum: This was being written while offline at the airport on a trip to Helsinki&amp;nbsp;;-)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Mon, 16 Mar 2015 09:06:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2015-03-16:/blog/2015/03/16/jekyll-and-markdown/</guid><category>tech</category><category>Jekyll</category><category>FOSS</category><category>Markdown</category><category>SPIP</category><category>Blogger</category></item></channel></rss>

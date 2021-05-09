@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - email</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_email.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2015-08-28T15:27:47+02:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Filtering email with imapfilter</title><link href="https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/" rel="alternate"></link><published>2015-08-28T15:27:47+02:00</published><updated>2015-08-28T15:27:47+02:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2015-08-28:/blog/2015/08/28/filtering-email-with-imapfilter/</id><summary type="html">&lt;p&gt;Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&amp;amp;drop reordering of rules, cloning,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;As I was already using offlineimap to sync from the remote …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&amp;amp;drop reordering of rules, cloning,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;As I was already using offlineimap to sync from the remote mail server to my system into a maildir folder, I had almost all the elements I&amp;nbsp;needed.&lt;/p&gt;
+&lt;p&gt;After searching for several options &lt;a href="https://github.com/lefcha/imapfilter"&gt;imapfilter&lt;/a&gt; seemed to be a perfect fit, so I started with a small set of rules and start integration with my email&amp;nbsp;process.&lt;/p&gt;
+&lt;p&gt;On my first attempts, I setup a pre-sync hook on offlineimap by using as well as the postsync hook I already&amp;nbsp;had:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;presynchook&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;time imapfilter&lt;/span&gt;
+&lt;span class="na"&gt;postsynchook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;~/.mutt/postsync-offlineimap.sh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Initial attempts were not good at all, applying filters on the remote &lt;span class="caps"&gt;IMAP&lt;/span&gt; server was very time consuming and my actual 1 minute delay after finishing one check was becoming a real 10-15 minute interval between checks because of the
+&lt;span class="caps"&gt;IMAP&lt;/span&gt; filtering and this was not scaling as I was putting new&amp;nbsp;rules.&lt;/p&gt;
+&lt;p&gt;After some tries, and as I already had all the email synced offline, moved filtering to be locally instead of server-side, but as imapfilter requires an &lt;span class="caps"&gt;IMAP&lt;/span&gt; server, I tricked &lt;code&gt;dovecot&lt;/code&gt; into using the local folder to be offered via
+&lt;span class="caps"&gt;IMAP&lt;/span&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;protocols&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;imap&lt;/span&gt;
+&lt;span class="na"&gt;mail_location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;maildir:~/.maildir/FOLDER/:INBOX=~/.maildir/FOLDER/.INBOX/&lt;/span&gt;
+&lt;span class="na"&gt;auth_debug_passwords&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;yes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This also required to change my &lt;code&gt;foldernames&lt;/code&gt; to use &amp;#8220;.&amp;#8221; in front of them, so I needed to change &lt;code&gt;mutt&lt;/code&gt; configuration too for&amp;nbsp;this:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;set mask&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.*&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;and my &lt;code&gt;mailfolders&lt;/code&gt; script:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;
+&lt;span class="normal"&gt;9&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;mbox_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Maildir
+&lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;folder&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;~/.maildir/FOLDER&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;spoolfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;~/.maildir/FOLDER/.INBOX&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;#mailboxes `echo -n &amp;quot;+ &amp;quot;; find ~/.cache/notmuch/mutt/results ~/.maildir/FOLDER -type d -not -name &amp;#39;cur&amp;#39; -not -name &amp;#39;new&amp;#39; -not -name &amp;#39;tmp&amp;#39; -not -name &amp;#39;.notmuch&amp;#39; -not -name &amp;#39;xapian&amp;#39; -not -name &amp;#39;FOLDER&amp;#39; -printf &amp;quot;+&amp;#39;%f&amp;#39; &amp;quot;`&lt;/span&gt;
+
+mailboxes &lt;span class="sb"&gt;`&lt;/span&gt;find ~/.maildir/FOLDER -type d -name cur -printf &lt;span class="s1"&gt;&amp;#39;%h &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;tr &lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;grep -v &lt;span class="s2"&gt;&amp;quot;^/home/iranzo/.maildir/FOLDER&lt;/span&gt;$&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;sort&lt;span class="p"&gt;|&lt;/span&gt;xargs &lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="c1"&gt;#Store reply on current folder&lt;/span&gt;
+folder-hook . &lt;span class="s1"&gt;&amp;#39;set record=&amp;quot;^&amp;quot;&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After this, I could start using imapfilter and start working on my set of rules&amp;#8230; but first problem appeared, apparently I started having some duplicated email as I was cancelling and rerunning the script while debugging so a new tool was also introduced to
+&lt;code&gt;dedup&lt;/code&gt; my &lt;span class="caps"&gt;IMAP&lt;/span&gt; folder named &lt;a href="https://github.com/quentinsf/IMAPdedup"&gt;IMAPdedup&lt;/a&gt; with a small&amp;nbsp;script:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="o"&gt;(&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; folder &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;python ~/.bin/imapdedup.py -s localhost  -u iranzo    -w &lt;span class="s1"&gt;&amp;#39;$PASSWORD&amp;#39;&lt;/span&gt;  -m -c -v  -l&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+    python ~/.bin/imapdedup.py -s localhost  -u iranzo    -w &lt;span class="s1"&gt;&amp;#39;$PASSWORD&amp;#39;&lt;/span&gt;  -m -c  &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$folder&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;grep &lt;span class="s2"&gt;&amp;quot;will be marked as deleted&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This script was taking care of listing all email folders on &amp;#8216;localhost&amp;#8217; with my username and password (can be scripted or use external tools to gather it)
+and &lt;code&gt;dedup&lt;/code&gt; email after each sync (in my &lt;code&gt;postsync-offlinemap.sh&lt;/code&gt; as well as lbdq script for fetching new addresses, notmuch and running imapfilter after syncing (to
+catch the limited filtering I do&amp;nbsp;sever-side)&lt;/p&gt;
+&lt;p&gt;I still do some server-side filtering (4 rules), to get on a &amp;#8220;Pending sort&amp;#8221; folder all email which is&amp;nbsp;either:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New support cases remain at &lt;span class="caps"&gt;INBOX&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;All emails from case updates, bugzilla, etc to &lt;code&gt;_pending&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;All emails containing &amp;#8216;list&amp;#8217; or &amp;#8216;bounces&amp;#8217; in from to &lt;code&gt;_pending&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;All emails not containing me directly on &lt;code&gt;CC&lt;/code&gt; or To, to &lt;code&gt;_pending&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This more or less ensures a clean &lt;span class="caps"&gt;INBOX&lt;/span&gt; with most important things still there, and easier rule handling for email&amp;nbsp;sorting.&lt;/p&gt;
+&lt;p&gt;So, after some tests, this is at the moment a simplified version of my filtering&amp;nbsp;file:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;  1&lt;/span&gt;
+&lt;span class="normal"&gt;  2&lt;/span&gt;
+&lt;span class="normal"&gt;  3&lt;/span&gt;
+&lt;span class="normal"&gt;  4&lt;/span&gt;
+&lt;span class="normal"&gt;  5&lt;/span&gt;
+&lt;span class="normal"&gt;  6&lt;/span&gt;
+&lt;span class="normal"&gt;  7&lt;/span&gt;
+&lt;span class="normal"&gt;  8&lt;/span&gt;
+&lt;span class="normal"&gt;  9&lt;/span&gt;
+&lt;span class="normal"&gt; 10&lt;/span&gt;
+&lt;span class="normal"&gt; 11&lt;/span&gt;
+&lt;span class="normal"&gt; 12&lt;/span&gt;
+&lt;span class="normal"&gt; 13&lt;/span&gt;
+&lt;span class="normal"&gt; 14&lt;/span&gt;
+&lt;span class="normal"&gt; 15&lt;/span&gt;
+&lt;span class="normal"&gt; 16&lt;/span&gt;
+&lt;span class="normal"&gt; 17&lt;/span&gt;
+&lt;span class="normal"&gt; 18&lt;/span&gt;
+&lt;span class="normal"&gt; 19&lt;/span&gt;
+&lt;span class="normal"&gt; 20&lt;/span&gt;
+&lt;span class="normal"&gt; 21&lt;/span&gt;
+&lt;span class="normal"&gt; 22&lt;/span&gt;
+&lt;span class="normal"&gt; 23&lt;/span&gt;
+&lt;span class="normal"&gt; 24&lt;/span&gt;
+&lt;span class="normal"&gt; 25&lt;/span&gt;
+&lt;span class="normal"&gt; 26&lt;/span&gt;
+&lt;span class="normal"&gt; 27&lt;/span&gt;
+&lt;span class="normal"&gt; 28&lt;/span&gt;
+&lt;span class="normal"&gt; 29&lt;/span&gt;
+&lt;span class="normal"&gt; 30&lt;/span&gt;
+&lt;span class="normal"&gt; 31&lt;/span&gt;
+&lt;span class="normal"&gt; 32&lt;/span&gt;
+&lt;span class="normal"&gt; 33&lt;/span&gt;
+&lt;span class="normal"&gt; 34&lt;/span&gt;
+&lt;span class="normal"&gt; 35&lt;/span&gt;
+&lt;span class="normal"&gt; 36&lt;/span&gt;
+&lt;span class="normal"&gt; 37&lt;/span&gt;
+&lt;span class="normal"&gt; 38&lt;/span&gt;
+&lt;span class="normal"&gt; 39&lt;/span&gt;
+&lt;span class="normal"&gt; 40&lt;/span&gt;
+&lt;span class="normal"&gt; 41&lt;/span&gt;
+&lt;span class="normal"&gt; 42&lt;/span&gt;
+&lt;span class="normal"&gt; 43&lt;/span&gt;
+&lt;span class="normal"&gt; 44&lt;/span&gt;
+&lt;span class="normal"&gt; 45&lt;/span&gt;
+&lt;span class="normal"&gt; 46&lt;/span&gt;
+&lt;span class="normal"&gt; 47&lt;/span&gt;
+&lt;span class="normal"&gt; 48&lt;/span&gt;
+&lt;span class="normal"&gt; 49&lt;/span&gt;
+&lt;span class="normal"&gt; 50&lt;/span&gt;
+&lt;span class="normal"&gt; 51&lt;/span&gt;
+&lt;span class="normal"&gt; 52&lt;/span&gt;
+&lt;span class="normal"&gt; 53&lt;/span&gt;
+&lt;span class="normal"&gt; 54&lt;/span&gt;
+&lt;span class="normal"&gt; 55&lt;/span&gt;
+&lt;span class="normal"&gt; 56&lt;/span&gt;
+&lt;span class="normal"&gt; 57&lt;/span&gt;
+&lt;span class="normal"&gt; 58&lt;/span&gt;
+&lt;span class="normal"&gt; 59&lt;/span&gt;
+&lt;span class="normal"&gt; 60&lt;/span&gt;
+&lt;span class="normal"&gt; 61&lt;/span&gt;
+&lt;span class="normal"&gt; 62&lt;/span&gt;
+&lt;span class="normal"&gt; 63&lt;/span&gt;
+&lt;span class="normal"&gt; 64&lt;/span&gt;
+&lt;span class="normal"&gt; 65&lt;/span&gt;
+&lt;span class="normal"&gt; 66&lt;/span&gt;
+&lt;span class="normal"&gt; 67&lt;/span&gt;
+&lt;span class="normal"&gt; 68&lt;/span&gt;
+&lt;span class="normal"&gt; 69&lt;/span&gt;
+&lt;span class="normal"&gt; 70&lt;/span&gt;
+&lt;span class="normal"&gt; 71&lt;/span&gt;
+&lt;span class="normal"&gt; 72&lt;/span&gt;
+&lt;span class="normal"&gt; 73&lt;/span&gt;
+&lt;span class="normal"&gt; 74&lt;/span&gt;
+&lt;span class="normal"&gt; 75&lt;/span&gt;
+&lt;span class="normal"&gt; 76&lt;/span&gt;
+&lt;span class="normal"&gt; 77&lt;/span&gt;
+&lt;span class="normal"&gt; 78&lt;/span&gt;
+&lt;span class="normal"&gt; 79&lt;/span&gt;
+&lt;span class="normal"&gt; 80&lt;/span&gt;
+&lt;span class="normal"&gt; 81&lt;/span&gt;
+&lt;span class="normal"&gt; 82&lt;/span&gt;
+&lt;span class="normal"&gt; 83&lt;/span&gt;
+&lt;span class="normal"&gt; 84&lt;/span&gt;
+&lt;span class="normal"&gt; 85&lt;/span&gt;
+&lt;span class="normal"&gt; 86&lt;/span&gt;
+&lt;span class="normal"&gt; 87&lt;/span&gt;
+&lt;span class="normal"&gt; 88&lt;/span&gt;
+&lt;span class="normal"&gt; 89&lt;/span&gt;
+&lt;span class="normal"&gt; 90&lt;/span&gt;
+&lt;span class="normal"&gt; 91&lt;/span&gt;
+&lt;span class="normal"&gt; 92&lt;/span&gt;
+&lt;span class="normal"&gt; 93&lt;/span&gt;
+&lt;span class="normal"&gt; 94&lt;/span&gt;
+&lt;span class="normal"&gt; 95&lt;/span&gt;
+&lt;span class="normal"&gt; 96&lt;/span&gt;
+&lt;span class="normal"&gt; 97&lt;/span&gt;
+&lt;span class="normal"&gt; 98&lt;/span&gt;
+&lt;span class="normal"&gt; 99&lt;/span&gt;
+&lt;span class="normal"&gt;100&lt;/span&gt;
+&lt;span class="normal"&gt;101&lt;/span&gt;
+&lt;span class="normal"&gt;102&lt;/span&gt;
+&lt;span class="normal"&gt;103&lt;/span&gt;
+&lt;span class="normal"&gt;104&lt;/span&gt;
+&lt;span class="normal"&gt;105&lt;/span&gt;
+&lt;span class="normal"&gt;106&lt;/span&gt;
+&lt;span class="normal"&gt;107&lt;/span&gt;
+&lt;span class="normal"&gt;108&lt;/span&gt;
+&lt;span class="normal"&gt;109&lt;/span&gt;
+&lt;span class="normal"&gt;110&lt;/span&gt;
+&lt;span class="normal"&gt;111&lt;/span&gt;
+&lt;span class="normal"&gt;112&lt;/span&gt;
+&lt;span class="normal"&gt;113&lt;/span&gt;
+&lt;span class="normal"&gt;114&lt;/span&gt;
+&lt;span class="normal"&gt;115&lt;/span&gt;
+&lt;span class="normal"&gt;116&lt;/span&gt;
+&lt;span class="normal"&gt;117&lt;/span&gt;
+&lt;span class="normal"&gt;118&lt;/span&gt;
+&lt;span class="normal"&gt;119&lt;/span&gt;
+&lt;span class="normal"&gt;120&lt;/span&gt;
+&lt;span class="normal"&gt;121&lt;/span&gt;
+&lt;span class="normal"&gt;122&lt;/span&gt;
+&lt;span class="normal"&gt;123&lt;/span&gt;
+&lt;span class="normal"&gt;124&lt;/span&gt;
+&lt;span class="normal"&gt;125&lt;/span&gt;
+&lt;span class="normal"&gt;126&lt;/span&gt;
+&lt;span class="normal"&gt;127&lt;/span&gt;
+&lt;span class="normal"&gt;128&lt;/span&gt;
+&lt;span class="normal"&gt;129&lt;/span&gt;
+&lt;span class="normal"&gt;130&lt;/span&gt;
+&lt;span class="normal"&gt;131&lt;/span&gt;
+&lt;span class="normal"&gt;132&lt;/span&gt;
+&lt;span class="normal"&gt;133&lt;/span&gt;
+&lt;span class="normal"&gt;134&lt;/span&gt;
+&lt;span class="normal"&gt;135&lt;/span&gt;
+&lt;span class="normal"&gt;136&lt;/span&gt;
+&lt;span class="normal"&gt;137&lt;/span&gt;
+&lt;span class="normal"&gt;138&lt;/span&gt;
+&lt;span class="normal"&gt;139&lt;/span&gt;
+&lt;span class="normal"&gt;140&lt;/span&gt;
+&lt;span class="normal"&gt;141&lt;/span&gt;
+&lt;span class="normal"&gt;142&lt;/span&gt;
+&lt;span class="normal"&gt;143&lt;/span&gt;
+&lt;span class="normal"&gt;144&lt;/span&gt;
+&lt;span class="normal"&gt;145&lt;/span&gt;
+&lt;span class="normal"&gt;146&lt;/span&gt;
+&lt;span class="normal"&gt;147&lt;/span&gt;
+&lt;span class="normal"&gt;148&lt;/span&gt;
+&lt;span class="normal"&gt;149&lt;/span&gt;
+&lt;span class="normal"&gt;150&lt;/span&gt;
+&lt;span class="normal"&gt;151&lt;/span&gt;
+&lt;span class="normal"&gt;152&lt;/span&gt;
+&lt;span class="normal"&gt;153&lt;/span&gt;
+&lt;span class="normal"&gt;154&lt;/span&gt;
+&lt;span class="normal"&gt;155&lt;/span&gt;
+&lt;span class="normal"&gt;156&lt;/span&gt;
+&lt;span class="normal"&gt;157&lt;/span&gt;
+&lt;span class="normal"&gt;158&lt;/span&gt;
+&lt;span class="normal"&gt;159&lt;/span&gt;
+&lt;span class="normal"&gt;160&lt;/span&gt;
+&lt;span class="normal"&gt;161&lt;/span&gt;
+&lt;span class="normal"&gt;162&lt;/span&gt;
+&lt;span class="normal"&gt;163&lt;/span&gt;
+&lt;span class="normal"&gt;164&lt;/span&gt;
+&lt;span class="normal"&gt;165&lt;/span&gt;
+&lt;span class="normal"&gt;166&lt;/span&gt;
+&lt;span class="normal"&gt;167&lt;/span&gt;
+&lt;span class="normal"&gt;168&lt;/span&gt;
+&lt;span class="normal"&gt;169&lt;/span&gt;
+&lt;span class="normal"&gt;170&lt;/span&gt;
+&lt;span class="normal"&gt;171&lt;/span&gt;
+&lt;span class="normal"&gt;172&lt;/span&gt;
+&lt;span class="normal"&gt;173&lt;/span&gt;
+&lt;span class="normal"&gt;174&lt;/span&gt;
+&lt;span class="normal"&gt;175&lt;/span&gt;
+&lt;span class="normal"&gt;176&lt;/span&gt;
+&lt;span class="normal"&gt;177&lt;/span&gt;
+&lt;span class="normal"&gt;178&lt;/span&gt;
+&lt;span class="normal"&gt;179&lt;/span&gt;
+&lt;span class="normal"&gt;180&lt;/span&gt;
+&lt;span class="normal"&gt;181&lt;/span&gt;
+&lt;span class="normal"&gt;182&lt;/span&gt;
+&lt;span class="normal"&gt;183&lt;/span&gt;
+&lt;span class="normal"&gt;184&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;---------------&lt;/span&gt;
+&lt;span class="c1"&gt;--  Options  --&lt;/span&gt;
+&lt;span class="c1"&gt;---------------&lt;/span&gt;
+
+&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;timeout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;
+&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subscribe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+
+&lt;span class="kr"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;offlineimap&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;
+    &lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+    &lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipe_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;grep -A2 ACCOUNT ~/.offlineimaprc | grep -v ^#|grep &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;..&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="o"&gt;..&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;|cut -d= -f2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;
+        &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;string.gsub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;string.gsub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="kr"&gt;return&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+
+&lt;span class="c1"&gt;----------------&lt;/span&gt;
+&lt;span class="c1"&gt;--  Accounts  --&lt;/span&gt;
+&lt;span class="c1"&gt;----------------&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Connects to &amp;quot;imap1.mail.server&amp;quot;, as user &amp;quot;user1&amp;quot; with &amp;quot;secret1&amp;quot; as&lt;/span&gt;
+&lt;span class="c1"&gt;-- password.&lt;/span&gt;
+&lt;span class="n"&gt;EXAMPLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;IMAP&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;username&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;iranzo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;$PASSWORD&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;143&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="c1"&gt;-- My email&lt;/span&gt;
+&lt;span class="n"&gt;myuser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ranzo&amp;#39;&lt;/span&gt;
+
+&lt;span class="kr"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;mine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_cc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="kr"&gt;return&lt;/span&gt; &lt;span class="n"&gt;email&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+
+&lt;span class="kr"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_cc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sender&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+
+&lt;span class="kr"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;days&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;todelete&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;is_older&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;days&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;todelete&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Trash&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;-- Define the msgs we&amp;#39;re going to work on&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move sent messages to INBOX to later sorting&lt;/span&gt;
+&lt;span class="n"&gt;sent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Sent&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;sent&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="n"&gt;inbox&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;pending&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/_pending&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;todos&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pending&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;inbox&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Mark as read messages sent from my user&lt;/span&gt;
+&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;is_recent&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;&lt;span class="n"&gt;mark_seen&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Delete google calendar forwards&lt;/span&gt;
+&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;piranzo@gapps.example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move all spam messages to Junk folder&lt;/span&gt;
+&lt;span class="n"&gt;spam&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;X-Spam-Score&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;spam&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Junk&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move Jive notifications&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;jive-notify@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_jive&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter EXAMPLEN&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dev-null@rhn.example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Trash&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter PNT&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;[PNT] &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;noreply@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Trash&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter CPG (Customer Private Group)&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Red Hat - Group &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;noreply@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Remove month start reminders&lt;/span&gt;
+&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mailing list memberships reminder&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Delete messages about New accounts created (RHN)&lt;/span&gt;
+&lt;span class="n"&gt;usercreated&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;New Red Hat user account created&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;noreply@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;usercreated&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Search messages from CPG&amp;#39;s&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust1/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust2/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust3/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust4&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust4/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move bugzilla messages&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;] New:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bugzilla@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_bugzilla/new&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bugzilla@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_bugzilla&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move all support messages to Other for later processing&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(NEW) (&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;support@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_new&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Case &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;support@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_new&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;is_seen&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="n"&gt;support&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="c1"&gt;-- Restart the search only for messages in Other to also process if we have new rules&lt;/span&gt;
+
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;is about to breach its SLA&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;has breached its SLA&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; has had no activity in &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Here the process is customer after customer and mark as read messages from non-prio customers&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust1/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust2/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust3/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust4&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust4/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- For customer swith common matching names, use header field&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;X-SFDC-X-Account-Number&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;XXXX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust5/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Customer         : COMMONNAME&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust6/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Non prio customers (mark updates as read)&lt;/span&gt;
+&lt;span class="n"&gt;cust7&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;WATCHINGCUST&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust7&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;cust7&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;mark_seen&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;cust7&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust7/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter other messages by domain&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;todos.es&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Process all remaining messages in INBOX + all read messages in pending-sort for mailing lists and move to lists folder&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bounces&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Add EXAMPLE lists, inbox and _pending and Fedora default bin for reprocessing in case a new list has been added&lt;/span&gt;
+&lt;span class="n"&gt;lists&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;todos&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Mailing lists&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- EXAMPLE&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;outages-list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/EXAMPLE/general/outage&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;announce-list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/EXAMPLE/general/announce&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Fedora&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;kickstart-list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora/kickstart&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ambassadors@lists.fedoraproject.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora/Ambassador&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;infrastructure@lists.fedoraproject.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora/infra&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;announce@lists.fedoraproject.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora/announce&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;lists.fedoraproject.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- OSP&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;openstack@lists.openstack.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/OpenStack&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;openstack-es@lists.openstack.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/OpenStack/es&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter my messages not filtered back to INBOX&lt;/span&gt;
+&lt;span class="n"&gt;mios&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pending&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;mios&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- move messages we&amp;#39;re in BCC to INBOX for manual sorting&lt;/span&gt;
+&lt;span class="n"&gt;hidden&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pending&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;mine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pending&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;hidden&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Start processing of messages older than:&lt;/span&gt;
+&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Delete old messages from mailing lists&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/EXAMPLE/general/media&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/EXAMPLE/general/outage&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- delete old cases&lt;/span&gt;
+&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;180&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- for each in $(cat .imapfilter/config.lua|grep -i cases|tr &amp;quot; ,()&amp;quot; &amp;quot;\n&amp;quot;|grep cases|sort|uniq|grep -v &amp;quot;:&amp;quot; );do echo &amp;quot;deleteold($each,maxage)&amp;quot;;done&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust1/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust2/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust3/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_bugzilla&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Empty trash every 7 days&lt;/span&gt;
+&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Trash&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;As this is applied filtering twice, &lt;code&gt;offlineimap&lt;/code&gt; might be uploading part of your changes already, making it faster to next syncs, and
+shuffle some of your emails while it&amp;nbsp;runs.&lt;/p&gt;
+&lt;p&gt;The point of adding the already filtered set to be filtered again (&lt;span class="caps"&gt;CPG&lt;/span&gt;, cases, etc) is that if a new customer is considered to be filter on a folder of its own, the messages will be picked up and moved accordingly automatically&amp;nbsp;;-)&lt;/p&gt;
+&lt;p&gt;Hope it helps, and happy&amp;nbsp;filtering!&lt;/p&gt;</content><category term="tech"></category><category term="Linux"></category><category term="email"></category><category term="IMAP"></category><category term="imapfilter"></category><category term="Fedora"></category><category term="FOSS"></category></entry></feed>

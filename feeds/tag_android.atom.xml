@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - Android</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_android.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2018-12-30T19:26:00+01:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Android TV and Netflix’s tvq-pm-100 (5.2.5) error</title><link href="https://iranzo.io/blog/2018/12/30/AndroidTV-and-Netflix-tvq-pm-100/" rel="alternate"></link><published>2018-12-30T19:26:00+01:00</published><updated>2018-12-30T19:26:00+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2018-12-30:/blog/2018/12/30/AndroidTV-and-Netflix-tvq-pm-100/</id><summary type="html">
+&lt;h1 id="android-tv-versus-android-tv-box"&gt;Android &lt;span class="caps"&gt;TV&lt;/span&gt; versus Android &lt;span class="caps"&gt;TV&lt;/span&gt;-Box&lt;a class="headerlink" href="#android-tv-versus-android-tv-box" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Android, being used in lot of mobile devices is also part of TVs and set-top boxes.&lt;/p&gt;
+&lt;p&gt;The main difference between both approaches is the user interface and applications.&lt;/p&gt;
+&lt;p&gt;Android &lt;span class="caps"&gt;TV&lt;/span&gt;-Box: it’s like a tablet or mobile connected to a &lt;span class="caps"&gt;TV&lt;/span&gt; and usually …&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="android-tv-versus-android-tv-box"&gt;Android &lt;span class="caps"&gt;TV&lt;/span&gt; versus Android &lt;span class="caps"&gt;TV&lt;/span&gt;-Box&lt;a class="headerlink" href="#android-tv-versus-android-tv-box" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Android, being used in lot of mobile devices is also part of TVs and set-top boxes.&lt;/p&gt;
+&lt;p&gt;The main difference between both approaches is the user interface and applications.&lt;/p&gt;
+&lt;p&gt;Android &lt;span class="caps"&gt;TV&lt;/span&gt;-Box: it’s like a tablet or mobile connected to a &lt;span class="caps"&gt;TV&lt;/span&gt; and usually requires external keyboard, often integrated in the remote.&lt;/p&gt;
+&lt;p&gt;Android &lt;span class="caps"&gt;TV&lt;/span&gt;: it’s a version of Android that incorporates &lt;span class="caps"&gt;TV&lt;/span&gt; changes in the &lt;span class="caps"&gt;OS&lt;/span&gt; so that it can be controlled with an arrow cursor remote plus back, home and microphone key.&lt;/p&gt;
+&lt;p&gt;The range of apps also differs, &lt;span class="caps"&gt;TV&lt;/span&gt;-Boxes have the full range of apps at a cost: they are not optimized for screen usage and require to point and click on several places for operation, while on the other side Android &lt;span class="caps"&gt;TV&lt;/span&gt; does have a reduced set but those apps are prepared for being used with simpler controls that are more natural for a &lt;span class="caps"&gt;TV&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Android &lt;span class="caps"&gt;TV&lt;/span&gt; also has Chromecast support, so that you can not only replicate/mirror your mobile screen to the &lt;span class="caps"&gt;TV&lt;/span&gt;, but also &lt;code&gt;cast&lt;/code&gt; content from apps supporting it, not only for playing, but also to play games between several users.&lt;/p&gt;
+&lt;p&gt;Among Android &lt;span class="caps"&gt;TV&lt;/span&gt; systems I’ve tested three:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.amazon.es/dp/B01NBJ6KZY?tag=redken-21"&gt;&lt;span class="caps"&gt;NVIDIA&lt;/span&gt; Shield &lt;span class="caps"&gt;TV&lt;/span&gt; 🛒&lt;/a&gt; which acts both as Game Console and Android &lt;span class="caps"&gt;TV&lt;/span&gt; system&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.amazon.es/dp/B07K3KC5CP?tag=redken-21"&gt;Xiaomi Mi Box 🛒&lt;/a&gt; which contains the Android &lt;span class="caps"&gt;TV&lt;/span&gt; System as an addon for any &lt;span class="caps"&gt;TV&lt;/span&gt; with &lt;span class="caps"&gt;HDMI&lt;/span&gt; input&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.amazon.es/dp/B01IW656UC?tag=redken-21"&gt;Sony Bravia Android &lt;span class="caps"&gt;TV&lt;/span&gt; 🛒&lt;/a&gt; which directly integrates Android &lt;span class="caps"&gt;TV&lt;/span&gt; as the &lt;span class="caps"&gt;TV&lt;/span&gt; operating system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class="caps"&gt;NVIDIA&lt;/span&gt; and Xiaomi both allow to ‘convert’ or ‘upgrade’ any &lt;span class="caps"&gt;TV&lt;/span&gt; to an Android &lt;span class="caps"&gt;TV&lt;/span&gt; box and additionally can be upgraded in the future for a cheaper price tag than upgrading a &lt;span class="caps"&gt;TV&lt;/span&gt;.&lt;/p&gt;
+&lt;h1 id="netflix"&gt;Netflix&lt;a class="headerlink" href="#netflix" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;One of the features of an AndroidTV box is the ability to use it with &lt;a href="https://www.primevideo.com/?tag=iranzo-21"&gt;Amazon Prime Video&lt;/a&gt; or with &lt;a href="https://netflix.com"&gt;Netflix&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Unfortunately, recently I started getting an error on the Xiaomi MiTV Box I bought for an older &lt;span class="caps"&gt;TV&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Netflix tvq-pm-100 error" src="/imagen/netflix-tvq-pm-100.png"/&gt;&lt;/p&gt;
+&lt;p&gt;After searching for &lt;code&gt;tvq pm 5.2 5&lt;/code&gt;, I got to this Netflix &lt;span class="caps"&gt;FAQ&lt;/span&gt;: &lt;a href="https://help.netflix.com/en/node/59709"&gt;https://help.netflix.com/en/node/59709&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Which more or less solved nothing, even technical support said that their supported platforms are &lt;a href="https://www.amazon.es/dp/B01ETRGE7M?tag=redken-21"&gt;Fire &lt;span class="caps"&gt;TV&lt;/span&gt;&lt;/a&gt;, which was not the kind of answer I wanted to hear.&lt;/p&gt;
+&lt;h1 id="kodi-to-the-rescue"&gt;Kodi to the rescue&lt;a class="headerlink" href="#kodi-to-the-rescue" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;After some more deep research, a post suggested to use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kodi v18 (&lt;a href="https://mirrors.kodi.tv/nightlies/android/arm/master/"&gt;nightly&lt;/a&gt; if not released when you’re reading this)&lt;/li&gt;
+&lt;li&gt;Enabling &lt;a href="https://forum.kodi.tv/showthread.php?tid=329767"&gt;Netflix Addon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once configured (email and password), I was able to use Kodi to access Netflix using Kodi as a workaround while the problem is solved.&lt;/p&gt;</content><category term="tech"></category><category term="Android"></category><category term="Netflix"></category><category term="tvq-pm-100"></category><category term="Kodi"></category></entry></feed>

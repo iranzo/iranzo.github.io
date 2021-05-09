@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - gettext</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_gettext.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2017-10-26T21:17:00+02:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>i18n and ‘bash8’ in bash</title><link href="https://iranzo.io/blog/2017/10/26/i18n-and-bash8-in-bash/" rel="alternate"></link><published>2017-10-26T21:17:00+02:00</published><updated>2017-10-26T21:17:00+02:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2017-10-26:/blog/2017/10/26/i18n-and-bash8-in-bash/</id><summary type="html">
+&lt;h2 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In order to improve &lt;a href="https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems/"&gt;Citellus&lt;/a&gt; and &lt;a href="https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts/"&gt;Magui&lt;/a&gt;, we did implement some &lt;a href="https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/"&gt;Unit testing&lt;/a&gt; to improve code quality.&lt;/p&gt;
+&lt;p&gt;The tests written were made in python and with some changes it was also possible to validate the actual tests.&lt;/p&gt;
+&lt;p&gt;Also, we did prepare the strings in python using gettext library so …&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In order to improve &lt;a href="https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems/"&gt;Citellus&lt;/a&gt; and &lt;a href="https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts/"&gt;Magui&lt;/a&gt;, we did implement some &lt;a href="https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/"&gt;Unit testing&lt;/a&gt; to improve code quality.&lt;/p&gt;
+&lt;p&gt;The tests written were made in python and with some changes it was also possible to validate the actual tests.&lt;/p&gt;
+&lt;p&gt;Also, we did prepare the strings in python using gettext library so the actual messages can be translated to the language of choice (defaults to en, but can be changed via &lt;code&gt;--lang&lt;/code&gt; modifier of citellus).&lt;/p&gt;
+&lt;h2 id="bashate-for-bash-code-validation"&gt;Bashate for bash code validation&lt;a class="headerlink" href="#bashate-for-bash-code-validation" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;One of the things I did miss was to have some kind of &lt;code&gt;tox8&lt;/code&gt; for validate format, and locate some errors. After some research I came to
+&lt;a href="https://github.com/openstack-dev/bashate"&gt;&lt;code&gt;bashate&lt;/code&gt;&lt;/a&gt;, and as it was written in python was very easy to integrate:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Update &lt;code&gt;test-requirements.txt&lt;/code&gt; to request bashate for ‘tests’&lt;/li&gt;
+&lt;li&gt;Editing &lt;code&gt;tox.ini&lt;/code&gt; to add a new section&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ini
+  [testenv:bashate]
+  commands =
+      bash -c 'find citellus -name "*.sh" -type f -print0 | xargs -0 bashate -i E006'&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This change makes that execution of &lt;code&gt;tox&lt;/code&gt; also pulls the output of bashate so all the integration already done for &lt;span class="caps"&gt;CI&lt;/span&gt;, was automatically update to do bash formatting too :-)&lt;/p&gt;
+&lt;h2 id="bash-i18n"&gt;Bash i18n&lt;a class="headerlink" href="#bash-i18n" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Another topic that was interesting is the ability to easily write code in one language and via &lt;code&gt;poedit&lt;/code&gt; or equivalent editors, be able to localize it.&lt;/p&gt;
+&lt;p&gt;In python is more or less easy as we did for citellus code, but I wasn’t aware of any way of doing that for bash scripts (such as the plugins we do use for citellus).&lt;/p&gt;
+&lt;p&gt;Doing a simple &lt;code&gt;man bash&lt;/code&gt; gives some hints somewhat hidden:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--dump-po-strings
+    Equivalent to -D, but the output is in the GNU gettext po (portable object) file format.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;So, bash has a way to dump &lt;code&gt;po&lt;/code&gt; strings (to be edited with &lt;code&gt;poedit&lt;/code&gt; or your editor of choice), so only a bit more search was required to find how to really do it.&lt;/p&gt;
+&lt;p&gt;Apparently is a lot easier than I expected, as long as we take some considerations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LANG&lt;/span&gt; shouldn’t be &lt;code&gt;C&lt;/code&gt; as it disables i18n&lt;/li&gt;
+&lt;li&gt;Environment variable &lt;code&gt;TEXTDOMAIN&lt;/code&gt; should indicate the filename containing the translated strings.&lt;/li&gt;
+&lt;li&gt;Environment variable &lt;code&gt;TEXTDOMAINDIR&lt;/code&gt; should contain the path to the root of the folder containing the translations, for example:&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TEXTDOMAIN=citellus/locale&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;And language file for &lt;code&gt;en&lt;/code&gt; as:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;citellus/locale/en/LC_MESSAGES/$TEXTDOMAIN.mo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, the “trickier” part was to prepare scripts…&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Legacy way&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"String"&lt;/span&gt;
+&lt;span class="c1"&gt;# i18n way&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;$"String"&lt;/span&gt;
+&lt;span class="c1"&gt;# Difficult... isn't it?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This change makes ‘bash’ to lock for the string inside &lt;code&gt;$TEXTDOMAINDIR/locale/$LANG/LC_MESSAGES/$TEXTDOMAIN.mo&lt;/code&gt; and do on the fly replacement of the strings for the translated ones (or fallback to the one echoed).&lt;/p&gt;
+&lt;p&gt;In citellus we did implement it by exporting the extra variables defined above, so scripts, as well as framework is ready for translation!.&lt;/p&gt;
+&lt;p&gt;Just in case, some remarks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;I found some complains when same script outputs the same string in several places, what I did, is to create a &lt;span class="caps"&gt;VAR&lt;/span&gt; and echo that var.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As we’ve strings in citellus.py, magui.py, etc and the bash files, I did update a script to extract the required strings:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Extract python strings&lt;/span&gt;
+python setup.py extract_messages -F babel.cfg -k _L
+&lt;span class="c1"&gt;# Extract bash strings&lt;/span&gt;
+find citellus -name &lt;span class="s2"&gt;"*.sh"&lt;/span&gt; -exec bash --dump-po-strings &lt;span class="s2"&gt;"{}"&lt;/span&gt; &lt;span class="se"&gt;\;&lt;/span&gt; &amp;gt; citellus/locale/citellus-plugins.pot
+&lt;span class="c1"&gt;# Merge bash and python strings&lt;/span&gt;
+msgcat -F citellus/locale/citellus.pot citellus/locale/citellus-plugins.pot &amp;gt; citellus/locale/citellus-new.pot
+&lt;span class="c1"&gt;# Move file to destination&lt;/span&gt;
+cat citellus/locale/citellus-new.pot &amp;gt; citellus/locale/citellus.pot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;In this way, we’re ready to use on editor to translate all the strings for the whole citellus + plugins.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</content><category term="tech"></category><category term="bash"></category><category term="gettext"></category><category term="i18n"></category><category term="Citellus"></category><category term="bashate"></category><category term="FOSS"></category></entry></feed>

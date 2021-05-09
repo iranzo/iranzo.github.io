@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - programming</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_programming.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2019-02-07T21:04:14+01:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Telegram Redken bot and amazon/discounts/bargains unification</title><link href="https://iranzo.io/blog/2019/02/07/telegram-redken-bot-and-amazondiscountsbargains-unification/" rel="alternate"></link><published>2019-02-07T21:04:14+01:00</published><updated>2019-02-07T21:04:14+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2019-02-07:/blog/2019/02/07/telegram-redken-bot-and-amazondiscountsbargains-unification/</id><summary type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;During last years of increased Telegram adoption among contacts, &lt;a href="https://iranzo.io/blog/2015/06/26/writing-a-telegramorg-bot-in-python/"&gt;the low learning curve to write bots&lt;/a&gt; for it as well as the capacity of bigger group chats and ‘channels’ for one-way publishing of information has helped the proliferation of ‘bargain’ groups.&lt;/p&gt;
+&lt;p&gt;In those groups, there are ‘discounts’, ‘sales’, about …&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;During last years of increased Telegram adoption among contacts, &lt;a href="https://iranzo.io/blog/2015/06/26/writing-a-telegramorg-bot-in-python/"&gt;the low learning curve to write bots&lt;/a&gt; for it as well as the capacity of bigger group chats and ‘channels’ for one-way publishing of information has helped the proliferation of ‘bargain’ groups.&lt;/p&gt;
+&lt;p&gt;In those groups, there are ‘discounts’, ‘sales’, about any range of products you can imagine (clothing, shoes, toys, mobiles, tv’s, beauty, etc).&lt;/p&gt;
+&lt;p&gt;From those groups I was able to get good deals, even sometimes, some elements were ‘for free’ via usage of coupon codes, etc.&lt;/p&gt;
+&lt;p&gt;Bad side, is that number of channels have evolved beyond control, and made the telegram client become a source of ‘noise’ versus a source of information.&lt;/p&gt;
+&lt;p&gt;Of course, the biggest issue is that many of those channels are providing the same ‘information’ sometimes but not always the same, and even if there are some ‘theme’ channels, it’s not uncommon to see offers that might not suite your needs in the biggest categories (for example you want a mobile but you’re getting all offers about ‘tech’ stuff, or you want ‘lego’ and you get lot of other toys or kids-things).&lt;/p&gt;
+&lt;h1 id="python-to-the-rescue"&gt;Python to the rescue&lt;a class="headerlink" href="#python-to-the-rescue" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Using python we can come to approach this in several steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First we can expand the url to longer one (those channels tend to use url shorteners)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;expandurl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="sd"&gt;"""&lt;/span&gt;
+&lt;span class="sd"&gt;Expands short URL to long one&lt;/span&gt;
+&lt;span class="sd"&gt;:param url: url to expand&lt;/span&gt;
+&lt;span class="sd"&gt;:return: expanded url&lt;/span&gt;
+&lt;span class="sd"&gt;"""&lt;/span&gt;
+
+&lt;span class="n"&gt;logger&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;logging&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getLogger&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;session&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Session&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="c1"&gt;# so connections are recycled&lt;/span&gt;
+    &lt;span class="n"&gt;resp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;allow_redirects&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;newurl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;resp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;
+    &lt;span class="n"&gt;logger&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"URL Expanded to: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;newurl&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# Fake as we couldn't expand url&lt;/span&gt;
+    &lt;span class="n"&gt;newurl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;
+
+&lt;span class="n"&gt;logger&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Expanding url: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; to &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;newurl&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;newurl&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Second, restrict the links we process to the ones in amazon, as it’s ‘easy’ to catch the product &lt;span class="caps"&gt;ID&lt;/span&gt; and perform a search. This leaves out lot of offers, but makes it easier to locate them as there’s an &lt;span class="caps"&gt;API&lt;/span&gt; to use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;findamazonproductid&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;newurl&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;"""&lt;/span&gt;
+&lt;span class="sd"&gt;    Finds amazon product id and country in URL&lt;/span&gt;
+&lt;span class="sd"&gt;    :param newurl: url to parse&lt;/span&gt;
+&lt;span class="sd"&gt;    :return: productid, country&lt;/span&gt;
+&lt;span class="sd"&gt;    """&lt;/span&gt;
+    &lt;span class="n"&gt;domain&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Find Product ID in URL&lt;/span&gt;
+    &lt;span class="n"&gt;prodregex&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;"\/([A-Z0-9]&lt;/span&gt;&lt;span class="si"&gt;{10}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;prodregex&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;newurl&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;productid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;groups&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;productid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+
+    &lt;span class="n"&gt;domainregex&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;"amazon\.([a-z0-9\.]{1,5})/"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;domainregex&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;newurl&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;domain&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;groups&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;productid&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;domain&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Now that we get product id an domain, we can use a database to store when was received (if before) and store as ‘seen’ to not repeat it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Telegram bot &lt;span class="caps"&gt;API&lt;/span&gt; can help sending the messages or receiving them from a chat, so now it is our chance to code in the way we want it.&lt;/p&gt;
+&lt;p&gt;Additionally, python packages like &lt;a href="https://github.com/yoavaviram/python-amazon-simple-product-api"&gt;python-amazon-simple-product-api&lt;/a&gt;, with some simple steps, can help enhancing the database by querying additional details.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;amazon.api&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AmazonAPI&lt;/span&gt;
+&lt;span class="n"&gt;amazon&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AmazonAPI&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;amazon_access&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;amazon_key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;region&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;regdomain&lt;/span&gt;
+&lt;span class="n"&gt;product&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;amazon&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lookup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ItemId&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;productid&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Above code with the &lt;code&gt;productid&lt;/code&gt; obtained in the previous code snippet, allows us to query several aspects via amazon api, like &lt;code&gt;product.title&lt;/code&gt;, &lt;code&gt;product.price_and_currency&lt;/code&gt;, etc&lt;/p&gt;
+&lt;h1 id="building-the-solution"&gt;Building the solution&lt;a class="headerlink" href="#building-the-solution" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Ok, we’ve seen what is needed to expand url, get product id from it and then how to use amazon to get product price, title, etc.&lt;/p&gt;
+&lt;p&gt;In my case, the next step was to get rid of unwanted offers, but once I had all the data above, it was not difficult to reuse the &lt;a href="https://github.com/iranzo/stampython/blob/master/stampy/plugin/highlight.py"&gt;‘highlight’&lt;/a&gt; module in &lt;a href="https://t.me/redken_bot"&gt;https://t.me/redken_bot&lt;/a&gt; to forward the products matching the words I wanted to track.&lt;/p&gt;
+&lt;p&gt;A global replace from &lt;code&gt;hilight&lt;/code&gt; to &lt;code&gt;ofertas&lt;/code&gt;, adding a few comparisons for &lt;code&gt;gofertas&lt;/code&gt; and now redken supports the following syntax:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;
+&lt;span class="normal"&gt;9&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Add&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tracking&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;discounts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gofertas&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;add&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;topic&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ofertas&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;add&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;topic&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Remove&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tracking&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;discounts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;/[&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="n"&gt;ofertas&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;delete&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;topic&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;configured&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;discoints&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;/[&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="n"&gt;ofertas&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;The difference between &lt;code&gt;gofertas&lt;/code&gt; and &lt;code&gt;ofertas&lt;/code&gt;, is that by default, &lt;code&gt;ofertas&lt;/code&gt; adds the tracking to your &lt;code&gt;userid&lt;/code&gt;, hence forwarding privately to you, while &lt;code&gt;gofertas&lt;/code&gt;, when used on a group, will forward to the &lt;code&gt;groupid&lt;/code&gt;, allowing for example that users interested in a topic, like let’s say &lt;code&gt;Lego&lt;/code&gt; or &lt;code&gt;quadricopters&lt;/code&gt;, will receive as a group message any new listing published.&lt;/p&gt;
+&lt;p&gt;Enjoy and happy filtering!&lt;/p&gt;
+&lt;p&gt;Follow telegram channels managed by bot at: &lt;a href="https://telegra.ph/Nuestros-canales-de-ofertas-06-21"&gt;https://telegra.ph/Nuestros-canales-de-ofertas-06-21&lt;/a&gt;&lt;/p&gt;</content><category term="tech"></category><category term="FOSS"></category><category term="Telegram"></category><category term="Python"></category><category term="Amazon"></category><category term="programming"></category><category term="redken"></category></entry><entry><title>Writing a Telegram.org bot in Python</title><link href="https://iranzo.io/blog/2015/06/26/writing-a-telegramorg-bot-in-python/" rel="alternate"></link><published>2015-06-26T17:12:30+02:00</published><updated>2015-06-26T17:12:30+02:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2015-06-26:/blog/2015/06/26/writing-a-telegramorg-bot-in-python/</id><summary type="html">&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://telegram.org"&gt;Telegram.org&lt;/a&gt; recently announced the support for writing bots for their platform, by providing details at &lt;a href="https://core.telegram.org/bots"&gt;https://core.telegram.org/bots&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was missing for a long time the ability to get a count on karma like we&amp;#8217;ve on
+&lt;span class="caps"&gt;IRC&lt;/span&gt; servers, so I started with&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;My first …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://telegram.org"&gt;Telegram.org&lt;/a&gt; recently announced the support for writing bots for their platform, by providing details at &lt;a href="https://core.telegram.org/bots"&gt;https://core.telegram.org/bots&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was missing for a long time the ability to get a count on karma like we&amp;#8217;ve on
+&lt;span class="caps"&gt;IRC&lt;/span&gt; servers, so I started with&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;My first try is published at github repo in &lt;a href="https://github.com/iranzo/stampython"&gt;https://github.com/iranzo/stampython&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;At the moment it just uses the polling interface to check the new messages received on the channels the bot is in, and later processes them and send the relevant replies via&amp;nbsp;messages.&lt;/p&gt;
+&lt;p&gt;Also, some other commands are missing like the ones on &lt;code&gt;redken&lt;/code&gt; that we use on &lt;span class="caps"&gt;IRC&lt;/span&gt;, but at least, basic functionality is there and is&amp;nbsp;usable.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+&lt;p&gt;Pablo&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;BTW&lt;/span&gt;: the bot is not allowed to join channels (&lt;code&gt;@stampy_bot&lt;/code&gt;) so it remains in a controlled environment until the code is made more robust, but I&amp;#8217;m thinking about having a second &lt;code&gt;public&lt;/code&gt; instance on &lt;code&gt;Openshift.redhat.com&lt;/code&gt; for wider audience.
+You can invite the &lt;code&gt;public&lt;/code&gt; instance by inviting &lt;a href="https://t.me/redken_bot"&gt;@redken_bot&lt;/a&gt;&lt;/p&gt;</content><category term="tech"></category><category term="Python"></category><category term="programming"></category><category term="Telegram"></category><category term="FOSS"></category><category term="redken"></category></entry></feed>

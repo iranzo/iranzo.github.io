@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="pandoc" name="generator" />     <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />      <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />      <meta name="author" content="Pablo Iranzo Gómez" />          <meta name="twitter:creator" content="@iranzop">     <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary">     <title>
+        Introducción al Software Libre
+    </title>
+
+       <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />      <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />   
+
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css" rel="stylesheet" />
+    <style type="text/css">
+        code {
+            white-space: pre-wrap;
+        }
+
+        span.smallcaps {
+            font-variant: small-caps;
+        }
+
+        span.underline {
+            text-decoration: underline;
+        }
+
+        div.column {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+        }
+    </style>
+    <style type="text/css">
+        a.sourceLine {
+            display: inline-block;
+            line-height: 1.25;
+        }
+
+        a.sourceLine {
+            pointer-events: none;
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        a.sourceLine:empty {
+            height: 1.2em;
+            position: absolute;
+        }
+
+        .sourceCode {
+            overflow: visible;
+        }
+
+        code.sourceCode {
+            white-space: pre;
+            position: relative;
+        }
+
+        div.sourceCode {
+            margin: 1em 0;
+        }
+
+        pre.sourceCode {
+            margin: 0;
+        }
+
+        @media screen {
+            div.sourceCode {
+                overflow: auto;
+            }
+        }
+
+        @media print {
+            code.sourceCode {
+                white-space: pre-wrap;
+            }
+            a.sourceLine {
+                text-indent: -1em;
+                padding-left: 1em;
+            }
+        }
+
+        pre.numberSource a.sourceLine {
+            position: relative;
+        }
+
+        pre.numberSource a.sourceLine:empty {
+            position: absolute;
+        }
+
+        pre.numberSource a.sourceLine::before {
+            content: attr(data-line-number);
+            position: absolute;
+            left: -5em;
+            text-align: right;
+            vertical-align: baseline;
+            border: none;
+            pointer-events: all;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding: 0 4px;
+            width: 4em;
+            color: #aaaaaa;
+        }
+
+        pre.numberSource {
+            margin-left: 3em;
+            border-left: 1px solid #aaaaaa;
+            padding-left: 4px;
+        }
+
+        div.sourceCode {}
+
+        @media screen {
+            a.sourceLine::before {
+                text-decoration: underline;
+            }
+        }
+
+        code span.al {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        /* Alert */
+
+        code span.an {
+            color: #60a0b0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Annotation */
+
+        code span.at {
+            color: #7d9029;
+        }
+        /* Attribute */
+
+        code span.bn {
+            color: #40a070;
+        }
+        /* BaseN */
+
+        code span.bu {}
+        /* BuiltIn */
+
+        code span.cf {
+            color: #007020;
+            font-weight: bold;
+        }
+        /* ControlFlow */
+
+        code span.ch {
+            color: #4070a0;
+        }
+        /* Char */
+
+        code span.cn {
+            color: #880000;
+        }
+        /* Constant */
+
+        code span.co {
+            color: #60a0b0;
+            font-style: italic;
+        }
+        /* Comment */
+
+        code span.cv {
+            color: #60a0b0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* CommentVar */
+
+        code span.do {
+            color: #ba2121;
+            font-style: italic;
+        }
+        /* Documentation */
+
+        code span.dt {
+            color: #902000;
+        }
+        /* DataType */
+
+        code span.dv {
+            color: #40a070;
+        }
+        /* DecVal */
+
+        code span.er {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        /* Error */
+
+        code span.ex {}
+        /* Extension */
+
+        code span.fl {
+            color: #40a070;
+        }
+        /* Float */
+
+        code span.fu {
+            color: #06287e;
+        }
+        /* Function */
+
+        code span.im {}
+        /* Import */
+
+        code span.in {
+            color: #60a0b0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Information */
+
+        code span.kw {
+            color: #007020;
+            font-weight: bold;
+        }
+        /* Keyword */
+
+        code span.op {
+            color: #666666;
+        }
+        /* Operator */
+
+        code span.ot {
+            color: #007020;
+        }
+        /* Other */
+
+        code span.pp {
+            color: #bc7a00;
+        }
+        /* Preprocessor */
+
+        code span.sc {
+            color: #4070a0;
+        }
+        /* SpecialChar */
+
+        code span.ss {
+            color: #bb6688;
+        }
+        /* SpecialString */
+
+        code span.st {
+            color: #4070a0;
+        }
+        /* String */
+
+        code span.va {
+            color: #19177c;
+        }
+        /* Variable */
+
+        code span.vs {
+            color: #4070a0;
+        }
+        /* VerbatimString */
+
+        code span.wa {
+            color: #60a0b0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Warning */
+    </style>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/solarized.min.css" id="theme" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section id="title-slide">
+                <h2 class="title">
+                    Introducción al Software&nbsp;Libre
+                </h2>
+                <p class="author">
+                    Pablo Iranzo Gómez
+                </p>
+                <p class="date">
+                    2010-03-08 16:00:00+01:00
+                </p>
+            </section>
+
+            <section id="introducción-al-software-libre" class="slide level1">
+<h1>Introducción al Software&nbsp;Libre</h1>
+<blockquote>
+<p>Res publica non&nbsp;dominetur</p>
+</blockquote>
+<p>Pablo Iranzo Gómez&nbsp;(https://iranzo.github.io)</p>
+</section>
+<section class="slide level1">
+
+<h2 id="introducción">Introducción</h2>
+<ul>
+<li>Concepto de libertad en el software
+<ul>
+<li>Definición</li>
+<li>Términos&nbsp;relacionados</li>
+</ul></li>
+<li>Motivaciones</li>
+<li>Consecuencias de la libertad del software
+<ul>
+<li>sociedad, usuario final, desarrollador, integrador, administración, proveedor de mantenimiento o&nbsp;servicios</li>
+</ul></li>
+<li>Resumen</li>
+<li>Bibliografía</li>
+<li>Preguntas</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="free-software">Free&nbsp;software</h2>
+<p>En inglés, la palabra free tiene dos&nbsp;significados:</p>
+<blockquote>
+<p>“Free as in beer” o “Free as in&nbsp;freedom”</p>
+</blockquote>
+<p>En castellano sería ‘gratis’ o ‘libre’, para evitar ambigüedades muchas veces en inglés se utiliza la palabra española ‘libre software’ o ‘gratis&nbsp;software’</p>
+<ul>
+<li>¿Es gratuito el software libre?
+<ul>
+<li>No necesariamente, pero muy&nbsp;probable</li>
+</ul></li>
+<li>¿Es libre el software gratuito?
+<ul>
+<li>No</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="concepto-de-libertad-en-el-software">Concepto de libertad en el&nbsp;software</h2>
+<ul>
+<li>¿Qué es el software privativo?
+<ul>
+<li>Mucho software tiene licencias privativas (que nos privan de libertad de su uso), por ejemplo, algunos sistemas operativos al comprar el ordenador, no nos permiten venderlo por separado o hacer copias,&nbsp;etc</li>
+</ul></li>
+<li>¿Qué es el software libre?
+<ul>
+<li>El software libre se caracteriza por garantizarnos una serie de libertades:
+<ul>
+<li>Uso (en cualquier lugar, propósito y para&nbsp;siempre)</li>
+<li>Estudiarlo y adaptarlo (necesita el código&nbsp;fuente)</li>
+<li>Libertad de redistribución (podemos copiarlo para nuestros&nbsp;amigos)</li>
+<li>Libertad para mejorarlo y publicar mejoras (nec.&nbsp;código)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="ideas">Ideas</h2>
+<blockquote>
+<p>Si tu tienes una manzana y yo tengo otra manzana e intercambiamos manzanas, ambos tenemos una&nbsp;manzana.</p>
+</blockquote>
+<blockquote>
+<p>Si tu tienes una idea y yo tengo una idea y las intercambiamos, cada uno tendremos dos&nbsp;ideas</p>
+</blockquote>
+<blockquote>
+<p>(Atribuida a Bernard&nbsp;Shaw)</p>
+</blockquote>
+<p>El software libre se basa en poder compartir lo que sabemos para que todos&nbsp;aprendamos.</p>
+</section>
+<section class="slide level1">
+
+<h2 id="licencias-libres">…licencias&nbsp;libres…</h2>
+<p>Para que el software libre se adapte a la legislación, se le otorgan unas licencias&nbsp;‘libres’</p>
+<p>Existen muchas licencias libres, muchas equivalentes y otras con distintos grados de&nbsp;libertad</p>
+<ul>
+<li><span class="caps">GPL</span></li>
+<li><span class="caps">BSD</span></li>
+<li>Creative&nbsp;Commons</li>
+<li>Artística</li>
+<li><span class="caps">MIT</span></li>
+<li>etc</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="gpl"><span class="caps">GPL</span></h2>
+<p>La <span class="caps">GNU</span> General Public License es una de las más asociadas al software libre pero no la&nbsp;única.</p>
+<p>Se dice que es una licencia&nbsp;vírica:</p>
+<blockquote>
+<p>“Cualquier modificación sobre software basado en una licencia <span class="caps">GPL</span>, debe ser licenciado nuevamente bajo la licencia <span class="caps">GPL</span>.”</p>
+</blockquote>
+<p>Esto nos permite ‘asegurar’, que si alguien hace uso de software libre que otros han hecho, el resto podamos seguir beneficiándonos de las&nbsp;mejoras</p>
+</section>
+<section class="slide level1">
+
+<h2 id="bsd"><span class="caps">BSD</span></h2>
+<p>Se considera la más&nbsp;libre:</p>
+<ul>
+<li>se mantiene la&nbsp;autoría</li>
+<li>se debe incluir la&nbsp;licencia</li>
+<li>se puede convertir en&nbsp;‘privativo’</li>
+</ul>
+<p>La licencia <span class="caps">BSD</span> aunque da más libertad de uso, no impide que la gente saque provecho de ella y luego no revierta los beneficios de nuevo a la&nbsp;comunidad.</p>
+</section>
+<section class="slide level1">
+
+<h2 id="motivaciones">Motivaciones</h2>
+<p>¿Qué nos aporta el software&nbsp;libre?</p>
+<ul>
+<li>Libertad (uso, distribución, copia,&nbsp;etc)</li>
+<li>Conocimiento (podemos aprender del&nbsp;código)</li>
+<li>Tranquilidad (analizar el&nbsp;código)</li>
+<li>Adaptabilidad (podemos aprovechar el código de otros para desarrollar sólo las partes que&nbsp;faltan)</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="consecuencias-de-la-libertad-del-soft.">Consecuencias de la libertad del&nbsp;soft.</h2>
+<p>Para el&nbsp;desarrollador</p>
+<ul>
+<li>Tiene acceso a una amplia variedad de rutinas o programas ya creados que puede utilizar o adaptar para sus programas evitando invertir el tiempo para desarrollar una y otra vez cosas que miles de personas ya han&nbsp;hecho</li>
+<li>Aprende de lo que otros han hecho para evitar problemas comunes o nuevas formas de enfocarlos u optimizar&nbsp;código</li>
+<li>Se acostumbra a trabajar en grupos multinacionales que programan en base a estándares, desarrollando con ‘calidad’ (ya que mucha gente puede revisar el&nbsp;código)</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="consecuencias-de-la-libertad-del-soft.-1">Consecuencias de la libertad del&nbsp;soft.</h2>
+<p>Para el&nbsp;integrador</p>
+<ul>
+<li>En palabras de Ricardo Galli, el software está hoy en día “comoditizado”, el coste del hardware es tan bajo que pagar más por el software que por el propio equipo no es&nbsp;lógico.</li>
+<li>El software libre permite que un integrador de hardware pueda incorporar un conjunto de elementos que saquen dicho partido del hardware a una fracción del coste del software&nbsp;privativo.</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="consecuencias-de-la-libertad-del-soft.-2">Consecuencias de la libertad del&nbsp;soft.</h2>
+<p>Para el que proporciona mantenimiento o&nbsp;servicios</p>
+<ul>
+<li>Al tener acceso al código, puede personalizarlo y ofrecer servicios personalizados para los clientes (soporte, formación, consultoría,&nbsp;etc)</li>
+<li>Como todo el mundo tiene acceso, es fácil convertirse en proveedor de una empresa gracias a la cercanía (servicios&nbsp;locales)</li>
+<li>Mayor competencia, porque todo el mundo puede proveer el software, así que el ‘valor’ diferenciador es la calidad del&nbsp;servicio</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="consecuencias-de-la-libertad-del-soft.-3">Consecuencias de la libertad del&nbsp;soft.</h2>
+<p>Para la administración&nbsp;pública</p>
+<ul>
+<li>El poder examinar el software da mayor garantía sobre cómo se tratan los datos de los&nbsp;ciudadanos</li>
+<li>Puede promover la economía local al contratar a empresas locales para prestar&nbsp;servicios</li>
+<li>Es más seguro porque lo revisan más&nbsp;desarrolladores</li>
+<li>El software libre suele estar basado en estándares (como consecuencia del interdesarrollo), lo que permite que los datos con los que trabaja, no queden ‘encerrados’ en formatos propietarios que en un futuro no podrá consultar por desaparecer el software privativo que los&nbsp;trataba.</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="consecuencias-de-la-libertad-del-soft.-4">Consecuencias de la libertad del&nbsp;soft.</h2>
+<p>Para el usuario&nbsp;final</p>
+<ul>
+<li>Puede aprender con el&nbsp;software</li>
+<li>Al haber mayor oferta de servicios, puede obtener mejores&nbsp;precios</li>
+<li>Puede acceder a soporte por parte de otros usuarios de forma gratuita (hay mucha&nbsp;documentación)</li>
+<li>Es más seguro y se actualiza más&nbsp;rápido</li>
+<li>Consume menos&nbsp;recursos</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="consecuencias-de-la-libertad-del-soft.-5">Consecuencias de la libertad del&nbsp;soft.</h2>
+<p>Para la&nbsp;sociedad</p>
+<ul>
+<li>El conocimiento se amplifica al compartirse entre&nbsp;todos</li>
+<li>Se trabaja en un proyecto común para adaptar el software a las necesidades de los&nbsp;involucrados</li>
+<li>Se democratiza el acceso a la&nbsp;tecnología</li>
+<li>Al tener software que podemos revisar,no estamos sujetos a secuestros de información o comportamientos de&nbsp;espionaje.</li>
+<li>El conocimiento digital no se pierde al poder adaptar los accesos a formatos antiguos a los programas&nbsp;modernos</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="reflexionando-en-voz-alta1">Reflexionando en voz&nbsp;alta…1</h2>
+<ul>
+<li>El software libre nos permite acceso al&nbsp;código</li>
+<li>Podemos&nbsp;redistribuirlo</li>
+<li>Podemos cobrar por&nbsp;él</li>
+<li>Podemos modificarlo para adaptarlo a nuestras&nbsp;necesidades</li>
+<li>Si no sabemos programar, podemos contratar a alguien para que lo&nbsp;haga</li>
+<li>Si la empresa que nos hizo un programa desaparece, otra puede&nbsp;continuarlo</li>
+<li>Podemos acudir a cualquier empresa con el código de nuestro programa para que lo&nbsp;mejore</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="reflexionando-en-voz-alta2">Reflexionando en voz&nbsp;alta…2</h2>
+<ul>
+<li>Al auditar el software, tenemos menos peligro de&nbsp;espionaje</li>
+<li>Al poder escoger la empresa que nos ofrecerá los servicios, conseguiremos precios más&nbsp;bajos</li>
+<li>¿De qué viven las empresas relacionadas con el software&nbsp;libre?</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="qué-es-linux">¿Qué es&nbsp;Linux?</h2>
+<ul>
+<li>Linux es un ejemplo, entre muchos otros, de software&nbsp;libre</li>
+<li>Linux técnicamente es el núcleo del sistema, al que se acompaña de diversas ‘facilidades’, como programas de oficina, utilidades, instaladores, sistemas de configuración, etc, hasta constituir un sistema operativo y las aplicaciones de productividad que lo&nbsp;rodean.</li>
+<li>A cada uno de esos conjuntos de software se le denominan&nbsp;‘distribuciones’.</li>
+<li>Entre las más conocidas: Debian, Fedora, OpenSuSE, Ubuntu, Gentoo, CentOS, Mandriva, Lliurex, Guadalinex, Linex,&nbsp;etc.</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="bibliografía">Bibliografía</h2>
+<ul>
+<li><a href="http://alufis35.uv.es/Que-es-Linux.html" class="uri">http://alufis35.uv.es/Que-es-Linux.html</a></li>
+<li><a href="http://es.wikipedia.org/wiki/BSD\_license" class="uri">http://es.wikipedia.org/wiki/<span class="caps">BSD</span>\_license</a></li>
+<li><a href="http://www.gnu.org/copyleft/gpl.html" class="uri">http://www.gnu.org/copyleft/gpl.html</a></li>
+<li><a href="http://www.uoc.edu/estudios/mofs/software\_libre/index.html" class="uri">http://www.uoc.edu/estudios/mofs/software\_libre/index.html</a></li>
+</ul>
+</section>
+
+
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js">
+    </script>
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            // Push each slide change to the browser history
+            history: true,
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/zoom/zoom.min.js',
+                async: true
+            }, {
+                src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js',
+                async: true
+            }]
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='en'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Introducción¶ Durante la última semana estuve jugando de nuevo con iSCSI en el curso de RH436 Enterprise Clustering and Storage Management. Hace tiempo había seguido dos artículos Instalando un target iSCSI y su continuación Montando un iniciador iSCSI. iSCSI es una tecnología que permite acceder a almacenamiento remoto como si …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="cluster, rhel, centos, foss, tech, " />
+
+<meta property="og:title" content="iSCSI y Clustering en RHEL/CentOS "/>
+<meta property="og:url" content="https://iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/" />
+<meta property="og:description" content="Introducción¶ Durante la última semana estuve jugando de nuevo con iSCSI en el curso de RH436 Enterprise Clustering and Storage Management. Hace tiempo había seguido dos artículos Instalando un target iSCSI y su continuación Montando un iniciador iSCSI. iSCSI es una tecnología que permite acceder a almacenamiento remoto como si …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2008-12-13T17:59:41+00:00" />
+<meta name="twitter:title" content="iSCSI y Clustering en RHEL/CentOS ">
+<meta name="twitter:description" content="Introducción¶ Durante la última semana estuve jugando de nuevo con iSCSI en el curso de RH436 Enterprise Clustering and Storage Management. Hace tiempo había seguido dos artículos Instalando un target iSCSI y su continuación Montando un iniciador iSCSI. iSCSI es una tecnología que permite acceder a almacenamiento remoto como si …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2008-12-13T17:59:41+00:00",
+        "description": "Introducción¶ Durante la última semana estuve jugando de nuevo con iSCSI en el curso de RH436 Enterprise Clustering and Storage Management. Hace tiempo había seguido dos artículos Instalando un target iSCSI y su continuación Montando un iniciador iSCSI. iSCSI es una tecnología que permite acceder a almacenamiento remoto como si …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/"
+        },
+
+        "headline": "iSCSI y Clustering en RHEL/CentOS",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>iSCSI y Clustering en RHEL/CentOS  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/">
+                iSCSI y Clustering en <span class="caps">RHEL</span>/CentOS
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduccion">Introducción</a></li>
+<li><a href="#manos-a-la-obra">Manos a la obra</a><ul>
+<li><a href="#target-iscsi">Target iSCSI</a></li>
+<li><a href="#resto-de-equipos">Resto de equipos</a></li>
+<li><a href="#el-cluster">El clúster</a></li>
+<li><a href="#gfs-global-file-system"><span class="caps">GFS</span>: Global File System</a></li>
+<li><a href="#y-si-falla-la-red">¿Y si falla la red</a></li>
+<li><a href="#conclusion">Conclusión</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">¶</a></h2>
+<p>Durante la última semana estuve jugando de nuevo con iSCSI en el curso de <a href="http://www.redhat.es/training/course/RH436"><span class="caps">RH436</span> Enterprise Clustering and Storage Management</a>. Hace tiempo había seguido dos artículos <a href="http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/">Instalando un target iSCSI</a> y su continuación <a href="http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/">Montando un iniciador iSCSI</a>.</p>
+<p>iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel ‘barato’, podemos utilizar el espacio de un sevidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.</p>
+<p>Con la entrada en juego de las ofertas de virtualización integradas con el <span class="caps">SO</span>, como por ejemplo Xen, podemos tener un servidor ‘grande’ y potente que albergue distintas máquinas virtuales que sirvan las páginas de dicho volumen en red, actualizarlo centralmente y tener muchos servidores actualizados….</p>
+<p>Bueno, a medias :-)</p>
+<p>Siempre es complicado compartir sistemas de ficheros, existen problemas de bloqueos de ficheros, accesos recurrentes, etc, en el caso de iSCSI no sólo es el <span class="caps">FS</span> sino la unidad, desde cualquier equipo podemos particionarla, etc, es por ello que se necesitan algunas utilidades preparadas para dicho funcionamiento en red, así como por supuesto, un sistema de ficheros que soporte dicho uso simultáneo.</p>
+<p>Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster <a href="https://iranzo.io/blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/"><span class="caps">LVM</span></a>) como de <span class="caps">GFS</span> (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.</p>
+<p>Piensa por un momento, la posibilidad de tener ese host tan potente o una <span class="caps">SAN</span> con copias de seguridad bien controladas, etc</p>
+<p>Añádele la posibilidad de tener máquinas virtuales que monten por la red una unidad iSCSI.</p>
+<p>Añádele que esa unidad iSCSI puede ser de Lectura escritura, y que puedes utilizar enlaces simbólicos con variables que según el host que acceda guarde los logs en una carpeta.</p>
+<p>Imagina lanzar tantas máquinas virtuales como sea necesario para atender la demanda, poder distribuirlas en la red.</p>
+<h2 id="manos-a-la-obra">Manos a la obra<a class="headerlink" href="#manos-a-la-obra" title="Permanent link">¶</a></h2>
+<h3 id="target-iscsi">Target iSCSI<a class="headerlink" href="#target-iscsi" title="Permanent link">¶</a></h3>
+<p>Si no tenemos un target iSCSI, podemos definirlo en nuestro anfitrión, utilizando la versión Tech Preview de iSCSI Target llamada: <code>scsi-target-utils</code></p>
+<p>Esta utilidad contiene un comando <code>tgtadm</code> que podemos utilizar para definir las unidades.</p>
+<p>Deberemos activar el demonio de tgtd para que esté disponible en cada arranque con los comandos:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!bash</span>
+chkconfig tgtd on
+service tgtd start
+</code></pre></div>
+</td></tr></table>
+<p>Actualmente y como tech preview, debemos repetir cada vez los comandos que necesitamos para definir la unidad iSCSI, por ejemplo:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!bash</span>
+tgtadm --lld iscsi --mode target --op new --tid<span class="o">=</span><span class="m">1</span> --targetname iqn.2008-12.tld.dominio.maquina:TARGET tgtadm --lld iscsi --mode logicalunit --op new --tid<span class="o">=</span><span class="m">1</span> --lun<span class="o">=</span><span class="m">1</span> -b /dev/vg0/TARGET tgtadm --mode target --op <span class="nb">bind</span> --tid<span class="o">=</span><span class="m">1</span> --initiator-address<span class="o">=</span><span class="m">14</span>.14.14.14
+</code></pre></div>
+</td></tr></table>
+<p>Con estos comandos definimos un nuevo target con <span class="caps">ID</span> 1, de nombre <span class="caps">IQN</span> <code>iqn.2008-12.tld.dominio.maquina:TARGET</code> y le añadimos una unidad lógica (<span class="caps">LUN</span>) que se basa en el contenido del volumen <span class="caps">LVM</span> /dev/vg0/<span class="caps">TARGET</span>.</p>
+<p>Además, le permitimos el acceso a dicho target desde la ip <code>14.14.14.14</code></p>
+<p>Si todo esto está bien, deberemos, hasta que salga de la Tech Preview, añadir estos comandos al fichero <code>/etc/rc.local</code> para que se ejecuten en cada arranque</p>
+<h3 id="resto-de-equipos">Resto de equipos<a class="headerlink" href="#resto-de-equipos" title="Permanent link">¶</a></h3>
+<p>El primer paso, es instalar en todas las máquinas los paquetes de <code>lvm2-cluster</code>, así como <code>ricci</code>. En todas ellas deberemos ejecutar <code>lvm —enable-cluster</code> para modificar los parámetros de locking para utilizarlo en red.</p>
+<p>Para arrancar ricci tendremos que hacer algo parecido a lo que hicimos con tgtd</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!bash</span>
+chkconfig ricci on
+service ricci start<span class="sb">`</span>
+</code></pre></div>
+</td></tr></table>
+<p>Por otro lado necesitaremos tener <code>kmod-gfs</code>, <code>gfs-util</code> y <code>iscsi-initiator-utils</code>.</p>
+<p>Las unidades iSCSI se reconocerán a partir de la primera detección de forma automática, para ello deberemos ejecutar los siguientes comandos:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!bash</span>
+iscsiadm -m discovery -t sendtargets -p IPTARGETISCSI iscsiadm -m node -T iqn.2008-12.tld.dominio.maquina:TARGET -l
+</code></pre></div>
+</td></tr></table>
+<p>Que descubrirá los targets disponibles para nuestra <span class="caps">IP</span> y luego hará ‘login’ en la máquina. A partir de este momento tendremos nuevas unidades disponibles que se presentarán como <span class="caps">SCSI</span> a nuestro pc, podremos
+particionarlas, etc.</p>
+<h3 id="el-cluster">El clúster<a class="headerlink" href="#el-cluster" title="Permanent link">¶</a></h3>
+<p>Si queremos hacer las cosas de la forma ‘sencilla’, deberemos instalar <code>luci</code> en una de las máquinas, ya sea en un nodo de control, o en el anfitrión Xen.</p>
+<p>Luci es un interfaz web que permite la gestión y creación de clusters y para ello utiliza el demonio ‘ricci’ que hemos instalado en cada máquina.</p>
+<p>Si tenemos las máquinas configuradas con los repositorios necesarios, <code>ricci</code> se hará cargo de la instalación de los paquetes necesarios para configurar todo.</p>
+<p>Desde el interfaz web de luci podemos ir añadiendo cada uno de los nodos a utilizar, indicando sus claves de ‘root’ y se encargará de contactarlos y a través de ricci, instalar el software necesario y reiniciarlos para integrarlos en el cluster.</p>
+<p>Los nodos, una vez en el cluster pueden utilizarse para albergar servicios, que estén de forma exclusiva (por ejemplo una bbdd porque necesite prioridad absoluta), o bien en failover para que no se deje de dar el servicio.</p>
+<p>Por defecto tenemos una serie de servicios preconfigurados que podemos dar, como http, nfs, etc que podremos configurar rápidamente desde luci, que se encargará de desplegar dicha configuración a todo el cluster.</p>
+<p>La forma de hacerlo es sencilla, se definen recursos (<span class="caps">IP</span>, <span class="caps">NFS</span> Exports, <span class="caps">NFS</span> Clients, http, mount points) que luego se agrupan por cadenas de dependencia en servicios y se les asignan grupos de failover, para que en caso de fallo, podamos definir prioridades.</p>
+<p>Imagina el caso de una empresa con dos servidores, uno con la bbdd y otro con la web. En caso de fallo de uno de ellos, podemos hacer ‘saltar’ los servicios a la máquina que está operativa hasta que arreglemos la dañada y luego, cada servicio, volvería a su máquina ‘preferida’ o en el orden necesario.</p>
+<p>En el caso de máquinas virtuales, en caso de que dejen de responder, <span class="caps">CMAN</span> realizará un reinicio (siempre que hayamos distribuido las claves de xen que podemos crear en la interfaz tanto a los guests como al anfitrión que estará escuchando con el demonio de fencing para <span class="caps">XVM</span> activado).</p>
+<p>En el caso de tener enchufes ‘con red’ o bien máquinas con tarjetas de gestión remota (iLO, RemoteView Service Board, etc), definiremos los parámetros de acceso.</p>
+<p>En caso de detectar un problema con cualquier equipo, el resto de ellos hará votaciones y si la mayoría considera que no responde, lo reiniciarán, por un lado para liberar cualquier tipo de acceso a disco, etc que hubiera estado haciendo a los recursos del cluster, como para intentar recuperarlo.</p>
+<h3 id="gfs-global-file-system"><span class="caps">GFS</span>: Global File System<a class="headerlink" href="#gfs-global-file-system" title="Permanent link">¶</a></h3>
+<p>¿Qué pinta <span class="caps">GFS</span> en todo esto?</p>
+<p><span class="caps">GFS1</span> nos permite crear un sistema de ficheros que tendrá un journal para cada nodo del cluster y que si lo creamos sobre el volumen iSCSI podemos hacer disponible a todos los equipos, si un equipo se bloquea, otro toma el control del journal no acabado, lo verifica y aplica sobre el <span class="caps">FS</span> hasta que la máquina retorna para dejarlo en un estado limpio.</p>
+<p>Por otro lado, <span class="caps">CLVM</span> y <span class="caps">GFS</span> permiten aumentar dinámicamente el tamaño de los volúmenes, de forma que no tenemos que dejar inoperativos nuestros sistemas para hacer mantenimientos par añadir más capacidad, etc.</p>
+<p>Permite también crear enlaces simbólicos de forma que una unidad con <span class="caps">FS</span> <span class="caps">GFS1</span> pueda quedar:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>hosts/
+hosts/host1/logs
+hosts/host2/logs
+hosts/host3/logs
+hosts/host4/logs
+hosts/host5/logs
+logs -&gt; hosts/@hostname/logs/
+</code></pre></div>
+</td></tr></table>
+<p>Esto permite que diversos servidores web tengan configurado como ruta para los logs la carpeta ‘logs’ que se expandirá al hostname de la máquina, haciendo que queden todos recogidos en un lugar central para posterior análisis de estadísticas, etc</p>
+<p>Este tipo de enlaces se denominan <span class="caps">CDPN</span>: Context-dependent pathnames y nos permiten jugar con este tipo de cosas y aprovechar las ventajas de un almacenamiento único.</p>
+<h3 id="y-si-falla-la-red">¿Y si falla la red<a class="headerlink" href="#y-si-falla-la-red" title="Permanent link">¶</a></h3>
+<p>Como siempre podemos tener problemas con la red, la forma de solucionarlos consiste en tener varios interfaces de red en los equipos a través de distintos switches, etc y en las máquinas, una vez descubiertos los targets, configurar el fichero <code>/etc/multipathd.conf</code> y habilitar el demonio.</p>
+<p>Nos creará las rutas necesarias y una serie de dipositivos <code>/dev/mpath/*</code> para acceder de forma tolerante a fallos a nuestros recursos, si configuramos las tarjetas de red en modo bonding, ya tenemos el acceso más o menos asegurado ante las catástrofes más comunes y nuestros datos disponibles</p>
+<h3 id="conclusion">Conclusión<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h3>
+<p>Tenemos a nuestro alcance muchas herramientas para hacer sencilla la utilización y creación de sistemas equivalentes a lo que hace años sólo tenía una alternativa excesivamente cara.</p>
+<p>Sinceramente vale la pena perder un rato y probar estas cosas y maravillarnos de las posibilidades que abre de cara a la gestión de los equipos, la información y su acceso y lo mejor de todo, siempre con Software Libre.</p>
+<p>Espero que esta introducción os despierte el gusanillo para explorar las diversas funcionalidades que estas tecnologías nos ofrecen!</p>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=iSCSI%20y%20Clustering%20en%20RHEL/CentOS&url=https%3A//iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/&via=iranzop&hashtags=cluster,rhel,centos,foss" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=iSCSI%20y%20Clustering%20en%20RHEL/CentOS&amp;body=https%3A//iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/"
+                   href="https://iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/';
+    var disqus_url = 'https://iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2010/01/23/customize-rhelcentos-installation-media-el4el5/" title="Customize RHEL/CentOS installation media (EL4/EL5+)">Customize RHEL/CentOS installation media (EL4/EL5+)</a></li>
+<li><a href="https://iranzo.io/blog/2015/03/28/install-rhel7centosfedora-on-a-software-raid-device/" title="Install RHEL7/Centos/Fedora on a software raid device">Install RHEL7/Centos/Fedora on a software raid device</a></li>
+<li><a href="https://iranzo.io/blog/2020/12/01/upstreamdownstream-documentation-workflow/" title="Upstream/Downstream documentation workflow">Upstream/Downstream documentation workflow</a></li>
+<li><a href="https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/" title="Configuring OpenShift with self-contained NTP">Configuring OpenShift with self-contained NTP</a></li>
+<li><a href="https://iranzo.io/blog/2021/01/14/be-lazy-automate-github-actions-for-static-blogging/" title="Be lazy, automate: GitHub actions for static blogging">Be lazy, automate: GitHub actions for static blogging</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2008/11/08/tablas-para-no-decir-nada-es/" title="Previous: Tablas para no decir nada">Tablas para no decir nada</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2008/12/13/migrar-de-spip-19-a-20-es/" title="Next: Migrar de SPIP 1.9 a 2.0">Migrar de SPIP 1.9 a 2.0</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~6 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2008-12-13T17:59:41+00:00">Sat 13 December 2008</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#centos-ref">centos
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#cluster-ref">cluster
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#foss-ref">foss
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#rhel-ref">rhel
+                    <span class="superscript">3</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

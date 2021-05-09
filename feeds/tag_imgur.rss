@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - imgur</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Wed, 19 Feb 2020 21:55:24 +0100</lastBuildDate><item><title>JavaScript for imgur gallery generation for PhotoSwipe and Pelican-Elegant</title><link>https://iranzo.io/blog/2020/02/19/javascript-for-imgur-gallery-generation-for-photoswipe-and-pelican-elegant/</link><description>&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;Using the following code from the Browser&amp;nbsp;console:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+  &lt;span class="s1"&gt;&amp;#39;&amp;lt;div class=&amp;quot;elegant-gallery&amp;quot; itemscope itemtype=&amp;quot;http://schema.org/ImageGallery&amp;quot;&amp;gt;&amp;#39;&lt;/span&gt;
+&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;images&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;img&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;each&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;images&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`&amp;lt;figure itemprop=&amp;quot;associatedMedia&amp;quot; itemscope itemtype=&amp;quot;http://schema.org/ImageObject&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class="sb"&gt;        &amp;lt;a href=&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;images&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;each&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;&amp;quot; itemprop=&amp;quot;contentUrl&amp;quot; data-size=&amp;quot;4032x3024&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class="sb"&gt;            &amp;lt;img src=&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;images&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;each&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;&amp;quot; width=&amp;quot;403&amp;quot; height=&amp;quot;302&amp;quot; itemprop=&amp;quot;thumbnail&amp;quot; alt=&amp;quot;Image description&amp;quot; /&amp;gt;&lt;/span&gt;
+&lt;span class="sb"&gt;        &amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span class="sb"&gt;        &amp;lt;figcaption itemprop=&amp;quot;caption description&amp;quot;&amp;gt;Image description&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
+&lt;span class="sb"&gt;    &amp;lt;/figure&amp;gt;`&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;It will output a copy-paste ready code for integrating in your blog post and leverage the picture&amp;nbsp;gallery.&lt;/p&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p&gt;Review the &lt;code&gt;data-size&lt;/code&gt; to make it match the image size as PhotoSwipe requires it to match image and adjust the &lt;code&gt;figcaption&lt;/code&gt; entry.&lt;/p&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Wed, 19 Feb 2020 21:55:24 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2020-02-19:/blog/2020/02/19/javascript-for-imgur-gallery-generation-for-photoswipe-and-pelican-elegant/</guid><category>tech</category><category>pelican</category><category>pelican-elegant</category><category>photography</category><category>gallery</category><category>imgur</category><category>PhotoSwipe</category></item></channel></rss>

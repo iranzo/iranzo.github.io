@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - spec</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Fri, 10 Jul 2009 08:54:35 +0000</lastBuildDate><item><title>MiniDLNA SPEC &amp; RPM</title><link>https://iranzo.io/blog/2009/07/10/minidlna-spec-rpm/</link><description>&lt;p&gt;MiniDLNA provides an opensource &lt;span class="caps"&gt;DLNA&lt;/span&gt; server software that can index and present specific folders on your computer to &lt;span class="caps"&gt;DLNA&lt;/span&gt; clients on your&amp;nbsp;network.&lt;/p&gt;
+&lt;p&gt;Project at sourceforge is distributed as &lt;span class="caps"&gt;CVS&lt;/span&gt; code that you need to checkout and compile for it to work on your&amp;nbsp;computer.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve setup a spec file that will allow you to create an rpm that has been tested on Red Hat Enterprise Linux 5.3 machine x86 for easing adoption among&amp;nbsp;users.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;
+&lt;span class="normal"&gt;32&lt;/span&gt;
+&lt;span class="normal"&gt;33&lt;/span&gt;
+&lt;span class="normal"&gt;34&lt;/span&gt;
+&lt;span class="normal"&gt;35&lt;/span&gt;
+&lt;span class="normal"&gt;36&lt;/span&gt;
+&lt;span class="normal"&gt;37&lt;/span&gt;
+&lt;span class="normal"&gt;38&lt;/span&gt;
+&lt;span class="normal"&gt;39&lt;/span&gt;
+&lt;span class="normal"&gt;40&lt;/span&gt;
+&lt;span class="normal"&gt;41&lt;/span&gt;
+&lt;span class="normal"&gt;42&lt;/span&gt;
+&lt;span class="normal"&gt;43&lt;/span&gt;
+&lt;span class="normal"&gt;44&lt;/span&gt;
+&lt;span class="normal"&gt;45&lt;/span&gt;
+&lt;span class="normal"&gt;46&lt;/span&gt;
+&lt;span class="normal"&gt;47&lt;/span&gt;
+&lt;span class="normal"&gt;48&lt;/span&gt;
+&lt;span class="normal"&gt;49&lt;/span&gt;
+&lt;span class="normal"&gt;50&lt;/span&gt;
+&lt;span class="normal"&gt;51&lt;/span&gt;
+&lt;span class="normal"&gt;52&lt;/span&gt;
+&lt;span class="normal"&gt;53&lt;/span&gt;
+&lt;span class="normal"&gt;54&lt;/span&gt;
+&lt;span class="normal"&gt;55&lt;/span&gt;
+&lt;span class="normal"&gt;56&lt;/span&gt;
+&lt;span class="normal"&gt;57&lt;/span&gt;
+&lt;span class="normal"&gt;58&lt;/span&gt;
+&lt;span class="normal"&gt;59&lt;/span&gt;
+&lt;span class="normal"&gt;60&lt;/span&gt;
+&lt;span class="normal"&gt;61&lt;/span&gt;
+&lt;span class="normal"&gt;62&lt;/span&gt;
+&lt;span class="normal"&gt;63&lt;/span&gt;
+&lt;span class="normal"&gt;64&lt;/span&gt;
+&lt;span class="normal"&gt;65&lt;/span&gt;
+&lt;span class="normal"&gt;66&lt;/span&gt;
+&lt;span class="normal"&gt;67&lt;/span&gt;
+&lt;span class="normal"&gt;68&lt;/span&gt;
+&lt;span class="normal"&gt;69&lt;/span&gt;
+&lt;span class="normal"&gt;70&lt;/span&gt;
+&lt;span class="normal"&gt;71&lt;/span&gt;
+&lt;span class="normal"&gt;72&lt;/span&gt;
+&lt;span class="normal"&gt;73&lt;/span&gt;
+&lt;span class="normal"&gt;74&lt;/span&gt;
+&lt;span class="normal"&gt;75&lt;/span&gt;
+&lt;span class="normal"&gt;76&lt;/span&gt;
+&lt;span class="normal"&gt;77&lt;/span&gt;
+&lt;span class="normal"&gt;78&lt;/span&gt;
+&lt;span class="normal"&gt;79&lt;/span&gt;
+&lt;span class="normal"&gt;80&lt;/span&gt;
+&lt;span class="normal"&gt;81&lt;/span&gt;
+&lt;span class="normal"&gt;82&lt;/span&gt;
+&lt;span class="normal"&gt;83&lt;/span&gt;
+&lt;span class="normal"&gt;84&lt;/span&gt;
+&lt;span class="normal"&gt;85&lt;/span&gt;
+&lt;span class="normal"&gt;86&lt;/span&gt;
+&lt;span class="normal"&gt;87&lt;/span&gt;
+&lt;span class="normal"&gt;88&lt;/span&gt;
+&lt;span class="normal"&gt;89&lt;/span&gt;
+&lt;span class="normal"&gt;90&lt;/span&gt;
+&lt;span class="normal"&gt;91&lt;/span&gt;
+&lt;span class="normal"&gt;92&lt;/span&gt;
+&lt;span class="normal"&gt;93&lt;/span&gt;
+&lt;span class="normal"&gt;94&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;#!spec&lt;/span&gt;
+&lt;span class="cp"&gt;%define dist .el%(rpm -q --queryformat=&amp;#39;%{VERSION}&amp;#39; redhat-release 2&amp;gt; /dev/null | tr -cd &amp;#39;[:digit:]&amp;#39;)&lt;/span&gt;
+&lt;span class="gh"&gt;Summary&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; DLNA compatible server
+&lt;span class="gh"&gt;Name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; MiniDLNA
+&lt;span class="gh"&gt;Version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 1.0.14
+&lt;span class="gh"&gt;Release&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 6
+&lt;span class="gh"&gt;License&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; GPL
+&lt;span class="gh"&gt;Group&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; System Environment/Utilities
+&lt;span class="gh"&gt;Source&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;%{name}&lt;/span&gt;-&lt;span class="kc"&gt;%{version}&lt;/span&gt;.tar.gz
+&lt;span class="gh"&gt;BuildRoot&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; /var/tmp/&lt;span class="kc"&gt;%{name}&lt;/span&gt;-buildroot
+&lt;span class="gh"&gt;Vendor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; MiniDLNA SF group https://sourceforge.net/projects/minidlna/
+&lt;span class="gh"&gt;Packager&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
+&lt;span class="gh"&gt;BuildRequires&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; flac-devel, libvorbis-devel, libexif-devel, sqlite-devel, uuid-devel,ffmpeg-devel,libid3tag-devel, libjpeg-devel, e2fsprogs-devel, cvs
+&lt;span class="gh"&gt;Requires&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; redhat-lsb
+
+&lt;span class="nd"&gt;%description&lt;/span&gt;
+MiniDLNA is a DLNA UPnP AV compatible server for being used by other DLNA capable devices
+
+&lt;span class="nd"&gt;%prep&lt;/span&gt;
+[ -d &lt;span class="kc"&gt;%{name}&lt;/span&gt; ] &amp;amp;&amp;amp; rm -Rfv &lt;span class="kc"&gt;%{name}&lt;/span&gt;
+mkdir &lt;span class="kc"&gt;%{name}&lt;/span&gt;
+cd &lt;span class="kc"&gt;%{name}&lt;/span&gt;
+cvs -q -d:pserver:anonymous@minidlna.cvs.sourceforge.net:/cvsroot/minidlna login
+cvs -z3 -d:pserver:anonymous@minidlna.cvs.sourceforge.net:/cvsroot/minidlna co -P minidlna
+
+&lt;span class="nd"&gt;%build&lt;/span&gt;
+cd &lt;span class="kc"&gt;%{name}&lt;/span&gt;/minidlna
+sh genconfig.sh
+make
+
+cat &amp;lt;&amp;lt; EOF &amp;gt;&amp;gt; initscript
+&lt;span class="c"&gt;#!/bin/sh&lt;/span&gt;
+
+&lt;span class="c"&gt;# chkconfig: 345 99 10&lt;/span&gt;
+&lt;span class="c"&gt;# description: Startup/shutdown script for MiniDLNA daemon&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# \$Id: minidlna.init.d.script,v 1.2 2009/07/02 00:33:15 jmaggard Exp \$&lt;/span&gt;
+&lt;span class="c"&gt;# MiniUPnP project&lt;/span&gt;
+&lt;span class="c"&gt;# author: Thomas Bernard&lt;/span&gt;
+&lt;span class="c"&gt;# website: http://miniupnp.free.fr/ or http://miniupnp.tuxfamily.org/&lt;/span&gt;
+&lt;span class="c"&gt;# Modified for RHEL Compatibility by Pablo Iranzo Gómez (Pablo.Iranzo@uv.es), http://Alufis35.uv.es/~iranzo/&lt;/span&gt;
+
+MINIDLNA=/usr/sbin/minidlna
+ARGS=&lt;span class="s1"&gt;&amp;#39;-f /etc/minidlna.conf&amp;#39;&lt;/span&gt;
+
+test -f \$MINIDLNA || exit 0
+
+. /lib/lsb/init-functions
+
+case &lt;span class="s2"&gt;&amp;quot;\$1&amp;quot;&lt;/span&gt; in
+start)  MSG=&lt;span class="s2"&gt;&amp;quot;Starting minidlna&amp;quot;&lt;/span&gt;
+        start_daemon \$MINIDLNA $ARGS $LSBNAMES &amp;amp;&amp;amp; log_success_msg \$MSG || log_failure_msg \$MSG
+        ;;
+stop)   MSG=&lt;span class="s2"&gt;&amp;quot;Stopping minidlna&amp;quot;&lt;/span&gt;
+        killproc \$MINIDLNA &amp;amp;&amp;amp; log_success_msg \$MSG || log_failure_msg \$MSG
+        ;;
+restart|reload|force-reload)
+        \$0 stop
+        \$0 start
+        ;;
+*)      log_action_msg &lt;span class="s2"&gt;&amp;quot;Usage: /etc/init.d/minidlna {start|stop|restart|reload|force-reload}&amp;quot;&lt;/span&gt;
+        exit 2
+        ;;
+esac
+exit 0
+
+EOF
+
+&lt;span class="nd"&gt;%install&lt;/span&gt;
+cd &lt;span class="kc"&gt;%{name}&lt;/span&gt;/minidlna
+
+&lt;span class="nf"&gt;%{__install}&lt;/span&gt; -D -m0755 minidlna &lt;span class="kc"&gt;%{buildroot}&lt;/span&gt;/usr/sbin/minidlna
+&lt;span class="nf"&gt;%{__install}&lt;/span&gt; -D -m0644 minidlna.conf &lt;span class="kc"&gt;%{buildroot}&lt;/span&gt;/etc/minidlna.conf
+&lt;span class="nf"&gt;%{__install}&lt;/span&gt; -D -m0755 initscript &lt;span class="kc"&gt;%{buildroot}&lt;/span&gt;/etc/rc.d/init.d/minidlna
+
+&lt;span class="nd"&gt;%clean&lt;/span&gt;
+rm -rf &lt;span class="vg"&gt;$RPM_BUILD_ROOT&lt;/span&gt;
+
+&lt;span class="nd"&gt;%files&lt;/span&gt;
+&lt;span class="k"&gt;%defattr&lt;/span&gt;(-,root,root)
+&lt;span class="k"&gt;%config&lt;/span&gt; /etc/minidlna.conf
+/usr/sbin/minidlna
+/etc/rc.d/init.d/minidlna
+
+&lt;span class="nd"&gt;%post&lt;/span&gt;
+chkconfig --add minidlna
+
+&lt;span class="nd"&gt;%preun&lt;/span&gt;
+service minidlna stop
+chkconfig --del minidlna
+
+&lt;span class="nd"&gt;%changelog&lt;/span&gt;
+&lt;span class="gu"&gt;* Wed Jul 1 2009 Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)&lt;/span&gt;
+- Initial version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Enjoy&amp;nbsp;it!&lt;/p&gt;
+&lt;p&gt;Pablo&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Fri, 10 Jul 2009 08:54:35 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2009-07-10:/blog/2009/07/10/minidlna-spec-rpm/</guid><category>tech</category><category>dlna</category><category>linux</category><category>rpm</category><category>spec</category><category>foss</category></item></channel></rss>

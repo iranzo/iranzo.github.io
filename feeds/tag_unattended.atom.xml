@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - unattended</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_unattended.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2008-05-11T12:00:00+00:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Kickstart - instalaciones automatizadas para anaconda</title><link href="https://iranzo.io/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda-es/" rel="alternate"></link><published>2008-05-11T12:00:00+00:00</published><updated>2008-05-11T12:00:00+00:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2008-05-11:/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda-es/</id><summary type="html">
+&lt;h3 id="instalar-linux"&gt;Instalar linux&lt;a class="headerlink" href="#instalar-linux" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Hoy en día todas las distribuciones suelen disponer de un instalador gráfico que mediante un sencillo asistente permiten particionar el sistema, seleccionar los paquetes, instalarlos y configurarlos.&lt;/p&gt;
+&lt;p&gt;El problema viene cuando en lugar de instalar un &lt;span class="caps"&gt;PC&lt;/span&gt; en 40 minutos, tenemos que instalar 20, cada uno de esos …&lt;/p&gt;</summary><content type="html">
+&lt;h3 id="instalar-linux"&gt;Instalar linux&lt;a class="headerlink" href="#instalar-linux" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Hoy en día todas las distribuciones suelen disponer de un instalador gráfico que mediante un sencillo asistente permiten particionar el sistema, seleccionar los paquetes, instalarlos y configurarlos.&lt;/p&gt;
+&lt;p&gt;El problema viene cuando en lugar de instalar un &lt;span class="caps"&gt;PC&lt;/span&gt; en 40 minutos, tenemos que instalar 20, cada uno de esos pc’s, aunque podamos ir con varios discos a la vez, nos va a llevar más de 40 minutos hacer la instalación, por tener que ir siguiendo el asistente, escogiendo opciones, paquetes, configurando cosas, etc.&lt;/p&gt;
+&lt;h3 id="anaconda"&gt;Anaconda&lt;a class="headerlink" href="#anaconda" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Anaconda es un instalador basado en Python que incorpora en su base, un instalador en modo texto, y uno gráfico que entre sus muchas funcionalidades, incorpora la instalación en base a guiones llamados kickstart.&lt;/p&gt;
+&lt;h3 id="el-archivo-kickstart"&gt;El archivo kickstart&lt;a class="headerlink" href="#el-archivo-kickstart" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Un archivo kickstart es un fichero de texto plano, que puede se le proporciona a Anaconda, como tal, puede ser un archivo que tengamos grabado en el disco de instalación, en otro medio de almacenamiento, o
+incluso en un servidor remoto.&lt;/p&gt;
+&lt;p&gt;El hecho de que se albergue en un servidor remoto, abre nuevas posibilidades, como que por ejemplo, el archivo kickstart se genere dinámicamente para cada equipo, en base a perfiles de equipo, parámetros
+opcionales, etc.&lt;/p&gt;
+&lt;h4 id="estructura"&gt;Estructura&lt;a class="headerlink" href="#estructura" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;La estructura de un kickstart podría ser:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;
+&lt;span class="normal"&gt;32&lt;/span&gt;
+&lt;span class="normal"&gt;33&lt;/span&gt;
+&lt;span class="normal"&gt;34&lt;/span&gt;
+&lt;span class="normal"&gt;35&lt;/span&gt;
+&lt;span class="normal"&gt;36&lt;/span&gt;
+&lt;span class="normal"&gt;37&lt;/span&gt;
+&lt;span class="normal"&gt;38&lt;/span&gt;
+&lt;span class="normal"&gt;39&lt;/span&gt;
+&lt;span class="normal"&gt;40&lt;/span&gt;
+&lt;span class="normal"&gt;41&lt;/span&gt;
+&lt;span class="normal"&gt;42&lt;/span&gt;
+&lt;span class="normal"&gt;43&lt;/span&gt;
+&lt;span class="normal"&gt;44&lt;/span&gt;
+&lt;span class="normal"&gt;45&lt;/span&gt;
+&lt;span class="normal"&gt;46&lt;/span&gt;
+&lt;span class="normal"&gt;47&lt;/span&gt;
+&lt;span class="normal"&gt;48&lt;/span&gt;
+&lt;span class="normal"&gt;49&lt;/span&gt;
+&lt;span class="normal"&gt;50&lt;/span&gt;
+&lt;span class="normal"&gt;51&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="c1"&gt;## Queremos instalar un sistema&lt;/span&gt;
+install
+&lt;span class="c1"&gt;## Queremos reiniciarlo al acabar la instalación&lt;/span&gt;
+reboot &lt;span class="c1"&gt;## Queremos utilizar como idioma Español&lt;/span&gt;
+lang es_ES.UTF-8 &lt;span class="c1"&gt;## nivel de registro&lt;/span&gt;
+logging —level&lt;span class="o"&gt;=&lt;/span&gt;info &lt;span class="c1"&gt;## Autoconfigurar la red por dhcp sin soporte IPV6 y con nombre de host equipo&lt;/span&gt;
+network —bootproto&lt;span class="o"&gt;=&lt;/span&gt;dhcp —onboot&lt;span class="o"&gt;=&lt;/span&gt;on —noipv6 —hostname&lt;span class="o"&gt;=&lt;/span&gt;equipo &lt;span class="c1"&gt;## teclado en español&lt;/span&gt;
+keyboard es
+&lt;span class="c1"&gt;## Zona horaria CET/CEST&lt;/span&gt;
+timezone Europe/Madrid
+&lt;span class="c1"&gt;## Utilizar shadow passwords y soporte md5&lt;/span&gt;
+auth —useshadow —enablemd5
+&lt;span class="c1"&gt;## Activar cortafuegos y permitir conexiones ssh externas&lt;/span&gt;
+firewall —enabled —ssh
+&lt;span class="c1"&gt;## Desactivar asistente tras la instalación (creación de cuentas de usuario, tarjeta de sonido, etc)&lt;/span&gt;
+firstboot —disable
+&lt;span class="c1"&gt;## Iniciar en modo activo Security Enhanced Linux&lt;/span&gt;
+selinux —enforcing
+&lt;span class="c1"&gt;# Instalar desde esta url (puede ser también un cdrom, ftp, nfs, etc)&lt;/span&gt;
+url —url&lt;span class="o"&gt;=&lt;/span&gt;http://1.1.1.1/cblr/links/CentOS51-i386
+&lt;span class="c1"&gt;# Configurar el entorno gráfico del siguiente modo: Gnome a 1024x768 con 16 millones de colores y arrancarlo al iniciar el sistema&lt;/span&gt;
+xconfig —defaultdesktop&lt;span class="o"&gt;=&lt;/span&gt;GNOME —depth&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;24&lt;/span&gt; —resolution&lt;span class="o"&gt;=&lt;/span&gt;1024x768 —startxonboot
+&lt;span class="c1"&gt;#Establecer la contraseña de root&lt;/span&gt;
+rootpw —iscrypted &lt;span class="nv"&gt;$1$BljcG$Qz6eMZghIDmf8E7starqui&lt;/span&gt;.
+&lt;span class="c1"&gt;#Activar una contraseña para grub&lt;/span&gt;
+bootloader —location&lt;span class="o"&gt;=&lt;/span&gt;mbr —md5pass&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$1$BljcG$Qz6eMZghIDmf8E7staqUx&lt;/span&gt;.
+&lt;span class="c1"&gt;#Activar estos servicios al iniciar en caso de no estarlo de forma predeterminada&lt;/span&gt;
+services —enabled&lt;span class="o"&gt;=&lt;/span&gt;setroubleshoot,funcd,smolt,NetworkManager
+&lt;span class="c1"&gt;#Establecer un repositorio adicional para actualizaciones, paquetes extra, etc&lt;/span&gt;
+repo —name&lt;span class="o"&gt;=&lt;/span&gt;CentOS-updates —baseurl&lt;span class="o"&gt;=&lt;/span&gt;http://1.1.1.1/cobbler/repo_mirror/CentOS-updates
+&lt;span class="c1"&gt;#Particiones&lt;/span&gt;
+&lt;span class="c1"&gt;#Borrar todas e inicializar etiquetas en hda (primer disco ide)&lt;/span&gt;
+clearpart —all —initlabel —drives&lt;span class="o"&gt;=&lt;/span&gt;hda &lt;span class="c1"&gt;#Crear una partición para arranque de 100 mb de tipo ext3&lt;/span&gt;
+part /boot —fstype ext3 —size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt; —ondisk&lt;span class="o"&gt;=&lt;/span&gt;hda &lt;span class="c1"&gt;#Crear un grupo de volúmenes en hda y llamarlo "Casa"&lt;/span&gt;
+part pv.100000 —size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; —grow —ondisk&lt;span class="o"&gt;=&lt;/span&gt;hda
+volgroup Casa —pesize&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;32768&lt;/span&gt; pv.100000
+&lt;span class="c1"&gt;#Crear una partición de Swap de 1Gb en el grupo Casa&lt;/span&gt;
+logvol swap —fstype swap —name&lt;span class="o"&gt;=&lt;/span&gt;Swap —vgname&lt;span class="o"&gt;=&lt;/span&gt;Casa —size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1024&lt;/span&gt;
+&lt;span class="c1"&gt;#Crear el volumen raíz de 4Gb&lt;/span&gt;
+logvol / —fstype ext3 —name&lt;span class="o"&gt;=&lt;/span&gt;root —vgname&lt;span class="o"&gt;=&lt;/span&gt;Casa —size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;4096&lt;/span&gt;
+&lt;span class="c1"&gt;#Crear un volumen para el home de 1 Gb&lt;/span&gt;
+logvol /home —fstype ext3 —name&lt;span class="o"&gt;=&lt;/span&gt;home —vgname&lt;span class="o"&gt;=&lt;/span&gt;Casa —size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1024&lt;/span&gt; &lt;span class="c1"&gt;#Paquetes a instalar&lt;/span&gt;
+%packages
+@ Base
+@ gnome-desktop
+openssh-server
+openssh
+screen
+mc
+joe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Con esta estructura, el sistema quedará instalado y configurado de forma automática, se habrá detectado el hardware y cargado su soporte en caso de ser detectado y disponer los controladores apropiados.&lt;/p&gt;
+&lt;h3 id="dandole-una-vuelta-de-tuerca-al-kickstart"&gt;Dándole una vuelta de tuerca al kickstart&lt;a class="headerlink" href="#dandole-una-vuelta-de-tuerca-al-kickstart" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="scripts-de-pre-y-post-instalacion"&gt;Scripts de Pre y Post instalación&lt;a class="headerlink" href="#scripts-de-pre-y-post-instalacion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Además de la información mostrada anteriormente, un fichero kickstart puede contener scripts que se ejecuten antes de comenzar la instalación (con el hardware y red ya operativos) y scripts que se ejecuten tras la instalación.&lt;/p&gt;
+&lt;p&gt;Un uso típico es determinar dinámicamente la estructura de discos en base al tamaño del mismo, o incluso establecer configuraciones &lt;span class="caps"&gt;RAID&lt;/span&gt; si se detecta más de un disco duro en el sistema, o mayor de cierta capacidad.&lt;/p&gt;
+&lt;h4 id="pre-instalacion"&gt;Pre instalación&lt;a class="headerlink" href="#pre-instalacion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Por ejemplo, la forma típica sería crear el esquema de particiones como hemos hecho arriba, pero utilizando comandos “echo”, por ejemplo:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+%pre
+&lt;span class="c1"&gt;#Obtener el primer disco del sistema y el total de discos&lt;/span&gt;
+&lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;list-harddrives&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;numd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$#&lt;/span&gt;/2 &lt;span class="c1"&gt;# Numero de discos&lt;/span&gt;
+&lt;span class="nv"&gt;d1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="c1"&gt;# Dispositivo del primer disco&lt;/span&gt;
+&lt;span class="nv"&gt;S1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$2&lt;/span&gt; &lt;span class="c1"&gt;# Tamanyo del primer disco (y sucesivamente)&lt;/span&gt;
+&lt;span class="nv"&gt;DISCO&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$d1&lt;/span&gt;
+&lt;span class="nv"&gt;ORGANIZACION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Casa"&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"clearpart —drives=&lt;/span&gt;&lt;span class="nv"&gt;$DISCO&lt;/span&gt;&lt;span class="s2"&gt; —all —initlabel"&lt;/span&gt; &amp;gt;&amp;gt; /tmp/part-include
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"part /boot —fstype ext3 —size=100 —ondisk=&lt;/span&gt;&lt;span class="nv"&gt;$DISCO&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &amp;gt;&amp;gt; /tmp/part-include
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"part pv.100000 —size=1 —grow —ondisk=&lt;/span&gt;&lt;span class="nv"&gt;$DISCO&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &amp;gt;&amp;gt; /tmp/part-include
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"volgroup &lt;/span&gt;&lt;span class="nv"&gt;$ORGANIZATION&lt;/span&gt;&lt;span class="s2"&gt; —pesize=32768 pv.100000"&lt;/span&gt; &amp;gt;&amp;gt; /tmp/part-include
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"logvol swap —fstype swap —name=Swap —vgname=&lt;/span&gt;&lt;span class="nv"&gt;$ORGANIZATION&lt;/span&gt;&lt;span class="s2"&gt; —size=1024"&lt;/span&gt;
+&amp;gt;&amp;gt; /tmp/part-include
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"logvol / —fstype ext3 —name=root —vgname=&lt;/span&gt;&lt;span class="nv"&gt;$ORGANIZATION&lt;/span&gt;&lt;span class="s2"&gt; —size=4096"&lt;/span&gt; &amp;gt;&amp;gt; /tmp/part-include
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"logvol /home —fstype ext3 —size=1024 —name=home —vgname=&lt;/span&gt;&lt;span class="nv"&gt;$ORGANIZATION&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &amp;gt;&amp;gt; /tmp/part-include
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Se obtendrán los datos de los discos detectados por anaconda y se irá escribiendo esa información a un fichero temporal que luego, lo incluiremos, reemplazando la parte del perfil donde antes definíamos las
+particiones por :&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;%include /tmp/part-include
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Así, para cada sistema podemos definir una organización basada en valores como la &lt;span class="caps"&gt;IP&lt;/span&gt; obtenida, etc y que sería procesador por un script, por ejemplo en &lt;span class="caps"&gt;PHP&lt;/span&gt; en el servidor.&lt;/p&gt;
+&lt;h4 id="post-instalacion"&gt;Post instalación&lt;a class="headerlink" href="#post-instalacion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Un script de instalación tiene una ventaja sobre un script de pre instalación, y es que podemos ejecutarlo sobre el sistema instalado o sobre el entorno de instalación, de forma que podemos copiar archivos generados en el pre (como los logs), copiar archivos del medio de instalación si es un &lt;span class="caps"&gt;CD&lt;/span&gt;, &lt;span class="caps"&gt;NFS&lt;/span&gt;, etc y luego actuar sobre nuestro sistema, por ejemplo:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+%post
+&lt;span class="c1"&gt;#Sincronizar hora del sistema&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"Sincronizar hora del sistema"&lt;/span&gt;
+ntpdate pool.ntp.org
+hwclock —systohc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="generacion-dinamica"&gt;Generación dinámica&lt;a class="headerlink" href="#generacion-dinamica" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Dada la potencia de Linux y la habilidad de ejecutar scripts de pre instalación y post instalación, podemos configurar un sistema mediante estos scripts de la misma forma que lo haríamos en un sistema de forma manual, podemos dejar un sistema perfectamente configurado. Cierto es que a priori, nos llevará más tiempo ponerlo en marcha mediante este sistema que utilizando cuatro o cinco opciones en un menú, pero una vez hecho, tardaremos el mismo tiempo en instalar 1 sistema que 1000 con la ventaja
+de que ya no tendremos que estar delante para verificar toda la operación.&lt;/p&gt;
+&lt;p&gt;Si tomamos como generador un script en php, albergado en nuestro servidor web, podemos hacer que una máquina al instalarse, envíe información de la &lt;span class="caps"&gt;MAC&lt;/span&gt; que está utilizando para instalarse con el parámetro “kssendmac” de anaconda y en base a ella, generar distintos perfiles según esa máquina esté pensada para servidor web, para estación de trabajo, para servidor de correo, o para cluster de almacenamiento, permitiendo que en cualquier momento la reaprovisionemos a un nuevo con la mínima inversión de tiempo por nuestra parte.&lt;/p&gt;
+&lt;p&gt;Existen diversos sistemas que facilitan estas tareas y permiten llevar un control de las máquinas que instalamos, etc que comentaremos más adelante.&lt;/p&gt;
+&lt;h3 id="informacion-adicional"&gt;Información adicional&lt;a class="headerlink" href="#informacion-adicional" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Hasta que nos familiaricemos con la sintaxis, es conveniente recordar que en los sistemas basados en Fedora o Red Hat, existe la utilidad system-config-kickstart que es un editor gráfico de archivos kickstart que nos puede servir de punto de inicio para empezar a modificarlos con nuestros scripts y adaptaciones personales.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.redhat.com/docs/manuals/enterprise/RHEL-5-manual/Installation_Guide-en-US/s1-kickstart2-options.html"&gt;Opciones soportadas en &lt;span class="caps"&gt;RHEL5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fedoraproject.org/wiki/Anaconda/Kickstart"&gt;Opciones soportadas en Fedora&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.linux.kaybee.org:8080/demo/hosts/index.html"&gt;Configurador kickstart web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="tech"></category><category term="linux"></category><category term="kickstart"></category><category term="automation"></category><category term="unattended"></category><category term="foss"></category></entry></feed>

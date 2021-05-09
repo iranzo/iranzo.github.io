@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='es'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Introducción¶ Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red. En el caso de las redes inalámbricas, existen varias aproximaciones. Un nodo …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="linux, wireless, router, firewall, foss, tech, " />
+
+<meta property="og:title" content="Montar un router con la idea de wireless "/>
+<meta property="og:url" content="https://iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/" />
+<meta property="og:description" content="Introducción¶ Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red. En el caso de las redes inalámbricas, existen varias aproximaciones. Un nodo …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2003-06-18T21:39:00+00:00" />
+<meta name="twitter:title" content="Montar un router con la idea de wireless ">
+<meta name="twitter:description" content="Introducción¶ Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red. En el caso de las redes inalámbricas, existen varias aproximaciones. Un nodo …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2003-06-18T21:39:00+00:00",
+        "description": "Introducción¶ Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red. En el caso de las redes inalámbricas, existen varias aproximaciones. Un nodo …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/"
+        },
+
+        "headline": "Montar un router con la idea de wireless",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>Montar un router con la idea de wireless  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/">
+                Montar un router con la idea de&nbsp;wireless
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduccion">Introducción</a></li>
+<li><a href="#sistema-operativo-y-paquetes">Sistema Operativo y Paquetes</a></li>
+<li><a href="#red">Red</a></li>
+<li><a href="#masquerading">Masquerading</a></li>
+<li><a href="#consejos-finales">Consejos Finales</a></li>
+<li><a href="#ficheros-de-configuracion">Ficheros de configuración</a><ul>
+<li><a href="#squid">Squid</a></li>
+<li><a href="#etcppppptpd-options">/etc/ppp/pptpd-options</a></li>
+<li><a href="#etcpppchap-secrets">/etc/ppp/chap-secrets</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h3 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">¶</a></h3>
+<p>Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red.</p>
+<p>En el caso de las redes inalámbricas, existen varias aproximaciones.</p>
+<p>Un nodo puede ser un aparato denominado Punto de Acceso o por sus siglas en inglés <span class="caps">AP</span> (Access Point) que contiene en su interior un interfaz wireless y una conexión Ethernet <span class="caps">RJ45</span> para enlazarlo o bien con un equipo o con una red.</p>
+<p>Un aparato que realice dichas funciones no es especialmente asequible además de que está bastante limitado…</p>
+<p>La solución más aceptada es utilizar un <span class="caps">PC</span> para que haga de nodo, teniendo así muchísima más flexibilidad a la hora de configurarlo (más problemático también, no es “enchufar y listo” como con un <span class="caps">AP</span> de hardware).</p>
+<p>Las tarjetas a la venta en el mercado tienen tres modos de operación:</p>
+<ol>
+<li>Ad-hoc: Es el modo estándar, en este tipo de modo de operación, es el equivalente a las redes con Windows en las que se trabaja de igual a igual, todos son clientes y servidores.</li>
+<li>Managed: un servidor independiente (un <span class="caps">AP</span>) es el lugar al que se conectan todas las demás tarjetas inalámbricas, el <span class="caps">AP</span> gestiona todas las conexiones, enrutados, etc.</li>
+<li>Master: Es el modo en el que trabaja el <span class="caps">AP</span> del punto anterior para que las tarjetas puedan trabajar como “Managed”.</li>
+</ol>
+<p>En redes con Windows sólo es posible trabajar en los dos primeros modos, el Ad-Hoc y el Managed, para ello, como se ve, es necesario un <span class="caps">AP</span> por hardware que trabaje como Master al que las tarjetas que trabajan en Managed se puedan conectar. Y este es el punto en el que Linux marca la diferencia… con Linux, existe un controlador (hostap) para las tarjetas basadas en Prism2 (p.ej. las Conceptronic). Con Linux y con esos controladores, es posible poner en modo Master las tarjetas de red
+(generalmente <span class="caps">PCMCIA</span> con un adaptador <span class="caps">PCI</span> para equipos de sobremesa) y de ese modo, hacer un <span class="caps">AP</span> por software.</p>
+<p>Quisiera expresar mi agradecimiento a Ghfjdksl de #wireless, a Jorti de #guadawireless y a Hilario y a Hawkmoon de #valenciawireless por la ayuda prestada para montar este nodo. Saludos también al resto de gente de #valenciawireless por sus larguísimas tertulias ;P</p>
+<p>Hardware</p>
+<p>Para la creación del nodo, necesitaremos unos componentes de hardware tanto de software.</p>
+<p>En la creación del nodo de La Creu Wireless, el hardware es el siguiente:</p>
+<ul>
+<li>Placa <span class="caps">AT</span> Pentium 120</li>
+<li>500 Mb <span class="caps">HD</span></li>
+<li>420 Mb <span class="caps">HD</span> (porque lo tenía a mano, pero posiblemente lo quite… lo que menos quiero es que el ordenador haga más ruido…)</li>
+<li>64 mb Ram (iba a tener 16, pero a última hora conseguí más…)</li>
+<li>Tarjeta gráfica <span class="caps">ATI</span> Mach 64 Pro Turbo <span class="caps">PCI</span></li>
+<li>Ethernet <span class="caps">ISA</span> P’n’P Intel <span class="caps">PRO</span> 10/10+</li>
+<li>Ethernet <span class="caps">PCI</span> basada en Realtek 8029 (10 mbps)</li>
+<li>Ethernet <span class="caps">PCI</span> basada en Realtek 8139 (10/100)</li>
+<li>Ethernet <span class="caps">ISA</span> P’n’P Compatible con <span class="caps">NE</span> 2000</li>
+<li>Tarjeta wireless todavía no la tengo, utilizo la <span class="caps">ISA</span> P’n’P compatible con <span class="caps">NE2000</span> como si fuese la wireless (A la que en la actualidad tengo conectado un <span class="caps">USR2450</span> en modo bridge con LinuxAP)</li>
+<li>Tarjeta de sonido <span class="caps">SB</span> 16 P’n’P (no se para qué porque no la tengo conectada ni nada, pero el caso es que como la tenía….)</li>
+<li><span class="caps">CD</span>-<span class="caps">ROM</span> (instalé desde disco duro porque no tenía cd-rom en ese momento… pero bueno.. ahora sí ;))</li>
+<li><span class="caps">RJ45</span> (latiguillos), uno directo para conectar al módem y a la eth0 y luego tres cruzados para conectar a cada uno de los pc’s sin necesidad de hub… si tienes hub, pues todos directos y listo…</li>
+</ul>
+<p>Se aceptan regalos ;) (Portátiles incluidos… ;) )</p>
+<p>Volviendo a la realidad… memoria le sobra por un tubo, pero bueno, puestos a ponerle, pues se le pone más :)</p>
+<p>Disco duro me gustaría ponerle más, ya que como lo tengo que tener encendido todo el día para que sea un nodo “fijo”, pues aprovechar y dejar las largas descargas bajándose en ese ordenador.</p>
+<p>Lo de las tarjetas de red puede asustar al principio… pero bueno, tiene una clara explicación… en casa tengo dos ordenadores y ahora con el nodo tres, la conexión a Internet requiere otra tarjeta de red y no me permite compartirla directamente conectándola a un <span class="caps">HUB</span>, así que me parecía algo tonto el tener que gastarme dinero en un <span class="caps">HUB</span> cuando las tarjetas de red ya las tenía…</p>
+<p>Así que el montaje de la falla es el siguiente:</p>
+<ul>
+<li>Intel Pro <span class="caps">ISA</span> 10/10+: eth0 conectada a mi conexión a Internet</li>
+<li>Realtek 8139 (10/100): eth1 conectada a mi equipo principal (también con otra tarjeta 10/100, así que red local a 100 mbps ;) )</li>
+<li>Realtek 8029: eth2 conectada al otro pc que tengo en casa (también con una ethernet a 10 mbps)</li>
+<li>Isa P’n’P <span class="caps">NE2000</span>: eth3 hace las labores de wireless hasta que tenga una de verdad (la utilizo para conectar otro equipo y hacer las pruebas como si estuviese conectado por wireless), en su momento será utilizada para conexiones “temporales” por cable, siendo entonces eth4 la wireless “real”.</li>
+</ul>
+<p>Realmente con un <span class="caps">HUB</span> podría quitar dos tarjetas de red del ordenador (ya que el ordenador principal y el secundario irían conectados al hub y no serían necesarias las tarjetas correspondientes y sólo utilizaría la otra que quedase para Internet y la otra para conectar al <span class="caps">HUB</span> (si mi conexión me permitiese hacerlo, hasta podría conectar mi módem al <span class="caps">HUB</span> y ahorrarme otra tarjeta.. pero bueno, el caso es que no se puede…)</p>
+<p>Como se puede ver, no digo nada de ratón ni de monitor… el caso es que realmente no es necesario porque para hacer la instalación inicial se hará conectándolo a otro monitor, pero una vez puesto en marcha no hará falta para nada, de hecho hasta el teclado sobraría, pero como he dicho que es un P120 con <span class="caps">AT</span>, en los casos en los que tengo que apagar o reiniciar la máquina necesito algo que no implique un reset total (o sea, necesito tres teclas: <span class="caps">CTRL</span>-<span class="caps">ALT</span>-<span class="caps">SUPR</span>).</p>
+<p>El teclado que tengo es uno de 84 teclas que será como un teclado normal pero sin el bloque numérico y sin el bloque de av-pag, etc de tamaño, tiene sólo dos leds, Bloq may y bloq despl, pero lo dicho… sobra ;)</p>
+<p>Ahora el ordenador es un P200 <span class="caps">MMX</span> con 128 Mb de <span class="caps">RAM</span>, las tarjetas son una Intel Pro <span class="caps">ISA</span> 10/10+, una <span class="caps">SMC</span> 100, 3Com 3c509 y <span class="caps">NE2000</span>, discos tiene uno de 10 Gb, y otro de 20, configurados como:</p>
+<ul>
+<li>128 Mb Swap</li>
+<li>10 Mb boot</li>
+<li>3 Gb sistema, usuarios</li>
+<li>Resto = 26 Gb para descargas diversas… (pero con ánimo educativo, no os vayais a pensar…)</li>
+</ul>
+<p>Ahora vamos a la configuración del software…</p>
+<h3 id="sistema-operativo-y-paquetes">Sistema Operativo y Paquetes<a class="headerlink" href="#sistema-operativo-y-paquetes" title="Permanent link">¶</a></h3>
+<p>El primer paso previo a todos, es que una vez configurado el hardware para que no se queje (<span class="caps">IRQ</span>’s, puertos <span class="caps">IO</span>, etc) (si la placa es realmente P’n’P no habrá problemas pero la mía aunque es P’n’P dio algunos problemas así que… ajo y agua…) Si has de comprar tarjetas y puedes, cómpralas <span class="caps">PCI</span> y mejor todavía si compras un <span class="caps">HUB</span> porque así no tienes que tener el ordenador rellenito en todas sus ranuras con ethernets ;).</p>
+<p>Lo primero a configurar entonces es la <span class="caps">BIOS</span>.</p>
+<p>Como cada <span class="caps">BIOS</span> es de un papá y de una mamá distintos (aunque a veces la mamá sea siempre Award o Ami), daré la explicación general y que cada uno se las apañe con el manual de su placa base para hacer lo que digo…</p>
+<p><span class="caps">PD</span>: Si no sabes lo que es la <span class="caps">BIOS</span>, olvídate de seguir… esto no está hecho para tí… Mucho mejor que veas esto.</p>
+<p>Configura las tarjetas en el orden que quieras, pero ten bien claro cuál será cada una (si son todas iguales pues será más problemático, pero no por ello imposible).</p>
+<p>Primero pon el ordenador en fecha y hora, y en la opción que pone “Halt on” ponle que nada, es decir, que bajo ningún concepto el ordenador no arranque (por ejemplo por falta de teclado, falta de monitor, etc porque al fin y al cabo luego no lo tendrá…)</p>
+<p>En la <span class="caps">BIOS</span> dile que de <span class="caps">PNP</span> su tía… le dices que el sistema operativo no es P’N’P y que no se maree (puedes probar diciendo que sí, no debería ser muy tortuoso y si lo es, siempre lo puedes cambiar otra vez ;))</p>
+<p>Como dispositivo de arranque se le pondrá primero la disquetera, pero en el momento en que todo esté configurado, se pondrá fijo siempre el disco duro.</p>
+<p>Si la placa es <span class="caps">ATX</span>, dile que tras un corte de luz, que se encienda sola… así evitarás los tiempos de apagón del nodo al mínimo.</p>
+<p>Salva todos los cambios y reiniciará el ordenador… En mi caso, como no tenía en un primer momento ni disquetera ni cd-rom, aproveché que el disco duro contenía un Windows 95 y bajé la imagen de <span class="caps">CD</span>-<span class="caps">ROM</span> de instalación de Internet de Debian Potato, la convertí del .<span class="caps">ISO</span> a carpetas y directorios normales y la guardé por la red en el segundo <span class="caps">HD</span> del ordenador.</p>
+<p>La imagen iso son unos 30 Mb y la descargué de la página de debian. (woody_netinst-20020626-i386.iso)</p>
+<p>La decisión de tomar “Debian” como sistema a instalar fue sencilla (lo de que tenía que ser Linux estaba cantado por lo explicado en la introducción):</p>
+<ul>
+<li><strong>Red Hat Linux</strong>: Está muy bien, de hecho es con la que más experiencia tengo, la tengo funcionando desde el año 96 en un servidor y me va genial, poquitos problemas excepto actualizaciones, etc (aunque con las nuevas herramientas es muy fácil). Las actualizaciones, en el momento de lanzarlas, si hay muchos clientes de pago, pues a los que no pagamos, pues ajo y agua y a esperarse a que no esté tan saturado… el formato de redhat, el <span class="caps">RPM</span> es el estándar más extendido. (Se puede bajar de internet en versión libre, llamada Fedora Core, o bien en clónicas basadas en <span class="caps">RHEL</span>).</li>
+<li><strong>SuSE Linux</strong>: Está muy bien, si compras la distribución, tienes muchos cd’s con programas, manuales, etc Bastante bien adaptada al Español (je, je), etc… Pero no se puede bajar la versión completa de internet porque tiene programas con licencias de distribución que no lo permiten, sólo si se compra. Utiliza el <span class="caps">RPM</span> que es un punto a favor, pero en contra es que no es compatible al 100% con las estructuras de directorios y funcionamientos de Red Hat, así que no hay forma de distinguir si ese
+  <span class="caps">RPM</span> funcionará bien o no con SuSE. El peor inconveniente es la gran cantidad de recursos que necesita, tanto de <span class="caps">RAM</span> para la instalación como para el almacenamiento en disco (la mínima son unos 500 mb (pero mínima mínima mínima…)). La ventaja es que la configuración es toda en modo gráfico, con una autodetección genial, etc. Tenía experiencia con ella tanto de gastarla en casa como distribución linux, en la uni en un servidor como de haber colaborado en su traducción de manuales y de software de configuración.</li>
+<li><strong>Debian</strong>: No tenia ni puta idea de ella, una vez que la intenté instalar casi me da algo con el programa de selección de paquetes a instalar (dselect de la Potato). La instalación es en modo texto. Tiene un sistema de actualización/instalación bastante bueno en modo texto. la decisión fue usar Debian… de paso que aprendía a gastarla, al ser en modo texto, tenía el aliciente de que facilita su administración remota (recordemos que el ordenador una vez instalado mínimamente no iba a tener ni teclado ni ratón ni monitor ni naa de na… excepto el cable de la luz y cuatro cables <span class="caps">RJ45</span> para las tarjetas de red :))</li>
+</ul>
+<p>Vale, como ya he comentado, en el nodo, en el momento de su creación no tenía ni disquetera ni <span class="caps">CD</span>-<span class="caps">ROM</span>, así que se copiaron los archivos a una instalación de Windows 95, se reinicia en modo-msdos y una vez en el, se cambia al directorio donde se extrajo la imagen de cd y se ejecuta el programa de instalación…</p>
+<p>Si tienes grabadora y cd-rom en el nodo pues lo más sencillo es bajar la iso, grabarla a un <span class="caps">CD</span> y arrancar desde el <span class="caps">CD</span>-<span class="caps">ROM</span> (en la bios se puede configurar esa opción).</p>
+<p>Como ya he dicho, la imagen de instalación es una <span class="caps">NETINST</span>, es decir, 30 mb mínimos que se utilizan para una vez respondidas unas preguntas copiar un sistema básico que se puede conectar a Internet y seguir bajando el resto de Internet… (Tengo una conexión a 128 kbps, así que que nadie me diga que es una locura porque es viable…)</p>
+<p>Cuando yo hice la instalación, la netinst más habitual era la potato, pero hace nada que pasaron a Woody (3.0), el caso es que más o menos son parecidas y de hecho una vez instalé lo mínimo hice el cambio a Woody usando el programa que lleva para hacerlo…</p>
+<p>No voy a explicar la instalación de Debian porque esto habla de configurar un nodo, no de instalar Linux, pero bueno, básicamente consistió en particionar el <span class="caps">HD</span>, crear una partición swap de 40 Mb (ya dije que mi disco duro era pequeñito..) y una de datos de 472 Mb como ext3 Es conveniente pensar un nombre para el nodo…la norma habitual, al menos en universidades, etc es ponerle nombres de estrellas o de científicos, pero bueno… Cada uno que le ponga el que le de la gana…</p>
+<p>Se configura el teclado, la tarjeta de red (como tengo Internet por tarjeta de cable fue tan sencillo como decirle que cargase los módulos de las tarjetas de red (en el caso de las <span class="caps">ISA</span> indicando también la <span class="caps">IO</span>) y luego en la que estaba conectada a Internet, decirle que hiciese configuración automática por <span class="caps">DHCP</span> y ya estaba la conexión funcionando…</p>
+<p>En la selección de paquetes puse lo mínimo mínimo, así que al ratito y tras un rearranque, me pidió asignar contraseñas y crear un usuario (no es recomendable estar siempre como administrador para trabajar con Linux…)</p>
+<p>Vale, llegados a este punto, tenemos ya el Linux instalado y tenemos delante la consola para iniciar sesión en el sistema. Vamos a necesitar varios programas además de los básicos para trabajar con el nodo… si nos gusta Linux, pues nos gustará instalar alguno más, pero bueno… por un lado están los básicos y los recomendados…</p>
+<p>Como lo que estoy haciendo es explicar la configuración de lo que yo hice con mi ordenador, pues allá vamos:</p>
+<p>Para la wireless hace falta el wavemon que es un monitor de estado de la tarjeta y el zebra para enrutar dinámicamente.</p>
+<p>En mi caso, ya que ese ordenador iba a hacer de medio “servidor” en mi casa, pues me interesó ponerle:</p>
+<ul>
+<li>samba: para compartir archivos e impresoras en un formato compatible con Windows y así poder luego bajar archivos de un ordenador a otro (del principal al nodo) mediante el entorno de red</li>
+<li>pptpd: para permitir conexiones <span class="caps">VPN</span>, permite que desde internet (o en este caso, desde la wireless), se pueda conectar con el nodo, y se asigne otra dirección <span class="caps">IP</span> que permita hacer otras cosas que de normal no se podría… En mi caso, tengo limite de descarga en Internet y aunque por el momento no lo apliquen no quita que pudieran hacerlo… causa pues de que no comparta mi acceso a Internet a no ser que conozca directamente al equipo que se conecta… es decir, una vez conectado mediante la wireless, hará una conexión <span class="caps">VPN</span> desde su Windows o su Linux al nodo y mediante un login y un pass tendrá acceso a Internet a través del nodo, que de otra forma no tendría…) (un nodo no tiene que necesariamente tener acceso a Internet, pero es recomendable para unir los nodos y facilitar la integración en la red, etc)</li>
+<li>webmin: es un programa hecho por caldera y que funciona en multitud de plataformas y distribuciones, permite muy fácilmente configurar desde un navegador muchísimas cosas del sistema. No digo que vaya a reemplazar a la configuración en modo consola, pero para muchas cosas es muchísimo más fácil hacerlo desde navegador que tener que entrar, etc…</li>
+<li>Otros paquetes instalados (muchos de ellos se instalan solitos como dependencias a los ya instalados…):</li>
+</ul>
+<p>A ver, en resumen, interesa instalar el ssh porque con el podremos entrar desde fuera al servidor, el webmin y los módulos listados arriba, etc</p>
+<p>Lo dicho, esto es lo que yo tengo puesto… los paquetes se instalan poniendo:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>apt-get install
+</code></pre></div>
+</td></tr></table>
+<p>por ejemplo: <code>apt-get install wavemon zebra webmin-stunnel webmin-status wget vtun</code></p>
+<p>Automáticamente el programa se conectará a Internet y comenzará a bajar esos paquetes y todos los necesarios para que esos funcionen, es decir, si instalas webmin-status, para eso te hará falta primero el webmin y el programa lo instalará también solito tras pedir confirmación e indicar los megas a descargar y lo que ocupará una vez descomprimido.</p>
+<h3 id="red">Red<a class="headerlink" href="#red" title="Permanent link">¶</a></h3>
+<p>Vale, se supone que ahora ya tenemos el sistema funcionando y bueno… algo es algo :) ahora viene lo serio… configurarlo para que se adapte a nuestras necesidades…</p>
+<p>Lo primero es tener un Kernel modernito (a mi con el estándar no me iba, pero como veréis en la lista de paquetes con el 2.4 funciona bastante bien el P’N’P)</p>
+<p>Tenemos que por un lado configurar las tarjetas de red: Para eso, entramos en /etc/modutils como root y tendremos varios archivos de configuración, para ser representativo pondré el de una tarjeta <span class="caps">ISA</span> que son los más difíciles:</p>
+<p>Contenido de : /etc/modutils/eepro</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>options eepro io=0x210
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li>Como veréis es altamente jodidísimo configurar una tarjeta de red… sólo indicando el puerto de entrada salida Linux ya le busca la <span class="caps">IRQ</span> apropiada (en casos chungos, se le puede indicar también)</li>
+</ul>
+<p>Con el resto de tarjetas editaremos los ficheros para ver que está todo bien y los llamaremos con el nombre del módulo necesario (sale durante la instalación o en páginas de ayuda) Luego, editaremos el fichero /etc/modules y pondremos las tarjetas en el orden en el que queremos que se llamen:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code># /etc/modules: kernel modules to load at boot time.
+#
+# This file should contain the names of kernel modules that are
+# to be loaded at boot time, one per line. Comments begin with
+# a "#", and everything on the line after them are ignored.
+unix
+af_packet
+eepro
+tulip
+3c59x
+ne
+sb
+</code></pre></div>
+</td></tr></table>
+<p>Es decir, primero se cargará la EtherExpress Pro 10/10+ de Intel, que se llamará eth0 (tal como se explicó en el apartado de hardware), luego la 8139 (10/100) como eth2, luego la ne2000 <span class="caps">PCI</span> (<span class="caps">RTL</span> 8029), luego la Novel 2000 <span class="caps">ISA</span> y por último la SoundBlaster…</p>
+<p>En el caso de haber dos tarjetas con el mismo controlador, se irán creando consecutivamente… es decir, si hay dos <span class="caps">RTL8029</span>, pues serán eth1 y eth2 y así el resto… en mi caso como cada una es distinta no tuve ese “problema”.</p>
+<p>Tras editar ese fichero, tendremos que hacer que al siguiente arranque se tome esta configuración, así que ejecutaremos update-modules, para que el ordenador cree el /etc/modules.conf adecuado conforme a nuestros deseos., al siguiente arranque tendremos algo como:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Real Time Clock Driver v1.10e
+id: 0xb4 &lt;7&gt; io: 0x210 &lt;6&gt;eth0: Intel EtherExpress Pro/10+ ISA at 0x210,&lt;6&gt; 00&lt;6&gt;:aa&lt;6&gt;:00&lt;6&gt;:c9&lt;6&gt;:9d&lt;6&gt;:1a&lt;6&gt;, IRQ 11, 10BaseT.
+eepro.c: v0.13 11/08/2001 aris@cathedrallabs.org
+8139too Fast Ethernet driver 0.9.24
+eth1: RealTek RTL8139 Fast Ethernet at 0xc486b000, 00:50:fc:4d:c7:d9, IRQ 9
+eth1: Identified 8139 chip type ’RTL-8139C’
+ne2k-pci.c:v1.02 10/19/2000 D. Becker/P. Gortmaker http://www.scyld.com/network/ne2k-pci.html
+eth2: RealTek RTL-8029 found at 0x6100, IRQ 9, 00:C0:DF:E3:46:F9.
+isapnp: Scanning for PnP cards...
+isapnp: Calling quirk for 01:00
+isapnp: SB audio device quirk - increasing port range
+isapnp: Card ’Creative SB16 PnP’
+isapnp: 1 Plug &amp; Play card detected total
+ne.c:v1.10 9/23/94 Donald Becker (becker@scyld.com)
+Last modified Nov 1, 2000 by Paul Gortmaker
+NE*000 ethercard probe at 0x340: 00 40 33 94 ad 7d
+eth3: NE2000 found at 0x340, using IRQ 10.
+Soundblaster audio driver Copyright (C) by Hannu Savolainen 1993-1996
+sb: Creative SB16 PnP detected
+sb: ISAPnP reports ’Creative SB16 PnP’ at i/o 0x220, irq 5, dma 1, 5
+SB 4.13 detected OK (220)
+sb: 1 Soundblaster PnP card(s) found.
+</code></pre></div>
+</td></tr></table>
+<p>Como vemos, ya ha ido asignando tarjetas.. eth0 la Intel, eth1 la 8139, eth2 la 8029 y eth3 la Ne2000, lo de la SoundBlaster es accesorio, pero mola que la pille el solito ;) (con un kernel de la 2.4 aviso…)</p>
+<p>Ahora falta configurar las direcciones para cada tarjeta… editamos el fichero /etc/network/interfaces:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code># The first network card - this entry was created during the Debian installation
+auto eth0
+iface eth0 inet dhcp
+auto eth1
+iface eth1 inet static
+address 1.1.1.1
+netmask 255.255.255.0
+auto eth2
+iface eth2 inet static
+address 1.1.2.1
+netmask 255.255.255.0
+auto eth3
+iface eth3 inet static
+address 10.34.12.129
+netmask 255.255.255.224
+#auto eth3
+#iface eth3 inet static
+# address 1.1.3.1
+# netmask 255.255.255.0
+</code></pre></div>
+</td></tr></table>
+<p>Esto en cristiano viene a decir que cargue las tarjetas en el arranque (auto eth?), y lo de abajo, pues cómo configurarlas… la eth0 es la que estaba conectada a internet, por lo tanto como mi proveedor configura por <span class="caps">DHCP</span>, pues eso pone… la eth1 es la de mi red local con el primero ordenador, le asigna una ip 1.1.1.1 y una máscara de subred de tipo C.</p>
+<p>En realidad la dirección 1.1.1.1 está asignada en internet y sería una cabronada el conectarme con eso configurado así, pero como hemos dicho, es una red local y no tiene porqué afectar a nadie, así que así se queda…</p>
+<p>Con la segunda para la red local, pues lo mismo, pero con otra dirección 1.1.2.1 y con subred de tipo C y la ethernet 3 es lo que sería la wireless y le asigno una dirección real y válida, en mi caso, esta ip pertenece a Valencia Wireless y está asignada a mi nodo, cada uno que consulte en <a href="http://www.redlibre.net/">http://www.redlibre.net</a> el direccionamiento y que se ponga encargado con el responsable de su zona si lo hay y si no, directamente con Redlibre…</p>
+<p>Ahora, al arrancar el ordenador que hace de nodo, ya debería coger automáticamente esos datos para cada tarjeta y funcionar así bien…</p>
+<p>Me podéis preguntar que porqué asigno la 1.1.1.1 a una y la 1.1.2.1 a dos tarjetas que pertenecen a la misma red local… lo ideal sería 1.1.1.2, pero luego tenía problemas con el <span class="caps">DHCP</span> (con un hub nunca hubiera pasado… pero como nadie me ha dado ninguno…) (luego se verá el motivo)</p>
+<p>El siguiente paso, es que ya puestos, que el ordenador asigne direcciones a los ordenadores que se conecten de forma automática, es decir.. montar un servidor <span class="caps">DHCP</span>… para ello instalaremos el paquete <span class="caps">DHCP</span> y el servidor de nombres <span class="caps">BIND</span>, para que los equipos remotos que se conecten puedan pedir configuración automáticamente y que puedan
+resolver nombres…</p>
+<p>El fichero de configuración del <span class="caps">DHCP</span> es el siguiente: (/etc/dhcp3/dhcp.conf):</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>#
+# Sample configuration file for ISC dhcpd
+#
+ddns-updates on;
+use-host-decl-names on;
+allow unknown-clients;
+default-lease-time 3600;
+max-lease-time 7200;
+authoritative;
+subnet 10.34.12.128 netmask 255.255.255.224
+option domain-name-servers 10.34.12.129;
+range 10.34.12.131 10.34.12.158;
+option broadcast-address 10.34.12.159;
+option routers 10.34.12.129;
+subnet 192.168.1.0 netmask 255.255.255.0
+option domain-name-servers 192.168.1.1;
+range 192.168.1.2 192.168.1.254;
+option broadcast-address 192.168.1.255;
+option routers 192.168.1.1;
+subnet 1.1.1.0 netmask 255.255.255.0
+option domain-name-servers 1.1.1.1;
+option domain-name alufis;
+range 1.1.1.3 1.1.1.254;
+option broadcast-address 1.1.1.255;
+option routers 1.1.1.1;
+option netbios-name-servers 1.1.1.1;
+option netbios-node-type 8;
+subnet 1.1.2.0 netmask 255.255.255.0
+option domain-name alufis;
+option netbios-name-servers 1.1.2.1;
+option netbios-node-type 8;
+option domain-name-servers 1.1.2.1;
+range 1.1.2.3 1.1.2.254;
+option broadcast-address 1.1.2.255;
+option routers 1.1.2.1;
+subnet 1.1.3.0 netmask 255.255.255.0
+option domain-name-servers 1.1.3.1;
+option domain-name alufis;
+range 1.1.3.3 1.1.3.254;
+option broadcast-address 1.1.3.255;
+option routers 1.1.3.1;
+option netbios-name-servers 1.1.3.1;
+option netbios-node-type 8;
+host deneb
+option host-name "deneb";
+hardware ethernet 00:04:e2:33:4e:8d;
+fixed-address 1.1.1.2;
+server-name "deneb";
+host darkstar
+option host-name "darkstar";
+hardware ethernet 00:80:c8:16:de:59;
+server-name "darkstar";
+fixed-address 1.1.2.2;
+host Alnilam
+option host-name "alnilam";
+hardware ethernet 00:90:d1:06:57:dc;
+fixed-address 10.34.12.130;
+server-name "alnilam";
+</code></pre></div>
+</td></tr></table>
+<p>A ver… por partes…</p>
+<p>Primero defino lo que será la wireless, con la ip asignada, la subred, el rango de ip’s, etc…</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>subnet 10.34.12.128 netmask 255.255.255.224 option domain-name-servers 10.34.12.129; range 10.34.12.130 10.34.12.158; option broadcast-address 10.34.12.159; option routers 10.34.12.129;
+</code></pre></div>
+</td></tr></table>
+<p>Esto viene a significar que la red 10.34.12.128 (valencia wireless, mi nodo), con máscara de subred (255.255.255.224), tiene un servidor de nombres situado en 10.34.12.129 (la asignada a eth3), una dirección de broadcast en .158 y un router en .129 (el mismo que el <span class="caps">DNS</span>, es decir, el nodo…).</p>
+<p>El rango de ip’s asignado van desde la siguiente al nodo (.33) hasta el .62 de esa forma los clientes que pidan configuración por <span class="caps">DHCP</span> por el interfaz con esa subred (eth3) obtendrán una <span class="caps">IP</span> dentro de ese rango…</p>
+<p>192.168.<em>.</em> son direcciones para redes privadas y en este caso la utilizaré para los equipos que se conecten mediante la <span class="caps">VPN</span>, es decir, equipos que primero se conectan por la wireless y luego se conectan mediante <span class="caps">VPN</span>, realmente no creo que fuese necesario indicarlo, pero lo prefiero así :)</p>
+<p>Luego vienen definidas las redes para las tarjetas locales 1.1.1.1 y 1.1.2.1, si ambas tarjetas estuviesen en la misma red, con una sola definición bastaría, pero el problema sería que si a la 1.1.1.3 que se conecta por la segunda tarjeta de red con <span class="caps">IP</span> 1.1.1.2 le digo que el router es 1.1.1.1 que es la primera tarjeta de red, pues habrían problemas… no iría ni a tiros… esto con un <span class="caps">HUB</span> no pasa y no hace falta poner estas dos definiciones, pero en mi caso sí… así cada una es una red distinta
+que va bien y asigna ip’s automáticamente y resuelve nombres.</p>
+<p>Luego vienen dos declaraciones de equipo, en mi caso, a mis dos equipos de casa, les asigno ip’s fijas, porque no me van a hacer falta más (de hecho no haría falta ni el dhcp para ellas, pero bueno, puestos a hacerlo a lo grande… pues ya lo tengo listo para un día meter dos hubs y poder conectar tropocientos ordenadores en cada tarjeta de red ;))</p>
+<p>Para asignar <span class="caps">IP</span> fija, se hace en base a la dirección <span class="caps">MAC</span> de la tarjeta de red, que son esos códigos en hexadecimal.</p>
+<p>En el último caso defino otro ordenador pero sin ip fija (en su momento irá por la wireless y por eso no tiene nada puesto)</p>
+<p>Respecto al servidor de nombres… no hice nada, sólo instalé el paquete y ya iba, así que no toqué nada :)</p>
+<p>Hasta este punto los equipos cliente que se configuren para que pidan la configuración automáticamente, recibirán una configuración válida desde nuestro nodo, ahora sólo falta hacer alguna cosilla más ;)</p>
+<h3 id="masquerading">Masquerading<a class="headerlink" href="#masquerading" title="Permanent link">¶</a></h3>
+<p>Tenemos un servidor <span class="caps">DHCP</span>, las tarjetas configuradas y un servidor de nombres… ahora sólo falta que enrute!!! de esa forma tendremos acceso a Internet desde cualquiera de nuestros ordenadores…</p>
+<p>Para ello, si leemos el <span class="caps">IP</span>-<span class="caps">MASQUERADING</span>-<span class="caps">HOWTO</span>, sacaremos este interesante script:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!bash</span>
+<span class="c1">#!/bin/sh</span>
+<span class="c1">#</span>
+<span class="c1"># rc.firewall-2.4</span>
+<span class="nv">FWVER</span><span class="o">=</span><span class="m">0</span>.63
+<span class="c1">#</span>
+<span class="c1"># Initial SIMPLE IP Masquerade test for 2.4.x kernels using IPTABLES.</span>
+<span class="c1">#</span>
+<span class="c1"># Once IP Masquerading has been tested, with this simple ruleset, it is highly recommended to use a stronger IPTABLES ruleset either given later in this HOWTO or from another reputable resource.</span>
+<span class="c1"># Log:</span>
+<span class="c1"># 0.63 - Added support for the IRC IPTABLES module</span>
+<span class="c1"># 0.62 - Fixed a typo on the MASQ enable line that used eth0 instead of $EXTIF</span>
+<span class="c1"># 0.61 - Changed the firewall to use variables for the internal and external interfaces.</span>
+<span class="c1"># 0.60 - 0.50 had a mistake where the ruleset had a rule to DROP all forwarded packets but it didn’t have a rule to ACCEPT any packets to be forwarded either - Load the ip_nat_ftp and ip_conntrack_ftp modules by default</span>
+<span class="c1"># 0.50 - Initial draft</span>
+<span class="c1">#</span>
+<span class="nb">echo</span> -e <span class="s2">"\n\nLoading simple rc.firewall version </span><span class="nv">$FWVER</span><span class="s2">..\n"</span>
+<span class="c1"># The location of the ’iptables’ program IPTABLES=/sbin/iptables</span>
+<span class="nv">EXTIF</span><span class="o">=</span><span class="s2">"eth0"</span>
+<span class="nv">EXTIF2</span><span class="o">=</span><span class="s2">"eth3"</span>
+<span class="nv">EXTIF3</span><span class="o">=</span><span class="s2">"sl+"</span>
+<span class="nv">INTIF</span><span class="o">=</span><span class="s2">"eth1"</span>
+<span class="nv">INTIF2</span><span class="o">=</span><span class="s2">"eth2"</span>
+<span class="nv">INTIF3</span><span class="o">=</span><span class="s2">"ppp+"</span>
+<span class="nv">LAN1</span><span class="o">=</span><span class="s2">"1.1.1.0/16"</span>
+<span class="nb">echo</span> <span class="s2">" External Interface : </span><span class="nv">$EXTIF</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" External Interface 2 : </span><span class="nv">$EXTIF2</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" External Interface 3 : </span><span class="nv">$EXTIF3</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" -----------------------------"</span>
+<span class="nb">echo</span> <span class="s2">" Internal Interface : </span><span class="nv">$INTIF</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" Internal Interface 2 : </span><span class="nv">$INTIF2</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" Internal Interface 3 : </span><span class="nv">$INTIF3</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" -----------------------------"</span>
+<span class="nb">echo</span> <span class="s2">" Internal Network : </span><span class="nv">$LAN1</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">" enabling forwarding.."</span>
+<span class="nb">echo</span> <span class="s2">"1"</span> &gt; /proc/sys/net/ipv4/ip_forward
+<span class="nb">echo</span> <span class="s2">" enabling DynamicAddr.."</span>
+<span class="nb">echo</span> <span class="s2">"1"</span> &gt; /proc/sys/net/ipv4/ip_dynaddr
+<span class="c1"># Borrar reglas anteriores tanto en normal como en nat y por defecto no enrutar</span>
+<span class="nv">$IPTABLES</span> -t nat -F
+<span class="nv">$IPTABLES</span> -F
+<span class="nv">$IPTABLES</span> -P FORWARD DROP
+<span class="c1">#Conectar la red local para transferencia de datos</span>
+<span class="nv">$IPTABLES</span> -A FORWARD -s <span class="nv">$LAN1</span> -d <span class="nv">$LAN1</span> -j ACCEPT
+<span class="c1">#Pasar datos desde las locales a inet</span>
+<span class="nv">$IPTABLES</span> -A FORWARD -s <span class="nv">$LAN1</span> -o <span class="nv">$EXTIF</span> -j ACCEPT
+<span class="c1"># Aceptar paquetes de entrada a la local</span>
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF</span> -d <span class="nv">$LAN1</span> -m state —state ESTABLISHED,RELATED -j ACCEPT
+<span class="c1"># Enmascarar a internet</span>
+<span class="nv">$IPTABLES</span> -t nat -A POSTROUTING -o <span class="nv">$EXTIF</span> -j MASQUERADE
+<span class="c1">#Pasar datos desde las locales a la wireless</span>
+<span class="nv">$IPTABLES</span> -A FORWARD -s <span class="nv">$LAN1</span> -o <span class="nv">$EXTIF2</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF2</span> -d <span class="nv">$LAN1</span> -m state —state ESTABLISHED,RELATED -j ACCEPT
+<span class="c1"># Enmascarar a la wireless</span>
+<span class="nv">$IPTABLES</span> -t nat -A POSTROUTING -s <span class="nv">$LAN1</span> -o <span class="nv">$EXTIF2</span> -j MASQUERADE
+<span class="c1">#Entrada de la red local a los túneles wireless (sl+)</span>
+<span class="nv">$IPTABLES</span> -A FORWARD -s <span class="nv">$LAN1</span> -o <span class="nv">$EXTIF3</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF3</span> -d <span class="nv">$LAN1</span> -m state —state ESTABLISHED,RELATED -j ACCEPT
+<span class="c1"># Enmascarar a los túneles</span>
+<span class="nv">$IPTABLES</span> -t nat -A POSTROUTING -s <span class="nv">$LAN1</span> -o <span class="nv">$EXTIF3</span> -j MASQUERADE
+<span class="c1">#Paquetes de entrada entre las wireless y los túneles Wireless (sl+)</span>
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF2</span> -o <span class="nv">$EXTIF3</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF3</span> -o <span class="nv">$EXTIF2</span> -j ACCEPT
+<span class="c1"># Paquetes de entrada de la VPN a internet y a la wireless</span>
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$INTIF3</span> -o <span class="nv">$EXTIF</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF</span> -o <span class="nv">$INTIF3</span> -m state —state ESTABLISHED,RELATED -j ACCEPT
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$INTIF3</span> -o <span class="nv">$EXTIF2</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF2</span> -o <span class="nv">$INTIF3</span> -m state —state ESTABLISHED,RELATED -j ACCEPT
+<span class="c1"># Programas</span>
+<span class="c1">#------------------------------------------</span>
+<span class="c1"># Proxy Transparente</span>
+<span class="nb">echo</span> <span class="s2">"Transparent Proxy for SQUID"</span>
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -p TCP —dport <span class="m">80</span> -j REDIRECT —to-port <span class="m">3128</span> -d ! <span class="nv">$LAN1</span>
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -p TCP —dport <span class="m">25</span> -j REDIRECT —to-port <span class="m">25</span> -d ! <span class="nv">$LAN1</span>
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -p TCP —dport <span class="m">110</span> -j REDIRECT —to-port <span class="m">110</span> -d ! <span class="nv">$LAN1</span>
+<span class="c1"># Gnome Meeting</span>
+<span class="nb">echo</span> <span class="s2">"Gnome Meeting"</span>
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -i <span class="nv">$EXTIF</span> -p TCP —dport <span class="m">0000</span>:30010 -j DNAT —to-dest <span class="m">1</span>.1.1.2
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -i <span class="nv">$EXTIF</span> -p TCP —dport <span class="m">1720</span> -j DNAT —to-dest <span class="m">1</span>.1.1.2
+<span class="nv">$IPTABLES</span> -A FORWARD -p tcp -i <span class="nv">$EXTIF</span> —dport <span class="m">30000</span>:30010 -d <span class="m">1</span>.1.1.2 -j ACCEPT
+<span class="nv">$IPTABLES</span> -A FORWARD -p udp -i <span class="nv">$EXTIF</span> —dport <span class="m">5000</span>:5003 -d <span class="m">1</span>.1.1.2 -j ACCEPT
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -i <span class="nv">$EXTIF</span> -p UDP —dport <span class="m">5000</span>:5003 -j DNAT —to-dest <span class="m">1</span>.1.1.2
+<span class="nv">$IPTABLES</span> -A FORWARD -p tcp -i <span class="nv">$EXTIF</span> —dport <span class="m">1720</span> -d <span class="m">1</span>.1.1.2 -j ACCEPT
+<span class="c1">#Aim, MSN</span>
+<span class="nb">echo</span> <span class="s2">"AIM, MSN"</span>
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -i <span class="nv">$EXTIF</span> -p tcp —dport <span class="m">5190</span> -j REDIRECT —to-ports <span class="m">5190</span>
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -i <span class="nv">$EXTIF</span> -p tcp —dport <span class="m">1863</span> -j REDIRECT —to-ports <span class="m">1863</span>
+<span class="nv">$IPTABLES</span> -A INPUT -i <span class="nv">$EXTIF</span> -p tcp —dport <span class="m">5190</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A INPUT -i <span class="nv">$EXTIF</span> -p tcp —dport <span class="m">1863</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A INPUT -i <span class="nv">$EXTIF</span> -p tcp —dport <span class="m">4443</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A INPUT -i <span class="nv">$EXTIF</span> -p tcp —dport <span class="m">5566</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A INPUT -i <span class="nv">$EXTIF</span> -p tcp —dport <span class="m">1864</span> -j ACCEPT
+<span class="c1">#VNC Deneb :0</span>
+<span class="nb">echo</span> <span class="s2">"VNC"</span>
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF</span> -p TCP —dport <span class="m">5800</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF</span> -p TCP —dport <span class="m">5900</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -i <span class="nv">$EXTIF</span> -p TCP —dport <span class="m">5800</span> -j DNAT —to <span class="m">1</span>.1.1.2:5800
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -i <span class="nv">$EXTIF</span> -p TCP —dport <span class="m">5900</span> -j DNAT —to <span class="m">1</span>.1.1.2:5900
+<span class="nv">$IPTABLES</span> -A FORWARD -i <span class="nv">$EXTIF</span> -p TCP —dport <span class="m">5500</span> -j ACCEPT
+<span class="nv">$IPTABLES</span> -t nat -A PREROUTING -i <span class="nv">$EXTIF</span> -p TCP —dport <span class="m">5500</span> -j DNAT —to <span class="m">1</span>.1.1.2:5500
+<span class="c1">#Firewall</span>
+<span class="nb">echo</span> <span class="s2">"Firewall"</span>
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">3306</span> -i <span class="nv">$EXTIF</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">3306</span> -i <span class="nv">$EXTIF2</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">3128</span> -i <span class="nv">$EXTIF</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">53</span> -i <span class="nv">$EXTIF</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">25</span> -i <span class="nv">$EXTIF</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">25</span> -i <span class="nv">$EXTIF2</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">137</span> -i <span class="nv">$EXTIF</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">137</span> -i <span class="nv">$EXTIF2</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">139</span> -i <span class="nv">$EXTIF</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">139</span> -i <span class="nv">$EXTIF2</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">179</span> -i <span class="nv">$EXTIF</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">2600</span>:2605 -i <span class="nv">$EXTIF</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">179</span> -i <span class="nv">$EXTIF2</span> -j DROP
+<span class="nv">$IPTABLES</span> -A INPUT -p TCP —dport <span class="m">2600</span>:2605 -i <span class="nv">$EXTIF2</span> -j DROP
+</code></pre></div>
+</td></tr></table>
+<p>Si nos olvidamos hasta donde pone algo con <span class="caps">IPTABLES</span>, lo que tenemos es un script que habilita la funcionalidad de enrutado del kernel de linux, a partir de ese momento ya tendremos acceso “teórico” a internet…</p>
+<p>El problema es que como sólo tendremos una dirección <span class="caps">IP</span> válida, lo que tendremos que hacer es hacer <span class="caps">NAT</span> (Network Address Translation), existen dos tipos de <span class="caps">NAT</span>, el de destino y el de origen, en nuestro caso es el de origen, es decir, al final, los datos que salgan tendrán que aparentar ser todos desde la misma <span class="caps">IP</span>…</p>
+<p>Para eso utilizamos esas sentencias de iptables que es el firewall, etc incorporado en Linux:</p>
+<p>Lo de hacerlo con variables (las definidas al principio), es por facilidad a la hora de modificarlo, como veréis las redes están definidas como <span class="caps">IP</span>/bits para hacer las conversiones acudid a: <a href="http://www.linux-es.com/ipcalc.php">http://www.linux-es.com/ipcalc.php</a></p>
+<p>Las reglas definidas en este fichero, permiten que todo lo que salga por la eth0 (Internet) sea con <span class="caps">NAT</span> y que a su vez, lo que salga por eth3 (la wireless) sea también con <span class="caps">NAT</span> (para tener acceso a la wireless desde la red local), luego permite el tráfico de paquetes entre las ip’s de las redes locales.</p>
+<p>El script original fue modificado para cumplir con los requisitos de mi red, así que cada uno que lo adapte a la suya para que le sea útil.</p>
+<p>Vale, un punto importante, es que al tener un trasto conectado todo el día a Internet, lo mejor es tenerlo bien asegurado, por eso, contar con una buena configuración de firewall así como el portscanner vendrá bien. Port scanner analiza y registra todos los intentos de escaneo de puertos contra nuestro equipo y posteriormente impide todo acceso desde las ip’s originantes, tanto creando rutas nulas como vuelta a esas ip’s como añadiéndola a los filtros de los <span class="caps">TCP</span>-wrappers En
+/etc/portsentry.ignore.static, pondremos:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>127.0.0.1/32 0.0.0.0 1.1.0.0/16
+</code></pre></div>
+</td></tr></table>
+<p>Para que no bloquee los locales (como indica en la ayuda) y añadimos los de nuestra red local… equipos con <span class="caps">IP</span> 1.1.<em>.</em> (esto permite bloquear a los graciositos que se conecten por la wireless…)</p>
+<p>Luego, en el /etc/porsentry/portsentry.conf cambiaremos:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nv">BLOCK_UDP</span><span class="o">=</span><span class="s2">"1"</span>
+<span class="nv">BLOCK_TCP</span><span class="o">=</span><span class="s2">"1"</span>
+</code></pre></div>
+</td></tr></table>
+<p>y entre las otras opciones escogeremos las aptas para nuestro sistema, el tipo de bloqueo a realizar, etc</p>
+<p>Ahora si alguien intenta hacer el tonto haciendo escaneos de puertos, pues automáticamente le será impedido posterior acceso desde esa Ip…</p>
+<p>Para arrancar el script del firewall crearemos un script con el formato estándar tal como sigue:</p>
+<p>/etc/init.d/fire</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!bash</span>
+<span class="c1">#!/bin/sh</span>
+<span class="nv">IPTABLES</span><span class="o">=</span>/sbin/iptables
+<span class="c1"># See how we were called.</span>
+<span class="k">case</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> <span class="k">in</span>
+    start<span class="o">)</span>
+        /etc/init.d/rc.firewall
+       <span class="p">;;</span>
+    stop<span class="o">)</span>
+        <span class="nb">echo</span> -e <span class="s2">"\nFlushing firewall and setting default policies to DROP\n"</span>
+        <span class="nv">$IPTABLES</span> -P INPUT DROP
+        <span class="nv">$IPTABLES</span> -F INPUT
+        <span class="nv">$IPTABLES</span> -P OUTPUT DROP
+        <span class="nv">$IPTABLES</span> -F OUTPUT
+        <span class="nv">$IPTABLES</span> -P FORWARD DROP
+        <span class="nv">$IPTABLES</span> -F FORWARD
+        <span class="nv">$IPTABLES</span> -F -t nat
+        <span class="c1"># Delete all User-specified chains</span>
+        <span class="nv">$IPTABLES</span> -X
+        <span class="c1"># Reset all IPTABLES counters</span>
+        <span class="nv">$IPTABLES</span> -Z
+        <span class="p">;;</span>
+    restart<span class="o">)</span>
+        <span class="nv">$0</span> stop
+        <span class="nv">$0</span> start
+        <span class="p">;;</span>
+    status<span class="o">)</span>
+        <span class="nv">$IPTABLES</span> -L
+        <span class="p">;;</span>
+    mlist<span class="o">)</span>
+        cat /proc/net/ip_conntrack
+        <span class="p">;;</span>
+    *<span class="o">)</span>
+        <span class="nb">echo</span> <span class="s2">"Usage: fire start|stop|status|mlist"</span>
+        <span class="nb">exit</span> <span class="m">1</span>
+        <span class="p">;;</span>
+<span class="k">esac</span>
+</code></pre></div>
+</td></tr></table>
+<p>Si ahora creamos los enlaces simbólicos apropiados a este script en <code>/etc/rc?.d</code> pondremos especificar cuando queremos que se arranque el enrutamiento…</p>
+<p>En mi caso:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>rc0.d/K20fire
+rc1.d/K20fire
+rc2.d/S20fire
+rc3.d/S20fire
+rc4.d/S20fire
+rc5.d/S20fire
+rc6.d/K20fire
+</code></pre></div>
+</td></tr></table>
+<p>En esas carpetas dentro de /etc</p>
+<p>Un problema que tendremos al apagar el ordenador, es que como no tendremos monitor, no podremos saber cuando está listo para apagar y no vamos a conectar un monitor cada vez para hacerlo…</p>
+<p>Túneles</p>
+<p>Ahora que parece que está más o menos esto en marcha, habría que hacer túneles entre los distintos nodos de otras personas, para eso os recomiendo el paquete <span class="caps">VPND</span> junto a los scripts de <span class="caps">VPNS</span>: <span class="caps">VPN</span>’s <a href="http://freshmeat.net/projects/vpns/">http://freshmeat.net/projects/vpns/</a></p>
+<p>Hay un bonito <span class="caps">README</span> en el <span class="caps">VPNS</span>.</p>
+<h3 id="consejos-finales">Consejos Finales<a class="headerlink" href="#consejos-finales" title="Permanent link">¶</a></h3>
+<p>Vale, nuestro servidor tiene las tarjetas configuradas, enruta, hace de servidor <span class="caps">DHCP</span>, <span class="caps">DNS</span>, bloquea los escaneos de puertos… ahora sólo queda algún detalle interesante:</p>
+<p>Lo primero: activar el soporte para el sistema de ficheros ext3, su compatibilidad con el ext2 es total, el cambio se hace simplemente poniendo:</p>
+<p><code>tune2fs -j /dev/hda1</code> (para la partición 1 del hd) y luego editando el /etc/fstab y donde ponga /dev/hda1 cambiar ext2 por ext3…</p>
+<p>De ese modo, el sistema arrancará igual, pero con una ventaja… en caso de apagón, bloqueo, reseteo, etc, el sistema de ficheros ext3 crea un log de los cambios realizados y en esas situaciones, al siguiente rearranque, los puede corregir en la mayoría de las situaciones el solito, provocando que si se va la luz, en cuanto vuelva, automáticamente intente arrancar el solito (y en la mayoría de los casos lo conseguirá ;))</p>
+<p>Otras cosas útiles…. configurar el <span class="caps">SMB</span> para poder acceder desde la red local con Windows… así el servidor que hace de nodo, puede quedarse bajando cosas por la noche (si es nodo tiene que estar todo el día en marcha) y luego simplemente te las transfieres a tu equipo mediante el entorno de red… (Existen hotwtos que lo explican muy bien así que…. a usar el Google que para eso está…)</p>
+<p>Sería también recomendable que instalases el <span class="caps">DNS2GO</span> que permite asignar un nombre de dominio a una <span class="caps">IP</span> dinámica, de ese modo podrías aprovechar para poner una página web en tu nodo con el apache e instalar el webalizer para analizar sus visitas, etc Como <span class="caps">DNS2GO</span> es ahora de pago, yo utilizo <span class="caps">NO</span>-<span class="caps">IP</span>. En Debian tenéis un paquete llamado no-ip que incorpora un cliente listo para configurar y así actualizar automáticamente vuestra ip dinámica en el servidor <span class="caps">DNS</span>.</p>
+<p>Para configurar el zebra, lo único que tengo hecho por el momento es editar el /etc/zebra/daemons y activar zebra, ospfd y el bgpd… cuando tenga tarjetas lo probaré y diré… (de esto se está encargando Hilario de ValenciaWireless</p>
+<p>Por el momento es todo… con esto tienes un nodo… puedes acceder por <span class="caps">SSH</span> a el para configurarlo remotamente (el putty es un buen cliente para Windows, WinSCP para transferencias seguras de archivos ;)), configurarlo por web (Webmin) y ya con eso para empezar está bien…</p>
+<p>Respecto a la <span class="caps">VPN</span> (pptpd)… Pues antes no… pero ahora ya va a la perfección ;)</p>
+<p>Si no te conectas mediante <span class="caps">VPN</span> mediante la tarjeta de la wireless (eth3 en mi caso) no hay Internet (excepto por página web al puerto 80), y si te validas sí… así que si tienes poco ancho de banda, puedes controlar si accedes o no desde fuera de tu red casera… es decir.. gastas la red inalámbrica para acceder al de tu casita y una vez ahí accedes a través de ese a Internet ;)</p>
+<p>Sería interesante activar también un Proxy tipo Squid para acelerar la navegación por Internet… tanto por la red local, como para los nodos (puedes restringir por ip’s, etc ) (yo lo tengo puesto además con el adzapper, que me permite eliminar muchísimos anuncios de las webs por las que navego)</p>
+<p>¡¡Un saludo y suerte!!</p>
+<h3 id="ficheros-de-configuracion">Ficheros de configuración<a class="headerlink" href="#ficheros-de-configuracion" title="Permanent link">¶</a></h3>
+<h4 id="squid">Squid<a class="headerlink" href="#squid" title="Permanent link">¶</a></h4>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">acl</span> <span class="n">local</span> <span class="n">src</span> <span class="mf">1.1</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">16</span>
+<span class="n">http_access</span> <span class="n">allow</span> <span class="n">local</span>
+<span class="n">maximum_object_size</span> <span class="mi">32768</span> <span class="n">KB</span>
+<span class="n">cache_dir</span> <span class="n">ufs</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">spool</span><span class="o">/</span><span class="n">squid</span> <span class="mi">512</span> <span class="mi">16</span> <span class="mi">256</span>
+<span class="n">httpd_accel_uses_host_header</span> <span class="n">on</span>
+<span class="n">redirect_program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">squid</span><span class="o">/</span><span class="n">squid_redirect</span>
+<span class="n">redirect_children</span> <span class="mi">30</span> <span class="c1"># PPTPD (para las VPN entrantes)</span>
+</code></pre></div>
+</td></tr></table>
+<h4 id="etcppppptpd-options">/etc/ppp/pptpd-options<a class="headerlink" href="#etcppppptpd-options" title="Permanent link">¶</a></h4>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>debug
+name in chap-secrets
+name Merak
+auth
++chap
+ms-dns 192.168.0.1
+netmask 255.255.0.0
+lock
+</code></pre></div>
+</td></tr></table>
+<h4 id="etcpppchap-secrets">/etc/ppp/chap-secrets<a class="headerlink" href="#etcpppchap-secrets" title="Permanent link">¶</a></h4>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code># <span class="nv">Secrets</span> <span class="k">for</span> <span class="nv">authentication</span> <span class="nv">using</span> <span class="nv">CHAP</span>
+# <span class="nv">client</span> <span class="nv">server</span> <span class="nv">secret</span> <span class="nv">IP</span> <span class="nv">addresses</span>
+<span class="nv">prueba</span> <span class="o">*</span> <span class="nv">probando</span> <span class="o">*</span>
+</code></pre></div>
+</td></tr></table>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=Montar%20un%20router%20con%20la%20idea%20de%C2%A0wireless&url=https%3A//iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/&via=iranzop&hashtags=linux,wireless,router,firewall,foss" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=Montar%20un%20router%20con%20la%20idea%20de%C2%A0wireless&amp;body=https%3A//iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/"
+                   href="https://iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/';
+    var disqus_url = 'https://iranzo.io/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless-es/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/" title="AwesomeSlides for converting LibreOffice ODP into revealjs">AwesomeSlides for converting LibreOffice ODP into revealjs</a></li>
+<li><a href="https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/" title="Use custom domain name with Blog-O-Matic">Use custom domain name with Blog-O-Matic</a></li>
+<li><a href="https://iranzo.io/blog/2019/06/11/katacoda-scenario-creation/" title="Katacoda scenario creation">Katacoda scenario creation</a></li>
+<li><a href="https://iranzo.io/blog/2020/02/13/git-commit-reordering/" title="Git commit reordering">Git commit reordering</a></li>
+<li><a href="https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/" title="Dell racadm remote ISO load">Dell racadm remote ISO load</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2003/06/03/bookcrossing-libera-tus-libros-es/" title="Previous: Bookcrossing - Libera tus libros">Bookcrossing - Libera tus libros</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2004/02/06/configurar-exim3-con-mailscanner-y-clamav-es/" title="Next: Configurar Exim3 con MailScanner y ClamAV">Configurar Exim3 con MailScanner y ClamAV</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~28 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2003-06-18T21:39:00+00:00">Wed 18 June 2003</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#firewall-ref">firewall
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#foss-ref">foss
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#linux-ref">linux
+                    <span class="superscript">37</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#router-ref">router
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#wireless-ref">wireless
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

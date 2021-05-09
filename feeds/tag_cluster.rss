@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - cluster</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Sat, 13 Dec 2008 17:59:41 +0000</lastBuildDate><item><title>iSCSI y Clustering en RHEL/CentOS</title><link>https://iranzo.io/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/</link><description>
+&lt;h2 id="introduccion"&gt;Introducción&lt;a class="headerlink" href="#introduccion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Durante la última semana estuve jugando de nuevo con iSCSI en el curso de &lt;a href="http://www.redhat.es/training/course/RH436"&gt;&lt;span class="caps"&gt;RH436&lt;/span&gt; Enterprise Clustering and Storage Management&lt;/a&gt;. Hace tiempo había seguido dos artículos &lt;a href="http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/"&gt;Instalando un target iSCSI&lt;/a&gt; y su continuación &lt;a href="http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/"&gt;Montando un iniciador iSCSI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel ‘barato’, podemos utilizar el espacio de un sevidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.&lt;/p&gt;
+&lt;p&gt;Con la entrada en juego de las ofertas de virtualización integradas con el &lt;span class="caps"&gt;SO&lt;/span&gt;, como por ejemplo Xen, podemos tener un servidor ‘grande’ y potente que albergue distintas máquinas virtuales que sirvan las páginas de dicho volumen en red, actualizarlo centralmente y tener muchos servidores actualizados….&lt;/p&gt;
+&lt;p&gt;Bueno, a medias :-)&lt;/p&gt;
+&lt;p&gt;Siempre es complicado compartir sistemas de ficheros, existen problemas de bloqueos de ficheros, accesos recurrentes, etc, en el caso de iSCSI no sólo es el &lt;span class="caps"&gt;FS&lt;/span&gt; sino la unidad, desde cualquier equipo podemos particionarla, etc, es por ello que se necesitan algunas utilidades preparadas para dicho funcionamiento en red, así como por supuesto, un sistema de ficheros que soporte dicho uso simultáneo.&lt;/p&gt;
+&lt;p&gt;Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster &lt;a href="https://iranzo.io/blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/"&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt;&lt;/a&gt;) como de &lt;span class="caps"&gt;GFS&lt;/span&gt; (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.&lt;/p&gt;
+&lt;p&gt;Piensa por un momento, la posibilidad de tener ese host tan potente o una &lt;span class="caps"&gt;SAN&lt;/span&gt; con copias de seguridad bien controladas, etc&lt;/p&gt;
+&lt;p&gt;Añádele la posibilidad de tener máquinas virtuales que monten por la red una unidad iSCSI.&lt;/p&gt;
+&lt;p&gt;Añádele que esa unidad iSCSI puede ser de Lectura escritura, y que puedes utilizar enlaces simbólicos con variables que según el host que acceda guarde los logs en una carpeta.&lt;/p&gt;
+&lt;p&gt;Imagina lanzar tantas máquinas virtuales como sea necesario para atender la demanda, poder distribuirlas en la red.&lt;/p&gt;
+&lt;h2 id="manos-a-la-obra"&gt;Manos a la obra&lt;a class="headerlink" href="#manos-a-la-obra" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="target-iscsi"&gt;Target iSCSI&lt;a class="headerlink" href="#target-iscsi" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Si no tenemos un target iSCSI, podemos definirlo en nuestro anfitrión, utilizando la versión Tech Preview de iSCSI Target llamada: &lt;code&gt;scsi-target-utils&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Esta utilidad contiene un comando &lt;code&gt;tgtadm&lt;/code&gt; que podemos utilizar para definir las unidades.&lt;/p&gt;
+&lt;p&gt;Deberemos activar el demonio de tgtd para que esté disponible en cada arranque con los comandos:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+chkconfig tgtd on
+service tgtd start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Actualmente y como tech preview, debemos repetir cada vez los comandos que necesitamos para definir la unidad iSCSI, por ejemplo:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+tgtadm --lld iscsi --mode target --op new --tid&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --targetname iqn.2008-12.tld.dominio.maquina:TARGET tgtadm --lld iscsi --mode logicalunit --op new --tid&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --lun&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; -b /dev/vg0/TARGET tgtadm --mode target --op &lt;span class="nb"&gt;bind&lt;/span&gt; --tid&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --initiator-address&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;14&lt;/span&gt;.14.14.14
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Con estos comandos definimos un nuevo target con &lt;span class="caps"&gt;ID&lt;/span&gt; 1, de nombre &lt;span class="caps"&gt;IQN&lt;/span&gt; &lt;code&gt;iqn.2008-12.tld.dominio.maquina:TARGET&lt;/code&gt; y le añadimos una unidad lógica (&lt;span class="caps"&gt;LUN&lt;/span&gt;) que se basa en el contenido del volumen &lt;span class="caps"&gt;LVM&lt;/span&gt; /dev/vg0/&lt;span class="caps"&gt;TARGET&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Además, le permitimos el acceso a dicho target desde la ip &lt;code&gt;14.14.14.14&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Si todo esto está bien, deberemos, hasta que salga de la Tech Preview, añadir estos comandos al fichero &lt;code&gt;/etc/rc.local&lt;/code&gt; para que se ejecuten en cada arranque&lt;/p&gt;
+&lt;h3 id="resto-de-equipos"&gt;Resto de equipos&lt;a class="headerlink" href="#resto-de-equipos" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;El primer paso, es instalar en todas las máquinas los paquetes de &lt;code&gt;lvm2-cluster&lt;/code&gt;, así como &lt;code&gt;ricci&lt;/code&gt;. En todas ellas deberemos ejecutar &lt;code&gt;lvm —enable-cluster&lt;/code&gt; para modificar los parámetros de locking para utilizarlo en red.&lt;/p&gt;
+&lt;p&gt;Para arrancar ricci tendremos que hacer algo parecido a lo que hicimos con tgtd&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+chkconfig ricci on
+service ricci start&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Por otro lado necesitaremos tener &lt;code&gt;kmod-gfs&lt;/code&gt;, &lt;code&gt;gfs-util&lt;/code&gt; y &lt;code&gt;iscsi-initiator-utils&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Las unidades iSCSI se reconocerán a partir de la primera detección de forma automática, para ello deberemos ejecutar los siguientes comandos:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+iscsiadm -m discovery -t sendtargets -p IPTARGETISCSI iscsiadm -m node -T iqn.2008-12.tld.dominio.maquina:TARGET -l
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Que descubrirá los targets disponibles para nuestra &lt;span class="caps"&gt;IP&lt;/span&gt; y luego hará ‘login’ en la máquina. A partir de este momento tendremos nuevas unidades disponibles que se presentarán como &lt;span class="caps"&gt;SCSI&lt;/span&gt; a nuestro pc, podremos
+particionarlas, etc.&lt;/p&gt;
+&lt;h3 id="el-cluster"&gt;El clúster&lt;a class="headerlink" href="#el-cluster" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Si queremos hacer las cosas de la forma ‘sencilla’, deberemos instalar &lt;code&gt;luci&lt;/code&gt; en una de las máquinas, ya sea en un nodo de control, o en el anfitrión Xen.&lt;/p&gt;
+&lt;p&gt;Luci es un interfaz web que permite la gestión y creación de clusters y para ello utiliza el demonio ‘ricci’ que hemos instalado en cada máquina.&lt;/p&gt;
+&lt;p&gt;Si tenemos las máquinas configuradas con los repositorios necesarios, &lt;code&gt;ricci&lt;/code&gt; se hará cargo de la instalación de los paquetes necesarios para configurar todo.&lt;/p&gt;
+&lt;p&gt;Desde el interfaz web de luci podemos ir añadiendo cada uno de los nodos a utilizar, indicando sus claves de ‘root’ y se encargará de contactarlos y a través de ricci, instalar el software necesario y reiniciarlos para integrarlos en el cluster.&lt;/p&gt;
+&lt;p&gt;Los nodos, una vez en el cluster pueden utilizarse para albergar servicios, que estén de forma exclusiva (por ejemplo una bbdd porque necesite prioridad absoluta), o bien en failover para que no se deje de dar el servicio.&lt;/p&gt;
+&lt;p&gt;Por defecto tenemos una serie de servicios preconfigurados que podemos dar, como http, nfs, etc que podremos configurar rápidamente desde luci, que se encargará de desplegar dicha configuración a todo el cluster.&lt;/p&gt;
+&lt;p&gt;La forma de hacerlo es sencilla, se definen recursos (&lt;span class="caps"&gt;IP&lt;/span&gt;, &lt;span class="caps"&gt;NFS&lt;/span&gt; Exports, &lt;span class="caps"&gt;NFS&lt;/span&gt; Clients, http, mount points) que luego se agrupan por cadenas de dependencia en servicios y se les asignan grupos de failover, para que en caso de fallo, podamos definir prioridades.&lt;/p&gt;
+&lt;p&gt;Imagina el caso de una empresa con dos servidores, uno con la bbdd y otro con la web. En caso de fallo de uno de ellos, podemos hacer ‘saltar’ los servicios a la máquina que está operativa hasta que arreglemos la dañada y luego, cada servicio, volvería a su máquina ‘preferida’ o en el orden necesario.&lt;/p&gt;
+&lt;p&gt;En el caso de máquinas virtuales, en caso de que dejen de responder, &lt;span class="caps"&gt;CMAN&lt;/span&gt; realizará un reinicio (siempre que hayamos distribuido las claves de xen que podemos crear en la interfaz tanto a los guests como al anfitrión que estará escuchando con el demonio de fencing para &lt;span class="caps"&gt;XVM&lt;/span&gt; activado).&lt;/p&gt;
+&lt;p&gt;En el caso de tener enchufes ‘con red’ o bien máquinas con tarjetas de gestión remota (iLO, RemoteView Service Board, etc), definiremos los parámetros de acceso.&lt;/p&gt;
+&lt;p&gt;En caso de detectar un problema con cualquier equipo, el resto de ellos hará votaciones y si la mayoría considera que no responde, lo reiniciarán, por un lado para liberar cualquier tipo de acceso a disco, etc que hubiera estado haciendo a los recursos del cluster, como para intentar recuperarlo.&lt;/p&gt;
+&lt;h3 id="gfs-global-file-system"&gt;&lt;span class="caps"&gt;GFS&lt;/span&gt;: Global File System&lt;a class="headerlink" href="#gfs-global-file-system" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;¿Qué pinta &lt;span class="caps"&gt;GFS&lt;/span&gt; en todo esto?&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;GFS1&lt;/span&gt; nos permite crear un sistema de ficheros que tendrá un journal para cada nodo del cluster y que si lo creamos sobre el volumen iSCSI podemos hacer disponible a todos los equipos, si un equipo se bloquea, otro toma el control del journal no acabado, lo verifica y aplica sobre el &lt;span class="caps"&gt;FS&lt;/span&gt; hasta que la máquina retorna para dejarlo en un estado limpio.&lt;/p&gt;
+&lt;p&gt;Por otro lado, &lt;span class="caps"&gt;CLVM&lt;/span&gt; y &lt;span class="caps"&gt;GFS&lt;/span&gt; permiten aumentar dinámicamente el tamaño de los volúmenes, de forma que no tenemos que dejar inoperativos nuestros sistemas para hacer mantenimientos par añadir más capacidad, etc.&lt;/p&gt;
+&lt;p&gt;Permite también crear enlaces simbólicos de forma que una unidad con &lt;span class="caps"&gt;FS&lt;/span&gt; &lt;span class="caps"&gt;GFS1&lt;/span&gt; pueda quedar:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;hosts/
+hosts/host1/logs
+hosts/host2/logs
+hosts/host3/logs
+hosts/host4/logs
+hosts/host5/logs
+logs -&amp;gt; hosts/@hostname/logs/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Esto permite que diversos servidores web tengan configurado como ruta para los logs la carpeta ‘logs’ que se expandirá al hostname de la máquina, haciendo que queden todos recogidos en un lugar central para posterior análisis de estadísticas, etc&lt;/p&gt;
+&lt;p&gt;Este tipo de enlaces se denominan &lt;span class="caps"&gt;CDPN&lt;/span&gt;: Context-dependent pathnames y nos permiten jugar con este tipo de cosas y aprovechar las ventajas de un almacenamiento único.&lt;/p&gt;
+&lt;h3 id="y-si-falla-la-red"&gt;¿Y si falla la red&lt;a class="headerlink" href="#y-si-falla-la-red" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Como siempre podemos tener problemas con la red, la forma de solucionarlos consiste en tener varios interfaces de red en los equipos a través de distintos switches, etc y en las máquinas, una vez descubiertos los targets, configurar el fichero &lt;code&gt;/etc/multipathd.conf&lt;/code&gt; y habilitar el demonio.&lt;/p&gt;
+&lt;p&gt;Nos creará las rutas necesarias y una serie de dipositivos &lt;code&gt;/dev/mpath/*&lt;/code&gt; para acceder de forma tolerante a fallos a nuestros recursos, si configuramos las tarjetas de red en modo bonding, ya tenemos el acceso más o menos asegurado ante las catástrofes más comunes y nuestros datos disponibles&lt;/p&gt;
+&lt;h3 id="conclusion"&gt;Conclusión&lt;a class="headerlink" href="#conclusion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Tenemos a nuestro alcance muchas herramientas para hacer sencilla la utilización y creación de sistemas equivalentes a lo que hace años sólo tenía una alternativa excesivamente cara.&lt;/p&gt;
+&lt;p&gt;Sinceramente vale la pena perder un rato y probar estas cosas y maravillarnos de las posibilidades que abre de cara a la gestión de los equipos, la información y su acceso y lo mejor de todo, siempre con Software Libre.&lt;/p&gt;
+&lt;p&gt;Espero que esta introducción os despierte el gusanillo para explorar las diversas funcionalidades que estas tecnologías nos ofrecen!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sat, 13 Dec 2008 17:59:41 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2008-12-13:/blog/2008/12/13/iscsi-y-clustering-en-rhelcentos/</guid><category>tech</category><category>cluster</category><category>rhel</category><category>centos</category><category>foss</category></item></channel></rss>

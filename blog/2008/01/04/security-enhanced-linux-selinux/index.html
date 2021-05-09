@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='en'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Introduction¶ SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel. SELinux, originally developed by N.S.A.(National Security Agency) allows applications to be confined by the kernel. Inside that “confined area”, much more grained than a standard chroot (system where basic …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Linux, SELinux, Foss, tech, " />
+
+<meta property="og:title" content="Security Enhanced Linux (SELinux) "/>
+<meta property="og:url" content="https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/" />
+<meta property="og:description" content="Introduction¶ SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel. SELinux, originally developed by N.S.A.(National Security Agency) allows applications to be confined by the kernel. Inside that “confined area”, much more grained than a standard chroot (system where basic …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2008-01-04T18:14:03+00:00" />
+<meta name="twitter:title" content="Security Enhanced Linux (SELinux) ">
+<meta name="twitter:description" content="Introduction¶ SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel. SELinux, originally developed by N.S.A.(National Security Agency) allows applications to be confined by the kernel. Inside that “confined area”, much more grained than a standard chroot (system where basic …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2008-01-04T18:14:03+00:00",
+        "description": "Introduction¶ SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel. SELinux, originally developed by N.S.A.(National Security Agency) allows applications to be confined by the kernel. Inside that “confined area”, much more grained than a standard chroot (system where basic …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/"
+        },
+
+        "headline": "Security Enhanced Linux (SELinux)",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>Security Enhanced Linux (SELinux)  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/">
+                Security Enhanced Linux&nbsp;(SELinux)
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#policies">Policies</a></li>
+</ul>
+</li>
+<li><a href="#the-fedorared-hatcentos-approach">The Fedora/Red Hat/CentOS approach</a></li>
+<li><a href="#learning-by-example-apache">Learning by example: Apache</a><ul>
+<li><a href="#working-with-selinux">Working with SELinux</a></li>
+<li><a href="#where-does-system-stores-them">Where does system stores them</a></li>
+<li><a href="#how-do-we-start-httpd-daemon">How do we start httpd daemon</a></li>
+<li><a href="#are-we-supposed-to-do-everything-like-this-on-our-own">Are we supposed to do everything like this on our own</a></li>
+<li><a href="#how-does-apache-loads-its-config-files">How does apache loads its config files</a></li>
+<li><a href="#how-do-we-setup-correct-selinux-rules-to-allow-something-blocked">How do we setup correct SELinux rules to allow something blocked</a></li>
+<li><a href="#what-if-we-try-to-run-httpd-listening-on-port-27">What if we try to run httpd listening on port 27</a></li>
+<li><a href="#write-a-simple-policy">Write a simple policy</a></li>
+<li><a href="#how-do-we-verify-that-a-module-has-been-loaded">How do we verify that a module has been loaded</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h3>
+<p>SELinux is an implementation of <span class="caps">MAC</span> (Mandatory Access Controls) over <span class="caps">LSM</span> (Linux Security Modules) in Linux Kernel.</p>
+<p>SELinux, originally developed by <span class="caps">N.S.A.</span>(National Security Agency) allows applications to be confined by the kernel.</p>
+<p>Inside that “confined area”, much more grained than a standard <code>chroot</code> (system where basic executables are copied to another folder in order to have a small subsystem isolated from real system. The drawback is that a small subsystem could have enough utilities to reveal private information from our internal network),in which we can allow only certain operations, for example: adding information to a file, read from a directory but not writing, even just for one file in a standard directory, etc…</p>
+<h4 id="policies">Policies<a class="headerlink" href="#policies" title="Permanent link">¶</a></h4>
+<p>Each policy has different applications, and restrictions to the running system. The most extended ones are:</p>
+<ul>
+<li>Targeted</li>
+<li>Strict</li>
+<li><code>MLS</code> (Multi Level Security <a href="http://www.cs.stthomas.edu/faculty/resmith/r/mls/index.html">http://www.cs.stthomas.edu/faculty/resmith/r/mls/index.html</a></li>
+</ul>
+<p>A policy is a set of “rules” that apply to any object of a system, users, software, files, network, etc. Those rules apply to security contexts, where a “context” for an object is composed of:</p>
+<p><code>user:role:type:level:category</code></p>
+<p>Based on this information, SELinux allows or denies access to any other object in system, and for doing so, it uses rules that allow process access permissions to objects.</p>
+<p>A strict policy would require a very careful setup of system permissions, security contexts, etc, and there are several projects in order to accomplish it.</p>
+<p>There are several sites on the Internet which provide a locked-down environment for testing (there’s one to play at <a href="http://www.coker.com.au/selinux/play.html">http://www.coker.com.au/selinux/play.html</a>). Those sites make extensive usage of strict policies as well as numerous restrictions to establish user roles, limits, etc.</p>
+<p>A system running in <span class="caps">MLS</span>/Strict would be difficult to use as due to security restrictions required by the policy, no windowing environment (there are some projects to achieve this,but using very simple windowing environments) would be available to avoid copying of information between windows (as this could avoid security levels).</p>
+<h3 id="the-fedorared-hatcentos-approach">The <a href="http://fedoraproject.org/">Fedora</a>/<a href="http://www.redhat.com/">Red Hat</a>/<a href="http://www.centos.org/">CentOS</a> approach<a class="headerlink" href="#the-fedorared-hatcentos-approach" title="Permanent link">¶</a></h3>
+<p>Those distributions decided to focus on just some services. Instead of using a system-wide restrictive policy, that would make system unusable, their choice was to “target” services that are subject to attacks, so, for example, there’s a policy for Apache that defines exactly what files can read, what can write, what are log files, what should access from disk, etc.</p>
+<p>This policy is named “targeted” and for services defined within, it restricts what they can do, and the rest of the system runs as
+<code>unconfined</code>, as if there was no SELinux enabled at all.</p>
+<p>This policy balances the security provided by SELinux for critical services, while keeping system usable. Services without rules continue working as on a system with SELinux disabled.</p>
+<h3 id="learning-by-example-apache">Learning by example: Apache<a class="headerlink" href="#learning-by-example-apache" title="Permanent link">¶</a></h3>
+<h4 id="working-with-selinux">Working with SELinux<a class="headerlink" href="#working-with-selinux" title="Permanent link">¶</a></h4>
+<p>For working with SELinux we have several tools available, most of them, are old friends:
+<code>ls</code>, <code>ps</code>, <code>id</code>, etc.</p>
+<p>Most of those tools have been expanded to use SELinux and have extra parameters, for example, in our example:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ls -lZ /usr/sbin/httpd<span class="se">\*</span>
+rwxr-xr-x root root system_u:object_r:httpd_exec_t /usr/sbin/httpd
+rwxr-xr-x root root system_u:object_r:httpd_exec_t /usr/sbin/httpd.worker
+</code></pre></div>
+</td></tr></table>
+<p>The “-Z” tells <code>ls</code> to show SELinux attributes.</p>
+<h4 id="where-does-system-stores-them">Where does system stores them<a class="headerlink" href="#where-does-system-stores-them" title="Permanent link">¶</a></h4>
+<p>First versions of SELinux, used external files, but in order to get included into upstream Kernel, a more standard approach was required, and finally, it got implemented using system “Extended Attributes”.</p>
+<p>So, as a consequence, SELinux requires filesystems with xattr support in order to work.</p>
+<p>In the listing before, apache is listed as system user, object role and
+<code>httpd_exec</code> type.</p>
+<p>If we do a <code>ps auxZ|grep httpd</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>root:system_r:httpd_t apache <span class="m">2923</span> <span class="m">0</span>.0 <span class="m">0</span>.4 <span class="m">10424</span> <span class="m">2076</span> ? S <span class="m">00</span>:58 <span class="m">0</span>:00 /usr/sbin/httpd
+</code></pre></div>
+</td></tr></table>
+<p>We see that process httpd is being executed as root, system role, and httpd type.</p>
+<p>Hey, how could that be possible? executable was <code>httpd_exec</code>, but process is
+<code>httpd_t</code>…</p>
+<p>Well, SELinux uses process transitions, in this case, <code>httpd_exec_t</code>, when executed, translates to
+<code>httpd_t</code> and from now on, would be the type regulating what process can or cannot do on our system.</p>
+<h4 id="how-do-we-start-httpd-daemon">How do we start httpd daemon<a class="headerlink" href="#how-do-we-start-httpd-daemon" title="Permanent link">¶</a></h4>
+<p>We use a script at <code>/etc/init.d/httpd</code> which:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ls -lZ /etc/init.d/httpd
+rwxr-xr-x root root system_u:object_r:initrc_exec_t /etc/init.d/httpd
+</code></pre></div>
+</td></tr></table>
+<p>Is yet another type!!!</p>
+<p>SELinux defines another kind of “domain transition” which allows that process started by “root” or by init transition to final “httpd_t”, all those rules need to be defined in a module for SELinux.</p>
+<h4 id="are-we-supposed-to-do-everything-like-this-on-our-own">Are we supposed to do everything like this on our own<a class="headerlink" href="#are-we-supposed-to-do-everything-like-this-on-our-own" title="Permanent link">¶</a></h4>
+<p>Not really ;-). There are several macros that automate this (for example, from
+<code>/usr/share/selinux/devel/example.te</code>), we can see:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>domain_type(myapp_t)
+domain_entry_file(myapp_t, myapp_exec_t)
+</code></pre></div>
+</td></tr></table>
+<p>That automatically setup a domain type <code>myapp_t</code>, and a transition from
+<code>myapp_exec_t</code> to <code>myapp_t</code> when that executable is loaded for running it on our system.</p>
+<h4 id="how-does-apache-loads-its-config-files">How does apache loads its config files<a class="headerlink" href="#how-does-apache-loads-its-config-files" title="Permanent link">¶</a></h4>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ls -lZd /etc/httpd/
+drwxr-xr-x root root system_u:object_r:httpd_config_t /etc/httpd/
+</code></pre></div>
+</td></tr></table>
+<p>As Apache will need to use that directory, we need to put in our custom template that permission, so we will write on our template:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">allow</span> <span class="nt">httpd_t</span> <span class="nt">httpd_config_t</span><span class="p">:</span><span class="nd">dir</span> <span class="nt">r_dir_perms</span><span class="o">;</span>
+<span class="nt">allow</span> <span class="nt">httpd_t</span> <span class="nt">httpd_config_t</span><span class="p">:</span><span class="nd">file</span> <span class="nt">r_file_perms</span><span class="o">;</span>
+</code></pre></div>
+</td></tr></table>
+<p>This will give permission to access <code>"dir"ectories</code> with read-only permissions as well as read-only permission to “file”s with that type.</p>
+<p>Why do this? Well. it’s a question about security… ¿why should Apache write to configuration files? SELinux allows us to confine apache in just the minimum required permissions to work without any chance to harm our system.</p>
+<p>In a chroot environment, an attacker could get into a minimal system which could give access to our internal network, SELinux will limit this :-)</p>
+<h4 id="how-do-we-setup-correct-selinux-rules-to-allow-something-blocked">How do we setup correct SELinux rules to allow something blocked<a class="headerlink" href="#how-do-we-setup-correct-selinux-rules-to-allow-something-blocked" title="Permanent link">¶</a></h4>
+<p>Well, our installed system has a graphical SELinux troubleshooter that will pop up when there are any kind of problems with rules.</p>
+<p>There is an command-line utility named “audit2allow” that will told us what we need to enable in order to get that problem fixed, for example:</p>
+<h4 id="what-if-we-try-to-run-httpd-listening-on-port-27">What if we try to run httpd listening on port 27<a class="headerlink" href="#what-if-we-try-to-run-httpd-listening-on-port-27" title="Permanent link">¶</a></h4>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>audit2allow -a
+<span class="c1">#============= httpd_t ==============</span>
+allow httpd_t reserved_port_t:tcp_socket name_bind<span class="p">;</span>
+</code></pre></div>
+</td></tr></table>
+<p>Well, this will be the “fix”, but this is a “dirty” one, as will allow Apache to hook on any reserved port.</p>
+<p>SELinux provides <code>semanage</code> that allows to define several behaviors, for example, the ports available to use by httpd_t:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>semanage port -l<span class="p">|</span>grep http
+http_port_t tcp <span class="m">80</span>, <span class="m">443</span>, <span class="m">488</span>, <span class="m">8008</span>, <span class="m">8009</span>, <span class="m">8443</span>
+</code></pre></div>
+</td></tr></table>
+<p>Well, http_t uses http_port_t that enables Apache to hook on those ports, if we need to make apache to listen on 27, we’ll need to execute:</p>
+<p><code>semanage port -a -t http_port_t -p tcp 27</code></p>
+<p>This will add port 27 using <span class="caps">TCP</span> to <code>http_port_t</code> type, and this will make Apache work ;-)</p>
+<p><code>semanage</code> also helps into defining clearance levels for users, and map user logins to security levels, so we can have users that get a specific clearance, that even root will not be able to access, so those files would be “private”.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>semanage login -l
+Login Name SELinux User MLS/MCS Range __default__ user_u s0 root root SystemLow-SystemHigh
+</code></pre></div>
+</td></tr></table>
+<p>In this case, any user gets mapped to user_u and s0 level, root instead, gets root user and s0.c0 to s0.c255 level</p>
+<p>We can test with policies and disabling them or not using setenforce. Set enforce allows to switch SELinux enforcing behaviour without rebooting system, so we can freely test our rules without wasting time on reboots.</p>
+<h4 id="write-a-simple-policy">Write a simple policy<a class="headerlink" href="#write-a-simple-policy" title="Permanent link">¶</a></h4>
+<p>Well, in order to write a simple policy, we need the <code>selinux-devel</code> package on our system, and then:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cp /usr/share/selinux/devel/Makefile /root
+<span class="nb">cd</span> /root
+</code></pre></div>
+</td></tr></table>
+<p>Now we will need to edit a template and put something like this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>policy_module(hello-world,1.0.0)
+type myapp_t;
+type myapp_exec_t;
+domain_type(myapp_t)
+domain_entry_file(myapp_t, myapp_exec_t) type myapp_log_t;
+logging_log_file(myapp_log_t) type myapp_tmp_t;
+files_tmp_file(myapp_tmp_t) allow myapp_t myapp_log_t:file ra_file_perms; allow myapp_t myapp_tmp_t:file manage_file_perms;
+files_tmp_filetrans(myapp_t,myapp_tmp_t,file)
+</code></pre></div>
+</td></tr></table>
+<p>This was the sample template placed at
+<code>/usr/share/selinux/devel/example.te</code>, using it together with <code>example.fc</code>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>/usr/sbin/myapp — gen_context<span class="o">(</span>system_u:object_r:myapp_exec_t,s0<span class="o">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Will provide a complete policy for our app:</p>
+<p>This defines that <code>/usr/sbin/myapp</code> will have the context
+<code>system_u:object_r:myapp_exec_t</code> and s0. Depending on the policy we’re running, the
+<code>gen_context</code> will create adequate context for that file.</p>
+<p>In order to get it loaded, we just need to do <code>make load</code>, and module will be compiled (they use m4 macro language), and then loaded.</p>
+<h4 id="how-do-we-verify-that-a-module-has-been-loaded">How do we verify that a module has been loaded<a class="headerlink" href="#how-do-we-verify-that-a-module-has-been-loaded" title="Permanent link">¶</a></h4>
+<p>With <code>semodule -l</code> all loaded modules will be shown, remember that some policies allow booleans to enable or disable certain aspects of them. We can check all defined booleans for currently loaded modules with <code>getsebool -a</code> and we can set them with <code>setsebool</code> , using “-P” in order to set that value as default after reboots.</p>
+<p>We can switch a value using <code>togglesebool</code> value but this will not set it as default for next reboot.</p>
+<p>I hope this can help you as a small introduction to SELinux and it’s features :)</p>
+<p><span class="caps">PD</span>: News and updates about SELinux at <a href="http://www.selinuxnews.org/wp/">SELinux News</a></p>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=Security%20Enhanced%20Linux%C2%A0%28SELinux%29&url=https%3A//iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/&via=iranzop&hashtags=linux,selinux,foss" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=Security%20Enhanced%20Linux%C2%A0%28SELinux%29&amp;body=https%3A//iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/"
+                   href="https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/';
+    var disqus_url = 'https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/" title="AwesomeSlides for converting LibreOffice ODP into revealjs">AwesomeSlides for converting LibreOffice ODP into revealjs</a></li>
+<li><a href="https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/" title="Use custom domain name with Blog-O-Matic">Use custom domain name with Blog-O-Matic</a></li>
+<li><a href="https://iranzo.io/blog/2019/06/11/katacoda-scenario-creation/" title="Katacoda scenario creation">Katacoda scenario creation</a></li>
+<li><a href="https://iranzo.io/blog/2020/02/13/git-commit-reordering/" title="Git commit reordering">Git commit reordering</a></li>
+<li><a href="https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/" title="Dell racadm remote ISO load">Dell racadm remote ISO load</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2007/11/15/Creating-Jigsaw-Download-JigDo/" title="Previous: Creating Jigsaw Download (JigDo) files for downloading ISO’s">Creating Jigsaw Download (JigDo) files for downloading ISO’s</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/" title="Next: Creando plantillas Jigdo (Jigsaw Download) para descargar ISO’s">Creando plantillas Jigdo (Jigsaw Download) para descargar ISO’s</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~6 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2008-01-04T18:14:03+00:00">Fri 04 January 2008</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#foss-ref">Foss
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#linux-ref">Linux
+                    <span class="superscript">37</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#selinux-ref">SELinux
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

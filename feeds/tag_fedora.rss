@@ -1,0 +1,1547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - Fedora</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Thu, 27 Jun 2019 23:16:14 +0200</lastBuildDate><item><title>Argos extension writing for Gnome3</title><link>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</link><description>&lt;p&gt;I was using from time ago this extension for Gnome named &lt;a href="https://github.com/p-e-w/argos"&gt;Argos&lt;/a&gt; which allows to create useful data views using scripts written in whatever language of choice available, bash&amp;nbsp;included.&lt;/p&gt;
+&lt;p&gt;So far I had just a simple extension writing a &lt;span class="caps"&gt;UNICODE&lt;/span&gt; character, but with the suggestion of my colleague &lt;a href="http://www.sombrerorojo.com/"&gt;Javi Ramírez&lt;/a&gt;, I decided to use the motivational idea to write a simple script to calculate how much you&amp;#8217;ve earned so far in the day and show that information at a glance on your menu&amp;nbsp;bar.&lt;/p&gt;
+&lt;p&gt;File is available &lt;a href="https://gist.github.com/iranzo/1c01c1296cf20c13d954562c39d36466"&gt;here&lt;/a&gt;, and must be named like &lt;code&gt;showmethemoney.1s.sh&lt;/code&gt; inside your argos&amp;nbsp;folder.&lt;/p&gt;
+&lt;p&gt;Content is very&amp;nbsp;simple:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;
+&lt;span class="normal"&gt;32&lt;/span&gt;
+&lt;span class="normal"&gt;33&lt;/span&gt;
+&lt;span class="normal"&gt;34&lt;/span&gt;
+&lt;span class="normal"&gt;35&lt;/span&gt;
+&lt;span class="normal"&gt;36&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+&lt;span class="c1"&gt;# Author: Pablo Iranzo Gómez (Pablo.Iranzo@gmail.com)&lt;/span&gt;
+&lt;span class="c1"&gt;# Description: Script to calculate earned money so far in the day&lt;/span&gt;
+&lt;span class="c1"&gt;# Adjust DAILY to the daily income, adjust DAYSTART hour and DAYEND hour to your working schedule&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Customize to suit your details&lt;/span&gt;
+&lt;span class="nv"&gt;DAYSTART&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;8:00&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;DAYEND&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;17:00&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;DAILY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1000&lt;/span&gt;
+&lt;span class="nv"&gt;SYMBOL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;€&amp;quot;&lt;/span&gt;
+
+
+
+&lt;span class="nv"&gt;URL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;github.com/p-e-w/argos&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;dirname &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$0&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;DAILYTOTAL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;scale=4; &lt;/span&gt;&lt;span class="nv"&gt;$DAILY&lt;/span&gt;&lt;span class="s2"&gt;/(9*60*60)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt; bc&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;UNIXSTART&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;date --date&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;DAYSTART&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; +&lt;span class="s2"&gt;&amp;quot;%s&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;UNIXNOW&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;date +&lt;span class="s2"&gt;&amp;quot;%s&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;UNIXEND&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;date --date&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;DAYEND&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; +&lt;span class="s2"&gt;&amp;quot;%s&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXNOW&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -gt &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXEND&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;DAILY&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXNOW&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; -gt &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXSTART&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;scale=2; &lt;/span&gt;&lt;span class="nv"&gt;$DAILYTOTAL&lt;/span&gt;&lt;span class="s2"&gt; * (&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXNOW&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;-&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;UNIXSTART&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;)&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; bc&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;0&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="nv"&gt;STRING&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;💰 &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;EARNED&lt;/span&gt;&lt;span class="si"&gt;}${&lt;/span&gt;&lt;span class="nv"&gt;SYMBOL&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; 💰&amp;quot;&lt;/span&gt;
+
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$STRING&lt;/span&gt;&lt;span class="s2"&gt; | refresh=true&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;---&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$URL&lt;/span&gt;&lt;span class="s2"&gt; | iconName=help-faq-symbolic href=&amp;#39;https://&lt;/span&gt;&lt;span class="nv"&gt;$URL&lt;/span&gt;&lt;span class="s2"&gt;&amp;#39;&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$DIR&lt;/span&gt;&lt;span class="s2"&gt; | iconName=folder-symbolic href=&amp;#39;file://&lt;/span&gt;&lt;span class="nv"&gt;$DIR&lt;/span&gt;&lt;span class="s2"&gt;&amp;#39;&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;It checks if day has started or it&amp;#8217;s over and if in between, it calculates the amount based on Unix&amp;nbsp;epoch.&lt;/p&gt;
+&lt;p&gt;For more details about developing them, check argos link&amp;nbsp;above!&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2019-06-27:/blog/2019/06/27/argos-extension-writing-for-gnome3/</guid><category>tech</category><category>Linux</category><category>Fedora</category><category>Gnome</category><category>Argos</category><category>bash</category><category>shell</category></item><item><title>Contributing to OSP upstream a.k.a. Peer Review</title><link>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/</link><description>
+&lt;h2 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In the article “&lt;a href="https://iranzo.io/blog/2016/07/21/contributing-to-openstack/"&gt;Contributing to OpenStack&lt;/a&gt;” we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find &lt;code&gt;low hanging fruits&lt;/code&gt; to start contributing).&lt;/p&gt;
+&lt;p&gt;Here, we’ll cover what happens behind the scene to get change published.&lt;/p&gt;
+&lt;h2 id="upstream-workflow"&gt;Upstream workflow&lt;a class="headerlink" href="#upstream-workflow" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="peer-review"&gt;Peer review&lt;a class="headerlink" href="#peer-review" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Upstream contributions to &lt;span class="caps"&gt;OSP&lt;/span&gt; and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.&lt;/p&gt;
+&lt;p&gt;The last command executed (&lt;code&gt;git-review&lt;/code&gt;) on the submit sequence (in the prior article) will effectively submit the patch to the defined git review service (&lt;code&gt;git-review -s&lt;/code&gt; does the required setup process) and will print an &lt;span class="caps"&gt;URL&lt;/span&gt; that can be used to access the review.&lt;/p&gt;
+&lt;p&gt;Each project might have a different review platform, but usually for &lt;span class="caps"&gt;OSP&lt;/span&gt; it’s &lt;a href="https://review.openstack.org"&gt;https://review.openstack.org&lt;/a&gt; while for other projects it can be &lt;a href="https://gerrit.ovirt.org"&gt;https://gerrit.ovirt.org&lt;/a&gt;, &lt;a href="https://gerrithub.io"&gt;https://gerrithub.io&lt;/a&gt;, etc (this is defined in &lt;code&gt;.gitreview&lt;/code&gt; file in the repository).&lt;/p&gt;
+&lt;p&gt;A sample &lt;code&gt;.gitreview&lt;/code&gt; file looks like:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[gerrit]&lt;/span&gt;
+&lt;span class="na"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;review.gerrithub.io&lt;/span&gt;
+&lt;span class="na"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;29418&lt;/span&gt;
+&lt;span class="na"&gt;project&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;citellusorg/citellus.git&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;For a review example, we’ll use one from gerrithub from &lt;a href="https://citellusorg.github.io"&gt;Citellus&lt;/a&gt; project:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://review.gerrithub.io/#/c/380646/"&gt;https://review.gerrithub.io/#/c/380646/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here, we can see that we’re on review &lt;code&gt;380646&lt;/code&gt; and that’s the link that allows us to check the changes submitted (the one printed when executing &lt;code&gt;git-review&lt;/code&gt;).&lt;/p&gt;
+&lt;h3 id="ci-tests-verified-1"&gt;&lt;span class="caps"&gt;CI&lt;/span&gt; tests (Verified +1)&lt;a class="headerlink" href="#ci-tests-verified-1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Once a review has been submitted, usually the bots are the first ones to pick them and run the defined unit testing on the new changes, to ensure that it doesn’t break anything (based on what is defined to be tested).&lt;/p&gt;
+&lt;p&gt;This is a critical point as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tests need to be defined if new code is added or modified to ensure that later updates doesn’t break this new code without someone being aware.&lt;/li&gt;
+&lt;li&gt;Infrastructure should be able to test it (for example you might need some specific hardware to test a card or network configuration)&lt;/li&gt;
+&lt;li&gt;Environment should be sane so that prior runs doesn’t affect the validation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OSP&lt;/span&gt; &lt;span class="caps"&gt;CI&lt;/span&gt; can be checked at ‘Zuul’ &lt;a href="http://zuul.openstack.org/"&gt;http://zuul.openstack.org/&lt;/a&gt; where you can ‘input’ the number for your review and see how the different bots are running &lt;span class="caps"&gt;CI&lt;/span&gt; tests on it or if it’s still queued.&lt;/p&gt;
+&lt;p&gt;If everything is &lt;span class="caps"&gt;OK&lt;/span&gt;, the bot will ‘vote’ your change as &lt;code&gt;Verified +1&lt;/code&gt; allowing others to see that it should not break anything based on the tests performed&lt;/p&gt;
+&lt;p&gt;In the case of &lt;span class="caps"&gt;OSP&lt;/span&gt;, there’s also third-party &lt;span class="caps"&gt;CI&lt;/span&gt;’s that can validate other changes by third party systems. For some of them, the votes are counting towards or against the proposed change, for others it’s just a comment to take into account.&lt;/p&gt;
+&lt;p&gt;Even if sometimes you know that your code is right, there’s a failure because of the infrastructure, in those cases, writing a new comment saying &lt;code&gt;recheck&lt;/code&gt;, will schedule a new &lt;span class="caps"&gt;CI&lt;/span&gt; test run.&lt;/p&gt;
+&lt;p&gt;This is common usually during busy periods when it’s harder for the scheduler to get available resources for the review validation. Also, sometimes there are errors in the configuration of &lt;span class="caps"&gt;CI&lt;/span&gt; that must be fixed in order to validate those changes.&lt;/p&gt;
+&lt;p&gt;Note: you can run some of the tests on your system to validate faster if you’ve issues by running &lt;code&gt;tox&lt;/code&gt; this will setup virtual environment for tests to be run so it’s easier to catch issues before upstream &lt;span class="caps"&gt;CI&lt;/span&gt; does (so it’s always a good idea to run &lt;code&gt;tox&lt;/code&gt; even before submitting the review with &lt;code&gt;git-review&lt;/code&gt; to detect early errors).&lt;/p&gt;
+&lt;p&gt;This is however not always possible as some changes include requirements like testing upgrades, full environment deployments, etc that cannot be done without the required preparation steps or even the infrastructure.&lt;/p&gt;
+&lt;h3 id="code-review2"&gt;Code Review+2&lt;a class="headerlink" href="#code-review2" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This is probably the ‘longest’ process, it requires peers to be added as ‘reviewer’ (you can get an idea on the names based on other reviews submitted for the same component) or they will pick up new reviews as the pop un on notification channels or pending queues.&lt;/p&gt;
+&lt;p&gt;On this, you must prepare mentally for everything… developers could suggest to use a different approach, or highlight other problems or just do some small &lt;code&gt;nit&lt;/code&gt; comments to fixes like formating, spacing, var naming, etc.&lt;/p&gt;
+&lt;p&gt;After each comment/change suggested, repeat the workflow for submitting a new patchset, but make sure you’re using the same review id (that’s by keeping the commit id that is appended): this allows the Code Review platform to identify this change as an update to a prior one, and allow you for example to compare changes across versions, etc. (and also notify the prior reviewers of new changes).&lt;/p&gt;
+&lt;p&gt;Once reviewers are &lt;span class="caps"&gt;OK&lt;/span&gt; with your code, and with some ‘Core’ developers also agreeing, you’ll see some voting happening (-2..+2) meaning they like the change in its actual form or not.&lt;/p&gt;
+&lt;p&gt;Once you get &lt;code&gt;Code Review +2&lt;/code&gt; and with the prior &lt;code&gt;Verified +1&lt;/code&gt; you’re almost ready to get the change merged.&lt;/p&gt;
+&lt;h3 id="workflow1"&gt;Workflow+1&lt;a class="headerlink" href="#workflow1" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Ok, last step is to have someone with Workflow permissions to give a +1, this will ‘seal’ the change saying that everything is ok (as it had &lt;span class="caps"&gt;CR&lt;/span&gt;+2 and Verified+1) and change is valid…&lt;/p&gt;
+&lt;p&gt;This vote will trigger another build by &lt;span class="caps"&gt;CI&lt;/span&gt;, and when finished, the change will be merged into the code upstream, congratulations!&lt;/p&gt;
+&lt;h3 id="cannot-merge-please-rebase"&gt;Cannot merge, please rebase&lt;a class="headerlink" href="#cannot-merge-please-rebase" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Sometimes, your change is doing changes on the same files that other programmers did on the code, so there’s no way to automatically ‘rebase’ the change, in this case the bad news is that you need to:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git checkout master &lt;span class="c1"&gt;# to change to master branch&lt;/span&gt;
+git pull &lt;span class="c1"&gt;# to push latest upstream changes&lt;/span&gt;
+git checkout yourbranch &lt;span class="c1"&gt;# to get back to your change branch&lt;/span&gt;
+git rebase master &lt;span class="c1"&gt;# to apply your changes on top of current master&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After this step, it might be required to manually fix the code to solve the conflicts and follow instructions given by git to mark them as reviewed.&lt;/p&gt;
+&lt;p&gt;Once it’s done, remember to do like with any patchset you submitted afterwards:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git commit --amend &lt;span class="c1"&gt;# to commit the new changes on the same commit Id you used&lt;/span&gt;
+git-review &lt;span class="c1"&gt;# to upload a new version of the patchset&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This will start over the progress, but will, once completed to get the change merged.&lt;/p&gt;
+&lt;h2 id="how-do-we-do-it-with-citellus"&gt;How do we do it with Citellus?&lt;a class="headerlink" href="#how-do-we-do-it-with-citellus" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;a href="https://citellusorg.github.io/"&gt;Citellus&lt;/a&gt; we’ve replicated more or less what we’ve upstream… even the use of &lt;code&gt;tox&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Citellus does use &lt;a href="https://gerrithub.io"&gt;https://gerrithub.io&lt;/a&gt; (free service that hooks on github and allows to do &lt;span class="caps"&gt;PR&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;We’ve setup a machine that runs &lt;a href="https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/"&gt;Jenkins&lt;/a&gt; to do ‘&lt;span class="caps"&gt;CI&lt;/span&gt;’ on the tests we’ve defined (mostly for python wrapper and some tests) and what effectively does is to run &lt;code&gt;tox&lt;/code&gt;, and also, we do use &lt;a href="https://travis-ci.org"&gt;https://travis-ci.org&lt;/a&gt; free Tier to repeat the same on other platform.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tox&lt;/code&gt; is a tool that allows to define several commands that are executed inside python virtual environments, so without touching your system libraries, it can get installed new ones or removed just for the boundaries of that test, helping into running:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pep8 (python formating compliance)&lt;/li&gt;
+&lt;li&gt;py27 (python 2.7 environment test)&lt;/li&gt;
+&lt;li&gt;py35 (python 3.5 environment test)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;code&gt;py*&lt;/code&gt; tests are just to validate the code can run on both base python versions, and what they do is to run the defined unit testing scripts under each interpreter to validate.&lt;/p&gt;
+&lt;p&gt;For local test, you can run &lt;code&gt;tox&lt;/code&gt; and it will go trough the different tests defined and report status… if everything is ok, it should be possible that your new code review passes also &lt;span class="caps"&gt;CI&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Jenkins will do the +1 on verified and ‘core’ reviewers will give +2 and ‘merge’ the change once validated.&lt;/p&gt;
+&lt;p&gt;Hope you enjoy!&lt;/p&gt;
+&lt;p&gt;Pablo&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Tue, 16 Oct 2018 07:32:47 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2018-10-16:/blog/2018/10/16/contributing-to-osp-upstream-aka-peer-review/</guid><category>tech</category><category>python</category><category>OpenStack</category><category>foss</category><category>git</category><category>Gerrit</category><category>RDO</category><category>fedora</category><category>citellus</category></item><item><title>Filtering email with imapfilter</title><link>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</link><description>&lt;p&gt;Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&amp;amp;drop reordering of rules, cloning,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;As I was already using offlineimap to sync from the remote mail server to my system into a maildir folder, I had almost all the elements I&amp;nbsp;needed.&lt;/p&gt;
+&lt;p&gt;After searching for several options &lt;a href="https://github.com/lefcha/imapfilter"&gt;imapfilter&lt;/a&gt; seemed to be a perfect fit, so I started with a small set of rules and start integration with my email&amp;nbsp;process.&lt;/p&gt;
+&lt;p&gt;On my first attempts, I setup a pre-sync hook on offlineimap by using as well as the postsync hook I already&amp;nbsp;had:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;presynchook&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;time imapfilter&lt;/span&gt;
+&lt;span class="na"&gt;postsynchook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;~/.mutt/postsync-offlineimap.sh&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Initial attempts were not good at all, applying filters on the remote &lt;span class="caps"&gt;IMAP&lt;/span&gt; server was very time consuming and my actual 1 minute delay after finishing one check was becoming a real 10-15 minute interval between checks because of the
+&lt;span class="caps"&gt;IMAP&lt;/span&gt; filtering and this was not scaling as I was putting new&amp;nbsp;rules.&lt;/p&gt;
+&lt;p&gt;After some tries, and as I already had all the email synced offline, moved filtering to be locally instead of server-side, but as imapfilter requires an &lt;span class="caps"&gt;IMAP&lt;/span&gt; server, I tricked &lt;code&gt;dovecot&lt;/code&gt; into using the local folder to be offered via
+&lt;span class="caps"&gt;IMAP&lt;/span&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;protocols&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;imap&lt;/span&gt;
+&lt;span class="na"&gt;mail_location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;maildir:~/.maildir/FOLDER/:INBOX=~/.maildir/FOLDER/.INBOX/&lt;/span&gt;
+&lt;span class="na"&gt;auth_debug_passwords&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;yes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This also required to change my &lt;code&gt;foldernames&lt;/code&gt; to use &amp;#8220;.&amp;#8221; in front of them, so I needed to change &lt;code&gt;mutt&lt;/code&gt; configuration too for&amp;nbsp;this:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;set mask&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.*&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;and my &lt;code&gt;mailfolders&lt;/code&gt; script:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;
+&lt;span class="normal"&gt;9&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;mbox_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Maildir
+&lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;folder&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;~/.maildir/FOLDER&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;spoolfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;~/.maildir/FOLDER/.INBOX&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;#mailboxes `echo -n &amp;quot;+ &amp;quot;; find ~/.cache/notmuch/mutt/results ~/.maildir/FOLDER -type d -not -name &amp;#39;cur&amp;#39; -not -name &amp;#39;new&amp;#39; -not -name &amp;#39;tmp&amp;#39; -not -name &amp;#39;.notmuch&amp;#39; -not -name &amp;#39;xapian&amp;#39; -not -name &amp;#39;FOLDER&amp;#39; -printf &amp;quot;+&amp;#39;%f&amp;#39; &amp;quot;`&lt;/span&gt;
+
+mailboxes &lt;span class="sb"&gt;`&lt;/span&gt;find ~/.maildir/FOLDER -type d -name cur -printf &lt;span class="s1"&gt;&amp;#39;%h &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;tr &lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;grep -v &lt;span class="s2"&gt;&amp;quot;^/home/iranzo/.maildir/FOLDER&lt;/span&gt;$&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;sort&lt;span class="p"&gt;|&lt;/span&gt;xargs &lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="c1"&gt;#Store reply on current folder&lt;/span&gt;
+folder-hook . &lt;span class="s1"&gt;&amp;#39;set record=&amp;quot;^&amp;quot;&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After this, I could start using imapfilter and start working on my set of rules&amp;#8230; but first problem appeared, apparently I started having some duplicated email as I was cancelling and rerunning the script while debugging so a new tool was also introduced to
+&lt;code&gt;dedup&lt;/code&gt; my &lt;span class="caps"&gt;IMAP&lt;/span&gt; folder named &lt;a href="https://github.com/quentinsf/IMAPdedup"&gt;IMAPdedup&lt;/a&gt; with a small&amp;nbsp;script:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="o"&gt;(&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; folder &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;python ~/.bin/imapdedup.py -s localhost  -u iranzo    -w &lt;span class="s1"&gt;&amp;#39;$PASSWORD&amp;#39;&lt;/span&gt;  -m -c -v  -l&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+    python ~/.bin/imapdedup.py -s localhost  -u iranzo    -w &lt;span class="s1"&gt;&amp;#39;$PASSWORD&amp;#39;&lt;/span&gt;  -m -c  &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$folder&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;grep &lt;span class="s2"&gt;&amp;quot;will be marked as deleted&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This script was taking care of listing all email folders on &amp;#8216;localhost&amp;#8217; with my username and password (can be scripted or use external tools to gather it)
+and &lt;code&gt;dedup&lt;/code&gt; email after each sync (in my &lt;code&gt;postsync-offlinemap.sh&lt;/code&gt; as well as lbdq script for fetching new addresses, notmuch and running imapfilter after syncing (to
+catch the limited filtering I do&amp;nbsp;sever-side)&lt;/p&gt;
+&lt;p&gt;I still do some server-side filtering (4 rules), to get on a &amp;#8220;Pending sort&amp;#8221; folder all email which is&amp;nbsp;either:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New support cases remain at &lt;span class="caps"&gt;INBOX&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;All emails from case updates, bugzilla, etc to &lt;code&gt;_pending&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;All emails containing &amp;#8216;list&amp;#8217; or &amp;#8216;bounces&amp;#8217; in from to &lt;code&gt;_pending&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;All emails not containing me directly on &lt;code&gt;CC&lt;/code&gt; or To, to &lt;code&gt;_pending&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This more or less ensures a clean &lt;span class="caps"&gt;INBOX&lt;/span&gt; with most important things still there, and easier rule handling for email&amp;nbsp;sorting.&lt;/p&gt;
+&lt;p&gt;So, after some tests, this is at the moment a simplified version of my filtering&amp;nbsp;file:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;  1&lt;/span&gt;
+&lt;span class="normal"&gt;  2&lt;/span&gt;
+&lt;span class="normal"&gt;  3&lt;/span&gt;
+&lt;span class="normal"&gt;  4&lt;/span&gt;
+&lt;span class="normal"&gt;  5&lt;/span&gt;
+&lt;span class="normal"&gt;  6&lt;/span&gt;
+&lt;span class="normal"&gt;  7&lt;/span&gt;
+&lt;span class="normal"&gt;  8&lt;/span&gt;
+&lt;span class="normal"&gt;  9&lt;/span&gt;
+&lt;span class="normal"&gt; 10&lt;/span&gt;
+&lt;span class="normal"&gt; 11&lt;/span&gt;
+&lt;span class="normal"&gt; 12&lt;/span&gt;
+&lt;span class="normal"&gt; 13&lt;/span&gt;
+&lt;span class="normal"&gt; 14&lt;/span&gt;
+&lt;span class="normal"&gt; 15&lt;/span&gt;
+&lt;span class="normal"&gt; 16&lt;/span&gt;
+&lt;span class="normal"&gt; 17&lt;/span&gt;
+&lt;span class="normal"&gt; 18&lt;/span&gt;
+&lt;span class="normal"&gt; 19&lt;/span&gt;
+&lt;span class="normal"&gt; 20&lt;/span&gt;
+&lt;span class="normal"&gt; 21&lt;/span&gt;
+&lt;span class="normal"&gt; 22&lt;/span&gt;
+&lt;span class="normal"&gt; 23&lt;/span&gt;
+&lt;span class="normal"&gt; 24&lt;/span&gt;
+&lt;span class="normal"&gt; 25&lt;/span&gt;
+&lt;span class="normal"&gt; 26&lt;/span&gt;
+&lt;span class="normal"&gt; 27&lt;/span&gt;
+&lt;span class="normal"&gt; 28&lt;/span&gt;
+&lt;span class="normal"&gt; 29&lt;/span&gt;
+&lt;span class="normal"&gt; 30&lt;/span&gt;
+&lt;span class="normal"&gt; 31&lt;/span&gt;
+&lt;span class="normal"&gt; 32&lt;/span&gt;
+&lt;span class="normal"&gt; 33&lt;/span&gt;
+&lt;span class="normal"&gt; 34&lt;/span&gt;
+&lt;span class="normal"&gt; 35&lt;/span&gt;
+&lt;span class="normal"&gt; 36&lt;/span&gt;
+&lt;span class="normal"&gt; 37&lt;/span&gt;
+&lt;span class="normal"&gt; 38&lt;/span&gt;
+&lt;span class="normal"&gt; 39&lt;/span&gt;
+&lt;span class="normal"&gt; 40&lt;/span&gt;
+&lt;span class="normal"&gt; 41&lt;/span&gt;
+&lt;span class="normal"&gt; 42&lt;/span&gt;
+&lt;span class="normal"&gt; 43&lt;/span&gt;
+&lt;span class="normal"&gt; 44&lt;/span&gt;
+&lt;span class="normal"&gt; 45&lt;/span&gt;
+&lt;span class="normal"&gt; 46&lt;/span&gt;
+&lt;span class="normal"&gt; 47&lt;/span&gt;
+&lt;span class="normal"&gt; 48&lt;/span&gt;
+&lt;span class="normal"&gt; 49&lt;/span&gt;
+&lt;span class="normal"&gt; 50&lt;/span&gt;
+&lt;span class="normal"&gt; 51&lt;/span&gt;
+&lt;span class="normal"&gt; 52&lt;/span&gt;
+&lt;span class="normal"&gt; 53&lt;/span&gt;
+&lt;span class="normal"&gt; 54&lt;/span&gt;
+&lt;span class="normal"&gt; 55&lt;/span&gt;
+&lt;span class="normal"&gt; 56&lt;/span&gt;
+&lt;span class="normal"&gt; 57&lt;/span&gt;
+&lt;span class="normal"&gt; 58&lt;/span&gt;
+&lt;span class="normal"&gt; 59&lt;/span&gt;
+&lt;span class="normal"&gt; 60&lt;/span&gt;
+&lt;span class="normal"&gt; 61&lt;/span&gt;
+&lt;span class="normal"&gt; 62&lt;/span&gt;
+&lt;span class="normal"&gt; 63&lt;/span&gt;
+&lt;span class="normal"&gt; 64&lt;/span&gt;
+&lt;span class="normal"&gt; 65&lt;/span&gt;
+&lt;span class="normal"&gt; 66&lt;/span&gt;
+&lt;span class="normal"&gt; 67&lt;/span&gt;
+&lt;span class="normal"&gt; 68&lt;/span&gt;
+&lt;span class="normal"&gt; 69&lt;/span&gt;
+&lt;span class="normal"&gt; 70&lt;/span&gt;
+&lt;span class="normal"&gt; 71&lt;/span&gt;
+&lt;span class="normal"&gt; 72&lt;/span&gt;
+&lt;span class="normal"&gt; 73&lt;/span&gt;
+&lt;span class="normal"&gt; 74&lt;/span&gt;
+&lt;span class="normal"&gt; 75&lt;/span&gt;
+&lt;span class="normal"&gt; 76&lt;/span&gt;
+&lt;span class="normal"&gt; 77&lt;/span&gt;
+&lt;span class="normal"&gt; 78&lt;/span&gt;
+&lt;span class="normal"&gt; 79&lt;/span&gt;
+&lt;span class="normal"&gt; 80&lt;/span&gt;
+&lt;span class="normal"&gt; 81&lt;/span&gt;
+&lt;span class="normal"&gt; 82&lt;/span&gt;
+&lt;span class="normal"&gt; 83&lt;/span&gt;
+&lt;span class="normal"&gt; 84&lt;/span&gt;
+&lt;span class="normal"&gt; 85&lt;/span&gt;
+&lt;span class="normal"&gt; 86&lt;/span&gt;
+&lt;span class="normal"&gt; 87&lt;/span&gt;
+&lt;span class="normal"&gt; 88&lt;/span&gt;
+&lt;span class="normal"&gt; 89&lt;/span&gt;
+&lt;span class="normal"&gt; 90&lt;/span&gt;
+&lt;span class="normal"&gt; 91&lt;/span&gt;
+&lt;span class="normal"&gt; 92&lt;/span&gt;
+&lt;span class="normal"&gt; 93&lt;/span&gt;
+&lt;span class="normal"&gt; 94&lt;/span&gt;
+&lt;span class="normal"&gt; 95&lt;/span&gt;
+&lt;span class="normal"&gt; 96&lt;/span&gt;
+&lt;span class="normal"&gt; 97&lt;/span&gt;
+&lt;span class="normal"&gt; 98&lt;/span&gt;
+&lt;span class="normal"&gt; 99&lt;/span&gt;
+&lt;span class="normal"&gt;100&lt;/span&gt;
+&lt;span class="normal"&gt;101&lt;/span&gt;
+&lt;span class="normal"&gt;102&lt;/span&gt;
+&lt;span class="normal"&gt;103&lt;/span&gt;
+&lt;span class="normal"&gt;104&lt;/span&gt;
+&lt;span class="normal"&gt;105&lt;/span&gt;
+&lt;span class="normal"&gt;106&lt;/span&gt;
+&lt;span class="normal"&gt;107&lt;/span&gt;
+&lt;span class="normal"&gt;108&lt;/span&gt;
+&lt;span class="normal"&gt;109&lt;/span&gt;
+&lt;span class="normal"&gt;110&lt;/span&gt;
+&lt;span class="normal"&gt;111&lt;/span&gt;
+&lt;span class="normal"&gt;112&lt;/span&gt;
+&lt;span class="normal"&gt;113&lt;/span&gt;
+&lt;span class="normal"&gt;114&lt;/span&gt;
+&lt;span class="normal"&gt;115&lt;/span&gt;
+&lt;span class="normal"&gt;116&lt;/span&gt;
+&lt;span class="normal"&gt;117&lt;/span&gt;
+&lt;span class="normal"&gt;118&lt;/span&gt;
+&lt;span class="normal"&gt;119&lt;/span&gt;
+&lt;span class="normal"&gt;120&lt;/span&gt;
+&lt;span class="normal"&gt;121&lt;/span&gt;
+&lt;span class="normal"&gt;122&lt;/span&gt;
+&lt;span class="normal"&gt;123&lt;/span&gt;
+&lt;span class="normal"&gt;124&lt;/span&gt;
+&lt;span class="normal"&gt;125&lt;/span&gt;
+&lt;span class="normal"&gt;126&lt;/span&gt;
+&lt;span class="normal"&gt;127&lt;/span&gt;
+&lt;span class="normal"&gt;128&lt;/span&gt;
+&lt;span class="normal"&gt;129&lt;/span&gt;
+&lt;span class="normal"&gt;130&lt;/span&gt;
+&lt;span class="normal"&gt;131&lt;/span&gt;
+&lt;span class="normal"&gt;132&lt;/span&gt;
+&lt;span class="normal"&gt;133&lt;/span&gt;
+&lt;span class="normal"&gt;134&lt;/span&gt;
+&lt;span class="normal"&gt;135&lt;/span&gt;
+&lt;span class="normal"&gt;136&lt;/span&gt;
+&lt;span class="normal"&gt;137&lt;/span&gt;
+&lt;span class="normal"&gt;138&lt;/span&gt;
+&lt;span class="normal"&gt;139&lt;/span&gt;
+&lt;span class="normal"&gt;140&lt;/span&gt;
+&lt;span class="normal"&gt;141&lt;/span&gt;
+&lt;span class="normal"&gt;142&lt;/span&gt;
+&lt;span class="normal"&gt;143&lt;/span&gt;
+&lt;span class="normal"&gt;144&lt;/span&gt;
+&lt;span class="normal"&gt;145&lt;/span&gt;
+&lt;span class="normal"&gt;146&lt;/span&gt;
+&lt;span class="normal"&gt;147&lt;/span&gt;
+&lt;span class="normal"&gt;148&lt;/span&gt;
+&lt;span class="normal"&gt;149&lt;/span&gt;
+&lt;span class="normal"&gt;150&lt;/span&gt;
+&lt;span class="normal"&gt;151&lt;/span&gt;
+&lt;span class="normal"&gt;152&lt;/span&gt;
+&lt;span class="normal"&gt;153&lt;/span&gt;
+&lt;span class="normal"&gt;154&lt;/span&gt;
+&lt;span class="normal"&gt;155&lt;/span&gt;
+&lt;span class="normal"&gt;156&lt;/span&gt;
+&lt;span class="normal"&gt;157&lt;/span&gt;
+&lt;span class="normal"&gt;158&lt;/span&gt;
+&lt;span class="normal"&gt;159&lt;/span&gt;
+&lt;span class="normal"&gt;160&lt;/span&gt;
+&lt;span class="normal"&gt;161&lt;/span&gt;
+&lt;span class="normal"&gt;162&lt;/span&gt;
+&lt;span class="normal"&gt;163&lt;/span&gt;
+&lt;span class="normal"&gt;164&lt;/span&gt;
+&lt;span class="normal"&gt;165&lt;/span&gt;
+&lt;span class="normal"&gt;166&lt;/span&gt;
+&lt;span class="normal"&gt;167&lt;/span&gt;
+&lt;span class="normal"&gt;168&lt;/span&gt;
+&lt;span class="normal"&gt;169&lt;/span&gt;
+&lt;span class="normal"&gt;170&lt;/span&gt;
+&lt;span class="normal"&gt;171&lt;/span&gt;
+&lt;span class="normal"&gt;172&lt;/span&gt;
+&lt;span class="normal"&gt;173&lt;/span&gt;
+&lt;span class="normal"&gt;174&lt;/span&gt;
+&lt;span class="normal"&gt;175&lt;/span&gt;
+&lt;span class="normal"&gt;176&lt;/span&gt;
+&lt;span class="normal"&gt;177&lt;/span&gt;
+&lt;span class="normal"&gt;178&lt;/span&gt;
+&lt;span class="normal"&gt;179&lt;/span&gt;
+&lt;span class="normal"&gt;180&lt;/span&gt;
+&lt;span class="normal"&gt;181&lt;/span&gt;
+&lt;span class="normal"&gt;182&lt;/span&gt;
+&lt;span class="normal"&gt;183&lt;/span&gt;
+&lt;span class="normal"&gt;184&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;---------------&lt;/span&gt;
+&lt;span class="c1"&gt;--  Options  --&lt;/span&gt;
+&lt;span class="c1"&gt;---------------&lt;/span&gt;
+
+&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;timeout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;
+&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subscribe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+
+&lt;span class="kr"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;offlineimap&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;
+    &lt;span class="kd"&gt;local&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+    &lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipe_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;grep -A2 ACCOUNT ~/.offlineimaprc | grep -v ^#|grep &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;..&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="o"&gt;..&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;|cut -d= -f2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;
+        &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;string.gsub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;string.gsub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="kr"&gt;return&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+
+&lt;span class="c1"&gt;----------------&lt;/span&gt;
+&lt;span class="c1"&gt;--  Accounts  --&lt;/span&gt;
+&lt;span class="c1"&gt;----------------&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Connects to &amp;quot;imap1.mail.server&amp;quot;, as user &amp;quot;user1&amp;quot; with &amp;quot;secret1&amp;quot; as&lt;/span&gt;
+&lt;span class="c1"&gt;-- password.&lt;/span&gt;
+&lt;span class="n"&gt;EXAMPLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;IMAP&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;username&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;iranzo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;$PASSWORD&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;143&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="c1"&gt;-- My email&lt;/span&gt;
+&lt;span class="n"&gt;myuser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ranzo&amp;#39;&lt;/span&gt;
+
+&lt;span class="kr"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;mine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_cc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="kr"&gt;return&lt;/span&gt; &lt;span class="n"&gt;email&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+
+&lt;span class="kr"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_cc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sender&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+
+&lt;span class="kr"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;days&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;todelete&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;is_older&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;days&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;todelete&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Trash&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="kr"&gt;end&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;-- Define the msgs we&amp;#39;re going to work on&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move sent messages to INBOX to later sorting&lt;/span&gt;
+&lt;span class="n"&gt;sent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Sent&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;sent&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="n"&gt;inbox&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;pending&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/_pending&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;todos&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pending&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;inbox&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Mark as read messages sent from my user&lt;/span&gt;
+&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;is_recent&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;&lt;span class="n"&gt;mark_seen&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Delete google calendar forwards&lt;/span&gt;
+&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;piranzo@gapps.example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move all spam messages to Junk folder&lt;/span&gt;
+&lt;span class="n"&gt;spam&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;X-Spam-Score&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;spam&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Junk&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move Jive notifications&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;jive-notify@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_jive&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter EXAMPLEN&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dev-null@rhn.example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Trash&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter PNT&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;[PNT] &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;noreply@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Trash&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter CPG (Customer Private Group)&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Red Hat - Group &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;noreply@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Remove month start reminders&lt;/span&gt;
+&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mailing list memberships reminder&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Delete messages about New accounts created (RHN)&lt;/span&gt;
+&lt;span class="n"&gt;usercreated&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;New Red Hat user account created&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;noreply@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;usercreated&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Search messages from CPG&amp;#39;s&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust1/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust2/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust3/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;cpg&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust4&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust4/CPG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move bugzilla messages&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;] New:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bugzilla@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_bugzilla/new&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bugzilla@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_bugzilla&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Move all support messages to Other for later processing&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(NEW) (&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;support@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_new&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Case &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;support@example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_new&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;is_seen&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="n"&gt;support&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="c1"&gt;-- Restart the search only for messages in Other to also process if we have new rules&lt;/span&gt;
+
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;is about to breach its SLA&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;has breached its SLA&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_subject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; has had no activity in &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;delete_messages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Here the process is customer after customer and mark as read messages from non-prio customers&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust1/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust2/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust3/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust4&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust4/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- For customer swith common matching names, use header field&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;X-SFDC-X-Account-Number&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;XXXX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust5/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Customer         : COMMONNAME&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust6/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Non prio customers (mark updates as read)&lt;/span&gt;
+&lt;span class="n"&gt;cust7&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;WATCHINGCUST&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Cust7&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;cust7&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;mark_seen&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;cust7&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust7/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter other messages by domain&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;todos.es&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Process all remaining messages in INBOX + all read messages in pending-sort for mailing lists and move to lists folder&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;todos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bounces&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Add EXAMPLE lists, inbox and _pending and Fedora default bin for reprocessing in case a new list has been added&lt;/span&gt;
+&lt;span class="n"&gt;lists&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;todos&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;&lt;span class="n"&gt;select_all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Mailing lists&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- EXAMPLE&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;outages-list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/EXAMPLE/general/outage&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;announce-list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/EXAMPLE/general/announce&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Fedora&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;kickstart-list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora/kickstart&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ambassadors@lists.fedoraproject.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora/Ambassador&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;infrastructure@lists.fedoraproject.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora/infra&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;announce@lists.fedoraproject.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora/announce&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;lists.fedoraproject.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/Fedora&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- OSP&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;openstack@lists.openstack.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/OpenStack&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;openstack-es@lists.openstack.org&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/OpenStack/es&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Filter my messages not filtered back to INBOX&lt;/span&gt;
+&lt;span class="n"&gt;mios&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pending&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;contain_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myuser&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;mios&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- move messages we&amp;#39;re in BCC to INBOX for manual sorting&lt;/span&gt;
+&lt;span class="n"&gt;hidden&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pending&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;mine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pending&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;hidden&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;move_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Start processing of messages older than:&lt;/span&gt;
+&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Delete old messages from mailing lists&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/EXAMPLE/general/media&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/Lists/EXAMPLE/general/outage&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- delete old cases&lt;/span&gt;
+&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;180&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- for each in $(cat .imapfilter/config.lua|grep -i cases|tr &amp;quot; ,()&amp;quot; &amp;quot;\n&amp;quot;|grep cases|sort|uniq|grep -v &amp;quot;:&amp;quot; );do echo &amp;quot;deleteold($each,maxage)&amp;quot;;done&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust1/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust2/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Cust3/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/Other/cases&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;INBOX/EXAMPLE/Customers/_bugzilla&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- Empty trash every 7 days&lt;/span&gt;
+&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;
+&lt;span class="n"&gt;deleteold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Trash&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;maxage&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;As this is applied filtering twice, &lt;code&gt;offlineimap&lt;/code&gt; might be uploading part of your changes already, making it faster to next syncs, and
+shuffle some of your emails while it&amp;nbsp;runs.&lt;/p&gt;
+&lt;p&gt;The point of adding the already filtered set to be filtered again (&lt;span class="caps"&gt;CPG&lt;/span&gt;, cases, etc) is that if a new customer is considered to be filter on a folder of its own, the messages will be picked up and moved accordingly automatically&amp;nbsp;;-)&lt;/p&gt;
+&lt;p&gt;Hope it helps, and happy&amp;nbsp;filtering!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Fri, 28 Aug 2015 15:27:47 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2015-08-28:/blog/2015/08/28/filtering-email-with-imapfilter/</guid><category>tech</category><category>Linux</category><category>email</category><category>IMAP</category><category>imapfilter</category><category>Fedora</category><category>FOSS</category></item><item><title>Install RHEL7/Centos/Fedora on a software raid device</title><link>https://iranzo.io/blog/2015/03/28/install-rhel7centosfedora-on-a-software-raid-device/</link><description>
+&lt;p&gt;Installing Linux on a &lt;span class="caps"&gt;RAID&lt;/span&gt; has lot of advantages, from using &lt;span class="caps"&gt;RAID1&lt;/span&gt; to enjoy protection against drive failures or &lt;span class="caps"&gt;RAID0&lt;/span&gt; to combine the size of several drives to create bigger space for files with all the smaller disks we have.&lt;/p&gt;
+&lt;p&gt;There are several &lt;a href="http://en.wikipedia.org/wiki/RAID"&gt;&lt;span class="caps"&gt;RAID&lt;/span&gt;&lt;/a&gt; level definitions and may have different uses depending on our needs and hardware availability.&lt;/p&gt;
+&lt;p&gt;For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data)..&lt;/p&gt;
+&lt;h2 id="why-or-why-not-use-a-raid-via-software"&gt;Why or why not use a &lt;span class="caps"&gt;RAID&lt;/span&gt; via software&lt;a class="headerlink" href="#why-or-why-not-use-a-raid-via-software" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="pros"&gt;Pros&lt;a class="headerlink" href="#pros" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;There’s no proprietary data on the disks that could require this specific controller in case the hardware fails.&lt;/li&gt;
+&lt;li&gt;Can be performed on any system, disk combination, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="cons"&gt;Cons&lt;a class="headerlink" href="#cons" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The use of dedicated hardware &lt;span class="caps"&gt;RAID&lt;/span&gt; cards allows to offload the &lt;span class="caps"&gt;CPU&lt;/span&gt; intensive tasks for raid calculation, etc to the dedicated processor, freeing internal &lt;span class="caps"&gt;CPU&lt;/span&gt; for system/user usage.&lt;/li&gt;
+&lt;li&gt;Dedicated cards may have fancier features that require no support from the operating system as are all implemented by the card itself and presented to the &lt;span class="caps"&gt;OS&lt;/span&gt; as a standard drive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="performing-the-setup"&gt;Performing the setup&lt;a class="headerlink" href="#performing-the-setup" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;As I was installing on a &lt;code&gt;HP Microserver G8&lt;/code&gt; recently, I had to first disable the advanced mode for the included controller, so it behaved like a standard &lt;span class="caps"&gt;SATA&lt;/span&gt; one, once done, I was able to boot from my &lt;span class="caps"&gt;OS&lt;/span&gt; image (in this case &lt;span class="caps"&gt;EL7&lt;/span&gt; &lt;span class="caps"&gt;ISO&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;Once the &lt;span class="caps"&gt;ISO&lt;/span&gt; is booted in &lt;code&gt;rescue&lt;/code&gt; mode, I could switch to the second console with &lt;code&gt;ALT-F2&lt;/code&gt; so I could start executing commands on the shell.&lt;/p&gt;
+&lt;p&gt;First step is to setup partitioning, in this case I did two partitions, first one for holding &lt;code&gt;/boot&lt;/code&gt; and the second one for setting up the &lt;em&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt; physical volume&lt;/em&gt; where the other &lt;code&gt;Logical Volumes&lt;/code&gt; will be defined later.&lt;/p&gt;
+&lt;p&gt;I’ve elected this setup over others because &lt;code&gt;mdadm&lt;/code&gt; allows transparent support for booting (&lt;code&gt;grub&lt;/code&gt; supports booting form it) and easy to manage setup.&lt;/p&gt;
+&lt;p&gt;For partitions, remember to allocate at least 500mb for &lt;code&gt;/boot&lt;/code&gt; and as much
+as needed for your &lt;span class="caps"&gt;SO&lt;/span&gt;, for example, if only base &lt;span class="caps"&gt;OS&lt;/span&gt; is expected to have &lt;span class="caps"&gt;RAID&lt;/span&gt;
+protection, having a 20Gb partition will be enough, leaving the remaining
+disk to be used for a &lt;span class="caps"&gt;RAID0&lt;/span&gt; device for allocating non-critical files.&lt;/p&gt;
+&lt;p&gt;For both partitions, set type with &lt;code&gt;fdisk&lt;/code&gt; to &lt;code&gt;fd&lt;/code&gt;: &lt;code&gt;Linux RAID autodetect&lt;/code&gt;,
+and setup the two drives we’ll use for initial setup using the same values,
+for example:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fdisk /dev/sda
+n &lt;span class="c1"&gt;# for new partition&lt;/span&gt;
+p &lt;span class="c1"&gt;# for primary&lt;/span&gt;
+&amp;lt;ENTER&amp;gt; &lt;span class="c1"&gt;# for first sector&lt;/span&gt;
++500M &lt;span class="c1"&gt;# for size&lt;/span&gt;
+t &lt;span class="c1"&gt;# for type&lt;/span&gt;
+fd &lt;span class="c1"&gt;# for Linux RAID autodetect&lt;/span&gt;
+n &lt;span class="c1"&gt;# new partition&lt;/span&gt;
+p &lt;span class="c1"&gt;# primary&lt;/span&gt;
+&amp;lt;ENTER&amp;gt;
++20G &lt;span class="c1"&gt;#for size&lt;/span&gt;
+t &lt;span class="c1"&gt;#for type&lt;/span&gt;
+&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="c1"&gt;# for select 2nd partition&lt;/span&gt;
+fd &lt;span class="c1"&gt;# for Linux RAID autodetect&lt;/span&gt;
+&lt;span class="c1"&gt;# n for new partition&lt;/span&gt;
+p &lt;span class="c1"&gt;# for primary&lt;/span&gt;
+&amp;lt;ENTER&amp;gt; &lt;span class="c1"&gt;# for first sector&lt;/span&gt;
+&amp;lt;ENTER&amp;gt; &lt;span class="c1"&gt;# for remaining disk&lt;/span&gt;
+t &lt;span class="c1"&gt;# for type&lt;/span&gt;
+&lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="c1"&gt;# for third partition&lt;/span&gt;
+fd &lt;span class="c1"&gt;# for Linux RAID Autodetect&lt;/span&gt;
+w &lt;span class="c1"&gt;# for Writing changes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;And repeat that for &lt;code&gt;/dev/sdb&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;At this point, we’ll have both &lt;code&gt;sda&lt;/code&gt; and &lt;code&gt;sdb&lt;/code&gt; with the same partitions defined: &lt;code&gt;sd{a,b}1&lt;/code&gt; with 500Mb for &lt;code&gt;/boot&lt;/code&gt; and &lt;code&gt;sd{a,b}2&lt;/code&gt; with 20Gb for &lt;code&gt;LVM&lt;/code&gt; and the remaining disk for &lt;span class="caps"&gt;RAID0&lt;/span&gt; &lt;span class="caps"&gt;LVM&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Now, it’s time to create the raid device on top, for simplicity, I tend to use &lt;code&gt;md0&lt;/code&gt; for /boot, so let’s start with it.&lt;/p&gt;
+&lt;h2 id="creating-the-raid-devices-with-multiple-devices-mdadm"&gt;Creating the raid devices with Multiple Devices &lt;code&gt;mdadm&lt;/code&gt;&lt;a class="headerlink" href="#creating-the-raid-devices-with-multiple-devices-mdadm" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Let’s create the raid devices for each system, starting with &lt;code&gt;/boot&lt;/code&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mdadm --create /dev/md0 --level&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --raid-devices&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; /dev/sda1 /dev/sdb1
+mdadm --create /dev/md1 --level&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --raid-devices&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; /dev/sda2 /dev/sdb2
+mdadm --create /dev/md2 --level&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; --raid-devices&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; /dev/sda3 /dev/sdb3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Now, check the status of the raid device creation by issuing:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cat /proc/mdstat
+
+Personalities : &lt;span class="o"&gt;[&lt;/span&gt;raid1&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;raid6&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;raid5&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;raid4&lt;span class="o"&gt;]&lt;/span&gt;
+md0 : active raid1 sda1&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; sdb1&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+      &lt;span class="m"&gt;534760&lt;/span&gt; blocks level &lt;span class="m"&gt;1&lt;/span&gt;, 64k chunk, algorithm &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;/2&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;UU&lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="o"&gt;[==&lt;/span&gt;&amp;gt;..................&lt;span class="o"&gt;]&lt;/span&gt;  &lt;span class="nv"&gt;recovery&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt;.6% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;37043392&lt;/span&gt;/292945152&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;finish&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;127&lt;/span&gt;.5min &lt;span class="nv"&gt;speed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;33440K/sec
+md1 : active raid1 sda2&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; sdb2&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+      &lt;span class="m"&gt;20534760&lt;/span&gt; blocks level &lt;span class="m"&gt;1&lt;/span&gt;, 64k chunk, algorithm &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;/2&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;UU&lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="o"&gt;[=====&lt;/span&gt;&amp;gt;...............&lt;span class="o"&gt;]&lt;/span&gt;  &lt;span class="nv"&gt;recovery&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;25&lt;/span&gt;.9% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;37043392&lt;/span&gt;/692945152&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;finish&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;627&lt;/span&gt;.5min &lt;span class="nv"&gt;speed&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;13440K/sec
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;When it finishes, all the devices will appear as synced, and we can start the installation of the operating system.&lt;/p&gt;
+&lt;p&gt;What I did, after this point, is to reboot the install media, so I could use &lt;code&gt;anaconda&lt;/code&gt; installer to select manually the filesystems, creating &lt;code&gt;/boot&lt;/code&gt; on &lt;code&gt;/dev/md0&lt;/code&gt;, then the Physical Volume on &lt;code&gt;/dev/md1&lt;/code&gt; for the operating system.&lt;/p&gt;
+&lt;p&gt;Select the &lt;code&gt;manual partitioning&lt;/code&gt; during the installation to define above devices as their intended usage, and once it has been installed, create the additional Physical volume on &lt;code&gt;/dev/md2&lt;/code&gt; and define the intended mount points, etc.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sat, 28 Mar 2015 18:46:42 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2015-03-28:/blog/2015/03/28/install-rhel7centosfedora-on-a-software-raid-device/</guid><category>tech</category><category>Linux</category><category>centos</category><category>Fedora</category><category>RHEL</category><category>FOSS</category></item><item><title>Podcasts with flexget and transmission</title><link>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</link><description>&lt;p&gt;Some podcasts are available via &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds, so you can get notified of new episodes, so the best way I&amp;#8217;ve found so far to automate this procedure is to use the utility &lt;code&gt;flexget&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Flexget can download a &lt;span class="caps"&gt;RSS&lt;/span&gt; feed and get the &lt;code&gt;.torrent&lt;/code&gt; files associated to them and store locally, which makes a perfect fit for later using Transmission&amp;#8217;s &lt;code&gt;watch&lt;/code&gt; folder, to automatically add them to your download&amp;nbsp;queue.&lt;/p&gt;
+&lt;p&gt;In order to do so, install &lt;code&gt;flexget&lt;/code&gt; either via pip (&lt;code&gt;pip install flexget&lt;/code&gt;) or using a package for your distribution and create a configuration file similar to&amp;nbsp;this:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;cat ~/.flexget/config.yml&lt;/span&gt;
+
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;tasks&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;download-rss&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;rss&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;http://URL/TO/YOUR/PODCAST/FEED&lt;/span&gt;
+    &lt;span class="nt"&gt;all_series&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;yes&lt;/span&gt;
+    &lt;span class="nt"&gt;only_new&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;yes&lt;/span&gt;
+    &lt;span class="nt"&gt;download&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;/media/watch/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;At each invocation of &lt;code&gt;flexget execute&lt;/code&gt; it will access the &lt;span class="caps"&gt;RSS&lt;/span&gt; feed, search for new files and store the relevant &lt;code&gt;.torrent&lt;/code&gt; files on the folder &lt;code&gt;/media/watch&lt;/code&gt; from where transmission will pick up the new files and add them to your downloading queue for automatic&amp;nbsp;download.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Mon, 16 Mar 2015 21:45:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2015-03-16:/blog/2015/03/16/podcasts-with-flexget-and-transmission/</guid><category>tech</category><category>Fedora</category><category>FOSS</category></item><item><title>Herramientas de sincronización/backup</title><link>https://iranzo.io/blog/2011/12/08/herramientas-de-sincronizacionbackup-es/</link><description>&lt;p&gt;Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de &amp;#8216;backup&amp;#8217; en caso de fallo hardware de algún&amp;nbsp;equipo.&lt;/p&gt;
+&lt;p&gt;Estuve probando y evaluando diversas herramientas multiplataforma y junto a algunas más, las que más probé fueron&amp;nbsp;estas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.aerofs.com/"&gt;AeroFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://db.tt/NV5zDvs"&gt;Dropbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.syncany.org/"&gt;Syncany&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://sparkleshare.org/"&gt;Sparkleshare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.wuala.com/"&gt;Wuala&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spideroak.com/download/referral/dfba22f9764b55ab68427da014e9f0e5"&gt;SpiderOak&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Actualmente necesito &amp;#8216;salvar/sincronizar&amp;#8217; unos 35Gb de datos (fotos la gran mayoría y no precisamente en &lt;span class="caps"&gt;RAW&lt;/span&gt;), lo que provocó estas comparativas, preferiblemente de servicios que ofrecieran espacio&amp;nbsp;gratuito.&lt;/p&gt;
+&lt;p&gt;En resumen, de las opensource (Syncany/Sparkleshare), están todavía bastante en pañales, aunque prometen mucho, más syncany por la variedad de posibles destinos de copias que sparkleshare (necesidad de repositorio git,&amp;nbsp;etc).&lt;/p&gt;
+&lt;p&gt;De las &amp;#8216;comerciales&amp;#8217;, Wuala ofrecía posibilidad de compartir espacio local a cambio de espacio en la nube que permitía compartir esos &lt;span class="caps"&gt;GB&lt;/span&gt; no utilizados por &lt;span class="caps"&gt;GB&lt;/span&gt; fuera de donde tenías tus ordenadores, garantizando que en caso de problemas fisicos, ambientales,etc, poder acceder a los datos, pero en Octubre de 2011, con la salida de la nueva versión, dejaron de ofrecer el servicio, convirtiendo el espacio conseguido en un &amp;#8216;vale&amp;#8217; hasta Octubre de 2012&amp;#8230; que ha provocado que tenga que reemplazar esa solución que venía&amp;nbsp;utilizando.&lt;/p&gt;
+&lt;p&gt;Dropbox, a pesar de los referrals y de cuenta de email &amp;#8220;.edu&amp;#8221;, no ofrece más de 16 Gb a no ser que sean planes de pago, que por ahora la deja fuera (además del hecho de no permitir especificar clave de cifrado de los datos, que por otro lado aporta que si alguien había subido el fichero antes, la subida es&amp;nbsp;instantánea).&lt;/p&gt;
+&lt;p&gt;SpiderOak ofrece menos espacio (pero parte de 5Gb y ahora es posible subir hasta 50Gb por referrals), tiene repositorio para yum para las actualizaciones y se puede ejecutar tanto en modo &amp;#8216;&lt;span class="caps"&gt;GUI&lt;/span&gt;&amp;#8217; como en línea de comandos (por contra la sincronización se lanza cada x tiempo, no parece tan fluida como&amp;nbsp;Dropbox).&lt;/p&gt;
+&lt;p&gt;AeroFS: una recién llegada, que sigue en versión alpha, basada en Java, multiplataforma (&lt;span class="caps"&gt;EL6&lt;/span&gt; o superior) y que no ofrece de &amp;#8216;salida&amp;#8217; espacio online, simplemente la sincronización entre tus equipos, pudiendo hacer cambios en cualquiera de ellos y luego sincronizándolos entre sí, incluso sin conectividad a Internet (sólo hace falta internet para dar de alta una carpeta nueva en un equipo o dar de alta un equipo (para sincronización de autorizaciones con el servidor de&amp;nbsp;Aerofs)).&lt;/p&gt;
+&lt;p&gt;Actualmente AeroFS es la que más promete por no limitar el espacio excepto al que dispongas en tus equipos, pero con mi colección de documentos y 4 equipos a la vez he tenido problemas de ficheros renombrados &amp;#8220;terminados con números entre paréntesis&amp;#8221;, sincronizaciones lentas (utilizar un interfaz vía hamachi en lugar del interfaz de red local), no sincronización de enlaces simbólicos y destrucción de ficheros con enlaces duros (deja sólo una copia), pero es la única que cubre por ahora mis necesidades con respecto a lo que hacía wuala (a excepción de no tener aplicaciones para móvil y claro está, no funcionar si ningún equipo con los datos está&amp;nbsp;conectado).&lt;/p&gt;
+&lt;p&gt;De como evolucionen syncany y aerofs de aquí a octubre, decidirá si escojo una de estas dos o sigo evaluando alternativas para los backups&amp;#8230; por ahora sigo con Dropbox para cosas rápidas que no necesito excesiva privacidad y para el resto Wuala y he añadido duplicity para hacer backup a un &lt;span class="caps"&gt;NAS&lt;/span&gt; en mi red local a la espera de ir probando mejor AeroFS y ver cómo respira&amp;nbsp;syncany&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 08 Dec 2011 11:52:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2011-12-08:/blog/2011/12/08/herramientas-de-sincronizacionbackup-es/</guid><category>tech</category><category>fedora</category><category>dropbox</category><category>foss</category></item><item><title>Probando nuevos escritorios</title><link>https://iranzo.io/blog/2011/12/08/probando-nuevos-escritorios-es/</link><description>&lt;p&gt;Hace ya años que pasé de &lt;span class="caps"&gt;KDE&lt;/span&gt; con la llegada de &lt;span class="caps"&gt;KDE&lt;/span&gt; 3 a utilizar &lt;span class="caps"&gt;GNOME&lt;/span&gt;, más &amp;#8216;espartano&amp;#8217;, pero con mejor&amp;nbsp;rendimiento.&lt;/p&gt;
+&lt;p&gt;Con Fedora 15 pasé a utilizar &lt;span class="caps"&gt;GNOME&lt;/span&gt; 3, bastante &amp;#8216;innovador&amp;#8217;, algo extraño, pero me fui acostumbrando relativamente bien, pero con la llegada de Fedora 16 y la versión 3.2, noto el equipo (que sigue siendo el mismo) con frecuentes enganchones y&amp;nbsp;lentitud.&lt;/p&gt;
+&lt;p&gt;Una opción sería subir los 2Gb de memoria a 4Gb, pero me parece tirar dinero cuando el equipo necesitaría una renovación durante el próximo año (P4 dual 2.8 Ghz del año&amp;nbsp;2004).&lt;/p&gt;
+&lt;p&gt;Así que me he animado, primero con &lt;span class="caps"&gt;XFCE&lt;/span&gt;, que va mejor, pero lo sigo notando lento de respuesta y por ahora con &lt;span class="caps"&gt;LXDE&lt;/span&gt;, de entorno muy parecido a &lt;span class="caps"&gt;GNOME&lt;/span&gt; 2.x, rápido, con iconos en el escritorio, etc, pero con alguna&amp;nbsp;pega.&lt;/p&gt;
+&lt;p&gt;Mejora:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Velocidad&lt;/li&gt;
+&lt;li&gt;Iconos en el&amp;nbsp;escritorio&lt;/li&gt;
+&lt;li&gt;Velocidad del terminal, tanto en &lt;span class="caps"&gt;XFCE&lt;/span&gt; como en &lt;span class="caps"&gt;LXDE&lt;/span&gt; con respecto a gnome-terminal y combinaciones de teclas muy parecidas para nuevas pestañas,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Empeora:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El gestor de ficheros no ordena alfabéticamente de forma&amp;nbsp;correcta&lt;/li&gt;
+&lt;li&gt;La configuración de algunos aspectos como combinaciones de teclas para bloquear entorno deben hacerse con un editor de&amp;nbsp;ficheros&lt;/li&gt;
+&lt;li&gt;Echo en falta el &amp;#8216;exposé&amp;#8217; de &lt;span class="caps"&gt;GNOME3&lt;/span&gt; ahora que me había&amp;nbsp;acostumbrado&lt;/li&gt;
+&lt;li&gt;A veces el alt-f2 abre el diálogo de ejecutar por detrás de la ventana activa y toca usar alt-tab para ponerlo en primer&amp;nbsp;plano.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Por ahora voy a seguir con &lt;span class="caps"&gt;LXDE&lt;/span&gt; en dos equipos y ver si finalmente lo pongo en todos o busco alguna alternativa&amp;nbsp;más.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 08 Dec 2011 11:13:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2011-12-08:/blog/2011/12/08/probando-nuevos-escritorios-es/</guid><category>tech</category><category>fedora</category><category>foss</category></item><item><title>duplicity for managing backups</title><link>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</link><description>&lt;p&gt;A few days ago, I was checking a friend&amp;#8217;s system for backing&amp;nbsp;up.&lt;/p&gt;
+&lt;p&gt;It was based on &lt;code&gt;rsync&lt;/code&gt; at the Linux side and &lt;code&gt;rsync&lt;/code&gt; server on a windows machine he uses for storing information generated by other&amp;nbsp;software.&lt;/p&gt;
+&lt;p&gt;The solution with &lt;code&gt;rsync&lt;/code&gt; worked pretty well for him until he started to put several strange characters in filenames which rendered the backup unusable to certain&amp;nbsp;point.&lt;/p&gt;
+&lt;p&gt;After being asked for alternative backup software that was available on several platforms, I&amp;#8217;ve ended testing&amp;nbsp;duplicity.&lt;/p&gt;
+&lt;p&gt;As a command line interface tool, it can run pretty well on cron jobs, and eases the management of doing full or incremental backups to several kinds of&amp;nbsp;targets.&lt;/p&gt;
+&lt;p&gt;Duplicity can also take care of tiding backup store removing older backups and automatically perform a full backup if older than x time, so you can automate the full backup&amp;nbsp;management.&lt;/p&gt;
+&lt;p&gt;Best of all is the backend support, as you can do backups over &lt;code&gt;rsync&lt;/code&gt;, &lt;code&gt;scp&lt;/code&gt;, &lt;code&gt;ftp&lt;/code&gt;, &lt;code&gt;file&lt;/code&gt;, &lt;code&gt;imap&lt;/code&gt;, &lt;code&gt;ssh&lt;/code&gt;, &lt;code&gt;amazon&lt;/code&gt;, &lt;code&gt;webdav&lt;/code&gt;, etc , so you can use that old &lt;span class="caps"&gt;NAS&lt;/span&gt; to store your backups without any special support except pretty standard protocols even on low-end&amp;nbsp;models.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Mon, 27 Jun 2011 18:35:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2011-06-27:/blog/2011/06/27/duplicity-for-managing-backups/</guid><category>tech</category><category>Fedora</category><category>backup</category><category>FOSS</category></item><item><title>Firsts steps with Fedora 15 pre-alpha</title><link>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</link><description>&lt;p&gt;Today I&amp;#8217;ve decided to give it a try to F15-prealpha (expected to release&amp;nbsp;tomorrow).&lt;/p&gt;
+&lt;p&gt;The upgrade performed in the unsupported way (getting and forcing install for newer fedora-release from a mirror then start issuing several yum upgrades) when reasonably&amp;nbsp;good.&lt;/p&gt;
+&lt;p&gt;Only some minor dependency problems &lt;code&gt;et voilà&lt;/code&gt;, system started&amp;nbsp;fine.&lt;/p&gt;
+&lt;p&gt;Problems so&amp;nbsp;far:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Firefox 4 has a few approved extensions, I used the &amp;#8220;nightly tester tools&amp;#8221; to disable version check and enable most of the ones I had with 3.6.x without&amp;nbsp;problems.&lt;/li&gt;
+&lt;li&gt;Don&amp;#8217;t like gnome-shell at the&amp;nbsp;moment&lt;/li&gt;
+&lt;li&gt;Desktop icons&amp;nbsp;disappeared&amp;#8230;&lt;/li&gt;
+&lt;li&gt;Menu bar is black and found no way to configure it&amp;nbsp;yet&lt;/li&gt;
+&lt;li&gt;Gnome-applets have some dependency problems and can&amp;#8217;t install or configure them, furthermore I lost my tray area on one of the computers but works fine on the&amp;nbsp;other.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I hope that tomorrow&amp;#8217;s release of Alpha will fix some of them in order to warm-up for final launch (&lt;a href="http://fedoraproject.org/wiki/Releases/15/Schedule"&gt;http://fedoraproject.org/wiki/Releases/15/Schedule&lt;/a&gt;)&amp;#8230;&lt;/p&gt;
+&lt;p&gt;Update: wed&amp;nbsp;09/03/2011:&lt;/p&gt;
+&lt;p&gt;After &amp;#8216;Alpha&amp;#8217;&amp;nbsp;release:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Like a bit more gnome-shell, but sometimes my desktop starts in compatibility (legacy)&amp;nbsp;mode&lt;/li&gt;
+&lt;li&gt;Active corners (upper left: show windows, favorites, search for apps, lower right: show&amp;nbsp;tray)&lt;/li&gt;
+&lt;li&gt;with empathy, notifications of new chats in bottom center of screen that let you answer in that area (but then if you open the window, it will &amp;#8216;random sort&amp;#8217; the messages you&amp;nbsp;wrote/received&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;GDM&lt;/span&gt; will not allow you to login (there&amp;#8217;s an update on koji that updates &lt;code&gt;accountservice&lt;/code&gt; that got positive karma today and will be pushed to updates&amp;nbsp;repo)&lt;/li&gt;
+&lt;li&gt;Under your user name in gnome-shell, there&amp;#8217;s no &amp;#8216;power off&amp;#8217;, just &amp;#8216;suspend&amp;#8217; but that gets my desktop computer powered off in seconds, and the best of all, started again in seconds (and my computer is an Athlon 64 3Ghz with 2Gb ram from 2004) (&lt;a href="http://www.youtube.com/watch?v=xPRh1NvOhqI"&gt;http://www.youtube.com/watch?v=xPRh1NvOhqI&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Still missing desktop&amp;nbsp;icons&lt;/li&gt;
+&lt;li&gt;Still missing gnome-applets&amp;nbsp;:&amp;#8217;(&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Update Wed&amp;nbsp;16/Mar/2011&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Still missing desktop icons&amp;nbsp;/gnome-applets&lt;/li&gt;
+&lt;li&gt;Sometimes gdm doesn&amp;#8217;t show usernames, but you can enter&amp;nbsp;username/password&lt;/li&gt;
+&lt;li&gt;Evolution has a good integration with Google services (Contacts/Calendar/Gmail) so you can use it as an offline&amp;nbsp;client&lt;/li&gt;
+&lt;li&gt;Some bugs opened on bugzilla, but still more than 15 days for &amp;#8216;Beta&amp;#8217;, and a very good ratio of fixes&amp;nbsp;:)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Will keep updating this post with newer&amp;nbsp;information!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Mon, 07 Mar 2011 17:26:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2011-03-07:/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</guid><category>tech</category><category>fedora</category><category>foss</category></item><item><title>Rescate de sistemas virtuales (Xen)</title><link>https://iranzo.io/blog/2010/04/23/rescate-de-sistemas-virtuales-xen-es/</link><description>&lt;p&gt;A raíz de un problema debido a reiterados apagones, me vi en la necesidad de levantar una máquina virtual que ya no&amp;nbsp;arrancaba.&lt;/p&gt;
+&lt;p&gt;En un sistema físico, lo que haríamos, es que según en qué punto estemos, usar un disco de arranque de nuestra distribución y por un lado reparar el sistema de ficheros con fsck o rehacer un&amp;nbsp;initrd.img.&lt;/p&gt;
+&lt;p&gt;¿Cómo hacemos esto si la máquina en lugar de ser una real, es una&amp;nbsp;virtual?.&lt;/p&gt;
+&lt;p&gt;Copiando el fichero de configuración de nuestra máquina a &amp;#8216;rescate&amp;#8217;, podemos editar la línea del cargador (eliminando pygrub) e indicando como kernel e initrd.img los de nuestro cd de distribución (en el caso de Xen, images/xen para &lt;span class="caps"&gt;EL5&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;Una vez arrancado, ya podemos seguir el procedimiento estándar de&amp;nbsp;recuperación.&lt;/p&gt;
+&lt;p&gt;En el caso de tener que reconstruir el initrd, podemos tener un problema añadido, pero por otro lado, al ser todo máquinas virtuales &amp;#8216;con el mismo hardware&amp;#8217;, es muy sencillo crear otra máquina virtual e instalarla indicando los mismos nombres para los vg&amp;#8217;s, particiones de arranque, etc y luego copiar el initrd.img y el kernel de la máquina nueva a la antigua y arrancarla, para llegados a este punto, reinstalar la última versión del kernel disponible con nuestro sistema ya&amp;nbsp;arrancado.&lt;/p&gt;
+&lt;p&gt;La copia la podemos hacer bien desde el medio de rescate o montando mediante loopback el fichero de la máquina virtual (con &lt;span class="caps"&gt;LVM&lt;/span&gt;&amp;#8217;s es trivial) (puedes encontrar mucha información al respecto buscando por xen image y loopback&amp;nbsp;offset).&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Fri, 23 Apr 2010 23:31:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-04-23:/blog/2010/04/23/rescate-de-sistemas-virtuales-xen-es/</guid><category>tech</category><category>fedora</category><category>xen</category><category>foss</category></item><item><title>“Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible (Linux/Windows)”</title><link>https://iranzo.io/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de-bios-en-un-ejecutable-autoextraible-linuxwindows-es/</link><description>&lt;p&gt;Usando unetbootin (&lt;a href="http://unetbootin.sourceforge.net/"&gt;http://unetbootin.sourceforge.net/&lt;/a&gt;) podemos crear pendrives de arranque a partir de imágenes &lt;span class="caps"&gt;ISO&lt;/span&gt; o imágenes de disco, así como ficheros propios o bien predefinidos para varias&amp;nbsp;distribuciones.&lt;/p&gt;
+&lt;p&gt;Si queremos además, crear un fichero ejecutable autodescomprimible, para que el usuario final sólo deba ejecutarlo e introducir un pendrive y que se cree &amp;#8216;solo&amp;#8217;, deberemos tener&amp;nbsp;además:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;7zip &lt;a href="http://sourceforge.net/projects/sevenzip/files/"&gt;http://sourceforge.net/projects/sevenzip/files/&lt;/a&gt; (para crear un fichero comprimido con los ficheros a&amp;nbsp;incluir)&lt;/li&gt;
+&lt;li&gt;7zip &lt;span class="caps"&gt;SFX&lt;/span&gt; (7zS.sfx) dentro del fichero &amp;#8216;Extra&amp;#8217; de &lt;a href="http://sourceforge.net/projects/sevenzip/files/"&gt;http://sourceforge.net/projects/sevenzip/files/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En una carpeta, copiaremos el ejecutable de unetbootin al que llamaremos &lt;code&gt;unetbootin.exe&lt;/code&gt;, añadiremos el fichero &lt;code&gt;7z.sfx&lt;/code&gt; y la imagen de flasheo &lt;span class="caps"&gt;BIOS&lt;/span&gt; a la que llamaremos &lt;code&gt;flash.img&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Yo añado también un fichero &lt;code&gt;syslinux.cfg&lt;/code&gt; que desactiva la linea &lt;code&gt;vesamenu.c32&lt;/code&gt; que pone por defecto unedbootin,&amp;nbsp;quedando:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="na"&gt;---------- syslinux.cfg --------------&lt;/span&gt;
+&lt;span class="na"&gt;default unetbootindefault&lt;/span&gt;
+&lt;span class="na"&gt;prompt 0&lt;/span&gt;
+&lt;span class="na"&gt;menu title UNetbootin&lt;/span&gt;
+&lt;span class="na"&gt;timeout 100&lt;/span&gt;
+
+&lt;span class="na"&gt;label unetbootindefault&lt;/span&gt;
+&lt;span class="na"&gt;menu label Default&lt;/span&gt;
+&lt;span class="na"&gt;kernel /ubnkern&lt;/span&gt;
+&lt;span class="na"&gt;append initrd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;/ubninit&lt;/span&gt;
+&lt;span class="na"&gt;-----------------------------------------&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Con 7zip comprimiremos los ficheros &lt;code&gt;flash.img&lt;/code&gt; , &lt;code&gt;syslinux.cfg&lt;/code&gt; y &lt;code&gt;unedbootin.exe&lt;/code&gt; a un fichero llamado &lt;code&gt;todo.7z&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Crearemos un fichero &amp;#8216;config.txt con las órdenes a ejecutar, por&amp;nbsp;ejemplo&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;------------------- config.txt ----------------
+!@Install@!UTF-8!
+&lt;span class="nv"&gt;RunProgram&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;unetbootin.exe lang=es method=diskimage imgfile=&amp;#39;flash.img&amp;#39; cfgfile=&amp;#39;syslinux.cfg&amp;#39; nocustom=y nodistro=y  message=&amp;#39;Presione OK para generar Pendrive de Flasheo BIOS&amp;#39;  installtype=USB&amp;quot;&lt;/span&gt;
+!@InstallEnd@
+-------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Puedes consultar la referencia de comandos en &lt;a href="http://sourceforge.net/apps/trac/unetbootin/wiki/commands"&gt;http://sourceforge.net/apps/trac/unetbootin/wiki/commands&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Los que hay indicados, ponen el idioma en castellano, indica que usaremos una imagen de disco que está en el fichero &lt;code&gt;flash.img&lt;/code&gt;, usaremos el fichero de menu &lt;code&gt;syslinux.cfg&lt;/code&gt;, no permitiremos personalizar la creación, no dejaremos escoger distribución, definimos el mensaje a mostrar y crearemos un medio &lt;span class="caps"&gt;USB&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;En el paso final, debemos concatenar los ficheros en un único&amp;nbsp;ejecutable&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+cat 7zS.sfx config.txt todo7z &amp;gt; autoejecutable.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Cuando enviemos el fichero &lt;code&gt;autoejecutable.exe&lt;/code&gt; a un usuario, al ejecutarlo, se descomprimirá el fichero &lt;code&gt;todo.7z&lt;/code&gt; contenido dentro del ejecutable y se lanzará la línea de comando del &lt;code&gt;config.txt&lt;/code&gt;, lanzando unetbootin para la&amp;nbsp;creación&amp;#8230;.&lt;/p&gt;
+&lt;p&gt;Podemos utilizar este método (sin hacer el autoejecutable), para crear un pendrive de arranque de forma manual y poder actualizar nuestra bios,&amp;nbsp;etc.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 15 Apr 2010 14:18:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-04-15:/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de-bios-en-un-ejecutable-autoextraible-linuxwindows-es/</guid><category>tech</category><category>fedora</category><category>foss</category></item><item><title>Combinar correspondencia con OpenOffice.org</title><link>https://iranzo.io/blog/2010/04/05/combinar-correspondencia-con-openofficeorg-es/</link><description>&lt;p&gt;Hacía un tiempo que no usaba la función de combinar correspondencia y en el equipo de sobremesa con Fedora 13 x86_64 no conseguía hacerla&amp;nbsp;funcionar.&lt;/p&gt;
+&lt;p&gt;Antes de&amp;nbsp;nada:&lt;/p&gt;
+&lt;h2 id="que-es-combinar-correspondencia"&gt;Qué es combinar correspondencia&lt;a class="headerlink" href="#que-es-combinar-correspondencia" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Una de las ventajas de tener la información en formato digital es su tratamiento, y una de las opciones más habituales, es tener bases de datos con la información que necesitamos y acceder a&amp;nbsp;ella.&lt;/p&gt;
+&lt;p&gt;La función de &amp;#8216;combinar correspondencia&amp;#8217; permite utilizar los datos de una base de datos para rellenar campos en un documento y luego, escoger la salida (impresión, nuevos documentos, email,&amp;nbsp;etc).&lt;/p&gt;
+&lt;h2 id="pasos"&gt;Pasos&lt;a class="headerlink" href="#pasos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Antes de nada, es conveniente instalar el paquete &lt;code&gt;openoffice.org-emailmerge&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En mi caso, tuve que vaciar la carpeta de configuración de OpenOffice (no me aparecía la opción de configuración para correo dentro de las opciones de&amp;nbsp;&amp;#8216;Writer&amp;#8217;).&lt;/p&gt;
+&lt;p&gt;En dicha opción, deberemos configurar servidor &lt;span class="caps"&gt;SMTP&lt;/span&gt; saliente, email, nombre del remitente,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;Una vez configurado, podemos iniciar el asistente desde el menú herramientas y paso a paso seguir el proceso de&amp;nbsp;creación.&lt;/p&gt;
+&lt;p&gt;En los diversos pasos&amp;nbsp;iremos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Escogiendo el documento&amp;nbsp;origen&lt;/li&gt;
+&lt;li&gt;Origen de datos (por ejemplo una hoja de cálculo &lt;span class="caps"&gt;ODS&lt;/span&gt; y también aplicarle filtros para escoger sólo los registros (por filas) que nos&amp;nbsp;interesen)&lt;/li&gt;
+&lt;li&gt;Tipo de destino (Cartas, o&amp;nbsp;email)&lt;/li&gt;
+&lt;li&gt;Documento (aquí, podremos minimizar el asistente y comenzar a editar nuestra carta, email,&amp;nbsp;etc)&lt;/li&gt;
+&lt;li&gt;Proceder a combinar el documento (haciendo el envío de emails,&amp;nbsp;etc).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Los pasos &amp;#8216;críticos&amp;#8217; son&amp;nbsp;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;escoger el origen de datos y ajustar el filtro para afectar sólo a los datos que nos&amp;nbsp;interesen&lt;/li&gt;
+&lt;li&gt;editar el documento que sirve de plantilla para la combinación insertando todos aquellos campos que queramos que aparezcan (por ejemplo, de una libreta de direcciones: nombre, apellidos, dirección,&amp;nbsp;etc)&lt;/li&gt;
+&lt;li&gt;a la hora de la combinación , escoger si es un email, el asunto y el campo que contiene la dirección de email del&amp;nbsp;destinatario.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Una vez finalizado, en ese último paso del asistente podemos lanzar el envío de los&amp;nbsp;correos.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Mon, 05 Apr 2010 21:50:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-04-05:/blog/2010/04/05/combinar-correspondencia-con-openofficeorg-es/</guid><category>tech</category><category>fedora</category><category>foss</category></item><item><title>Dropbox en Fedora</title><link>https://iranzo.io/blog/2010/04/01/dropbox-en-fedora-es/</link><description>&lt;p&gt;Para instalar dropbox en Fedora, no es necesario realizar excesivos&amp;nbsp;pasos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Abrir una cuenta&amp;nbsp;en&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.dropbox.com/referrals/NTM4OTM3ODI5"&gt;Dropbox&lt;/a&gt; (o si prefieres, en una empresa alternativa&amp;nbsp;como&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://spideroak.com/download/referral/dfba22f9764b55ab68427da014e9f0e5"&gt;SpiderOak&lt;/a&gt; (O &lt;a href="http://www.wuala.com/referral/FK4KF3PFHJAF64A74KMB"&gt;Wuala&lt;/a&gt; que ofrece espacio adicional por compartir espacio en tu propio&amp;nbsp;disco)&lt;/li&gt;
+&lt;li&gt;Instalar en nuestra fedora el paquete correspondiente para &lt;a href="https://www.dropbox.com/downloading?os=lnx"&gt;Nautilus&lt;/a&gt; (aunque ponga que es para Fedora 10, funciona perfectamente en superiores (probado en 12 y&amp;nbsp;13))&lt;/li&gt;
+&lt;li&gt;Al volver a iniciar sesión (o la lanzar el programa), aparecerá un icono en la bandeja de sistema y comenzará el proceso de configuración en el que se asocia el &amp;#8216;escritorio&amp;#8217; a la cuenta de dropbox que creamos&amp;nbsp;anteriormente.&lt;/li&gt;
+&lt;li&gt;Durante el asistente, podremos escoger la ubicación de la carpeta que empezará a sincronizarse, utilizando los &amp;#8216;emblemas&amp;#8217; de Gnome para indicar el estado de sincronización con &amp;#8216;la nube&amp;#8217;. Adicionalmente, en los menús contextuales, podremos copiar un enlace público para compartir ese fichero con otros usuarios sin necesidad de compartir una carpeta, o bien compartir una carpeta entera y que se pueda colaborar en ella con un grupo de&amp;nbsp;personas.&lt;/li&gt;
+&lt;li&gt;Repitiendo los pasos 2 a 4 podremos ir enlazando otros pc&amp;#8217;s entre los que se replicarán automáticamente los ficheros que&amp;nbsp;compartamos.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SELinux: Si tienes problemas con SELinux, revisa la discusión en &lt;a href="http://forums.dropbox.com/topic.php?id=26808&amp;amp;replies=24"&gt;http://forums.dropbox.com/topic.php?id=26808&amp;amp;replies=24&lt;/a&gt; en la que se apunta a que realices los siguientes&amp;nbsp;pasos:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pasos a&amp;nbsp;ejecutar:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash
+ cd .drobpox-dist/
+ [.dropbox-dist]$ execstack -q _ctypes.so X _ctypes.so
+ [.dropbox-dist]$ execstack -c _ctypes.so
+ [.dropbox-dist]$ execstack -q _ctypes.so - _ctypes.so
+ [.dropbox-dist]$ getenforce
+ Enforcing&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Y que, de esta forma, consigas que funcione dropbox con SELinux en modo&amp;nbsp;enforcing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LANSync&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Abre en tu cortafuegos los puertos 17500 por &lt;span class="caps"&gt;TCP&lt;/span&gt; y por &lt;span class="caps"&gt;UDP&lt;/span&gt; para que la funcionalidad de sincronización en la &lt;span class="caps"&gt;LAN&lt;/span&gt; funcione (permitiendo que los equipos con dropbox en la misma red sincronicen mucho más rápido entre&amp;nbsp;ellos)&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 01 Apr 2010 11:54:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-04-01:/blog/2010/04/01/dropbox-en-fedora-es/</guid><category>tech</category><category>fedora</category><category>dropbox</category><category>foss</category></item><item><title>Sincronizar ‘basicamente’ iPhone o iPod Touch en Fedora 12</title><link>https://iranzo.io/blog/2010/03/02/sincronizar-basicamente-iphone-o-ipod-touch-en-fedora-12-es/</link><description>&lt;p&gt;Las nuevas versiones no están todavía soportadas en Fedora 12, así que tendremos que utilizar las de&amp;nbsp;rawhide.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+yum --enablerepo&lt;span class="o"&gt;=&lt;/span&gt;rawhide upgrade ifuse gtkpod libgpod libimobiledevice usbmuxd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Una vez instalados, podemos empezar a utilizarlo ejecutando como&amp;nbsp;root:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+mkdir -p /mnt/ipod
+chmod &lt;span class="m"&gt;777&lt;/span&gt; /mnt/ipod
+usbmuxd -v -f
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Y como nuestro&amp;nbsp;usuario:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+ifuse /mnt/ipod
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;A partir de ahí podrás, si todo ha ido bien, utilizar &lt;code&gt;gtkpod&lt;/code&gt; para gestionar la biblioteca de tu&amp;nbsp;dispositivo.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Tue, 02 Mar 2010 14:43:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-03-02:/blog/2010/03/02/sincronizar-basicamente-iphone-o-ipod-touch-en-fedora-12-es/</guid><category>tech</category><category>fedora</category><category>foss</category></item><item><title>Creación de distribuciones Live con Fedora</title><link>https://iranzo.io/blog/2008/09/24/creacion-de-distribuciones-live-con-fedora-es/</link><description>
+&lt;h2 id="introduccion"&gt;Introducción&lt;a class="headerlink" href="#introduccion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Según lo visto en el artículo &lt;a href="https://iranzo.io/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda-es/"&gt;Kickstart&lt;/a&gt;, podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un &lt;span class="caps"&gt;DVD&lt;/span&gt; autoinstalable, un servidor http, etc.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://iranzo.io/blog/2008/06/14/fedora-es/"&gt;Fedora&lt;/a&gt; proporciona unas utilidades ‘livecd-tools’ que permiten, utilizando un fichero kickstart crear una imagen &lt;span class="caps"&gt;ISO&lt;/span&gt; con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un &lt;span class="caps"&gt;CD&lt;/span&gt;/&lt;span class="caps"&gt;DVD&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id="ejemplo"&gt;Ejemplo&lt;a class="headerlink" href="#ejemplo" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Por ejemplo, podemos personalizar nuestro medio ‘live’ cambiando el mensaje de login con un:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+%post
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"Sistema personalizado Live"&lt;/span&gt; &amp;gt; /etc/issue
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Utilizando la sección &lt;code&gt;%packages&lt;/code&gt; podemos por ejemplo instalar los paquetes openssh, o el entorno gráfico que luego tendremos disponibles en nuestro sistema.&lt;/p&gt;
+&lt;p&gt;Un ejemplo de kickstart para un medio Live podría ser:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;
+&lt;span class="normal"&gt;32&lt;/span&gt;
+&lt;span class="normal"&gt;33&lt;/span&gt;
+&lt;span class="normal"&gt;34&lt;/span&gt;
+&lt;span class="normal"&gt;35&lt;/span&gt;
+&lt;span class="normal"&gt;36&lt;/span&gt;
+&lt;span class="normal"&gt;37&lt;/span&gt;
+&lt;span class="normal"&gt;38&lt;/span&gt;
+&lt;span class="normal"&gt;39&lt;/span&gt;
+&lt;span class="normal"&gt;40&lt;/span&gt;
+&lt;span class="normal"&gt;41&lt;/span&gt;
+&lt;span class="normal"&gt;42&lt;/span&gt;
+&lt;span class="normal"&gt;43&lt;/span&gt;
+&lt;span class="normal"&gt;44&lt;/span&gt;
+&lt;span class="normal"&gt;45&lt;/span&gt;
+&lt;span class="normal"&gt;46&lt;/span&gt;
+&lt;span class="normal"&gt;47&lt;/span&gt;
+&lt;span class="normal"&gt;48&lt;/span&gt;
+&lt;span class="normal"&gt;49&lt;/span&gt;
+&lt;span class="normal"&gt;50&lt;/span&gt;
+&lt;span class="normal"&gt;51&lt;/span&gt;
+&lt;span class="normal"&gt;52&lt;/span&gt;
+&lt;span class="normal"&gt;53&lt;/span&gt;
+&lt;span class="normal"&gt;54&lt;/span&gt;
+&lt;span class="normal"&gt;55&lt;/span&gt;
+&lt;span class="normal"&gt;56&lt;/span&gt;
+&lt;span class="normal"&gt;57&lt;/span&gt;
+&lt;span class="normal"&gt;58&lt;/span&gt;
+&lt;span class="normal"&gt;59&lt;/span&gt;
+&lt;span class="normal"&gt;60&lt;/span&gt;
+&lt;span class="normal"&gt;61&lt;/span&gt;
+&lt;span class="normal"&gt;62&lt;/span&gt;
+&lt;span class="normal"&gt;63&lt;/span&gt;
+&lt;span class="normal"&gt;64&lt;/span&gt;
+&lt;span class="normal"&gt;65&lt;/span&gt;
+&lt;span class="normal"&gt;66&lt;/span&gt;
+&lt;span class="normal"&gt;67&lt;/span&gt;
+&lt;span class="normal"&gt;68&lt;/span&gt;
+&lt;span class="normal"&gt;69&lt;/span&gt;
+&lt;span class="normal"&gt;70&lt;/span&gt;
+&lt;span class="normal"&gt;71&lt;/span&gt;
+&lt;span class="normal"&gt;72&lt;/span&gt;
+&lt;span class="normal"&gt;73&lt;/span&gt;
+&lt;span class="normal"&gt;74&lt;/span&gt;
+&lt;span class="normal"&gt;75&lt;/span&gt;
+&lt;span class="normal"&gt;76&lt;/span&gt;
+&lt;span class="normal"&gt;77&lt;/span&gt;
+&lt;span class="normal"&gt;78&lt;/span&gt;
+&lt;span class="normal"&gt;79&lt;/span&gt;
+&lt;span class="normal"&gt;80&lt;/span&gt;
+&lt;span class="normal"&gt;81&lt;/span&gt;
+&lt;span class="normal"&gt;82&lt;/span&gt;
+&lt;span class="normal"&gt;83&lt;/span&gt;
+&lt;span class="normal"&gt;84&lt;/span&gt;
+&lt;span class="normal"&gt;85&lt;/span&gt;
+&lt;span class="normal"&gt;86&lt;/span&gt;
+&lt;span class="normal"&gt;87&lt;/span&gt;
+&lt;span class="normal"&gt;88&lt;/span&gt;
+&lt;span class="normal"&gt;89&lt;/span&gt;
+&lt;span class="normal"&gt;90&lt;/span&gt;
+&lt;span class="normal"&gt;91&lt;/span&gt;
+&lt;span class="normal"&gt;92&lt;/span&gt;
+&lt;span class="normal"&gt;93&lt;/span&gt;
+&lt;span class="normal"&gt;94&lt;/span&gt;
+&lt;span class="normal"&gt;95&lt;/span&gt;
+&lt;span class="normal"&gt;96&lt;/span&gt;
+&lt;span class="normal"&gt;97&lt;/span&gt;
+&lt;span class="normal"&gt;98&lt;/span&gt;
+&lt;span class="normal"&gt;99&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+install
+cdrom
+reboot
+lang es_ES.UTF-8
+network —bootproto&lt;span class="o"&gt;=&lt;/span&gt;static —device&lt;span class="o"&gt;=&lt;/span&gt;eth0 —onboot&lt;span class="o"&gt;=&lt;/span&gt;on —ip&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;192&lt;/span&gt;.168.1.2 —netmask&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;255&lt;/span&gt;.255.255.0 —gateway&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;192&lt;/span&gt;.168.1.1 —nameserver&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;172&lt;/span&gt;.20.2.11 —hostname&lt;span class="o"&gt;=&lt;/span&gt;Live
+keyboard es
+firewall —disabled
+selinux —disabled
+rootpw —iscrypted &lt;span class="nv"&gt;$1$wcnLA&lt;/span&gt;/us&lt;span class="nv"&gt;$IV4Ap0LLSB3Dk4Qykg0xf&lt;/span&gt;.
+timezone —utc Europe/Madrid
+authconfig —enableshadow —enablemd5
+xconfig —resolution 1024x768 —depth &lt;span class="m"&gt;24&lt;/span&gt;
+bootloader —location&lt;span class="o"&gt;=&lt;/span&gt;mbr —append&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt; —md5pass&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$1$L4buo1$9&lt;/span&gt;PK59B0iM.WdFDk315gS71
+firstboot —disable
+key —skip
+repo —name&lt;span class="o"&gt;=&lt;/span&gt;RHEL5Client —baseurl&lt;span class="o"&gt;=&lt;/span&gt;http://spacewalk.domain.es/kickstart/dist/ks-rhel-i386-client-5-u2/Client
+repo —name&lt;span class="o"&gt;=&lt;/span&gt;RHEL5VT —baseurl&lt;span class="o"&gt;=&lt;/span&gt;http://spacewalk.domain.es/kickstart/dist/ks-rhel-i386-client-5-u2/VT
+repo —name&lt;span class="o"&gt;=&lt;/span&gt;RHEL5WKS —baseurl&lt;span class="o"&gt;=&lt;/span&gt;http://spacewalk.domain.es/kickstart/dist/ks-rhel-i386-client-5-u2/Workstation
+repo —name&lt;span class="o"&gt;=&lt;/span&gt;RHEL5SVRC —baseurl&lt;span class="o"&gt;=&lt;/span&gt;http://spacewalk.domain.es/kickstart/dist/ks-rhel-i386-server-5-u2/Cluster
+repo —name&lt;span class="o"&gt;=&lt;/span&gt;RHEL5SVR —baseurl&lt;span class="o"&gt;=&lt;/span&gt;http://spacewalk.domain.eskickstart/dist/ks-rhel-i386-server-5-u2/Server
+repo —name&lt;span class="o"&gt;=&lt;/span&gt;RHEL5SVRVT —baseurl&lt;span class="o"&gt;=&lt;/span&gt;http://spacewalk.domain.es/kickstart/dist/ks-rhel-i386-server-5-u2/VT
+repo —name&lt;span class="o"&gt;=&lt;/span&gt;RHEL5SVRCS —baseurl&lt;span class="o"&gt;=&lt;/span&gt;http://spacewalk.domain.es/kickstart/dist/ks-rhel-i386-server-5-u2/ClusterStorage
+part / —size &lt;span class="m"&gt;1024&lt;/span&gt; &lt;span class="c1"&gt;#Partitionning&lt;/span&gt;
+zerombr %packages —ignoremissing
+syslinux
+grub
+screen
+joe
+mc
+anaconda
+anaconda-runtime
+dialog
+grub
+@core
+bash
+kernel
+passwd
+policycoreutils
+chkconfig
+authconfig
+rootfiles
+dialog
+wget
+telnet
+openssh-clients
+bc
+
+%post
+&lt;span class="c1"&gt;# FIXME: it'd be better to get this installed from a package&lt;/span&gt;
+cat &amp;gt; /etc/rc.d/init.d/rhel-live &lt;span class="s"&gt;&amp;lt;&amp;lt; EOF&lt;/span&gt;
+&lt;span class="s"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="s"&gt;#&lt;/span&gt;
+&lt;span class="s"&gt;# live: Init script for live image&lt;/span&gt;
+&lt;span class="s"&gt;#&lt;/span&gt;
+&lt;span class="s"&gt;# chkconfig: 345 00 99&lt;/span&gt;
+&lt;span class="s"&gt;# description: Init script for live image.&lt;/span&gt;
+&lt;span class="s"&gt;. /etc/init.d/functions&lt;/span&gt;
+&lt;span class="s"&gt;if ! strstr "`cat /proc/cmdline`" liveimg || [ "$1" != "start" ] || [ -e /.liveimg-configured ] ; then exit 0&lt;/span&gt;
+&lt;span class="s"&gt;fi&lt;/span&gt;
+&lt;span class="s"&gt;exists()&lt;/span&gt;
+&lt;span class="s"&gt;which $1 &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 || return $*&lt;/span&gt;
+&lt;span class="s"&gt; touch /.liveimg-configured # mount live image&lt;/span&gt;
+&lt;span class="s"&gt;if [ -b /dev/live ]; then mkdir -p /mnt/live mount -o ro /dev/live /mnt/live&lt;/span&gt;
+&lt;span class="s"&gt;fi # read some variables out of /proc/cmdline&lt;/span&gt;
+&lt;span class="s"&gt;for o in `cat /proc/cmdline` ; do case $o in ks=*) ks="$o#ks=" ;; xdriver=*) xdriver="—set-driver=$o#xdriver=" ;; esac&lt;/span&gt;
+&lt;span class="s"&gt;done # if liveinst or textinst is given, start anaconda&lt;/span&gt;
+&lt;span class="s"&gt;if strstr "`cat /proc/cmdline`" liveinst ; then /usr/sbin/liveinst $ks&lt;/span&gt;
+&lt;span class="s"&gt;fi&lt;/span&gt;
+&lt;span class="s"&gt;if strstr "`cat /proc/cmdline`" textinst ; then /usr/sbin/liveinst —text $ks&lt;/span&gt;
+&lt;span class="s"&gt;fi # enable swaps unless requested otherwise&lt;/span&gt;
+&lt;span class="s"&gt;swaps=`blkid -t TYPE=swap -o device`&lt;/span&gt;
+&lt;span class="s"&gt;if ! strstr "`cat /proc/cmdline`" noswap -a [ -n "$swaps" ] ; then for s in $swaps ; do action "Enabling swap partition $s" swapon $s done&lt;/span&gt;
+&lt;span class="s"&gt;fi passwd -d root &amp;gt; /dev/null # turn off firstboot for livecd boots&lt;/span&gt;
+&lt;span class="s"&gt;echo "RUN_FIRSTBOOT=NO" &amp;gt; /etc/sysconfig/firstboot # don't start yum-updatesd for livecd boots&lt;/span&gt;
+&lt;span class="s"&gt;chkconfig —level 345 yum-updatesd off 2&amp;gt;/dev/null # don't start cron/at as they tend to spawn things which are&lt;/span&gt;
+&lt;span class="s"&gt;# disk intensive that are painful on a live image&lt;/span&gt;
+&lt;span class="s"&gt;chkconfig —level 345 crond off 2&amp;gt;/dev/null&lt;/span&gt;
+&lt;span class="s"&gt;chkconfig —level 345 atd off 2&amp;gt;/dev/null&lt;/span&gt;
+&lt;span class="s"&gt;chkconfig —level 345 anacron off 2&amp;gt;/dev/null&lt;/span&gt;
+&lt;span class="s"&gt;chkconfig —level 345 readahead_early off 2&amp;gt;/dev/null&lt;/span&gt;
+&lt;span class="s"&gt;chkconfig —level 345 readahead_later off 2&amp;gt;/dev/null # Stopgap fix for RH #217966; should be fixed in HAL instead&lt;/span&gt;
+&lt;span class="s"&gt;touch /media/.hal-mtab # workaround clock syncing on shutdown that we don't want (#297421)&lt;/span&gt;
+&lt;span class="s"&gt;sed -i -e 's/hwclock/no-such-hwclock/g' /etc/rc.d/init.d/halt&lt;/span&gt;
+&lt;span class="s"&gt;EOF&lt;/span&gt; &lt;span class="c1"&gt;# workaround avahi segfault (#279301)&lt;/span&gt;
+touch /etc/resolv.conf
+/sbin/restorecon /etc/resolv.conf chmod &lt;span class="m"&gt;755&lt;/span&gt; /etc/rc.d/init.d/rhel-live
+/sbin/restorecon /etc/rc.d/init.d/rhel-live
+/sbin/chkconfig —add rhel-live &lt;span class="c1"&gt;# save a little bit of space at least...&lt;/span&gt;
+rm -f /boot/initrd*
+&lt;span class="c1"&gt;# make sure there aren't core files lying around&lt;/span&gt;
+rm -f /core* %end &lt;span class="c1"&gt;#%post —nochroot # only works on x86, x86_64&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;uname -i&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"i386"&lt;/span&gt; -o &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;uname -i&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"x86_64"&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; cp /usr/bin/livecd-iso-to-disk &lt;span class="nv"&gt;$LIVE_ROOT&lt;/span&gt;/LiveOS/
+&lt;span class="k"&gt;fi&lt;/span&gt;
+%end
+%post
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"Medio Live personalizado"&lt;/span&gt; &amp;gt; /etc/issue
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"Inicie sesión como 'root' sin contraseña"&lt;/span&gt; &amp;gt;&amp;gt; /etc/issue
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;" "&lt;/span&gt; &amp;gt;&amp;gt; /etc/issue
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="creacion"&gt;Creación&lt;a class="headerlink" href="#creacion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Para generar la imagen Live, ejecutaremos&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+livecd-creator -c /root/usuario/ks.cfg -f MedioLive
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Al acabar, obtendremos un fichero “.iso” que contendrá un medio ‘Vivo’ basado en nuestro guión de instalación.&lt;/p&gt;
+&lt;h3 id="llaves-usbpendrives"&gt;Llaves &lt;span class="caps"&gt;USB&lt;/span&gt;/Pendrives&lt;a class="headerlink" href="#llaves-usbpendrives" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Livecd-tools incorpora dos utilidades más:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;livecd-iso-to-disk&lt;/li&gt;
+&lt;li&gt;livecd-iso-to-pxeboot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Que graban esa imagen &lt;span class="caps"&gt;ISO&lt;/span&gt; en un medio &lt;span class="caps"&gt;USB&lt;/span&gt; y lo hacen arrancable, y por otro permiten crear los ficheros necesarios para poder servir en un entorno diskless nuestra imagen Live, por ejemplo, para hacer un medio de rescate más completo que el entorno mínimo que suelen ofrecer las distribuciones.&lt;/p&gt;
+&lt;h3 id="conclusion"&gt;Conclusión&lt;a class="headerlink" href="#conclusion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Aprovechando los conocimientos que ya teníamos acerca de kickstart y anaconda, podemos personalizar un medio Vivo, livecd-tools se encargarán de la parte ‘complicada’ de adaptar el sistema a ejecutarse en un medio de sólo lectura.&lt;/p&gt;
+&lt;p&gt;Ahora sólo nos queda pasar a disfrutar y seguir afinando nuestro medio vivo hasta que se adapte perfectamente a nuestras necesidades, sabiendo que cualquier ‘scripting’ que necesitáramos hacer para adaptar el sistema, podemos codificarlo en las secciones ‘post’ de nuestro kickstart.&lt;/p&gt;
+&lt;p&gt;Este método es también operativo con Red Hat Enterprise Linux 5, CentOS 5 utilizando las livecd-tools de los repositorios de &lt;span class="caps"&gt;EPEL&lt;/span&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Wed, 24 Sep 2008 20:34:16 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2008-09-24:/blog/2008/09/24/creacion-de-distribuciones-live-con-fedora-es/</guid><category>tech</category><category>linux</category><category>fedora</category><category>foss</category></item><item><title>Valux - Fedora</title><link>https://iranzo.io/blog/2008/08/30/valux-fedora-es/</link><description>&lt;section class="slide level1"&gt;
+
+&lt;h2 id="qué-es-fedora"&gt;¿Qué es&amp;nbsp;Fedora?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fedora es un sistema operativo basado en Linux que integra las últimas novedades en software libre y&amp;nbsp;abierto&lt;/li&gt;
+&lt;li&gt;Fedora es y será siempre libre para su uso, modificación y&amp;nbsp;distribución&lt;/li&gt;
+&lt;li&gt;Está construida por gente de todo el mundo que trabaja conjuntamente como una comunidad: El Proyecto&amp;nbsp;Fedora&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="orígenes"&gt;Orígenes&lt;/h2&gt;
+&lt;p&gt;Los comienzos: Red Hat Linux 1994 -&amp;gt;&amp;nbsp;2003&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Versiones cada 6&amp;nbsp;meses&lt;/li&gt;
+&lt;li&gt;Versiones más estables (.2) cada 18&amp;nbsp;meses&lt;/li&gt;
+&lt;li&gt;Dificultad de soportar a largo&amp;nbsp;plazo&lt;/li&gt;
+&lt;li&gt;Modelo de ventas&amp;nbsp;complicado&lt;/li&gt;
+&lt;li&gt;Part. comunidad:Upstream/&lt;span class="caps"&gt;BZ&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="la-separación"&gt;La&amp;nbsp;separación&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Objetivos&amp;nbsp;irreconciliables&lt;/li&gt;
+&lt;li&gt;Estabilidad y rápida&amp;nbsp;innovación&lt;/li&gt;
+&lt;li&gt;Red Hat Enterprise&amp;nbsp;Linux&lt;/li&gt;
+&lt;li&gt;Soporte durante 7+&amp;nbsp;años&lt;/li&gt;
+&lt;li&gt;Modelo de&amp;nbsp;subscripciones&lt;/li&gt;
+&lt;li&gt;Libre&lt;/li&gt;
+&lt;li&gt;Fedora&lt;/li&gt;
+&lt;li&gt;Versiones nuevas cada 6&amp;nbsp;meses&lt;/li&gt;
+&lt;li&gt;Patrocinada por Red&amp;nbsp;Hat&lt;/li&gt;
+&lt;li&gt;Free as in freedom / Free as in&amp;nbsp;beer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="el-árbol-genealógico"&gt;El árbol&amp;nbsp;genealógico&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src="https://iranzo.io/blog/2008/08/30/valux-fedora-es/10000201000002BD000001457DE9B4C7.png" /&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="dónde"&gt;¿Dónde?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Wiki: &lt;a href="http://fedoraproject.org/wiki" class="uri"&gt;http://fedoraproject.org/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lista de correo: &lt;a href="http://fedoraproject.org/wiki/Communicate#ML" class="uri"&gt;http://fedoraproject.org/wiki/Communicate#&lt;span class="caps"&gt;ML&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;IRC&lt;/span&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://fedoraproject.org/wiki/Communicate#IRC" class="uri"&gt;http://fedoraproject.org/wiki/Communicate#&lt;span class="caps"&gt;IRC&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://freenode.org" class="uri"&gt;http://freenode.org&lt;/a&gt;&amp;nbsp;(#fedora*)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="qué-hace-la-comunidad"&gt;¿Qué hace la&amp;nbsp;comunidad?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Documentación&lt;/li&gt;
+&lt;li&gt;Traducciones&lt;/li&gt;
+&lt;li&gt;Marketing&lt;/li&gt;
+&lt;li&gt;Ambassadors&lt;/li&gt;
+&lt;li&gt;Diseños&amp;nbsp;art.&lt;/li&gt;
+&lt;li&gt;Infraestructura&lt;/li&gt;
+&lt;li&gt;Webs&lt;/li&gt;
+&lt;li&gt;Live &lt;span class="caps"&gt;CD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Distribución&lt;/li&gt;
+&lt;li&gt;Mentors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="cuenta-fedora-ventajas"&gt;Cuenta Fedora:&amp;nbsp;Ventajas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Acceso ssh a las&amp;nbsp;máquinas&lt;/li&gt;
+&lt;li&gt;Acceso &lt;span class="caps"&gt;CVS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Acceso a los diversos tracs&amp;nbsp;(tickets,wiki,etc)&lt;/li&gt;
+&lt;li&gt;Página&amp;nbsp;personal&lt;/li&gt;
+&lt;li&gt;Alias email:&lt;a href="mailto:cuenta@fedoraproject.org"&gt;cuenta@fedoraproject.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Planet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="fedora"&gt;¿Fedora?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Robusta y&amp;nbsp;segura&lt;/li&gt;
+&lt;li&gt;Base de unas 70 distribuciones&amp;nbsp;derivadas&lt;/li&gt;
+&lt;li&gt;Soporte para x86, x86_64, PowerPC y versiones ‘no oficiales’ para Alpha y Sparc&amp;nbsp;(aurora)&lt;/li&gt;
+&lt;li&gt;Filosofía: Release Early, Release&amp;nbsp;Often&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;UPSTREAM&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Fedora &lt;span class="caps"&gt;DS&lt;/span&gt;, SpaceWalk, Cobbler, Func, Pulp, Virtmanager, libvirt, PackageKit, oVirt,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="fedora-cont"&gt;Fedora?&amp;nbsp;(cont)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Últimas versiones de&amp;nbsp;paquetes&lt;/li&gt;
+&lt;li&gt;Ciclos&amp;nbsp;rápidos&lt;/li&gt;
+&lt;li&gt;Mejoras y novedades que llegan antes a los&amp;nbsp;usuarios&lt;/li&gt;
+&lt;li&gt;Actualizaciones sencillas&amp;nbsp;(yum)&lt;/li&gt;
+&lt;li&gt;Multitud de paquetes hechos por la&amp;nbsp;comunidad&lt;/li&gt;
+&lt;li&gt;Herramientas gráficas de&amp;nbsp;gestión&lt;/li&gt;
+&lt;li&gt;Anaconda: instalador con &lt;span class="caps"&gt;GUI&lt;/span&gt; y &lt;span class="caps"&gt;TUI&lt;/span&gt;&amp;nbsp;‘scriptable’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="rhl-vs-fedora-vs-rhel"&gt;&lt;span class="caps"&gt;RHL&lt;/span&gt; vs Fedora vs &lt;span class="caps"&gt;RHEL&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fedora es la continuación de &lt;span class="caps"&gt;RHL&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Fedora está formada por miles de proyectos de Software&amp;nbsp;Libre&lt;/li&gt;
+&lt;li&gt;Fedora inicia multitud de proyectos de software libre&amp;nbsp;(subproyectos)&lt;/li&gt;
+&lt;li&gt;Fedora es el proyecto base en el que se basa &lt;span class="caps"&gt;RHEL&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Red Hat proporciona subscripciones de soporte, actualización (&lt;span class="caps"&gt;RHN&lt;/span&gt;), así como servicios de formación, consultoría,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="contribuciones-de-rh-al-foss"&gt;Contribuciones de &lt;span class="caps"&gt;RH&lt;/span&gt; al &lt;span class="caps"&gt;FOSS&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://fedoraproject.org/wiki/RedHatContributions" class="uri"&gt;http://fedoraproject.org/wiki/RedHatContributions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Kernel, Xorg, &lt;span class="caps"&gt;GFS&lt;/span&gt;, &lt;span class="caps"&gt;LVM&lt;/span&gt;, ext3, Netscape Directory Server, Netscape Certificate System, MetaMatrix, Liberation fonts, Pulp, Virt Manager, &lt;span class="caps"&gt;GTK&lt;/span&gt; en Firefox, partes de &lt;span class="caps"&gt;GNOME&lt;/span&gt;, etc’upstream’ de software libre (subproyectos) Emerging Technologies&amp;nbsp;Group&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="quién"&gt;¿Quién?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;La&amp;nbsp;comunidad&lt;/li&gt;
+&lt;li&gt;Traducciones&lt;/li&gt;
+&lt;li&gt;Subproyectos&lt;/li&gt;
+&lt;li&gt;Bugs&lt;/li&gt;
+&lt;li&gt;Desarrollos&lt;/li&gt;
+&lt;li&gt;Cada Ingeniero de Red&amp;nbsp;Hat&lt;/li&gt;
+&lt;li&gt;Influye en&amp;nbsp;I+D&lt;/li&gt;
+&lt;li&gt;Rápido desarrollo y correcciones de&amp;nbsp;bugs&lt;/li&gt;
+&lt;li&gt;Millones de&amp;nbsp;usuarios&lt;/li&gt;
+&lt;li&gt;Prueban últimas&amp;nbsp;tecnologías&lt;/li&gt;
+&lt;li&gt;Colaboran con traducciones, bugs,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="fedora-guía-de-instalación" class="slide level1"&gt;
+&lt;h1&gt;Fedora Guía de&amp;nbsp;Instalación&lt;/h1&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="instalación"&gt;Instalación&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;DVD&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;Isolinux
+&lt;ul&gt;
+&lt;li&gt;Kernel e initrd&amp;nbsp;(parámetros)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Init
+&lt;ul&gt;
+&lt;li&gt;Stage1&amp;nbsp;anaconda&lt;/li&gt;
+&lt;li&gt;Stage2&amp;nbsp;anaconda&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Reinicio&lt;/li&gt;
+&lt;li&gt;Firstboot&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Kickstart&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="características"&gt;Características&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt;&amp;nbsp;Cifrado&lt;/li&gt;
+&lt;li&gt;SELinux&lt;/li&gt;
+&lt;li&gt;Network&amp;nbsp;Manager&lt;/li&gt;
+&lt;li&gt;PackageKit&lt;/li&gt;
+&lt;li&gt;OpenJDK&lt;/li&gt;
+&lt;li&gt;Online Desktop /&amp;nbsp;Mugshot&lt;/li&gt;
+&lt;li&gt;Smolt //&amp;nbsp;Kerneloops&lt;/li&gt;
+&lt;li&gt;LiveCD Tools //&amp;nbsp;Revisor…&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="multimedia-escritorio"&gt;Multimedia /&amp;nbsp;Escritorio&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Software libre
+&lt;ul&gt;
+&lt;li&gt;Fedora sólo incluye software libre
+&lt;ul&gt;
+&lt;li&gt;Evince (&lt;span class="caps"&gt;PDF&lt;/span&gt;), Libswfdec (Flash), IcedTea&amp;nbsp;(Java)&lt;/li&gt;
+&lt;li&gt;Ofrece enlaces a empresas que desarrollan codecs, etc para comprar una licencia de uso y mensajes ‘informativos’ de los problemas de lo&amp;nbsp;privativo.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Software privativo
+&lt;ul&gt;
+&lt;li&gt;Existen repositorios ‘alternativos’ no oficiales que proporcionan software privativo
+&lt;ul&gt;
+&lt;li&gt;Flash, Adobe, Códecs multimedia, Controladores (ati, nvidia, wifi,&amp;nbsp;etc)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="preguntas" class="slide level1"&gt;
+&lt;h1&gt;Preguntas&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Fedora / Red Hat
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://fedoraproject.org/" class="uri"&gt;http://fedoraproject.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://et.redhat.com" class="uri"&gt;http://et.redhat.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;VALUX&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.valux.org" class="uri"&gt;http://www.valux.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="mailto:Valux-list@valux.org"&gt;mailto:Valux-list@valux.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Pablo Iranzo Gómez (&lt;a href="http://Alufis35.uv.es/~iranzo" class="uri"&gt;http://Alufis35.uv.es/~iranzo&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sat, 30 Aug 2008 16:00:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2008-08-30:/blog/2008/08/30/valux-fedora-es/</guid><category>presentations</category><category>foss</category><category>valux</category><category>fedora</category></item><item><title>Fedora</title><link>https://iranzo.io/blog/2008/06/14/fedora-es/</link><description>
+&lt;h3 id="introduccion"&gt;Introducción&lt;a class="headerlink" href="#introduccion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://fedoraproject.org/"&gt;Fedora&lt;/a&gt; es una distribución &lt;a href="https://iranzo.io/blog/2004/03/18/que-es-linux-es/"&gt;Linux&lt;/a&gt; fruto del desarrollo de la extinta Red Hat Linux.&lt;/p&gt;
+&lt;p&gt;Red Hat Linux se readaptó al entorno empresarial proporcionado las opciones de soporte que las empresas buscaban en el software libre y del código de Red Linux, nacieron dos versiones, Red Hat Enterprise Linux, disponible para clientes con subscripciones (Red Hat no vende “licencias de uso”, vende servicios de soporte, actualización en forma de subscripciones, puede verse como una especie de tarifa plana para acceder a todas las versiones de los productos subscritos, soporte, etc) válidas y Fedora Core, sucesor directo de Red Hat Linux.&lt;/p&gt;
+&lt;p&gt;Así pues el panorama quedaba del siguiente modo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Red Hat Enterprise Linux con ciclos de soporte de 7 años (parches, instalación, nuevo hardware, etc) que proporcionaban estabilidad a las empresas para mantener su sistema.&lt;/li&gt;
+&lt;li&gt;Fedora Core, con ciclos de desarrollo de 6 meses, orientada a desarrollar e incluir tecnología punta en la distribución&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Con el nacimiento de Fedora Core, Red Hat siguió colaborando (Hay una lista de contribuciones en &lt;a href="http://fedoraproject.org/wiki/RedHatContributions"&gt;http://fedoraproject.org/wiki/RedHatContributions&lt;/a&gt;) en el desarrollo de Linux a través de &lt;span class="caps"&gt;RHEL&lt;/span&gt; y de Fedora, así como a través de los proyectos “upstream” dedicando recursos económicos y humanos alrededor de la comunidad Fedora, así como de las colaboraciones desinteresadas de personas de todo el mundo (algunos de ellos se consideran &lt;a href="http://fedoraproject.org/wiki/Ambassadors"&gt;Embajadores&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Puedes consultar más información del proyecto en &lt;a href="http://fedoraproject.org/wiki/Overview"&gt;http://fedoraproject.org/wiki/Overview&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="caracteristicas"&gt;Características&lt;a class="headerlink" href="#caracteristicas" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Fedora, como decíamos, aporta una distribución equivalente a la antigua Red Hat Linux (misma estabilidad, etc que hace que mucha gente la utilice en los servidores en entornos de producción donde antes utilizaba Red Hat Linux), pero que a diferencia de Red Hat Enterprise Linux, se enfoca a introducir más rápidamente las novedades tecnológicas disponibles.&lt;/p&gt;
+&lt;p&gt;Todo el software incluído en Fedora es Software Libre.&lt;/p&gt;
+&lt;h4 id="anaconda"&gt;Anaconda&lt;a class="headerlink" href="#anaconda" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Una de las características que más tiempo llevan es Anaconda, el instalador que utiliza la distribución para las operaciones de instalación y actualización desde un medio de instalación.&lt;/p&gt;
+&lt;p&gt;Aparte del interfaz gráfico de instalación y una versión en modo texto muy similar dispone de una funcionalidad que lo convierte en único: La posibilidad de utilizar guiones de instalación que permitan automatizar completamente una instalación sin requerir interacción alguna por parte del usuario (ideal para instalar aulas de informática, colegios, lugares públicos tales como zonas de navegación, bibliotecas, etc).&lt;/p&gt;
+&lt;p&gt;Puedes consultar información al respecto en &lt;a href="https://iranzo.io/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda-es/"&gt;Kickstart: instalaciones automatizadas para anaconda&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id="security-enhanced-linux-selinux"&gt;Security Enhanced Linux (SELinux)&lt;a class="headerlink" href="#security-enhanced-linux-selinux" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/"&gt;SELinux&lt;/a&gt; es un conjunto de módulos de seguridad para el kernel incorporados y activados por defecto en Fedora que confinan los programas en sus “compartimentos”, impidiendo que realicen acciones que no deberían.&lt;/p&gt;
+&lt;p&gt;Por ejemplo SELInux, puede proteger un sistema con un Apache afectado por una vulnerabilidad impidiendo que un atacante pueda acceder a ficheros ya sea para leer o escribir que no debiera.&lt;/p&gt;
+&lt;p&gt;¿Y por qué no es mejor un entorno chroot? En un entorno chroot, se utilizan ciertos binarios y librerías de sistema para crear un sistema mínimo donde se ejecuta el programa, si un “atacante” comprometiera el servicio, cierto es que no entraría al sistema anfitrión, pero podría hacer de las suyas desde ese entorno “chroot” atacando a otras máquinas de la red interna.&lt;/p&gt;
+&lt;p&gt;SELinux fue desarrollado en colaboración con la Agencia de Seguridad Nacional Norteamericana (&lt;span class="caps"&gt;NSA&lt;/span&gt;) y permite varias políticas de funcionamiento, desde la estándar en Fedora/&lt;span class="caps"&gt;RHEL&lt;/span&gt; (targetted) que sólo gestiona ciertos servicios sin afectar al resto de los instalados, a la estricta con varios niveles de credenciales que impiden acceso a datos para los que no se ha sido autorizado.&lt;/p&gt;
+&lt;h4 id="lvm"&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt;&lt;a class="headerlink" href="#lvm" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://iranzo.io/blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/"&gt;Gestor de Volúmenes Lógicos (&lt;span class="caps"&gt;LVM&lt;/span&gt;)&lt;/a&gt; viene incorporado de serie y habilitado por defecto en Fedora desde hace ya muchas versiones, como novedad en la versión 9 es la inclusión de la posibilidad de utilizar volúmenes cifrados para todos los datos (hasta el momento se podía hacer con volúmenes que no fueran el de sistema, por ejemplo con /home), aumentando así la seguridad de los datos confidenciales que se llevan en dispositivos portátileso &lt;span class="caps"&gt;PC&lt;/span&gt;’s de cara a posibles &lt;a href="http://news.google.es/news?hl=es&amp;amp;ned=es&amp;amp;q=datos++port%C3%A1til+robado&amp;amp;btnG=Buscar"&gt;pérdidas o robos&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="packagekit"&gt;PackageKit&lt;a class="headerlink" href="#packagekit" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Es una capa de abstracción que permite crear herramientas de gestión de paquetes independientemente del sistema de paquetes utilizado, en el caso de Fedora, PackageKit viene integrado con yum y con el entorno gráfico para mostrar información de actualizaciones, progreso de las mismas, etc y que permitirá que se utilice la misma aplicación gráfica para la gestión del software conforme otras distribuciones lo vayan adoptando al igual que han hecho con el proyecto NetworkManager que permite
+gestionar y configurar las conexiones de red de nuestro equipo (Cable, Wifi, &lt;span class="caps"&gt;VPN&lt;/span&gt;, Marcado, etc)&lt;/p&gt;
+&lt;h3 id="instalacion"&gt;Instalación&lt;a class="headerlink" href="#instalacion" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;La instalación de Fedora se puede realizar de forma gráfica o en un interfaz en modo texto y debido a los requisitos de memoria del nuevo instalador, requiere un mínimo de 256Mb de &lt;span class="caps"&gt;RAM&lt;/span&gt; (se añadieron funcionalidades para poder recuperar la instalación en caso de fallo, que requirieron cargar más datos en el ramdisk inicial). En cualquier sistema actual no deberíamos tener ningún problema en instalarla.&lt;/p&gt;
+&lt;p&gt;La secuencia de imágenes muestra los pasos seguidos desde que metemos y arrancamos el &lt;span class="caps"&gt;DVD&lt;/span&gt; hasta que tenemos el sistema instalado y funcionando.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Arranque DVD" src="https://iranzo.io/imagen/Pantallazo-00.png"/&gt;
+&lt;img alt="Arranque kernel" src="https://iranzo.io/imagen/Pantallazo-01.png"/&gt;
+&lt;img alt="Verificacion disco" src="https://iranzo.io/imagen/Pantallazo-02.png"/&gt;
+&lt;img alt="Inicio instalador" src="https://iranzo.io/imagen/Pantallazo-03.png"/&gt;
+&lt;img alt="Seleccion idioma" src="https://iranzo.io/imagen/Pantallazo-04.png"/&gt;
+&lt;img alt="Selección teclado" src="https://iranzo.io/imagen/Pantallazo-05.png"/&gt;
+&lt;img alt="Inicializacion disco" src="https://iranzo.io/imagen/Pantallazo-06.png"/&gt;
+&lt;img alt="Configuracion red" src="https://iranzo.io/imagen/Pantallazo-07.png"/&gt;
+&lt;img alt="Zona horaria" src="https://iranzo.io/imagen/Pantallazo-08.png"/&gt;
+&lt;img alt="Password de root" src="https://iranzo.io/imagen/Pantallazo-09.png"/&gt;
+&lt;img alt="Clave sencilla" src="https://iranzo.io/imagen/Pantallazo-10.png"/&gt;
+&lt;img alt="Particionamiento" src="https://iranzo.io/imagen/Pantallazo-11.png"/&gt;
+&lt;img alt="Cifrado de discos" src="https://iranzo.io/imagen/Pantallazo-12.png"/&gt;
+&lt;img alt="Aplicar cambios en disco" src="https://iranzo.io/imagen/Pantallazo-13.png"/&gt;
+&lt;img alt="Formateo" src="https://iranzo.io/imagen/Pantallazo-14.png"/&gt;
+&lt;img alt="Preparacion instalador" src="https://iranzo.io/imagen/Pantallazo-15.png"/&gt;
+&lt;img alt="Preparando paquetes" src="https://iranzo.io/imagen/Pantallazo-16.png"/&gt;
+&lt;img alt="Repositorios de software" src="https://iranzo.io/imagen/Pantallazo-17.png"/&gt;
+&lt;img alt="Verificando dependencias" src="https://iranzo.io/imagen/Pantallazo-18.png"/&gt;
+&lt;img alt="Empezando instalacion" src="https://iranzo.io/imagen/Pantallazo-19.png"/&gt;
+&lt;img alt="Progreso instalacion" src="https://iranzo.io/imagen/Pantallazo-20.png"/&gt;
+&lt;img alt="Acabando instalacion" src="https://iranzo.io/imagen/Pantallazo-21.png"/&gt;
+&lt;img alt="Fin de instalacion y reinicio" src="https://iranzo.io/imagen/Pantallazo-22.png"/&gt;
+&lt;img alt="Clave de cifrado de disco en arranque" src="https://iranzo.io/imagen/Pantallazo-23.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Tras el primer arranque mostrará unas últimas páginas de configuración y creación de un usuario que nos dejarán en la pantalla que vemos a continuación para iniciar sesión en el equipo.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Login al entorno grafico" src="https://iranzo.io/imagen/Pantallazo-24.png"/&gt;
+&lt;img alt="Informe y envio de errores" src="https://iranzo.io/imagen/Pantallazo-25.png"/&gt;
+&lt;img alt="Actualizaciones pendientes" src="https://iranzo.io/imagen/Pantallazo-26.png"/&gt;
+&lt;img alt="Acceso como root para actualizar" src="https://iranzo.io/imagen/Pantallazo-27.png"/&gt;
+&lt;img alt="PackageKit realizando las tareas de actualizacion" src="https://iranzo.io/imagen/Pantallazo-28.png"/&gt;
+&lt;img alt="Actualizacion completada" src="https://iranzo.io/imagen/Pantallazo-29.png"/&gt;
+&lt;img alt="Password del protector de pantalla con posibilidad de dejar notas" src="https://iranzo.io/imagen/Pantallazo-30.png"/&gt;&lt;/p&gt;
+&lt;h3 id="y-ahora-que"&gt;¿Y ahora qué?&lt;a class="headerlink" href="#y-ahora-que" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Fedora, como decíamos es una distribución de software 100% libre que incorpora gracias a la colaboración con Sun, etc una implementación libre de su máquina Virtual (IcedTea), así como plugins libres para ver videos de Shockwave Flash, etc.&lt;/p&gt;
+&lt;p&gt;Cuando intentamos visualizar algún formato propietario, Fedora nos informa de los problemas del uso de formatos propietarios y nos ofrece adquirir versiones licenciadas de los códecs para reproducirlos.&lt;/p&gt;
+&lt;p&gt;Para los casos donde la legislación lo permite, y siguiendo la información de &lt;a href="http://www.benavent.org/diario/2008/06/fedora-9-just-installed.html"&gt;http://www.benavent.org/diario/2008/06/fedora-9-just-installed.html&lt;/a&gt; y &lt;a href="http://hacktux.com/fedora"&gt;http://hacktux.com/fedora&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Procederemos a:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalar el repositorio de Livna en nuestra máquina visitando &lt;a href="http://rpm.livna.org"&gt;http://rpm.livna.org&lt;/a&gt; y presionando sobre el texto Fedora 9 repository &lt;span class="caps"&gt;RPM&lt;/span&gt; e instalándolo con nuestra clave de administrador.&lt;/li&gt;
+&lt;li&gt;Instalar el repositorio de Adobe en nuestro equipo instalando desde la web de &lt;a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"&gt;Adobe&lt;/a&gt; la selección del desplegable “&lt;span class="caps"&gt;YUM&lt;/span&gt; para linux”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ahora ya podremos instalar las librerías necesarias:&lt;/p&gt;
+&lt;h4 id="flash"&gt;Flash&lt;a class="headerlink" href="#flash" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Desinstalaremos con &lt;code&gt;yum remove swfdec-mozilla gnash-plugin&lt;/code&gt; los plugins que instala por defecto Fedora&lt;/li&gt;
+&lt;li&gt;Instalaremos con &lt;code&gt;yum install flash-plugin pulseaudio-libs libflashsupport&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="adobe-acrobat-reader"&gt;Adobe Acrobat Reader&lt;a class="headerlink" href="#adobe-acrobat-reader" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Lo instalaremos con &lt;code&gt;yum install AdobeReader_esp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Activaremos el plugin en mozilla con:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; /usr/lib/mozilla/plugins/
+ln -s /opt/Adobe/Reader8/Browser/intellinux/nppdf.so .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h4 id="audiovideo"&gt;Audio/Video&lt;a class="headerlink" href="#audiovideo" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalaremos con &lt;code&gt;yum install exaile vlc xmms-mp3 xine xine-lib-extras-nonfree gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-plugins-good gstreamer-plugins-pulse&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="java-sun"&gt;Java &lt;span class="caps"&gt;SUN&lt;/span&gt;&lt;a class="headerlink" href="#java-sun" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Desinstalaremos los paquetes de icedtea y openjdk instalados en el equipo&lt;/li&gt;
+&lt;li&gt;Descargaremos de &lt;a href="http://www.java.com"&gt;http://www.java.com&lt;/a&gt; el fichero &lt;span class="caps"&gt;RPM&lt;/span&gt; que proporcionan y lo instalaremos desde una consola lanzando el instalador con: &lt;code&gt;chmod +x jre-* ./jre-(VERSION)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Se nos pedirá aceptar la licencia y al cabo de un rato lo tendremos instalado para activar el plugin en firefox haremos:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; /usr/lib/mozilla/plugins
+ln -s /usr/java/latest/plugin/i386/ns7/libjavaplugin_oji.so .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h4 id="drivers-graficos-acelerados"&gt;Drivers gráficos acelerados&lt;a class="headerlink" href="#drivers-graficos-acelerados" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;En los repositorios de livna existen paquetes de la forma kmod-tarjeta-gráfica y xorg-x11-drv-tarjeta-gráfica que al instalarlos modificarán en nuestro sistema la configuración de X-Window System en &lt;code&gt;/etc/X11/xorg.conf&lt;/code&gt; y que permitirán en caso de disponer una tarjeta sin drivers acelerados libres (como ocurre con las gráficas Intel que permiten disfrutar de &lt;span class="caps"&gt;AIGLX&lt;/span&gt; y los efectos gráficos de
+Compiz sólo presionando un botón del panel de administración “Efectos de Escritorio”.&lt;/p&gt;
+&lt;p&gt;En el caso de &lt;span class="caps"&gt;NVIDIA&lt;/span&gt; tuve que agregar las siguientes líneas a la sección “Files”:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ModulePath&lt;/span&gt; &lt;span class="s"&gt;"/usr/lib/xorg/modules/extensions/nvidia"&lt;/span&gt;
+&lt;span class="n"&gt;ModulePath&lt;/span&gt; &lt;span class="s"&gt;"/usr/lib/xorg/modules"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h4 id="extras"&gt;Extras&lt;a class="headerlink" href="#extras" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Recomiendo instalar yum-presto y yum-fastestmirror para que yum utilice rpm’s diferenciales y por otro lado utilice el mirror más rápido para la descarga, todas las funciones se harán de forma transparente y además, disfrutaremos de mayor velocidad :-)&lt;/p&gt;
+&lt;p&gt;Y ya tendremos el sistema listo y preparado para funcionar…&lt;/p&gt;
+&lt;p&gt;¡¡A disfrutarlo!!&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;PD&lt;/span&gt;: Si puedes y estás de acuerdo, instala el paquete “smolt”, permite enviar un informe de tu hardware a &lt;a href="http://smolt.fedoraproject.org/"&gt;http://smolt.fedoraproject.org&lt;/a&gt; que facilita saber qué tipo de hardware hay y se está utilizando y en caso de que algo no te funcioen puedes notificarlo. Siempre es más fácil que se desarrolle para mejorar el soporte sobre el hardware que se está utilizando ¿no?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sat, 14 Jun 2008 05:00:00 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2008-06-14:/blog/2008/06/14/fedora-es/</guid><category>tech</category><category>Fedora</category><category>linux</category><category>foss</category></item><item><title>(mi) Evolución con Linux</title><link>https://iranzo.io/blog/2008/06/03/mi-evolucion-con-linux-es/</link><description>
+&lt;h2 id="antecedentes"&gt;Antecedentes&lt;a class="headerlink" href="#antecedentes" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Llevo gastando Linux desde hace bastantes años…&lt;/p&gt;
+&lt;p&gt;Primero empecé con una copia de &lt;a href="http://www.slackware.com/"&gt;Slackware&lt;/a&gt; 1.x que venía con la revista Sólo programadores cuya instalación consistía en descomprimir un fichero “zip” sobre un disco &lt;span class="caps"&gt;FAT16&lt;/span&gt; (en aquella época tenía un disco duro de 80 Mb (sí, Megabytes) en un &lt;span class="caps"&gt;386DX&lt;/span&gt; a 40 Mhz y la instalación venía a ocupar unos 15 Mb descomprimida.&lt;/p&gt;
+&lt;p&gt;Dicha instalación hacía uso de un sistema llamado &lt;span class="caps"&gt;UMSDOS&lt;/span&gt; que permitía, una vez cargado linux (mediante loadlin) hacer uso de las características de un filesystem de Linux cuando en realidad había por debajo un sistema &lt;span class="caps"&gt;FAT&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;No recuerdo en aquella época cómo había oído hablar de Linux pero algo ya me sonaba pues me decidí a comprar dicha revista por el contenido del cd-rom (no había internet con tanta facilidad de acceso como hay ahora ;-) )&lt;/p&gt;
+&lt;p&gt;Ya en la facultad y gracias a Jose Mª, y al uso que hice del servidor de correo de la facultad de Físicas, pudimos probar en un equipo “viejo”, un P100 con 32 Mb de &lt;span class="caps"&gt;RAM&lt;/span&gt; y un disco duro, creo recordar que de 500 Mb una instalación de &lt;a href="http://www.redhat.com/"&gt;Red Hat&lt;/a&gt; Linux 5.0, que se convirtió en el punto de partida para poder practicar otras habilidades relacionadas con el mundo de Linux: servidores de correo, servidores web, etc.&lt;/p&gt;
+&lt;p&gt;Durante muchos años esta máquina fue actualizada hasta creo recordar que Red Hat Linux 9 ó 9.2, momento en el que con la confusión con el cambio a Fedora, pasó a ser una &lt;a href="http://www.debian.org/"&gt;Debian&lt;/a&gt; 3.0&lt;/p&gt;
+&lt;p&gt;Durante aquella temporada, en casa hacía uso de SuSE Linux, principalmente porque era la forma de probar que las traducciones que hacíamos se veían bien durante el proceso de instalación, configuración, etc&lt;/p&gt;
+&lt;p&gt;A la par que el servidor en la universidad pasaba a ser Debian 3.0, en mi pc de casa aterrizaba también Debian, primero en su versión estable y rápidamente en su versión “testing” con la que iba probando las nuevas versiones de software que venían. Como no, también pasé una temporada por Ubuntu pero la volví a actualizar a Debian.&lt;/p&gt;
+&lt;h2 id="que-me-parece-cada-distribucion-a-dia-de-hoy"&gt;¿Qué me parece cada distribución a día de hoy?&lt;a class="headerlink" href="#que-me-parece-cada-distribucion-a-dia-de-hoy" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.slackware.com/"&gt;Slackware&lt;/a&gt;: Tengo constancia de mucha gente que la utiliza, personalmente sólo estuvo en mis primeros pasos con Linux y sigue teniendo muy buena reputación, aunque como he dicho, hace años que no la utilizo.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.redhat.com/"&gt;Red Hat Linux&lt;/a&gt;: Ya obsoleta, me introdujo en el mundo del manejo de dependencias, actualizaciones. Siempre me encantó &lt;a href="https://rhn.redhat.com"&gt;&lt;span class="caps"&gt;RHN&lt;/span&gt;&lt;/a&gt; como herramienta que me permitía ver vía web el estado de todos mis sistemas, su estado de actualizaciones, así como algo de información de inventario. Pasó a ser Fedora y Red Hat Enterprise Linux poco después de la 9.2&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.suse.de/"&gt;SuSE&lt;/a&gt;: Durante el periodo de la 5.0 a la 8.0 que era cuando más la utilicé, me proporcionaba en un conjunto de discos unos buenos manuales y más software del que quisiera jamás :-). A su favor, era muy sencilla de configurar, detectaba muy bien el hardware y hasta funcionaba ;-). En su contra, toda la configuración en aquel momento venía en un fichero rc.config que SuSEConfig aplicaba sobre todo el sistema, destruyendo cualquier cambio personalizado que se hubiera podido realizar (lo que permitía arreglar las cosas si habíamos metido la pata).&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.debian.org/"&gt;Debian&lt;/a&gt;: Más espartana a la hora de instalarla pero ideal para equipos antiguos, Mientras SuSE necesitaba 80 Mb de &lt;span class="caps"&gt;RAM&lt;/span&gt; para poder cargar el instalador, Debian, funciona en equipos con 32Mb (aún tengo un Pentium a 75Mhz con 32 Mb de ram haciendo de router en el despacho de un amigo). No es que sea rápido, pero lleva funcionando bien muchos años. Debian tiene a su favor que los paquetes preguntan unas cuantas cuestiones básicas que permiten dejarlos configurados a la vez que se instalan, que como contrapartida hace que haya que estar pendiente de la instalación.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.ubuntu.com/"&gt;Ubuntu&lt;/a&gt;: Una Debian con ciclos más cortos entre versiones, que permitía probar nuevos desarrollos para escritorio,etc. No hay demasiada diferencia con respecto a una Debian testing (que tampoco me resultó tan inestable) y de hecho, ante las dudas de un sistema corrupto solía alternar entre ellas para actualizar las versiones y con ello posibles paquetes corruptos. Dejé de gastarla por motivos ideológicos, personalmente le agradezco la difusión del software libre entre el gran público, pero a la vez, difundir el software libre con los “vicios” que venía arrastrando el software privativo (como no tener conciencia de que por qué es malo un controlador binario o los formatos propietarios) es, a mi parecer, un peligro a la larga para el software libre. A modo de ejemplo, hace años gasté casi el triple en un adaptador &lt;span class="caps"&gt;USB&lt;/span&gt; Wireless para disponer de uno con controlador libre (Zydas 1211) que me permitía utilizar dicho adaptador tanto en Linux x86 como x86_64 como en PowerPC. Mucha gente se contentaba con usar el ndiswrapper que utilizaba su controlador binario de Win32 y se encontró con la desagradable sorpresa de que en sistemas de 64 bits no era operativo. A corto plazo hace la vida fácil, a largo plazo, te encadena. Por otro lado, Ubuntu ha dañado bastante al proyecto Debian contratando a muchos de sus programadores sin colaborar excesivamente liberando nuevo código aprovechable por otras distribuciones.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.gentoo.org/"&gt;Gentoo&lt;/a&gt;: Gentoo se hizo muy famosa hace unos años porque supuestamente optimizaba el rendimiento sobre el hardware al compilarse específicamente sobre el hardware que se tenía y en base a otro software instalado. Personalmente sólo intenté instalarla durante dos días (no me compensaba el tiempo compilando con respecto a la supuesta mejora de rendimiento). El mejor punto es que como el proceso de instalación es manual, se aprende mucho acerca de cómo funciona un sistema con Linux y lo que otras distribuciones “esconden”. Tienen muy buena documentación :)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.centos.org/"&gt;CentOS&lt;/a&gt;: CentOS (Community Enterprise Operating System) es una comunidad que toma los códigos fuente de Red Hat Enterprise Linux (&lt;a href="ftp://ftp.redhat.com/"&gt;ftp://ftp.redhat.com&lt;/a&gt;) y los compila tras eliminar todas las “marcas registradas” ofreciendo una distribución que tiene como objetivo ser compatible a nivel binario con &lt;span class="caps"&gt;RHEL&lt;/span&gt;, lo que la convierte en el campo de pruebas ideal para probar cosas que luego se integrarán en entornos de producción ( o por qué no… para practicar nuestras habilidades con una de las distribuciones más extendidas a nivel empresarial). Además de CentOS existen otras distribuciones que hacen una labor parecida como Scientific Linux, etc&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.redhat.com/rhel/"&gt;Red Hat Enteprise Linux&lt;/a&gt;: Una de las distribuciones más difundidas en entorno empresarial, &lt;a href="http://fedoraproject.org/wiki/RedHatContributions"&gt;colaboradora activamente&lt;/a&gt; en el desarrollo de Linux a través del proyecto &lt;a href="http://fedoraproject.org/"&gt;Fedora&lt;/a&gt; y que utiliza el sistema de paquetes &lt;span class="caps"&gt;RPM&lt;/span&gt; para la gestión de su software, uno de los más extendidos por otros fabricantes para proporcionar sus aplicaciones, controladores, etc.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fedoraproject.org/"&gt;Fedora&lt;/a&gt;: Evolución de Red Hat Linux (sin Enterprise) que sigue recibiendo el apoyo de Red Hat para que como comunidad desarrollen la distribución. Se ha caracterizado por introducir novedosas mejoras tecnológicas. Una de las quizás más controvertidas fue la introducción de &lt;a href="https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/"&gt;Security Enhanced Linux (SELinux)&lt;/a&gt;, que inicialmente presentó algún problema para los usuarios pero que hoy en dia proporciona mayor seguridad de forma casi transparente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="que-me-motivo"&gt;¿Que me motivó?&lt;a class="headerlink" href="#que-me-motivo" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Slack, la primera que tuve debido a haberla conseguido con Sólo Programadores&lt;/li&gt;
+&lt;li&gt;Red Hat Linux, la primera con un instalador fácil que conseguí y con la que estuve muchos años, se me hacía incómodo el manejo de dependencias en las actualizaciones, pero no era excesivamente grave… y en aquella época, era algo común entre las distribuciones :)&lt;/li&gt;
+&lt;li&gt;SuSE Linux: Poder probar las traducciones del software y ver a qué se refería el manual (en papel).&lt;/li&gt;
+&lt;li&gt;Debian: reducido tamaño: miles de paquetes que permitían instalar sólo lo mínimo… lo hacían complicado para usuarios noveles que se podían asustar al ver tantos paquetes pero realmente permite instalar programas sueltos sin tener que ir empaquetados junto con otro software que no se va a utilizar.&lt;/li&gt;
+&lt;li&gt;Ubuntu: ciclos más cortos que Debian que permitían probar software más actualizado.&lt;/li&gt;
+&lt;li&gt;Debian (de nuevo): Cifrado &lt;span class="caps"&gt;LVM&lt;/span&gt;. Por motivos laborales, mi portátil con Red Hat Enterprise Linux utiliza cifrado de la carpeta /home, algo que veo muy útil de cara a proteger información confidencial en caso de robo. Cuando tuve que reinstalar mi &lt;span class="caps"&gt;PC&lt;/span&gt; debido a un cambio de disco, aproveché la oportunidad para cifrar también mi disco y me encontré con que en aquel momento, sólo Debian (entre Debian, Ubuntu, Fedora, CentOS) era capaz de cifrar “&lt;span class="caps"&gt;TODO&lt;/span&gt;” el sistema de ficheros (excepto /boot).
+  Mientras CentOS y Fedora permitían cifrar un volumen (con cryptsetup), Debian incorporaba en Debian Installer todo lo necesario, incluso mensajes que recomendaban cifrar el espacio de intercambio si se cifra algún otro volumen para prevenir posibles claves almacenadas en swap.&lt;/li&gt;
+&lt;li&gt;CentOS: Posibilidad de usar SELinux y &lt;a href="http://cobbler.et.redhat.com/"&gt;Cobbler&lt;/a&gt; (un software libre para gestión de infraestructuras de instalación), así como estar basada en Red Hat Enterprise Linux que me permitía practicar habilidades :)&lt;/li&gt;
+&lt;li&gt;Fedora: Desde la versión 9 soporta cifrado completo como hacía Debian y como añadido lleva incorporado de serie SELinux, una característica que como ya he comentado me atrae por su filosofía. Además disponía de Firefox 3 (que iba mucho mejor en mi portátil con &lt;span class="caps"&gt;RHEL&lt;/span&gt; 5 que &lt;span class="caps"&gt;FF&lt;/span&gt; 1.5). Además, tiene ciclos cortos de desarrollo lo que permite también probar nuevas características y la verdad es que hay bastantes proyectos interesantes bajo el paraguas de Fedora (&lt;a href="http://smolt.fedoraproject.org/"&gt;smolt&lt;/a&gt;, directory server, FreeIPA, etc)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="en-resumen"&gt;En resumen&lt;a class="headerlink" href="#en-resumen" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A día de hoy estoy utilizando Fedora 12 con &lt;span class="caps"&gt;LVM&lt;/span&gt; cifrado, Gnome como entorno, Firefox como navegador, gnome-terminal como consola, pidgin como programa de mensajería instantánea, xchat como cliente de &lt;span class="caps"&gt;IRC&lt;/span&gt;, k3b para grabación de &lt;span class="caps"&gt;DVD&lt;/span&gt;’s y &lt;span class="caps"&gt;CD&lt;/span&gt;’s y para contadas ocasiones LyX y OpenOffice para documentos. Para la parte multimedia, utilizo Exaile como reproductor (muy parecido a Amarok) y &lt;span class="caps"&gt;VLC&lt;/span&gt; como reproductor de vídeo.&lt;/p&gt;
+&lt;p&gt;En los servidores tengo una mezcla de Debian, CentOS y &lt;span class="caps"&gt;RHEL&lt;/span&gt;, moviendo los basados en Debian a CentOS por la mayor experiencia que tengo en la creación y gestión de paquetes &lt;span class="caps"&gt;RPM&lt;/span&gt; y la automatización de instalaciones(&lt;a href="https://iranzo.io/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda-es/"&gt;Kickstart: instalaciones automatizadas para anaconda&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;En el blog de &lt;a href="http://www.benavent.org/diario/2008/06/fedora-9-just-installed.html"&gt;Pere Benavent&lt;/a&gt; tienes información para terminar de afinar la instalación de Fedora 9 siguiendo sus instrucciones.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Tue, 03 Jun 2008 22:32:07 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2008-06-03:/blog/2008/06/03/mi-evolucion-con-linux-es/</guid><category>tech</category><category>linux</category><category>fedora</category><category>desktop</category><category>foss</category></item></channel></rss>

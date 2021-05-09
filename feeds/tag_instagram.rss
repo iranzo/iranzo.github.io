@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - Instagram</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Wed, 12 Feb 2020 07:30:24 +0100</lastBuildDate><item><title>Galleria.io and PhotoSwipe</title><link>https://iranzo.io/blog/2020/02/12/galleriaio-and-photoswipe/</link><description>
+&lt;h2 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I was looking for an alternative for my (this) blog and hold pictures. I’m a lego fan so I wanted to get some pictures uploaded but without bloating the site.&lt;/p&gt;
+&lt;p&gt;In the article &lt;a href="https://iranzo.io/blog/2019/06/09/lego-75894-1967-mini-cooper-s-rally-and-buggy-moc-adaptation-as-mini-transporter/"&gt;Lego Mini Cooper &lt;span class="caps"&gt;MOC&lt;/span&gt;&lt;/a&gt; I did add lot of pictures, same for &lt;a href="https://iranzo.io/blog/2019/06/28/lego-80101-chinese-new-years-eve/"&gt;Lego Chinese dinner&lt;/a&gt; and &lt;a href="https://iranzo.io/blog/2019/06/28/lego-80102-dragon-dance/"&gt;Lego Dragon Dance&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was checking and how telegram does handle some links and found that
+Instagram ‘links’ get expanded to list the images inside directly to see if that could help in a task I was helping at &lt;a href="https://github.com/Pelican-Elegant/elegant"&gt;Pelican-Elegant theme&lt;/a&gt; used at this site for creating a gallery.&lt;/p&gt;
+&lt;h2 id="instagram-and-multiple-pictures"&gt;Instagram and multiple pictures&lt;a class="headerlink" href="#instagram-and-multiple-pictures" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;While doing some research, I found that apparently, to an Instagram &lt;span class="caps"&gt;URL&lt;/span&gt; you can append &lt;code&gt;?__a=1&lt;/code&gt; and it will ‘dump’ a `xml’ of the picture or gallery, like the following one for &lt;a href="https://www.instagram.com/p/B7yh4IdItNd/"&gt;this picture&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="elegant-instagram" data-instagram-id="B7yh4IdItNd"&gt;&lt;/div&gt;
+&lt;p&gt;In this case, the generated &lt;span class="caps"&gt;JSON&lt;/span&gt;, available at &lt;a href="https://www.instagram.com/p/B7yh4IdItNd/?__a=1"&gt;https://www.instagram.com/p/B7yh4IdItNd/?__a=1&lt;/a&gt; contains the information we required for getting image size, thumbnail, etc&lt;/p&gt;
+&lt;p&gt;The important there is that from a gallery &lt;span class="caps"&gt;ID&lt;/span&gt;, we can get a &lt;span class="caps"&gt;JSON&lt;/span&gt; without requiring any &lt;span class="caps"&gt;API&lt;/span&gt; key (which is required for Flickr for example).&lt;/p&gt;
+&lt;p&gt;I’m not an expert in JavaScript, but I did something which was useful enough to get the json, then process the internal code and separate in two cases, ‘gallery &lt;span class="caps"&gt;ID&lt;/span&gt;’ with one or multiple pictures. Using it, I was able to then consider using some Gallery Software to get them rendered.&lt;/p&gt;
+&lt;h2 id="galleriaio"&gt;Galleria.io&lt;a class="headerlink" href="#galleriaio" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://galleria.io"&gt;https://galleria.io&lt;/a&gt; offers a nice gallery, which uses jQuery and also
+accepts a &lt;code&gt;json&lt;/code&gt; as input, so it was more or less straightforward to convert
+from the json from Instagram to what Galleria.io required.&lt;/p&gt;
+&lt;p&gt;I used that to get an initial draft to be added to Pelican-Elegant, but as
+the goal in the project is to remove dependency on jQuery it was discarded.&lt;/p&gt;
+&lt;p&gt;However, my personal research came part of another website that even not
+directly from Instagram, takes a good advantage of defining a json of images
+for showcasing pictures.&lt;/p&gt;
+&lt;h2 id="photoswipe"&gt;PhotoSwipe&lt;a class="headerlink" href="#photoswipe" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;While discussing about Galleria, Talha from Pelican-Elegant found two other
+projects and it was decided that &lt;a href="https://photoswipe.com/"&gt;PhotoSwipe&lt;/a&gt; provided nice features, mobile
+usage like pinch-in and pinch-out.&lt;/p&gt;
+&lt;p&gt;PhotoSwipe required extra steps like creating a &lt;code&gt;div&lt;/code&gt; and using &lt;span class="caps"&gt;HTML&lt;/span&gt; tags for
+putting pics (check the &lt;a href="https://next.elegant.oncrashreboot.com/photoswipe-gallery-using-raw-html"&gt;official documentation for Pelican-Elegant
+Galleries&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;One of the main problems was getting image size required (Galleria.io didn’t
+required it), but when using Instagram pictures we can grab the information
+from the &lt;span class="caps"&gt;JSON&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Finally with the help from Talha, we got it also working with Instagram
+&lt;a href="https://next.elegant.oncrashreboot.com/gallery-embed-instagram-post"&gt;Gallery Embed Instagram Post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Wed, 12 Feb 2020 07:30:24 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2020-02-12:/blog/2020/02/12/galleriaio-and-photoswipe/</guid><category>tech</category><category>Pelican</category><category>pelican-elegant</category><category>photography</category><category>gallery</category><category>Instagram</category><category>opensource</category><category>open source</category><category>galleria.io</category><category>PhotoSwipe</category><category>FOSS</category></item></channel></rss>

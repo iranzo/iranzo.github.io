@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - valux</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Mon, 08 Mar 2010 16:00:00 +0100</lastBuildDate><item><title>Introducción al Software Libre</title><link>https://iranzo.io/blog/2010/03/08/introduccion-al-software-libre-es/</link><description>&lt;section id="introducción-al-software-libre" class="slide level1"&gt;
+&lt;h1&gt;Introducción al Software&amp;nbsp;Libre&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Res publica non&amp;nbsp;dominetur&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Pablo Iranzo Gómez&amp;nbsp;(https://iranzo.github.io)&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="introducción"&gt;Introducción&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Concepto de libertad en el software
+&lt;ul&gt;
+&lt;li&gt;Definición&lt;/li&gt;
+&lt;li&gt;Términos&amp;nbsp;relacionados&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Motivaciones&lt;/li&gt;
+&lt;li&gt;Consecuencias de la libertad del software
+&lt;ul&gt;
+&lt;li&gt;sociedad, usuario final, desarrollador, integrador, administración, proveedor de mantenimiento o&amp;nbsp;servicios&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Resumen&lt;/li&gt;
+&lt;li&gt;Bibliografía&lt;/li&gt;
+&lt;li&gt;Preguntas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="free-software"&gt;Free&amp;nbsp;software&lt;/h2&gt;
+&lt;p&gt;En inglés, la palabra free tiene dos&amp;nbsp;significados:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Free as in beer” o “Free as in&amp;nbsp;freedom”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;En castellano sería ‘gratis’ o ‘libre’, para evitar ambigüedades muchas veces en inglés se utiliza la palabra española ‘libre software’ o ‘gratis&amp;nbsp;software’&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;¿Es gratuito el software libre?
+&lt;ul&gt;
+&lt;li&gt;No necesariamente, pero muy&amp;nbsp;probable&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;¿Es libre el software gratuito?
+&lt;ul&gt;
+&lt;li&gt;No&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="concepto-de-libertad-en-el-software"&gt;Concepto de libertad en el&amp;nbsp;software&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;¿Qué es el software privativo?
+&lt;ul&gt;
+&lt;li&gt;Mucho software tiene licencias privativas (que nos privan de libertad de su uso), por ejemplo, algunos sistemas operativos al comprar el ordenador, no nos permiten venderlo por separado o hacer copias,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;¿Qué es el software libre?
+&lt;ul&gt;
+&lt;li&gt;El software libre se caracteriza por garantizarnos una serie de libertades:
+&lt;ul&gt;
+&lt;li&gt;Uso (en cualquier lugar, propósito y para&amp;nbsp;siempre)&lt;/li&gt;
+&lt;li&gt;Estudiarlo y adaptarlo (necesita el código&amp;nbsp;fuente)&lt;/li&gt;
+&lt;li&gt;Libertad de redistribución (podemos copiarlo para nuestros&amp;nbsp;amigos)&lt;/li&gt;
+&lt;li&gt;Libertad para mejorarlo y publicar mejoras (nec.&amp;nbsp;código)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="ideas"&gt;Ideas&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si tu tienes una manzana y yo tengo otra manzana e intercambiamos manzanas, ambos tenemos una&amp;nbsp;manzana.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si tu tienes una idea y yo tengo una idea y las intercambiamos, cada uno tendremos dos&amp;nbsp;ideas&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(Atribuida a Bernard&amp;nbsp;Shaw)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;El software libre se basa en poder compartir lo que sabemos para que todos&amp;nbsp;aprendamos.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="licencias-libres"&gt;…licencias&amp;nbsp;libres…&lt;/h2&gt;
+&lt;p&gt;Para que el software libre se adapte a la legislación, se le otorgan unas licencias&amp;nbsp;‘libres’&lt;/p&gt;
+&lt;p&gt;Existen muchas licencias libres, muchas equivalentes y otras con distintos grados de&amp;nbsp;libertad&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;GPL&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;BSD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Creative&amp;nbsp;Commons&lt;/li&gt;
+&lt;li&gt;Artística&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;MIT&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="gpl"&gt;&lt;span class="caps"&gt;GPL&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;La &lt;span class="caps"&gt;GNU&lt;/span&gt; General Public License es una de las más asociadas al software libre pero no la&amp;nbsp;única.&lt;/p&gt;
+&lt;p&gt;Se dice que es una licencia&amp;nbsp;vírica:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Cualquier modificación sobre software basado en una licencia &lt;span class="caps"&gt;GPL&lt;/span&gt;, debe ser licenciado nuevamente bajo la licencia &lt;span class="caps"&gt;GPL&lt;/span&gt;.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Esto nos permite ‘asegurar’, que si alguien hace uso de software libre que otros han hecho, el resto podamos seguir beneficiándonos de las&amp;nbsp;mejoras&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="bsd"&gt;&lt;span class="caps"&gt;BSD&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Se considera la más&amp;nbsp;libre:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;se mantiene la&amp;nbsp;autoría&lt;/li&gt;
+&lt;li&gt;se debe incluir la&amp;nbsp;licencia&lt;/li&gt;
+&lt;li&gt;se puede convertir en&amp;nbsp;‘privativo’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La licencia &lt;span class="caps"&gt;BSD&lt;/span&gt; aunque da más libertad de uso, no impide que la gente saque provecho de ella y luego no revierta los beneficios de nuevo a la&amp;nbsp;comunidad.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="motivaciones"&gt;Motivaciones&lt;/h2&gt;
+&lt;p&gt;¿Qué nos aporta el software&amp;nbsp;libre?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Libertad (uso, distribución, copia,&amp;nbsp;etc)&lt;/li&gt;
+&lt;li&gt;Conocimiento (podemos aprender del&amp;nbsp;código)&lt;/li&gt;
+&lt;li&gt;Tranquilidad (analizar el&amp;nbsp;código)&lt;/li&gt;
+&lt;li&gt;Adaptabilidad (podemos aprovechar el código de otros para desarrollar sólo las partes que&amp;nbsp;faltan)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="consecuencias-de-la-libertad-del-soft."&gt;Consecuencias de la libertad del&amp;nbsp;soft.&lt;/h2&gt;
+&lt;p&gt;Para el&amp;nbsp;desarrollador&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tiene acceso a una amplia variedad de rutinas o programas ya creados que puede utilizar o adaptar para sus programas evitando invertir el tiempo para desarrollar una y otra vez cosas que miles de personas ya han&amp;nbsp;hecho&lt;/li&gt;
+&lt;li&gt;Aprende de lo que otros han hecho para evitar problemas comunes o nuevas formas de enfocarlos u optimizar&amp;nbsp;código&lt;/li&gt;
+&lt;li&gt;Se acostumbra a trabajar en grupos multinacionales que programan en base a estándares, desarrollando con ‘calidad’ (ya que mucha gente puede revisar el&amp;nbsp;código)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="consecuencias-de-la-libertad-del-soft.-1"&gt;Consecuencias de la libertad del&amp;nbsp;soft.&lt;/h2&gt;
+&lt;p&gt;Para el&amp;nbsp;integrador&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;En palabras de Ricardo Galli, el software está hoy en día “comoditizado”, el coste del hardware es tan bajo que pagar más por el software que por el propio equipo no es&amp;nbsp;lógico.&lt;/li&gt;
+&lt;li&gt;El software libre permite que un integrador de hardware pueda incorporar un conjunto de elementos que saquen dicho partido del hardware a una fracción del coste del software&amp;nbsp;privativo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="consecuencias-de-la-libertad-del-soft.-2"&gt;Consecuencias de la libertad del&amp;nbsp;soft.&lt;/h2&gt;
+&lt;p&gt;Para el que proporciona mantenimiento o&amp;nbsp;servicios&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Al tener acceso al código, puede personalizarlo y ofrecer servicios personalizados para los clientes (soporte, formación, consultoría,&amp;nbsp;etc)&lt;/li&gt;
+&lt;li&gt;Como todo el mundo tiene acceso, es fácil convertirse en proveedor de una empresa gracias a la cercanía (servicios&amp;nbsp;locales)&lt;/li&gt;
+&lt;li&gt;Mayor competencia, porque todo el mundo puede proveer el software, así que el ‘valor’ diferenciador es la calidad del&amp;nbsp;servicio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="consecuencias-de-la-libertad-del-soft.-3"&gt;Consecuencias de la libertad del&amp;nbsp;soft.&lt;/h2&gt;
+&lt;p&gt;Para la administración&amp;nbsp;pública&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El poder examinar el software da mayor garantía sobre cómo se tratan los datos de los&amp;nbsp;ciudadanos&lt;/li&gt;
+&lt;li&gt;Puede promover la economía local al contratar a empresas locales para prestar&amp;nbsp;servicios&lt;/li&gt;
+&lt;li&gt;Es más seguro porque lo revisan más&amp;nbsp;desarrolladores&lt;/li&gt;
+&lt;li&gt;El software libre suele estar basado en estándares (como consecuencia del interdesarrollo), lo que permite que los datos con los que trabaja, no queden ‘encerrados’ en formatos propietarios que en un futuro no podrá consultar por desaparecer el software privativo que los&amp;nbsp;trataba.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="consecuencias-de-la-libertad-del-soft.-4"&gt;Consecuencias de la libertad del&amp;nbsp;soft.&lt;/h2&gt;
+&lt;p&gt;Para el usuario&amp;nbsp;final&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Puede aprender con el&amp;nbsp;software&lt;/li&gt;
+&lt;li&gt;Al haber mayor oferta de servicios, puede obtener mejores&amp;nbsp;precios&lt;/li&gt;
+&lt;li&gt;Puede acceder a soporte por parte de otros usuarios de forma gratuita (hay mucha&amp;nbsp;documentación)&lt;/li&gt;
+&lt;li&gt;Es más seguro y se actualiza más&amp;nbsp;rápido&lt;/li&gt;
+&lt;li&gt;Consume menos&amp;nbsp;recursos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="consecuencias-de-la-libertad-del-soft.-5"&gt;Consecuencias de la libertad del&amp;nbsp;soft.&lt;/h2&gt;
+&lt;p&gt;Para la&amp;nbsp;sociedad&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El conocimiento se amplifica al compartirse entre&amp;nbsp;todos&lt;/li&gt;
+&lt;li&gt;Se trabaja en un proyecto común para adaptar el software a las necesidades de los&amp;nbsp;involucrados&lt;/li&gt;
+&lt;li&gt;Se democratiza el acceso a la&amp;nbsp;tecnología&lt;/li&gt;
+&lt;li&gt;Al tener software que podemos revisar,no estamos sujetos a secuestros de información o comportamientos de&amp;nbsp;espionaje.&lt;/li&gt;
+&lt;li&gt;El conocimiento digital no se pierde al poder adaptar los accesos a formatos antiguos a los programas&amp;nbsp;modernos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="reflexionando-en-voz-alta1"&gt;Reflexionando en voz&amp;nbsp;alta…1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;El software libre nos permite acceso al&amp;nbsp;código&lt;/li&gt;
+&lt;li&gt;Podemos&amp;nbsp;redistribuirlo&lt;/li&gt;
+&lt;li&gt;Podemos cobrar por&amp;nbsp;él&lt;/li&gt;
+&lt;li&gt;Podemos modificarlo para adaptarlo a nuestras&amp;nbsp;necesidades&lt;/li&gt;
+&lt;li&gt;Si no sabemos programar, podemos contratar a alguien para que lo&amp;nbsp;haga&lt;/li&gt;
+&lt;li&gt;Si la empresa que nos hizo un programa desaparece, otra puede&amp;nbsp;continuarlo&lt;/li&gt;
+&lt;li&gt;Podemos acudir a cualquier empresa con el código de nuestro programa para que lo&amp;nbsp;mejore&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="reflexionando-en-voz-alta2"&gt;Reflexionando en voz&amp;nbsp;alta…2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Al auditar el software, tenemos menos peligro de&amp;nbsp;espionaje&lt;/li&gt;
+&lt;li&gt;Al poder escoger la empresa que nos ofrecerá los servicios, conseguiremos precios más&amp;nbsp;bajos&lt;/li&gt;
+&lt;li&gt;¿De qué viven las empresas relacionadas con el software&amp;nbsp;libre?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="qué-es-linux"&gt;¿Qué es&amp;nbsp;Linux?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux es un ejemplo, entre muchos otros, de software&amp;nbsp;libre&lt;/li&gt;
+&lt;li&gt;Linux técnicamente es el núcleo del sistema, al que se acompaña de diversas ‘facilidades’, como programas de oficina, utilidades, instaladores, sistemas de configuración, etc, hasta constituir un sistema operativo y las aplicaciones de productividad que lo&amp;nbsp;rodean.&lt;/li&gt;
+&lt;li&gt;A cada uno de esos conjuntos de software se le denominan&amp;nbsp;‘distribuciones’.&lt;/li&gt;
+&lt;li&gt;Entre las más conocidas: Debian, Fedora, OpenSuSE, Ubuntu, Gentoo, CentOS, Mandriva, Lliurex, Guadalinex, Linex,&amp;nbsp;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="bibliografía"&gt;Bibliografía&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://alufis35.uv.es/Que-es-Linux.html" class="uri"&gt;http://alufis35.uv.es/Que-es-Linux.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://es.wikipedia.org/wiki/BSD\_license" class="uri"&gt;http://es.wikipedia.org/wiki/&lt;span class="caps"&gt;BSD&lt;/span&gt;\_license&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.gnu.org/copyleft/gpl.html" class="uri"&gt;http://www.gnu.org/copyleft/gpl.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.uoc.edu/estudios/mofs/software\_libre/index.html" class="uri"&gt;http://www.uoc.edu/estudios/mofs/software\_libre/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Mon, 08 Mar 2010 16:00:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-03-08:/blog/2010/03/08/introduccion-al-software-libre-es/</guid><category>presentations</category><category>foss</category><category>valux</category></item><item><title>Valux - Fedora</title><link>https://iranzo.io/blog/2008/08/30/valux-fedora-es/</link><description>&lt;section class="slide level1"&gt;
+
+&lt;h2 id="qué-es-fedora"&gt;¿Qué es&amp;nbsp;Fedora?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fedora es un sistema operativo basado en Linux que integra las últimas novedades en software libre y&amp;nbsp;abierto&lt;/li&gt;
+&lt;li&gt;Fedora es y será siempre libre para su uso, modificación y&amp;nbsp;distribución&lt;/li&gt;
+&lt;li&gt;Está construida por gente de todo el mundo que trabaja conjuntamente como una comunidad: El Proyecto&amp;nbsp;Fedora&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="orígenes"&gt;Orígenes&lt;/h2&gt;
+&lt;p&gt;Los comienzos: Red Hat Linux 1994 -&amp;gt;&amp;nbsp;2003&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Versiones cada 6&amp;nbsp;meses&lt;/li&gt;
+&lt;li&gt;Versiones más estables (.2) cada 18&amp;nbsp;meses&lt;/li&gt;
+&lt;li&gt;Dificultad de soportar a largo&amp;nbsp;plazo&lt;/li&gt;
+&lt;li&gt;Modelo de ventas&amp;nbsp;complicado&lt;/li&gt;
+&lt;li&gt;Part. comunidad:Upstream/&lt;span class="caps"&gt;BZ&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="la-separación"&gt;La&amp;nbsp;separación&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Objetivos&amp;nbsp;irreconciliables&lt;/li&gt;
+&lt;li&gt;Estabilidad y rápida&amp;nbsp;innovación&lt;/li&gt;
+&lt;li&gt;Red Hat Enterprise&amp;nbsp;Linux&lt;/li&gt;
+&lt;li&gt;Soporte durante 7+&amp;nbsp;años&lt;/li&gt;
+&lt;li&gt;Modelo de&amp;nbsp;subscripciones&lt;/li&gt;
+&lt;li&gt;Libre&lt;/li&gt;
+&lt;li&gt;Fedora&lt;/li&gt;
+&lt;li&gt;Versiones nuevas cada 6&amp;nbsp;meses&lt;/li&gt;
+&lt;li&gt;Patrocinada por Red&amp;nbsp;Hat&lt;/li&gt;
+&lt;li&gt;Free as in freedom / Free as in&amp;nbsp;beer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="el-árbol-genealógico"&gt;El árbol&amp;nbsp;genealógico&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src="https://iranzo.io/blog/2008/08/30/valux-fedora-es/10000201000002BD000001457DE9B4C7.png" /&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="dónde"&gt;¿Dónde?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Wiki: &lt;a href="http://fedoraproject.org/wiki" class="uri"&gt;http://fedoraproject.org/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lista de correo: &lt;a href="http://fedoraproject.org/wiki/Communicate#ML" class="uri"&gt;http://fedoraproject.org/wiki/Communicate#&lt;span class="caps"&gt;ML&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;IRC&lt;/span&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://fedoraproject.org/wiki/Communicate#IRC" class="uri"&gt;http://fedoraproject.org/wiki/Communicate#&lt;span class="caps"&gt;IRC&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://freenode.org" class="uri"&gt;http://freenode.org&lt;/a&gt;&amp;nbsp;(#fedora*)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="qué-hace-la-comunidad"&gt;¿Qué hace la&amp;nbsp;comunidad?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Documentación&lt;/li&gt;
+&lt;li&gt;Traducciones&lt;/li&gt;
+&lt;li&gt;Marketing&lt;/li&gt;
+&lt;li&gt;Ambassadors&lt;/li&gt;
+&lt;li&gt;Diseños&amp;nbsp;art.&lt;/li&gt;
+&lt;li&gt;Infraestructura&lt;/li&gt;
+&lt;li&gt;Webs&lt;/li&gt;
+&lt;li&gt;Live &lt;span class="caps"&gt;CD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Distribución&lt;/li&gt;
+&lt;li&gt;Mentors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="cuenta-fedora-ventajas"&gt;Cuenta Fedora:&amp;nbsp;Ventajas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Acceso ssh a las&amp;nbsp;máquinas&lt;/li&gt;
+&lt;li&gt;Acceso &lt;span class="caps"&gt;CVS&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Acceso a los diversos tracs&amp;nbsp;(tickets,wiki,etc)&lt;/li&gt;
+&lt;li&gt;Página&amp;nbsp;personal&lt;/li&gt;
+&lt;li&gt;Alias email:&lt;a href="mailto:cuenta@fedoraproject.org"&gt;cuenta@fedoraproject.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Planet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="fedora"&gt;¿Fedora?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Robusta y&amp;nbsp;segura&lt;/li&gt;
+&lt;li&gt;Base de unas 70 distribuciones&amp;nbsp;derivadas&lt;/li&gt;
+&lt;li&gt;Soporte para x86, x86_64, PowerPC y versiones ‘no oficiales’ para Alpha y Sparc&amp;nbsp;(aurora)&lt;/li&gt;
+&lt;li&gt;Filosofía: Release Early, Release&amp;nbsp;Often&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;UPSTREAM&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Fedora &lt;span class="caps"&gt;DS&lt;/span&gt;, SpaceWalk, Cobbler, Func, Pulp, Virtmanager, libvirt, PackageKit, oVirt,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="fedora-cont"&gt;Fedora?&amp;nbsp;(cont)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Últimas versiones de&amp;nbsp;paquetes&lt;/li&gt;
+&lt;li&gt;Ciclos&amp;nbsp;rápidos&lt;/li&gt;
+&lt;li&gt;Mejoras y novedades que llegan antes a los&amp;nbsp;usuarios&lt;/li&gt;
+&lt;li&gt;Actualizaciones sencillas&amp;nbsp;(yum)&lt;/li&gt;
+&lt;li&gt;Multitud de paquetes hechos por la&amp;nbsp;comunidad&lt;/li&gt;
+&lt;li&gt;Herramientas gráficas de&amp;nbsp;gestión&lt;/li&gt;
+&lt;li&gt;Anaconda: instalador con &lt;span class="caps"&gt;GUI&lt;/span&gt; y &lt;span class="caps"&gt;TUI&lt;/span&gt;&amp;nbsp;‘scriptable’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="rhl-vs-fedora-vs-rhel"&gt;&lt;span class="caps"&gt;RHL&lt;/span&gt; vs Fedora vs &lt;span class="caps"&gt;RHEL&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fedora es la continuación de &lt;span class="caps"&gt;RHL&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Fedora está formada por miles de proyectos de Software&amp;nbsp;Libre&lt;/li&gt;
+&lt;li&gt;Fedora inicia multitud de proyectos de software libre&amp;nbsp;(subproyectos)&lt;/li&gt;
+&lt;li&gt;Fedora es el proyecto base en el que se basa &lt;span class="caps"&gt;RHEL&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Red Hat proporciona subscripciones de soporte, actualización (&lt;span class="caps"&gt;RHN&lt;/span&gt;), así como servicios de formación, consultoría,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="contribuciones-de-rh-al-foss"&gt;Contribuciones de &lt;span class="caps"&gt;RH&lt;/span&gt; al &lt;span class="caps"&gt;FOSS&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://fedoraproject.org/wiki/RedHatContributions" class="uri"&gt;http://fedoraproject.org/wiki/RedHatContributions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Kernel, Xorg, &lt;span class="caps"&gt;GFS&lt;/span&gt;, &lt;span class="caps"&gt;LVM&lt;/span&gt;, ext3, Netscape Directory Server, Netscape Certificate System, MetaMatrix, Liberation fonts, Pulp, Virt Manager, &lt;span class="caps"&gt;GTK&lt;/span&gt; en Firefox, partes de &lt;span class="caps"&gt;GNOME&lt;/span&gt;, etc’upstream’ de software libre (subproyectos) Emerging Technologies&amp;nbsp;Group&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="quién"&gt;¿Quién?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;La&amp;nbsp;comunidad&lt;/li&gt;
+&lt;li&gt;Traducciones&lt;/li&gt;
+&lt;li&gt;Subproyectos&lt;/li&gt;
+&lt;li&gt;Bugs&lt;/li&gt;
+&lt;li&gt;Desarrollos&lt;/li&gt;
+&lt;li&gt;Cada Ingeniero de Red&amp;nbsp;Hat&lt;/li&gt;
+&lt;li&gt;Influye en&amp;nbsp;I+D&lt;/li&gt;
+&lt;li&gt;Rápido desarrollo y correcciones de&amp;nbsp;bugs&lt;/li&gt;
+&lt;li&gt;Millones de&amp;nbsp;usuarios&lt;/li&gt;
+&lt;li&gt;Prueban últimas&amp;nbsp;tecnologías&lt;/li&gt;
+&lt;li&gt;Colaboran con traducciones, bugs,&amp;nbsp;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="fedora-guía-de-instalación" class="slide level1"&gt;
+&lt;h1&gt;Fedora Guía de&amp;nbsp;Instalación&lt;/h1&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="instalación"&gt;Instalación&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;DVD&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;Isolinux
+&lt;ul&gt;
+&lt;li&gt;Kernel e initrd&amp;nbsp;(parámetros)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Init
+&lt;ul&gt;
+&lt;li&gt;Stage1&amp;nbsp;anaconda&lt;/li&gt;
+&lt;li&gt;Stage2&amp;nbsp;anaconda&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Reinicio&lt;/li&gt;
+&lt;li&gt;Firstboot&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Kickstart&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="características"&gt;Características&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt;&amp;nbsp;Cifrado&lt;/li&gt;
+&lt;li&gt;SELinux&lt;/li&gt;
+&lt;li&gt;Network&amp;nbsp;Manager&lt;/li&gt;
+&lt;li&gt;PackageKit&lt;/li&gt;
+&lt;li&gt;OpenJDK&lt;/li&gt;
+&lt;li&gt;Online Desktop /&amp;nbsp;Mugshot&lt;/li&gt;
+&lt;li&gt;Smolt //&amp;nbsp;Kerneloops&lt;/li&gt;
+&lt;li&gt;LiveCD Tools //&amp;nbsp;Revisor…&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;FUSE&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="slide level1"&gt;
+
+&lt;h2 id="multimedia-escritorio"&gt;Multimedia /&amp;nbsp;Escritorio&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Software libre
+&lt;ul&gt;
+&lt;li&gt;Fedora sólo incluye software libre
+&lt;ul&gt;
+&lt;li&gt;Evince (&lt;span class="caps"&gt;PDF&lt;/span&gt;), Libswfdec (Flash), IcedTea&amp;nbsp;(Java)&lt;/li&gt;
+&lt;li&gt;Ofrece enlaces a empresas que desarrollan codecs, etc para comprar una licencia de uso y mensajes ‘informativos’ de los problemas de lo&amp;nbsp;privativo.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Software privativo
+&lt;ul&gt;
+&lt;li&gt;Existen repositorios ‘alternativos’ no oficiales que proporcionan software privativo
+&lt;ul&gt;
+&lt;li&gt;Flash, Adobe, Códecs multimedia, Controladores (ati, nvidia, wifi,&amp;nbsp;etc)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="preguntas" class="slide level1"&gt;
+&lt;h1&gt;Preguntas&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Fedora / Red Hat
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://fedoraproject.org/" class="uri"&gt;http://fedoraproject.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://et.redhat.com" class="uri"&gt;http://et.redhat.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;VALUX&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.valux.org" class="uri"&gt;http://www.valux.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="mailto:Valux-list@valux.org"&gt;mailto:Valux-list@valux.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Pablo Iranzo Gómez (&lt;a href="http://Alufis35.uv.es/~iranzo" class="uri"&gt;http://Alufis35.uv.es/~iranzo&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sat, 30 Aug 2008 16:00:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2008-08-30:/blog/2008/08/30/valux-fedora-es/</guid><category>presentations</category><category>foss</category><category>valux</category><category>fedora</category></item></channel></rss>

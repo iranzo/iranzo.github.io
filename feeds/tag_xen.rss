@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - xen</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Fri, 23 Apr 2010 23:31:00 +0200</lastBuildDate><item><title>Rescate de sistemas virtuales (Xen)</title><link>https://iranzo.io/blog/2010/04/23/rescate-de-sistemas-virtuales-xen-es/</link><description>&lt;p&gt;A raíz de un problema debido a reiterados apagones, me vi en la necesidad de levantar una máquina virtual que ya no&amp;nbsp;arrancaba.&lt;/p&gt;
+&lt;p&gt;En un sistema físico, lo que haríamos, es que según en qué punto estemos, usar un disco de arranque de nuestra distribución y por un lado reparar el sistema de ficheros con fsck o rehacer un&amp;nbsp;initrd.img.&lt;/p&gt;
+&lt;p&gt;¿Cómo hacemos esto si la máquina en lugar de ser una real, es una&amp;nbsp;virtual?.&lt;/p&gt;
+&lt;p&gt;Copiando el fichero de configuración de nuestra máquina a &amp;#8216;rescate&amp;#8217;, podemos editar la línea del cargador (eliminando pygrub) e indicando como kernel e initrd.img los de nuestro cd de distribución (en el caso de Xen, images/xen para &lt;span class="caps"&gt;EL5&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;Una vez arrancado, ya podemos seguir el procedimiento estándar de&amp;nbsp;recuperación.&lt;/p&gt;
+&lt;p&gt;En el caso de tener que reconstruir el initrd, podemos tener un problema añadido, pero por otro lado, al ser todo máquinas virtuales &amp;#8216;con el mismo hardware&amp;#8217;, es muy sencillo crear otra máquina virtual e instalarla indicando los mismos nombres para los vg&amp;#8217;s, particiones de arranque, etc y luego copiar el initrd.img y el kernel de la máquina nueva a la antigua y arrancarla, para llegados a este punto, reinstalar la última versión del kernel disponible con nuestro sistema ya&amp;nbsp;arrancado.&lt;/p&gt;
+&lt;p&gt;La copia la podemos hacer bien desde el medio de rescate o montando mediante loopback el fichero de la máquina virtual (con &lt;span class="caps"&gt;LVM&lt;/span&gt;&amp;#8217;s es trivial) (puedes encontrar mucha información al respecto buscando por xen image y loopback&amp;nbsp;offset).&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Fri, 23 Apr 2010 23:31:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-04-23:/blog/2010/04/23/rescate-de-sistemas-virtuales-xen-es/</guid><category>tech</category><category>fedora</category><category>xen</category><category>foss</category></item><item><title>Mount disk images</title><link>https://iranzo.io/blog/2008/07/18/mount-disk-images/</link><description>&lt;p&gt;I&amp;#8217;ve been using a Xen guest under &lt;span class="caps"&gt;RHEL&lt;/span&gt; 5.2 to hold this Webserver, and because of failures, I choose to keep a copy of the full disk image on another&amp;nbsp;machine.&lt;/p&gt;
+&lt;p&gt;Having to transfer the full disk in the network means stop the server (Xen guest),
+&lt;code&gt;rsync&lt;/code&gt; the image on disk (wait 40 minutes), then start guest&amp;nbsp;again.&lt;/p&gt;
+&lt;p&gt;After doing the initial image transfer, it would be easier to just sync updated files, but&amp;#8230; how to loop mount a full&amp;nbsp;disk?&lt;/p&gt;
+&lt;p&gt;In my case, the &lt;span class="caps"&gt;HDD&lt;/span&gt; image contained a partition for &lt;code&gt;/boot&lt;/code&gt; and a partition for a &lt;span class="caps"&gt;LVM&lt;/span&gt;&amp;nbsp;pv.&lt;/p&gt;
+&lt;p&gt;First, I needed to check Number of cylinders in virtual disk inside Xen Guest. Using &lt;code&gt;fdisk&lt;/code&gt; I could check that number, for example,&amp;nbsp;777.&lt;/p&gt;
+&lt;p&gt;On the remote system, the one with the full image transferred previously I could then&amp;nbsp;do:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+fdisk /var/lib/xen/images/GUEST.img -C &lt;span class="m"&gt;777&lt;/span&gt; -l -u &lt;span class="c1"&gt;#  and will yield something like:&lt;/span&gt;
+
+&lt;span class="m"&gt;255&lt;/span&gt; heads, &lt;span class="m"&gt;63&lt;/span&gt; sectors/track, &lt;span class="m"&gt;777&lt;/span&gt; cylinders, &lt;span class="m"&gt;0&lt;/span&gt; sectores en total
+&lt;span class="nv"&gt;Unidades&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; sectores de &lt;span class="m"&gt;1&lt;/span&gt; * &lt;span class="nv"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; bytes
+Disposit. Inicio Comienzo Fin Bloques Id Sistema
+/var/lib/xen/images/GUEST.img1 * &lt;span class="m"&gt;63&lt;/span&gt; &lt;span class="m"&gt;208844&lt;/span&gt; &lt;span class="m"&gt;104391&lt;/span&gt; &lt;span class="m"&gt;83&lt;/span&gt; Linux
+/var/lib/xen/images/GUEST.img2 &lt;span class="m"&gt;208845&lt;/span&gt; &lt;span class="m"&gt;12482504&lt;/span&gt; &lt;span class="m"&gt;6136830&lt;/span&gt; 8e Linux LVM
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;In this case, as I want to access my &lt;span class="caps"&gt;LVM&lt;/span&gt; volume, so I need to convert the partition start to a size,&amp;nbsp;so:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="nv"&gt;START&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;512&lt;/span&gt;*208845 &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;106928640&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;and then thanks to &lt;code&gt;losetup&lt;/code&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="nv"&gt;libre&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;losetup -f&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="c1"&gt;#Get a free loop device&lt;/span&gt;
+losetup -o &lt;span class="m"&gt;106928640&lt;/span&gt; &lt;span class="nv"&gt;$libre&lt;/span&gt; /var/lib/xen/images/GUEST.img &lt;span class="c1"&gt;#setup the device for the 2nd partition&lt;/span&gt;
+pvscan &lt;span class="c1"&gt;#scan for LVM&amp;#39;s pv&lt;/span&gt;
+vgscan &lt;span class="c1"&gt;# same for VG&lt;/span&gt;
+lvscan &lt;span class="c1"&gt;# same for LV&amp;#39;s&lt;/span&gt;
+lvchange -a y /dev/GUESTvg &lt;span class="c1"&gt;#activate LV&amp;#39;s on &amp;#39;GUESTvg&amp;#39; VG&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;and mount our drives doing &lt;code&gt;mount /dev/GUESTvg/LVMunit&lt;/code&gt; where desired&amp;nbsp;;)&lt;/p&gt;
+&lt;p&gt;At this point I can just&amp;nbsp;run:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+rsync -avur —perms —progress —delete remoteserver:/ /mnt/DISKIMAGE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;And get a &amp;#8216;working&amp;#8217; copy of the remote machine but just copying changed&amp;nbsp;elements.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Fri, 18 Jul 2008 06:17:02 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2008-07-18:/blog/2008/07/18/mount-disk-images/</guid><category>tech</category><category>Linux</category><category>Xen</category><category>foss</category></item></channel></rss>

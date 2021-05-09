@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - installation</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Sat, 23 Jan 2010 08:25:00 +0000</lastBuildDate><item><title>Customize RHEL/CentOS installation media (EL4/EL5+)</title><link>https://iranzo.io/blog/2010/01/23/customize-rhelcentos-installation-media-el4el5/</link><description>
+&lt;h2 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A standard install media, (let’s talk about a &lt;span class="caps"&gt;DVD&lt;/span&gt; for easier start) has several files/folders at his root, but most important are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;isolinux&lt;/code&gt; (where the loader lives)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;images&lt;/code&gt; (for extra files for installer to load)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Packages&lt;/code&gt; for installation (&lt;code&gt;RedHat/&lt;/code&gt; for &lt;span class="caps"&gt;EL4&lt;/span&gt;, &lt;code&gt;Server&lt;/code&gt;/&lt;code&gt;Client&lt;/code&gt; for &lt;span class="caps"&gt;EL5&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usually, a distribution has, for its main binaries, more than 2 gigabytes of data, that enables one target to act as a multifunction server/workstation, but that you will not usually load on the same system. Furthermore, since the &lt;span class="caps"&gt;DVD&lt;/span&gt; creation, there have been so many updates/patches that make your installation a ‘outdated’ install that you’ll need to upgrade to have recent patches.&lt;/p&gt;
+&lt;p&gt;Wouldn’t it be better to have one install media suited for your target systems with all available updates applied?&lt;/p&gt;
+&lt;h2 id="preparing-everything"&gt;Preparing everything&lt;a class="headerlink" href="#preparing-everything" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;First, we’ll need to copy all of our &lt;span class="caps"&gt;DVD&lt;/span&gt; media to a folder in our hard drive, including those hidden files on &lt;span class="caps"&gt;DVD&lt;/span&gt; root (the ones telling installer which &lt;span class="caps"&gt;CD&lt;/span&gt;-sets are included and some other info).&lt;/p&gt;
+&lt;p&gt;Let’s assume that we’ll work on /home/user/&lt;span class="caps"&gt;DVD&lt;/span&gt;/&lt;/p&gt;
+&lt;p&gt;After we’ve copied everything from our install media, we’ll start customizing :)&lt;/p&gt;
+&lt;h2 id="dvd-background-image-at-boot-prompt"&gt;&lt;span class="caps"&gt;DVD&lt;/span&gt; background image at boot prompt&lt;a class="headerlink" href="#dvd-background-image-at-boot-prompt" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We can customize &lt;span class="caps"&gt;DVD&lt;/span&gt; background image and even keyboard layout by tweaking &lt;code&gt;isolinux/isolinux.cfg&lt;/code&gt; with all required fields (Check &lt;a href="http://syslinux.zytor.com/wiki/index.php/SYSLINUX"&gt;&lt;code&gt;Syslinux&lt;/code&gt;&lt;/a&gt; Documentation to check proper syntax)&lt;/p&gt;
+&lt;p&gt;On &lt;a href="https://iranzo.io/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda-es/"&gt;&lt;code&gt;Kickstart: instalaciones automatizadas para anaconda&lt;/code&gt;&lt;/a&gt; (Spanish) you can also check how to create a kickstart, so you can embed it on this &lt;span class="caps"&gt;DVD&lt;/span&gt; and configure &lt;code&gt;isolinux.cfg&lt;/code&gt; to automatic provision a system&lt;/p&gt;
+&lt;h2 id="including-updates"&gt;Including updates&lt;a class="headerlink" href="#including-updates" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The easiest way would be to install a system with all required package set from original &lt;span class="caps"&gt;DVD&lt;/span&gt; media, and then connect that system to an update server to fetch but not install them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;EL4&lt;/span&gt;: &lt;code&gt;up2date -du # yum upgrade —downloadonly&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;EL5&lt;/span&gt;: &lt;code&gt;yum upgrade —downloadonly&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After you download every single update, you’ll need to copy them to a folder like &lt;code&gt;/home/user/DVD/updates/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Well, now let’s start the funny work:&lt;/p&gt;
+&lt;p&gt;For each package in updates/, you’ll need to remove old version from original folder (remember: &lt;code&gt;Client/&lt;/code&gt; &lt;code&gt;Server/&lt;/code&gt; or &lt;code&gt;RedHat/RPMS&lt;/code&gt; ), and place in that folder the updated one…&lt;/p&gt;
+&lt;p&gt;After some minutes, you’ll have all updates in place… and you can remove the &lt;span class="caps"&gt;DVD&lt;/span&gt;/updates/ folder as it will be empty after placing each updated &lt;span class="caps"&gt;RPM&lt;/span&gt; in the folder where the previous versions was.&lt;/p&gt;
+&lt;h2 id="removing-unused-packages"&gt;Removing unused packages&lt;a class="headerlink" href="#removing-unused-packages" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Well, after having everything in place, we’ll start removing unused files. Usually, we could check every package install status on ‘test’ system by checking rpm, but that’s going to be a way lengthy task, so we can ‘automate’ it a bit by doing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you have &lt;code&gt;ssh&lt;/code&gt; password-less connection between your systems (&lt;span class="caps"&gt;BUILD&lt;/span&gt; and &lt;span class="caps"&gt;TARGET&lt;/span&gt;):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On &lt;span class="caps"&gt;BUILD&lt;/span&gt; system:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; package &lt;span class="k"&gt;in&lt;/span&gt; *.rpm
+&lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="nv"&gt;NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;rpm -q —queryformat &lt;span class="s1"&gt;'%NAME'&lt;/span&gt; &lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt; ssh TARGET &lt;span class="s2"&gt;"rpm -q &lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt; &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 || echo rm &lt;/span&gt;&lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;tee things-to-do
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;If you don’t have &lt;code&gt;ssh&lt;/code&gt; password-less setup (using private/public key authentication or Kerberos), you can do something similar this way:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On &lt;span class="caps"&gt;BUILD&lt;/span&gt; system:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; package &lt;span class="k"&gt;in&lt;/span&gt; *.rpm
+&lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="nv"&gt;NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;rpm -q —queryformat &lt;span class="s1"&gt;'%NAME'&lt;/span&gt; &lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="s2"&gt;:&lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &amp;gt; packages-on-DVD
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Then copy that file on your &lt;span class="caps"&gt;TARGET&lt;/span&gt; system and running:&lt;/p&gt;
+&lt;p&gt;On &lt;span class="caps"&gt;TARGET&lt;/span&gt; system:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; package &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;cat packages-on-DVD&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="nv"&gt;QUERY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;cut -d &lt;span class="s2"&gt;":"&lt;/span&gt; -f &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="nv"&gt;FILE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$package&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;cut -d &lt;span class="s2"&gt;":"&lt;/span&gt; -f &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt; rpm -q —queryformat &lt;span class="s1"&gt;'%NAME'&lt;/span&gt; &lt;span class="nv"&gt;$QUERY&lt;/span&gt; &amp;gt;/dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; rm &lt;span class="nv"&gt;$FILE&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;tee things-to-do
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After you finish, you’ll have a file named &lt;code&gt;things-to-do&lt;/code&gt;, in which you’ll see commands like &lt;code&gt;rm packagename-version.rpm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you’re confident about it’s contents, you can run &lt;code&gt;sh things-to-do&lt;/code&gt; and have all ‘not installed on &lt;span class="caps"&gt;TARGET&lt;/span&gt;’ packages removed from your &lt;span class="caps"&gt;DVD&lt;/span&gt; folder.&lt;/p&gt;
+&lt;h2 id="adding-extra-software"&gt;Adding extra software&lt;a class="headerlink" href="#adding-extra-software" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In the same way we added updates, we can also add new software to be deployed along base system like monitoring utilities, custom software, hardware drivers, etc, just add packages to desired folders before going through next steps.&lt;/p&gt;
+&lt;h2 id="recreating-metadata"&gt;Recreating metadata&lt;a class="headerlink" href="#recreating-metadata" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;After all our adds and removals, we need to tell installer that we changed packages, and update it’s dependencies, install order, etc.&lt;/p&gt;
+&lt;h3 id="el4"&gt;&lt;span class="caps"&gt;EL4&lt;/span&gt;&lt;a class="headerlink" href="#el4" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This one is trickier, but it is still possible in a not so hard way, first of all, we need to update some metadata files (&lt;code&gt;hdlist&lt;/code&gt;) and Package order for installation, it can be difficult if we add extra packages, as we’ll have special care:&lt;/p&gt;
+&lt;p&gt;Generate first version of &lt;code&gt;hdlists&lt;/code&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PYTHONPATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/lib/anaconda-runtime:/usr/lib/anaconda
+/usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/
+/usr/lib/anaconda-runtime/pkgorder /home/user/DVD/ i386 &lt;span class="p"&gt;|&lt;/span&gt;tee /home/user/order.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Review order.txt to check all packages added by hand to check correct or include missing packages and then continue with next commands:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PYTHONPATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/lib/anaconda-runtime:/usr/lib/anaconda
+/usr/lib/anaconda-runtime/genhdlist —withnumbers /home/user/DVD/ —fileorder /home/user/order.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="el5"&gt;&lt;span class="caps"&gt;EL5&lt;/span&gt;&lt;a class="headerlink" href="#el5" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Using &lt;code&gt;createrepo&lt;/code&gt; we’ll recreate metadata, but we’ve to keep care and use comps.xml to provide ‘group’ information to installer, so we’ll need to run:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+createrepo -g /home/DVD/Server/repodata/groupsfile.xml /home/DVD/Server/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="finishing"&gt;Finishing&lt;a class="headerlink" href="#finishing" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;At this step you’ll have a &lt;span class="caps"&gt;DVD&lt;/span&gt; structure on your hard drive, and just need to get an &lt;span class="caps"&gt;ISO&lt;/span&gt; to burn and test:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+mkisofs -v -r -N -L -d -D -J -V NAME -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size &lt;span class="m"&gt;4&lt;/span&gt; -boot-info-table -x lost+found -m .svn -o MyCustomISO.iso /home/user/DVD/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Now, it’s time to burn MyCustomISO.iso and give it a try ;-)&lt;/p&gt;
+&lt;p&gt;Post Datum: While testing is just better to keep using rewritable media until you want to get a ‘release’&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sat, 23 Jan 2010 08:25:00 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2010-01-23:/blog/2010/01/23/customize-rhelcentos-installation-media-el4el5/</guid><category>tech</category><category>RHEL</category><category>CentOS</category><category>Linux</category><category>installation</category><category>FOSS</category></item></channel></rss>

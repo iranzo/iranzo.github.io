@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="pandoc" name="generator" />     <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />      <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />      <meta name="author" content="Pablo Iranzo Gómez" />          <meta name="twitter:creator" content="@iranzop">     <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary">     <title>
+        Be lazy, automate: GitHub actions for static blogging
+    </title>
+
+       <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />      <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />   
+
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css" rel="stylesheet" />
+    <style type="text/css">
+        code {
+            white-space: pre-wrap;
+        }
+
+        span.smallcaps {
+            font-variant: small-caps;
+        }
+
+        span.underline {
+            text-decoration: underline;
+        }
+
+        div.column {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+        }
+    </style>
+    <style type="text/css">
+        a.sourceLine {
+            display: inline-block;
+            line-height: 1.25;
+        }
+
+        a.sourceLine {
+            pointer-events: none;
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        a.sourceLine:empty {
+            height: 1.2em;
+            position: absolute;
+        }
+
+        .sourceCode {
+            overflow: visible;
+        }
+
+        code.sourceCode {
+            white-space: pre;
+            position: relative;
+        }
+
+        div.sourceCode {
+            margin: 1em 0;
+        }
+
+        pre.sourceCode {
+            margin: 0;
+        }
+
+        @media screen {
+            div.sourceCode {
+                overflow: auto;
+            }
+        }
+
+        @media print {
+            code.sourceCode {
+                white-space: pre-wrap;
+            }
+            a.sourceLine {
+                text-indent: -1em;
+                padding-left: 1em;
+            }
+        }
+
+        pre.numberSource a.sourceLine {
+            position: relative;
+        }
+
+        pre.numberSource a.sourceLine:empty {
+            position: absolute;
+        }
+
+        pre.numberSource a.sourceLine::before {
+            content: attr(data-line-number);
+            position: absolute;
+            left: -5em;
+            text-align: right;
+            vertical-align: baseline;
+            border: none;
+            pointer-events: all;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding: 0 4px;
+            width: 4em;
+            color: #aaaaaa;
+        }
+
+        pre.numberSource {
+            margin-left: 3em;
+            border-left: 1px solid #aaaaaa;
+            padding-left: 4px;
+        }
+
+        div.sourceCode {}
+
+        @media screen {
+            a.sourceLine::before {
+                text-decoration: underline;
+            }
+        }
+
+        code span.al {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        /* Alert */
+
+        code span.an {
+            color: #60a0b0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Annotation */
+
+        code span.at {
+            color: #7d9029;
+        }
+        /* Attribute */
+
+        code span.bn {
+            color: #40a070;
+        }
+        /* BaseN */
+
+        code span.bu {}
+        /* BuiltIn */
+
+        code span.cf {
+            color: #007020;
+            font-weight: bold;
+        }
+        /* ControlFlow */
+
+        code span.ch {
+            color: #4070a0;
+        }
+        /* Char */
+
+        code span.cn {
+            color: #880000;
+        }
+        /* Constant */
+
+        code span.co {
+            color: #60a0b0;
+            font-style: italic;
+        }
+        /* Comment */
+
+        code span.cv {
+            color: #60a0b0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* CommentVar */
+
+        code span.do {
+            color: #ba2121;
+            font-style: italic;
+        }
+        /* Documentation */
+
+        code span.dt {
+            color: #902000;
+        }
+        /* DataType */
+
+        code span.dv {
+            color: #40a070;
+        }
+        /* DecVal */
+
+        code span.er {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        /* Error */
+
+        code span.ex {}
+        /* Extension */
+
+        code span.fl {
+            color: #40a070;
+        }
+        /* Float */
+
+        code span.fu {
+            color: #06287e;
+        }
+        /* Function */
+
+        code span.im {}
+        /* Import */
+
+        code span.in {
+            color: #60a0b0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Information */
+
+        code span.kw {
+            color: #007020;
+            font-weight: bold;
+        }
+        /* Keyword */
+
+        code span.op {
+            color: #666666;
+        }
+        /* Operator */
+
+        code span.ot {
+            color: #007020;
+        }
+        /* Other */
+
+        code span.pp {
+            color: #bc7a00;
+        }
+        /* Preprocessor */
+
+        code span.sc {
+            color: #4070a0;
+        }
+        /* SpecialChar */
+
+        code span.ss {
+            color: #bb6688;
+        }
+        /* SpecialString */
+
+        code span.st {
+            color: #4070a0;
+        }
+        /* String */
+
+        code span.va {
+            color: #19177c;
+        }
+        /* Variable */
+
+        code span.vs {
+            color: #4070a0;
+        }
+        /* VerbatimString */
+
+        code span.wa {
+            color: #60a0b0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Warning */
+    </style>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/solarized.min.css" id="theme" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section id="title-slide">
+                <h2 class="title">
+                    Be lazy, automate: GitHub actions for static&nbsp;blogging
+                </h2>
+                <p class="author">
+                    Pablo Iranzo Gómez
+                </p>
+                <p class="date">
+                    2021-01-14 22:24:00+01:00
+                </p>
+            </section>
+
+            <section id="be-lazy-automate-github-actions-for-static-blogging" class="slide level2">
+<h2>Be lazy, automate: GitHub Actions for static&nbsp;blogging</h2>
+<p>/me: Pablo Iranzo Gómez ( <a href="https://iranzo.github.io" class="uri">https://iranzo.github.io</a>&nbsp;)</p>
+</section>
+<section id="what-is-a-blog" class="slide level2">
+<h2>What is a&nbsp;blog?</h2>
+<p>A place to share knowledge, interests, tips,&nbsp;etc.</p>
+<p>Usually features: - images - comments from visitors, - related articles, -&nbsp;etc.</p>
+</section>
+<section id="what-are-the-costs-for-a-blog" class="slide level2">
+<h2>What are the costs for a&nbsp;blog?</h2>
+<p>Web costs money: - Hosting - Domain - Maintenance -&nbsp;etc.</p>
+</section>
+<section id="what-is-static-blogging" class="slide level2">
+<h2>What is static&nbsp;blogging?</h2>
+<p>Generate a static webpage - Think of it as rendering templates into <span class="caps">HTML</span> - Has no requirements on the web server, any simple webserver is enough: - Look ma!, no database! - Look ma!, no users! - Look ma!, no security&nbsp;issues!</p>
+</section>
+<section id="what-does-it-mean-to-us" class="slide level2">
+<h2>What does it mean to&nbsp;us?</h2>
+<ul>
+<li>We write an&nbsp;article</li>
+<li>Command for generating html from templates is&nbsp;used</li>
+<li>New files uploaded to&nbsp;webserver</li>
+</ul>
+</section>
+<section id="some-philosophy" class="slide level2">
+<h2><a href="https://www.youtube.com/watch?v=cJMwBwFj5nQ">Some&nbsp;Philosophy</a></h2>
+<blockquote>
+<p>Empty your mind, be shapeless, formless, like water. Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle You put water in a teacup, it becomes the teapot Now water can flow or it can crash. Be water my&nbsp;friend</p>
+</blockquote>
+<p>Note: Automation: Be lazy, have someone else doing it for&nbsp;you.</p>
+</section>
+<section id="git-hub-gitlab" class="slide level2">
+<h2>Git Hub /&nbsp;Gitlab</h2>
+<ul>
+<li>Lot of source code is hosted at github or gitlab, but it’s a code&nbsp;repository.</li>
+<li><span class="caps">BUT</span>: We want a&nbsp;website!!</li>
+</ul>
+</section>
+<section id="pages-come-to-play" class="slide level2">
+<h2>Pages come to&nbsp;play</h2>
+<ul>
+<li>Git Hub provides a service called <a href="https://pages.github.com/">GitHub&nbsp;Pages</a></li>
+<li>Git lab provides <a href="https://about.gitlab.com/product/pages/">Gitlab&nbsp;pages</a></li>
+</ul>
+<p>Both provide a ‘static’ webserver to be used for your projects <strong>for free</strong>&nbsp;😜</p>
+<p>G(H/L) serve from a branch in your repo (usually ‘yourusername.github.io’&nbsp;repo)</p>
+<p>You can buy a domain and point it to your&nbsp;repo.</p>
+</section>
+<section id="static-doesnt-mean-end-of-fun" class="slide level2">
+<h2>Static doesn’t mean end of&nbsp;fun</h2>
+<p>There are many ‘static’ content generators that provide rich&nbsp;features:</p>
+<ul>
+<li>styles</li>
+<li>links</li>
+<li>image&nbsp;resizing</li>
+<li>even&nbsp;‘search’</li>
+</ul>
+</section>
+<section id="even-more-fun-with-external-services" class="slide level2">
+<h2>Even more fun with external&nbsp;services</h2>
+<ul>
+<li>comments</li>
+<li>mailing&nbsp;lists</li>
+<li>etc.</li>
+</ul>
+</section>
+<section id="some-static-generators" class="slide level2">
+<h2>Some static&nbsp;generators</h2>
+<p>Importance of language is for developing ‘plugins’, not&nbsp;content.</p>
+<ul>
+<li>Jekyll&nbsp;(Ruby)</li>
+<li>Pelican&nbsp;(Python)</li>
+<li>Hugo(Go)</li>
+</ul>
+<p>They ‘render’ markdown into&nbsp;html</p>
+</section>
+<section id="theres-even-more-fun" class="slide level2">
+<h2>There’s even more&nbsp;fun</h2>
+<ul>
+<li>Github provides Jekyll support out of the&nbsp;box.</li>
+<li>Github, Gitlab, etc allow to plug in third-party <span class="caps">CI</span></li>
+<li>Github has&nbsp;Actions</li>
+</ul>
+<p>Think about endless&nbsp;possibilities!!!</p>
+</section>
+<section id="what-are-github-actions" class="slide level2">
+<h2>What are Github&nbsp;actions?</h2>
+<ul>
+<li>Github is a repository for code
+<ul>
+<li>Allows third-party integration: Travis, Jenkins, bots,&nbsp;etc</li>
+</ul></li>
+<li>Github added GitHub Actions
+<ul>
+<li>For all&nbsp;repos</li>
+<li>For&nbsp;free</li>
+<li>Easy to define new&nbsp;actions</li>
+<li>‘clonable’ with just a yaml in&nbsp;the</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-can-we-find" class="slide level2">
+<h2>What can we&nbsp;find?</h2>
+<ul>
+<li><span class="caps">CI</span></li>
+<li>Formatting</li>
+<li>Linting</li>
+<li>Publishing</li>
+<li>Anything can be&nbsp;combined!!</li>
+<li>A full Marketplace&nbsp;(https://github.com/marketplace?type=actions)</li>
+</ul>
+</section>
+<section id="some-food-for-thought" class="slide level2">
+<h2>Some food for&nbsp;thought</h2>
+<ul>
+<li>Repos have&nbsp;branches</li>
+<li>Repos can have&nbsp;automation</li>
+<li>External automation like Travis <span class="caps">CI</span> can do things for&nbsp;you</li>
+</ul>
+<p>Note: We’ve all the pieces to push a new markdown file and have it triggering a website update and&nbsp;publish</p>
+</section>
+<section id="is-a-static-webpage-ugly" class="slide level2">
+<h2>Is a static webpage&nbsp;ugly?</h2>
+<ul>
+<li>There are lot of templates <a href="http://www.pelicanthemes.com" class="uri">http://www.pelicanthemes.com</a></li>
+<li>Each theme has different feature&nbsp;set</li>
+<li>Choose wisely! (Small screens, html5, etc)
+<ul>
+<li>If not, changing themes is quite easy: update, and ‘render’ using a new&nbsp;one.</li>
+</ul></li>
+</ul>
+</section>
+<section id="travis-ci.org" class="slide level2">
+<h2>Travis-ci.org</h2>
+<p>Automation for&nbsp;projects:</p>
+<ul>
+<li>Free for OpenSource&nbsp;projects</li>
+<li>Configured via <code>.travis.yml</code></li>
+<li>Some other settings via Web <span class="caps">UI</span> (env vars,&nbsp;etc)</li>
+</ul>
+</section>
+<section id="why-actions" class="slide level2">
+<h2>Why&nbsp;Actions?</h2>
+<ul>
+<li>Configured within yaml files in the&nbsp;repo</li>
+<li><span class="caps">GH</span> pre-creates a token that can be used to push new files, branches,&nbsp;etc</li>
+<li>Without too much hassle, we’ve all the&nbsp;pieces!</li>
+</ul>
+</section>
+<section id="wrap-up" class="slide level2">
+<h2>Wrap&nbsp;up</h2>
+<p>Ok, automation is ready, our project validates commits, <span class="caps">PR</span>’s, website&nbsp;generation…</p>
+<p>What&nbsp;else?</p>
+</section>
+<section id="test-it-yourself" class="slide level2">
+<h2>Test it&nbsp;yourself</h2>
+<p>Try <a href="https://github.com/iranzo/blog-o-matic/" class="uri">https://github.com/iranzo/blog-o-matic/</a></p>
+<p>Fork to your repo and get: - minimal setup steps - Automated setup of Pelican + Elegant theme via Git Hub action that builds on each commit. - Ready to be submitted to search engines via sitemap, and web&nbsp;claiming</p>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions?</h2>
+<p>Pablo.Iranzo@gmail.com</p>
+<ul>
+<li><a href="https://iranzo.github.io" class="uri">https://iranzo.github.io</a></li>
+</ul>
+</section>
+
+
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js">
+    </script>
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            // Push each slide change to the browser history
+            history: true,
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/zoom/zoom.min.js',
+                async: true
+            }, {
+                src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js',
+                async: true
+            }]
+        });
+    </script>
+</body>
+
+</html>

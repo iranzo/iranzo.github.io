@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - CI/CD</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_cicd.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2019-05-16T22:29:14+02:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Use custom domain name with Blog-O-Matic</title><link href="https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/" rel="alternate"></link><published>2019-05-16T22:29:14+02:00</published><updated>2019-05-16T22:29:14+02:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2019-05-16:/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</id><summary type="html">&lt;p&gt;As a recipe, if you want to enable a custom domain name on &lt;a href="https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps/"&gt;blog-o-matic&lt;/a&gt; a special file needs to be created on the &amp;#8216;GitHub Pages&amp;#8217; served &amp;#8216;master&amp;#8217;&amp;nbsp;branch.&lt;/p&gt;
+&lt;p&gt;In order to do so, edit &lt;code&gt;pelicanconf.py&lt;/code&gt; and add the following&amp;nbsp;differences:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><content type="html">&lt;p&gt;As a recipe, if you want to enable a custom domain name on &lt;a href="https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps/"&gt;blog-o-matic&lt;/a&gt; a special file needs to be created on the &amp;#8216;GitHub Pages&amp;#8217; served &amp;#8216;master&amp;#8217;&amp;nbsp;branch.&lt;/p&gt;
+&lt;p&gt;In order to do so, edit &lt;code&gt;pelicanconf.py&lt;/code&gt; and add the following&amp;nbsp;differences:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gh"&gt;diff --git a/pelicanconf.py b/pelicanconf.py&lt;/span&gt;
+&lt;span class="gh"&gt;index 680abcb..fc3dd8f 100644&lt;/span&gt;
+&lt;span class="gd"&gt;--- a/pelicanconf.py&lt;/span&gt;
+&lt;span class="gi"&gt;+++ b/pelicanconf.py&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -46,13 +46,16 @@ AMAZON_ONELINK = &amp;quot;b63a2115-85f7-43a9-b169-5f4c8c275655&amp;quot;&lt;/span&gt;
+
+
+ # Extra files customization
+&lt;span class="gd"&gt;-EXTRA_PATH_METADATA = {}&lt;/span&gt;
+&lt;span class="gi"&gt;+EXTRA_PATH_METADATA = {&lt;/span&gt;
+&lt;span class="gi"&gt;+    &amp;#39;extra/CNAME&amp;#39;: {&amp;#39;path&amp;#39;: &amp;#39;CNAME&amp;#39;},&lt;/span&gt;
+&lt;span class="gi"&gt;+}&lt;/span&gt;
+&lt;span class="gi"&gt;+&lt;/span&gt;
+
+ EXTRA_TEMPLATES_PATHS = [
+     &amp;quot;plugins/revealmd/templates&amp;quot;,  # eg: &amp;quot;plugins/revealmd/templates&amp;quot;
+ ]
+
+&lt;span class="gd"&gt;-STATIC_PATHS = [ &amp;#39;images&amp;#39; ]&lt;/span&gt;
+&lt;span class="gi"&gt;+STATIC_PATHS = [ &amp;#39;images&amp;#39; , &amp;#39;extra&amp;#39;]&lt;/span&gt;
+
+
+ ## ONLY TOUCH IF YOU KNOW WHAT YOU&amp;#39;RE DOING!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This will copy the &lt;code&gt;CNAME&lt;/code&gt; file created in &lt;code&gt;content/extra/CNAME&lt;/code&gt; to the resulting &amp;#8216;master&amp;#8217; branch as &lt;code&gt;/CNAME&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This file is interpreted by Github pages server as the domain name to listen for, so your website will start to be available from it (supposing that you followed usual&amp;nbsp;requirements):&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yourcustomdomain.es.    1   IN  A   185.199.108.153
+yourcustomdomain.es.    1   IN  A   185.199.109.153
+yourcustomdomain.es.    1   IN  A   185.199.110.153
+yourcustomdomain.es.    1   IN  A   185.199.111.153
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Please, do review if the serving servers have been updated on github&amp;nbsp;pages!&lt;/p&gt;</content><category term="tech"></category><category term="Pelican"></category><category term="FOSS"></category><category term="Travis"></category><category term="CI/CD"></category><category term="elegant"></category><category term="blog"></category><category term="Python"></category><category term="github"></category><category term="blog-o-matic"></category><category term="Linux"></category><category term="continuous integration"></category><category term="continuous delivery"></category></entry><entry><title>Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with little setup steps.</title><link href="https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps/" rel="alternate"></link><published>2019-01-09T22:00:47+01:00</published><updated>2019-01-09T22:00:47+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2019-01-09:/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps/</id><summary type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;I’ve already covered some articles about automation with Travis-&lt;span class="caps"&gt;CI&lt;/span&gt;, GitHub,
+and one step that seems a show-stopper for many users when trying to build a
+website is on one side, the investment (domain, hosting, etc), the backend
+being used (WordPress, static generators, etc)…&lt;/p&gt;
+&lt;p&gt;While preparing a talk …&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;I’ve already covered some articles about automation with Travis-&lt;span class="caps"&gt;CI&lt;/span&gt;, GitHub,
+and one step that seems a show-stopper for many users when trying to build a
+website is on one side, the investment (domain, hosting, etc), the backend
+being used (WordPress, static generators, etc)…&lt;/p&gt;
+&lt;p&gt;While preparing a talk for a group of co-workers covering several of those aspects, I came with the idea to create Blog-o-Matic, implementing many of those ‘learnings’ in a ‘canned’ way that can be easy to consume by users.&lt;/p&gt;
+&lt;h1 id="the-approach"&gt;The approach&lt;a class="headerlink" href="#the-approach" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Blog-o-Matic, uses several discussed topics so far:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com"&gt;Github&lt;/a&gt; and GitHub Pages for hosting the source and the website&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://travis-ci.org"&gt;Travis-&lt;span class="caps"&gt;CI&lt;/span&gt;.org&lt;/a&gt; for automating the update and generation process&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.getpelican.com/"&gt;&lt;span class="quo"&gt;‘&lt;/span&gt;Pelican’&lt;/a&gt; for static rendering of your blog from the markdown or &lt;code&gt;asciidoc&lt;/code&gt; articles&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Pelican-Elegant/elegant"&gt;&lt;span class="quo"&gt;‘&lt;/span&gt;Elegant’&lt;/a&gt; for the ‘Theme’&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/buildinspace/peru"&gt;peru&lt;/a&gt; for automating repository upgrades for plugins, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The setup process is outlined at its &lt;a href="https://github.com/iranzo/blog-o-matic/"&gt;&lt;code&gt;README.md&lt;/code&gt;&lt;/a&gt; and just requires a few steps to setup that, from that point, will allow you to get your website published each time you commit a new document to the content folder.&lt;/p&gt;
+&lt;p&gt;You can also check the ‘generated’ website after installation via &lt;a href="https://iranzo.github.io/blog-o-matic"&gt;https://iranzo.github.io/blog-o-matic&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Do not forget to update your &lt;code&gt;pelican.conf&lt;/code&gt; file for fine-tuning and customization.&lt;/p&gt;</content><category term="tech"></category><category term="Pelican"></category><category term="FOSS"></category><category term="Travis"></category><category term="CI/CD"></category><category term="Elegant"></category><category term="blog"></category><category term="Python"></category><category term="Github"></category><category term="blog-o-matic"></category><category term="Linux"></category><category term="continuous integration"></category><category term="continuous delivery"></category></entry><entry><title>Triggering a Travis-CI build on another repo</title><link href="https://iranzo.io/blog/2018/12/11/triggering-a-travis-ci-build-on-another-repo/" rel="alternate"></link><published>2018-12-11T21:49:47+01:00</published><updated>2018-12-11T21:49:47+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2018-12-11:/blog/2018/12/11/triggering-a-travis-ci-build-on-another-repo/</id><summary type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;After setting up &lt;a href="https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/"&gt;build automation&lt;/a&gt; we also wanted it not to happen only when updating the &lt;code&gt;documentation&lt;/code&gt; repository.&lt;/p&gt;
+&lt;p&gt;Besides hosting documentation, Elegant website also serves as a live demo of the current release. This meant, the website should be regenerated and updated every time when a documented is added …&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;After setting up &lt;a href="https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/"&gt;build automation&lt;/a&gt; we also wanted it not to happen only when updating the &lt;code&gt;documentation&lt;/code&gt; repository.&lt;/p&gt;
+&lt;p&gt;Besides hosting documentation, Elegant website also serves as a live demo of the current release. This meant, the website should be regenerated and updated every time when a documented is added or edited, and also when Elegant theme is updated.&lt;/p&gt;
+&lt;p&gt;Github and Travis doesn’t offer dependent builds out of the box, so the trick goes to ‘signal’ via a github token to trigger a Travis-&lt;span class="caps"&gt;CI&lt;/span&gt; build.&lt;/p&gt;
+&lt;h1 id="the-technical-solution"&gt;The technical solution&lt;a class="headerlink" href="#the-technical-solution" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;The approach goes via tweaking the ‘test validation’ &lt;code&gt;.travis.yaml&lt;/code&gt; and adding some more steps:&lt;/p&gt;
+&lt;p&gt;The initial file (similar to the one in our previous article, but for running the ‘page build’ with latest repo checkout) looks like:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Copyright (C) 2017, 2018 Pablo Iranzo Gómez &amp;lt;Pablo.Iranzo@gmail.com&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;language&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+&lt;span class="nt"&gt;dist&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;trusty&lt;/span&gt;
+&lt;span class="nt"&gt;sudo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;required&lt;/span&gt;
+
+&lt;span class="nt"&gt;python&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;"3.5"&lt;/span&gt;
+
+&lt;span class="c1"&gt;# prepare and move data for execution&lt;/span&gt;
+
+&lt;span class="nt"&gt;before_install&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -U pip&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -U setuptools&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -r tests/requirements.txt&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -r tests/test-requirements.txt&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install peru&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;mkdir -p tests/themes/elegant&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;mv templates tests/themes/elegant/&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;mv static tests/themes/elegant/&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;cd tests &amp;amp;&amp;amp; peru sync&lt;/span&gt;
+
+&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pelican content/ -o output/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Is then modified to add:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;before_script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;npm install travis-ci&lt;/span&gt;
+
+&lt;span class="nt"&gt;after_success&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;node trigger-build.js&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This installs Travis-&lt;span class="caps"&gt;CI&lt;/span&gt; utilities and runs a custom script ‘trigger-build.js’ with node, which in turn actually triggers Travis build.&lt;/p&gt;
+&lt;p&gt;The script, downloaded from &lt;a href="https://kamranicus.com/posts/2015-02-26-continuous-deployment-with-travis-ci"&gt;Kamran Ayub blog&lt;/a&gt; has been edited to specify the ‘repo’ we will trigger and the name of the environment variable containing the token:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;
+&lt;span class="normal"&gt;32&lt;/span&gt;
+&lt;span class="normal"&gt;33&lt;/span&gt;
+&lt;span class="normal"&gt;34&lt;/span&gt;
+&lt;span class="normal"&gt;35&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;Travis&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'travis-ci'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// change this&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;repo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Pelican-Elegant/documentation"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;travis&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Travis&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+    &lt;span class="nx"&gt;version&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'2.0.0'&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+
+&lt;span class="nx"&gt;travis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;authenticate&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// available through Travis CI&lt;/span&gt;
+    &lt;span class="c1"&gt;// see: http://kamranicus.com/blog/2015/02/26/continuous-deployment-with-travis-ci/&lt;/span&gt;
+    &lt;span class="nx"&gt;github_token&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;process&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;env&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;TRATOKEN&lt;/span&gt;
+
+&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="nx"&gt;travis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;repos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/'&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/'&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;builds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+
+        &lt;span class="nx"&gt;travis&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;requests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;post&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+            &lt;span class="nx"&gt;build_id&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;builds&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;
+        &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;flash&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;notice&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;});&lt;/span&gt;
+    &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;As you can see, in line 14, it grabs the github token from environment variable &lt;code&gt;TRATOKEN&lt;/code&gt; that we’ve defined in
+Travis-&lt;span class="caps"&gt;CI&lt;/span&gt; environment for the build.&lt;/p&gt;
+&lt;p&gt;This is similar to &lt;a href="https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/"&gt;what we did&lt;/a&gt; in the documentation repo to push the built website to another repo.&lt;/p&gt;
+&lt;p&gt;With this solution in place, when a new commit is merged on ‘master’ branch on the ‘theme’ repo &lt;a href="https://github.com/Pelican-Elegant/elegant"&gt;(&lt;code&gt;elegant&lt;/code&gt;)&lt;/a&gt;, Travis does get invoked to schedule a build on the &lt;a href="https://github.com/Pelican-Elegant/documentation"&gt;&lt;code&gt;documentation&lt;/code&gt;&lt;/a&gt; repo, thus, rendering the live website with latest templates.&lt;/p&gt;
+&lt;p&gt;Enjoy! Pablo&lt;/p&gt;</content><category term="tech"></category><category term="pelican"></category><category term="Foss"></category><category term="Travis"></category><category term="CI/CD"></category><category term="elegant"></category><category term="blog"></category><category term="python"></category></entry><entry><title>How to automate via Travis CI publishing of new pelican pages to GitHub pages</title><link href="https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/" rel="alternate"></link><published>2018-12-07T16:00:47+01:00</published><updated>2018-12-07T16:00:47+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2018-12-07:/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/</id><summary type="html">
+&lt;h1 id="background"&gt;Background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/Pelican-Elegant/elegant"&gt;Elegant&lt;/a&gt; theme for pelican has been undergoing a big change from individual-driven effort to community, as part of this, one of the tasks to accomplish, has been the decoupling from author blog to project site for documentation.&lt;/p&gt;
+&lt;p&gt;As we wanted this process to be both automated and allowed us …&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="background"&gt;Background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/Pelican-Elegant/elegant"&gt;Elegant&lt;/a&gt; theme for pelican has been undergoing a big change from individual-driven effort to community, as part of this, one of the tasks to accomplish, has been the decoupling from author blog to project site for documentation.&lt;/p&gt;
+&lt;p&gt;As we wanted this process to be both automated and allowed us to demonstrate via eat-your-own-dog-food that the theme works and how it looks, the idea was to automate the rendering of Pelican website with new documents.&lt;/p&gt;
+&lt;h1 id="under-the-hood"&gt;Under the hood&lt;a class="headerlink" href="#under-the-hood" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Setting an automated build required several steps to be done:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get a GitHub token that could be used by Travis for pushing to a repository (and configure it in Travis environment variables for the repository in a variable named &lt;code&gt;GITHUB_TOKEN&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;run unit tests for validating new &lt;span class="caps"&gt;PR&lt;/span&gt; before merging&lt;/li&gt;
+&lt;li&gt;configure Travis so that it downloads required dependencies in order to run pelican and then publish the generated web to the repository&lt;/li&gt;
+&lt;li&gt;a GitHub pages enabled repository so that resulting files can be viewed as a webpage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One of the key pieces is a properly configured &lt;code&gt;.travis.yaml&lt;/code&gt; like the one we started using:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;language&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+&lt;span class="nt"&gt;dist&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;trusty&lt;/span&gt;
+&lt;span class="nt"&gt;sudo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;required&lt;/span&gt;
+
+&lt;span class="nt"&gt;python&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;"3.5"&lt;/span&gt;
+
+&lt;span class="nt"&gt;before_install&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -U pip&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -U setuptools&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -r requirements.txt&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -r test-requirements.txt&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install peru&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;peru sync&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install tox&lt;/span&gt;
+
+&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;tox&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;make html&lt;/span&gt;
+
+&lt;span class="nt"&gt;after_success&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;rm -rf .git/&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git init&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git config user.name "Travis CI"&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git config user.email "travis@domain.com"&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git config --global push.default simple&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git remote add origin https://${GITHUB_TOKEN}@github.com/Pelican-Elegant/pelican-elegant.github.io.git&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;make github&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="image-setup"&gt;Image setup&lt;a class="headerlink" href="#image-setup" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;So, from above file we do:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;language&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+&lt;span class="nt"&gt;dist&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;trusty&lt;/span&gt;
+&lt;span class="nt"&gt;sudo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;required&lt;/span&gt;
+
+&lt;span class="nt"&gt;python&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;"3.5"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure language as Python&lt;/li&gt;
+&lt;li&gt;Select distribution&lt;/li&gt;
+&lt;li&gt;Confirm we require &lt;code&gt;sudo&lt;/code&gt; access&lt;/li&gt;
+&lt;li&gt;Configure Python version as 3.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of this depends on Travis Image being used and their documentation&lt;/p&gt;
+&lt;h2 id="preparation-of-environment"&gt;Preparation of environment&lt;a class="headerlink" href="#preparation-of-environment" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Now, we’ll prepare the environment for our tests:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;before_install&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -U pip&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -U setuptools&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -r requirements.txt&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -r test-requirements.txt&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install peru&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;peru sync&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install tox&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;We do install &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;setuptools&lt;/code&gt;, repository and test requirements, &lt;code&gt;peru&lt;/code&gt; and &lt;code&gt;tox&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Peru&lt;/code&gt; is used to grab additional dependencies for Elegant (plugins, latest theme, etc)&lt;/p&gt;
+&lt;h2 id="actual-tests"&gt;Actual tests&lt;a class="headerlink" href="#actual-tests" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This is really easy in our case:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;tox&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;make html&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;We run ‘tox’ that allows to automate Python virtualenv and tests and then, use the Makefile from Pelican to build the site and tests plugins, etc&lt;/p&gt;
+&lt;p&gt;If everything succeeds, we’re ready for the next step (publishing)&lt;/p&gt;
+&lt;h2 id="after-tests-passed"&gt;After tests passed&lt;a class="headerlink" href="#after-tests-passed" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;All the environment setup and tests have succeed now, we do need to push the site ‘live’&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;after_success&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;rm -rf .git/&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git init&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git config user.name "Travis CI"&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git config user.email "travis@domain.com"&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git config --global push.default simple&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git remote add origin https://${GITHUB_TOKEN}@github.com/Pelican-Elegant/pelican-elegant.github.io.git&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;make github&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This piece does the final step, first removes info about the repository containing the actual documentation and allows us to initialize a new one, that we make it point towards the repository we’re pushing (so that we keep separate actual website content from ‘rendered’ website).&lt;/p&gt;
+&lt;p&gt;In the final step, ‘make github’ uses the makefile provided with pelican to push the changes to the ‘master’ branch of the target repository, that then, is ready to be served via github pages as a regular web server would do.&lt;/p&gt;
+&lt;h1 id="wrap-up"&gt;Wrap up&lt;a class="headerlink" href="#wrap-up" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;So, right now we’ve accomplished several things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We do use pelican in the same way that we’ll do for our own website&lt;/li&gt;
+&lt;li&gt;We do also have as a consequence, a &lt;a href="https://pelican-elegant.github.io"&gt;‘live’ demo&lt;/a&gt; of latest master branch showcasing features&lt;/li&gt;
+&lt;li&gt;We did automate publishing of webpage as soon as contributors send new articles and are approved for merge&lt;/li&gt;
+&lt;li&gt;All requires no extra change to regular workflow as &lt;travis-ci.org&gt; is the glue here putting together all the pieces.&lt;/travis-ci.org&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hope you enjoy it!&lt;/p&gt;
+&lt;p&gt;Pablo&lt;/p&gt;</content><category term="tech"></category><category term="Pelican"></category><category term="FOSS"></category><category term="Travis"></category><category term="CI/CD"></category><category term="Elegant"></category><category term="blog"></category><category term="Python"></category><category term="continuous integration"></category><category term="continuous deployment"></category></entry></feed>

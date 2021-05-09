@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='en'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Introduction¶ OCS Inventory is an excellent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms). Since New Generation (OCS-NG), a new architecture was implemented: server were …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="hardware, Linux, software, OCS, FOSS, tech, " />
+
+<meta property="og:title" content="OCS Inventory Package deployment "/>
+<meta property="og:url" content="https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/" />
+<meta property="og:description" content="Introduction¶ OCS Inventory is an excellent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms). Since New Generation (OCS-NG), a new architecture was implemented: server were …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2006-07-27T20:29:00+02:00" />
+<meta name="twitter:title" content="OCS Inventory Package deployment ">
+<meta name="twitter:description" content="Introduction¶ OCS Inventory is an excellent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms). Since New Generation (OCS-NG), a new architecture was implemented: server were …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2006-07-27T20:29:00+02:00",
+        "description": "Introduction¶ OCS Inventory is an excellent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms). Since New Generation (OCS-NG), a new architecture was implemented: server were …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/"
+        },
+
+        "headline": "OCS Inventory Package deployment",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>OCS Inventory Package deployment  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/">
+                <span class="caps">OCS</span> Inventory Package&nbsp;deployment
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#release-candidate-3-and-10">Release Candidate 3, and 1.0</a></li>
+<li><a href="#setting-it-up-and-running">Setting it up and running</a></li>
+<li><a href="#getting-ssl-certificates">Getting <span class="caps">SSL</span> Certificates</a><ul>
+<li><a href="#configuring-apache-for-using-that-certificates">Configuring apache for using that certificates</a></li>
+</ul>
+</li>
+<li><a href="#creating-a-package">Creating a package</a></li>
+<li><a href="#activating-a-package">Activating a package</a><ul>
+<li><a href="#affecting-a-package">Affecting a package</a></li>
+<li><a href="#how-to-get-client-side-package-working">How to get client side Package working</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h3>
+<p><span class="caps">OCS</span> Inventory is an excellent piece of <span class="caps">GPL</span> Software for getting info from hardware components, and software installed on computers running Windows or <span class="caps">UNIX</span>-like operating systems (there are also some unofficial clients for running on other platforms).</p>
+<p>Since New Generation (<code>OCS-NG</code>), a new architecture was implemented: server were contacted using standard <span class="caps">TCP</span>/<span class="caps">IP</span> connection (Previous versions, used an <span class="caps">MDB</span> file to store information, and required a <span class="caps">SMB</span> share to inventory computers ), allowing remote computers to connect as well as providing a new web interface for computer administration, and inventory query.</p>
+<p>Within new features, a new small client (about 64kb), was able to contact inventory server, and download from it the full set of required files (<code>OcsAgent.exe</code>) which was expanded to <code>%SYSTEMDRIVE%ocs-ng</code>, then executed, an inventory sent to server.</p>
+<p>This approach had a little problem, if you had a small outgoing connection, serving a 700 Kb file was painful… but at least, despite some minor revision changes, machines were able to upgrade automatically (In many other times, you had to manually redeploy or force with <code>/DEPLOY:#VERNUMBER#</code> the new deployment) when new version was deployed on the server.</p>
+<p>With <span class="caps">RC3</span>, agent for installation uses near double that size, about 1.5 megabytes, but the ability for after first installed, use external servers with a bigger upload bandwidth, eases installation of new versions in computers.</p>
+<h3 id="release-candidate-3-and-10">Release Candidate 3, and 1.0<a class="headerlink" href="#release-candidate-3-and-10" title="Permanent link">¶</a></h3>
+<p><code>OCS-NG</code> <span class="caps">RC3</span> came with important architectural changes, including several major and minor improvements, being these the more important ones:</p>
+<ul>
+<li>Now the Windows client works as a service (for the first time it includes a Windows agent)</li>
+<li><span class="caps">RC3</span> includes a component for software/files deployment/distribution</li>
+</ul>
+<p>The new tool is called package deployment. This feature it is managed using the also improved admin web interface.</p>
+<p><code>OCS-NG</code> could be setup on different machines hosting each service:</p>
+<ul>
+<li>An Inventory-receiving machine</li>
+<li>An Admin web interface</li>
+<li>A site with information about packages</li>
+<li>A site with package fragments for deployment</li>
+</ul>
+<p>or, as I did in my setup, use a Debian Linux machine for doing the four tasks, but I plan to relay the fourth task to other machines, when packages are bigger than expected.</p>
+<h3 id="setting-it-up-and-running">Setting it up and running<a class="headerlink" href="#setting-it-up-and-running" title="Permanent link">¶</a></h3>
+<p>I’ll assume that you’ve running Apache, <span class="caps">PHP</span>, and were able to set up <span class="caps">OCS</span> using the bundled instructions, so you only have to enable new features for using package deployment.</p>
+<p>First of all, we need <span class="caps">SSL</span> support in Apache.</p>
+<p>Package deployment infrastructure, is too much powerful, so it requires <span class="caps">SSL</span> access to validate server before trying to download from it, so… we’ll need some <span class="caps">SSL</span> certificates for use with our server.</p>
+<p>I like <a href="http://www.cacert.org/">http://www.cacert.org</a> services: they sign your certificates, and provide one certificate aiming to be used with many <span class="caps">FOSS</span> projects, because it’s free instead of paid certificates like the ones from Thawte or Verisign.</p>
+<h3 id="getting-ssl-certificates">Getting <span class="caps">SSL</span> Certificates<a class="headerlink" href="#getting-ssl-certificates" title="Permanent link">¶</a></h3>
+<p>First of all, we need to create a private key and a <code>CSR</code> (Certificate Signing Request) which we will send to <code>CACERT</code> for signing (please, note that if you don’t have a domain name, will make it impossible to use <span class="caps">OCS</span> Package Deployment if your <span class="caps">IP</span> is also dynamic, so if that is your case (as was mine too), open an account at No-<span class="caps">IP</span> and create an <span class="caps">URL</span>-redirect to your machine, you’ll have to install an update client, but this will allow you to use certificates) it.</p>
+<p>Having OpenSSL installed, we will execute (please, double check that questions, specially <span class="caps">CN</span> exactly matches ServerName and <code>hostname</code>, for it to work properly after) the following commands:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!bash</span>
+openssl genrsa -out server.key <span class="m">1024</span>
+openssl req -new -key server.key -out server.csr
+</code></pre></div>
+</td></tr></table>
+<p>First one, will create a private key called “server.key”, second one, will create a <span class="caps">CSR</span> which we will paste at <a href="https://www.cacert.org/account.php?id=10">https://www.cacert.org/account.php?id=10</a> to get our server certificate signed.</p>
+<p>For being able to use <a href="http://www.cacert.org/">http://www.cacert.org</a> services, we’ll have to create an account and add a domain to it, this is verified sending an email to an account like webmaster, root or so, clicking on the supplied link, will entitle to work in representation of that domain.</p>
+<p>After that, Cacert.org will show you a certificate for your server that you’ll have to copy to a file named <code>server.crt</code>.</p>
+<p>Let’s then download <a href="http://www.cacert.org/certs/root.crt"><span class="caps">CACERT</span>’s root certificate</a> to <code>cacert.pem</code></p>
+<h4 id="configuring-apache-for-using-that-certificates">Configuring apache for using that certificates<a class="headerlink" href="#configuring-apache-for-using-that-certificates" title="Permanent link">¶</a></h4>
+<p>Next, we’ll have to tell apache, to use this certificate for <span class="caps">SSL</span> support, in my case, I configured:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c">#!apache</span>
+<span class="err">/</span><span class="nb">etc</span><span class="sx">/apache2/conf.d/ssl</span>:
+<span class="nb">SSLProtocol</span> <span class="k">all</span>
+<span class="nb">SSLOptions</span> +StdEnvVars
+<span class="nb">SSLCipherSuite</span> <span class="k">ALL</span>:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
+<span class="nb">SSLCACertificateFile</span> <span class="sx">/etc/apache2/ssl/cacert.pem</span>
+<span class="nb">SSLCertificateFile</span> <span class="sx">/etc/apache2/ssl/server.crt</span>
+<span class="nb">SSLCertificateKeyFile</span> <span class="sx">/etc/apache2/ssl/server.key</span>
+</code></pre></div>
+</td></tr></table>
+<p>So, I had to put <code>server.crt</code>, <code>server.key</code> and <code>cacert.pem</code> in <code>/etc/apache2/ssl/</code></p>
+<p>Next one, was to configure a new site that requires <span class="caps">SSL</span> to work:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c">#!apache</span>
+<span class="err">/</span><span class="nb">etc</span><span class="sx">/apache2/sites-enabled/001-default</span>:
+<span class="nb">ServerName</span> yourserver.no-ip.org
+<span class="nb">NameVirtualHost</span> \*:443
+<span class="nb">ErrorLog</span> <span class="sx">/var/log/apache2/errssl.log</span>
+<span class="c"># Possible values include: debug, info, notice, warn, error, crit,</span>
+<span class="c"># alert, emerg.</span>
+<span class="nb">LogLevel</span> <span class="k">warn</span>
+<span class="nb">CustomLog</span> <span class="sx">/var/log/apache2/ssl.log</span> combined
+<span class="nb">ServerSignature</span> <span class="k">On</span>
+<span class="nb">DocumentRoot</span> <span class="sx">/var/www</span>
+<span class="nb">SSLEngine</span> <span class="k">on</span>
+<span class="nb">SSLOptions</span> +StdEnvVars
+<span class="nb">SetEnvIf</span> <span class="k">User</span>-Agent <span class="s2">".\*MSIE.\*"</span> nokeepalive ssl-unclean-shutdown
+</code></pre></div>
+</td></tr></table>
+<p>After that… we have to reload Apache configuration and try to connect to <a href="https://yourserver.no-ip.org/">https://yourserver.no-ip.org</a> to check if everything is ok.</p>
+<p>Well, if this works, we had the first and harder step done ;)</p>
+<h3 id="creating-a-package">Creating a package<a class="headerlink" href="#creating-a-package" title="Permanent link">¶</a></h3>
+<p>There are three types of packages: <span class="caps">RUN</span>, <span class="caps">STORE</span> and <span class="caps">LAUNCH</span>.</p>
+<p>Each of them has different behavior, one runs a command, the other downloads a file and stores it on a folder, and the other does a combined thing: downloads a file, unzips it, and then runs a command.</p>
+<p>For Package creating, we must have write access to Apache’s DocumentRoot/download folder, and after creation, copy contents of “/download” to “/”, or as I did, gave write access to “/var/www”, and create (<code>ln -s . download</code>) a symbolic link for download.</p>
+<p>So… let’s create a first package:</p>
+<ol>
+<li>We must login into <span class="caps">OCS</span> Web interface, and select (first menu option on first yellow icon) package creation</li>
+<li>We must assign a name for the package, Platform, Protocol and Priority (priority will allow us to decide package execution order in the client, the lower number, the higher priority)</li>
+<li>If we’re going to upload files, we must <span class="caps">ZIP</span> it <span class="caps">BEFORE</span>, so <span class="caps">OCS</span> will unzip on client machine, and then run commands</li>
+<li>We choose an action, and then, a path (we can use system variables like <code>%SYSTEMDRIVE%</code>, <code>%TEMP%</code>, <code>%USERPROFILE%</code>, <code>%PROGRAMFILES%</code>, etc) to store the file, or command to run</li>
+<li>We can choose if we want the user to be warned about package execution, and even to allow user to delay execution (useful for service pack deployments, etc)</li>
+</ol>
+<p>Next step, will allow us to specify fragments (pieces in which the package will be split for allowing better deployment, making use of re-downloading for only failed fragments, etc), as well as checksum for data validity</p>
+<p>Your package, will be created then on <code>/var/www/download/#pkgid#</code>.</p>
+<h3 id="activating-a-package">Activating a package<a class="headerlink" href="#activating-a-package" title="Permanent link">¶</a></h3>
+<p>Once a package has been defined, we have an “info” file, describing package actions, and package fragments, we can have them together or split it between different servers, and we will have to specify where is located each piece, before using it on our machines. That process is called “Activation”.</p>
+<p>When we select that option, we have to specify the <code>pkgid</code>, so we use the second menu entry in the package deployment icon, and we’ll get a list of packages ready for activation, and then, we select “Activate” from the one we’re interested in.</p>
+<p>On package activation, we will be asked for two <span class="caps">SERVERS</span> (thanks to the development team, specially to Pascal who helped in determining that we require to specify server name, not <span class="caps">URL</span>) one with https (for downloading info file) and one with http for downloading fragments (if any).</p>
+<p>After sending server names, <span class="caps">OCS</span> will check availability of “info” and fragment files (if any (On <span class="caps">RUN</span> packages, there is nothing to download prior to running the commands) and then, package will be activated and ready for next step.</p>
+<h4 id="affecting-a-package">Affecting a package<a class="headerlink" href="#affecting-a-package" title="Permanent link">¶</a></h4>
+<p>In this step, we can select a computer in the main view, or do a search using specific criteria, and as a result, apply a package on listed computers.</p>
+<p>We can affect a package to several computers at once, just to one, and even, have different packages affect to the same computer….</p>
+<p><span class="caps">OCS</span> will connect, and execute actions defined in priority order…</p>
+<h4 id="how-to-get-client-side-package-working">How to get client side Package working<a class="headerlink" href="#how-to-get-client-side-package-working" title="Permanent link">¶</a></h4>
+<p>Packages from client side, are as easy to setup, as having a working <span class="caps">OCS</span> Agent Service installed and a file called <code>cacert.pem</code>, which we got from the <span class="caps">SSL</span> Creation step… having them in the <span class="caps">OCS</span> Agent folder, and a package affected to a computer, will make computer to download, and do the actions specified. ¿What are the pro’s and con’s of this method?</p>
+<p>When installing OCSAgent, using: <code>OCSAgentSetup.exe /S /SERVER:yourserver.no-ip.org</code>, we have no <code>cacert.pem</code> file copied, so we must copy it by hand, or, as I did, use an install script which does this in one step.</p>
+<p>I’ve used <a href="http://nsis.sourceforge.net/"><span class="caps">NSIS</span></a> to create a script for doing this:</p>
+<p>First, we’ll have to create a folder and put in it:</p>
+<ul>
+<li><code>OcsAgentSetup.exe</code></li>
+<li><code>cacert.pem</code></li>
+<li><code>NSIS Script</code></li>
+<li><code>service.ini</code> (in my case, for accelerating first inventory creation)</li>
+</ul>
+<p>The file <code>service.ini</code> could look like this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#!ini</span>
+<span class="k">[OCS_SERVICE]</span>
+<span class="na">TTO_WAIT</span><span class="o">=</span><span class="s">10</span>
+<span class="na">PROLOG_FREQ</span><span class="o">=</span><span class="s">1</span>
+<span class="na">OLD_PROLOG_FREQ</span><span class="o">=</span><span class="s">1</span>
+<span class="na">Miscellaneous</span><span class="o">=</span> <span class="s">/S /SERVER:yourserver.no-ip.org</span>
+</code></pre></div>
+</td></tr></table>
+<p>And <code>NSIS</code> script with:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>#!bat
+; Script edited using HM NIS Edit Script Wizard.
+; Creator Pablo Iranzo Gómez (Pablo.Iranzo@uv.es)
+; Homepage: http://Alufis35.uv.es/~iranzo/
+; License: http://creativecommons.org/licenses/by-sa/2.5/
+; HM NIS Edit Wizard helper
+defines
+!define PRODUCT_NAME <span class="s2">"OCS"</span>
+!define PRODUCT_VERSION <span class="s2">"RC3"</span>
+!define PRODUCT_PUBLISHER <span class="s2">"Pablo Iranzo Gomez (Pablo.Iranzo@uv.es)"</span>
+!define PRODUCT_WEB_SITE <span class="s2">"http://Alufis35.uv.es/~iranzo/"</span>
+SetCompressor zlib
+Name <span class="s2">"${PRODUCT_NAME} ${PRODUCT_VERSION}"</span>
+OutFile <span class="s2">"ocs-inst.exe"</span>
+InstallDir <span class="s2">"$TEMP"</span>
+Icon <span class="s2">"${NSISDIR}ContribGraphicsIconsmodern-install.ico"</span>
+SilentInstall silent
+InstallDirRegKey HKLM <span class="s2">"${PRODUCT_DIR_REGKEY}"</span> <span class="s2">""</span>  Section <span class="s2">"Principal"</span> SEC01
+SetOverwrite on
+SetOutPath <span class="s2">"$TEMP"</span>
+File <span class="s2">"OcsAgentSetup.exe"</span>
+Exec <span class="s2">"$TEMPOcsAgentSetup.exe /S /SERVER:yourserver.no-ip.org"</span>
+Exec <span class="s2">"$PROGRAMFILESOCS Inventory AgentOCSService.exe -stop"</span>
+SetOutPath <span class="s2">"$PROGRAMFILESOCS Inventory Agent"</span>
+File <span class="s2">"cacert.pem"</span>
+File <span class="s2">"service.ini"</span>
+Exec <span class="s2">"$PROGRAMFILESOCS Inventory AgentOCSService.exe -start"</span>
+Exec <span class="s2">"$PROGRAMFILESOCS Inventory AgentOCSInventory.exe /SERVER:yourserver.no-ip.org /DEBUG"</span>
+SectionEnd
+Section -Post
+SectionEnd`
+</code></pre></div>
+</td></tr></table>
+<p>This script, when compiled, will create a ocs-inst.exe file, with all
+files needed to be packed in it, when executed, will:</p>
+<ol>
+<li>silently run</li>
+<li>extract OCSAgentSetup</li>
+<li>install it using silent install</li>
+<li>then, stop service</li>
+<li>output <code>cacert.pem</code> certificate in <span class="caps">OCS</span> Service folder</li>
+<li>replace <code>service.ini</code> for faster inventory, and then,</li>
+<li>start service</li>
+<li>Force <span class="caps">DEBUG</span> and hand-started inventory</li>
+</ol>
+<p>This will leave us with a working <span class="caps">OCS</span> Agent Setup, with a valid certificate for authenticating against our deployment server, and ready for creating more packages.</p>
+<p>I hope this document is good for you to test this excellent software.</p>
+<p>Thanks (again) to the <span class="caps">OCS</span> Developing team (specially to Pascal Danek) for creating such a nice program, and helping in diagnosing problems found and setup procedures for correctly using it.</p>
+<p>Thanks to Pablo Chamorro for reviewing this article too ;)</p>
+<p>Have a look at <a href="https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/"><span class="caps">OCS</span> Deployment Tips and tricks</a> to get ideas on how to use package deployment</p>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=OCS%20Inventory%20Package%C2%A0deployment&url=https%3A//iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/&via=iranzop&hashtags=hardware,linux,software,ocs,foss" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=OCS%20Inventory%20Package%C2%A0deployment&amp;body=https%3A//iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/"
+                   href="https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/';
+    var disqus_url = 'https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2004/05/13/patentes-de-software-es/" title="Patentes de Software">Patentes de Software</a></li>
+<li><a href="https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/" title="OCS Deployment Tips and tricks">OCS Deployment Tips and tricks</a></li>
+<li><a href="https://iranzo.io/blog/2019/06/11/katacoda-scenario-creation/" title="Katacoda scenario creation">Katacoda scenario creation</a></li>
+<li><a href="https://iranzo.io/blog/2020/02/13/git-commit-reordering/" title="Git commit reordering">Git commit reordering</a></li>
+<li><a href="https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/" title="Dell racadm remote ISO load">Dell racadm remote ISO load</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2006/07/01/migrar-de-spip-18-a-19-es/" title="Previous: Migrar de SPIP 1.8 a 1.9">Migrar de SPIP 1.8 a 1.9</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/" title="Next: OCS Deployment Tips and tricks">OCS Deployment Tips and tricks</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~8 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2006-07-27T20:29:00+02:00">Thu 27 July 2006</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#foss-ref">FOSS
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#hardware-ref">hardware
+                    <span class="superscript">3</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#linux-ref">Linux
+                    <span class="superscript">37</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#ocs-ref">OCS
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#software-ref">software
+                    <span class="superscript">3</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

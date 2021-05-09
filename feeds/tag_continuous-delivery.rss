@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - continuous delivery</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Thu, 16 May 2019 22:29:14 +0200</lastBuildDate><item><title>Use custom domain name with Blog-O-Matic</title><link>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</link><description>&lt;p&gt;As a recipe, if you want to enable a custom domain name on &lt;a href="https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps/"&gt;blog-o-matic&lt;/a&gt; a special file needs to be created on the &amp;#8216;GitHub Pages&amp;#8217; served &amp;#8216;master&amp;#8217;&amp;nbsp;branch.&lt;/p&gt;
+&lt;p&gt;In order to do so, edit &lt;code&gt;pelicanconf.py&lt;/code&gt; and add the following&amp;nbsp;differences:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gh"&gt;diff --git a/pelicanconf.py b/pelicanconf.py&lt;/span&gt;
+&lt;span class="gh"&gt;index 680abcb..fc3dd8f 100644&lt;/span&gt;
+&lt;span class="gd"&gt;--- a/pelicanconf.py&lt;/span&gt;
+&lt;span class="gi"&gt;+++ b/pelicanconf.py&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -46,13 +46,16 @@ AMAZON_ONELINK = &amp;quot;b63a2115-85f7-43a9-b169-5f4c8c275655&amp;quot;&lt;/span&gt;
+
+
+ # Extra files customization
+&lt;span class="gd"&gt;-EXTRA_PATH_METADATA = {}&lt;/span&gt;
+&lt;span class="gi"&gt;+EXTRA_PATH_METADATA = {&lt;/span&gt;
+&lt;span class="gi"&gt;+    &amp;#39;extra/CNAME&amp;#39;: {&amp;#39;path&amp;#39;: &amp;#39;CNAME&amp;#39;},&lt;/span&gt;
+&lt;span class="gi"&gt;+}&lt;/span&gt;
+&lt;span class="gi"&gt;+&lt;/span&gt;
+
+ EXTRA_TEMPLATES_PATHS = [
+     &amp;quot;plugins/revealmd/templates&amp;quot;,  # eg: &amp;quot;plugins/revealmd/templates&amp;quot;
+ ]
+
+&lt;span class="gd"&gt;-STATIC_PATHS = [ &amp;#39;images&amp;#39; ]&lt;/span&gt;
+&lt;span class="gi"&gt;+STATIC_PATHS = [ &amp;#39;images&amp;#39; , &amp;#39;extra&amp;#39;]&lt;/span&gt;
+
+
+ ## ONLY TOUCH IF YOU KNOW WHAT YOU&amp;#39;RE DOING!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This will copy the &lt;code&gt;CNAME&lt;/code&gt; file created in &lt;code&gt;content/extra/CNAME&lt;/code&gt; to the resulting &amp;#8216;master&amp;#8217; branch as &lt;code&gt;/CNAME&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This file is interpreted by Github pages server as the domain name to listen for, so your website will start to be available from it (supposing that you followed usual&amp;nbsp;requirements):&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yourcustomdomain.es.    1   IN  A   185.199.108.153
+yourcustomdomain.es.    1   IN  A   185.199.109.153
+yourcustomdomain.es.    1   IN  A   185.199.110.153
+yourcustomdomain.es.    1   IN  A   185.199.111.153
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Please, do review if the serving servers have been updated on github&amp;nbsp;pages!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2019-05-16:/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</guid><category>tech</category><category>Pelican</category><category>FOSS</category><category>Travis</category><category>CI/CD</category><category>elegant</category><category>blog</category><category>Python</category><category>github</category><category>blog-o-matic</category><category>Linux</category><category>continuous integration</category><category>continuous delivery</category></item><item><title>Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with little setup steps.</title><link>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps/</link><description>
+&lt;h1 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;I’ve already covered some articles about automation with Travis-&lt;span class="caps"&gt;CI&lt;/span&gt;, GitHub,
+and one step that seems a show-stopper for many users when trying to build a
+website is on one side, the investment (domain, hosting, etc), the backend
+being used (WordPress, static generators, etc)…&lt;/p&gt;
+&lt;p&gt;While preparing a talk for a group of co-workers covering several of those aspects, I came with the idea to create Blog-o-Matic, implementing many of those ‘learnings’ in a ‘canned’ way that can be easy to consume by users.&lt;/p&gt;
+&lt;h1 id="the-approach"&gt;The approach&lt;a class="headerlink" href="#the-approach" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Blog-o-Matic, uses several discussed topics so far:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com"&gt;Github&lt;/a&gt; and GitHub Pages for hosting the source and the website&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://travis-ci.org"&gt;Travis-&lt;span class="caps"&gt;CI&lt;/span&gt;.org&lt;/a&gt; for automating the update and generation process&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.getpelican.com/"&gt;&lt;span class="quo"&gt;‘&lt;/span&gt;Pelican’&lt;/a&gt; for static rendering of your blog from the markdown or &lt;code&gt;asciidoc&lt;/code&gt; articles&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Pelican-Elegant/elegant"&gt;&lt;span class="quo"&gt;‘&lt;/span&gt;Elegant’&lt;/a&gt; for the ‘Theme’&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/buildinspace/peru"&gt;peru&lt;/a&gt; for automating repository upgrades for plugins, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The setup process is outlined at its &lt;a href="https://github.com/iranzo/blog-o-matic/"&gt;&lt;code&gt;README.md&lt;/code&gt;&lt;/a&gt; and just requires a few steps to setup that, from that point, will allow you to get your website published each time you commit a new document to the content folder.&lt;/p&gt;
+&lt;p&gt;You can also check the ‘generated’ website after installation via &lt;a href="https://iranzo.github.io/blog-o-matic"&gt;https://iranzo.github.io/blog-o-matic&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Do not forget to update your &lt;code&gt;pelican.conf&lt;/code&gt; file for fine-tuning and customization.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Wed, 09 Jan 2019 22:00:47 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2019-01-09:/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps/</guid><category>tech</category><category>Pelican</category><category>FOSS</category><category>Travis</category><category>CI/CD</category><category>Elegant</category><category>blog</category><category>Python</category><category>Github</category><category>blog-o-matic</category><category>Linux</category><category>continuous integration</category><category>continuous delivery</category></item></channel></rss>

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='en'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Introduction¶ iCalendar (.ics or webcal) is a standard for providing ‘calendar’ information over text file, it allows to define events, etc and it’s ideal to ‘subscribe’ over the internet to remote calendars, which is commonly used to show free/busy slots for scheduling meetings, etc. If you’re familiar …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Python, Telegram, Linux, redken, ICS, calendar, webcal, tech, " />
+
+<meta property="og:title" content="Python and iCalendar ICS processing "/>
+<meta property="og:url" content="https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/" />
+<meta property="og:description" content="Introduction¶ iCalendar (.ics or webcal) is a standard for providing ‘calendar’ information over text file, it allows to define events, etc and it’s ideal to ‘subscribe’ over the internet to remote calendars, which is commonly used to show free/busy slots for scheduling meetings, etc. If you’re familiar …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2019-09-17T07:00:36+02:00" />
+<meta name="twitter:title" content="Python and iCalendar ICS processing ">
+<meta name="twitter:description" content="Introduction¶ iCalendar (.ics or webcal) is a standard for providing ‘calendar’ information over text file, it allows to define events, etc and it’s ideal to ‘subscribe’ over the internet to remote calendars, which is commonly used to show free/busy slots for scheduling meetings, etc. If you’re familiar …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2019-09-17T07:00:36+02:00",
+        "description": "Introduction¶ iCalendar (.ics or webcal) is a standard for providing ‘calendar’ information over text file, it allows to define events, etc and it’s ideal to ‘subscribe’ over the internet to remote calendars, which is commonly used to show free/busy slots for scheduling meetings, etc. If you’re familiar …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/"
+        },
+
+        "headline": "Python and iCalendar ICS processing",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>Python and iCalendar ICS processing  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/">
+                Python and iCalendar <span class="caps">ICS</span>&nbsp;processing
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#the-ics-file">The <span class="caps">ICS</span> file</a></li>
+<li><a href="#python-processing">Python processing</a></li>
+<li><a href="#wrapping-it-up">Wrapping-it-up</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>iCalendar (<code>.ics</code> or <code>webcal</code>) is a standard for providing ‘calendar’ information over text file, it allows to define events, etc and it’s ideal to ‘subscribe’ over the internet to remote calendars, which is commonly used to show free/busy slots for scheduling meetings, etc.</p>
+<p>If you’re familiar with <code>Google Calendar</code> or others, it uses ‘ics’ under the hood, and you can get full url for it so that it can be shared.</p>
+<p>I wanted to add <span class="caps">ICS</span> functionality to <a href="https://t.me/redken_bot">@redken_bot</a> in Telegram, in a similar way to what I had for <code>RSS feeds</code>, <code>comic strips</code>, etc, so I started to investigate.</p>
+<h2 id="the-ics-file">The <span class="caps">ICS</span> file<a class="headerlink" href="#the-ics-file" title="Permanent link">¶</a></h2>
+<p>The <span class="caps">ICS</span> file is a text-based file which contains some definitions for the <code>calendar</code> itself:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">VCALENDAR</span>
+<span class="nv">PRODID</span><span class="p">:-</span><span class="o">//</span><span class="nv">Google</span> <span class="nv">Inc</span><span class="o">//</span><span class="nv">Google</span> <span class="nv">Calendar</span> <span class="mf">70.9054</span><span class="o">//</span><span class="nv">EN</span>
+<span class="nv">VERSION</span><span class="s s-Atom">:</span><span class="mf">2.0</span>
+<span class="nv">CALSCALE</span><span class="s s-Atom">:</span><span class="nv">GREGORIAN</span>
+<span class="nv">METHOD</span><span class="s s-Atom">:</span><span class="nv">PUBLISH</span>
+<span class="nv">X</span><span class="o">-</span><span class="nv">WR</span><span class="o">-</span><span class="nv">CALNAME</span><span class="s s-Atom">:</span><span class="nv">Pablo</span>
+<span class="nv">X</span><span class="o">-</span><span class="nv">WR</span><span class="o">-</span><span class="nv">TIMEZONE</span><span class="s s-Atom">:</span><span class="nv">Europe</span><span class="o">/</span><span class="nv">Madrid</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+<span class="nv">TZID</span><span class="s s-Atom">:</span><span class="nv">America</span><span class="o">/</span><span class="nv">Los_Angeles</span>
+<span class="nv">X</span><span class="o">-</span><span class="nv">LIC</span><span class="o">-</span><span class="nv">LOCATION</span><span class="s s-Atom">:</span><span class="nv">America</span><span class="o">/</span><span class="nv">Los_Angeles</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">DAYLIGHT</span>
+<span class="nv">TZOFFSETFROM</span><span class="p">:-</span><span class="mi">0800</span>
+<span class="nv">TZOFFSETTO</span><span class="p">:-</span><span class="mi">0700</span>
+<span class="nv">TZNAME</span><span class="s s-Atom">:</span><span class="nv">PDT</span>
+<span class="nv">DTSTART</span><span class="s s-Atom">:</span><span class="mi">19700308</span><span class="nv">T020000</span>
+<span class="nv">RRULE</span><span class="s s-Atom">:</span><span class="nv">FREQ</span><span class="o">=</span><span class="nv">YEARLY</span><span class="p">;</span><span class="nv">BYMONTH</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span><span class="nv">BYDAY</span><span class="o">=</span><span class="mi">2</span><span class="nv">SU</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">DAYLIGHT</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">TZOFFSETFROM</span><span class="p">:-</span><span class="mi">0700</span>
+<span class="nv">TZOFFSETTO</span><span class="p">:-</span><span class="mi">0800</span>
+<span class="nv">TZNAME</span><span class="s s-Atom">:</span><span class="nv">PST</span>
+<span class="nv">DTSTART</span><span class="s s-Atom">:</span><span class="mi">19701101</span><span class="nv">T020000</span>
+<span class="nv">RRULE</span><span class="s s-Atom">:</span><span class="nv">FREQ</span><span class="o">=</span><span class="nv">YEARLY</span><span class="p">;</span><span class="nv">BYMONTH</span><span class="o">=</span><span class="mi">11</span><span class="p">;</span><span class="nv">BYDAY</span><span class="o">=</span><span class="mi">1</span><span class="nv">SU</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+<span class="nv">TZID</span><span class="s s-Atom">:</span><span class="nv">Etc</span><span class="o">/</span><span class="nv">UTC</span>
+<span class="nv">X</span><span class="o">-</span><span class="nv">LIC</span><span class="o">-</span><span class="nv">LOCATION</span><span class="s s-Atom">:</span><span class="nv">Etc</span><span class="o">/</span><span class="nv">UTC</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">TZOFFSETFROM</span><span class="s s-Atom">:+</span><span class="mi">0000</span>
+<span class="nv">TZOFFSETTO</span><span class="s s-Atom">:+</span><span class="mi">0000</span>
+<span class="nv">TZNAME</span><span class="s s-Atom">:</span><span class="nv">GMT</span>
+<span class="nv">DTSTART</span><span class="s s-Atom">:</span><span class="mi">19700101</span><span class="nv">T000000</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+<span class="nv">TZID</span><span class="s s-Atom">:</span><span class="nv">Europe</span><span class="o">/</span><span class="nv">Madrid</span>
+<span class="nv">X</span><span class="o">-</span><span class="nv">LIC</span><span class="o">-</span><span class="nv">LOCATION</span><span class="s s-Atom">:</span><span class="nv">Europe</span><span class="o">/</span><span class="nv">Madrid</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">DAYLIGHT</span>
+<span class="nv">TZOFFSETFROM</span><span class="s s-Atom">:+</span><span class="mi">0100</span>
+<span class="nv">TZOFFSETTO</span><span class="s s-Atom">:+</span><span class="mi">0200</span>
+<span class="nv">TZNAME</span><span class="s s-Atom">:</span><span class="nv">CEST</span>
+<span class="nv">DTSTART</span><span class="s s-Atom">:</span><span class="mi">19700329</span><span class="nv">T020000</span>
+<span class="nv">RRULE</span><span class="s s-Atom">:</span><span class="nv">FREQ</span><span class="o">=</span><span class="nv">YEARLY</span><span class="p">;</span><span class="nv">BYMONTH</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span><span class="nv">BYDAY</span><span class="s s-Atom">=-</span><span class="mi">1</span><span class="nv">SU</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">DAYLIGHT</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">TZOFFSETFROM</span><span class="s s-Atom">:+</span><span class="mi">0200</span>
+<span class="nv">TZOFFSETTO</span><span class="s s-Atom">:+</span><span class="mi">0100</span>
+<span class="nv">TZNAME</span><span class="s s-Atom">:</span><span class="nv">CET</span>
+<span class="nv">DTSTART</span><span class="s s-Atom">:</span><span class="mi">19701025</span><span class="nv">T030000</span>
+<span class="nv">RRULE</span><span class="s s-Atom">:</span><span class="nv">FREQ</span><span class="o">=</span><span class="nv">YEARLY</span><span class="p">;</span><span class="nv">BYMONTH</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span><span class="nv">BYDAY</span><span class="s s-Atom">=-</span><span class="mi">1</span><span class="nv">SU</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+<span class="nv">TZID</span><span class="s s-Atom">:</span><span class="nv">Europe</span><span class="o">/</span><span class="nv">Paris</span>
+<span class="nv">X</span><span class="o">-</span><span class="nv">LIC</span><span class="o">-</span><span class="nv">LOCATION</span><span class="s s-Atom">:</span><span class="nv">Europe</span><span class="o">/</span><span class="nv">Paris</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">DAYLIGHT</span>
+<span class="nv">TZOFFSETFROM</span><span class="s s-Atom">:+</span><span class="mi">0100</span>
+<span class="nv">TZOFFSETTO</span><span class="s s-Atom">:+</span><span class="mi">0200</span>
+<span class="nv">TZNAME</span><span class="s s-Atom">:</span><span class="nv">CEST</span>
+<span class="nv">DTSTART</span><span class="s s-Atom">:</span><span class="mi">19700329</span><span class="nv">T020000</span>
+<span class="nv">RRULE</span><span class="s s-Atom">:</span><span class="nv">FREQ</span><span class="o">=</span><span class="nv">YEARLY</span><span class="p">;</span><span class="nv">BYMONTH</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span><span class="nv">BYDAY</span><span class="s s-Atom">=-</span><span class="mi">1</span><span class="nv">SU</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">DAYLIGHT</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">TZOFFSETFROM</span><span class="s s-Atom">:+</span><span class="mi">0200</span>
+<span class="nv">TZOFFSETTO</span><span class="s s-Atom">:+</span><span class="mi">0100</span>
+<span class="nv">TZNAME</span><span class="s s-Atom">:</span><span class="nv">CET</span>
+<span class="nv">DTSTART</span><span class="s s-Atom">:</span><span class="mi">19701025</span><span class="nv">T030000</span>
+<span class="nv">RRULE</span><span class="s s-Atom">:</span><span class="nv">FREQ</span><span class="o">=</span><span class="nv">YEARLY</span><span class="p">;</span><span class="nv">BYMONTH</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span><span class="nv">BYDAY</span><span class="s s-Atom">=-</span><span class="mi">1</span><span class="nv">SU</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+<span class="nv">TZID</span><span class="s s-Atom">:</span><span class="nv">Africa</span><span class="o">/</span><span class="nv">Ceuta</span>
+<span class="nv">X</span><span class="o">-</span><span class="nv">LIC</span><span class="o">-</span><span class="nv">LOCATION</span><span class="s s-Atom">:</span><span class="nv">Africa</span><span class="o">/</span><span class="nv">Ceuta</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">DAYLIGHT</span>
+<span class="nv">TZOFFSETFROM</span><span class="s s-Atom">:+</span><span class="mi">0100</span>
+<span class="nv">TZOFFSETTO</span><span class="s s-Atom">:+</span><span class="mi">0200</span>
+<span class="nv">TZNAME</span><span class="s s-Atom">:</span><span class="nv">CEST</span>
+<span class="nv">DTSTART</span><span class="s s-Atom">:</span><span class="mi">19700329</span><span class="nv">T020000</span>
+<span class="nv">RRULE</span><span class="s s-Atom">:</span><span class="nv">FREQ</span><span class="o">=</span><span class="nv">YEARLY</span><span class="p">;</span><span class="nv">BYMONTH</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span><span class="nv">BYDAY</span><span class="s s-Atom">=-</span><span class="mi">1</span><span class="nv">SU</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">DAYLIGHT</span>
+<span class="nv">BEGIN</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">TZOFFSETFROM</span><span class="s s-Atom">:+</span><span class="mi">0200</span>
+<span class="nv">TZOFFSETTO</span><span class="s s-Atom">:+</span><span class="mi">0100</span>
+<span class="nv">TZNAME</span><span class="s s-Atom">:</span><span class="nv">CET</span>
+<span class="nv">DTSTART</span><span class="s s-Atom">:</span><span class="mi">19701025</span><span class="nv">T030000</span>
+<span class="nv">RRULE</span><span class="s s-Atom">:</span><span class="nv">FREQ</span><span class="o">=</span><span class="nv">YEARLY</span><span class="p">;</span><span class="nv">BYMONTH</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span><span class="nv">BYDAY</span><span class="s s-Atom">=-</span><span class="mi">1</span><span class="nv">SU</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">STANDARD</span>
+<span class="nv">END</span><span class="s s-Atom">:</span><span class="nv">VTIMEZONE</span>
+</code></pre></div>
+</td></tr></table>
+<p>And then, continues with the entries for the <code>events</code>:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">BEGIN</span><span class="o">:</span><span class="n">VEVENT</span>
+<span class="n">DTSTART</span><span class="o">:</span><span class="mi">20190928</span><span class="n">T100000Z</span>
+<span class="n">DTEND</span><span class="o">:</span><span class="mi">20190928</span><span class="n">T150000Z</span>
+<span class="n">DTSTAMP</span><span class="o">:</span><span class="mi">20190917</span><span class="n">T013736Z</span>
+<span class="n">ORGANIZER</span><span class="o">;</span><span class="n">CN</span><span class="o">=</span><span class="n">YOURCOMMONNAME</span><span class="o">:</span><span class="n">mailto</span><span class="o">:</span><span class="n">YOUREMAIL</span>
+<span class="n">UID</span><span class="o">:</span><span class="mi">47</span><span class="n">chc1nab6lih8jtjs3o38mtio</span><span class="err">@</span><span class="n">google</span><span class="o">.</span><span class="na">com</span>
+<span class="n">ATTENDEE</span><span class="o">;</span><span class="n">CUTYPE</span><span class="o">=</span><span class="n">INDIVIDUAL</span><span class="o">;</span><span class="n">ROLE</span><span class="o">=</span><span class="n">REQ</span><span class="o">-</span><span class="n">PARTICIPANT</span><span class="o">;</span><span class="n">PARTSTAT</span><span class="o">=</span><span class="n">NEEDS</span><span class="o">-</span><span class="n">ACTION</span><span class="o">;</span><span class="n">CN</span><span class="o">=</span><span class="n">CONTACTNAME</span><span class="o">;</span><span class="n">X</span><span class="o">-</span><span class="n">NUM</span><span class="o">-</span><span class="n">GUESTS</span><span class="o">=</span><span class="mi">0</span><span class="o">:</span><span class="n">mailto</span><span class="o">:</span><span class="n">CONTACTEMAIL</span>
+<span class="n">CREATED</span><span class="o">:</span><span class="mi">20190914</span><span class="n">T204615Z</span>
+<span class="n">DESCRIPTION</span><span class="o">:</span>
+<span class="n">LAST</span><span class="o">-</span><span class="n">MODIFIED</span><span class="o">:</span><span class="mi">20190915</span><span class="n">T211230Z</span>
+<span class="n">LOCATION</span><span class="o">:</span><span class="n">LOCATIONFOREVENT</span>
+<span class="n">SEQUENCE</span><span class="o">:</span><span class="mi">0</span>
+<span class="n">STATUS</span><span class="o">:</span><span class="n">CONFIRMED</span>
+<span class="n">SUMMARY</span><span class="o">:</span><span class="n">EVENTSUMMARY</span>
+<span class="n">TRANSP</span><span class="o">:</span><span class="n">OPAQUE</span>
+<span class="n">END</span><span class="o">:</span><span class="n">VEVENT</span>
+</code></pre></div>
+</td></tr></table>
+<p>In this case, we can see that there’s an event starting on 28th September 2019, which lasts 5 hours in ‘<span class="caps">GMT</span>’ which also defines attendees (to get confirmations of assistance, etc), event location (so that you can click and use your maps app to ‘navigate’ to it, etc)</p>
+<h2 id="python-processing">Python processing<a class="headerlink" href="#python-processing" title="Permanent link">¶</a></h2>
+<p>After some research (and trial-error), I found that <code>icalendar</code> library allowed to process the entries in a <code>simple</code> way:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># coding: utf-8</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">icalendar</span> <span class="kn">import</span> <span class="n">Calendar</span><span class="p">,</span> <span class="n">Event</span><span class="p">,</span> <span class="n">vDatetime</span>
+<span class="kn">from</span> <span class="nn">pytz</span> <span class="kn">import</span> <span class="n">timezone</span>
+
+<span class="n">tz</span> <span class="o">=</span> <span class="n">timezone</span><span class="p">(</span><span class="s1">'Europe/Madrid'</span><span class="p">)</span>
+
+<span class="n">calendar</span> <span class="o">=</span> <span class="s1">'http://www.webcal.fi/cal.php?id=191&amp;format=ics&amp;wrn=1&amp;wp=4&amp;wf=53&amp;color=</span><span class="si">%23F</span><span class="s1">F3100&amp;cntr=es&amp;lang=es&amp;rid=wc'</span>
+
+<span class="c1"># Just in case we want to get calendar for another day</span>
+<span class="n">date</span> <span class="o">=</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">datefor</span> <span class="o">=</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">calendar</span><span class="p">)</span>
+<span class="c1"># We use the library to 'read' the url contents (text output)</span>
+<span class="n">gcal</span> <span class="o">=</span> <span class="n">Calendar</span><span class="o">.</span><span class="n">from_ical</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># walk the 'VEVENTS'</span>
+<span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">gcal</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">'VEVENT'</span><span class="p">):</span>
+    <span class="c1"># Get 'start' date</span>
+    <span class="k">if</span> <span class="s1">'DTSTART'</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dtstart</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'DTSTART'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="s1">'Europe/Madrid'</span><span class="p">))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">dtstart</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1"># Get 'stop' date</span>
+    <span class="k">if</span> <span class="s1">'DTEND'</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dtend</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'DTEND'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="s1">'Europe/Madrid'</span><span class="p">))</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">dtend</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1"># If we've dtstart or tend, print event information</span>
+    <span class="k">if</span> <span class="n">dtstart</span> <span class="ow">or</span> <span class="n">dtend</span><span class="p">:</span>
+        <span class="c1"># This find current date (year-month-day) in the dtstart or dtend in the event for printing it</span>
+        <span class="k">if</span> <span class="n">datefor</span> <span class="ow">in</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">dtstart</span> <span class="ow">or</span> <span class="n">datefor</span> <span class="ow">in</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">dtend</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">📅"</span><span class="p">,</span> <span class="n">event</span><span class="p">[</span><span class="s1">'summary'</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="n">dtstart</span> <span class="ow">and</span> <span class="n">dtend</span><span class="p">:</span>
+                <span class="n">lenght</span> <span class="o">=</span> <span class="p">(</span><span class="n">dtend</span> <span class="o">-</span> <span class="n">dtstart</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="mi">60</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">lenght</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="k">if</span> <span class="n">lenght</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"🕑 start: </span><span class="si">%s</span><span class="s2"> for </span><span class="si">%s</span><span class="s2"> minutes"</span> <span class="o">%</span> <span class="p">(</span><span class="n">dtstart</span><span class="p">,</span> <span class="n">lenght</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+<p>This code was working fine, but my calendar have several events that are recurring, hence, start date or end date is not ‘today’, which was causing a problem, as I was getting the events for today (started/stopped), but not the recurring ones that were having ‘an iteration’ today.</p>
+<p>After some more research, I found that <code>dateutil</code> library contains <code>rrule</code> which allows to process another field in the events:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">BEGIN</span><span class="o">:</span><span class="n">VEVENT</span>
+<span class="n">DTSTART</span><span class="o">;</span><span class="n">TZID</span><span class="o">=</span><span class="n">Europe</span><span class="o">/</span><span class="n">Madrid</span><span class="o">:</span><span class="mi">20190903</span><span class="n">T170000</span>
+<span class="n">DTEND</span><span class="o">;</span><span class="n">TZID</span><span class="o">=</span><span class="n">Europe</span><span class="o">/</span><span class="n">Madrid</span><span class="o">:</span><span class="mi">20190903</span><span class="n">T174500</span>
+<span class="n">RRULE</span><span class="o">:</span><span class="n">FREQ</span><span class="o">=</span><span class="n">WEEKLY</span><span class="o">;</span><span class="n">WKST</span><span class="o">=</span><span class="n">MO</span><span class="o">;</span><span class="n">BYDAY</span><span class="o">=</span><span class="n">TH</span><span class="o">,</span><span class="n">TU</span>
+<span class="n">DTSTAMP</span><span class="o">:</span><span class="mi">20190917</span><span class="n">T013736Z</span>
+<span class="n">ORGANIZER</span><span class="o">;</span><span class="n">CN</span><span class="o">=</span><span class="n">YOURNAME</span><span class="o">:</span><span class="n">mailto</span><span class="o">:</span><span class="n">GROUPEMAIL</span>
+<span class="n">UID</span><span class="o">:</span><span class="mi">3</span><span class="n">rhualb4j1kl2jdpemsd39o668</span><span class="err">@</span><span class="n">google</span><span class="o">.</span><span class="na">com</span>
+<span class="n">ATTENDEE</span><span class="o">;</span><span class="n">CUTYPE</span><span class="o">=</span><span class="n">INDIVIDUAL</span><span class="o">;</span><span class="n">ROLE</span><span class="o">=</span><span class="n">REQ</span><span class="o">-</span><span class="n">PARTICIPANT</span><span class="o">;</span><span class="n">PARTSTAT</span><span class="o">=</span><span class="n">ACCEPTED</span><span class="o">;</span><span class="n">CN</span><span class="o">=</span><span class="n">ATTENDEENAME</span><span class="o">;</span><span class="n">X</span><span class="o">-</span><span class="n">NUM</span><span class="o">-</span><span class="n">GUESTS</span><span class="o">=</span><span class="mi">0</span><span class="o">:</span><span class="n">mailto</span><span class="o">:</span><span class="n">ATTENDEEMAIL</span>
+<span class="n">CREATED</span><span class="o">:</span><span class="mi">20190617</span><span class="n">T073502Z</span>
+<span class="n">DESCRIPTION</span><span class="o">:</span>
+<span class="n">LAST</span><span class="o">-</span><span class="n">MODIFIED</span><span class="o">:</span><span class="mi">20190902</span><span class="n">T105136Z</span>
+<span class="n">LOCATION</span><span class="o">:</span><span class="n">EVENTLOCATION</span>
+<span class="n">SEQUENCE</span><span class="o">:</span><span class="mi">0</span>
+<span class="n">STATUS</span><span class="o">:</span><span class="n">CONFIRMED</span>
+<span class="n">SUMMARY</span><span class="o">:</span><span class="n">EVENT</span> <span class="n">SUMMARY</span>
+<span class="n">TRANSP</span><span class="o">:</span><span class="n">OPAQUE</span>
+<span class="n">END</span><span class="o">:</span><span class="n">VEVENT</span>
+</code></pre></div>
+</td></tr></table>
+<p>This event, starts and ends on 3rd September, so in the above code it was not showing, however, we can see that it has a <code>RRULE</code> field which says that happens weekly, with repeating days on Thursdays and Tuesdays.</p>
+<p><code>Rrule</code> allows to process it:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># &lt;snip&gt;</span>
+
+<span class="kn">import</span> <span class="nn">dateutil.rrule</span> <span class="k">as</span> <span class="nn">rrule</span>
+
+<span class="k">if</span> <span class="s1">'RRULE'</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+    <span class="c1"># This gets the rule as 'string' so that it can be processed</span>
+    <span class="n">ruletext</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'RRULE'</span><span class="p">]</span><span class="o">.</span><span class="n">to_ical</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+
+    <span class="c1"># This defines the rule object, with the rule text and using the initial date for the event</span>
+    <span class="n">rule</span> <span class="o">=</span> <span class="n">rrule</span><span class="o">.</span><span class="n">rrulestr</span><span class="p">(</span><span class="n">ruletext</span><span class="p">,</span> <span class="n">dtstart</span><span class="o">=</span><span class="n">event</span><span class="p">[</span><span class="s1">'DTSTART'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="p">)</span>
+
+    <span class="c1"># This is the interesting part, where, based on actual date and rule for repetition, calculates 'next' occurrence for the event</span>
+    <span class="n">nextrule</span><span class="o">=</span><span class="n">rule</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="s1">'Europe/Madrid'</span><span class="p">)))</span>
+<span class="c1"># &lt;snip&gt;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="wrapping-it-up">Wrapping-it-up<a class="headerlink" href="#wrapping-it-up" title="Permanent link">¶</a></h2>
+<p>So, with the above process ‘in place’, the final code is similar to this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># coding: utf-8</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">icalendar</span> <span class="kn">import</span> <span class="n">Calendar</span><span class="p">,</span> <span class="n">Event</span><span class="p">,</span> <span class="n">vDatetime</span>
+<span class="kn">from</span> <span class="nn">pytz</span> <span class="kn">import</span> <span class="n">timezone</span>
+<span class="kn">import</span> <span class="nn">dateutil.rrule</span> <span class="k">as</span> <span class="nn">rrule</span>
+
+<span class="nb">format</span> <span class="o">=</span> <span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S %Z%z"</span>
+
+<span class="n">tz</span> <span class="o">=</span> <span class="n">timezone</span><span class="p">(</span><span class="s1">'Europe/Madrid'</span><span class="p">)</span>
+
+<span class="n">calendars</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">calendars</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+    <span class="s1">'http://www.webcal.fi/cal.php?id=191&amp;format=ics&amp;wrn=1&amp;wp=4&amp;wf=53&amp;color=</span><span class="si">%23F</span><span class="s1">F3100&amp;cntr=es&amp;lang=es&amp;rid=wc'</span><span class="p">)</span>
+
+
+<span class="n">date</span> <span class="o">=</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">datefor</span> <span class="o">=</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">calendar</span> <span class="ow">in</span> <span class="n">calendars</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">calendar</span><span class="p">)</span>
+    <span class="n">gcal</span> <span class="o">=</span> <span class="n">Calendar</span><span class="o">.</span><span class="n">from_ical</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">gcal</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">'VEVENT'</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s1">'DTSTART'</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">dtstart</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'DTSTART'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="s1">'Europe/Madrid'</span><span class="p">))</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">dtstart</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="s1">'DTEND'</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">dtend</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'DTEND'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="s1">'Europe/Madrid'</span><span class="p">))</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">dtend</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="s1">'RRULE'</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">ruletext</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'RRULE'</span><span class="p">]</span><span class="o">.</span><span class="n">to_ical</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+                <span class="n">rule</span> <span class="o">=</span> <span class="n">rrule</span><span class="o">.</span><span class="n">rrulestr</span><span class="p">(</span><span class="n">ruletext</span><span class="p">,</span> <span class="n">dtstart</span><span class="o">=</span><span class="n">event</span><span class="p">[</span><span class="s1">'DTSTART'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="p">)</span>
+                <span class="n">nextrule</span><span class="o">=</span><span class="n">rule</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="s1">'Europe/Madrid'</span><span class="p">)))</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">nextrule</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nextrule</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="n">dtstart</span> <span class="ow">or</span> <span class="n">dtend</span> <span class="ow">or</span> <span class="n">nextrule</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">datefor</span> <span class="ow">in</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">dtstart</span> <span class="ow">or</span> <span class="n">datefor</span> <span class="ow">in</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">dtend</span> <span class="ow">or</span> <span class="n">datefor</span> <span class="ow">in</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">nextrule</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">📅"</span><span class="p">,</span> <span class="n">event</span><span class="p">[</span><span class="s1">'summary'</span><span class="p">])</span>
+
+                <span class="k">if</span> <span class="n">dtstart</span> <span class="ow">and</span> <span class="n">dtend</span><span class="p">:</span>
+                    <span class="n">lenght</span> <span class="o">=</span> <span class="p">(</span><span class="n">dtend</span> <span class="o">-</span> <span class="n">dtstart</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="mi">60</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">lenght</span> <span class="o">=</span> <span class="kc">False</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">nextrule</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">lenght</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">"🕑 start: </span><span class="si">%s</span><span class="s2"> for </span><span class="si">%s</span><span class="s2"> minutes"</span> <span class="o">%</span> <span class="p">(</span><span class="n">dtstart</span><span class="p">,</span> <span class="n">lenght</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"🕑 start: </span><span class="si">%s</span><span class="s2"> for </span><span class="si">%s</span><span class="s2"> minutes"</span> <span class="o">%</span> <span class="p">(</span><span class="n">nextrule</span><span class="p">,</span> <span class="n">lenght</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+<p>This code is still not complete, as it for sure, lists ‘single’ events happening today, or ‘recurring’ events happening also today, but it doesn’t take into consideration ‘Excludes’ to those rules, like for example, when a recurring event is cancelled for a specific date, etc.</p>
+<p>However, for a first iteration, code works and now the <a href="https://t.me/redken_bot">@redken_bot</a> can also remind you on your day events on multiple calendars :)</p>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=Python%20and%20iCalendar%20ICS%C2%A0processing&url=https%3A//iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/&via=iranzop&hashtags=python,telegram,linux,redken,ics,calendar,webcal" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=Python%20and%20iCalendar%20ICS%C2%A0processing&amp;body=https%3A//iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/"
+                   href="https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/';
+    var disqus_url = 'https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2015/06/26/writing-a-telegramorg-bot-in-python/" title="Writing a Telegram.org bot in Python">Writing a Telegram.org bot in Python</a></li>
+<li><a href="https://iranzo.io/blog/2016/11/05/unit-testing-for-stampy/" title="Unit testing for stampy">Unit testing for stampy</a></li>
+<li><a href="https://iranzo.io/blog/2019/02/07/telegram-redken-bot-and-amazondiscountsbargains-unification/" title="Telegram Redken bot and amazon/discounts/bargains unification">Telegram Redken bot and amazon/discounts/bargains unification</a></li>
+<li><a href="https://iranzo.io/blog/2019/03/04/telegram-redken_bot-documentation/" title="Telegram Redken bot documentation">Telegram Redken bot documentation</a></li>
+<li><a href="https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/" title="API access for Google Calendar and Google Sheet access">API access for Google Calendar and Google Sheet access</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2019/08/19/lego-dimensions/" title="Previous: Lego Dimensions Review">Lego Dimensions Review</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2019/09/29/lego-dimensions-cloning/" title="Next: Cloning Lego Dimensions tags">Cloning Lego Dimensions tags</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~5 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2019-09-17T07:00:36+02:00">Tue 17 September 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#calendar-ref">calendar
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#ics-ref">ICS
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#linux-ref">Linux
+                    <span class="superscript">37</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#python-ref">Python
+                    <span class="superscript">27</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#redken-ref">redken
+                    <span class="superscript">5</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#telegram-ref">Telegram
+                    <span class="superscript">6</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#webcal-ref">webcal
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

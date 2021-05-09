@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - Blogger</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_blogger.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2015-03-16T09:06:00+01:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Jekyll and Markdown</title><link href="https://iranzo.io/blog/2015/03/16/jekyll-and-markdown/" rel="alternate"></link><published>2015-03-16T09:06:00+01:00</published><updated>2015-03-16T09:06:00+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2015-03-16:/blog/2015/03/16/jekyll-and-markdown/</id><summary type="html">&lt;p&gt;For my work I&amp;#8217;ve been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the&amp;nbsp;formating.&lt;/p&gt;
+&lt;p&gt;On the other side I was willing to improve the ability to make it easier to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For my work I&amp;#8217;ve been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the&amp;nbsp;formating.&lt;/p&gt;
+&lt;p&gt;On the other side I was willing to improve the ability to make it easier to post new entries to blog without having to wait too much time, and of course, be able to prepare them offline and then push them&amp;nbsp;live.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Using &lt;a href="http://www.spip.net"&gt;&lt;span class="caps"&gt;SPIP&lt;/span&gt;&lt;/a&gt; allowed me to focus on text without caring too much about formatting, the &lt;span class="caps"&gt;CMS&lt;/span&gt; is not hard to administer, maybe not as popular as
+  WordPress, Joomla lately, but definitely, good for the work it&amp;#8217;s intended to do, and not like traditional&amp;nbsp;webpages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Using &lt;a href="http://www.blogger.com"&gt;Blogger&lt;/a&gt;, formatting was also not a hard part, and being a good platform improved the availability of tools, but still required online access, and the
+  Firefox extensions for it, were still not
+  convincing me for daily&amp;nbsp;usage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yesterday, while I was reading some information about github, I got back to their &amp;#8216;hosting&amp;#8217; solution (github.io) and like the idea of pushing the code via git (I love the offline commit and later push of all changes), and started reading about Jekyll and&amp;nbsp;Poole.&lt;/p&gt;
+&lt;p&gt;Jekyll and Poole enhance the creation of webpage posts using Markdown with some automation for automatic generation of links, reusability of common elements, etc which creates a set of static pages, fast to serve, upload,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve also used Jekyll-Import to gather my old posts at blogger and I will still convert some of them to markdown and try to get back the auto-code coloring I had in place (using external
+JavaScript&amp;nbsp;library).&lt;/p&gt;
+&lt;p&gt;Well, let&amp;#8217;s see how this goes and will try to implement some template to website not to use the standard one&amp;nbsp;soon.&lt;/p&gt;
+&lt;p&gt;Post Datum: This was being written while offline at the airport on a trip to Helsinki&amp;nbsp;;-)&lt;/p&gt;</content><category term="tech"></category><category term="Jekyll"></category><category term="FOSS"></category><category term="Markdown"></category><category term="SPIP"></category><category term="Blogger"></category></entry></feed>

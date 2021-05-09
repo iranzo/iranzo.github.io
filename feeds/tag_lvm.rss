@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - LVM</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Sun, 20 Apr 2008 23:03:52 +0000</lastBuildDate><item><title>Logical volume manager (LVM)</title><link>https://iranzo.io/blog/2008/04/20/Logical-volume-manager-LVM/</link><description>
+&lt;h3 id="introduction"&gt;Introduction&lt;a class="headerlink" href="#introduction" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt; are the initials for Logical Volume Manager, a powerful tool present in actual Linux systems inspired in the implementation available in other systems like &lt;span class="caps"&gt;AIX&lt;/span&gt; and &lt;span class="caps"&gt;HP&lt;/span&gt;-&lt;span class="caps"&gt;UX&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt; introduces a separation between system structure and elements like disks, partitions, filesystems to which we are used to.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt; has three levels:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Physical volumes&lt;/li&gt;
+&lt;li&gt;Volume Groups&lt;/li&gt;
+&lt;li&gt;Logical volumes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One of the benefits of &lt;span class="caps"&gt;LVM&lt;/span&gt; over traditional systems is that &lt;span class="caps"&gt;LVM&lt;/span&gt; introduces an abstraction layer which improves the limitation of a disk, allowing us to have a filesystem to span over several disks, resizing thus making a more efficient usage of storage.&lt;/p&gt;
+&lt;p&gt;Volumes make use of &lt;code&gt;PE&lt;/code&gt;&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;, which are the units (there’s a relationship set during creation) used for measuring size and future size changes of the volumes.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;LVM&lt;/span&gt; structure is as shown:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="LVM schema" src="https://iranzo.io/imagen/lvmschema.gif"/&gt;&lt;/p&gt;
+&lt;h3 id="physical-volumes-pv"&gt;Physical volumes (&lt;code&gt;PV&lt;/code&gt;)&lt;a class="headerlink" href="#physical-volumes-pv" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;A physical volume is a disk or a slice of it that we will designate for inclusion in a volume group.&lt;/p&gt;
+&lt;p&gt;Physical volumes can be places in a partition (for example if they have to coexist with another operating systems), or well span over the whole disk, even over &lt;code&gt;md&lt;/code&gt; devices&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h3 id="volume-groups-vg"&gt;Volume groups (&lt;code&gt;VG&lt;/code&gt;)&lt;a class="headerlink" href="#volume-groups-vg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Volume groups are defined grouping one or more physical volumes and are, as if they where physical disks which take their size from the different physical volumes associated to them.&lt;/p&gt;
+&lt;h3 id="logical-volumes-lv"&gt;Logical volumes (&lt;code&gt;LV&lt;/code&gt;)&lt;a class="headerlink" href="#logical-volumes-lv" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Logical volumes are created inside a volume group and are the equivalent to partitions in other systems, is the part of &lt;span class="caps"&gt;LVM&lt;/span&gt; that we format with a filesystem and we join afterwards to our system for being used for storage.&lt;/p&gt;
+&lt;h3 id="commands"&gt;Commands&lt;a class="headerlink" href="#commands" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;All commands related with &lt;span class="caps"&gt;LVM&lt;/span&gt; use a similar naming, which starts with the element they affect to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pv(change, display, remove, create, move, resize, scan) for physical volumes.&lt;/li&gt;
+&lt;li&gt;vg(convert, extend, reduce, scan, create, import, remove, split, change, display, merge, rename, export) for volume groups&lt;/li&gt;
+&lt;li&gt;lv(change, display, convert, extend, remove, rename, scan, create, reduce, resize) for logical volumes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="system-preparation-for-lvm"&gt;System preparation for &lt;span class="caps"&gt;LVM&lt;/span&gt;&lt;a class="headerlink" href="#system-preparation-for-lvm" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="hard-drive-partitioning"&gt;Hard drive partitioning&lt;a class="headerlink" href="#hard-drive-partitioning" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Before using &lt;span class="caps"&gt;LVM&lt;/span&gt; we need to designate some devices (full drives or partitions (type 8e on &lt;code&gt;fdisk&lt;/code&gt;))&lt;/p&gt;
+&lt;p&gt;After doing so, we need to execute &lt;code&gt;partprobe&lt;/code&gt; to refresh the partition layouts in running kernel with the defined schema.&lt;/p&gt;
+&lt;p&gt;In our example, we’ll have two hard drives: &lt;code&gt;hda&lt;/code&gt; and &lt;code&gt;sda&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In &lt;code&gt;hda&lt;/code&gt; we have one partition, &lt;code&gt;hda1&lt;/code&gt; in which we store &lt;code&gt;/boot&lt;/code&gt; (partition for &lt;code&gt;kernel&lt;/code&gt; and &lt;code&gt;initrd&lt;/code&gt;, as they cannot be on a &lt;span class="caps"&gt;LVM&lt;/span&gt; volume), and the rest is in a partition &lt;code&gt;hda2&lt;/code&gt; which grows until the full size of the drive.&lt;/p&gt;
+&lt;p&gt;In &lt;code&gt;sda&lt;/code&gt; we have the whole disk available for being used as &lt;span class="caps"&gt;LVM&lt;/span&gt;, so we will define a partition &lt;code&gt;sda1&lt;/code&gt; for this use.&lt;/p&gt;
+&lt;h3 id="creation-of-physical-volumes-pv"&gt;Creation of physical volumes (&lt;span class="caps"&gt;PV&lt;/span&gt;)&lt;a class="headerlink" href="#creation-of-physical-volumes-pv" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Physical volumes are the places in which we put the structure for volume groups, it’s creation is as easy as running:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+pvcreate /dev/hda2
+
+pvcreate /dev/sda1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;If we execute &lt;code&gt;pvscan&lt;/code&gt;, we can check the listing of physical volumes defined on the system, as well as the kind of metadata (lvm or lvm2) and it’s size, and a briefing on total, used and available.&lt;/p&gt;
+&lt;p&gt;For having a detailed state, we can execute &lt;code&gt;pvdisplay&lt;/code&gt;, which will show more information like size, &lt;code&gt;PE's&lt;/code&gt; available, etc.&lt;/p&gt;
+&lt;h3 id="creation-of-volume-groups-vg"&gt;Creation of volume groups (&lt;span class="caps"&gt;VG&lt;/span&gt;)&lt;a class="headerlink" href="#creation-of-volume-groups-vg" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Volume groups are like drawers, which placed over physical volumes, that define the grouping for logical volumes, making more clear the structure.&lt;/p&gt;
+&lt;p&gt;For creating the volume group we will execute:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+vgcreate Prueba /dev/sda1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This command will create a volume group named &lt;code&gt;Prueba&lt;/code&gt; over the physical volume at &lt;code&gt;/dev/sda1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;For checking that the action went ok, was we can execute &lt;code&gt;vgscan&lt;/code&gt; for getting a listing of defined volume groups.&lt;/p&gt;
+&lt;h3 id="creation-of-logical-volumes-lv"&gt;Creation of Logical volumes (&lt;span class="caps"&gt;LV&lt;/span&gt;)&lt;a class="headerlink" href="#creation-of-logical-volumes-lv" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Logical volumes are the equivalent to partitions, is the place over which we will put a filesystem and thus, the data we want to store.&lt;/p&gt;
+&lt;p&gt;Logical volumes are defined inside a volume group in the following way:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+lvcreate Prueba -n Inicial -L 2G
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;If we execute &lt;code&gt;lvscan&lt;/code&gt;, we will have a listing of all the defined volume groups and it’s size and between them, &lt;code&gt;Inicial&lt;/code&gt;, inside of &lt;code&gt;Prueba&lt;/code&gt; and with a 2Gb size&lt;/p&gt;
+&lt;h3 id="creation-of-a-filesystem"&gt;Creation of a filesystem&lt;a class="headerlink" href="#creation-of-a-filesystem" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Before using the logical volume we’ll need to prepare it for data, and creating a filesystem, this time, the command is identical to the one we use over a physical disk, but specifying the logical volume, for example:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+mkfs.ext3 /dev/Prueba/Inicial
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;It’s advisable to make use of a filesystem we can resize, as, one the improvements of &lt;span class="caps"&gt;LVM&lt;/span&gt; is the ability to resize logical units and, requires, as consequence that the filesystem works as a “container” able to grow or shrink the same way.&lt;/p&gt;
+&lt;p&gt;Now, we can mount the filesystem:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+mount /dev/Prueba/Inicial /mnt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="resizing-an-lvm-drive"&gt;Resizing an &lt;span class="caps"&gt;LVM&lt;/span&gt; “drive”&lt;a class="headerlink" href="#resizing-an-lvm-drive" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span class="caps"&gt;EXT3&lt;/span&gt;, allows resizing of volumes, so they can grow while being used, but for reducing size we need to stop its usage, and even in that case, it allows the interesting opportunity to create small filesystems, fitted for our initial usage and then keep them growing based on our needs without stop running.&lt;/p&gt;
+&lt;p&gt;As an example, we’re going to extend our &lt;code&gt;Inicial&lt;/code&gt; filesystem, increasing it in 250Mb, we’ll execute:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+pvscan &lt;span class="c1"&gt;#(where we will be told about physical volumes and free space)&lt;/span&gt;
+&lt;span class="c1"&gt;#  In case of need, we can extend our volume group with:&lt;/span&gt;
+pvcreate /dev/disconuevo
+vgextend Prueba /dev/disconuevo
+&lt;span class="c1"&gt;#  From now on, the vg will have the space ready for being used by lv and we will make it grow doing:&lt;/span&gt;
+lvextend -L +250M /dev/Prueba/Inicial
+ext2online /dev/mapper/Prueba-Inicial
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;After it finishes, the filesystem at &lt;code&gt;/mnt&lt;/code&gt; will have an extra 250Mb available.&lt;/p&gt;
+&lt;p&gt;We can make the filesystem grow to a total size, for example, make it grow until 4Gb, to do so, we will do:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+lvextend -L 4G /dev/Prueba/Inicial
+ext2online /dev/mapper/Prueba-Inicial
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Starting in Fedora Core 6 (&lt;span class="caps"&gt;FC6&lt;/span&gt;), the utility ext2online doesn’t exist, as it has been integrated in resize2fs, so we will execute instead: &lt;code&gt;resize2fs -p /dev/Prueba-Inicial [final size]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;ATTENTION&lt;/span&gt;: &lt;strong&gt;This is a dangerous step, we can lose data&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If we want to reduce the size of a logical volume, first, we’ll need to know how much space is used by the filesystem and then, &lt;code&gt;umount&lt;/code&gt; it:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+umount /dev/mapper/Prueba-Inicial
+&lt;span class="c1"&gt;#Next step would be reduce the filesystem:&lt;/span&gt;
+resize2fs /dev/mapper/Prueba-Inicial &lt;span class="o"&gt;[&lt;/span&gt;new size&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;I’m recommending reduce the filesystem under the final size we want to achieve, so we have a security margin. This size must &lt;span class="caps"&gt;ALWAYS&lt;/span&gt; be higher that the usage&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt; of the volume.&lt;/p&gt;
+&lt;p&gt;When the process has ended, we can reduce the volume running:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;lvextend -L -2G /dev/mapper/Prueba-Inicial&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;And now we will make the filesystem grow to regain the “security margin” we left with: &lt;code&gt;resize2fs /dev/mapper/Prueba-Inicial&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="graphical-tool"&gt;Graphical tool&lt;a class="headerlink" href="#graphical-tool" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Red Hat or Fedora have a graphical tool &lt;code&gt;system-config-lvm&lt;/code&gt; which allows to manage logical volumes in our system in the following way.&lt;/p&gt;
+&lt;p&gt;In the next screenshot we can see the physical volumes no assigned to a volume group, and with the options provided by the tool, we can add to an existing volume group or well, create a new volume group:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Unassigned PV" src="https://iranzo.io/imagen/lvm3.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;Here we can create a new logical volume inside the volume group, we can specify the volume name, the kind of volume as well as size and filesystem:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Create LV" src="https://iranzo.io/imagen/lvm6.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;Here we can see the volume group “Test” and the logical and physical view created (as we see, Test is made of four physical volumes: sdb1,sdb2,sdb3,sdb4)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="LV view" src="https://iranzo.io/imagen/lvm8.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;When we select the free space of the logical volume, the following is shown: number of extents, physical location for each physical volume.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Physical Extents &lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Multiple Devices: is a software technology that allows creation of several disk grouping levels: &lt;code&gt;linear&lt;/code&gt;, &lt;code&gt;raid0&lt;/code&gt;, &lt;code&gt;raid1&lt;/code&gt;, &lt;code&gt;raid5&lt;/code&gt;. Devices will identify themselves to the system as &lt;code&gt;/dev/md*0,1,2,3,etc*&lt;/code&gt;, and it’s status (defined &lt;code&gt;md's&lt;/code&gt;, sync status, etc) in the file &lt;code&gt;/proc/mdstat&lt;/code&gt; &lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;The one that we wrote down in the first step, before it was unmounted. &lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Sun, 20 Apr 2008 23:03:52 +0000</pubDate><guid isPermaLink="false">tag:iranzo.io,2008-04-20:/blog/2008/04/20/Logical-volume-manager-LVM/</guid><category>tech</category><category>Linux</category><category>LVM</category><category>FOSS</category><category>logical volumes</category></item></channel></rss>

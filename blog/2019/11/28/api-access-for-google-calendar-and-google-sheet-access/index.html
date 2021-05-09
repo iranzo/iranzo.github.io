@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://iranzo.io/theme/css/style.min.css?fc5adb95">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+        <meta name="google-site-verification" content="Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ" />        <meta name="msvalidate.01" content="8FF1B025212A47B5B27CC47163A042F0" />        <meta name="yandex-verification" content="993ede96cdfbee95" />
+        <meta http-equiv='content-language' content='en'>
+
+        <meta name="author" content="Pablo Iranzo Gómez" />
+
+        <meta name="description" content="Introduction¶ During last days I’ve been playing around with python and API access to Google Sheets. Since some time ago, I already experimented with ICS parsing from python because added https://t.me/redken_bot access to calendar files (.ics) so that it can provide daily reminders on chats about …
+" />
+        <meta name="twitter:creator" content="@iranzop">
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="Google calendar, Google sheets, spreadsheet, ics, calendar, python, foss, tech, " />
+
+<meta property="og:title" content="API access for Google Calendar and Google Sheet access "/>
+<meta property="og:url" content="https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/" />
+<meta property="og:description" content="Introduction¶ During last days I’ve been playing around with python and API access to Google Sheets. Since some time ago, I already experimented with ICS parsing from python because added https://t.me/redken_bot access to calendar files (.ics) so that it can provide daily reminders on chats about …" />
+<meta property="og:site_name" content="Pablo Iranzo Gómez&#39;s blog" />
+<meta property="og:article:author" content="Pablo Iranzo Gómez" />
+<meta property="og:article:published_time" content="2019-11-28T17:11:36+01:00" />
+<meta name="twitter:title" content="API access for Google Calendar and Google Sheet access ">
+<meta name="twitter:description" content="Introduction¶ During last days I’ve been playing around with python and API access to Google Sheets. Since some time ago, I already experimented with ICS parsing from python because added https://t.me/redken_bot access to calendar files (.ics) so that it can provide daily reminders on chats about …">
+<meta property="og:image" content="https://iranzo.github.io/favicon.png" />
+<meta name="twitter:image" content="https://iranzo.github.io/favicon.png" >
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "NewsArticle",
+
+        "author": {
+            "@type": "Person",
+            "name": "Pablo Iranzo Gómez"
+        },
+
+        "datePublished": "2019-11-28T17:11:36+01:00",
+        "description": "Introduction¶ During last days I’ve been playing around with python and API access to Google Sheets. Since some time ago, I already experimented with ICS parsing from python because added https://t.me/redken_bot access to calendar files (.ics) so that it can provide daily reminders on chats about …",
+
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/"
+        },
+
+        "headline": "API access for Google Calendar and Google Sheet access",
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pablo Iranzo Gómez&#39;s blog"
+            , "logo": {
+                "@type": "ImageObject",
+                "url": "https://iranzo.github.io/favicon.png"
+            }
+        }
+    }
+</script>
+
+        <title>API access for Google Calendar and Google Sheet access  · Pablo Iranzo Gómez&#39;s blog
+</title>
+        <link href="https://iranzo.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full Atom Feed" />
+        <link href="https://iranzo.io/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Pablo Iranzo Gómez&#39;s blog - Full RSS Feed" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL9P943TP1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL9P943TP1');
+</script>
+
+
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "54ytptc8en");
+</script>
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="https://iranzo.io/"><span class=site-name>Pablo Iranzo Gómez's blog</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       https://iranzo.io
+                                    >Home</a>
+                                </li>
+                                <li ><a href="https://iranzo.io/about/">About</a></li>
+                                <li ><a href="https://iranzo.io/redken_bot/">@redken_bot</a></li>
+                                <li ><a href="https://iranzo.io/categories">Categories</a></li>
+                                <li ><a href="https://iranzo.io/tags">Tags</a></li>
+                                <li ><a href="https://iranzo.io/archives">Archives</a></li>
+                                <li><form class="navbar-search" action="https://iranzo.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/">
+                <span class="caps">API</span> access for Google Calendar and Google Sheet&nbsp;access
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#accessing-google-sheets">Accessing Google Sheets</a></li>
+<li><a href="#accessing-google-calendar">Accessing Google Calendar</a></li>
+<li><a href="#wrap-up">Wrap up</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+            
+            
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
+<p>During last days I’ve been playing around with python and <span class="caps">API</span> access to Google Sheets.</p>
+<p>Since some time ago, I already experimented with <span class="caps">ICS</span> parsing from python because added https://t.me/redken_bot access to calendar files (<code>.ics</code>) so that it can provide daily reminders on chats about the events happening for the specific date, and had the chance to propose it’s usage to cover a specific use case: Accessing a spreadsheet in Google Sheets and parse its contents and output an <span class="caps">ICS</span> file so that the events listed and the dates specific for each one are available in an easier-to-consume approach.</p>
+<h2 id="accessing-google-sheets">Accessing Google Sheets<a class="headerlink" href="#accessing-google-sheets" title="Permanent link">¶</a></h2>
+<p>Doing some research, it seemed that <code>gspread</code> python library was the easiest one to get the access to the spread sheet and then be able to process it.</p>
+<p>Access requires setting up a <code>credentials.json</code> that is created using the <a href="https://console.developers.google.com/">Google developers console</a> (we should create a new project, create new credentials, etc). Please, read <a href="https://gspread.readthedocs.io/en/latest/oauth2.html">gspread documentation</a> on requisites and steps for obtaining this file.</p>
+<p>Once the file is there, the code can be as easy as:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">gspread</span>
+<span class="kn">from</span> <span class="nn">oauth2client.service_account</span> <span class="kn">import</span> <span class="n">ServiceAccountCredentials</span>
+
+<span class="c1"># use creds to create a client to interact with the Google Drive API</span>
+<span class="n">scope</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"https://spreadsheets.google.com/feeds"</span><span class="p">,</span>
+    <span class="s2">"https://www.googleapis.com/auth/drive"</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">creds</span> <span class="o">=</span> <span class="n">ServiceAccountCredentials</span><span class="o">.</span><span class="n">from_json_keyfile_name</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'GACREDENTIALS'</span><span class="p">],</span> <span class="n">scope</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
+
+<span class="c1"># Find a workbook by name and open the first sheet</span>
+<span class="c1"># Make sure you use the right name here.</span>
+<span class="n">sheet</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"My spreadsheet"</span><span class="p">)</span><span class="o">.</span><span class="n">sheet1</span>
+
+<span class="c1"># Extract and print all of the values</span>
+<span class="n">records</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">get_all_records</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">records</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">record</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">:</span>
+</code></pre></div>
+</td></tr></table>
+<p>In this case, we access the file via the file pointed in <code>GACREDENTIALS</code> environment variable and use the scope for defining the access level we need for this file.</p>
+<p>In this case, the spreadsheet was shared with ‘viewer’ permissions to the system account created for the credentials and stored in the file on disk.</p>
+<p>This enabled us to iterate over the elements and parse the rows in the sheet for doing or ‘<span class="caps">ICS</span>’ dump to file, using specific column for each item (start date, end date, description, location, name, etc)</p>
+<p>The generated <span class="caps">ICS</span> file could be stored in an accessible Webserver for subscribing to it, or we could manually import the events into our calendar.</p>
+<p>This solution, however, created duplicates of entries on each import, as the walk process just recreated all the entries on each execution.</p>
+<p>As a next-step, it was considered to directly write them to Google calendar so that the file itself could be created and stored but the actual event check happening via regular calendaring app.</p>
+<h2 id="accessing-google-calendar">Accessing Google Calendar<a class="headerlink" href="#accessing-google-calendar" title="Permanent link">¶</a></h2>
+<p>Access to Google calendar required to setup another method for accessing via using the standard <a href="https://developers.google.com/calendar/quickstart/python">Google <span class="caps">API</span> for Python</a>. This required to setup credentials for <span class="caps">OAUTH</span> app, with a ‘portal’ to grant access to a user, which writes a token to disk that can later be used for accessing the service.</p>
+<p>As we’re reading always from the same Google Sheet, we wanted to first cleanup the older entries, so we used the following code (taken from: <a href="https://karenapp.io/articles/2019/07/how-to-automate-google-calendar-with-python-using-the-calendar-api/">https://karenapp.io/articles/2019/07/how-to-automate-google-calendar-with-python-using-the-calendar-api/</a>):</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">dateutil.parser</span>
+<span class="kn">import</span> <span class="nn">gspread</span>
+<span class="kn">from</span> <span class="nn">google.auth.transport.requests</span> <span class="kn">import</span> <span class="n">Request</span>
+<span class="kn">from</span> <span class="nn">googleapiclient.discovery</span> <span class="kn">import</span> <span class="n">build</span>
+<span class="kn">from</span> <span class="nn">oauth2client.service_account</span> <span class="kn">import</span> <span class="n">ServiceAccountCredentials</span>
+
+<span class="c1"># If modifying these scopes, delete the file token.pickle.</span>
+<span class="n">SCOPES</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"https://www.googleapis.com/auth/calendar"</span><span class="p">]</span>
+
+<span class="n">credpickle</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"GApickle"</span><span class="p">]</span>
+
+<span class="c1"># Calendar to write to</span>
+<span class="n">mycalendarid</span> <span class="o">=</span> <span class="s2">"mycalendarID received when listing available calendars"</span>
+
+
+<span class="k">def</span> <span class="nf">get_calendar_service</span><span class="p">():</span>
+    <span class="sd">"""</span>
+<span class="sd">    Gets calendar service handler</span>
+<span class="sd">    :return: services handler</span>
+<span class="sd">    """</span>
+    <span class="n">creds</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="c1"># The file token.pickle stores the user's access and refresh tokens, and is</span>
+    <span class="c1"># created automatically when the authorization flow completes for the first</span>
+    <span class="c1"># time.</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">credpickle</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">credpickle</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">token</span><span class="p">:</span>
+            <span class="n">creds</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+    <span class="c1"># If there are no (valid) credentials available, FAIL!</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">creds</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">creds</span><span class="o">.</span><span class="n">valid</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">creds</span> <span class="ow">and</span> <span class="n">creds</span><span class="o">.</span><span class="n">expired</span> <span class="ow">and</span> <span class="n">creds</span><span class="o">.</span><span class="n">refresh_token</span><span class="p">:</span>
+            <span class="n">creds</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">Request</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error, create a new pickle file for continuing"</span><span class="p">)</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Save the credentials for the next run</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"token.pickle"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">token</span><span class="p">:</span>
+            <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">creds</span><span class="p">,</span> <span class="n">token</span><span class="p">)</span>
+
+    <span class="n">service</span> <span class="o">=</span> <span class="n">build</span><span class="p">(</span><span class="s2">"calendar"</span><span class="p">,</span> <span class="s2">"v3"</span><span class="p">,</span> <span class="n">credentials</span><span class="o">=</span><span class="n">creds</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">service</span>
+</code></pre></div>
+</td></tr></table>
+<p>We also wrote a function for writing new events to the calendar:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">writeevent</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="n">summary</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Writes event to Gcal</span>
+<span class="sd">    :param service: service handler</span>
+<span class="sd">    :param summary: summary of event</span>
+<span class="sd">    :param location: location of event</span>
+<span class="sd">    :param start: start date</span>
+<span class="sd">    :param end: end date</span>
+<span class="sd">    :param description: Description of event</span>
+<span class="sd">    """</span>
+
+    <span class="n">event_result</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">service</span><span class="o">.</span><span class="n">events</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">insert</span><span class="p">(</span>
+            <span class="n">calendarId</span><span class="o">=</span><span class="n">mycalendarid</span><span class="p">,</span>
+            <span class="n">body</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">"summary"</span><span class="p">:</span> <span class="n">summary</span><span class="p">,</span>
+                <span class="s2">"location"</span><span class="p">:</span> <span class="n">location</span><span class="p">,</span>
+                <span class="s2">"start"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"date"</span><span class="p">:</span> <span class="n">start</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2">"</span><span class="p">),</span>
+                    <span class="s2">"timeZone"</span><span class="p">:</span> <span class="s2">"Europe/Madrid"</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">"end"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"date"</span><span class="p">:</span> <span class="n">end</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2">"</span><span class="p">),</span>
+                    <span class="s2">"timeZone"</span><span class="p">:</span> <span class="s2">"Europe/Madrid"</span><span class="p">,</span>
+                <span class="p">},</span>
+                <span class="s2">"description"</span><span class="p">:</span> <span class="n">description</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">)</span>
+            <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Event: </span><span class="si">%s</span><span class="s2"> written"</span> <span class="o">%</span> <span class="n">summary</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>And the main code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">"""</span>
+<span class="sd">    Main code for the program</span>
+<span class="sd">    """</span>
+
+    <span class="c1"># Cleanup Gcalendar</span>
+    <span class="n">service</span> <span class="o">=</span> <span class="n">get_calendar_service</span><span class="p">()</span>
+
+    <span class="c1"># Call the Calendar API</span>
+    <span class="n">events_result</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">events</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">calendarId</span><span class="o">=</span><span class="n">mycalendarid</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+    <span class="n">events</span> <span class="o">=</span> <span class="n">events_result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"items"</span><span class="p">,</span> <span class="p">[])</span>
+
+    <span class="c1"># Delete all the events</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Deleting event: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">event</span><span class="p">[</span><span class="s1">'summary'</span><span class="p">])</span>
+            <span class="n">service</span><span class="o">.</span><span class="n">events</span><span class="p">()</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+                <span class="n">calendarId</span><span class="o">=</span><span class="n">mycalendarid</span><span class="p">,</span> <span class="n">eventId</span><span class="o">=</span><span class="n">event</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">googleapiclient</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">HttpError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Failed to delete event"</span><span class="p">)</span>
+
+    <span class="c1"># Create events</span>
+
+    <span class="c1"># Connect to Gspreadsheet to get events</span>
+    <span class="c1"># use creds to create a client to interact with the Google Drive API</span>
+    <span class="n">scope</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">"https://spreadsheets.google.com/feeds"</span><span class="p">,</span>
+        <span class="s2">"https://www.googleapis.com/auth/drive"</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">creds</span> <span class="o">=</span> <span class="n">ServiceAccountCredentials</span><span class="o">.</span><span class="n">from_json_keyfile_name</span><span class="p">(</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"GACREDENTIALS"</span><span class="p">],</span> <span class="n">scope</span>
+    <span class="p">)</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
+
+    <span class="c1"># Find a workbook by name and open the first sheet</span>
+    <span class="c1"># Make sure you use the right name here.</span>
+    <span class="n">sheet</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"KNI conferences pipeline"</span><span class="p">)</span><span class="o">.</span><span class="n">sheet1</span>
+
+    <span class="c1"># Extract and print all of the values</span>
+    <span class="n">records</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">get_all_records</span><span class="p">()</span>
+
+    <span class="c1"># Iterate records for valid events and create them</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">records</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">record</span><span class="p">[</span><span class="s2">"Name"</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">:</span>
+            <span class="c1"># Main event</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">record</span><span class="p">[</span><span class="s2">"Starts"</span><span class="p">]</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">record</span><span class="p">[</span><span class="s2">"Ends"</span><span class="p">]</span>
+            <span class="n">startdate</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">enddate</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="k">if</span> <span class="n">start</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">:</span>
+                <span class="n">startdate</span> <span class="o">=</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">end</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">:</span>
+                <span class="n">enddate</span> <span class="o">=</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">startdate</span> <span class="ow">and</span> <span class="n">enddate</span><span class="p">:</span>
+                <span class="n">writeevent</span><span class="p">(</span>
+                    <span class="n">service</span><span class="p">,</span>
+                    <span class="n">summary</span><span class="o">=</span><span class="n">record</span><span class="p">[</span><span class="s2">"Conference"</span><span class="p">],</span>
+                    <span class="n">location</span><span class="o">=</span><span class="n">record</span><span class="p">[</span><span class="s2">"Location"</span><span class="p">],</span>
+                    <span class="n">start</span><span class="o">=</span><span class="n">startdate</span><span class="p">,</span>
+                    <span class="n">end</span><span class="o">=</span><span class="n">enddate</span><span class="p">,</span>
+                    <span class="n">description</span><span class="o">=</span><span class="n">record</span><span class="p">[</span><span class="s2">"Event URL"</span><span class="p">],</span>
+                <span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="wrap-up">Wrap up<a class="headerlink" href="#wrap-up" title="Permanent link">¶</a></h2>
+<p>The final code, is able to use both <span class="caps">API</span>’s to get access to the spreadsheet, read the rows, and in parallel use the <span class="caps">API</span> to <code>nuke</code> the calendar, by removing all events and then, recreating them with the data obtained from the spreadsheet.</p>
+<p>There’s of course room for optimization, like just updating events if it’s changing or not, but that would make code more complex and not adding much more functionality (as still calls would be needed for querying event, comparing, and then updating as needed).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you wonder about why using environment variables for the credential files  used…  this jobs runs inside Jenkins instance that has the defined secrets exported in the Jenkinsfile as environment variables, allowing to ‘secure’ a bit more the access to the credentials itself (even if those have been scope-limited to only allow not harmful usage.)</p>
+</div>
+<p>Enjoy!</p>
+
+
+             
+ 
+                <p id="post-share-links">
+    Like this post? Share on:
+      <a href="https://twitter.com/intent/tweet?text=API%20access%20for%20Google%20Calendar%20and%20Google%20Sheet%C2%A0access&url=https%3A//iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/&via=iranzop&hashtags=google-calendar,google-sheets,spreadsheet,ics,calendar,python,foss" target="_blank" rel="nofollow noopener noreferrer" title="Share on Twitter">Twitter</a>
+ ❄       <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/" target="_blank" rel="nofollow noopener noreferrer" title="Share on Facebook">Facebook</a>
+ ❄       <a href="mailto:?subject=API%20access%20for%20Google%20Calendar%20and%20Google%20Sheet%C2%A0access&amp;body=https%3A//iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/" target="_blank" rel="nofollow noopener noreferrer" title="Share via Email">Email</a>
+
+                <hr />
+    <div class="author-blurb">
+        <a href="https://iranzo.github.io" target="_blank" rel="nofollow noopener noreferrer">
+            <img src=https://avatars.githubusercontent.com/u/312463 alt="Pablo Iranzo Gómez Avatar" title="Pablo Iranzo Gómez">
+            <span class="author-name">Pablo Iranzo Gómez</span>
+        </a>
+         opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc
+    </div>
+
+            
+
+
+
+
+
+
+
+<section>
+    <h6 style="display:none;">Comments</h6>
+    <p id="comment-message"> </p>
+
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle disqus-comment-count comment-count collapsed"
+                   data-toggle="collapse"
+                   data-parent="#accordion2"
+                   data-disqus-identifier="https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/"
+                   href="https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/#comment_thread"
+                   id="comment-accordion-toggle">
+                    Comments
+                </a>
+            </div>
+            <div id="comment_thread" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+    var disqus_shortname = 'iranzo-github-io';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    var disqus_identifier = 'https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/';
+    var disqus_url = 'https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <hr/>
+<section>
+    <h2>Keep Reading</h2>
+<ul class="related-posts-list">
+<li><a href="https://iranzo.io/blog/2019/03/04/telegram-redken_bot-documentation/" title="Telegram Redken bot documentation">Telegram Redken bot documentation</a></li>
+<li><a href="https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/" title="Use custom domain name with Blog-O-Matic">Use custom domain name with Blog-O-Matic</a></li>
+<li><a href="https://iranzo.io/blog/2019/05/30/emerging-tech-vlc19-citellus-automatizacion-de-comprobaciones/" title="Emerging Tech VLC‘19 - Citellus - Automatización de comprobaciones">Emerging Tech VLC‘19 - Citellus - Automatización de comprobaciones</a></li>
+<li><a href="https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/" title="Python and iCalendar ICS processing">Python and iCalendar ICS processing</a></li>
+<li><a href="https://iranzo.io/blog/2020/03/25/language-detection-in-redken_bot/" title="Language detection in @redken_bot">Language detection in @redken_bot</a></li>
+</ul>
+<hr />
+</section>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="https://iranzo.io/blog/2019/09/29/lego-dimensions-cloning/" title="Previous: Cloning Lego Dimensions tags">Cloning Lego Dimensions tags</a></li>
+                <li class="next-article"><a href="https://iranzo.io/blog/2020/02/08/lego-speed-champions-2020-review/" title="Next: Lego Speed Champions 2020 review">Lego Speed Champions 2020 review</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section id="article-sidebar" class="span2">
+    <h4>Reading Time</h4>
+    <p>~5 min read</p>
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2019-11-28T17:11:36+01:00">Thu 28 November 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://iranzo.io/categories#tech-ref">tech</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://iranzo.io/tags#calendar-ref">calendar
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#foss-ref">foss
+                    <span class="superscript">93</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#google-calendar-ref">Google calendar
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#google-sheets-ref">Google sheets
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#ics-ref">ics
+                    <span class="superscript">2</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#python-ref">python
+                    <span class="superscript">27</span>
+</a></li>
+                <li><a href="https://iranzo.io/tags#spreadsheet-ref">spreadsheet
+                    <span class="superscript">1</span>
+</a></li>
+            </ul>
+<h4>Stay in Touch</h4>
+<div id="sidebar-social-link">
+    <a href="http://twitter.com/iranzop" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1da1f3"/><path fill="#fff" d="M437 152a72 72 0 0 1-40 12 72 72 0 0 0 32-40 72 72 0 0 1-45 17 72 72 0 0 0-122 65 200 200 0 0 1-145-74 72 72 0 0 0 22 94 72 72 0 0 1-32-7 72 72 0 0 0 56 69 72 72 0 0 1-32 1 72 72 0 0 0 67 50 200 200 0 0 1-105 29 200 200 0 0 0 309-179 200 200 0 0 0 35-37"/></svg>
+    </a>
+    <a href="http://github.com/iranzo" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#1B1817"/><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/iranzo/" title="" target="_blank" rel="nofollow noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-label="LinkedIn" role="img" viewBox="0 0 512 512" fill="#fff"><rect width="512" height="512" rx="15%" fill="#0077b5"/><circle cx="142" cy="138" r="37"/><path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198"/><path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"/></svg>
+    </a>
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+    <div>
+        <span class="site-name">Pablo Iranzo Gómez's blog</span> - A bunch of unrelated data
+    </div>
+
+
+    <span class="site-name">Pablo Iranzo Gómez's blog</span>  is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>    
+<!-- Loads BestAzon configuration from pelicanconf.py -->
+<script>
+var BestAzon_Configuration = {
+"Amzn_AfiliateID_US": "redken08-20",
+"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_GB": "redken01-21",
+"Amzn_AfiliateID_DE": "redken02-21",
+"Amzn_AfiliateID_FR": "redken012-21",
+"Amzn_AfiliateID_ES": "redken-21",
+"Amzn_AfiliateID_IT": "redken00-21",
+"Amzn_AfiliateID_JP": "",
+"Amzn_AfiliateID_IN": "",
+"Amzn_AfiliateID_CN": "",
+"Amzn_AfiliateID_MX": "",
+"Amzn_AfiliateID_BR": "",
+"Conf_Custom_Class": " BestAzon_Amazon_Link ", //enter if you'll like to add any CSS class to the Amazon links (can be used for styling)
+"Conf_New_Window": "1", //enter "1" if you'll like to open Amazon links in new window (recommended), "2" to force open in the same window, keep blank if you'd use the defaults
+"Conf_Link_Follow": "1", //enter "1" if you'll like to add no-follow to the Amazon links (recommended), "2" to not add no-follow
+"Conf_Product_Link": "1", //enter "1" if you'll like to redirect international visitors to equivalent search page on local Amazon stores (recommended and fast), "2" if you want them to go to equiavalent product page (slow)
+"Conf_Tracking": "1", //enter "1" if you'll like to enable tracking (useful to optimize the service to you), "2" to disable
+"Conf_Footer": "1", //enter "1" to add credit in footer (recommended), "2" to disable
+"Conf_Link_Keywords": "", //enter additional keywords - if any of these keywords is found in any URL on your site, that will be sent to Bestazon for localization (useful if you use short links like bitly to hide your affiliate links). E.g. enter "/amazon/" if all your Amazon links containt the string /amazon/
+"Conf_Hide_Redirect_Link": "1", //enter "1" to not replace your original link with bestazon links (recommended), "2" if you want to replace (not recommended)
+"Conf_Source": "BestAzonScript" //DO NOT CHANGE THIS
+};
+
+</script>
+<script src="https://bestazon.io/script/BestAzonScript.js"></script>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="https://iranzo.io/theme/js/elegant.prod.9e9d5ce754.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

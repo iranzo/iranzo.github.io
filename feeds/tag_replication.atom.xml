@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - replication</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_replication.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2019-01-08T17:30:36+01:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>Postgres repl SSL replication</title><link href="https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/" rel="alternate"></link><published>2019-01-08T17:30:36+01:00</published><updated>2019-01-08T17:30:36+01:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2019-01-08:/blog/2019/01/08/postgres-repl-ssl-replication/</id><summary type="html">
+&lt;h1 id="postgres-across-clusters"&gt;Postgres across clusters&lt;a class="headerlink" href="#postgres-across-clusters" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;For Postgres to work across clusters we do need to have the data being synchronized.&lt;/p&gt;
+&lt;p&gt;With some other databases we do have some master-master approach, but
+usually have very strict requirements on latency, bandwidth, etc that we
+cannot solve with On-Premise + external cloud providers.&lt;/p&gt;
+&lt;p&gt;If the replication …&lt;/p&gt;</summary><content type="html">
+&lt;h1 id="postgres-across-clusters"&gt;Postgres across clusters&lt;a class="headerlink" href="#postgres-across-clusters" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;For Postgres to work across clusters we do need to have the data being synchronized.&lt;/p&gt;
+&lt;p&gt;With some other databases we do have some master-master approach, but
+usually have very strict requirements on latency, bandwidth, etc that we
+cannot solve with On-Premise + external cloud providers.&lt;/p&gt;
+&lt;p&gt;If the replication is based on the storage level instead, then you face that database servers don’t deal well if the data changes underneath it, so it leads to data corruption, on top of the storage-level issues/requirements as well on bandwidth, latency, etc.&lt;/p&gt;
+&lt;h2 id="other-approaches"&gt;Other approaches&lt;a class="headerlink" href="#other-approaches" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://evol-monkey.blogspot.com/2015/10/postgresql-94-streaming-replication.html"&gt;http://evol-monkey.blogspot.com/2015/10/postgresql-94-streaming-replication.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hackernoon.com/postgresql-cluster-into-kubernetes-cluster-f353cde212de"&gt;https://hackernoon.com/postgresql-cluster-into-kubernetes-cluster-f353cde212de&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="postgresql-streaming-replication-over-ssl"&gt;PostgreSQL streaming replication over &lt;span class="caps"&gt;SSL&lt;/span&gt;&lt;a class="headerlink" href="#postgresql-streaming-replication-over-ssl" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;There are several ways to accomplish this if you do a quick search on a web crawler, but we’ve gone the &lt;span class="caps"&gt;PSQL&lt;/span&gt; Streaming replication over &lt;span class="caps"&gt;SSL&lt;/span&gt; for our environment.&lt;/p&gt;
+&lt;p&gt;A replication slot is (as defined in &lt;a href="https://www.postgresql.org/docs/9.4/warm-standby.html#STREAMING-REPLICATION-SLOTS"&gt;documentation&lt;/a&gt;)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Replication slots provide an automated way to ensure that the master does not remove &lt;span class="caps"&gt;WAL&lt;/span&gt; segments until they have been received by all
+standby’s, and that the master does not remove rows which could cause a recovery conflict even when the standby is disconnected.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="background"&gt;Background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Quay requires a database that is available for each instance and provides required redundancy/replication&lt;/li&gt;
+&lt;li&gt;Replicating via storage can lead to issues as the files will change underneath postgres&lt;/li&gt;
+&lt;li&gt;Galera approach for MySQL (multi-master) is known to have issues even when running on the same cluster&lt;/li&gt;
+&lt;li&gt;For Federation we do want applications to run in different clusters, so an approach where a hot-standby is ready will probably overcome the limitations of master-master and the requirements for available database for all quay instances.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="investigation"&gt;Investigation&lt;a class="headerlink" href="#investigation" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We started to investigate &lt;a href="#other-approach"&gt;how others approached&lt;/a&gt; this situation and similar to what was done for another part of the setup for
+MongoDB, we went testing via replication over &lt;span class="caps"&gt;SSL&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;We also checked several of the approaches, but one of them, PostDock images were lacking &lt;span class="caps"&gt;SSL&lt;/span&gt; support, but still had a nice way to do several overrides for configuration, etc via environment variables, which made them ideal for testing in an OpenShift/Kubernetes environment.&lt;/p&gt;
+&lt;p&gt;The environments we plan to use are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AIT&lt;/span&gt; cluster&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LEO&lt;/span&gt; cluster&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PIT&lt;/span&gt; cluster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ssl"&gt;&lt;span class="caps"&gt;SSL&lt;/span&gt;&lt;a class="headerlink" href="#ssl" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For the &lt;span class="caps"&gt;SSL&lt;/span&gt; setup side we did:&lt;/p&gt;
+&lt;h3 id="create-postgres-certs"&gt;Create Postgres Certs&lt;a class="headerlink" href="#create-postgres-certs" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Seems that Postgres doesn’t check the certificate for the host ‘by default’, but just uses the certificate to encrypt, but still we did create the certificates using the name of the application in it for future usage.&lt;/p&gt;
+&lt;p&gt;Using the same certificate with all server names, we can also federate a
+single secret containing those certs rather than creating one &lt;span class="caps"&gt;SSL&lt;/span&gt; secret for
+each cluster.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;./generate-cert.sh postgres
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;With output:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;received&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;received&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CSR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generating&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;key&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;rsa&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2048&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;encoded&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CSR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;04&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;29&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;signed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;certificate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;serial&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;34111709152443674697969629831350216041253590538&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Now, we do have all the required certificates for postgres generated.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;-rw-r--r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1001&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:04 postgres.csr
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo  &lt;span class="m"&gt;208&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:04 postgres-csr.json
+-rw-------. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1679&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:04 postgres-key.pem
+-rw-rw-r--. &lt;span class="m"&gt;1&lt;/span&gt; iranzo iranzo &lt;span class="m"&gt;1753&lt;/span&gt; nov &lt;span class="m"&gt;29&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt;:04 postgres.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h3 id="our-setup-configuration"&gt;Our setup configuration&lt;a class="headerlink" href="#our-setup-configuration" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Setup:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LEO&lt;/span&gt; will be the ‘master’ with &lt;code&gt;$PGDATA&lt;/code&gt; at &lt;code&gt;/var/lib/postgresql/data&lt;/code&gt; in a local volume&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AIT&lt;/span&gt; will be the ‘slave’ with &lt;code&gt;$PGDATA&lt;/code&gt; at &lt;code&gt;/var/lib/postgresql/data&lt;/code&gt; in a local volume&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;PIT&lt;/span&gt; will be the ‘slave’ with &lt;code&gt;$PGDATA&lt;/code&gt; at &lt;code&gt;/var/lib/postgresql/data&lt;/code&gt; in a local volume&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first issue we found is that by default, PostDock lacks the &lt;span class="caps"&gt;SSL&lt;/span&gt; support,
+but as we were allowed to define settings for the configuration files we
+could override the settings via a variable named &lt;code&gt;CONFIGS&lt;/code&gt; set to
+&lt;code&gt;ssl:on,ssl_cert_file:'/etc/postgresql/server.crt',ssl_key_file:'/etc/postgresql/server.key'&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This required to craft a custom image (&lt;code&gt;quay.io/iranzo/postdock:sslkeyschown&lt;/code&gt;) that we submitted as &lt;a href="https://github.com/paunin/PostDock/pull/205"&gt;&lt;span class="caps"&gt;PR&lt;/span&gt; to PostDock&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the meantime, we did use &lt;a href="https://quay.io"&gt;https://quay.io&lt;/a&gt; to store our image and rebuild whenever we changed the code at our custom repo.&lt;/p&gt;
+&lt;p&gt;The changes in our image are very simple:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;
+&lt;span class="normal"&gt;19&lt;/span&gt;
+&lt;span class="normal"&gt;20&lt;/span&gt;
+&lt;span class="normal"&gt;21&lt;/span&gt;
+&lt;span class="normal"&gt;22&lt;/span&gt;
+&lt;span class="normal"&gt;23&lt;/span&gt;
+&lt;span class="normal"&gt;24&lt;/span&gt;
+&lt;span class="normal"&gt;25&lt;/span&gt;
+&lt;span class="normal"&gt;26&lt;/span&gt;
+&lt;span class="normal"&gt;27&lt;/span&gt;
+&lt;span class="normal"&gt;28&lt;/span&gt;
+&lt;span class="normal"&gt;29&lt;/span&gt;
+&lt;span class="normal"&gt;30&lt;/span&gt;
+&lt;span class="normal"&gt;31&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gh"&gt;diff --git a/src/pgsql/bin/postgres/entrypoint.sh b/src/pgsql/bin/postgres/entrypoint.sh&lt;/span&gt;
+&lt;span class="gh"&gt;index b09652c..1298dcb 100755&lt;/span&gt;
+&lt;span class="gd"&gt;--- a/src/pgsql/bin/postgres/entrypoint.sh&lt;/span&gt;
+&lt;span class="gi"&gt;+++ b/src/pgsql/bin/postgres/entrypoint.sh&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -42,7 +42,25 @@ else&lt;/span&gt;
+     fi
+ fi
+
+&lt;span class="gd"&gt;-KEYS=$(egrep '(ssl_cert_file|ssl_key_file)' $PGDATA/postgresql.conf|cut -d "=" -f 2-)&lt;/span&gt;
+&lt;span class="gi"&gt;+&lt;/span&gt;
+&lt;span class="gi"&gt;+echo "&amp;gt;&amp;gt;&amp;gt; Trying to configure SSL"&lt;/span&gt;
+&lt;span class="gi"&gt;+# Tweak keys to avoid permission issues:&lt;/span&gt;
+&lt;span class="gi"&gt;+ORIGKEYS=$(echo $CONFIGS|tr "," "\n"|egrep '(ssl_cert_file|ssl_key_file)'|cut -d ":" -f 2-|tr "\n" " "|tr -d "\'")&lt;/span&gt;
+&lt;span class="gi"&gt;+KEYS=""&lt;/span&gt;
+&lt;span class="gi"&gt;+&lt;/span&gt;
+&lt;span class="gi"&gt;+echo "&amp;gt;&amp;gt;&amp;gt; Trying to move ${ORIGKEYS} to proper folder"&lt;/span&gt;
+&lt;span class="gi"&gt;+for file in ${ORIGKEYS}; do&lt;/span&gt;
+&lt;span class="gi"&gt;+    # Check for file or link pointing to file&lt;/span&gt;
+&lt;span class="gi"&gt;+    if [ -e /pg-ssl/$(basename ${file}) ]; then&lt;/span&gt;
+&lt;span class="gi"&gt;+        echo "&amp;gt;&amp;gt;&amp;gt; Copying SSL file from /pg-ssl/$(basename ${file}) to ${file}"&lt;/span&gt;
+&lt;span class="gi"&gt;+        mkdir -p $(dirname ${file})&lt;/span&gt;
+&lt;span class="gi"&gt;+        cat /pg-ssl/$(basename ${file}) &amp;gt; ${file}&lt;/span&gt;
+&lt;span class="gi"&gt;+        KEYS="$KEYS ${file}"&lt;/span&gt;
+&lt;span class="gi"&gt;+    else&lt;/span&gt;
+&lt;span class="gi"&gt;+        echo "&amp;gt;&amp;gt;&amp;gt; ERROR: SSL File ${file} doesn't exist on disk"&lt;/span&gt;
+&lt;span class="gi"&gt;+    fi&lt;/span&gt;
+&lt;span class="gi"&gt;+done&lt;/span&gt;
+&lt;span class="gi"&gt;+&lt;/span&gt;
+ chown -R postgres $PGDATA $KEYS &amp;amp;&amp;amp; chmod -R 0700 $PGDATA $KEYS
+
+ source /usr/local/bin/cluster/repmgr/configure.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;From this, and once ‘Quay’ builds our image, we should, in the namespace for
+our project, add a new application via ‘Deploy image’ with
+&lt;code&gt;quay.io/iranzo/postdock:sslkeyschown&lt;/code&gt; (sources at
+&lt;a href="https://github.com/iranzo/PostDock"&gt;https://github.com/iranzo/PostDock&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The application will ask for some configuration options, name for the new application, etc&lt;/p&gt;
+&lt;p&gt;We must configure some environment variables:&lt;/p&gt;
+&lt;h3 id="environment-configuration"&gt;Environment configuration&lt;a class="headerlink" href="#environment-configuration" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PARTNER_NODES&lt;/code&gt;: &lt;span class="caps"&gt;IP&lt;/span&gt;’s of: postgres-leo.apps.e2e.bos.example.com,postgres-ait.apps.e2e.bos.example.com,postgres-aws.apps.e2e.bos.example.com (from below, but &lt;span class="caps"&gt;EXCLUDING&lt;/span&gt; the one we’re that we’ll be putting in CLUSTER_NODE_NETWORK_NAME)&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LEO&lt;/span&gt;: 10.19.227.153&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AIT&lt;/span&gt;: 10.19.115.226&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt;: internal-aba91353afe1c11e89f350a50403e669-443870799.us-east-1.elb.amazonaws.com&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CLUSTER_NAME&lt;/code&gt;: &lt;code&gt;quaydatabase&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;POSTGRES_DB&lt;/code&gt;: &lt;code&gt;quaydb&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DB_USERS&lt;/code&gt;: &lt;code&gt;replication_user:replication_pass,quayuser:quaypass&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CONFIGS&lt;/code&gt;: &lt;code&gt;ssl:on,ssl_cert_file:'/etc/postgresql/server.crt',ssl_key_file:'/etc/postgresql/server.key'&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NODE_NAME&lt;/code&gt;: Identifying name for this instance&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NODE_ID&lt;/code&gt;: \$(&lt;span class="caps"&gt;NUMBER&lt;/span&gt; &lt;span class="caps"&gt;DIFFERENT&lt;/span&gt; &lt;span class="caps"&gt;FOR&lt;/span&gt; &lt;span class="caps"&gt;EACH&lt;/span&gt; &lt;span class="caps"&gt;NODE&lt;/span&gt; + 1000, f.e. 1002)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CLUSTER_NODE_NETWORK_NAME&lt;/code&gt;: \$(&lt;span class="caps"&gt;SAME&lt;/span&gt; &lt;span class="caps"&gt;AS&lt;/span&gt; NODE_NAME that would go in &lt;span class="caps"&gt;PARTNER&lt;/span&gt; &lt;span class="caps"&gt;NODES&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;REPLICATION_HOST&lt;/code&gt;: “postgres” (name of app in deployment)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We did raise/update some issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/paunin/PostDock/issues/124"&gt;https://github.com/paunin/PostDock/issues/124&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/paunin/PostDock/issues/202"&gt;https://github.com/paunin/PostDock/issues/202&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/paunin/PostDock/issues/203"&gt;https://github.com/paunin/PostDock/issues/203&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But finally as we had to build our own modified image we were able to circumvent them.&lt;/p&gt;
+&lt;p&gt;We did configure some more things to pass the certificates and key to the pods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure a secret with &lt;code&gt;server.crt&lt;/code&gt; and &lt;code&gt;server.key&lt;/code&gt; based on the &lt;code&gt;postgres.pem&lt;/code&gt; and &lt;code&gt;postgres-key.pem&lt;/code&gt; for each one of them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As we’re using a secret for storing the certificates, we’ll use a volume exposing it to the host via the path &lt;code&gt;/pg-ssl&lt;/code&gt;&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;mountPath&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;/pg-ssl&lt;/span&gt;
+              &lt;span class="l l-Scalar l-Scalar-Plain"&gt;name&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;volume-yisiz&lt;/span&gt;
+              &lt;span class="l l-Scalar l-Scalar-Plain"&gt;readOnly&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Our patched image, will find and move the certificates to their final destination (specified via environment variable in &lt;code&gt;CONFIGS&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;This image, also ensures valid permissions and ownership so that postgres can start and answer ‘&lt;span class="caps"&gt;SSL&lt;/span&gt;’ via a:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; iranzo   iranzo-save  …  RH  syseng  pit-hybrid  psql -h localhost -U replication_user -W replication_db -p &lt;span class="m"&gt;5432&lt;/span&gt;
+Password &lt;span class="k"&gt;for&lt;/span&gt; user replication_user:
+psql &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.6&lt;span class="o"&gt;)&lt;/span&gt;
+SSL connection &lt;span class="o"&gt;(&lt;/span&gt;protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: &lt;span class="m"&gt;256&lt;/span&gt;, compression: disabled&lt;span class="o"&gt;)&lt;/span&gt;
+
+&lt;span class="nv"&gt;replication_db&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c1"&gt;# \dt&lt;/span&gt;
+Did not find any relations.
+&lt;span class="nv"&gt;replication_db&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="additional-settings"&gt;Additional settings&lt;a class="headerlink" href="#additional-settings" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure a volume for storing permanent data in &lt;code&gt;/var/lib/postgresql/data&lt;/code&gt; so that is kept and not destroyed on pod destroy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="the-bittersweet-wrap-up"&gt;The bittersweet wrap-up&lt;a class="headerlink" href="#the-bittersweet-wrap-up" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;At this point we do have the postgres image started with &lt;span class="caps"&gt;SSL&lt;/span&gt;, however:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In order to use replication between environments, we need a way to access postgres&lt;/li&gt;
+&lt;li&gt;The creation and configuration of &lt;span class="caps"&gt;SSL&lt;/span&gt; setup gets us a bit closer to it&lt;/li&gt;
+&lt;li&gt;OpenShift &lt;code&gt;HAPROXY&lt;/code&gt; requires &lt;span class="caps"&gt;SNI&lt;/span&gt;-capable client, which is not&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; the case, hence we still cannot have the traffic get into the postgres instance and hence, replication doesn’t start as there’s no communication.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All attempts to use a router (that only permits http and https or &lt;span class="caps"&gt;TLS&lt;/span&gt;-with-&lt;span class="caps"&gt;SNI&lt;/span&gt;) failed completely, as &lt;span class="caps"&gt;PSQL&lt;/span&gt; doesn’t yet have the support in place, failed, even some other hacks on initialization scripts to use the alternate port instead.&lt;/p&gt;
+&lt;p&gt;Unfortunately, this became a major blocker at this time, not allowing us to setup a replicated postgres cluster across different OpenShift Clusters to have it as a database we can rely for setting up Quay on top.&lt;/p&gt;
+&lt;h2 id="the-plot-twist"&gt;The plot twist&lt;a class="headerlink" href="#the-plot-twist" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;After finding no more ways, we discussed with our team members for putting more brains in this, and in conversations with Pep, Mario and Ryan, it was suggested to instead use a LoadBalancer &lt;span class="caps"&gt;IP&lt;/span&gt;, that imposes no restrictions on the traffic, this however could only be accomplished on 3 environments (&lt;span class="caps"&gt;LEO&lt;/span&gt;, &lt;span class="caps"&gt;AIT&lt;/span&gt; and &lt;span class="caps"&gt;AWS&lt;/span&gt;)&lt;/p&gt;
+&lt;p&gt;As &lt;span class="caps"&gt;AWS&lt;/span&gt; seems to have no &lt;span class="caps"&gt;DNS&lt;/span&gt; resolution, we’re limited to use &lt;span class="caps"&gt;IP&lt;/span&gt;’s in the server name (for the CLUSTER_NODE_NETWORK_NAME) so that in case of failover, &lt;span class="caps"&gt;AWS&lt;/span&gt; can reach them.&lt;/p&gt;
+&lt;p&gt;With the current setup, we only needed to define ‘persistent’ storage for postgres so in case all three pods were destroyed at the same time, we do have some data to start over.&lt;/p&gt;
+&lt;p&gt;The final steps, outlined above in &lt;a href="#our-setup-configuration"&gt;Our setup configuration&lt;/a&gt;, were updated to use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PARTNER_NODES containing the &lt;span class="caps"&gt;LB&lt;/span&gt; &lt;span class="caps"&gt;IP&lt;/span&gt; address for the Load Balancer defined in each environment &lt;span class="caps"&gt;EXCEPT&lt;/span&gt; our own&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CLUSTER_NODE_NETWORK_NAME: our &lt;span class="caps"&gt;LB&lt;/span&gt; &lt;span class="caps"&gt;IP&lt;/span&gt; as it would go in PARTNER_NODES for other clusters&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PARTNER_NODES: &lt;span class="caps"&gt;IP&lt;/span&gt;’s of: postgres-leo.apps.e2e.bos.example.com,postgres-ait.apps.e2e.bos.example.com,postgres-aws.apps.e2e.bos.example.com (from below, but &lt;span class="caps"&gt;EXCLUDING&lt;/span&gt; the one we’re that we’ll be putting in CLUSTER_NODE_NETWORK_NAME)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LEO&lt;/span&gt;: 10.19.227.153&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AIT&lt;/span&gt;: 10.19.115.226&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt;: internal-aba91353afe1c11e89f350a50403e669-443870799.us-east-1.elb.amazonaws.com&lt;/li&gt;
+&lt;li&gt;NODE_ID: \$(&lt;span class="caps"&gt;NUMBER&lt;/span&gt; &lt;span class="caps"&gt;DIFFERENT&lt;/span&gt; &lt;span class="caps"&gt;FOR&lt;/span&gt; &lt;span class="caps"&gt;EACH&lt;/span&gt; &lt;span class="caps"&gt;NODE&lt;/span&gt; + 1000, f.e. 1002)&lt;/li&gt;
+&lt;li&gt;CLUSTER_NODE_NETWORK_NAME: \$(&lt;span class="caps"&gt;SAME&lt;/span&gt; &lt;span class="caps"&gt;AS&lt;/span&gt; NODE_NAME that would go in &lt;span class="caps"&gt;PARTNER&lt;/span&gt; &lt;span class="caps"&gt;NODES&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;REPLICATION_HOST: “postgres” (name of app in deployment)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With this approach, the LoadBalancer effectively passes the data on port 5432 (even if it’s not &lt;span class="caps"&gt;SSL&lt;/span&gt;), and the cluster can form and start replication of data.&lt;/p&gt;
+&lt;p&gt;So next steps are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define &lt;span class="caps"&gt;DNS&lt;/span&gt; name pointing to all 3 &lt;span class="caps"&gt;IP&lt;/span&gt;’s that we can configure on apps&lt;/li&gt;
+&lt;li&gt;Rely on psql standby to work in read-only mode and providing service&lt;/li&gt;
+&lt;li&gt;Setup Quay to use that psql &lt;span class="caps"&gt;DNS&lt;/span&gt; name&lt;/li&gt;
+&lt;li&gt;Automate the setup, including Quay &lt;code&gt;ENV&lt;/code&gt; variable for storage ‘closer’ to each cluster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="https://www.postgresql.org/message-id/CAPPwrB_tsOw8MtVaA_DFyOFRY2ohNdvMnLoA_JRr3yB67Rggmg%40mail.gmail.com"&gt;Thread on psql-hackers&lt;/a&gt; and &lt;a href="https://www.postgresql.org/message-id/20181211145240.GL20222%40redhat.com"&gt;pinged by us&lt;/a&gt; &lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="tech"></category><category term="postgres"></category><category term="FOSS"></category><category term="SSL"></category><category term="replication"></category><category term="federation"></category><category term="Kubernetes"></category><category term="OpenShift"></category></entry></feed>

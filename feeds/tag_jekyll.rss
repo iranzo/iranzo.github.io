@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - Jekyll</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Tue, 24 Mar 2015 13:23:15 +0100</lastBuildDate><item><title>OctoPress for Jekyll blogging</title><link>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</link><description>&lt;p&gt;After testing for some days Jekyll and github.io for blog posting, I was missing some features of other &lt;span class="caps"&gt;CMS&lt;/span&gt;, so I started doing some search on how to automate many other topics while keeping simplicity on blog&amp;nbsp;posting.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://octopress.org"&gt;OctoPress&lt;/a&gt; Makes this extra step so you can still focus on your contents and of course have a nice template as starting point with integrations for some social plugins,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;Setup is well done if you follow the provided steps, without jumping anything, in my case, I moved my old pages (plain &lt;code&gt;jekyll + poole&lt;/code&gt;) to&amp;nbsp;OctoPress.&lt;/p&gt;
+&lt;p&gt;On Fedora and as my unprivileged user, I&amp;nbsp;did:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href="http://octopress.org/docs/setup/rvm/"&gt;&lt;code&gt;RVM&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Define in profile configuration to have &lt;code&gt;RVM&lt;/code&gt; use 1.9.3 ruby as required by&amp;nbsp;OctoPress&lt;/li&gt;
+&lt;li&gt;Install other required libraries for &lt;a href="http://octopress.org/docs/setup/"&gt;Setting up&amp;nbsp;OctoPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://octopress.org/docs/configuring/"&gt;Configure&amp;nbsp;OctoPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://octopress.org/docs/deploying/github/"&gt;Set OctoPress for&amp;nbsp;github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;And from there, the &lt;code&gt;generate&lt;/code&gt;, &lt;code&gt;preview&lt;/code&gt; and &lt;code&gt;deploy&lt;/code&gt; basics &lt;a href="http://octopress.org/docs/blogging/"&gt;for&amp;nbsp;blogging&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One of the interesting things it that it uses two branches on git, &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;source&lt;/code&gt;, where &lt;code&gt;master&lt;/code&gt; is the one that github publishes (your live environment) and &lt;code&gt;source&lt;/code&gt; is the actual code for your blog, templates, posts, etc that are later generated, previewed and deployed from above&amp;nbsp;steps.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ll be testing it for a while to see how it works, but so far, so&amp;nbsp;good.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Tue, 24 Mar 2015 13:23:15 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2015-03-24:/blog/2015/03/24/octopress-for-jekyll-blogging/</guid><category>tech</category><category>Jekyll</category><category>Markdown</category><category>OctoPress</category><category>FOSS</category></item><item><title>Jekyll and Markdown</title><link>https://iranzo.io/blog/2015/03/16/jekyll-and-markdown/</link><description>&lt;p&gt;For my work I&amp;#8217;ve been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the&amp;nbsp;formating.&lt;/p&gt;
+&lt;p&gt;On the other side I was willing to improve the ability to make it easier to post new entries to blog without having to wait too much time, and of course, be able to prepare them offline and then push them&amp;nbsp;live.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Using &lt;a href="http://www.spip.net"&gt;&lt;span class="caps"&gt;SPIP&lt;/span&gt;&lt;/a&gt; allowed me to focus on text without caring too much about formatting, the &lt;span class="caps"&gt;CMS&lt;/span&gt; is not hard to administer, maybe not as popular as
+  WordPress, Joomla lately, but definitely, good for the work it&amp;#8217;s intended to do, and not like traditional&amp;nbsp;webpages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Using &lt;a href="http://www.blogger.com"&gt;Blogger&lt;/a&gt;, formatting was also not a hard part, and being a good platform improved the availability of tools, but still required online access, and the
+  Firefox extensions for it, were still not
+  convincing me for daily&amp;nbsp;usage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yesterday, while I was reading some information about github, I got back to their &amp;#8216;hosting&amp;#8217; solution (github.io) and like the idea of pushing the code via git (I love the offline commit and later push of all changes), and started reading about Jekyll and&amp;nbsp;Poole.&lt;/p&gt;
+&lt;p&gt;Jekyll and Poole enhance the creation of webpage posts using Markdown with some automation for automatic generation of links, reusability of common elements, etc which creates a set of static pages, fast to serve, upload,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve also used Jekyll-Import to gather my old posts at blogger and I will still convert some of them to markdown and try to get back the auto-code coloring I had in place (using external
+JavaScript&amp;nbsp;library).&lt;/p&gt;
+&lt;p&gt;Well, let&amp;#8217;s see how this goes and will try to implement some template to website not to use the standard one&amp;nbsp;soon.&lt;/p&gt;
+&lt;p&gt;Post Datum: This was being written while offline at the airport on a trip to Helsinki&amp;nbsp;;-)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Mon, 16 Mar 2015 09:06:00 +0100</pubDate><guid isPermaLink="false">tag:iranzo.io,2015-03-16:/blog/2015/03/16/jekyll-and-markdown/</guid><category>tech</category><category>Jekyll</category><category>FOSS</category><category>Markdown</category><category>SPIP</category><category>Blogger</category></item></channel></rss>

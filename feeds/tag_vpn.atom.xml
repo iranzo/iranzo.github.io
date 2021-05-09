@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pablo Iranzo Gómez's blog - VPN</title><link href="https://iranzo.io/" rel="alternate"></link><link href="https://iranzo.io/feeds/tag_vpn.atom.xml" rel="self"></link><id>https://iranzo.io/</id><updated>2003-03-05T20:55:00+00:00</updated><subtitle>A bunch of unrelated data</subtitle><entry><title>VPNS - Multiple VPN’s Launcher</title><link href="https://iranzo.io/blog/2003/03/05/vpns-multiple-vpns-launcher/" rel="alternate"></link><published>2003-03-05T20:55:00+00:00</published><updated>2003-03-05T20:55:00+00:00</updated><author><name>Pablo Iranzo Gómez</name></author><id>tag:iranzo.io,2003-03-05:/blog/2003/03/05/vpns-multiple-vpns-launcher/</id><summary type="html">
+&lt;h2 id="general-purpose"&gt;General Purpose&lt;a class="headerlink" href="#general-purpose" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The idea on writing &lt;span class="caps"&gt;VPNS&lt;/span&gt; and the structure it follows was the problem that
+we had into easily configure many &lt;span class="caps"&gt;VPN&lt;/span&gt;’s for use with the wireless project
+interconnection (Valencia Wireless
+&lt;a href="http://www.valenciawireless.org/"&gt;&lt;code&gt;http://www.valenciawireless.org&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;When having no chance to join networks using just wireless links, we needed …&lt;/p&gt;</summary><content type="html">
+&lt;h2 id="general-purpose"&gt;General Purpose&lt;a class="headerlink" href="#general-purpose" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The idea on writing &lt;span class="caps"&gt;VPNS&lt;/span&gt; and the structure it follows was the problem that
+we had into easily configure many &lt;span class="caps"&gt;VPN&lt;/span&gt;’s for use with the wireless project
+interconnection (Valencia Wireless
+&lt;a href="http://www.valenciawireless.org/"&gt;&lt;code&gt;http://www.valenciawireless.org&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;When having no chance to join networks using just wireless links, we needed
+to provide some kind of transparent link from one WiFi node to another. To
+do so, we decided to use the vpnd daemon to establish links between our
+networks for allowing transparent traffic flow.&lt;/p&gt;
+&lt;p&gt;The vpnd it’s great because it’s very easy to configure and works fine, but has
+a little big problem… it doesn’t allow to use &lt;span class="caps"&gt;DNS&lt;/span&gt; names for establishing
+&lt;span class="caps"&gt;VPN&lt;/span&gt;’s, it just allows to use static &lt;span class="caps"&gt;IP&lt;/span&gt;’s. Probably that wouldn’t be a
+problem for big business, universities, etc but as wireless projects are
+common between particulars, and at least in Spain we usually have dynamic
+&lt;span class="caps"&gt;IP&lt;/span&gt;’s, it made our tunnels to be “alive” until either our provider or the
+remote provider decides to change the &lt;span class="caps"&gt;IP&lt;/span&gt;…&lt;/p&gt;
+&lt;p&gt;All of us were using Dynamic &lt;span class="caps"&gt;DNS&lt;/span&gt; Services from different providers (I use
+No-&lt;span class="caps"&gt;IP&lt;/span&gt; (&lt;a href="http://www.no-ip.org/"&gt;http://www.no-ip.org&lt;/a&gt;), so if you decide to
+sign it with them, please use the following link No-Ip
+&lt;a href="http://www.no-ip.com/referral/index.php/client/Pablo.Iranzo@uv.es"&gt;http://www.no-ip.com&lt;/a&gt;),
+other people at Valencia Wireless uses DynDNS
+&lt;a href="http://www.dyndns.org/"&gt;&lt;code&gt;http://www.dyndns.org&lt;/code&gt;&lt;/a&gt;, if in doubt, search for
+Dynamic &lt;span class="caps"&gt;DNS&lt;/span&gt; to get an idea on what you can use…&lt;/p&gt;
+&lt;p&gt;In brief… we had &lt;span class="caps"&gt;DNS&lt;/span&gt; names that get dynamically resolved to our current
+&lt;span class="caps"&gt;IP&lt;/span&gt;’s, but vpnd was unable to deal with those names… so I wrote &lt;span class="caps"&gt;VPNS&lt;/span&gt; :-D&lt;/p&gt;
+&lt;p&gt;(please, if you use it, send me an email to let me know how much people is
+using it… thanks)&lt;/p&gt;
+&lt;h2 id="requirements"&gt;Requirements&lt;a class="headerlink" href="#requirements" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;VPNS&lt;/span&gt;, it’s just a bunch of configuration files and three scripts that
+requires the presence of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Perl (for the scripts)&lt;/li&gt;
+&lt;li&gt;Bash or compatible (for the startup script)&lt;/li&gt;
+&lt;li&gt;vpnd (for the &lt;span class="caps"&gt;VPN&lt;/span&gt; establishing)&lt;/li&gt;
+&lt;li&gt;Ping (for resolving &lt;span class="caps"&gt;DNS&lt;/span&gt; names to &lt;span class="caps"&gt;IP&lt;/span&gt;’s)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="admonition important"&gt;
+&lt;p class="admonition-title"&gt;&lt;span class="caps"&gt;CAUTION&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As this is just a &lt;code&gt;gziped-tar&lt;/code&gt; file by the moment, you’ll have to check that the required software is installed before trying to use it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This script has been created for a Debian &lt;span class="caps"&gt;GNU&lt;/span&gt;/Linux distribution, but as far
+as I can remember it’s compatible with the schema used on Red Hat, SuSE,
+etc… but check before&lt;/p&gt;
+&lt;h2 id="the-way-it-works"&gt;The way it works…&lt;a class="headerlink" href="#the-way-it-works" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;As vpnd requires one key file (&lt;code&gt;vpnd.key&lt;/code&gt;), and a configuration file
+(&lt;code&gt;vpnd.conf&lt;/code&gt;) for each connection, the idea was to split different files for
+each node.&lt;/p&gt;
+&lt;p&gt;We’ll require then one key file and one configuration file for each node to
+be able to spawn a vpnd daemon with those data.&lt;/p&gt;
+&lt;p&gt;As each vpnd will require both static origin and target &lt;span class="caps"&gt;IP&lt;/span&gt;’s there would be
+some things that would be static in the configuration (other parameters) and
+others that would need to get rewritten (target, and start addresses).&lt;/p&gt;
+&lt;h2 id="configuration-files"&gt;Configuration files&lt;a class="headerlink" href="#configuration-files" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The configuration get’s deployed on two directories: &lt;code&gt;/etc/vpnd/&lt;/code&gt; for the
+local host configuration (your host) and &lt;code&gt;/etc/vpnd/hosts/*&lt;/code&gt; for the remote
+hosts configuration.&lt;/p&gt;
+&lt;p&gt;There are also some &lt;code&gt;rc?.d&lt;/code&gt; directories with symbolic links to &lt;span class="caps"&gt;VPNS&lt;/span&gt; to
+start/stop the daemon at different runlevels, it’s a good idea to copy them
+too, but as the main purpose of this script is to periodically test it, it
+should be included at &lt;code&gt;crontab&lt;/code&gt; (as well as &lt;code&gt;rc?.d&lt;/code&gt; to initial startup).&lt;/p&gt;
+&lt;h3 id="41-local-configuration"&gt;4.1 Local Configuration&lt;a class="headerlink" href="#41-local-configuration" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Those files specify the configuration for the local host that will be used by all the other hosts.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/vpnd/master.resolv&lt;/code&gt; : In this file you’ll need to put the Dynamic &lt;span class="caps"&gt;DNS&lt;/span&gt; name of your machine (in my case “lacreu.no-ip.org”), so the update script will get your &lt;span class="caps"&gt;IP&lt;/span&gt; from it to be able to establish tunnels both if your &lt;span class="caps"&gt;IP&lt;/span&gt; changes or just if remote &lt;span class="caps"&gt;IP&lt;/span&gt; changes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/vpnd/master.ip&lt;/code&gt; : This file is created automatically with the results of resolving your Dynamic &lt;span class="caps"&gt;DNS&lt;/span&gt; to an &lt;span class="caps"&gt;IP&lt;/span&gt; to allow comparison between your last &lt;span class="caps"&gt;IP&lt;/span&gt; and your current to check if you need to relaunch &lt;span class="caps"&gt;VPN&lt;/span&gt;’s (remember that the worst case is both local and remote &lt;span class="caps"&gt;IP&lt;/span&gt;’s getting changed).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/vpnd/master.restart&lt;/code&gt; : This file is created when local &lt;span class="caps"&gt;IP&lt;/span&gt; has changed, specifying a total vpnd restart for all &lt;span class="caps"&gt;VPN&lt;/span&gt;’s&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="42-host-configuration-etcvpndhostshost"&gt;4.2 Host configuration (&lt;code&gt;/etc/vpnd/hosts/$HOST&lt;/code&gt;)&lt;a class="headerlink" href="#42-host-configuration-etcvpndhostshost" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Each file in this subdirectory specifies a &lt;span class="caps"&gt;VPN&lt;/span&gt; to be launched and defines the name that the configuration files would have appended.&lt;/p&gt;
+&lt;p&gt;We’ll create a folder for each remote host with a descriptive name that would be use by the scripts.&lt;/p&gt;
+&lt;div class="admonition important"&gt;
+&lt;p class="admonition-title"&gt;&lt;span class="caps"&gt;CAUTION&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For creating the files you’ll have to use “echo “client” &amp;gt; mode” or similar (for port, &lt;code&gt;resolv&lt;/code&gt;, mode, etc), there have been some problems with files not created this way (and my perl knowledge doesn’t allow me to do anything better).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Into this subdirectory there would be the following config files:&lt;/p&gt;
+&lt;h4 id="421-static-files"&gt;4.2.1 Static files&lt;a class="headerlink" href="#421-static-files" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vpnd.key&lt;/code&gt; : Cipher key that would be used for the connection with the remote host. It gets created by vpnd or copied from remote host.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mode&lt;/code&gt; : Mode that we use to get connected to remote host (server or client)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;port&lt;/code&gt; : Port at which the connection gets established&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;resolv&lt;/code&gt; : Dynamic &lt;span class="caps"&gt;DNS&lt;/span&gt; resolver name for the target host (used for resolving it’s &lt;span class="caps"&gt;IP&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;master&lt;/code&gt; : Master configuration file for &lt;span class="caps"&gt;HOST&lt;/span&gt; (the config that it’s static)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="422-dynamic-files"&gt;4.2.2 Dynamic files&lt;a class="headerlink" href="#422-dynamic-files" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vpnd.conf&lt;/code&gt; : Configuration file for &lt;span class="caps"&gt;HOST&lt;/span&gt;, it gets created automatically when running /etc/vpnd/update.pl script&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;restart&lt;/code&gt; : This file gets created by the “compare.pl” script to indicate that &lt;span class="caps"&gt;VPNS&lt;/span&gt; should restart this host &lt;span class="caps"&gt;VPN&lt;/span&gt;. This file is created if the &lt;span class="caps"&gt;IP&lt;/span&gt; has changed since last launch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="423-scripts"&gt;4.2.3 Scripts&lt;a class="headerlink" href="#423-scripts" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/vpnd/update.pl&lt;/code&gt; : Script to merge configuration files for host, resolve &lt;span class="caps"&gt;IP&lt;/span&gt; and then output a vpnd.conf file for that host&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/vpnd/compare.pl&lt;/code&gt; : Script to compare &lt;span class="caps"&gt;IP&lt;/span&gt;’s between recorded one and current for preparing vpnd restart&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/etc/init.d/vpns&lt;/code&gt; : Script to start, stop, restart or restart-if-needed the &lt;span class="caps"&gt;VPNS&lt;/span&gt; based on hosts definitions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="recommendations"&gt;Recommendations&lt;a class="headerlink" href="#recommendations" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;As probably &lt;span class="caps"&gt;IP&lt;/span&gt;’s will change, you’ll need to put a &lt;code&gt;crontab&lt;/code&gt; sentence for
+checking of updated &lt;span class="caps"&gt;IP&lt;/span&gt;’s, to do so, put &lt;code&gt;/etc/init.d/vpns&lt;/code&gt; restart-if-needed
+in your &lt;code&gt;crontab&lt;/code&gt; for allowing the tunnels to be recreated at every change.&lt;/p&gt;
+&lt;p&gt;Sample &lt;code&gt;crontab&lt;/code&gt; line would be:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!bash&lt;/span&gt;
+&lt;span class="m"&gt;0&lt;/span&gt;-59/5 * * * * root /etc/init.d/vpns restart-if-needed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This way, every five minutes, the script would be run and will restart &lt;span class="caps"&gt;VPNS&lt;/span&gt; that needed to do so.&lt;/p&gt;
+&lt;p&gt;At every run, compare.pl will check new &lt;span class="caps"&gt;IP&lt;/span&gt; addresses, and will mark the service to be restarted, it will create master.ip and “host/ip” file.&lt;/p&gt;
+&lt;p&gt;update.pl will dump a vpnd.conf file containing the merge of “host/master” and the Dynamic &lt;span class="caps"&gt;DNS&lt;/span&gt; for both local host and remote host configured as “host/mode” says using the “host/port” port to establish connection and vpnd.key file in each “host/” folder.&lt;/p&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;a class="headerlink" href="#changelog" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="version-043"&gt;Version 0.43&lt;a class="headerlink" href="#version-043" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Added a check (&lt;code&gt;chop $mode&lt;/code&gt;) with the mode definition to fix problems in systems that always configured mode as server (default check, because the if sentence at update.pl searched for “client” and sometimes it was not well compared)&lt;/p&gt;
+&lt;p&gt;Thanks to Hawkmoon&lt;/p&gt;
+&lt;h3 id="version-042"&gt;Version 0.42&lt;a class="headerlink" href="#version-042" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Change in the &lt;code&gt;compare.pl&lt;/code&gt; script for the case in which the changed ip was the
+local one to restart all &lt;span class="caps"&gt;VPN&lt;/span&gt; daemons.&lt;/p&gt;
+&lt;p&gt;Before this version, when local &lt;span class="caps"&gt;IP&lt;/span&gt; changed, only the first-checked &lt;span class="caps"&gt;VPN&lt;/span&gt; will
+be restarted as there was no file specifying a total restart.&lt;/p&gt;
+&lt;h3 id="version-041"&gt;Version 0.41&lt;a class="headerlink" href="#version-041" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Little changes in configuration files an scripts to make it easier to set
+up, please, check your configuration files to use new behaviour&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pidfile&lt;/code&gt; now gets automatically defined to match &lt;span class="caps"&gt;VPNS&lt;/span&gt; kill procedure, so it shouldn’t be in “master” file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="version-04"&gt;Version 0.4&lt;a class="headerlink" href="#version-04" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Now, added localhost &lt;span class="caps"&gt;IP&lt;/span&gt; resolution to check if just origin or end (or both)
+changed their &lt;span class="caps"&gt;IP&lt;/span&gt;, so if either one of them changes, the &lt;span class="caps"&gt;VPN&lt;/span&gt; get’s marked as restart-needed.&lt;/p&gt;
+&lt;h3 id="version-03"&gt;Version 0.3&lt;a class="headerlink" href="#version-03" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Each host is now restarted only if needed. (added &lt;span class="caps"&gt;VPNS&lt;/span&gt; restart-if-needed
+command) for not having to stop/relaunch every &lt;span class="caps"&gt;VPN&lt;/span&gt; at every time.&lt;/p&gt;
+&lt;p&gt;Added compare.pl script to compare &lt;span class="caps"&gt;IP&lt;/span&gt;’s and to let inform the &lt;span class="caps"&gt;VPNS&lt;/span&gt; that needs to restart it.&lt;/p&gt;
+&lt;h3 id="version-02"&gt;Version 0.2&lt;a class="headerlink" href="#version-02" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Configuration files moved from &lt;code&gt;/etc/vpnd/&lt;/code&gt; to &lt;code&gt;/etc/vpnd/hosts/*&lt;/code&gt;, so each
+host has it’s configuration files into one subdirectory, allowing to tidy
+the things a bit. Old files were named &lt;code&gt;vpnd-HOST.conf&lt;/code&gt;, &lt;code&gt;vpnd-HOST.key&lt;/code&gt;,
+&lt;code&gt;HOST.resolv&lt;/code&gt;,etc. They got renamed and moved to the actual location.&lt;/p&gt;
+&lt;h3 id="version-01"&gt;Version 0.1&lt;a class="headerlink" href="#version-01" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;First version: at every restart of &lt;span class="caps"&gt;VPNS&lt;/span&gt; new configuration files were created
+for each host, and then the vpnd were restarted with the configuration files&lt;/p&gt;
+&lt;h2 id="sample-configuration-files"&gt;Sample configuration files&lt;a class="headerlink" href="#sample-configuration-files" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Here you will see a sample files used at my host, the other files not dumped
+here are created automatically by the scripts or you must create them
+manually (for example the vpnd.key).&lt;/p&gt;
+&lt;h3 id="71-local"&gt;7.1 Local&lt;a class="headerlink" href="#71-local" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="711-masterresolv"&gt;7.1.1 &lt;code&gt;master.resolv&lt;/code&gt;&lt;a class="headerlink" href="#711-masterresolv" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;merak.no-ip.org&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="72-remote-host"&gt;7.2 Remote Host&lt;a class="headerlink" href="#72-remote-host" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="721-mode"&gt;7.2.1 mode&lt;a class="headerlink" href="#721-mode" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;server&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id="722-port"&gt;7.2.2 port&lt;a class="headerlink" href="#722-port" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;2010&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id="723-resolv"&gt;7.2.3 &lt;code&gt;resolv&lt;/code&gt;&lt;a class="headerlink" href="#723-resolv" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;oceano.dyndns.org&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id="724-master"&gt;7.2.4 master&lt;a class="headerlink" href="#724-master" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;local&lt;/td&gt;
+&lt;td&gt;172.16.97.78&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;remote&lt;/td&gt;
+&lt;td&gt;172.16.97.77&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;autoroute keepalive&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;noanswer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;keyfile&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;vpnd.key`&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;randomdev&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/dev/urandom mtu 1600&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="73-sample-run-for-oceano-resulting-vpndconf"&gt;7.3 Sample run for &lt;code&gt;Oceano&lt;/code&gt; (resulting &lt;code&gt;vpnd.conf&lt;/code&gt;)&lt;a class="headerlink" href="#73-sample-run-for-oceano-resulting-vpndconf" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;local&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;172.16.97.78&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;remote&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;172.16.97.77&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;autoroute keepalive&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;noanswer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;keyfile&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;vpnd.key&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;pidfile&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/var/run/vpnd:hawkmoon.pid&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;randomdev&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/dev/urandom&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;mtu&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;client&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;81.202.20.245 2010&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;server&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;81.202.117.88 2010&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;mode&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;server&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="faq"&gt;&lt;span class="caps"&gt;FAQ&lt;/span&gt;&lt;a class="headerlink" href="#faq" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="81-problems"&gt;8.1 Problems&lt;a class="headerlink" href="#81-problems" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="811-gentoo-thanks-to-hawkmoon"&gt;8.1.1 Gentoo (Thanks to Hawkmoon)&lt;a class="headerlink" href="#811-gentoo-thanks-to-hawkmoon" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;It seems that the script as provided within this package doesn’t work fine
+with Gentoo, please, specify the full path to the vpnd.key file in each
+“master” configuration file, and be sure to edit “&lt;span class="caps"&gt;VPNS&lt;/span&gt;” to point to your
+“vpnd” executable.&lt;/p&gt;
+&lt;h2 id="credits"&gt;Credits&lt;a class="headerlink" href="#credits" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="copyright"&gt;Copyright&lt;a class="headerlink" href="#copyright" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;(c) 2003 Pablo Iranzo Gómez (Pablo.Iranzo@uv.es) &lt;a href="https://Alufis35.uv.es/~iranzo/"&gt;https://Alufis35.uv.es/~iranzo/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You’re given permission to copy, distribute and/or modify this document
+under the terms of the &lt;span class="caps"&gt;GNU&lt;/span&gt; General Public License Version 2 or higher
+published by the Free Software Foundation&lt;/p&gt;
+&lt;p&gt;Please, if you use this program, email me to know where it gets to and if it’s used.&lt;/p&gt;
+&lt;h3 id="about"&gt;About&lt;a class="headerlink" href="#about" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This document has been created using the LyX Editor and compiled with under
+Debian &lt;span class="caps"&gt;GNU&lt;/span&gt;/Linux, and then converted to the format you’re viewing.&lt;/p&gt;
+&lt;p&gt;File translated from TeX by &lt;a href="http://hutchinson.belmont.ma.us/tth/"&gt;T~T~H&lt;/a&gt;, version 3.67. On 9 Mar 2007, 21:50.&lt;/p&gt;</content><category term="tech"></category><category term="Linux"></category><category term="network"></category><category term="VPN"></category><category term="FOSS"></category></entry></feed>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Pablo Iranzo Gómez's blog - sosreport</title><link>https://iranzo.io/</link><description>A bunch of unrelated data</description><lastBuildDate>Thu, 17 Aug 2017 23:54:00 +0200</lastBuildDate><item><title>Jenkins for running CI tests</title><link>https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/</link><description>
+&lt;h2 id="why"&gt;Why?&lt;a class="headerlink" href="#why" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;While working on &lt;a href="https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems/"&gt;Citellus&lt;/a&gt; and &lt;a href="https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts/"&gt;Magui&lt;/a&gt; it soon became evident that Unit testing for validating the changes was a requirement.&lt;/p&gt;
+&lt;p&gt;Initially, using a &lt;code&gt;.travis.yml&lt;/code&gt; file contained in the repo and the free service provided by &lt;a href="https://travis-ci.org"&gt;https://travis-ci.org&lt;/a&gt; we soon got &lt;a href="https://github.com"&gt;https://github.com&lt;/a&gt; repo providing information about if the builds succeeded or not.&lt;/p&gt;
+&lt;p&gt;When it was decided to move to &lt;a href="https://gerrithub.io"&gt;https://gerrithub.io&lt;/a&gt; to work in a more similar way to what is being done in upstream, we improved on the code commenting (peer review), but we lost the ability to run the tests in an automated way until the change was merged into github.&lt;/p&gt;
+&lt;p&gt;After some research, it became more or less evident that another tool, like Jenkins was required to automate the &lt;span class="caps"&gt;UT&lt;/span&gt; process and report to individual reviews about the status.&lt;/p&gt;
+&lt;h2 id="setup"&gt;Setup&lt;a class="headerlink" href="#setup" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Some initial steps are required for integration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create ssh keypair for Jenkins to use&lt;/li&gt;
+&lt;li&gt;Creating github account to be used by Jenkins and configuring above ssh keypair&lt;/li&gt;
+&lt;li&gt;Login into gerrithub with that account&lt;/li&gt;
+&lt;li&gt;Setup Jenkins and build jobs&lt;/li&gt;
+&lt;li&gt;Allow on the parent project, access to Jenkins github account permission to +1/-1 on Verify&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In order to setup the Jenkins environment a new &lt;span class="caps"&gt;VM&lt;/span&gt; was spawned in one of our &lt;span class="caps"&gt;RHV&lt;/span&gt; servers.&lt;/p&gt;
+&lt;p&gt;This &lt;span class="caps"&gt;VM&lt;/span&gt; was installed with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;20 Gigabytes of &lt;span class="caps"&gt;HDD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;2 Gigabytes of &lt;span class="caps"&gt;RAM&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;2 &lt;span class="caps"&gt;VCPU&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Red Hat Enterprise Linux 7 ‘base install’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="tuning-the-os"&gt;Tuning the &lt;span class="caps"&gt;OS&lt;/span&gt;&lt;a class="headerlink" href="#tuning-the-os" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span class="caps"&gt;RHEL7&lt;/span&gt; provides a stable environment for run on, but at the same time we were lacking some of the latest tools we’re using for the builds.&lt;/p&gt;
+&lt;p&gt;As a dirty hack, it was altered in what is not a recommended way, but helped to quickly check as proof of concept if it would work or not.&lt;/p&gt;
+&lt;p&gt;Once &lt;span class="caps"&gt;OS&lt;/span&gt; was installed, some commands (&lt;strong&gt;do not run in production&lt;/strong&gt;) were used:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pip &lt;span class="c1"&gt;# to upgrade pip&lt;/span&gt;
+pip install -U tox &lt;span class="c1"&gt;# To upgrade to 2.x version&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Install python 3.5 on the system&lt;/span&gt;
+yum -y install openssl-devel gcc
+wget https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz
+tar xvzf Python-3.5-0.tgz
+&lt;span class="nb"&gt;cd&lt;/span&gt; Python*
+./configure
+
+&lt;span class="c1"&gt;# This will install in alternate  folder in system not to replace user-wide python version&lt;/span&gt;
+make altinstall
+
+&lt;span class="c1"&gt;# this is required to later allow tox to find the command as 'jenkins' user&lt;/span&gt;
+ln -s /usr/local/bin/python3.5 /usr/bin/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;h2 id="installing-jenkins"&gt;Installing Jenkins&lt;a class="headerlink" href="#installing-jenkins" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For the Jenkins installation it’s easier, there’s a ‘stable’ repo for &lt;span class="caps"&gt;RHEL&lt;/span&gt; and the procedure is &lt;a href="https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions"&gt;documented&lt;/a&gt;:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;
+&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+yum install jenkins java
+chkconfig jenkins on
+service jenkins start
+firewall-cmd --zone&lt;span class="o"&gt;=&lt;/span&gt;public --add-port&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8080&lt;/span&gt;/tcp --permanent
+firewall-cmd --zone&lt;span class="o"&gt;=&lt;/span&gt;public --add-service&lt;span class="o"&gt;=&lt;/span&gt;http --permanent
+firewall-cmd --reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;This will install and start Jenkins and enable the firewall to access it.&lt;/p&gt;
+&lt;p&gt;If you can get to the url of your server at the port 8080, you’ll be presented an initial procedure for installing Jenkins.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Jenkins dashboard" src="https://iranzo.io/imagen/jenkins/dashboard.png"/&gt;&lt;/p&gt;
+&lt;p&gt;During it, you’ll be asked for a password on a file on disk and you’ll be prompted to create an user we’ll be using from now on to configure.&lt;/p&gt;
+&lt;p&gt;Also, we’ll be offered to deploy the most common set of plugins, choose that option, and later we’ll add the &lt;code&gt;gerrit&lt;/code&gt; plugin and &lt;code&gt;Python&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="configure-jenkins"&gt;Configure Jenkins&lt;a class="headerlink" href="#configure-jenkins" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Once we can login into gerrit, we need to enter the administration area, and install new plugins and install &lt;a href="https://wiki.jenkins.io/display/JENKINS/Gerrit+Trigger"&gt;Gerrit Trigger&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Manage Jenkins" src="https://iranzo.io/imagen/jenkins/manage.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Above link details how to do most of the setup, in this case, for gerrithub, we required:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hostname: &lt;code&gt;our hostname&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Frontend &lt;span class="caps"&gt;URL&lt;/span&gt;: &lt;code&gt;https://review.gerrithub.io&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Port: &lt;code&gt;29418&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Username: &lt;code&gt;our-github-jenkins-user&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; private key: &lt;code&gt;path_to_private_sshkey&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Gerrit trigger configuration" src="https://iranzo.io/imagen/jenkins/gerrit-trigger-config.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Once done, click on &lt;code&gt;Test Connection&lt;/code&gt; and validate if it worked.&lt;/p&gt;
+&lt;p&gt;At the time of this writing, version reported by plugin was &lt;code&gt;2.13.6-3044-g7e9c06d&lt;/code&gt; when connected to gerrithub.io.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Gerrit servers" src="https://iranzo.io/imagen/jenkins/gerritconfig.png"/&gt;&lt;/p&gt;
+&lt;h3 id="creating-a-job"&gt;Creating a Job&lt;a class="headerlink" href="#creating-a-job" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Now, we need to create a Job (first option in Jenkins list of jobs).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name: &lt;code&gt;Citellus&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Discard older executions:&lt;/li&gt;
+&lt;li&gt;Max number of executions to keep: &lt;code&gt;10&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Source code Origin: &lt;code&gt;Git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;URL&lt;/span&gt;: &lt;code&gt;ssh://&amp;lt;username&amp;gt;@review.gerrithub.io:29418/citellusorg/citellus&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Credentials: &lt;code&gt;jenkins&lt;/code&gt; (Created based on the ssh keypair defined above)&lt;/li&gt;
+&lt;li&gt;Branches to build: &lt;code&gt;$GERRIT_REFNAME.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Advanced&lt;ul&gt;
+&lt;li&gt;Refspec: &lt;code&gt;$GERRIT_REFSPEC&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add additional behaviours&lt;ul&gt;
+&lt;li&gt;Strategy for choosing what to build:&lt;/li&gt;
+&lt;li&gt;Choosing strategy &lt;code&gt;Gerrit Trigger&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Triggers for launch:&lt;/li&gt;
+&lt;li&gt;Change Merged&lt;/li&gt;
+&lt;li&gt;Commend added with regexp: &lt;code&gt;recheck&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Patchset created&lt;/li&gt;
+&lt;li&gt;Ref Updated&lt;/li&gt;
+&lt;li&gt;Gerrit Project:&lt;ul&gt;
+&lt;li&gt;Type: &lt;code&gt;plain&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Pattern: &lt;code&gt;citellusorg/citellus&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Branches:&lt;ul&gt;
+&lt;li&gt;Type: &lt;code&gt;Path&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Pattern: &lt;code&gt;**&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Execute:&lt;/li&gt;
+&lt;li&gt;Python script:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
+&lt;span class="normal"&gt;2&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;
+&lt;span class="normal"&gt;4&lt;/span&gt;
+&lt;span class="normal"&gt;5&lt;/span&gt;
+&lt;span class="normal"&gt;6&lt;/span&gt;
+&lt;span class="normal"&gt;7&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tox&lt;/span&gt;
+
+&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getenv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"WORKSPACE"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="c1"&gt;# environment is selected by ``TOXENV`` env variable&lt;/span&gt;
+&lt;span class="n"&gt;tox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cmdline&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;&lt;img alt="Jenkins Job configuration" src="https://iranzo.io/imagen/jenkins/jobconfig.png"/&gt;&lt;/p&gt;
+&lt;p&gt;From this point, any new push (review) made against Gerrit will trigger a Jenkins build (in this case, running &lt;code&gt;tox&lt;/code&gt;). Additionally, a manual trigger of the job can be executed to validate the behavior.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Manual trigger" src="https://iranzo.io/imagen/jenkins/manualtrigger.png"/&gt;&lt;/p&gt;
+&lt;h3 id="checking-execution"&gt;Checking execution&lt;a class="headerlink" href="#checking-execution" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In our project, &lt;code&gt;tox&lt;/code&gt; checks some &lt;span class="caps"&gt;UT&lt;/span&gt;’s on &lt;code&gt;python 2.7&lt;/code&gt;, and &lt;code&gt;python 3.5&lt;/code&gt;, as well as python’s &lt;code&gt;Flake8&lt;/code&gt; compliance.&lt;/p&gt;
+&lt;p&gt;Now, Jenkins will build, and post messages on the review, stating that the build has started and the results of it, setting also the ‘Verified’ flag.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Gerrithub commens by Jenkins" src="https://iranzo.io/imagen/jenkins/gitreview.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Enjoy having automated validation of new reviews before accepting them into your code!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Thu, 17 Aug 2017 23:54:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2017-08-17:/blog/2017/08/17/jenkins-for-running-ci-tests/</guid><category>tech</category><category>python</category><category>OpenStack</category><category>sysmgmt</category><category>bash</category><category>sosreport</category><category>citellus</category><category>Jenkins</category><category>unit testing</category><category>Gerrit</category><category>magui</category><category>foss</category></item><item><title>Magui for analysis of issues across several hosts.</title><link>https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts/</link><description>&lt;h2 id="background"&gt;Background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems/"&gt;Citellus&lt;/a&gt; allows to check a sosreport against known problems identified on the provided&amp;nbsp;tests.&lt;/p&gt;
+&lt;p&gt;This approach is easy to implement and easy to test but has limitations when a problem can span across several hosts and only the problem reveals itself when a general analysis is&amp;nbsp;performed.&lt;/p&gt;
+&lt;p&gt;Magui tries to solve that by running the analysis functions inside citellus across a set of sosreports, unifying the data obtained per citellus&amp;nbsp;plugin.&lt;/p&gt;
+&lt;p&gt;At the moment, Magui just does the grouping of the data and visualization, for example, give it a try with the &lt;code&gt;seqno&lt;/code&gt; plugin of citellus to report the sequence number in
+Galera&amp;nbsp;database:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;user@host folder&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;magui&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;seqno&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filtering&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;seqno&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;plugins&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/home/remote/piranzo/citellus/citellus/plugins/openstack/mysql/seqno.sh&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ctrl0.localdomain&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;err&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;08a94e67-bae0-11e6-8239-9a6188749d23:36117633\n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                                                                                   &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;out&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                                                                                   &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;rc&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                                                             &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ctrl1.localdomain&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;err&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;08a94e67-bae0-11e6-8239-9a6188749d23:36117633\n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                                                                                   &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;out&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                                                                                   &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;rc&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                                                             &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ctrl2.localdomain&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;err&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;08a94e67-bae0-11e6-8239-9a6188749d23:36117633\n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                                                                                   &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;out&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                                                                                   &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;rc&amp;#39;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="err"&gt;}}}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Here, we can see that the sequence number on the logs is the same for the&amp;nbsp;hosts.&lt;/p&gt;
+&lt;p&gt;The goal, once this has been discussed and determined, is to write plugins that get the raw data from citellus and applies logic on top by parsing the raw data obtained by the increasing number of citellus plugins and is able to detect issues like, for&amp;nbsp;example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Galera &lt;code&gt;seqno&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;cluster&amp;nbsp;status&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;NTP&lt;/span&gt; synchronization across&amp;nbsp;nodes&lt;/li&gt;
+&lt;li&gt;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hope it&amp;#8217;s helpful for you!&amp;nbsp;Pablo&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;PD&lt;/span&gt;: We&amp;#8217;ve proposed this to be a talk in upcoming &lt;span class="caps"&gt;OSP&lt;/span&gt; Summit 2017 in Sydney, so if you want to see us there, don&amp;#8217;t forget to vote on &lt;a href="https://www.openstack.org/summit/sydney-2017/vote-for-speakers#/19095"&gt;https://www.openstack.org/summit/sydney-2017/vote-for-speakers#/19095&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Mon, 31 Jul 2017 12:45:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2017-07-31:/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts/</guid><category>tech</category><category>Python</category><category>OpenStack</category><category>sysmgmt</category><category>bash</category><category>sosreport</category><category>Citellus</category><category>Magui</category><category>FOSS</category></item><item><title>Citellus: framework for detecting known issues in systems.</title><link>https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems/</link><description>
+&lt;h2 id="background"&gt;Background&lt;a class="headerlink" href="#background" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Since I became Technical Account Manager for Cloud and later as Software Maintenance Engineer for OpenStack, I became officially part of Red Hat Support.&lt;/p&gt;
+&lt;p&gt;We do usually diagnose issues based on data from the affected systems, sometimes from one system, and most of the times, from several at once.&lt;/p&gt;
+&lt;p&gt;It might be controllers nodes for OpenStack, Computes running instances, IdM, etc&lt;/p&gt;
+&lt;p&gt;In order to make it easier to grab the required information, we rely on &lt;a href="https://github.com/sosreport/sos"&gt;sosreport&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sosreport has a set of plugins for grabbing required information from system, ranging from networking configuration, installed packages, running services, processes and even for some components, it can also check &lt;span class="caps"&gt;API&lt;/span&gt;, database queries, etc.&lt;/p&gt;
+&lt;p&gt;But that’s all, it does data gathering, packaging in a tarball but nothing else.&lt;/p&gt;
+&lt;p&gt;In OpenStack we’ve already identified common issues, so we create kbases for them, ranging from covering some documentation gaps, to specific use cases or configuration options.&lt;/p&gt;
+&lt;p&gt;Many times, a missed configuration (documented) is causing headaches and can be checked with a simple checks, like &lt;span class="caps"&gt;TTL&lt;/span&gt; in &lt;code&gt;ceilometer&lt;/code&gt; or &lt;code&gt;stonith&lt;/code&gt; configuration on pacemaker.&lt;/p&gt;
+&lt;p&gt;Here is where Citellus comes to play.&lt;/p&gt;
+&lt;h2 id="citellus"&gt;Citellus&lt;a class="headerlink" href="#citellus" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The Citellus project &lt;a href="https://github.com/citellusorg/citellus/"&gt;https://github.com/citellusorg/citellus/&lt;/a&gt; created by my colleague Robin, aims on creating a set of tests that can be executed against a live system or an uncompressed sosreport tarball (it depends on the test if it applies to one or the other).&lt;/p&gt;
+&lt;p&gt;The philosophy behind is very easy:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There’s a wrapper &lt;code&gt;citellus.py&lt;/code&gt; which allows to select plugins to use, or folder containing plugins, verbosity, etc and a sosreport folder to act against.&lt;/li&gt;
+&lt;li&gt;The wrapper does check the plugins available (can be anything executable from Linux, so bash, Python, etc are there to be used)&lt;/li&gt;
+&lt;li&gt;Then it setups some environment variables like the path to find the data and proceeds to execute the plugins against, recording the output of them.&lt;/li&gt;
+&lt;li&gt;The plugins, on their side, determine if:&lt;/li&gt;
+&lt;li&gt;Plugin should be run or skipped if it’s a live system, a sosreport&lt;/li&gt;
+&lt;li&gt;Plugin should run because of required file or package missing&lt;/li&gt;
+&lt;li&gt;Provide return code of:&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;\$RC_OKAY&lt;/strong&gt; for &lt;strong&gt;success&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;\$RC_FAILED&lt;/strong&gt; for &lt;strong&gt;failure&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;\$RC_SKIPPED&lt;/strong&gt; for &lt;strong&gt;skip&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;anything else (Undetermined error)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Provide &lt;code&gt;stderr&lt;/code&gt; with relevant messages:&lt;ul&gt;
+&lt;li&gt;Reason to be skipped&lt;/li&gt;
+&lt;li&gt;Reason for failure&lt;/li&gt;
+&lt;li&gt;etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The wrapper then sorts the output, and prints it based on settings (grouping skipped and ok by default) and detailing failures.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can check the provided plugins on the Github repository (and hopefully also collaborate sending yours).&lt;/p&gt;
+&lt;p&gt;Our target is to keep plugins easy to write, so we can extend the plugin set as much as possible, highlighting were focus should be put at first and once typical issues are ruled out, check on the deeper analysis.&lt;/p&gt;
+&lt;p&gt;Even if we’ve started with OpenStack plugins (that’s what we do for a living), the software is open to check against whatever is there, and we’ve reached to other colleagues in different speciality areas to provide more feedback or contributions to make it even more useful.&lt;/p&gt;
+&lt;p&gt;As Citellus works with sosreports it is easy to have it installed locally and test new tests.&lt;/p&gt;
+&lt;h2 id="writing-a-new-test"&gt;Writing a new test&lt;a class="headerlink" href="#writing-a-new-test" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Leading by the example is probably easier, so let’s illustrate how to create a basic plugin for checking if a system is a &lt;span class="caps"&gt;RHV&lt;/span&gt; hosted engine:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$CITELLUS_LIVE&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"0"&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  &lt;span class="c1"&gt;## Checks if we're running live or not&lt;/span&gt;
+&lt;span class="k"&gt;then&lt;/span&gt;
+        grep -q ovirt-hosted-engine-ha &lt;span class="nv"&gt;$CITELLUS_ROOT&lt;/span&gt;/installed-rpms &lt;span class="c1"&gt;## checks package&lt;/span&gt;
+        &lt;span class="nv"&gt;returncode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;  &lt;span class="c1"&gt;#stores return code&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;"x&lt;/span&gt;&lt;span class="nv"&gt;$returncode&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;"x0"&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="nv"&gt;$RC_OKAY&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"ovirt-hosted-engine is not installed "&lt;/span&gt; &amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="c1"&gt;#Outputs info&lt;/span&gt;
+            &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="nv"&gt;$RC_FAILED&lt;/span&gt; e &lt;span class="c1"&gt;#returns code to wrapper&lt;/span&gt;
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"Not running on Live system"&lt;/span&gt; &amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;
+        &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="nv"&gt;$RC_SKIPPED&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Above example is a bit &lt;code&gt;hacky&lt;/code&gt;, as we count on wrapper not to output information if return code is &lt;code&gt;$RC_OKAY&lt;/code&gt;, so it should have another conditional to write output or not.&lt;/p&gt;
+&lt;h2 id="how-to-debug"&gt;How to debug?&lt;a class="headerlink" href="#how-to-debug" title="Permanent link"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Easiest way to do trial-error would be to create a new folder for your plugins to test and use something like this:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
+&lt;span class="normal"&gt; 2&lt;/span&gt;
+&lt;span class="normal"&gt; 3&lt;/span&gt;
+&lt;span class="normal"&gt; 4&lt;/span&gt;
+&lt;span class="normal"&gt; 5&lt;/span&gt;
+&lt;span class="normal"&gt; 6&lt;/span&gt;
+&lt;span class="normal"&gt; 7&lt;/span&gt;
+&lt;span class="normal"&gt; 8&lt;/span&gt;
+&lt;span class="normal"&gt; 9&lt;/span&gt;
+&lt;span class="normal"&gt;10&lt;/span&gt;
+&lt;span class="normal"&gt;11&lt;/span&gt;
+&lt;span class="normal"&gt;12&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;
+&lt;span class="normal"&gt;18&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;user@host mytests&lt;span class="o"&gt;]&lt;/span&gt;$ ~/citellus/citellus.py /cases/01884438/sosreport-20170724-175510/ycrta02.rd1.rf1 ~/mytests/  &lt;span class="o"&gt;[&lt;/span&gt;-d debug&lt;span class="o"&gt;]&lt;/span&gt;
+
+
+DEBUG:__main__:Additional parameters: &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'/cases/sosreport-20170724-175510/hostname'&lt;/span&gt;, &lt;span class="s1"&gt;'/home/remote/piranzo/mytests/'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+DEBUG:__main__:Found plugins: &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'/home/remote/piranzo/mytests/ovirt-engine.sh'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+_________ .__  __         .__  .__
+&lt;span class="se"&gt;\_&lt;/span&gt;   ___ &lt;span class="se"&gt;\|&lt;/span&gt;__&lt;span class="p"&gt;|&lt;/span&gt;/  &lt;span class="p"&gt;|&lt;/span&gt;_  ____ &lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt;  __ __  ______
+/    &lt;span class="se"&gt;\ &lt;/span&gt; &lt;span class="se"&gt;\/&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="se"&gt;\ &lt;/span&gt;  __&lt;span class="se"&gt;\/&lt;/span&gt; __ &lt;span class="se"&gt;\|&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="se"&gt;\/&lt;/span&gt;  ___/
+&lt;span class="se"&gt;\ &lt;/span&gt;    &lt;span class="se"&gt;\_&lt;/span&gt;__&lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="o"&gt;||&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\ &lt;/span&gt; ___/&lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt;_&lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt;_&lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="p"&gt;|&lt;/span&gt;  /&lt;span class="se"&gt;\_&lt;/span&gt;__ &lt;span class="se"&gt;\&lt;/span&gt;
+ &lt;span class="se"&gt;\_&lt;/span&gt;_____  /__&lt;span class="o"&gt;||&lt;/span&gt;__&lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="se"&gt;\_&lt;/span&gt;__  &amp;gt;____/____/____//____  &amp;gt;
+        &lt;span class="se"&gt;\/&lt;/span&gt;              &lt;span class="se"&gt;\/&lt;/span&gt;                     &lt;span class="se"&gt;\/&lt;/span&gt;
+found &lt;span class="c1"&gt;#1 tests at /home/remote/piranzo/mytests/&lt;/span&gt;
+mode: fs snapshot /cases/sosreport-20170724-175510/hostname
+DEBUG:__main__:Running plugin: /home/remote/piranzo/mytests/ovirt-engine.sh
+&lt;span class="c1"&gt;# /home/remote/piranzo/mytests/ovirt-engine.sh: failed&lt;/span&gt;
+    &lt;span class="s2"&gt;"ovirt-hosted-engine is not installed "&lt;/span&gt;
+
+DEBUG:__main__:Plugin: /home/remote/piranzo/mytests/ovirt-engine.sh, output: &lt;span class="o"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'text'&lt;/span&gt;: u&lt;span class="s1"&gt;'\x1b[31mfailed\x1b[0m'&lt;/span&gt;, &lt;span class="s1"&gt;'rc'&lt;/span&gt;: &lt;span class="m"&gt;1&lt;/span&gt;, &lt;span class="s1"&gt;'err'&lt;/span&gt;: &lt;span class="s1"&gt;'\xe2\x80\x9covirt-hosted-engine is not installed \xe2\x80\x9c\n'&lt;/span&gt;, &lt;span class="s1"&gt;'out'&lt;/span&gt;: &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;That debug information comes from the python wrapper, if you need more detail inside your test, you can try &lt;code&gt;set -x&lt;/code&gt; to have bash showing more information about progress.&lt;/p&gt;
+&lt;p&gt;Keep always in mind that all functionality is based on return codes and the &lt;code&gt;stderr&lt;/code&gt; message to keep it simple.&lt;/p&gt;
+&lt;p&gt;Hope it’s helpful for you! Pablo&lt;/p&gt;
+&lt;p&gt;Post Datum: We’ve proposed this to be a talk in upcoming &lt;span class="caps"&gt;OSP&lt;/span&gt; Summit 2017 in Sydney, so if you want to see us there, don’t forget to vote on &lt;a href="https://www.openstack.org/summit/sydney-2017/vote-for-speakers#/19095"&gt;https://www.openstack.org/summit/sydney-2017/vote-for-speakers#/19095&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Iranzo Gómez</dc:creator><pubDate>Wed, 26 Jul 2017 22:26:00 +0200</pubDate><guid isPermaLink="false">tag:iranzo.io,2017-07-26:/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems/</guid><category>tech</category><category>Python</category><category>OpenStack</category><category>sysmgmt</category><category>bash</category><category>sosreport</category><category>Citellus</category><category>FOSS</category></item></channel></rss>
