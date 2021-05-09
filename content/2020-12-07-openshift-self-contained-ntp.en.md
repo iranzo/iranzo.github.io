@@ -5,7 +5,7 @@ tags: dit, foss, OpenShift, NTP, chrony, Kubernetes
 layout: post
 date: 2020-12-07 14:10:34 +0200
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 ---

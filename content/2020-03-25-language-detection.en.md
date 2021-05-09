@@ -5,7 +5,7 @@ tags: English, language, python, foss, telegram
 layout: post
 date: 2020-03-25 20:00:24 +0100
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 ---

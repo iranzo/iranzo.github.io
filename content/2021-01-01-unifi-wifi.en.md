@@ -5,7 +5,7 @@ tags: UniFi, Linux, Ubiquiti, ASUS, AC-LR, NanoHD, controller, USG, US-8, AX92U
 layout: post
 date: 2021-01-01 00:00:00 +0200
 comments: true
-category: blog
+category: tech
 description:
 lang: en
 ---
