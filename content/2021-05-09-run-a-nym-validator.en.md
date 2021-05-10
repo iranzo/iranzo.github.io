@@ -66,9 +66,9 @@ firewall-cmd --add-port=${port} --permanent
 done
 ```
 
-Once it's finished, you're ready to run the mixnode
+Once it's finished, you're ready to run the validator as instructed in the official guide.
 
-The compiled files will be now inside the `./target/release/` folder, so you're ready to continue with the official guide at <https://nymtech.net/docs/run-nym-nodes/mixnodes/> , just remember to run `cd target/release` before, so that it will find the commands as described in the official guide.
+## Claiming rewards
 
 Once the remaining has been followed, and the validator has been running for a while, you can check the obtained rewards:
 
