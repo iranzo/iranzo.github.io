@@ -70,4 +70,25 @@ Once it's finished, you're ready to run the mixnode
 
 The compiled files will be now inside the `./target/release/` folder, so you're ready to continue with the official guide at <https://nymtech.net/docs/run-nym-nodes/mixnodes/> , just remember to run `cd target/release` before, so that it will find the commands as described in the official guide.
 
+Once the remaining has been followed, and the validator has been running for a while, you can check the obtained rewards:
+
+```sh
+nymd query distribution validator-outstanding-rewards halvaloper<...the address you get when "nymd keys show default --bech=val"...>
+
+```
+
+Using the values obtained from previous command, you can withdraw all rewards with:
+
+```sh
+nymd tx distribution withdraw-rewards halvaloper<...the address you get when "nymd keys show default --bech=val"...> --from nym-admin   --keyring-backend=os   --chain-id="testnet-finney"   --gas="auto"   --gas-adjustment=1.15   --commission --fees 5000uhal
+```
+
+You can of course, also delegate the rewards just claimed in above step back to your validator:
+
+```sh
+nymd tx staking delegate halvaloper<...the address you get when "nymd keys show default --bech=val"...> 1234000000stake      --from nym-admin   --keyring-backend=os   --chain-id "testnet-finney"   --gas="auto"   --gas-adjustment=1.15   --fees 5000uhal
+```
+
+Remember in above commands to replace `halvaloper` with your validator address and `nym-admin` with the user you created during initialization.
+
 Enjoy!
