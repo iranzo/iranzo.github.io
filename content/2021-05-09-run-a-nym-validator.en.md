@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: How to run a NYM Validator
-tags: NYM, crypto, validator, fedora, Linux, CentOS, RHEL
+tags: NYM, crypto, validator, fedora, Linux, CentOS, RHEL, foss
 layout: post
 date: 2021-05-09 12:40:34 +0200
 comments: true

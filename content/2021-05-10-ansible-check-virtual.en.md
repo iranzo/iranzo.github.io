@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: How to check if a system is virtual
-tags: fedora, Linux, CentOS, RHEL, ansible
+tags: fedora, Linux, CentOS, RHEL, ansible, foss
 layout: post
 date: 2021-05-10 14:30:34 +0200
 comments: true
