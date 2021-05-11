@@ -70,7 +70,7 @@ Once it's finished, you're ready to run the validator as instructed in the offic
 
 ## Claiming rewards
 
-Once the remaining has been followed, and the validator has been running for a while, you can check the obtained rewards:
+Once the remaining steps for setting it up have been followed, and the validator has been running for a while, you can check the obtained rewards:
 
 ```sh
 nymd query distribution validator-outstanding-rewards halvaloper<...the address you get when "nymd keys show default --bech=val"...>
@@ -83,12 +83,42 @@ Using the values obtained from previous command, you can withdraw all rewards wi
 nymd tx distribution withdraw-rewards halvaloper<...the address you get when "nymd keys show default --bech=val"...> --from nym-admin   --keyring-backend=os   --chain-id="testnet-finney"   --gas="auto"   --gas-adjustment=1.15   --commission --fees 5000uhal
 ```
 
-You can of course, also delegate the rewards just claimed in above step back to your validator:
+If you want to check your current balances, check them with:
 
 ```sh
-nymd tx staking delegate halvaloper<...the address you get when "nymd keys show default --bech=val"...> 1234000000stake      --from nym-admin   --keyring-backend=os   --chain-id "testnet-finney"   --gas="auto"   --gas-adjustment=1.15   --fees 5000uhal
+~/.nymd/nymd query bank balances hal<address>
 ```
 
-Remember in above commands to replace `halvaloper` with your validator address and `nym-admin` with the user you created during initialization.
+For example:
+
+```
+balances:
+- amount: "22976200"
+  denom: stake
+- amount: "919376"
+  denom: uhal
+pagination:
+  next_key: null
+  total: "0"
+```
+
+You can, of course, stake back the available balance to your validator with the following command:
+
+```sh
+nymd tx staking delegate halvaloper<...the address you get when "nymd keys show nym-admin --bech=val"...> <amount>stake      --from nym-admin   --keyring-backend=os   --chain-id "testnet-finney"   --gas="auto"   --gas-adjustment=1.15   --fees 5000uhal
+```
+
+!!! note
+The value to be used instead of the `<amount>stake` can be calculated from the available balance. For example, if you've `999989990556` in the balance, you can stake `999909990556`, note that the 5th digit, has been changed from `8` to `0` to leave some room for fees (amounts are multiplied by 10^6).
+
+Remember to replace `halvaloper` with your validator address and `nym-admin` with the user you created during initialization.
+
+Additionally you can also fix some of the data provided for your validator with:
+
+```sh
+nymd tx staking edit-validator   --chain-id=testnet-finney   --moniker=nym.merak.run   --details="Nym validator"   --security-contact="YOUREMAIL"   --identity="XXXXXXX"   --gas="auto"   --gas-adjustment=1.15   --from=nym-admin --fees 2000uhal
+```
+
+With above command you can specify the `gpg` key last numbers (as used in `keybase`) as well as validator details and your email for security contact
 
 Enjoy!
