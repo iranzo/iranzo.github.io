@@ -3,7 +3,7 @@ layout: post
 title: Recent changes in Magui and Citellus
 date: 2018-01-16 21:17:00 +0200
 comments: true
-tags: Citellus, Magui, FOSS
+tags: Citellus, Magui, FOSS, risu
 category: tech
 description:
 ---

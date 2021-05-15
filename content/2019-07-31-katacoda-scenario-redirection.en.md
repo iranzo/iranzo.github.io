@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Katacoda scenario redirection
-tags: Katacoda, KubeVirt, citellus, foss
+tags: Katacoda, KubeVirt, citellus, foss, risu
 layout: post
 date: 2019-07-31 07:39:14 +0200
 comments: true

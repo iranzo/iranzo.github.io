@@ -3,7 +3,7 @@ layout: post
 title: Contributing to OSP upstream a.k.a. Peer Review
 date: 2018-10-16 07:32:47 +0200
 comments: true
-tags: python, OpenStack, foss, git, Gerrit, RDO, fedora, citellus
+tags: python, OpenStack, foss, git, Gerrit, RDO, fedora, citellus, risu
 category: tech
 description:
 ---

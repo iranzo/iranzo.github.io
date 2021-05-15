@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Go (golang) plugin in Citellus
-tags: go, golang, citellus
+tags: go, golang, citellus, risu
 layout: post
 date: 2020-06-14 11:44:24 +0200
 comments: true
