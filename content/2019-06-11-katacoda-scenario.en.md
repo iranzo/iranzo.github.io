@@ -13,7 +13,7 @@ After some time checking the scenarios at <https://learn.openshift.com>, I decid
 
 With the help of [Mario Vázquez](https://linuxera.org), author of [Getting Started with Kubefed](https://learn.openshift.com/introduction/federated-clusters/), I did create two scenarios:
 
-- [How to use Citellus](https://www.katacoda.com/iranzo/scenarios/citellus) on [Citellus: Troubleshooting automation](https://citellusorg.github.io)
+- [How to use Citellus](https://www.katacoda.com/iranzo/scenarios/citellus) on [Citellus: Troubleshooting automation](https://risuorg.github.io)
 - [KubeVirt](https://www.katacoda.com/iranzo/scenarios/kubevirt) on a 'browser-based' approach for [MiniKube](https://kubevirt.io/quickstart_minikube/) setup for validating KubeVirt: Kubernetes with VM Virtualization (versus the regular containers).
 
 You can check how them can be created by looking at their code at: [Katacoda Scenarios](https://github.com/iranzo/katacoda-scenarios) or the 'playable' version at <https://www.katacoda.com/iranzo/>.
