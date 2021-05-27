@@ -164,7 +164,7 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 
 ### Enlaces
 
-- [Kriptopolis](http://www.kriptopolis.org/)]
+- [Kriptopolis](http://www.kriptopolis.org/)
 - [PGP Internacional](http://www.pgpi.org/)
 - [Introducción a GPG: Necesidad y guía rápida en siete pasos](http://bulma.net/body.phtml?nIdNoticia=1684)
 - [Noticia en HispaSec del científico acusado](http://www.hispasec.com/unaaldia/2034) [Patentes de Software]({filename}2004-05-13-Patentes-de-Software.es.md)
@@ -172,7 +172,7 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 - [Preguntas frecuentes sobre informática fiable](http://linuca.org/body.phtml?nIdNoticia=207)
 
 [^1]: Web con un programa que cifra y descifra en [www.rot13.com](http://www.rot13.com/)
-[^2]: [Informe Echeclon](http://altavoz.nodo50.org/echelon2000.htm), [El Programa Echelon](http://www.ugt.es/globalizacion/echelon.htm)
+[^2]: [Informe Echelon](http://altavoz.nod50.org/echelon2000.htm), [El Programa Echelon](http://www.ugt.es/globalizacion/echelon.htm)
 [^3]: Secure Socket Layers: Capas de sockets seguras
 [^4]: Existe una petición a Mozilla foundation para incluir estos certificados con su navegador
 [^5]: Certification Authority
