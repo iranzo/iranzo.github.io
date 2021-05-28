@@ -109,7 +109,8 @@ nymd tx staking delegate halvaloper<...the address you get when "nymd keys show 
 ```
 
 !!! note
-The value to be used instead of the `<amount>stake` can be calculated from the available balance. For example, if you've `999989990556` in the balance, you can stake `999909990556`, note that the 5th digit, has been changed from `8` to `0` to leave some room for fees (amounts are multiplied by 10^6).
+
+    The value to be used instead of the `<amount>stake` can be calculated from the available balance. For example, if you've `999989990556` in the balance, you can stake `999909990556`, note that the 5th digit, has been changed from `8` to `0` to leave some room for fees (amounts are multiplied by 10^6).
 
 Remember to replace `halvaloper` with your validator address and `nym-admin` with the user you created during initialization.
 
