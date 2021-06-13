@@ -443,6 +443,10 @@
     "BMO",
     "Metal³",
     "BareMetalHost",
-    "CRD"
+    "CRD",
+    "resilio",
+    "syncthing",
+    "rslsync",
+    "GB"
   ]
 }
