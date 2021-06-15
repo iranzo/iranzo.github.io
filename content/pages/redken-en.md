@@ -114,6 +114,8 @@ The available list of configuration options that can be used depending on privat
 
 Only for admin user in groups or for individuals against the bot
 
+- `/reload_admins`: Uses telegram API to find admins and populate the `admin` variable for commands that require admin access.
+
 ### Karma
 
 - `/skarma word=value` will set specified word to the karma value provided.
