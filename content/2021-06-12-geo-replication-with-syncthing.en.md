@@ -50,6 +50,8 @@ Best outcome, is that the use (or abuse) of RAM has been completely slashed what
 
 Currently, the only issue is that for some computers in the local network the sync was a bit slow (it even got some remote underpowered devices syncing faster than local ones), but some of the copies were fully in synced already.
 
+However, this issue was fixed when updating all the systems to `v1.17.0` which included some improvements to the encrypted folders, making all my systems to be perfectly in sync! Bear also in mind that the provided version by the operating system, like the one in Raspbian is really old, and was causing issues with encrypted folders with the systems in fedora... once all of them were updated, it worked fine (there were messages about encrypted folder being announced but not configured when the Raspbian version was 1.0.0).
+
 The web interface is not bad, even if, for what I was used to, it's not showing as much detail about the hosts status at glance, having to open each individual folder to see how it is going, as in the general view, it shows the percentage of completion and the amount of data still missing to be synced.
 
 Hope you like it!
