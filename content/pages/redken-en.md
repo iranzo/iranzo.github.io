@@ -109,6 +109,7 @@ The available list of configuration options that can be used depending on privat
 - `usernamereminder`: Set this `False` to stop reminding new users to get a username to get the most out of karma commands.
 - `inactivity`: Set this to the number of days without user activity before kicking it out.
 - `removejoinparts`: Set this to automatically remove 'User XXX has joined' or 'User XXX has left' messages from the groups.
+- `enableall`: Set this to `admin` or `karma` or `false` to allow being used only by admins, allow regular users to just give karma but no pinging or to disable it in your chat.
 
 ## Extra commands
 
