@@ -108,6 +108,7 @@ The available list of configuration options that can be used depending on privat
 - `welcome`: outputs the text when a new user joins the chat, replacing "\$username" by user name
 - `usernamereminder`: Set this `False` to stop reminding new users to get a username to get the most out of karma commands.
 - `inactivity`: Set this to the number of days without user activity before kicking it out.
+- `grace`: Set this to the initial grace period in days for user to say something when added to a channel before being kicked out of `inactivity` (fakes the join date as `grace` days before being kicked out of max `inactivity`)
 - `removejoinparts`: Set this to automatically remove 'User XXX has joined' or 'User XXX has left' messages from the groups.
 - `enableall`: Set this to `admin` or `karma` or `false` to allow being used only by admins, allow regular users to just give karma but no pinging or to disable it in your chat.
 
