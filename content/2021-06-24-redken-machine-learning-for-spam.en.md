@@ -3,7 +3,7 @@ author: Pablo Iranzo Gómez
 title: Redken machine learning for spam detection
 tags: FOSS, Telegram, Python, programming, redken, scikit, machine learning, ML
 layout: post
-date: 2022-06-24 22:00:00 +0200
+date: 2021-06-24 22:00:00 +0200
 comments: true
 category: tech
 description:
