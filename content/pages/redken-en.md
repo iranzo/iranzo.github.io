@@ -111,12 +111,21 @@ The available list of configuration options that can be used depending on privat
 - `grace`: Set this to the initial grace period in days for user to say something when added to a channel before being kicked out of `inactivity` (fakes the join date as `grace` days before being kicked out of max `inactivity`)
 - `removejoinparts`: Set this to automatically remove 'User XXX has joined' or 'User XXX has left' messages from the groups.
 - `enableall`: Set this to `admin` or `karma` or `false` to allow being used only by admins, allow regular users to just give karma but no pinging or to disable it in your chat.
+- `spamcheck`: Set this to `false`, `True` or `auto` to process the text messages with Machine Learning predictions about spam. This only works in English right now and only while the model is `85%` accurate or more. Leaving the default (`True`), will show two buttons for the messages when it is considered SPAM, if confirmed, spam actions will happen. In `auto` mode, spam actions will trigger automatically if the message is considered spam.
+
+!!! important "SPAM actions means"
+
+    - Delete spam message
+    - Submit spam message to database of spam
+    - Add spammer userid to database
+    - Kick user from the group
 
 ## Extra commands
 
 Only for admin user in groups or for individuals against the bot
 
 - `/reload_admins`: Uses telegram API to find admins and populate the `admin` variable for commands that require admin access.
+- `/spam`: reports a message as SPAM to redken
 
 ### Karma
 
