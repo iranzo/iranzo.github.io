@@ -35,7 +35,7 @@ For starting as user the command is very simple:
 
 ```sh
 systemctl enable syncthing@user
-systemctl starat syncthing@user
+systemctl start syncthing@user
 ```
 
 Once the process is started, the browser can be pointed locally at `http://127.0.0.1:8384` to start configuration:
