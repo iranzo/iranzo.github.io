@@ -130,7 +130,7 @@ Only for admin user in groups or for individuals against the bot
 
 ### Karma
 
-- `/skarma word=value` will set specified word to the karma value provided.
+- `skarma word=value` will set specified word to the karma value provided.
 
 ### Auto-karma triggers
 
