@@ -112,6 +112,7 @@ The available list of configuration options that can be used depending on privat
 - `removejoinparts`: Set this to automatically remove 'User XXX has joined' or 'User XXX has left' messages from the groups.
 - `enableall`: Set this to `admin` or `karma` or `false` to allow being used only by admins, allow regular users to just give karma but no pinging or to disable it in your chat.
 - `spamcheck`: Set this to `false`, `True` or `auto` to process the text messages with Machine Learning predictions about spam. This only works in English right now and only while the model is `85%` accurate or more. Leaving the default (`True`), will show two buttons for the messages when it is considered SPAM, if confirmed, spam actions will happen. In `auto` mode, spam actions will trigger automatically if the message is considered spam.
+- `alladmins`: Set this to True to make all users in chat being able to use administrative commands, by default (`False`) means that only chat admins can run the commands.
 
 !!! important "SPAM actions means"
 
