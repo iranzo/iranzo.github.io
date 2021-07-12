@@ -4,7 +4,7 @@ title: @redken_bot
 tags: foss, telegram, python, redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
-modified: 2021-03-09 10:07:00 +02:00
+modified: 2021-07-12 17:42:00 +02:00
 comments: true
 category: tech
 description:
@@ -23,7 +23,7 @@ This document contains some information about regular Redken <https://t.me/redke
 
 By default, new groups where the bot is added are just ready to start being used.
 
-General usage:
+General usage and features:
 
 - `word++` to add karma
 - `word--` to remove karma
@@ -39,6 +39,7 @@ General usage:
 - `/ical <add|delete|list> name url` Adds/deletes/lists a new ical url to print events happening during the day
 - `/cn <word>` To get a random Chuck Norris fact related with provided word (or random)
 - `/excuse` To get a random excuse
+- Spam check for the messages based on the availability of database to train the bot, and only if certainty level is over or equal to `85%`.
 
 Also, while nothing is set against, you could use `/gconfig` to configure several aspects of it like:
 
@@ -55,7 +56,7 @@ On the channel to be linked against `master`, a.k.a. `slave`, execute: `/admin l
 
 ### UIDEnforcer
 
-Adds UID (as reported via /info) to the list of safe members of a chat, anyone else, will be Kicked
+Adds UID (as reported via /info) to the list of safe members of a chat, anyone else, will be kicked
 
 - `/uidenforcer add <UID>` to add a new UID to safe list
 - `/uidenforcer remove <UID>` to remove a UID from safe list
@@ -77,7 +78,7 @@ Lists Red Hat Jobs published at <https://t.me/rhjobs> that have `word` in it:
 
 The bot, once token has been used and admin has been set, will store that information in the database, so you can control it from a chat window
 
-- `/[g|l]config show` will list actual defined settings
+- `/[g|l]config show` will list actual defined settings (`/gconfig`, `/lconfig` or `/config`)
 - `/[g|l]config set var=value` will set one of those settings with a new value
   - As of this writing (verbosity, url for api, token, sleep timeout, owner, database, run in daemon mode)
 - `/[g|l]config delete var` will delete that variable from configuration.
@@ -92,7 +93,7 @@ The available list of configuration options that can be used depending on privat
 - `cleanlink`: True if we want links to be expanded and removed
 - `cleankey`: Regexp to replace, for example tag=
 - `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
-- `lang`: set to language of choice to get some strings translated into supported languages <https://poeditor.com/join/project/ubTVkikm1R> and override autodetected language.
+- `lang`: set to language of choice to get some strings translated into supported languages <https://crowdin.com/project/stampython> and override autodetected language.
 - `privacy`: Enables privacy for forwarded messages, if a message is
   forwarded and the config is set, redken will remove original message and
   resend text to the chat so that the original sender is removed but
