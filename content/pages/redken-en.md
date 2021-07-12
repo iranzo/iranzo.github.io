@@ -164,6 +164,16 @@ Bot allows to setup aliases, so when karma is given to a word, it will instead a
 - `/alias list` Will show current defined aliases
 - `/alias delete key` will delete a previously defined alias so each word gets karma on its own
 
+### Alias team
+
+Bot allows to setup team aliases, so it can ping several users in a chat
+
+- `/ateam team=members` Will create a new team, so when `@team` is used, it will ping each member's username (prepending @ to each word defined as members)
+  - Teams can be defined to groups of words so, it can be defined to have:
+    - `/ateam ateam=face murdock hannibal mr-t`
+- `/ateam list` Will show current defined teams
+- `/ateam delete team` will delete a previously defined team
+
 ### quote
 
 - `/quote del id` to remove a specific quote id from database
