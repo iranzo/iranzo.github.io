@@ -7,7 +7,7 @@ AUTHOR = "Pablo Iranzo Gómez"
 AUTHORS = {
     "Pablo Iranzo Gómez": {
         "blurb": """ opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc""",
-        "url": "https://iranzo.github.io",
+        "url": "https://iranzo.io",
         "avatar": "https://avatars.githubusercontent.com/u/312463",
     },
 }
@@ -20,11 +20,11 @@ CLAIM_GOOGLE = "Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ"
 CLAIM_BING = "8FF1B025212A47B5B27CC47163A042F0"
 CLAIM_YANDEX = "993ede96cdfbee95"
 SITE_DESCRIPTION = "Pablo Iranzo Gomez's personal blog on technology, python, lego, etc"
-FEATURED_IMAGE = "https://iranzo.github.io/favicon.png"
+FEATURED_IMAGE = "https://iranzo.io/favicon.png"
 
 LANDING_PAGE_ABOUT = {
     "title": "A bunch of unrelated data",
-    "details": """<p>This website contains both documentation and setups that could be interesting to you.</p><p>I hope that this results interesting or at least you get some ideas :-)</p><p>You can find more information on me on <a href="https://iranzo.github.io/cv/">my profile</a></p>""",
+    "details": """<p>This website contains both documentation and setups that could be interesting to you.</p><p>I hope that this results interesting or at least you get some ideas :-)</p><p>You can find more information on me on <a href="https://iranzo.io/cv/">my profile</a></p>""",
 }
 
 PROJECTS = [
@@ -131,7 +131,7 @@ PHOTO_THUMB = (192, 144, 60)
 PHOTO_SQUARE_THUMB = False
 PHOTO_RESIZE_JOBS = 5
 PHOTO_WATERMARK = True
-PHOTO_WATERMARK_TEXT = "© Pablo Iranzo Gómez (https://iranzo.github.io)"
+PHOTO_WATERMARK_TEXT = "© Pablo Iranzo Gómez (https://iranzo.io)"
 PHOTO_WATERMARK_IMG = ""
 PHOTO_EXIF_KEEP = False
 PHOTO_EXIF_REMOVE_GPS = True
