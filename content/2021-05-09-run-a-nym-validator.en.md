@@ -117,7 +117,7 @@ Remember to replace `halvaloper` with your validator address and `nym-admin` wit
 Additionally you can also fix some of the data provided for your validator with:
 
 ```sh
-nymd tx staking edit-validator   --chain-id=testnet-finney   --moniker=nym.merak.run   --details="Nym validator"   --security-contact="YOUREMAIL"   --identity="XXXXXXX"   --gas="auto"   --gas-adjustment=1.15   --from=nym-admin --fees 2000uhal
+nymd tx staking edit-validator   --chain-id=testnet-finney   --moniker=<mymoniker>   --details="Nym validator"   --security-contact="YOUREMAIL"   --identity="XXXXXXX"   --gas="auto"   --gas-adjustment=1.15   --from=nym-admin --fees 2000uhal
 ```
 
 With above command you can specify the `gpg` key last numbers (as used in `keybase`) as well as validator details and your email for security contact
