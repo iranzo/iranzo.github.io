@@ -1,80 +1,79 @@
 imports:
-    # The dircolors file just goes at the root of our project.
-    elegant: themes/elegant/
-    plugins|sitemap: plugins/
-    plugins|yuicompressor: plugins/
-    plugins|better_figures_and_images: plugins/
-    plugins|better_codeblock_line_numbering: plugins/
-    plugins|photos: plugins/
-    plugins|extract_toc: plugins/
-    plugins|tipue_search: plugins/
-    plugins|liquid_tags: plugins/
-    plugins|neighbors: plugins/
-    plugins|render_math: plugins/
-    plugins|related_posts: plugins/
-    plugins|share_post: plugins/
-    plugins|series: plugins/
-    plugins|assets: plugins/
-    plugins|post_stats: plugins/
-    revealmd: plugins/revealmd/
+  # The dircolors file just goes at the root of our project.
+  elegant: themes/elegant/
+  plugins|sitemap: plugins/
+  plugins|yuicompressor: plugins/
+  plugins|better_figures_and_images: plugins/
+  plugins|better_codeblock_line_numbering: plugins/
+  plugins|photos: plugins/
+  plugins|extract_toc: plugins/
+  plugins|tipue_search: plugins/
+  plugins|liquid_tags: plugins/
+  plugins|neighbors: plugins/
+  plugins|render_math: plugins/
+  plugins|related_posts: plugins/
+  plugins|share_post: plugins/
+  plugins|series: plugins/
+  plugins|assets: plugins/
+  plugins|post_stats: plugins/
+  revealmd: plugins/revealmd/
 
-
-# git module elegant:
-#     url: https://github.com/Pelican-Elegant/elegant.git
-#     rev: next
+git module elegant:
+  url: https://github.com/Pelican-Elegant/elegant.git
+  rev: next
 
 # Use fork in the meantime
-git module elegant:
-     url: https://github.com/iranzo/elegant.git
-     rev: iranzo
+# git module elegant:
+#      url: https://github.com/iranzo/elegant.git
+#      rev: iranzo
 
 git module revealmd:
-    url: https://github.com/iranzo/pelican-revealmd/
+  url: https://github.com/iranzo/pelican-revealmd/
 
 git module plugins:
-    url: https://github.com/getpelican/pelican-plugins.git
+  url: https://github.com/getpelican/pelican-plugins.git
 
 rule sitemap:
-    pick: sitemap
+  pick: sitemap
 
 rule yuicompressor:
-    pick: yuicompressor
+  pick: yuicompressor
 
 rule better_figures_and_images:
-    pick: better_figures_and_images
+  pick: better_figures_and_images
 
 rule photos:
-    pick: photos
+  pick: photos
 
 rule better_codeblock_line_numbering:
-    pick: better_codeblock_line_numbering
+  pick: better_codeblock_line_numbering
 
 rule extract_toc:
-    pick: extract_toc
+  pick: extract_toc
 
 rule tipue_search:
-    pick: tipue_search
+  pick: tipue_search
 
 rule liquid_tags:
-    pick: liquid_tags
+  pick: liquid_tags
 
 rule neighbors:
-    pick: neighbors
+  pick: neighbors
 
 rule render_math:
-    pick: render_math
+  pick: render_math
 
 rule related_posts:
-    pick: related_posts
+  pick: related_posts
 
 rule share_post:
-    pick: share_post
+  pick: share_post
 
 rule series:
-    pick: series
+  pick: series
 
 rule assets:
-    pick: assets
+  pick: assets
 
 rule post_stats:
-    pick: post_stats
+  pick: post_stats
