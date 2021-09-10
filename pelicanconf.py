@@ -21,7 +21,7 @@ CLAIM_BING = "8FF1B025212A47B5B27CC47163A042F0"
 CLAIM_YANDEX = "993ede96cdfbee95"
 SITE_DESCRIPTION = "Pablo Iranzo Gómez's personal blog on technology, python, lego, etc"
 FEATURED_IMAGE = "https://iranzo.io/favicon.png"
-DISPLAY_BRAND_LOGO = SITEURL + "favicon.png"
+DISPLAY_BRAND_LOGO = SITEURL + "favicon-mini.png"
 
 LANDING_PAGE_ABOUT = {
     "title": "A bunch of unrelated data",
@@ -106,6 +106,7 @@ EXTRA_PATH_METADATA = {
     "extra/CNAME": {"path": "CNAME"},
     "extra/favicon.ico": {"path": "favicon.ico"},
     "extra/favicon.png": {"path": "favicon.png"},
+    "extra/favicon-mini.png": {"path": "favicon-mini.png"},
 }
 
 EXTRA_TEMPLATES_PATHS = [
@@ -121,6 +122,7 @@ STATIC_PATHS = [
     "extra/favicon.ico",
     "extra/keybase.txt",
     "extra/favicon.png",
+    "extra/favicon-mini.png",
     "extra/CNAME",
 ]
 
