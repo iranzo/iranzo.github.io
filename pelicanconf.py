@@ -21,6 +21,7 @@ CLAIM_BING = "8FF1B025212A47B5B27CC47163A042F0"
 CLAIM_YANDEX = "993ede96cdfbee95"
 SITE_DESCRIPTION = "Pablo Iranzo Gómez's personal blog on technology, python, lego, etc"
 FEATURED_IMAGE = "https://iranzo.io/favicon.png"
+DISPLAY_BRAND_LOGO = SITEURL + "favicon.png"
 
 LANDING_PAGE_ABOUT = {
     "title": "A bunch of unrelated data",
@@ -66,7 +67,7 @@ TWITTER_USERNAME = "iranzop"
 # AMAZON_ONELINK = "23824450-ef77-4537-9259-8590465886f1"
 AMAZON_BESTAZON = """var BestAzon_Configuration = {
 "Amzn_AfiliateID_US": "redken08-20",
-"Amzn_AfiliateID_CA": "redken05-20",
+"Amzn_AfiliateID_CA": "redken09-20",
 "Amzn_AfiliateID_GB": "redken01-21",
 "Amzn_AfiliateID_DE": "redken02-21",
 "Amzn_AfiliateID_FR": "redken012-21",
