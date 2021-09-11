@@ -35,6 +35,11 @@ PROJECTS = [
         "description": "A Telegram bot with support for Karma, RSS Feeds, Quotes, etc",
     },
     {
+        "name": "Linux System Administration Book",
+        "url": "/blog/2021/09/11/rhel8-administration/",
+        "description": "Linux System Administration ",
+    },
+    {
         "name": "Citellus",
         "url": "https://citellusorg.github.io",
         "description": "Troubleshooting automation tool with easy to contribute rules",
