@@ -1,13 +1,14 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego exclusive materials for Technic Owners
-tags: '42056', '42083', '42115', '911', 'Bugatti', 'Chiron', 'FKP47', 'Lamborghini', 'Lego', 'Porsche', 'Sian',  'exclusive'
+tags: 42056, 42083, 42115, 911, Bugatti, Chiron, FKP47, Lamborghini, Lego, Porsche, Sian,  exclusive
 layout: post
 date: 2021-07-25 22:30:24 +0200
 comments: true
 category: blog
-description:
+description: Lego promotional material for Technic Owners using your own's car license plate
 lang: en
+modified: 2021-09-15T13:53:56.367+02:00
 ---
 
 If you're the owner of one of the following sets:

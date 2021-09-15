@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Citellus: framework for detecting known issues in systems.
+title: "Citellus: framework for detecting known issues in systems."
 date: 2017-07-26 22:26:00 +0200
 comments: true
 tags: Python, OpenStack, sysmgmt, bash, sosreport, Citellus, FOSS
 category: tech
-description:
+description: Learn about Citellus, a framework that will help you detect known issues, and more insightful information about your system
+modified: 2021-09-15T13:56:30.312+02:00
 ---
 
 [TOC]

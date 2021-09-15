@@ -7,7 +7,7 @@ date: 2021-09-15 00:00:00 +0100
 comments: true
 category: blog
 lang: en
-modified: 2021-09-14T16:12:14.214Z
+modified: 2021-09-15T11:31:09.962Z
 ---
 
 I wanted to write about my experience (before I forget about it), and as some colleagues asked about it... here we go...

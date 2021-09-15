@@ -3,11 +3,12 @@ author: Pablo Iranzo Gómez
 title: Python and iCalendar ICS processing
 tags: Python, Telegram, Linux, redken, ICS, calendar, webcal
 layout: post
-date: 2019-09-17 7:00:36 +0200
+date: 2019-09-17 07:00:36 +0200
 comments: true
 category: tech
-description:
+description: This article covers  how to do Internet Calendar processing of events in python and how those are leveraged in @redken_bot
 lang: en
+modified: 2021-09-15T14:34:52.919+02:00
 ---
 
 [TOC]

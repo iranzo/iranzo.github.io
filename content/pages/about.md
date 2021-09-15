@@ -1,9 +1,11 @@
+---
+modified: 2021-09-15T14:37:53.823+02:00
 title: About
 layout: post
 date: 2016-06-02 17:27:47 +0200
 comments: true
-tags:
-description:
+description: About page for the site
+---
 
 ### Who am I?
 
@@ -21,7 +23,7 @@ Since September 2016, I moved to a new role within the Customer Experience and E
 
 Since April 1st 2018, I got promoted to Principal Software Maintenance Engineer - OpenStack, where I did still worked with the same 'stuff'.
 
-Since September 1st 2018, I moved to the Solutions Engineering team, working on Kubernetes/OpenShift Federation and Quay registry among other topics, Community Ecosystem for KubeVirt and Metal³ and later, including Telco 5G deployments on OpenShift Installer-Provisioned Infrastructure on bare-metal.
+Since September 1st 2018, I moved to the Solutions Engineering team, working on Kubernetes/OpenShift Federation and Quay registry among other topics, Community Ecosystem for KubeVirt and Metal³ and later, including Telco 5G deployments on OpenShift Installer-Provisioned Infrastructure on bare-metal and later Management Integration using Advanced Cluster Management (ACM) on OpenShift to explore the requirements of Telco Edge architectures.
 
 I'm also contributing on regular basis to [Citellus project](https://risuorg.github.io) to help automating diagnosis on known issues at system configuration, package sets, etc.
 

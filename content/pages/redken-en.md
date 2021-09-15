@@ -4,13 +4,12 @@ title: @redken_bot
 tags: foss, telegram, python, redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
-modified: 2021-07-12 17:42:00 +02:00
+modified: 2021-09-15T13:58:07.057+02:00
 comments: true
 category: tech
-description:
+description: Learn about Redken Telegram Bot usage and configuration settings.
 lang: en
 slug: redken_bot
-draft: true
 ---
 
 [TOC]
