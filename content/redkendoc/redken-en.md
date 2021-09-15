@@ -10,7 +10,6 @@ category: tech
 description:
 lang: en
 slug: telegram-redken_bot-documentation
-draft: true
 redirect: /redken_bot
 ---
 
