@@ -1,11 +1,11 @@
 ---
 layout: post
-title: New blog rendering engine: Pelican
+title: "New blog rendering engine: Pelican"
 date: 2016-06-03 17:23:47 +0200
 comments: true
 tags: pelican, python, markdown, foss
 category: tech
-modified: 2021-09-15T14:43:27.553+02:00
+modified: 2021-09-15T16:58:12.658+02:00
 ---
 
 As always, I don't usually find myself keen to write about things I do, until I later realize they might be helpful for others, and that's why in the past I decided to switch the place I was putting the information about why did to Github and also, take benefit of practicing markdown for writing the entries.
