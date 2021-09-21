@@ -16,6 +16,7 @@ imports:
   plugins|series: plugins/
   plugins|assets: plugins/
   plugins|post_stats: plugins/
+  plugins|more_categories: plugins/
   revealmd: plugins/revealmd/
 
 git module elegant:
@@ -77,3 +78,6 @@ rule assets:
 
 rule post_stats:
   pick: post_stats
+
+rule more_categories:
+  pick: more_categories

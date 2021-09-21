@@ -197,6 +197,7 @@ PLUGINS = [
     "revealmd",
     "photos",
     "liquid_tags.graphviz",
+    "more_categories",
 ]
 
 THEME = "themes/elegant"
