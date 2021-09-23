@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Yaspeller hook for pre-commit
-tags: node, pre-commit, git, foss, yaspeller
+tags: node, pre-commit, git, foss, yaspeller, tips
 layout: post
 date: 2020-03-12 14:38:00 +0100
 comments: true

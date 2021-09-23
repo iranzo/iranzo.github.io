@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Configuring OpenShift with self-contained NTP
-tags: dit, foss, OpenShift, NTP, chrony, Kubernetes
+tags: dit, foss, OpenShift, NTP, chrony, Kubernetes, tips
 layout: post
 date: 2020-12-07 14:10:34 +0200
 comments: true
