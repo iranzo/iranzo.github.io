@@ -12,7 +12,7 @@ lang: en
 
 In order to test IPv6 deployment on Dell hardware I was in need to patch the servers to ensure that UEFI boot mode is in use.
 
-Normally I would have use the DSU that runs from within Linux, but as the servers are part of an OpenShift installation (using [baremetal-deploy](https://github.com/openshift-kni/baremetal-deploy)) and using CoreOS as the underlying system I wanted to load ISO from HTTP server on the `deployhost` (running RHEL).
+Normally I would had use the DSU that runs from within Linux, but as the servers are part of an OpenShift installation (using [baremetal-deploy](https://github.com/openshift-kni/baremetal-deploy)) and using CoreOS as the underlying system I wanted to load ISO from HTTP server on the `deployhost` (running RHEL).
 
 The command is not that hard, let's first define some variables:
 
