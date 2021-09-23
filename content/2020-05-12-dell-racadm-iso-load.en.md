@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Dell racadm remote ISO load
-tags: Dell, firmware, Linux, FOSS, racadm, dit
+tags: Dell, firmware, Linux, FOSS, racadm, dit, tips
 layout: post
 date: 2020-05-12 13:30:24 +0200
 comments: true
