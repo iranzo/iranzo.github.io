@@ -6,7 +6,8 @@ layout: post
 date: 2021-07-07 22:00:00 +0200
 comments: true
 category: tech
-description:
+description: Learn on how to use imapfilter against Gmail for classifying the messages
+modified: 2021-09-27T18:50:47.639+02:00
 ---
 
 Until two weeks ago I was using an IMAP server (based on Zimbra) for my work email, but the date for migration to Gmail arrived with no choice to postpone...
