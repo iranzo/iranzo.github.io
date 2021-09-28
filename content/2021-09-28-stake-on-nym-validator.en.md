@@ -1,14 +1,15 @@
 ---
 author: Pablo Iranzo Gómez
-title: How to stake on NYM Validator
+title: How to stake on NYM Validator 🐳🐳🐳
 tags: NYM, crypto, fedora, Linux, CentOS, RHEL, foss, cosmos
 layout: post
-date: 2021-09-28 18:20:34 +0200
+date: 2021-09-28 17:20:34 +0200
 comments: true
 category: tech
 description: This article describes how to stake your token against a NYM cosmos validator
 lang: en
-modified: 2021-09-28T17:23:14.045+02:00
+modified: 2021-09-28T15:27:36.000Z
+slug: stake-nym-validator
 ---
 
 As said in the article about [mixnodes]({filename}2021-05-09-run-a-nym-mixnode.en.md) and [validators]({filename}2021-05-09-run-a-nym-validator.en.md), NYM is a technology aiming for providing privacy for the communications.
