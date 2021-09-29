@@ -50,7 +50,7 @@ Once we know the balance, we should get a value expressed in `upunk` and we shou
 Let's stake with this command:
 
 ```sh
-nymd tx staking delegate -y ${VALIDATOR}  ${BALANCE}  --from ${youruser}   --keyring-backend=os   --chain-id "testnet-milhon"   --gas="auto"   --gas-adjustment=1.15   --fees 5000upunk
+nymd tx staking delegate --node "tcp://testnet-milhon-validator1.nymtech.net:26657" -y ${VALIDATOR}  ${BALANCE}  --from ${youruser}   --keyring-backend=os   --chain-id "testnet-milhon"   --gas="auto"   --gas-adjustment=1.15   --fees 5000upunk
 ```
 
 This will add the delegation and will start appearing on the explorer for the chosen validator.
