@@ -8,7 +8,7 @@ comments: true
 category: tech
 description: This article describes how to stake your token against a NYM cosmos validator
 lang: en
-modified: 2021-09-28T15:27:36.000Z
+modified: 2021-09-30T16:41:47.119+02:00
 slug: stake-nym-validator
 ---
 
@@ -35,6 +35,16 @@ Just make sure to use the proper `keyring-backend` like `os` or `file` to store 
 
 Once the key is created (restored), it will output the `punkADDRESS` we need to use later on.
 
+## Set the variables we're going to use:
+
+```sh
+    OPERADDRESS=punkvaloper1875deee8zecl6smhl2zg42ulpgsjn80cj8vq3x
+    WALLET=$YOURpunkADDRESS # address from above step
+    BACKEND=file # the backend you use for your keyring
+    FROM=$YOURACCOUNT # the name of the account  you restored in previous step (youruser in the example above)
+
+```
+
 ## Staking against a validator
 
 We need to know the address of the validator, so we just need to go to the explorer <https://testnet-milhon-blocks.nymtech.net/validators> decide which one we want to stake on, and in the details page of it, get the address, for example: `punkvaloper1xq1kABCDEqumupju86ljzlj6q2lqhdz2ne76gv` and let's store it as a variable as `VALIDATOR`.
@@ -42,7 +52,7 @@ We need to know the address of the validator, so we just need to go to the explo
 To stake, we need to also know our current balance, but as we are not running `nymd` but using it as client, we need to specify a validator with the 26657 port open:
 
 ```sh
-nymd query bank balances punkADDRESS  --node "tcp://testnet-milhon-validator1.nymtech.net:26657"
+nymd query bank balances ${WALLET}  --node "tcp://testnet-milhon-validator1.nymtech.net:26657"
 ```
 
 Once we know the balance, we should get a value expressed in `upunk` and we should consider the commission for the network fees (`5000upunk`) and store as a number in a variable `BALANCE`.
@@ -50,7 +60,7 @@ Once we know the balance, we should get a value expressed in `upunk` and we shou
 Let's stake with this command:
 
 ```sh
-nymd tx staking delegate --node "tcp://testnet-milhon-validator1.nymtech.net:26657" -y ${VALIDATOR}  ${BALANCE}  --from ${youruser}   --keyring-backend=os   --chain-id "testnet-milhon"   --gas="auto"   --gas-adjustment=1.15   --fees 5000upunk
+nymd tx staking delegate --node "tcp://testnet-milhon-validator1.nymtech.net:26657" -y ${VALIDATOR}  ${BALANCE}  --from ${youruser}   --keyring-backend=${BACKEND}   --chain-id "testnet-milhon"   --gas="auto"   --gas-adjustment=1.15   --fees 5000upunk
 ```
 
 This will add the delegation and will start appearing on the explorer for the chosen validator.
@@ -62,13 +72,13 @@ After we staked for a while, we might be able to claim the rewards, note that th
 First let's check again our balance with:
 
 ```sh
-nymd query bank balances punkADDRESS  --node "tcp://testnet-milhon-validator1.nymtech.net:26657"
+nymd query bank balances ${WALLET}  --node "tcp://testnet-milhon-validator1.nymtech.net:26657"
 ```
 
 Let's claim the rewards:
 
 ```sh
-~/.nymd/nymd  --node "tcp://testnet-milhon-validator1.nymtech.net:26657"  tx distribution withdraw-rewards -y ${VALIDATOR} --from ${youruser} --keyring-backend=os --chain-id='testnet-milhon' --gas='auto' --gas-adjustment=1.15  --fees 5000upunk
+~/.nymd/nymd  --node "tcp://testnet-milhon-validator1.nymtech.net:26657"  tx distribution withdraw-rewards -y ${VALIDATOR} --from ${youruser} --keyring-backend=${BACKEND} --chain-id='testnet-milhon' --gas='auto' --gas-adjustment=1.15  --fees 5000upunk
 ```
 
 And let's check again the balance with
