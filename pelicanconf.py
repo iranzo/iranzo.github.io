@@ -40,8 +40,8 @@ PROJECTS = [
         "description": "Linux System Administration ",
     },
     {
-        "name": "Citellus",
-        "url": "https://citellusorg.github.io",
+        "name": "RISU",
+        "url": "https://Risuorg.github.io",
         "description": "Troubleshooting automation tool with easy to contribute rules",
     },
     {
