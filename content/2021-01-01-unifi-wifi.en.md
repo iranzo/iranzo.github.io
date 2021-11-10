@@ -1,13 +1,14 @@
 ---
 author: Pablo Iranzo Gómez
 title: Ubiquiti UniFi for WiFi network
-tags: UniFi, Linux, Ubiquiti, ASUS, AC-LR, NanoHD, controller, USG, US-8, AX92U
+tags: "UniFi, Linux, Ubiquiti, ASUS, AC-LR, NanoHD, controller, USG, US-8, AX92U"
 layout: post
-date: 2021-01-01 00:00:00 +0200
+date: "2021-01-01 00:00:00 +0200"
 comments: true
 category: tech
-description:
+description: null
 lang: en
+modified: "2021-11-10T23:33:41.225+01:00"
 ---
 
 [TOC]
@@ -116,7 +117,7 @@ I'm attaching here some of the pictures of the User Interface.
         <a href="https://i.imgur.com/9OxA63H.png" itemprop="contentUrl" data-size="1280x716">
             <img src="https://i.imgur.com/9OxA63Ht.png" width="403" height="302" itemprop="thumbnail" alt="" />
         </a>
-        <figcaption itemprop="caption description">Connections</figcaption>
+        <figcaption itemprop="caption description">Connections without clients</figcaption>
     </figure>
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="https://i.imgur.com/5wpQ9vA.png" itemprop="contentUrl" data-size="1280x716">

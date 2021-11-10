@@ -1,9 +1,10 @@
 ---
 layout: post
 title: VPNS - Multiple VPN's Launcher
-date: 2003-03-05T20:55:00Z
-tags: Linux, network, VPN, FOSS
+date: 2003-03-05T20:55:00.000Z
+tags: "Linux, network, VPN, FOSS"
 comments: true
+modified: "2021-11-10T23:31:49.429+01:00"
 ---
 
 [TOC]
@@ -272,4 +273,4 @@ Please, if you use this program, email me to know where it gets to and if it's u
 This document has been created using the LyX Editor and compiled with under
 Debian GNU/Linux, and then converted to the format you're viewing.
 
-File translated from TeX by [T~T~H](http://hutchinson.belmont.ma.us/tth/), version 3.67. On 9 Mar 2007, 21:50.
+File translated from TeX by [`T~T~H`](http://hutchinson.belmont.ma.us/tth/), version 3.67. On 9 Mar 2007, 21:50.
