@@ -129,6 +129,7 @@ Only for admin user in groups or for individuals against the bot
 - `/reload_admins`: Uses telegram API to find admins and populate the `admin` variable for commands that require admin access.
 - `/spam`: reports a message as SPAM to redken
 - `/thanks [add|list|delete]`: Manage the list of words that, when replied, give karma to original sender
+- `/spoiler`: Reploy to a message with this to delete it and send it back with hidden text
 
 ### Karma
 
