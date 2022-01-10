@@ -1,14 +1,14 @@
 ---
 author: Pablo Iranzo Gómez
 title: Ubiquiti UniFi for WiFi network
-tags: "UniFi, Linux, Ubiquiti, ASUS, AC-LR, NanoHD, controller, USG, US-8, AX92U"
+tags: UniFi, Linux, Ubiquiti, ASUS, AC-LR, NanoHD, controller, USG, US-8, AX92U
 layout: post
-date: "2021-01-01 00:00:00 +0200"
+date: 2021-01-01 00:00:00 +0200
 comments: true
 category: tech
 description: null
 lang: en
-modified: "2021-11-10T23:33:41.225+01:00"
+modified: 2022-01-09T22:36:38.911Z
 ---
 
 [TOC]

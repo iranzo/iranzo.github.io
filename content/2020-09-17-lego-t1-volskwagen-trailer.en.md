@@ -1,14 +1,14 @@
 ---
 author: Pablo Iranzo Gómez
 title: Lego Volkswagen T1 Trailer
-tags: "lego, Volkswagen, T1, Trailer, MOC, camper, caravan, 10220"
+tags: lego, Volkswagen, T1, Trailer, MOC, camper, caravan, 10220
 layout: post
-date: "2020-09-17 19:00:24 +0200"
+date: 2020-09-17 19:00:24 +0200
 comments: true
 category: blog
 description: null
 lang: en
-modified: "2021-11-10T23:29:20.131+01:00"
+modified: 2022-01-09T22:36:57.127Z
 ---
 
 I got some pieces that were part of a [Lego Volkswagen T1 🛒](https://www.amazon.es/dp/B00PGZP8HE?tag=redken-21) but couldn't make for the complete set (which I already owned), so I was checking what mods I could build based on it, and best one, based on the amount of pieces was this one found on [Rebrickable](https://rebrickable.com/mocs/MOC-46121/tobowski/caravan-camping-trailer-for-10220-t1-bus/).
