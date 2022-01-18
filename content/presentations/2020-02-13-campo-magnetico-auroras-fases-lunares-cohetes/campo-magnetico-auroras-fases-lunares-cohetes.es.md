@@ -7,14 +7,10 @@ layout: post
 date: 2020-02-06 22:30:00 +0100
 lang: es
 slug: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
-
-theme: solarized
-highlightTheme: "Zenburn"
-mode: selfcontained
-transition: cube
-revealOptions:
-    transition: 'cube'
-    slideNumber: true
+translationKey: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
+outputs:
+  - Reveal
+layout: bundle
 ---
 
 ## Disclaimer
@@ -23,7 +19,6 @@ revealOptions:
 - Vídeos, etc recortados de los originales (Créditos en bibliografía)
 
 ---
-
 
 ## Campo Magnético, Auroras, Fases Lunares, Eclipses y Cohetes
 
@@ -38,8 +33,8 @@ Pablo Iranzo Gómez<br><https://iranzo.github.io>
 - Campo magnético
   - Auroras
 - Movimiento Sol-Tierra-Luna
-   - Fases Lunares
-   - Eclipses
+  - Fases Lunares
+  - Eclipses
 - Cohetes
 - Fin
 
@@ -52,68 +47,70 @@ detectar y medir.
 
 La forma más sencilla es con una brújula.
 
-<img src="{attach}brujula.jpg" width="15%" border=0>
+![](brujula.jpg)
 
 Note: Usar imanes y brújulas.
 
-----
+---
 
 ### Ver el campo magnético
 
 Podemos verlo con limaduras de hierro y unos imanes.
 
-<img src="{attach}limaduras.jpg" width="40%" border=0>
+![](limaduras.jpg)
 
 Note: Usar imanes y limaduras hierro
 
-----
+---
 
 #### Ver el campo magnético 2
 
-<img src="{attach}campo.jpg" width="70%" border=0>
+![](campo.jpg)
 
-----
+---
 
 ### Origen
 
-- La Tierra tiene metal que se mueve en su interior y genera campo magnético  (polos)
+- La Tierra tiene metal que se mueve en su interior y genera campo magnético (polos)
 - La Tierra es muy grande y genera un campo gravitatorio.
 
-<img src="{attach}tierra.jpg" width="40%" border=0>
+![](tierra.jpg)
 
 Note: Mencionar volcanes que tiran el interior de la Tierra.
 
-----
+---
 
 ### Tormentas solares, viento solar, llamaradas
 
 El Sol a veces tiene tormentas y llegan partículas a la tierra con el
 `viento solar`.
 
-<img src="{attach}flare.jpg" width="50%" border=0>
+![](flare.jpg)
 
 Note: Analogía 'agua'
 
-----
+---
 
 ### El escudo de la tierra
 
 El campo magnético, es el escudo de la tierra.
 
-<img src="{attach}solarwind.jpg" width="50%" border=0>
+![](solarwind.jpg)
 
 Note: Analogía paraguas
 
 ---
 
 ### Auroras
+
 Las auroras se producen cuando el viento solar llega a la tierra
 
-<img src="{attach}aurora.jpg" width="50%" border=0>
+![](aurora.jpg)
 
-----
+---
 
 ### Auroras Video
+
 [Video](https://youtu.be/BKGstlScAKA)
 
 ---
@@ -122,11 +119,11 @@ Las auroras se producen cuando el viento solar llega a la tierra
 
 La Tierra gira alrededor del Sol y la Luna alrededor de la Tierra.
 
-<img src="{attach}soltierraluna.jpg" width="50%" border=0>
+![](soltierraluna.jpg)
 
 Note: Usar a 3 niños para explicar el movimiento y 'taparse'
 
-----
+---
 
 ## Fases Lunares
 
@@ -139,38 +136,39 @@ Según dónde esté la Luna, el Sol ilumina una parte y provoca las fases que ve
 
 Note: Cuando la Luna tiene forma de 'C', está menguando.
 
-----
+---
 
 ## Fases Lunares 2
 
-<img src="{attach}faseslunares.jpg" width="50%" border=0>
+![](faseslunares.jpg)
 
-----
+---
 
 ## Eclipses
 
 A veces, es la Luna quien se pone entre el Sol y la Tierra
+
 - Hay eclipses parciales o totales
 
-----
+---
 
 ## Eclipse 2
 
-<img src="{attach}eclstart.jpg" width="70%" border=0>
+![](eclstart.jpg)
 
 Note: Destacar forma redonda de la Luna mientras se posiciona.
 
-----
+---
 
 ## Eclipse 3
 
-<img src="{attach}eclfull.jpg" width="70%" border=0>
+![](eclfull.jpg)
 
-----
+---
 
 ## Eclipse 4
 
-<img src="{attach}eclring.jpg" width="70%" border=0>
+![](eclring.jpg)
 
 ---
 
@@ -180,7 +178,7 @@ Los cohetes luchan contra el otro 'campo' de la Tierra: la Gravedad.
 
 La Gravedad de la Luna, provoca las Mareas
 
-----
+---
 
 ## Escapar de la Tierra
 
@@ -188,31 +186,32 @@ Para escapar de la tierra hace falta mucha velocidad (40.280 km/h).
 
 Los cohetes se hacen con 'fases' para ser más ligeros y gastar menos energía.
 
-----
+---
 
 ## Saturn V
-<img src="{attach}saturnv.gif" width="60%" border=0>
 
-----
+![](saturnv.gif)
+
+---
 
 ## Despegar
 
 - [Shuttle](https://youtu.be/2zJlSUZLTms)
 - [Falcon Heavy](https://youtu.be/Xh7-ns1LvTQ)
 
-----
+---
 
 ## El viaje a la luna
 
-<img src='{attach}apollotrip.jpg' width="60%" border=0>
+<img src='apollotrip.jpg' width="60%" border=0>
 
-----
+---
 
 ## Volver a la tierra
 
-<img src='{attach}apollo11.jpg' width="60%" border=0>
+<img src='apollo11.jpg' width="60%" border=0>
 
-----
+---
 
 ## Volver a la Tierra 2
 
@@ -226,7 +225,7 @@ Los cohetes se hacen con 'fases' para ser más ligeros y gastar menos energía.
 - [Auroras: Magia en el cielo](https://iranzo.github.io/blog/2004/05/24/auroras-magia-en-el-cielo-es/)
 - [Cómo empezaron las cosas](https://www.amazon.es/dp/B00IMJU4HK?tag=redken-21)
 
-----
+---
 
 ## Vídeos
 

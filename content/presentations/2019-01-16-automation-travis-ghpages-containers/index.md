@@ -1,19 +1,16 @@
 ---
 author: Pablo Iranzo Gómez
 title: Project automation with Travis, GitHub Pages and Quay
-tags: pelican, foss, travis, quay, docker, dockerhub
+tags: [pelican, foss, travis, quay, docker, dockerhub]
 layout: post
 date: 2019-01-16 16:00:00 +0100
 
 category: presentations
-description:
-theme: solarized
-highlightTheme: "Zenburn"
-mode: selfcontained
-revealOptions:
-    transition: 'cube'
-    slideNumber: true
+outputs:
+  - Reveal
+layout: bundle
 ---
+
 ## Project hosting and automation
 
 /me: Pablo Iranzo Gómez ( <https://iranzo.github.io> )
@@ -23,6 +20,7 @@ revealOptions:
 ## You got a shinny new project? What now?
 
 - Code usually also requires a webpage
+
   - Documentation, General Information, Developer information, etc
 
 - Web costs money
@@ -33,9 +31,9 @@ revealOptions:
 ## [Some Philosophy](https://www.youtube.com/watch?v=cJMwBwFj5nQ)
 
 > Empty your mind, be shapeless, formless, like water.
-Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle
-You put water in a teacup, it becomes the teapot
-Now water can flow or it can crash.
+> Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle
+> You put water in a teacup, it becomes the teapot
+> Now water can flow or it can crash.
 > Be water my friend
 
 Note:
@@ -130,56 +128,55 @@ Automation for projects:
 
 Example (setup environment)
 
-~~~yml
+```yml
 language: python
 dist: trusty
 sudo: required
 
 python:
-- '3.5'
+  - "3.5"
 
 before_install:
-- pip install -U pip
-- pip install -U setuptools
-- pip install -r tests/requirements.txt
-- pip install -r tests/test-requirements.txt
-- pip install peru
-- mkdir -p tests/themes/elegant
-- mv templates tests/themes/elegant/
-- mv static tests/themes/elegant/
-- cd tests && peru sync
-~~~
+  - pip install -U pip
+  - pip install -U setuptools
+  - pip install -r tests/requirements.txt
+  - pip install -r tests/test-requirements.txt
+  - pip install peru
+  - mkdir -p tests/themes/elegant
+  - mv templates tests/themes/elegant/
+  - mv static tests/themes/elegant/
+  - cd tests && peru sync
+```
 
 ---
 
 ## Example continuation (actions!)
 
-~~~yaml
-
+```yaml
 before_script:
-- npm install travis-ci
+  - npm install travis-ci
 
 script:
-- pelican content/ -o output/
+  - pelican content/ -o output/
 
 after_success:
-- node trigger-build.js
-~~~
+  - node trigger-build.js
+```
 
 ---
 
 ## Publish to remote repo
 
-~~~yaml
+```yaml
 after_success:
-- rm -rf .git/
-- git init
-- git config user.name "Travis CI"
-- git config user.email "travis@domain.com"
-- git config --global push.default simple
-- git remote add origin https://${GITHUB_TOKEN}@github.com/Pelican-Elegant/pelican-elegant.github.io.git
-- make github
-~~~
+  - rm -rf .git/
+  - git init
+  - git config user.name "Travis CI"
+  - git config user.email "travis@domain.com"
+  - git config --global push.default simple
+  - git remote add origin https://${GITHUB_TOKEN}@github.com/Pelican-Elegant/pelican-elegant.github.io.git
+  - make github
+```
 
 ---
 
@@ -212,21 +209,21 @@ What else?
 
 ## Containers!!
 
-![]({attach}2018-12-24-13-12-19.png)
+![](2018-12-24-13-12-19.png)
 
 ---
 
 ## Container creation - Quay
 
 Quay and DockerHub allow to automate build on branch commit
-![]({attach}2018-12-24-12-22-08.png)
+![](2018-12-24-12-22-08.png)
 
 ---
 
 ## Docker Hub
 
 On each commit, a new container will be built
-![]({attach}2018-12-24-12-25-49.png)
+![](2018-12-24-12-25-49.png)
 
 ---
 
@@ -237,10 +234,10 @@ Yes!
 Try <https://github.com/iranzo/blog-o-matic/>
 
 Fork to your repo and get:
+
 - minimal setup steps (github token, travis-ci activation)
 - Automated setup of Pelican + Elegant theme via travis-ci job that builds on each commit.
 - Ready to be submitted to search engines via sitemap, and web claiming
-
 
 ---
 

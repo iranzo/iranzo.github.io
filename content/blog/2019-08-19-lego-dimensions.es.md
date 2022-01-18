@@ -2,21 +2,22 @@
 author: Pablo Iranzo Gómez
 title: Lego Dimensions Reseña
 tags:
-  - lego
-  - xbox
-  - playstation
+  - Lego
+  - Xbox
+  - PlayStation
   - ps3
   - ps4
-  - wii
+  - Wii
   - dimensions
-  - nfc
+  - NFS
   - reseña
 layout: post
 date: "2019-08-19 22:00:36 +0200"
 category: blog
 lang: es
 slug: lego-dimensions
-modified: "2022-01-16T21:44:56.354Z"
+translationKey: lego-dimensions
+modified: "2022-01-18T08:13:45.929Z"
 ---
 
 ## Introducción

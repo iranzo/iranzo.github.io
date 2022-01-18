@@ -11,7 +11,8 @@ date: "2018-12-30 19:26:00 +0100"
 category: tech
 lang: en
 slug: AndroidTV-and-Netflix-tvq-pm-100
-modified: "2022-01-16T21:44:56.323Z"
+modified: "2022-01-18T09:03:11.824Z"
+translationKey: AndroidTV-and-Netflix-tvq-pm-100
 ---
 
 # Android TV versus Android TV-Box

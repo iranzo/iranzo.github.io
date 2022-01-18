@@ -2,19 +2,15 @@
 title: Magnetic field, aurora, moon phases, eclipse and rockets
 category: presentations
 author: Pablo Iranzo Gómez
-tags: aurora, eclipse, rocket, moon phase, magnetic field, astronomy
+tags: [aurora, eclipse, rocket, moon phase, magnetic field, astronomy]
 layout: post
 date: 2020-02-13 22:15:00 +0100
 lang: en
 slug: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
-
-theme: solarized
-highlightTheme: "Zenburn"
-mode: selfcontained
-transition: cube
-revealOptions:
-    transition: 'cube'
-    slideNumber: true
+translationKey: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
+outputs:
+  - Reveal
+layout: bundle
 ---
 
 ## Disclaimer
@@ -23,7 +19,6 @@ revealOptions:
 - Vídeos, etc have been reduced from the originals (credits in bibliography)
 
 ---
-
 
 ## Magnetic Field, Aurora, Moon Phases and Rockets
 
@@ -38,8 +33,8 @@ Pablo Iranzo Gómez<br><https://iranzo.github.io>
 - Magnetic field
   - Auroras
 - Moon-Earth-Sun movement
-   - Moon phases
-   - Eclipses
+  - Moon phases
+  - Eclipses
 - Rockets
 - End
 
@@ -52,54 +47,54 @@ measure.
 
 Easiest way to check it is to use a compass.
 
-<img src="{attach}brujula.jpg" width="15%" border=0>
+![](brujula.jpg)
 
 Note: Use magnets and compass
 
-----
+---
 
 ### 'See' the magnetic field
 
 We can see it by using iron powder and magnets.
 
-<img src="{attach}limaduras.jpg" width="40%" border=0>
+![](limaduras.jpg)
 
 Note: Use magnets and iron powder
 
-----
+---
 
 #### 'See' the magnetic field 2
 
-<img src="{attach}campo.jpg" width="70%" border=0>
+![](campo.jpg)
 
-----
+---
 
 ### Origin
 
 - Earth has metal inside that moves and generates the magnetic field (pole)
 - Earht is also very big and generates gravity field.
 
-<img src="{attach}tierra.jpg" width="40%" border=0>
+![](tierra.jpg)
 
 Note: Vulcanos spit that inner melted materials to the surface of Earth
 
-----
+---
 
 ### Solar storms, solar wind and flares
 
 The Sun, sometines has storms and particles (debris) is launched towards earth and others with the `solar wind`.
 
-<img src="{attach}flare.jpg" width="50%" border=0>
+![](flare.jpg)
 
 Note: Analogy with water and storm
 
-----
+---
 
 ### Earth's shield
 
 Magnetic field is Earth's shield against solar wind.
 
-<img src="{attach}solarwind.jpg" width="50%" border=0>
+![](solarwind.jpg)
 
 Note: Analogy with umbrella
 
@@ -109,9 +104,9 @@ Note: Analogy with umbrella
 
 Auroras are created when the solar wind arrives to earth
 
-<img src="{attach}aurora.jpg" width="50%" border=0>
+![](aurora.jpg)
 
-----
+---
 
 ### Auroras Video
 
@@ -123,11 +118,11 @@ Auroras are created when the solar wind arrives to earth
 
 Earth turns around the Sun and Moon around Earth.
 
-<img src="{attach}soltierraluna.jpg" width="50%" border=0>
+![](soltierraluna.jpg)
 
 Note: Use 3 kids for explaining the movement and 'eclipse' between them
 
-----
+---
 
 ## Moon phases
 
@@ -140,38 +135,39 @@ Depending on Moon position relative to Earth and Sun, it illuminates different f
 
 Note: When the moon is 'C'-shaped, it's in Waning phase.
 
-----
+---
 
 ## Moon Phases 2
 
-<img src="{attach}faseslunares.jpg" width="50%" border=0>
+![](faseslunares.jpg)
 
-----
+---
 
 ## Eclipses
 
 Sometimes, the Moon is between Earth and Sun
+
 - Eclipses can be total or partial
 
-----
+---
 
 ## Eclipse 2
 
-<img src="{attach}eclstart.jpg" width="70%" border=0>
+![](eclstart.jpg)
 
 Note: Make a point on Moon round shape while it puts between Earth and Sun
 
-----
+---
 
 ## Eclipse 3
 
-<img src="{attach}eclfull.jpg" width="70%" border=0>
+![](eclfull.jpg)
 
-----
+---
 
 ## Eclipse 4
 
-<img src="{attach}eclring.jpg" width="70%" border=0>
+![](eclring.jpg)
 
 ---
 
@@ -181,7 +177,7 @@ Rockets fight againsts the other Earth: 'gravity'
 
 Moon's gravity causes tides on Earth
 
-----
+---
 
 ## Escaping Earth
 
@@ -189,31 +185,32 @@ In order to escape Earth, speed must be very high (40.280 km/h).
 
 Rockets are made in 'sections' that can be dropped to be lighter and use less energy to lift off.
 
-----
+---
 
 ## Saturn V
-<img src="{attach}saturnv.gif" width="60%" border=0>
 
-----
+![](saturnv.gif)
+
+---
 
 ## Take off
 
 - [Shuttle](https://youtu.be/2zJlSUZLTms)
 - [Falcon Heavy](https://youtu.be/Xh7-ns1LvTQ)
 
-----
+---
 
 ## Trip to Moon
 
-<img src='{attach}apollotrip.jpg' width="60%" border=0>
+![](apollotrip.jpg)
 
-----
+---
 
 ## Going back to Earth
 
-<img src='{attach}apollo11.jpg' width="60%" border=0>
+![](apollo11.jpg)
 
-----
+---
 
 ## Going back to Earth 2
 
@@ -227,7 +224,7 @@ Rockets are made in 'sections' that can be dropped to be lighter and use less en
 - [Auroras: Magic in the sky](https://iranzo.github.io/blog/2004/05/24/auroras-magia-en-el-cielo-es/)
 - [How things started](https://www.amazon.es/dp/B00IMJU4HK?tag=redken-21)
 
-----
+---
 
 ## Videos
 

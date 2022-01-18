@@ -1,18 +1,14 @@
 ---
 author: Pablo Iranzo Gómez
-title: Be lazy, automate: GitHub actions for static blogging
-tags: pelican, foss, github, github actions
+title: "Be lazy, automate: GitHub actions for static blogging"
+tags: [pelican, foss, github, github actions]
 layout: post
 date: 2021-01-14 22:24:00 +0100
 
 category: presentations
-description:
-theme: solarized
-highlightTheme: "Zenburn"
-mode: selfcontained
-revealOptions:
-    transition: 'cube'
-    slideNumber: true
+outputs:
+  - Reveal
+layout: bundle
 ---
 
 ## Be lazy, automate: GitHub Actions for static blogging
@@ -21,22 +17,23 @@ revealOptions:
 
 ---
 
-
-
 ## What is a blog?
+
 A place to share knowledge, interests, tips, etc.
 
 Usually features:
+
 - images
 - comments from visitors,
 - related articles,
--  etc.
+- etc.
 
 ---
 
 ## What are the costs for a blog?
 
 Web costs money:
+
 - Hosting
 - Domain
 - Maintenance
@@ -44,10 +41,10 @@ Web costs money:
 
 ---
 
-
 ## What is static blogging?
 
 Generate a static webpage
+
 - Think of it as rendering templates into HTML
 - Has no requirements on the web server, any simple webserver is enough:
   - Look ma!, no database!
@@ -57,19 +54,19 @@ Generate a static webpage
 ---
 
 ## What does it mean to us?
+
 - We write an article
 - Command for generating html from templates is used
 - New files uploaded to webserver
 
 ---
 
-
 ## [Some Philosophy](https://www.youtube.com/watch?v=cJMwBwFj5nQ)
 
 > Empty your mind, be shapeless, formless, like water.
-Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle
-You put water in a teacup, it becomes the teapot
-Now water can flow or it can crash.
+> Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle
+> You put water in a teacup, it becomes the teapot
+> Now water can flow or it can crash.
 > Be water my friend
 
 Note:
@@ -141,6 +138,7 @@ Think about endless possibilities!!!
 ## What are Github actions?
 
 - Github is a repository for code
+
   - Allows third-party integration: Travis, Jenkins, bots, etc
 
 - Github added GitHub Actions
@@ -152,6 +150,7 @@ Think about endless possibilities!!!
 ---
 
 ## What can we find?
+
 - CI
 - Formatting
 - Linting
@@ -160,8 +159,6 @@ Think about endless possibilities!!!
 - A full Marketplace (https://github.com/marketplace?type=actions)
 
 ---
-
-
 
 ## Some food for thought
 
@@ -209,16 +206,15 @@ What else?
 
 ---
 
-
 ## Test it yourself
 
 Try <https://github.com/iranzo/blog-o-matic/>
 
 Fork to your repo and get:
+
 - minimal setup steps
 - Automated setup of Pelican + Elegant theme via Git Hub action that builds on each commit.
 - Ready to be submitted to search engines via sitemap, and web claiming
-
 
 ---
 

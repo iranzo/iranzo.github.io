@@ -1,7 +1,7 @@
 baseURL: "https://iranzo.io"
 title: Pablo Iranzo Gómez blog
 paginate: 5
-theme: PaperMod
+theme: [PaperMod, reveal-hugo]
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -101,6 +101,7 @@ outputs:
   home: ["HTML", "RSS", "JSON"]
   page: ["HTML", "RSS"]
 
+
 sitemap:
   changefreq: "monthly"
   filename: "sitemap.xml"
@@ -111,3 +112,19 @@ permalinks:
   posts: /:year/:month/:day/:title/
   /:  /:year/:month/:day/:title/
   blog:  /blog/:year/:month/:day/:title/
+
+
+outputFormats:
+  Reveal:
+    baseName: index
+    mediaType: "text/html"
+    isHTML: true
+
+defaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+  es:
+    languageName: Spanish
+    weight: 2

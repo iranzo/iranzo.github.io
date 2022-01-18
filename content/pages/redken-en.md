@@ -8,11 +8,12 @@ tags:
   - redken
 layout: post
 date: "2019-03-04 18:34:14 +0100"
-modified: "2022-01-17T12:21:17.932Z"
+modified: "2022-01-18T09:44:46.823Z"
 category: tech
 description: Learn about Redken Telegram Bot usage and configuration settings.
 lang: en
 slug: redken_bot
+translationKey: redken_bot
 draft: false
 url: /redken_bot
 ---

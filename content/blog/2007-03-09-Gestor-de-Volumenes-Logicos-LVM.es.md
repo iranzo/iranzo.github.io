@@ -10,7 +10,8 @@ tags:
 lang: es
 save_as: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/index.html
 url: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/
-modified: "2022-01-16T21:44:56.474Z"
+translationKey: LVM
+modified: "2022-01-18T09:05:01.008Z"
 ---
 
 ### Introducción

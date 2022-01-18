@@ -9,7 +9,7 @@ tags:
   - desktop
   - foss
 lang: es
-modified: "2022-01-17T08:40:32.730Z"
+modified: "2022-01-18T08:59:48.281Z"
 ---
 
 ## Antecedentes
@@ -41,7 +41,7 @@ A la par que el servidor en la universidad pasaba a ser Debian 3.0, en mi pc de 
 - [Gentoo](http://www.gentoo.org/): Gentoo se hizo muy famosa hace unos años porque supuestamente optimizaba el rendimiento sobre el hardware al compilarse específicamente sobre el hardware que se tenía y en base a otro software instalado. Personalmente sólo intenté instalarla durante dos días (no me compensaba el tiempo compilando con respecto a la supuesta mejora de rendimiento). El mejor punto es que como el proceso de instalación es manual, se aprende mucho acerca de cómo funciona un sistema con Linux y lo que otras distribuciones "esconden". Tienen muy buena documentación :)
 - [CentOS](http://www.centos.org/): CentOS (Community Enterprise Operating System) es una comunidad que toma los códigos fuente de Red Hat Enterprise Linux ([ftp://ftp.redhat.com](ftp://ftp.redhat.com/)) y los compila tras eliminar todas las "marcas registradas" ofreciendo una distribución que tiene como objetivo ser compatible a nivel binario con RHEL, lo que la convierte en el campo de pruebas ideal para probar cosas que luego se integrarán en entornos de producción ( o por qué no... para practicar nuestras habilidades con una de las distribuciones más extendidas a nivel empresarial). Además de CentOS existen otras distribuciones que hacen una labor parecida como Scientific Linux, etc
 - [Red Hat Enteprise Linux](http://www.redhat.com/rhel/): Una de las distribuciones más difundidas en entorno empresarial, [colaboradora activamente](http://fedoraproject.org/wiki/RedHatContributions) en el desarrollo de Linux a través del proyecto [Fedora](http://fedoraproject.org/) y que utiliza el sistema de paquetes RPM para la gestión de su software, uno de los más extendidos por otros fabricantes para proporcionar sus aplicaciones, controladores, etc.
-- [Fedora](http://fedoraproject.org/): Evolución de Red Hat Linux (sin Enterprise) que sigue recibiendo el apoyo de Red Hat para que como comunidad desarrollen la distribución. Se ha caracterizado por introducir novedosas mejoras tecnológicas. Una de las quizás más controvertidas fue la introducción de [Security Enhanced Linux (SELinux)]({{< ref "2008-01-04-Security-Enhanced-Linux-SELinux.en.md">}}), que inicialmente presentó algún problema para los usuarios pero que hoy en dia proporciona mayor seguridad de forma casi transparente.
+- [Fedora](http://fedoraproject.org/): Evolución de Red Hat Linux (sin Enterprise) que sigue recibiendo el apoyo de Red Hat para que como comunidad desarrollen la distribución. Se ha caracterizado por introducir novedosas mejoras tecnológicas. Una de las quizás más controvertidas fue la introducción de [Security Enhanced Linux (SELinux)]({{< ref path="2008-01-04-Security-Enhanced-Linux-SELinux.en.md" lang="en">}}), que inicialmente presentó algún problema para los usuarios pero que hoy en dia proporciona mayor seguridad de forma casi transparente.
 
 ## ¿Que me motivó?
 

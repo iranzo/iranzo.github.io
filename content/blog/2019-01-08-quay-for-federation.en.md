@@ -12,7 +12,7 @@ layout: post
 date: "2019-01-08 17:30:36 +0100"
 category: tech
 lang: en
-modified: "2022-01-18T06:56:55.365Z"
+modified: "2022-01-18T07:47:30.230Z"
 ---
 
 ## Why this article?
@@ -158,7 +158,7 @@ Setting up certificates requires several steps involving:
 
 #### Create CA
 
-Execution of [generate-ca.sh]({attach}other/generate-ca.sh)
+Execution of [generate-ca.sh](other/generate-ca.sh)
 
 ```sh
 ./generate-ca.sh
@@ -191,7 +191,7 @@ We are going to use the same certificate for each replica, we need to know the h
 
 Having each of the routes in the SAN makes it possible to use the same cert for each replica, so we can federate a single secret containing those certs rather than creating one SSL secret for each cluster.
 
-Execution of [generate-cert.sh]({attach}other/generate-cert.sh)
+Execution of [generate-cert.sh](other/generate-cert.sh)
 
 ```sh
 ./generate-cert.sh quay-enterprise

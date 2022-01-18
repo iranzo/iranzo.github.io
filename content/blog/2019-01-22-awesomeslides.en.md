@@ -14,7 +14,7 @@ tags:
 layout: post
 date: "2019-01-22 20:51:27 +0100"
 category: tech
-modified: "2022-01-17T10:56:30.164Z"
+modified: "2022-01-18T07:47:30.237Z"
 ---
 
 # Introduction
@@ -65,7 +65,7 @@ Once there, a set of find/replacements was required:
 
 | find          | replacement  | description                                                                             |
 | ------------- | ------------ | --------------------------------------------------------------------------------------- |
-| \$folder      | `{attach}`   | Define images included as `{attach}` for pelican to pick them up                        |
+| \$folder      | ``           | Define images included as `` for pelican to pick them up                                |
 | ---------     |              | Remove underlining after titles                                                         |
 | `stangechars` | `normalchar` | Some characters were lost (accents, etc), replaced by another one, to later spell check |
 | `\n\n\n`      | `\n\n`       | Remove extra new lines                                                                  |

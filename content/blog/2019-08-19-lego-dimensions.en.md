@@ -16,7 +16,8 @@ date: "2019-08-19 22:00:36 +0200"
 category: blog
 lang: en
 slug: lego-dimensions
-modified: "2022-01-16T21:44:56.361Z"
+translationKey: lego-dimensions
+modified: "2022-01-18T08:13:42.629Z"
 ---
 
 ## Introduction

@@ -10,7 +10,8 @@ lang: es
 url: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/
 save_as: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/index.html
 slug: Creating-Jigsaw-Download-Jigdo
-modified: "2022-01-16T21:44:56.467Z"
+translationKey: Creating-Jigsaw-Download-JigDo
+modified: "2022-01-18T09:05:47.278Z"
 ---
 
 ### Introducción

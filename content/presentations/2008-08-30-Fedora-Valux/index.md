@@ -1,19 +1,18 @@
 ---
 author: Pablo Iranzo Gómez
 title: Valux - Fedora
-tags: foss, valux, fedora
+tags:
+  - foss
+  - valux
+  - fedora
 lang: es
 layout: post
-date: 2008-08-30 16:00:00 +0100
-
+date: '2008-08-30 16:00:00 +0100'
 category: presentations
-description:
-theme: solarized
-highlightTheme: "Zenburn"
-mode: selfcontained
-revealOptions:
-    transition: 'cube'
-    slideNumber: true
+outputs:
+  - Reveal
+layout: bundle
+modified: '2022-01-18T07:43:37.073Z'
 ---
 
 ## ¿Qué es Fedora?
@@ -53,8 +52,7 @@ Los comienzos: Red Hat Linux 1994 -> 2003
 
 ## El árbol genealógico
 
-
-![]({attach}10000201000002BD000001457DE9B4C7.png)
+![](10000201000002BD000001457DE9B4C7.png)
 
 ---
 
@@ -64,7 +62,7 @@ Los comienzos: Red Hat Linux 1994 -> 2003
 - Lista de correo: <http://fedoraproject.org/wiki/Communicate#ML>
 - IRC:
   - <http://fedoraproject.org/wiki/Communicate#IRC>
-  - <http://freenode.org> (#fedora*)
+  - <http://freenode.org> (#fedora\*)
 
 ---
 
@@ -94,7 +92,7 @@ Los comienzos: Red Hat Linux 1994 -> 2003
 
 ---
 
-##  ¿Fedora?
+## ¿Fedora?
 
 - Robusta y segura
 - Base de unas 70 distribuciones derivadas
@@ -105,7 +103,7 @@ Los comienzos: Red Hat Linux 1994 -> 2003
 
 ---
 
-##  Fedora? (cont)
+## Fedora? (cont)
 
 - Últimas versiones de paquetes
 - Ciclos rápidos
@@ -131,7 +129,7 @@ Los comienzos: Red Hat Linux 1994 -> 2003
 
 <http://fedoraproject.org/wiki/RedHatContributions>
 
-Kernel, Xorg, GFS, LVM, ext3, Netscape Directory Server, Netscape Certificate System, MetaMatrix, Liberation fonts, Pulp, Virt Manager, GTK en Firefox, partes de GNOME, etc'upstream' de software libre (subproyectos)
+Kernel, Xorg, GFS, LVM, ext3, Netscape Directory Server, Netscape Certificate System, MetaMatrix, Liberation fonts, Pulp, Virt Manager, GTK en Firefox, partes de GNOME, etc. 'upstream' de software libre (subproyectos)
 Emerging Technologies Group
 
 ---
@@ -199,10 +197,12 @@ Emerging Technologies Group
 # Preguntas
 
 - Fedora / Red Hat
+
   - <http://fedoraproject.org/>
   - <http://et.redhat.com>
 
 - VALUX
+
   - <http://www.valux.org>
   - <mailto:Valux-list@valux.org>
 

@@ -6,7 +6,7 @@ tags:
   - coronavirus
 layout: post
 date: "2020-03-14 23:30:00 +0100"
-modified: "2022-01-18T06:13:13.073Z"
+modified: "2022-01-18T09:01:34.946Z"
 category: blog
 lang: es
 ---
@@ -131,7 +131,7 @@ el lunes irán llegando más noticias...
 ## 2020/03/22
 
 Día de 'relax', la comida hecha del día anterior, así que en plan tranquilo,
-jugando, montando el [Lego Fiat 500]({{<ref "2020-03-22-lego-fiat-500.en.md">}})
+jugando, montando el [Lego Fiat 500]({{<ref path="2020-03-22-lego-fiat-500.en.md" lang="en">}})
 y merendando un bizcocho.
 
 El niño no lo lleva mal, pero el no 'desfogar' fuera de casa se empieza a
@@ -251,7 +251,7 @@ Día tranquilo, acabando de montar el [autobús de Lego creator](https://www.ama
 
 ## 2020/04/08
 
-Esta tarde haciendo algo de sitio y luego montando el [Lego Lunar Lander]({{<ref "2020-04-08-lego-lunar-lander.en.md">}}).
+Esta tarde haciendo algo de sitio y luego montando el [Lego Lunar Lander]({{<ref path="2020-04-08-lego-lunar-lander.en.md" lang="en">}}).
 
 ## 2020/04/09
 
@@ -341,11 +341,11 @@ Día tranquilo y pequeño paseo
 
 ## 2020/04/29
 
-Salida a la calle con la bicicleta y montar uno de los dos coches de lego del set [Lamborghini]({{<ref "2020-04-30-lego-lamborghini.md">}})
+Salida a la calle con la bicicleta y montar uno de los dos coches de lego del set [Lamborghini]({{<ref path="2020-04-30-lego-lamborghini.en.md" lang="en">}})
 
 ## 2020/04/30
 
-Paseo en patinete por la calle y a la vuelta montar el otro coche de Lego del set [Lamborghini]({{<ref "2020-04-30-lego-lamborghini.md">}})
+Paseo en patinete por la calle y a la vuelta montar el otro coche de Lego del set [Lamborghini]({{<ref path="2020-04-30-lego-lamborghini.en.md"  lang="en" >}})
 
 ## 2020/05/01
 

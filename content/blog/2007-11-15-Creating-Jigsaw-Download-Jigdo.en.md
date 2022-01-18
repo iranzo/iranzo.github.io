@@ -8,7 +8,8 @@ tags:
   - foss
 lang: en
 slug: Creating-Jigsaw-Download-JigDo
-modified: "2022-01-16T21:44:56.470Z"
+translationKey: Creating-Jigsaw-Download-JigDo
+modified: "2022-01-18T09:05:42.870Z"
 ---
 
 ### Introduction
