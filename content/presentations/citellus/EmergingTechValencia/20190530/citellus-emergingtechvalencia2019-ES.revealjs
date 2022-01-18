@@ -5,7 +5,7 @@ author: Pablo Iranzo Gómez
 tags: citellus, foss, bash, magui, troubleshooting, devconf, openstack, docker, container, python, emergingtechvlc
 layout: post
 date: 2019-05-30 18:30:00 +0100
-comments: true
+
 theme: solarized
 highlightTheme: "Zenburn"
 mode: selfcontained

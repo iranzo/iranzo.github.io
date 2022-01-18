@@ -1,18 +1,21 @@
 ---
 author: Pablo Iranzo Gómez
-title: @redken_bot
-tags: foss, telegram, python, redken
+title: "@redken_bot"
+tags:
+  - foss
+  - telegram
+  - python
+  - redken
 layout: post
-date: 2019-03-04 18:34:14 +0100
-modified: 2021-09-15T13:58:07.057+02:00
-comments: true
+date: "2019-03-04 18:34:14 +0100"
+modified: "2022-01-17T12:21:17.932Z"
 category: tech
 description: Learn about Redken Telegram Bot usage and configuration settings.
 lang: en
 slug: redken_bot
+draft: false
+url: /redken_bot
 ---
-
-[TOC]
 
 # Redken Manual
 
@@ -26,17 +29,17 @@ General usage and features:
 
 - `word++` to add karma
 - `word--` to remove karma
-- reply to message with '++', '--' or '==' to add or remove karma to user of prior message or to the same words that were used
-- `/quote add username text` to add a quote for given username with the following text as message
+- reply to message with '++', '--' or '==' to add or remove karma to the user of the replied message or to the same words that were used
+- `/quote add username text` to add a quote for a given username with the following text as the message
 - `/quote username` to retrieve a random quote for that username.
 - `@all` to ping all usernames for users in a channel
 - `@all++` to give karma to all usernames in a channel
-- `stock <ticker>` to get trading quote for ticker in stock market
+- `stock <ticker>` to get the trading quote for ticker in stock market
 - `/hilight <add|delete|list> <word>` Adds/deletes word or lists words that will cause a forward to notify you
 - `/feed <add|delete|list> name url` Adds/deletes/lists a new feed form URL on channel
 - `/remind <add|delete|list> name interval text` Adds/deletes/lists a new reminder for interval in channel, interval can be specified as '1y2m3w5d'
 - `/ical <add|delete|list> name url` Adds/deletes/lists a new ical url to print events happening during the day
-- `/cn <word>` To get a random Chuck Norris fact related with provided word (or random)
+- `/cn <word>` To get a random Chuck Norris fact related with the provided word (or random)
 - `/excuse` To get a random excuse
 - Spam check for the messages based on the availability of database to train the bot, and only if certainty level is over or equal to `85%`.
 
@@ -115,12 +118,14 @@ The available list of configuration options that can be used depending on privat
 - `spamcheck`: Set this to `false`, `True` or `auto` to process the text messages with Machine Learning predictions about spam. This only works in English right now and only while the model is `85%` accurate or more. Leaving the default (`True`), will show two buttons for the messages when it is considered SPAM, if confirmed, spam actions will happen. In `auto` mode, spam actions will trigger automatically if the message is considered spam.
 - `alladmins`: Set this to True to make all users in chat being able to use administrative commands, by default (`False`) means that only chat admins can run the commands.
 
-!!! important "SPAM actions means"
+{{<important title="SPAM actions means">}}
 
-    - Delete spam message
-    - Submit spam message to database of spam
-    - Add spammer userid to database
-    - Kick user from the group
+- Delete spam message
+- Submit spam message to database of spam
+- Add spammer userid to database
+- Kick user from the group
+
+{{</important>}}
 
 ## Extra commands
 

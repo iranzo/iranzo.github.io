@@ -1,14 +1,17 @@
 ---
 title: Baremetal Operator
-date: 2019-09-11T13:00:00+02:00
-tags: OpenShift, Kubernetes, Metal³, operator
+date: 2019-09-11T11:00:00.000Z
+tags:
+  - OpenShift
+  - Kubernetes
+  - Metal³
+  - operator
 category: tech
 author: Pablo Iranzo Gómez
+modified: "2022-01-17T07:42:20.501Z"
 ---
 
 This article was published originally at <https://metal3.io/blog/2019/09/11/Baremetal-operator.html>
-
-[TOC]
 
 ## Introduction
 

@@ -6,3 +6,6 @@ themes/
 *.pid
 __pycache__/
 *~
+.vscode/
+.frontmatter/
+frontmatter.json

@@ -1,17 +1,17 @@
 ---
-modified: 2021-09-15T14:37:53.823+02:00
+modified: "2022-01-17T12:06:29.527Z"
 title: About
 layout: post
-date: 2016-06-02 17:27:47 +0200
-comments: true
+date: "2016-06-02 17:27:47 +0200"
 description: About page for the site
+url: /about
 ---
 
 ### Who am I?
 
 My name is Pablo and I've been working with opensource since before I started university.
 
-Part of my evolution with opensource is described in this article [Linux]({filename}../2008-06-03-mi-Evolucion-con-Linux.es.md).
+Part of my evolution with opensource is described in this article [Linux]({{<ref "2008-06-03-mi-Evolucion-con-Linux.es.md">}}).
 
 Since 2006 I work for Red Hat, where I started as a Dedicated Enterprise Engineer (Onsite Consultant) for a country-wide retail company with headquarters in Valencia.
 

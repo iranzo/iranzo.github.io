@@ -1,0 +1,113 @@
+baseURL: "https://iranzo.io"
+title: Pablo Iranzo Gómez blog
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+GoogleAnalytics: G-ZL9P943TP1
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  # mainSections: blog
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Pablo Iranzo Gómez blog
+  description: "A bunch of unrelated data"
+  keywords: [Blog]
+  author: Pablo Iranzo Gómez
+  # author: ["Me", "You"] # multiple authors
+  images: ["/mugshot.png"]
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  searchHidden: false
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+
+  label:
+    text: "Home"
+    icon: /apple-icon-152x152.png
+    iconHeight: 35
+
+  # home-info mode
+  # homeInfoParams:
+      # Title: "Hi!"
+      # Content: Welcome to my blog
+
+  analytics:
+    google:
+      SiteVerificationTag: "Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ"
+    yandex:
+      SiteVerificationTag: "993ede96cdfbee95"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: home
+      name: 🏠 Home
+      url: /
+      weight: 10
+    - identifier: About
+      name: 🗒️ About
+      url: /about/
+      weight: 15
+    - identifier: redken
+      name: 🐘 redken_bot
+      url: /redken_bot/
+      weight: 20
+    - identifier: projects
+      name: 📐 Projects
+      url: /projects/
+      weight: 20
+    - identifier: tags
+      name: 🏷️ Tags
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: 🔎 Search
+      url: /search
+      weight: 40
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+  page: ["HTML", "RSS"]
+
+sitemap:
+  changefreq: "monthly"
+  filename: "sitemap.xml"
+  priority: 0.5
+
+
+permalinks:
+  posts: /:year/:month/:day/:title/
+  /:  /:year/:month/:day/:title/
+  blog:  /blog/:year/:month/:day/:title/

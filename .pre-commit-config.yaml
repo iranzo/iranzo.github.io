@@ -1,3 +1,4 @@
+exclude: "index.json|^themes/"
 fail_fast: true
 repos:
   - repo: meta
