@@ -17,7 +17,7 @@ date: "2020-02-04 00:30:24 +0100"
 category: blog
 lang: es
 slug: lego-dimensions-cloning
-modified: "2022-01-17T11:00:28.379Z"
+modified: "2022-01-18T06:56:55.354Z"
 ---
 
 ## Introducción
@@ -36,11 +36,11 @@ Con un lector/escritor NFC en tu teléfono móvil, las etiquetas se pueden copia
 
 Para poder 'crear' tus etiquetas, la siguiente lista de materiales es útil:
 
-|   Elemento   |                 AliExpress                 |                                                     Amazon                                                     |
-| :----------: | :----------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-|  Etiquetas   | <http://s.click.aliexpress.com/e/dMeJ0gug> |  [![Etiquetas NFC]({static}imagen/dimensions/ntag213.png)](https://www.amazon.es/dp/B00NG4W3K2?tag=redken-21)  |
-|  Perforador  | <http://s.click.aliexpress.com/e/5U3WF4fq> | [![Perforador]({static}imagen/dimensions/holepuncher.png)](https://www.amazon.es/dp/B007QJC8WG?tag=redken-21)  |
-| Portamonedas | <http://s.click.aliexpress.com/e/_ruEsf3>  | [![Portamonedas]({static}imagen/dimensions/coinholder.png)](https://www.amazon.es/dp/B07CNTTVF9?tag=redken-21) |
+|   Elemento   |                 AliExpress                 |                                                 Amazon                                                  |
+| :----------: | :----------------------------------------: | :-----------------------------------------------------------------------------------------------------: |
+|  Etiquetas   | <http://s.click.aliexpress.com/e/dMeJ0gug> |  [![Etiquetas NFC](/imagen/dimensions/ntag213.png)](https://www.amazon.es/dp/B00NG4W3K2?tag=redken-21)  |
+|  Perforador  | <http://s.click.aliexpress.com/e/5U3WF4fq> | [![Perforador](/imagen/dimensions/holepuncher.png)](https://www.amazon.es/dp/B007QJC8WG?tag=redken-21)  |
+| Portamonedas | <http://s.click.aliexpress.com/e/_ruEsf3>  | [![Portamonedas](/imagen/dimensions/coinholder.png)](https://www.amazon.es/dp/B07CNTTVF9?tag=redken-21) |
 
 ## Más información
 

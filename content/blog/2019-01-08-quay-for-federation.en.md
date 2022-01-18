@@ -12,7 +12,7 @@ layout: post
 date: "2019-01-08 17:30:36 +0100"
 category: tech
 lang: en
-modified: "2022-01-16T21:44:56.383Z"
+modified: "2022-01-18T06:56:55.365Z"
 ---
 
 ## Why this article?
@@ -223,13 +223,13 @@ Now using the web interface of quay, we can start uploading the certificates req
 **_Custom SSL Certificates_**
 Here, load the `quay.pem`
 
-![Certificate load]({static}imagen/postrepquay/2018-11-29-15-32-08.png)
+![Certificate load](/imagen/postrepquay/2018-11-29-15-32-08.png)
 
 **_Server Configuration_** \***\*TLS\*\***
 Certificate: load the `quay-enterprise.pem`
 Key: load the `quay-enterprise-key.pem`
 
-![Certificate configuration]({static}imagen/postrepquay/2018-11-29-15-33-02.png)
+![Certificate configuration](/imagen/postrepquay/2018-11-29-15-33-02.png)
 
 At this point Quay will be using the certificates, but by default the service created only works on port 80.
 
@@ -277,7 +277,7 @@ fae583f1d4e5: Pushed
 ### OpenShift certificate
 
 Unless we also load the SSL certificate from Quay into OpenShift, we'll be facing issues like this:
-![Failure when Certificate has not been imported]({static}imagen/postrepquay/2018-12-03-15-41-02.png)
+![Failure when Certificate has not been imported](/imagen/postrepquay/2018-12-03-15-41-02.png)
 
 ## Wrap up
 
