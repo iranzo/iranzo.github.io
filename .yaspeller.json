@@ -468,6 +468,7 @@
     "nym",
     "LDAP",
     "LinkedIn",
-    "PXE"
+    "PXE",
+    "translationKey"
   ]
 }
