@@ -39,6 +39,9 @@ params:
   showtoc: true
   tocopen: true
 
+  assets:
+    disableFingerprinting: true
+
   label:
     text: "Home"
     icon: /apple-icon-152x152.png
