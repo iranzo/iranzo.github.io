@@ -2,3219 +2,3211 @@
 author: Pablo Iranzo Gómez
 title: Las Leyes de Murphy
 tags:
-  - murphy
+  - Murphy
 layout: post
 date: "2007-10-03 17:55:54 +0100"
 category: blog
 lang: es
-modified: "2022-01-16T21:44:56.308Z"
+modified: "2022-02-02T12:46:17.034Z"
 ---
 
 # Las leyes de Murphy
 
-## Introducción.
+## Introducción
 
-¿Nunca ha sonado el teléfono de su casa en el preciso instante en que usted se sentaba en el excusado? ¿Tampoco ha aparecido el autobús que llevaba horas esperando justo cuando se ha encendido un cigarrillo? ¿Nunca ha llovido a cántaros, precisamente el día que había llevado el coche a lavar, ni ha dejado de llover nada más comprar un paraguas? Es posible que usted se diera cuenta en ese momento de que se estaba tramando algo, que existía un principio universal más allá de su comprensión y que estaba muerto de rabia por que le pusieran un nombre. También, es posible que usted deseara recurrir a la Ley de Murphy, el Principio de Peter o la Ley de la Gravitación Selectiva, si es que había oído hablar de ellas, sólo para darse cuenta de que se le había olvidado el nombre exacto.
+¿Nunca ha sonado el teléfono de su casa en el preciso instante en que usted se sentaba en el excusado? ¿Tampoco ha aparecido el autobús que llevaba horas esperando justo cuando se ha encendido un cigarrillo? ¿Nunca ha llovido a cántaros, precisamente el día que había llevado el coche a lavar, ni ha dejado de llover nada más comprar un paraguas? Es posible que usted se diera cuenta en ese momento de que se estaba tramando algo, que existía un principio universal más allá de su comprensión y que estaba muerto de rabia por que le pusieran un nombre. También, es posible que usted deseara recurrir a la Ley de Murphy, el Principio de Peter o la Ley de la Gravitación Selectiva, si es que había oído hablar de ellas, sólo para darse cuenta de que se le había olvidado el nombre exacto
 
-Aquí tenemos un pequeño compendio de referencias, que parten del juicio y de la sabiduría de nuestros tecnólogos, burócratas, humanistas y observadores antisociales más deliciosamente dementes. Lo han elaborado y nos lo presentan con la finalidad de proporcionarnos un ligero "alivio kármico".
+Aquí tenemos un pequeño compendio de referencias, que parten del juicio y de la sabiduría de nuestros tecnólogos, burócratas, humanistas y observadores antisociales más deliciosamente dementes. Lo han elaborado y nos lo presentan con la finalidad de proporcionarnos un ligero "alivio kármico"
 
-A lo largo de la historia, los eruditos y los sabios nos han divertido con las leyes del Universo, las estructuras sutiles aunque inmutables que rigen el orden cósmico. Hemos recibido las Leyes Morales de los religiosos; las Leyes del Karma de los místicos; Las Leyes de la Lógica de los racionalistas y las Leyes de la Estética de los artistas. Ahora es el turno de los tecnólogos y de agudizar nuestro oído colectivo.
+A lo largo de la historia, los eruditos y los sabios nos han divertido con las leyes del Universo, las estructuras sutiles aunque inmutables que rigen el orden cósmico. Hemos recibido las Leyes Morales de los religiosos; las Leyes del Karma de los místicos; Las Leyes de la Lógica de los racionalistas y las Leyes de la Estética de los artistas. Ahora es el turno de los tecnólogos y de agudizar nuestro oído colectivo
 
-## Murphyología.
+## Murphyología
 
-LEY DE MURPHY.
+### Ley de Murphy
 
-- Si algo puede salir mal, saldrá mal.
+- Si algo puede salir mal, saldrá mal
 
-Corolarios.
+#### Corolarios
 
-1. Nada es tan fácil como parece.
-2. Todo lleva más tiempo del que usted piensa.
-3. Si existe la posibilidad de que varias cosas vayan mal, la que cause más perjuicios será la única que vaya mal.
-4. Si usted intuye que hay cuatro posibilidades de que una gestión vaya mal y las evita, al momento aparecerá espontáneamente una quinta posibilidad.
-5. Cuando las cosas se dejan a su aire, suelen ir de mal en peor.
-6. En cuanto se ponga a hacer algo, se dará cuenta de que hay otra cosa que debería haber hecho antes.
-7. Cualquier solución entraña nuevos problemas.
-8. Es inútil hacer cualquier cosa a prueba de tontos, porque los tontos son muy ingeniosos.
-9. La naturaleza siempre está de parte de la imperfección oculta.
-10. La madre Naturaleza es una lagartona.
+1. Nada es tan fácil como parece
+1. Todo lleva más tiempo del que usted piensa
+1. Si existe la posibilidad de que varias cosas vayan mal, la que cause más perjuicios será la única que vaya mal
+1. Si usted intuye que hay cuatro posibilidades de que una gestión vaya mal y las evita, al momento aparecerá espontáneamente una quinta posibilidad
+1. Cuando las cosas se dejan a su aire, suelen ir de mal en peor
+1. En cuanto se ponga a hacer algo, se dará cuenta de que hay otra cosa que debería haber hecho antes
+1. Cualquier solución entraña nuevos problemas
+1. Es inútil hacer cualquier cosa a prueba de tontos, porque los tontos son muy ingeniosos
+1. La naturaleza siempre está de parte de la imperfección oculta
+1. La madre Naturaleza es una lagartona
 
-FILOSOFÍA DE MURPHY.
+### Filosofía de Murphy
 
-- Sonría. Mañana puede ser peor.
+- Sonría. Mañana puede ser peor
 
-COMENTARIO DE O’TOOLE SOBRE LA LEY DE MURPHY.
+### COMENTARIO DE O’TOOLE SOBRE LA Ley de Murphy
 
-- Murphy era un optimista.
+- Murphy era un optimista
 
-POSTULADO DE BOLING.
+### Postulado de BOLING
 
-- Si se encuentra bien, no se preocupe. Se le pasará.
+- Si se encuentra bien, no se preocupe. Se le pasará
 
-PRIMERA LEY DE CHISHOLM.
+### Primera Ley de CHISHOLM
 
-- Cuando las cosas vayan bien, algo habrá que haga que vayan mal.
+- Cuando las cosas vayan bien, algo habrá que haga que vayan mal
 
-Corolarios.
+#### Corolarios
 
-1. Cuando parece que ya nada puede ir peor, empeora.
-2. Cuando le parezca que las cosas van mejor, es que se le ha pasado algo por alto.
+1. Cuando parece que ya nada puede ir peor, empeora
+1. Cuando le parezca que las cosas van mejor, es que se le ha pasado algo por alto
 
-LEY DE LA IDEA GENIAL.
+### Ley de LA IDEA GENIAL
 
-- Cuando a usted se le ocurra la solución ideal, alguien habrá resuelto ya el problema.
+- Cuando a usted se le ocurra la solución ideal, alguien habrá resuelto ya el problema
 
-LEY DE LA MENTIRA.
+### Ley de LA MENTIRA
 
-- No importa la frecuencia con que se demuestre que una mentira es falsa. Siempre habrá cierto porcentaje de gente que crea que es verdad.
+- No importa la frecuencia con que se demuestre que una mentira es falsa. Siempre habrá cierto porcentaje de gente que crea que es verdad
 
-LEY DE KRANSKE.
+### Ley de KRANSKE
 
-- Guárdese del día en que no tenga nada que lamentar.
+- Guárdese del día en que no tenga nada que lamentar
 
-Corolarios.
+#### Corolarios
 
-1. Si usted explica algo con tanta claridad que nadie lo pueda malinterpretar, no se preocupe, alguien lo hará.
-2. Si usted hace algo y está seguro de que contará con la aprobación de todo el mundo, a alguien le disgustará.
-3. Los métodos para conseguir más fácilmente el objetivo no suelen funcionar.
+1. Si usted explica algo con tanta claridad que nadie lo pueda malinterpretar, no se preocupe, alguien lo hará
+1. Si usted hace algo y está seguro de que contará con la aprobación de todo el mundo, a alguien le disgustará
+1. Los métodos para conseguir más fácilmente el objetivo no suelen funcionar
 
-PRIMERA LEY DE FINAGLE.
+### Primera Ley de FINAGLE
 
-- Si un experimento funciona, es que algo ha ido mal.
+- Si un experimento funciona, es que algo ha ido mal
 
-SEGUNDA LEY DE FINAGLE.
+### Segunda Ley de FINAGLE
 
 No importa cuál sea el resultado previsto. Siempre habrá alguien impaciente por:
 
 - malinterpretarlo;
 - imitarlo, o
-- creer que ha sido a causa de su teoría favorita.
+- creer que ha sido a causa de su teoría favorita
 
-TERCERA LEY DE FINAGLE.
+### TERCERA Ley de FINAGLE
 
-- En cualquier grupo de datos, la cifra que evidentemente es correcta, sin ninguna necesidad de comprobación, es la errónea.
+- En cualquier grupo de datos, la cifra que evidentemente es correcta, sin ninguna necesidad de comprobación, es la errónea
 
-Corolarios.
+#### Corolarios
 
-1. Si le pide ayuda a alguien, no sabrá ver el error.
-2. Cualquiera que eche un vistazo, sin que usted se lo pida, lo verá inmediatamente.
+1. Si le pide ayuda a alguien, no sabrá ver el error
+1. Cualquiera que eche un vistazo, sin que usted se lo pida, lo verá inmediatamente
 
-CUARTA LEY DE FINAGLE.
+### CUARTA Ley de FINAGLE
 
-- Si un trabajo se ha atascado, todo lo que haga para arreglarlo sólo conseguirá empeorarlo.
+- Si un trabajo se ha atascado, todo lo que haga para arreglarlo sólo conseguirá empeorarlo
 
-REGLAS DE FINAGLE.
+### REGLAS DE FINAGLE
 
-1. Para estudiar mejor un asunto, entiéndalo en profundidad antes de empezar.
-2. Lleve siempre un registro de datos; así demostrará que ha estado trabajando.
-3. Primero dibuje curvas y después elabore el texto.
-4. En caso de duda, que suene muy convincente.
-5. Los experimentos deben ser análogos, es decir, todos deben fallar de la misma manera.
-6. No crea en los milagros, confíe en ellos.
+1. Para estudiar mejor un asunto, entiéndalo en profundidad antes de empezar
+1. Lleve siempre un registro de datos; así demostrará que ha estado trabajando
+1. Primero dibuje curvas y después elabore el texto
+1. En caso de duda, que suene muy convincente
+1. Los experimentos deben ser análogos, es decir, todos deben fallar de la misma manera
+1. No crea en los milagros, confíe en ellos
 
-PRIMERA LEY DE SODD.
+### Primera Ley de SODD
 
-- Cuando una persona emprende una tarea, la intervención inconsciente de otra presencia (animada o inanimada) desbaratará sus planes. Sin embargo, algunas tareas se pueden terminar debido a que esa presencia que interviene también está realizando una tarea y, evidentemente, también está expuesta a que usted intervenga.
+- Cuando una persona emprende una tarea, la intervención inconsciente de otra presencia (animada o inanimada) desbaratará sus planes. Sin embargo, algunas tareas se pueden terminar debido a que esa presencia que interviene también está realizando una tarea y, evidentemente, también está expuesta a que usted intervenga
 
-SEGUNDA LEY DE SODD.
+### Segunda Ley de SODD
 
-- Antes o después, puede tener la más completa seguridad de que se producirán las circunstancias más desfavorables.
+- Antes o después, puede tener la más completa seguridad de que se producirán las circunstancias más desfavorables
 
-Corolario.
+#### Corolario
 
-- Todo sistema se debe diseñar para que se pueda oponer a las circunstancias más desfavorables.
+- Todo sistema se debe diseñar para que se pueda oponer a las circunstancias más desfavorables
 
-PARADOJA DE MURPHY.
+### Paradoja de Murphy
 
-- Siempre es más fácil hacerlo de la forma más difícil.
+- Siempre es más fácil hacerlo de la forma más difícil
 
-LEY DE MURPHY SOBRE LA TERMODINÁMICA.
+### Ley de Murphy SOBRE LA TERMODINÁMICA
 
-- Todo empeora a elevadas presiones.
+- Todo empeora a elevadas presiones
 
-LEY DE PUDDER.
+### Ley de PUDDER
 
-- Todo lo que empieza bien, acaba mal.
-- Todo lo que empieza mal, acaba de puta pena.
+- Todo lo que empieza bien, acaba mal
+- Todo lo que empieza mal, acaba de puta pena
 
-POSTULADO DE TYLCZAK SOBRE LA PROBABILIDAD.
+### Postulado de TYLCZAK SOBRE LA PROBABILIDAD
 
-- Los sucesos fortuitos tienden a suceder todos juntos.
+- Los sucesos fortuitos tienden a suceder todos juntos
 
-## Murphyología aplicada.
+## Murphyología aplicada
 
-LEY DE PATTISON SOBRE LA ELECTRÓNICA.
+### Ley de PATTISON SOBRE LA ELECTRÓNICA
 
-- Si los cables se pueden conectar de dos o más formas diferentes, la primera de ellas es la que funde los plomos.
+- Si los cables se pueden conectar de dos o más formas diferentes, la primera de ellas es la que funde los plomos
 
-LEYES UNIVERSALES SOBRE LOS MÉTODOS RECOMENDADOS POR EL COMITÉ DE LA SOCIEDAD DE LOS INGENIEROS FILÓSOFOS PARA INGENIEROS INGENUOS.
+### LEYES UNIVERSALES SOBRE LOS MÉTODOS RECOMENDADOS POR EL COMITÉ DE LA SOCIEDAD DE LOS INGENIEROS FILÓSOFOS PARA INGENIEROS INGENUOS
 
-1. En cualquier cálculo, si se tiene que colar un error, se colará.
-2. Cualquier error de cualquier cálculo, será el que más daños produzca.
-3. En cualquier fórmula, las constantes (especialmente las que se han sacado de libros de Ingeniería) se deben considerar como variables.
-4. La mejor aproximación a las condiciones de funcionamiento en el laboratorio, ni siquiera se aproximará a las condiciones reales de funcionamiento.
-5. La dimensión más importante de cualquier plano o proyecto es la que tiene más posibilidades de que la pasemos por alto.
-6. Si sólo existe una oferta para un determinado proyecto, lo más seguro es que el precio no sea razonable.
-7. Si una instalación de prueba funciona perfectamente, las unidades que produzca no funcionarán en absoluto.
-8. Todas las promesas sobre los plazos de entrega deben multiplicarse por un factor igual a 2,0..
-9. Los cambios importantes de diseño se solicitarán cuando el proceso de fabricación esté a punto de terminar.
-10. Las piezas que no se puedan montar más que en un cierto orden, se podrán intercambiar.
-11. Las piezas intercambiables, por el contrario, demostrarán que no lo son.
-12. Las especificaciones del fabricante sobre el rendimiento se deben multiplicar por un factor igual a 0,5
-13. Las afirmaciones del personal del Departamento de Ventas sobre el rendimiento se deben multiplicar por un factor igual a 0,25.
-14. Las instrucciones de instalación y funcionamiento que vienen con el aparato, las habrán tirado los del Departamento de Recepción de Mercancías.
-15. La pieza que precise algún ajuste será la menos accesible.
-16. Las condiciones de servicio, tal y como vienen en las instrucciones, se quedarán cortas rápidamente.
-17. Si hay más de una persona a la que se le pueda echar la culpa de un error de cálculo, la culpa no será de nadie.
-18. Aparatos idénticos que han tenido el mismo comportamiento en las pruebas, no se comportarán igual en la práctica.
-19. Si, en la práctica existe un factor de seguridad que ha determinado la experiencia, siempre habrá algún idiota ingenioso que lo sobrepase.
-20. Las cláusulas de garantía expiran al pago de la factura.
+1. En cualquier cálculo, si se tiene que colar un error, se colará
+1. Cualquier error de cualquier cálculo, será el que más daños produzca
+1. En cualquier fórmula, las constantes (especialmente las que se han sacado de libros de Ingeniería) se deben considerar como variables
+1. La mejor aproximación a las condiciones de funcionamiento en el laboratorio, ni siquiera se aproximará a las condiciones reales de funcionamiento
+1. La dimensión más importante de cualquier plano o proyecto es la que tiene más posibilidades de que la pasemos por alto
+1. Si sólo existe una oferta para un determinado proyecto, lo más seguro es que el precio no sea razonable
+1. Si una instalación de prueba funciona perfectamente, las unidades que produzca no funcionarán en absoluto
+1. Todas las promesas sobre los plazos de entrega deben multiplicarse por un factor igual a 2,0
+1. Los cambios importantes de diseño se solicitarán cuando el proceso de fabricación esté a punto de terminar
+1. Las piezas que no se puedan montar más que en un cierto orden, se podrán intercambiar
+1. Las piezas intercambiables, por el contrario, demostrarán que no lo son
+1. Las especificaciones del fabricante sobre el rendimiento se deben multiplicar por un factor igual a 0,5
+1. Las afirmaciones del personal del Departamento de Ventas sobre el rendimiento se deben multiplicar por un factor igual a 0,25
+1. Las instrucciones de instalación y funcionamiento que vienen con el aparato, las habrán tirado los del Departamento de Recepción de Mercancías
+1. La pieza que precise algún ajuste será la menos accesible
+1. Las condiciones de servicio, tal y como vienen en las instrucciones, se quedarán cortas rápidamente
+1. Si hay más de una persona a la que se le pueda echar la culpa de un error de cálculo, la culpa no será de nadie
+1. Aparatos idénticos que han tenido el mismo comportamiento en las pruebas, no se comportarán igual en la práctica
+1. Si, en la práctica existe un factor de seguridad que ha determinado la experiencia, siempre habrá algún idiota ingenioso que lo sobrepase
+1. Las cláusulas de garantía expiran al pago de la factura
 
-PRINCIPIO DE HEISENBERG SOBRE LA INCERTIDUMBRE.
+### PRINCIPIO DE HEISENBERG SOBRE LA INCERTIDUMBRE
 
-- La localización de todos los objetos no se puede conocer de forma simultánea.
+- La localización de todos los objetos no se puede conocer de forma simultánea
 
-Corolario.
+#### Corolario
 
-- Si encuentra un objeto que estaba perdido, desaparecerá otro.
+- Si encuentra un objeto que estaba perdido, desaparecerá otro
 
-OBSERVACION DE OIENS.
+### OBSERVACION DE OIENS
 
-- La forma más rápida de encontrar algo es empezar a buscar otra cosa.
+- La forma más rápida de encontrar algo es empezar a buscar otra cosa
 
-. LEY DE BOOB.
+### Ley de BOOB
 
-- Las cosas siempre se encuentran en el último sitio en que se mira.
+- Las cosas siempre se encuentran en el último sitio en que se mira
 
-FENÓMENOS TELEFÓNICOS DE FRANK.
+### FENÓMENOS TELEFÓNICOS DE FRANK
 
-1. Si tiene lápiz, no tiene papel.
-2. Si tiene papel, no tiene lápiz.
-3. Si tiene las dos cosas, nadie le deja un recado.
+1. Si tiene lápiz, no tiene papel
+1. Si tiene papel, no tiene lápiz
+1. Si tiene las dos cosas, nadie le deja un recado
 
-LEY DE PARK SOBRE PRIMAS DE SEGUROS E IMPUESTOS.
+### Ley de PARK SOBRE PRIMAS DE SEGUROS E IMPUESTOS
 
-- Todo lo que sube, permanece arriba.
+- Todo lo que sube, permanece arriba
 
-PRIMERA LEY SOBRE LA DINÁMICA DEL DINERO.
+### PRIMERA LEY SOBRE LA DINÁMICA DEL DINERO
 
-- Un ingreso imprevisto siempre viene acompañado de un gasto inesperado por la misma cantidad.
+- Un ingreso imprevisto siempre viene acompañado de un gasto inesperado por la misma cantidad
 
-LEY DE HEID SOBRE LAS COLAS.
+### Ley de HEID SOBRE LAS COLAS
 
-- Llegue a la hora que llegue, siempre habrá más gente en la cola.
+- Llegue a la hora que llegue, siempre habrá más gente en la cola
 
-LEY DE JOHNSON Y LAIRD.
+### Ley de JOHNSON Y LAIRD
 
-- Los dolores de muelas empiezan siempre los viernes por la noche.
+- Los dolores de muelas empiezan siempre los viernes por la noche
 
-Corolario.
+#### Corolario
 
-- Si usted es el jefe, los dolores de muelas de sus empleados empiezan siempre los lunes por la mañana.
+- Si usted es el jefe, los dolores de muelas de sus empleados empiezan siempre los lunes por la mañana
 
-LEY DE PARSON SOBRE LOS PASAPORTES.
+### Ley de PARSON SOBRE LOS PASAPORTES
 
-- Nadie es tan feo como en la foto del pasaporte.
+- Nadie es tan feo como en la foto del pasaporte
 
-## Murphyología avanzada.
+## Murphyología avanzada
 
-LEY DE MURPHY.
+### Ley de Murphy
 
-- Si algo tiene que salir mal, saldrá mal.
+- Si algo tiene que salir mal, saldrá mal
 
-SÍNTESIS DE SCHNATTERLY SOBRE LOS COROLARIOS.
+### SÍNTESIS DE SCHNATTERLY SOBRE LOS COROLARIOS
 
-- Si algo no puede salir mal, saldrá mal.
+- Si algo no puede salir mal, saldrá mal
 
-PARADOJA DE SIVERMAN.
+### Paradoja de SIVERMAN
 
-- Si la Ley de Murphy tiene que salir mal, saldrá mal.
+- Si la Ley de Murphy tiene que salir mal, saldrá mal
 
-EXTENSIÓN A LA LEY DE MURPHY.
+### EXTENSIÓN A LA Ley de Murphy
 
-- Si una serie de sucesos puede salir mal, saldrá mal en la peor secuencia posible.
+- Si una serie de sucesos puede salir mal, saldrá mal en la peor secuencia posible
 
-COROLARIO DE FARNDICK DEL QUINTO COROLARIO.
+### COROLARIO DE FARNDICK DEL QUINTO COROLARIO
 
-- Después de que las cosas hayan ido de mal en peor, el ciclo se repetirá.
+- Después de que las cosas hayan ido de mal en peor, el ciclo se repetirá
 
-EXTENSIÓN DE GATTUSO DE LA LEY DE MURPHY.
+### EXTENSIÓN DE GATTUSO DE LA Ley de Murphy
 
-- Nada es tan malo nunca como para qué no pueda empeorar.
+- Nada es tan malo nunca como para qué no pueda empeorar
 
-LEY DE MURPHY SOBRE EL GOBIERNO.
+### Ley de Murphy SOBRE EL GOBIERNO
 
-- Si algo puede ir mal, lo hará por triplicado.
+- Si algo puede ir mal, lo hará por triplicado
 
-ANEXO A LA LEY DE MURPHY.
+### ANEXO A LA Ley de Murphy
 
-- En términos matemáticos precisos, 1 + 1 = 2, donde el símbolo "=" significa "rara vez, si acaso".
+- En términos matemáticos precisos, 1 + 1 = 2, donde el símbolo "=" significa "rara vez, si acaso"
 
-REGLA DE FAHNSTOCK SOBRE EL FRACASO.
+### REGLA DE FAHNSTOCK SOBRE EL FRACASO
 
-- Si no atina a la primera, destruya todas las evidencias de que lo ha intentado.
+- Si no atina a la primera, destruya todas las evidencias de que lo ha intentado
 
-CITA EQUIVOCADA DE GROSSMAN SOBRE H.L. MENCKEN.
+### CITA EQUIVOCADA DE GROSSMAN SOBRE H.L. MENCKEN
 
-- Los problemas complejos, tienen soluciones erróneas sencillas y fáciles de entender.
+- Los problemas complejos, tienen soluciones erróneas sencillas y fáciles de entender
 
-LEY DE FLUGG.
+### Ley de FLUGG
 
-- Cuando se necesita tocar madera es cuando nos damos cuenta de que el mundo está compuesto de aluminio y vinilo.
+- Cuando se necesita tocar madera es cuando nos damos cuenta de que el mundo está compuesto de aluminio y vinilo
 
-LEY DE IMBESI SOBRE LA CONSERVACIÓN DE LA SUCIEDAD.
+### Ley de IMBESI SOBRE LA CONSERVACIÓN DE LA SUCIEDAD
 
-- Para limpiar algo, hay que ensuciar otra cosa.
+- Para limpiar algo, hay que ensuciar otra cosa
 
-Extensión de Freeman.
+### Extensión de Freeman
 
-- Pero se puede ensuciar todo sin limpiar nada.
+- Pero se puede ensuciar todo sin limpiar nada
 
-LEY AVANZADA DE LA BÚSQUEDA.
+### LEY AVANZADA DE LA BÚSQUEDA
 
-- El primer sitio donde se debe empezar a buscar algo, es en el último donde se esperaría encontrarlo.
+- El primer sitio donde se debe empezar a buscar algo, es en el último donde se esperaría encontrarlo
 
-LEY DE MARYANN.
+### Ley de MARYANN
 
-- Siempre se encuentra lo que no se busca.
+- Siempre se encuentra lo que no se busca
 
-LEY INAPLICABLE.
+### LEY INAPLICABLE
 
-- Lavar el coche para que llueva no suele dar resultado.
+- Lavar el coche para que llueva no suele dar resultado
 
-LEY DE NAESER.
+### Ley de NAESER
 
-- Puede hacer algo a prueba de tontos, pero no puede hacer nada a prueba de ese maldito tonto.
+- Puede hacer algo a prueba de tontos, pero no puede hacer nada a prueba de ese maldito tonto
 
-LEY DE DUDE SOBRE LA DUALIDAD.
+### Ley de DUDE SOBRE LA DUALIDAD
 
-- De dos acontecimientos posibles, sólo ocurrirá el no deseado.
+- De dos acontecimientos posibles, sólo ocurrirá el no deseado
 
-LEY DE HANE.
+### Ley de HANE
 
-- No existen límites para que las cosas vayan mal.
+- No existen límites para que las cosas vayan mal
 
-LEY DE PERRUSEL.
+### Ley de PERRUSEL
 
-- No hay tarea tan simple que no pueda hacerse mal.
+- No hay tarea tan simple que no pueda hacerse mal
 
-LEYES DE LACKLAND.
+### LEYES DE LACKLAND
 
-1. Nunca sea el primero.
-2. Nunca sea el último.
-3. Nunca se presente voluntario para nada.
+1. Nunca sea el primero
+1. Nunca sea el último
+1. Nunca se presente voluntario para nada
 
-PRINCIPIO DE PAROUZZI.
+### PRINCIPIO DE PAROUZZI
 
-- Dado un mal comienzo, los problemas se incrementarán en proporción exponencial.
+- Dado un mal comienzo, los problemas se incrementarán en proporción exponencial
 
-EL FACTOR CHI.
+### EL FACTOR CHI
 
-- Cantidad = 1 / Calidad ; o la cantidad es inversamente proporcional a la calidad.
+- Cantidad = 1 / Calidad ; o la cantidad es inversamente proporcional a la calidad
 
-LEY DE KEN.
+### Ley de KEN
 
-- Una partícula que se desplaza, buscará el ojo más próximo.
+- Una partícula que se desplaza, buscará el ojo más próximo
 
-LEY DE SCHOPENHAUER SOBRE LA ENTROPÍA.
+### Ley de SCHOPENHAUER SOBRE LA ENTROPÍA
 
-- Si se añade una cucharada de vino a un barril lleno de deshechos, se obtienen deshechos.
+- Si se añade una cucharada de vino a un barril lleno de deshechos, se obtienen deshechos
 
-- Si se añade una cucharada de deshechos a un barril lleno de vino, se obtienen deshechos.
+- Si se añade una cucharada de deshechos a un barril lleno de vino, se obtienen deshechos
 
-LEY DE ALLEN.
+### Ley de ALLEN
 
-- Casi siempre es más fácil entrar que salir.
+- Casi siempre es más fácil entrar que salir
 
-LEY DE FROTHINGHAM.
+### Ley de FROTHINGHAM
 
-- La urgencia es algo inversamente proporcional a su importancia.
+- La urgencia es algo inversamente proporcional a su importancia
 
-PRINCIPIO DE ROCKEFELLER.
+### PRINCIPIO DE ROCKEFELLER
 
-- Nunca haga nada que sólo le gustaría que le vieran haciéndolo una vez muerto.
+- Nunca haga nada que sólo le gustaría que le vieran haciéndolo una vez muerto
 
-LEY DE YOUNG SOBRE LA MOVILIDAD INANIMADA.
+### Ley de YOUNG SOBRE LA MOVILIDAD INANIMADA
 
-- Todos los objetos inanimados, pueden moverse lo suficiente como para estorbar.
+- Todos los objetos inanimados, pueden moverse lo suficiente como para estorbar
 
-## Burocracia, jerarqueología y comiteología.
+## Burocracia, jerarqueología y comiteología
 
-PRINCIPIO DE LA BUROCRACIA
+### PRINCIPIO DE LA BUROCRACIA
 
-- Sólo la burocracia puede combatir a la burocracia.
+- Sólo la burocracia puede combatir a la burocracia
 
-Corolario
+#### Corolario
 
-- Nunca se deje atrapar entre dos burocracias.
+- Nunca se deje atrapar entre dos burocracias
 
-LEY DE YOUNG.
+### Ley de YOUNG
 
-- La madera muerta es la que sostiene al árbol.
+- La madera muerta es la que sostiene al árbol
 
-Corolario.
+#### Corolario
 
-- Que esté en pie, no significa que no esté muerto.
+- Que esté en pie, no significa que no esté muerto
 
-PRINCIPIO DE HOFFSTEDT SOBRE EL EMPLEO.
+### PRINCIPIO DE HOFFSTEDT SOBRE EL EMPLEO
 
-- La confusión crea empleo.
+- La confusión crea empleo
 
-LEY DE SOPER.
+### Ley de SOPER
 
-- Cualquier burocracia que se reorganiza para incrementar la eficiencia, inmediatamente se hace indistinguible de su predecesora.
+- Cualquier burocracia que se reorganiza para incrementar la eficiencia, inmediatamente se hace indistinguible de su predecesora
 
-TEORÍA DE OWEN SOBRE LA DESVIACIÓN ORGANIZATIVA.
+### TEORÍA DE OWEN SOBRE LA DESVIACIÓN ORGANIZATIVA
 
-- Toda organización tiene asignado un cierto número de plazas para que las ocupen personas no cualificadas.
+- Toda organización tiene asignado un cierto número de plazas para que las ocupen personas no cualificadas
 
-Corolario.
+#### Corolario
 
-- Cuando una de esas personas no cualificadas deja el puesto, se contrata a otra.
+- Cuando una de esas personas no cualificadas deja el puesto, se contrata a otra
 
-TEORÍA DE GOIA.
+### TEORÍA DE GOIA
 
-- La persona menos cualificada es la que da más opiniones.
+- La persona menos cualificada es la que da más opiniones
 
-OBSERVACIÓN SOBRE LA DIRECCIÓN.
+### OBSERVACIÓN SOBRE LA DIRECCIÓN
 
-- La ineficacia y la estupidez del personal corresponde a la ineficacia y estupidez de los directivos.
+- La ineficacia y la estupidez del personal corresponde a la ineficacia y estupidez de los directivos
 
-LEY DE AMAND SOBRE DIRECCIÓN.
+### Ley de AMAND SOBRE DIRECCIÓN
 
-- Todo el mundo está siempre en otro sitio.
+- Todo el mundo está siempre en otro sitio
 
-EL PELIGRO DEL GENIO.
+### EL PELIGRO DEL GENIO
 
-- Cualquier jefe despedirá a un empleado que siempre tenga razón.
+- Cualquier jefe despedirá a un empleado que siempre tenga razón
 
-LEMA DE LIPPMAN.
+### LEMA DE LIPPMAN
 
-- La gente se especializa siempre en el campo que menos conoce.
+- La gente se especializa siempre en el campo que menos conoce
 
-LEY DE HUTCHINS.
+### Ley de HUTCHINS
 
-- No se puede hablar más que un hombre que no sabe de lo que está hablando.
+- No se puede hablar más que un hombre que no sabe de lo que está hablando
 
-COSAS EN LAS QUE SE PUEDE CONFIAR EN UNA CRISIS.
+### COSAS EN LAS QUE SE PUEDE CONFIAR EN UNA CRISIS
 
-- Marketing dice que sí.
+- Marketing dice que sí
 
-- Finanzas dice que no.
+- Finanzas dice que no
 
-- El Departamento Legal tiene que revisarlo.
+- El Departamento Legal tiene que revisarlo
 
-- El Departamento de Personal está preocupado.
+- El Departamento de Personal está preocupado
 
-- El Departamento de Planificación está frenético.
+- El Departamento de Planificación está frenético
 
-- Ingeniería pasa de todo.
+- Ingeniería pasa de todo
 
-- Fabricación quiere más espacio.
+- Fabricación quiere más espacio
 
-- Dirección quiere responsabilizar a alguien.
+- Dirección quiere responsabilizar a alguien
 
-LEY DE FAHNSTOCK SOBRE EL DEBATE.
+### Ley de FAHNSTOCK SOBRE EL DEBATE
 
-- Todo tema que merezca la pena debatir, merece la pena evitarlo por completo.
+- Todo tema que merezca la pena debatir, merece la pena evitarlo por completo
 
-LEYES DE MITCHELL SOBRE LA COMITEOLOGÍA.
+### LEYES DE MITCHELL SOBRE LA COMITEOLOGÍA
 
-- Cualquier problema sencillo se puede convertir en insoluble si se celebran suficientes reuniones para discutirlo.
+- Cualquier problema sencillo se puede convertir en insoluble si se celebran suficientes reuniones para discutirlo
 
-- Una vez que se presente al comité la forma de echar a perder el proyecto, será aceptada invariablemente como la solución más acertada.
+- Una vez que se presente al comité la forma de echar a perder el proyecto, será aceptada invariablemente como la solución más acertada
 
-- Después de que esa solución haya hecho fracasar el proyecto, todos los que la apoyaron inicialmente dirán: "¡Ojalá hubiera expresado entonces mis dudas!".
+- Después de que esa solución haya hecho fracasar el proyecto, todos los que la apoyaron inicialmente dirán: "¡Ojalá hubiera expresado entonces mis dudas!"
 
-COMENTARIO DE KENNEDY SOBRE LOS COMITÉS.
+### COMENTARIO DE KENNEDY SOBRE LOS COMITÉS
 
-- Un comité lo constituyen doce hombres haciendo el trabajo de uno.
+- Un comité lo constituyen doce hombres haciendo el trabajo de uno
 
-COMENTARIO DE KIRBY SOBRE LOS COMITÉS.
+### COMENTARIO DE KIRBY SOBRE LOS COMITÉS
 
-- Un comité es la única forma de vida que tiene doce estómagos, pero carece de cerebro.
+- Un comité es la única forma de vida que tiene doce estómagos, pero carece de cerebro
 
-PRINCIPIO DE COLLINS SOBRE LAS CONFERENCIAS.
+### PRINCIPIO DE COLLINS SOBRE LAS CONFERENCIAS
 
-- El orador con voz más monótona siempre habla después de comer.
+- El orador con voz más monótona siempre habla después de comer
 
-LEY DE LA DINÁMICA DE LOS COMITÉS.
+### Ley de LA DINÁMICA DE LOS COMITÉS
 
-- Todos los que más se oponen a formar parte de un comité, son elegidos presidentes.
+- Todos los que más se oponen a formar parte de un comité, son elegidos presidentes
 
-LEY DE MATILDA SOBRE LA FORMACIÓN DE UN SUBCOMITÉ.
+### Ley de MATILDA SOBRE LA FORMACIÓN DE UN SUBCOMITÉ
 
-- Si abandona la sala, saldrá elegido.
+- Si abandona la sala, saldrá elegido
 
-LEY DE JACOBSON.
+### Ley de JACOBSON
 
-- Cuanto menos trabajo tiene una organización, con más frecuencia se reorganiza.
+- Cuanto menos trabajo tiene una organización, con más frecuencia se reorganiza
 
-## Jerarqueología y comiteología.
+## Jerarqueología y comiteología
 
-POSTULADO DE PERKIN.
+### Postulado de PERKIN
 
-- Cuanto más grandes son, más daño hacen.
+- Cuanto más grandes son, más daño hacen
 
-POSTULADO DE HARRISON.
+### Postulado de HARRISON
 
-- Para cualquier acción, existe una crítica igual y antagónica.
+- Para cualquier acción, existe una crítica igual y antagónica
 
-REGLA DE ROGER.
+### REGLA DE ROGER
 
-- Se concederá autorización para un proyecto únicamente cuando ninguno de los que lo autorizan pueda ser culpado si el proyecto fracasa, pero todos se lo puedan atribuir si resulta un éxito.
+- Se concederá autorización para un proyecto únicamente cuando ninguno de los que lo autorizan pueda ser culpado si el proyecto fracasa, pero todos se lo puedan atribuir si resulta un éxito
 
-LEY DE CONWAY.
+### Ley de CONWAY
 
-- En una organización, siempre hay una persona que sabe qué es lo que se cuece. Hay que despedirla inmediatamente.
+- En una organización, siempre hay una persona que sabe qué es lo que se cuece. Hay que despedirla inmediatamente
 
-TEOREMA DE BACHMAN SOBRE LA INEVITABILIDAD.
+### Teorema de BACHMAN SOBRE LA INEVITABILIDAD
 
-- Cuanto mayor sea el coste para poner en práctica un plan, menor probabilidad existe de que se abandone, aunque posteriormente se demuestre que no era conveniente.
+- Cuanto mayor sea el coste para poner en práctica un plan, menor probabilidad existe de que se abandone, aunque posteriormente se demuestre que no era conveniente
 
-Corolario.
+#### Corolario
 
-- Cuanto más alto sea el nivel de prestigio que un plan proporcionará a las personas que lo han ideado, menor será la posibilidad de abandonarlo.
+- Cuanto más alto sea el nivel de prestigio que un plan proporcionará a las personas que lo han ideado, menor será la posibilidad de abandonarlo
 
-PRIMERA REGLA DE LA INFERIORIDAD SUPERIOR.
+### PRIMERA REGLA DE LA INFERIORIDAD SUPERIOR
 
-- No permita que sus superiores se den cuenta de que usted es superior a ellos.
+- No permita que sus superiores se den cuenta de que usted es superior a ellos
 
-LEY DE WHISTLER.
+### Ley de WHISTLER
 
-- Nunca se sabe quien tiene razón, pero siempre se sabe quien manda.
+- Nunca se sabe quien tiene razón, pero siempre se sabe quien manda
 
-LEYES DE SPENCER SOBRE LOS DATOS.
+### LEYES DE SPENCER SOBRE LOS DATOS
 
-1. Cualquiera puede tomar una decisión si se le proporcionan datos suficientes.
+1. Cualquiera puede tomar una decisión si se le proporcionan datos suficientes
 
-2. Un buen gerente puede tomar una decisión sin datos suficientes.
+1. Un buen gerente puede tomar una decisión sin datos suficientes
 
-3. Un gerente perfecto puede trabajar en la más completa ignorancia.
+1. Un gerente perfecto puede trabajar en la más completa ignorancia
 
-LEY DE DREW SOBRE LAS PRÁCTICAS PROFESIONALES.
+### Ley de DREW SOBRE LAS PRÁCTICAS PROFESIONALES
 
-- El cliente que paga menos es el que más se queja.
+- El cliente que paga menos es el que más se queja
 
-LEY DE COHN.
+### Ley de COHN
 
-- En cualquier burocracia, el trabajo de oficina aumentará a medida que usted pase cada vez más tiempo redactando informes sobre lo poco que hace. La estabilidad se alcanzará sólo cuando usted se pase todo el tiempo redactando informes sobre lo que, en absoluto, está haciendo.
+- En cualquier burocracia, el trabajo de oficina aumentará a medida que usted pase cada vez más tiempo redactando informes sobre lo poco que hace. La estabilidad se alcanzará sólo cuando usted se pase todo el tiempo redactando informes sobre lo que, en absoluto, está haciendo
 
-LEY DE KUSHER.
+### Ley de KUSHER
 
-- Las probabilidades de que alguien haga algo son inversamente proporcionales al número de personas que pueden hacerlo en su lugar.
+- Las probabilidades de que alguien haga algo son inversamente proporcionales al número de personas que pueden hacerlo en su lugar
 
-PRINCIPIO DE PFEIFER.
+### PRINCIPIO DE PFEIFER
 
-- Nunca tome una decisión si puede lograr que la tome otro en su lugar.
+- Nunca tome una decisión si puede lograr que la tome otro en su lugar
 
-Corolario.
+#### Corolario
 
-- Nadie lleva un registro de las decisiones que usted pudo haber tomado, pero se evitaron. Todo el mundo lleva un registro de las que tomó y resultaron un desastre.
+- Nadie lleva un registro de las decisiones que usted pudo haber tomado, pero se evitaron. Todo el mundo lleva un registro de las que tomó y resultaron un desastre
 
-LEY DE McDONALD.
+### Ley de McDONALD
 
-- Es difícil que le cambien de departamento cuando, en realidad, sobra.
+- Es difícil que le cambien de departamento cuando, en realidad, sobra
 
-LEY DE LA DISPERSIÓN PROBABLE.
+### Ley de LA DISPERSIÓN PROBABLE
 
-- Cualquier cosa que choque contra el ventilador no se distribuirá uniformemente.
+- Cualquier cosa que choque contra el ventilador no se distribuirá uniformemente
 
-PRINCIPIO DE LUPOSCHAINSKI DE "DESE PRISA Y ESPERE".
+### PRINCIPIO DE LUPOSCHAINSKI DE "DESE PRISA Y ESPERE"
 
-- Si llega pronto, lo suspenderán.
+- Si llega pronto, lo suspenderán
 
-- Si se esfuerza demasiado por llegar a tiempo, tendrá que esperar.
+- Si se esfuerza demasiado por llegar a tiempo, tendrá que esperar
 
-- Si llega con retraso, será demasiado tarde.
+- Si llega con retraso, será demasiado tarde
 
-AXIOMA DE GOURD
+### AXIOMA DE GOURD
 
-- Una reunión es una situación en la que se levantan actas y se pierden horas.
+- Una reunión es una situación en la que se levantan actas y se pierden horas
 
-PRIMERA LEY DE LAS REUNIONES DE NEGOCIOS.
+### Primera Ley de LAS REUNIONES DE NEGOCIOS
 
-- La rotura de la punta del lápiz es directamente proporcional a la importancia de las notas que haya que tomar.
+- La rotura de la punta del lápiz es directamente proporcional a la importancia de las notas que haya que tomar
 
-SEGUNDA LEY DE LAS REUNIONES DE NEGOCIOS.
+### Segunda Ley de LAS REUNIONES DE NEGOCIOS
 
-- Si hay dos maneras de pronunciar el nombre de una persona, usted lo pronunciará de la que no es.
+- Si hay dos maneras de pronunciar el nombre de una persona, usted lo pronunciará de la que no es
 
-LEY DE WELLINGTON SOBRE LA AUTORIDAD.
+### Ley de WELLINGTON SOBRE LA AUTORIDAD
 
-- La crema sube a la superficie.
+- La crema sube a la superficie
 
-- La mierda, también.
+- La mierda, también
 
-PRINCIPIO DE PETER.
+### PRINCIPIO DE PETER
 
-- En cualquier jerarquía, todo empleado tiene a incrementar su nivel de incompetencia.
+- En cualquier jerarquía, todo empleado tiene a incrementar su nivel de incompetencia
 
-Corolario.
+#### Corolario
 
-1. Con el tiempo, todos los puestos tienden a que los ocupe un empleado incompetente.
+1. Con el tiempo, todos los puestos tienden a que los ocupe un empleado incompetente
 
-2. El trabajo lo realiza un empleado que todavía no ha alcanzado el nivel ideal de incompetencia.
+1. El trabajo lo realiza un empleado que todavía no ha alcanzado el nivel ideal de incompetencia
 
-TEOREMA DE PETER.
+### Teorema de PETER
 
-- Incompetencia + Incompetencia = Incompetencia.
+- Incompetencia + Incompetencia = Incompetencia
 
-PLACEBO DE PETER.
+### PLACEBO DE PETER
 
-- Un gramo de imagen equivale a un kilo de rendimiento.
+- Un gramo de imagen equivale a un kilo de rendimiento
 
-AXIOMA DE VAIL.
+### AXIOMA DE VAIL
 
-- En cualquier empresa humana, el trabajo busca el nivel jerárquico inferior.
+- En cualquier empresa humana, el trabajo busca el nivel jerárquico inferior
 
-LEY DE IMHOFF.
+### Ley de IMHOFF
 
-- La organización de cualquier burocracia se parece mucho a un tanque séptico. Los trozos más grandes, siempre suben a la superficie.
+- La organización de cualquier burocracia se parece mucho a un tanque séptico. Los trozos más grandes, siempre suben a la superficie
 
-PRIMERA LEY DE PARKINSON.
+### Primera Ley de PARKINSON
 
-- Cualquier trabajo se expande hasta agotar el tiempo destinado a que se haga. El incremento de la importancia de lo que hay que hacer es directamente proporcional al tiempo que se tarda en hacerlo.
+- Cualquier trabajo se expande hasta agotar el tiempo destinado a que se haga. El incremento de la importancia de lo que hay que hacer es directamente proporcional al tiempo que se tarda en hacerlo
 
-SEGUNDA LEY DE PARKINSON.
+### Segunda Ley de PARKINSON
 
-- Los gastos aumentan hasta cubrir los ingresos.
+- Los gastos aumentan hasta cubrir los ingresos
 
-TERCERA LEY DE PARKINSON.
+### TERCERA Ley de PARKINSON
 
-- Expansión implica complejidad y la complejidad deterioro.
+- Expansión implica complejidad y la complejidad deterioro
 
-CUARTA LEY DE PARKINSON.
+### CUARTA Ley de PARKINSON
 
-- El número de personas que integran un grupo de trabajo tiende a aumentar independientemente del trabajo que haya que realizar.
+- El número de personas que integran un grupo de trabajo tiende a aumentar independientemente del trabajo que haya que realizar
 
-QUINTA LEY DE PARKINSON.
+### QUINTA Ley de PARKINSON
 
-- Si existe una manera de retrasar una decisión importante, una burocracia eficaz, pública o privada, la encontrará.
+- Si existe una manera de retrasar una decisión importante, una burocracia eficaz, pública o privada, la encontrará
 
-AXIOMAS DE PARKINSON.
+### AXIOMAS DE PARKINSON
 
-1. Un funcionario quiere multiplicar el número de sus subordinados, no el de sus rivales.
+1. Un funcionario quiere multiplicar el número de sus subordinados, no el de sus rivales
 
-2. Los funcionarios se ayudan a la hora de hacer el trabajo.
+1. Los funcionarios se ayudan a la hora de hacer el trabajo
 
-LEY DE CORNUELLE.
+### Ley de CORNUELLE
 
-- La autoridad tiende a asignar tareas a los menos capaces de realizarlas.
+- La autoridad tiende a asignar tareas a los menos capaces de realizarlas
 
-PRIMERA LEY DE LOS ARTISTAS FREELANCE.
+### Primera Ley de LOS ARTISTAS FREELANCE
 
-- Los encargos urgentísimos, pero muy bien pagados, sólo llegan cuando usted ha aceptado un encargo urgentísimo, pero mal pagado.
+- Los encargos urgentísimos, pero muy bien pagados, sólo llegan cuando usted ha aceptado un encargo urgentísimo, pero mal pagado
 
-SEGUNDA LEY DE LOS ARTISTAS FREELANCE.
+### Segunda Ley de LOS ARTISTAS FREELANCE
 
-- Tendrá que entregar el mismo día todos los trabajos urgentísimos.
+- Tendrá que entregar el mismo día todos los trabajos urgentísimos
 
-TERCERA LEY DE LOS ARTISTAS FREELANCE.
+### TERCERA Ley de LOS ARTISTAS FREELANCE
 
-- El trabajo urgentísimo con el que pasó la noche trabajando, no lo necesitan hasta pasado mañana.
+- El trabajo urgentísimo con el que pasó la noche trabajando, no lo necesitan hasta pasado mañana
 
-LAS DIEZ REGLAS DE SPARK PARA EL DIRECTOR DE PROYECTOS.
+### LAS DIEZ REGLAS DE SPARK PARA EL DIRECTOR DE PROYECTOS
 
-1. Esfuércese por tener siempre un aspecto tremendamente importante.
-2. Intente que le vean con gente importante.
-3. Hable con autoridad, pero sólo de hechos evidentes y comprobados.
-4. No entre en discusiones. Pero, si le acorralan, haga una pregunta intranscendente y eche el cuerpo hacia atrás con una sonrisa satisfecha. Cuando su oponente intente entender que es lo que pasa, aproveche para cambiar de tema.
-5. Escuche absorto como los demás discuten el problema. Ataque a un asunto trivial y apabulle a los otros.
-6. Si un subordinado le hace una pregunta inoportuna, mírele como si se hubiera vuelto loco. Cuando mire al suelo, diríjale a él la misma pregunta con otras palabras.
-7. Consiga un encargo importante, pero no se convierta en el centro de atención.
-8. Cuando salga de la oficina, camine con rapidez. Esto reduce al mínimo las posibilidades de preguntas de los subordinados y superiores.
-9. Mantenga cerrada siempre la puerta de su despacho. Esto hará que sus visitantes se pongan a la defensiva o piensen que usted está en una reunión importante.
-10. De siempre verbalmente todas las órdenes, que no queden pruebas escritas.
+1. Esfuércese por tener siempre un aspecto tremendamente importante
+1. Intente que le vean con gente importante
+1. Hable con autoridad, pero sólo de hechos evidentes y comprobados
+1. No entre en discusiones. Pero, si le acorralan, haga una pregunta intranscendente y eche el cuerpo hacia atrás con una sonrisa satisfecha. Cuando su oponente intente entender que es lo que pasa, aproveche para cambiar de tema
+1. Escuche absorto como los demás discuten el problema. Ataque a un asunto trivial y apabulle a los otros
+1. Si un subordinado le hace una pregunta inoportuna, mírele como si se hubiera vuelto loco. Cuando mire al suelo, diríjale a él la misma pregunta con otras palabras
+1. Consiga un encargo importante, pero no se convierta en el centro de atención
+1. Cuando salga de la oficina, camine con rapidez. Esto reduce al mínimo las posibilidades de preguntas de los subordinados y superiores
+1. Mantenga cerrada siempre la puerta de su despacho. Esto hará que sus visitantes se pongan a la defensiva o piensen que usted está en una reunión importante
+1. De siempre verbalmente todas las órdenes, que no queden pruebas escritas
 
-DILEMA DEL TRABAJADOR.
+### DILEMA DEL TRABAJADOR
 
-1. Haga lo que haga, nunca será suficiente.
-2. Lo que no haga, siempre será más importante que lo que haga.
+1. Haga lo que haga, nunca será suficiente
+1. Lo que no haga, siempre será más importante que lo que haga
 
-LEY DE COMUNICACIONES.
+### Ley de COMUNICACIONES
 
-- El inevitable resultado de la mejor y más amplia comunicación ente los distintos niveles jerárquicos es una zona cada vez más vasta de falta de entendimiento.
+- El inevitable resultado de la mejor y más amplia comunicación ente los distintos niveles jerárquicos es una zona cada vez más vasta de falta de entendimiento
 
-AXIOMAS DEL DIRECTOR.
+### AXIOMAS DEL DIRECTOR
 
-1. Piense antes de actuar: ese dinero no es suyo.
-2. La buena dirección es la expresión de una buena idea.
-3. Ningún ejecutivo dedica ningún esfuerzo a comprobar que se ha equivocado.
-4. Si para justificar una acción necesita cálculos muy complicados, no la emprenda.
+1. Piense antes de actuar: ese dinero no es suyo
+1. La buena dirección es la expresión de una buena idea
+1. Ningún ejecutivo dedica ningún esfuerzo a comprobar que se ha equivocado
+1. Si para justificar una acción necesita cálculos muy complicados, no la emprenda
 
-MÁXIMA DE MATCH.
+### MÁXIMA DE MATCH
 
-- Un tonto en una posición elevada es como un hombre en la cima de una montaña. Al segundo, todo le parece pequeño y él le parece pequeño a todo el mundo.
+- Un tonto en una posición elevada es como un hombre en la cima de una montaña. Al segundo, todo le parece pequeño y él le parece pequeño a todo el mundo
 
-LEYES DE MENCKEN.
+### LEYES DE MENCKEN
 
-- El que puede, lo hace.
-- El que no puede, se dedica a la enseñanza.
+- El que puede, lo hace
+- El que no puede, se dedica a la enseñanza
 
-EXTENSION DE MARTIN
+### EXTENSION DE MARTIN
 
-- Los que no pueden dedicarse a la enseñanza, son funcionarios.
+- Los que no pueden dedicarse a la enseñanza, son funcionarios
 
-LEY DE JONES.
+### Ley de JONES
 
-- El hombre capaz de sonreír cuando las cosas van mal, ya ha pensado a quien le echará la culpa.
+- El hombre capaz de sonreír cuando las cosas van mal, ya ha pensado a quien le echará la culpa
 
-LEY DE SOCIOECONOMÍA.
+### Ley de SOCIOECONOMÍA
 
-- En un sistema jerárquico, el aumento de la retribución por un trabajo dado es inversamente proporcional a la dificultad del mismo y lo desagradable que sea.
+- En un sistema jerárquico, el aumento de la retribución por un trabajo dado es inversamente proporcional a la dificultad del mismo y lo desagradable que sea
 
-LAMENTO DE HARRIS.
+### LAMENTO DE HARRIS
 
-- Los buenos puestos de trabajo ya están ocupados.
+- Los buenos puestos de trabajo ya están ocupados
 
-LEY DE PUTT.
+### Ley de PUTT
 
 El mundo de la tecnología está dominado por dos tipos de personas:
 
-- Los que entienden lo que no dirigen.
-- Los que dirigen lo que no entienden.
+- Los que entienden lo que no dirigen
+- Los que dirigen lo que no entienden
 
-## Comiteología.
+## Comiteología
 
-LEY DE OLD Y KAHN.
+### Ley de OLD Y KAHN
 
-- La eficiencia de un comité es inversamente proporcional al número de participantes que haya y al tiempo que se invierta en las deliberaciones.
+- La eficiencia de un comité es inversamente proporcional al número de participantes que haya y al tiempo que se invierta en las deliberaciones
 
-LEY DE SHANAHAN.
+### Ley de SHANAHAN
 
-- La duración de una reunión es directamente proporcional al número de participantes.
+- La duración de una reunión es directamente proporcional al número de participantes
 
-LEY DE LA TRIVIALIDAD.
+### Ley de LA TRIVIALIDAD
 
-- El tiempo dedicado a discutir cualquier punto del orden del día es inversamente proporcional a la suma implicada.
+- El tiempo dedicado a discutir cualquier punto del orden del día es inversamente proporcional a la suma implicada
 
-LEYES DE ISSAWI SOBRE LA COMITEODINÁMICA.
+### LEYES DE ISSAWI SOBRE LA COMITEODINÁMICA
 
-1. Comitas comitatum, omnia comitas.
-2. Cuanto menos le guste participar en comités, más probable es que le insistan en que su presencia es indispensable.
+1. Comitas comitatum, omnia comitas
+1. Cuanto menos le guste participar en comités, más probable es que le insistan en que su presencia es indispensable
 
-LEY DE HENDRICKSON.
+### Ley de HENDRICKSON
 
-- Si a causa de un problema se convocan muchas reuniones, las reuniones llegarán a ser más importantes que el problema.
+- Si a causa de un problema se convocan muchas reuniones, las reuniones llegarán a ser más importantes que el problema
 
-REGLA DE McNAUGHTON.
+### REGLA DE McNAUGHTON
 
-- En un sistema burocrático, cualquier discusión que merezca la pena emprender, se debe poder expresar con una frase simple que se convertirá en verdad evidente una vez que se haya pronunciado.
+- En un sistema burocrático, cualquier discusión que merezca la pena emprender, se debe poder expresar con una frase simple que se convertirá en verdad evidente una vez que se haya pronunciado
 
-LEY DE TRUMAN.
+### Ley de TRUMAN
 
-- Si no puede convencerlos, confúndalos.
+- Si no puede convencerlos, confúndalos
 
-PRIMERA LEY DEL DEBATE.
+### PRIMERA LEY DEL DEBATE
 
-- No discuta nunca con un tonto. Puede que la gente no aprecie la diferencia.
+- No discuta nunca con un tonto. Puede que la gente no aprecie la diferencia
 
-LEYES DE LA INDECISIÓN.
+### LEYES DE LA INDECISIÓN
 
-1. La indecisión acorta la tarea y traslada a otra persona (el jefe que puso la fecha límite) la responsabilidad de que se concluya.
-2. Reduce la ansiedad, ya que disminuye la calidad esperada del proyecto por tener que hacerlo en tan poco tiempo.
-3. Se gana prestigio ante los demás, y ante uno mismo, ya que se supone que la importancia del trabajo justifica la tensión nerviosa.
-4. Generalmente, también se puede conseguir evitar las interrupciones (por ejemplo, que le asignen nuevas tareas) para que el trabajador, evidentemente, agobiado se pueda concentrar en lo que está haciendo.
-5. La indecisión evita el aburrimiento. Nunca se tiene la sensación de que no hay nada importante que hacer.
-6. Se puede eliminar la tarea, en el caso de que deje de hacer falta antes de que esté concluida.
+1. La indecisión acorta la tarea y traslada a otra persona (el jefe que puso la fecha límite) la responsabilidad de que se concluya
+1. Reduce la ansiedad, ya que disminuye la calidad esperada del proyecto por tener que hacerlo en tan poco tiempo
+1. Se gana prestigio ante los demás, y ante uno mismo, ya que se supone que la importancia del trabajo justifica la tensión nerviosa
+1. Generalmente, también se puede conseguir evitar las interrupciones (por ejemplo, que le asignen nuevas tareas) para que el trabajador, evidentemente, agobiado se pueda concentrar en lo que está haciendo
+1. La indecisión evita el aburrimiento. Nunca se tiene la sensación de que no hay nada importante que hacer
+1. Se puede eliminar la tarea, en el caso de que deje de hacer falta antes de que esté concluida
 
-LEY DE SWIPPLE SOBRE EL ORDEN.
+### Ley de SWIPPLE SOBRE EL ORDEN
 
-- El que grita más, tiene la palabra.
+- El que grita más, tiene la palabra
 
-LEYES DE BOREN.
+### LEYES DE BOREN
 
-1. Cuando tenga dudas, hable entre dientes.
-2. Cuando tenga problemas, delegue.
-3. Cuando sea el jefe, medite.
+1. Cuando tenga dudas, hable entre dientes
+1. Cuando tenga problemas, delegue
+1. Cuando sea el jefe, medite
 
-LEY DE PATTON.
+### Ley de PATTON
 
-- Un buen plan es mejor hoy que un plan perfecto mañana.
+- Un buen plan es mejor hoy que un plan perfecto mañana
 
-## Arte de dirigir y economurphyología.
+## Arte de dirigir y econoMurphyología
 
-LEY DE LIEBERMAN.
+### Ley de LIEBERMAN
 
-- Todo el mundo miente pero no importa, porque nadie escucha.
+- Todo el mundo miente pero no importa, porque nadie escucha
 
-LEY DE LA MENTIRA.
+### Ley de LA MENTIRA
 
-- No importa la frecuencia con que se demuestre que una mentira es falsa. Siempre habrá algunas personas que crean que es verdad.
+- No importa la frecuencia con que se demuestre que una mentira es falsa. Siempre habrá algunas personas que crean que es verdad
 
-LEY DE LA SALCHICHA.
+### Ley de LA SALCHICHA
 
-- Hay personas a quienes les gustan las salchichas y respetan las leyes y es debido a que no han visto como se elaboran ninguna de las dos cosas.
+- Hay personas a quienes les gustan las salchichas y respetan las leyes y es debido a que no han visto como se elaboran ninguna de las dos cosas
 
-LEY DE LA ACCIÓN LEGISLATIVA.
+### Ley de LA ACCIÓN LEGISLATIVA
 
-- El tiempo necesario para que el Parlamento apruebe una ley es inversamente proporcional al número de grupos que la apoyan.
+- El tiempo necesario para que el Parlamento apruebe una ley es inversamente proporcional al número de grupos que la apoyan
 
-LOS DOS PRINCIPIOS POLÍTICOS DE TODD.
+### LOS DOS PRINCIPIOS POLÍTICOS DE TODD
 
-1. Le digan lo que le digan, no es toda la verdad.
+1. Le digan lo que le digan, no es toda la verdad
 
-2. Hablen de lo que hablen, hablan de dinero.
+1. Hablen de lo que hablen, hablan de dinero
 
-LEY DE KAMIN.
+### Ley de KAMIN
 
-- Si intenta predecir y pronosticar los movimientos macroeconómicos de la legislación económica con la ayuda de un político, no deje que le despiste lo que dice; fíjese en lo que hace.
+- Si intenta predecir y pronosticar los movimientos macroeconómicos de la legislación económica con la ayuda de un político, no deje que le despiste lo que dice; fíjese en lo que hace
 
-PRINCIPIO DE WATERGATE.
+### PRINCIPIO DE WATERGATE
 
-- Siempre que se informa sobre la corrupción del Gobierno, se hace en tiempo pasado.
+- Siempre que se informa sobre la corrupción del Gobierno, se hace en tiempo pasado
 
-LEY DE EVANS.
+### Ley de EVANS
 
-- Si consigue mantener la calma cuando todo el mundo pierde la cabeza, entonces es que no se entera del problema.
+- Si consigue mantener la calma cuando todo el mundo pierde la cabeza, entonces es que no se entera del problema
 
-REGLA DE DEFACTUALIZACIÓN.
+### REGLA DE DEFACTUALIZACIÓN
 
-- En las burocracias, la información se deteriora en sentido ascendente.
+- En las burocracias, la información se deteriora en sentido ascendente
 
-LEY DE LAS PIRAÑAS.
+### Ley de LAS PIRAÑAS
 
-- Cuando los gastos escandalosos se dividen en porciones pequeñas, el público no tendrá intereses suficientes en ninguno de los capítulos como para reclamar.
+- Cuando los gastos escandalosos se dividen en porciones pequeñas, el público no tendrá intereses suficientes en ninguno de los capítulos como para reclamar
 
-Corolario.
+#### Corolario
 
-- Un número suficiente de pirañas se puede comer el erario público.
+- Un número suficiente de pirañas se puede comer el erario público
 
-REGLA DE GOOD PARA RELACIONARSE CON LAS BUROCRACIAS.
+### REGLA DE GOOD PARA RELACIONARSE CON LAS BUROCRACIAS
 
-- Cuando las soluciones de un departamento de Gobierno no se ajusten a su problema, usted modifica el problema, no la solución.
+- Cuando las soluciones de un departamento de Gobierno no se ajusten a su problema, usted modifica el problema, no la solución
 
-PRINCIPIO DE HEISENBERG SOBRE LA INVERSIÓN.
+### PRINCIPIO DE HEISENBERG SOBRE LA INVERSIÓN
 
-- Se puede saber hacia donde se dirige el mercado, pero lo que no hay forma de saber es que dirección tomará después de invertir.
+- Se puede saber hacia donde se dirige el mercado, pero lo que no hay forma de saber es que dirección tomará después de invertir
 
-OBSERVACION DE HORNGREN.
+### OBSERVACION DE HORNGREN
 
-- Entre los economistas, con frecuencia, el mundo real es un caso especial.
+- Entre los economistas, con frecuencia, el mundo real es un caso especial
 
-FÓRMULA DE GLYME DEL ÉXITO.
+### FÓRMULA DE GLYME DEL ÉXITO
 
-- El secreto del éxito es la sinceridad. En cuanto pueda fingirla, lo habrá conseguido.
+- El secreto del éxito es la sinceridad. En cuanto pueda fingirla, lo habrá conseguido
 
-REGLAS DE HELGA.
+### REGLAS DE HELGA
 
-- Diga no y luego negocie.
+- Diga no y luego negocie
 
-REGLAS DE BROWN DEL LIDERAZGO.
+### REGLAS DE BROWN DEL LIDERAZGO
 
-1. Para tener éxito en política, a veces tendrá que pasar sobre sus principios.
+1. Para tener éxito en política, a veces tendrá que pasar sobre sus principios
 
-2. La mejor manera de tener éxito en política es encontrar una multitud que se dirija a alguna parte y colocarse al frente de ella.
+1. La mejor manera de tener éxito en política es encontrar una multitud que se dirija a alguna parte y colocarse al frente de ella
 
-REGLA DE LA LEY.
+### REGLA DE LA LEY
 
-- Si los hechos están en su contra, invoque a la ley.
+- Si los hechos están en su contra, invoque a la ley
 
-- Si la ley está en su contra, insista en los hechos.
+- Si la ley está en su contra, insista en los hechos
 
-- Si los hechos y la ley están en su contra, grite como un poseso.
+- Si los hechos y la ley están en su contra, grite como un poseso
 
-LEY DE MILES.
+### Ley de MILES
 
-- Si posición depende de donde se siente.
+- Si posición depende de donde se siente
 
-EXTENSIÓN DE FIBLEY A LA LEY DE MILES.
+### EXTENSIÓN DE FIBLEY A LA Ley de MILES
 
-- El lugar donde se siente, depende de a quien conozca.
+- El lugar donde se siente, depende de a quien conozca
 
-REGLA DE LA POLÍTICA.
+### REGLA DE LA POLÍTICA
 
-- Cuando un político tiene una idea, generalmente está equivocado.
+- Cuando un político tiene una idea, generalmente está equivocado
 
-REGLA DE SHERMAN SOBRE LAS CONFERENCIAS DE PRENSA.
+### REGLA DE SHERMAN SOBRE LAS CONFERENCIAS DE PRENSA
 
-- La explicación de un desastre, la dará un sustituto.
+- La explicación de un desastre, la dará un sustituto
 
-LEY DE MILLER.
+### Ley de MILLER
 
-- Las excepciones confirman la regla... y hunden el presupuesto.
+- Las excepciones confirman la regla... y hunden el presupuesto
 
-LEY DE BUCKWALD.
+### Ley de BUCKWALD
 
-- A medida que la economía mejora, todo lo demás empeora.
+- A medida que la economía mejora, todo lo demás empeora
 
-PRIMERA LEY DE LA POLÍTICA.
+### Primera Ley de LA POLÍTICA
 
-- Sea fiel a los que no están en el poder.
+- Sea fiel a los que no están en el poder
 
-LEY DE LOWE.
+### Ley de LOWE
 
-- El éxito siempre tiene lugar en privado y el fracaso a la luz pública. Cuando sucede en política, se aplica la ley contraria.
+- El éxito siempre tiene lugar en privado y el fracaso a la luz pública. Cuando sucede en política, se aplica la ley contraria
 
-## Periciología.
+## Periciología
 
-REGLA DE HOROWITZ.
+### REGLA DE HOROWITZ
 
-- La sabiduría consiste en saber cuándo se debe evitar la perfección.
+- La sabiduría consiste en saber cuándo se debe evitar la perfección
 
-LEY DE DE NEVERS SOBRE LA COMPLEJIDAD.
+### Ley de DE NEVERS SOBRE LA COMPLEJIDAD
 
-- Los temas más sencillos son aquellos de los que no sabe nada.
+- Los temas más sencillos son aquellos de los que no sabe nada
 
-TEOREMA DE CHRISTIE-DAVIS.
+### Teorema de CHRISTIE-DAVIS
 
-- Si sus datos son falsos, pero su lógica es perfecta, entonces sus conclusiones serán inevitablemente falsas. Por tanto, si comete errores con su lógica, tiene al menos una probabilidad aleatoria de llegar a la conclusión correcta.
+- Si sus datos son falsos, pero su lógica es perfecta, entonces sus conclusiones serán inevitablemente falsas. Por tanto, si comete errores con su lógica, tiene al menos una probabilidad aleatoria de llegar a la conclusión correcta
 
-LEY DE DE NEVERS SOBRE EL DEBATE.
+### Ley de DE NEVERS SOBRE EL DEBATE
 
-- Dos monólogos no constituyen un diálogo.
+- Dos monólogos no constituyen un diálogo
 
-LEY DE HIRAM.
+### Ley de HIRAM
 
-- Si se consultan suficientes expertos, se puede confirmar cualquier opinión.
+- Si se consultan suficientes expertos, se puede confirmar cualquier opinión
 
-LEY DE JORDAN.
+### Ley de JORDAN
 
-- Un informante que nunca proporciona información equivocada es demasiado anormal como para confiar en él.
+- Un informante que nunca proporciona información equivocada es demasiado anormal como para confiar en él
 
-LEY PERDIDA DE DE NEVERS.
+### LEY PERDIDA DE DE NEVERS
 
-- Nunca especule sobre aquello que pueda saber con certeza.
+- Nunca especule sobre aquello que pueda saber con certeza
 
-CLAVE DEL ÉXITO SEGÚN ELY.
+### CLAVE DEL ÉXITO SEGÚN ELY
 
-- Cree una necesidad y satisfágala.
+- Cree una necesidad y satisfágala
 
-REGLA DE BRALEK SOBRE EL ÉXITO.
+### REGLA DE BRALEK SOBRE EL ÉXITO
 
-- Confíe sólo en aquellos que perderían tanto como usted si las cosas fueran mal.
+- Confíe sólo en aquellos que perderían tanto como usted si las cosas fueran mal
 
-LEY DE MALEK.
+### Ley de MALEK
 
-- Cualquier idea simple se puede expresar de la manera más compleja que exista.
+- Cualquier idea simple se puede expresar de la manera más compleja que exista
 
-COROLARIO DE WEINBERGER.
+#### COROLARIO DE WEINBERGER
 
-- Un experto es la persona que evita los errores pequeños mientras sigue su avance inexorable hacia la gran falacia.
+- Un experto es la persona que evita los errores pequeños mientras sigue su avance inexorable hacia la gran falacia
 
-PRIMERA LEY DE CLARKE.
+### Primera Ley de CLARKE
 
-- Cuando un famoso, aunque anciano científico, asegura que algo es posible, suele tener razón. Cuando afirma que algo es imposible, suele estar equivocado.
+- Cuando un famoso, aunque anciano científico, asegura que algo es posible, suele tener razón. Cuando afirma que algo es imposible, suele estar equivocado
 
-SEGUNDA LEY DE CLARKE.
+### Segunda Ley de CLARKE
 
-- La única forma de descubrir los límites de lo posible es traspasarlos en dirección a lo imposible.
+- La única forma de descubrir los límites de lo posible es traspasarlos en dirección a lo imposible
 
-LEY DE CLARKE SOBRE LAS IDEAS REVOLUCIONARIAS.
+### Ley de CLARKE SOBRE LAS IDEAS REVOLUCIONARIAS
 
 - Todo campo revolucionario - ciencia, política, arte o cualquier otro - produce tres formas de reacción. Se pueden resumir en tres frases:
 
 1. "Es imposible, no me haga perder el tiempo."
 
-2. "Es posible, pero no merece la pena."
+1. "Es posible, pero no merece la pena."
 
-3. "Siempre dije que era una idea magnífica."
+1. "Siempre dije que era una idea magnífica."
 
-REGLA DE LOS GRANDES.
+### REGLA DE LOS GRANDES
 
-- Cuando alguien a quien usted admira y respeta parezca ensimismado y pensativo, lo más probable es que esté pensando en la cena.
+- Cuando alguien a quien usted admira y respeta parezca ensimismado y pensativo, lo más probable es que esté pensando en la cena
 
-TERCERA LEY DE CLARKE.
+### TERCERA Ley de CLARKE
 
-- Cualquier tecnología avanzada es indistinguible de la magia.
+- Cualquier tecnología avanzada es indistinguible de la magia
 
-LEY DE RUNAMOK.
+### Ley de RUNAMOK
 
 - Hay cuatro clases de personas:
 
-1. Las que se sientan en silencio y no hacen nada.
+1. Las que se sientan en silencio y no hacen nada
 
-2. Las que hablan de sentarse en silencio y no hacer nada.
+1. Las que hablan de sentarse en silencio y no hacer nada
 
-3. Las que hacen cosas.
+1. Las que hacen cosas
 
-4. Las que hablan de hacer cosas.
+1. Las que hablan de hacer cosas
 
-LEY DE SEGAL.
+### Ley de SEGAL
 
-- Un hombre con un reloj sabe qué hora es.
+- Un hombre con un reloj sabe qué hora es
 
-Un hombre con dos relojes nunca está seguro.
+Un hombre con dos relojes nunca está seguro
 
-LEY DE MILLER.
+### Ley de MILLER
 
-- No se puede saber la profundidad de un charco hasta que no se ha metido el pie.
+- No se puede saber la profundidad de un charco hasta que no se ha metido el pie
 
-LEY DE WEILER.
+### Ley de WEILER
 
-- Nada hay imposible para el hombre si no lo tiene que hacer él mismo.
+- Nada hay imposible para el hombre si no lo tiene que hacer él mismo
 
-PRIMERA LEY DE WEINBERGER.
+### Primera Ley de WEINBERGER
 
-- Si los constructores edificaran de la misma manera que los programadores elaboran los programas, el primer pájaro carpintero que pasara volando, acabaría con la civilización.
+- Si los constructores edificaran de la misma manera que los programadores elaboran los programas, el primer pájaro carpintero que pasara volando, acabaría con la civilización
 
-## Periciología avanzada.
+## Periciología avanzada
 
-REGLA DE MARS.
+### REGLA DE MARS
 
-- Un experto es cualquiera que no sea de la ciudad.
+- Un experto es cualquiera que no sea de la ciudad
 
-DEFINICIÓN DE WEBWER.
+### DEFINICIÓN DE WEBWER
 
-- Un experto es aquel que sabe cada vez más sobre menos cosas, hasta que sabe absolutamente todo sobre nada.
+- Un experto es aquel que sabe cada vez más sobre menos cosas, hasta que sabe absolutamente todo sobre nada
 
-REGLA DE WARREN.
+### REGLA DE WARREN
 
-- Si quiere identificar al experto, escoja al que predice que el trabajo durará más tiempo y costará más.
+- Si quiere identificar al experto, escoja al que predice que el trabajo durará más tiempo y costará más
 
-REGLA DE WINGER.
+### REGLA DE WINGER
 
-- Si se sienta en su mesa durante quince minutos, usted acaba de convertirse en un experto.
+- Si se sienta en su mesa durante quince minutos, usted acaba de convertirse en un experto
 
-LEY DE SCHROEDER.
+### Ley de SCHROEDER
 
-- La indecisión es el fundamento de la flexibilidad.
+- La indecisión es el fundamento de la flexibilidad
 
-Corolario.
+#### Corolario
 
-- Cree problemas para los que sólo usted tenga la solución.
+- Cree problemas para los que sólo usted tenga la solución
 
-MÁXIMA DE MATZ.
+### MÁXIMA DE MATZ
 
-- Una conclusión es el punto en el que usted se cansó de pensar.
+- Una conclusión es el punto en el que usted se cansó de pensar
 
-REGLA DE FAGIN SOBRE LA PREDICCIÓN DEL PASADO.
+### REGLA DE FAGIN SOBRE LA PREDICCIÓN DEL PASADO
 
-- La percepción retrospectiva es una ciencia exacta.
+- La percepción retrospectiva es una ciencia exacta
 
-REGLA FUNDAMENTAL DE LA HISTORIA.
+### REGLA FUNDAMENTAL DE LA HISTORIA
 
-- No es que la Historia se repita, es que los historiadores se copian unos a otros.
+- No es que la Historia se repita, es que los historiadores se copian unos a otros
 
-LEYES DE DUNLAP SOBRE LA FÍSICA.
+### LEYES DE DUNLAP SOBRE LA FÍSICA
 
-1. Un hecho es una opinión consolidada.
+1. Un hecho es una opinión consolidada
 
-2. Los hechos pueden debilitarse en condiciones extremas de calor y presión
+1. Los hechos pueden debilitarse en condiciones extremas de calor y presión
 
-3. La verdad es elástica.
+1. La verdad es elástica
 
-MÁXIMA DE MERKIN.
+### MÁXIMA DE MERKIN
 
-- En caso de duda, anuncie que la tendencia se mantendrá.
+- En caso de duda, anuncie que la tendencia se mantendrá
 
-SOLUCION DE HALGREN.
+### SOLUCION DE HALGREN
 
-- Cuando tenga problemas, ofúsquese.
+- Cuando tenga problemas, ofúsquese
 
-TEORIA DE HAWKINS SOBRE EL PROGRESO.
+### TEORIA DE HAWKINS SOBRE EL PROGRESO
 
-- El progreso no consiste en sustituir una teoría equivocada por otra correcta, sino en sustituir una teoría falsa por otra más sutilmente errónea.
+- El progreso no consiste en sustituir una teoría equivocada por otra correcta, sino en sustituir una teoría falsa por otra más sutilmente errónea
 
-LEY DE MEYER.
+### Ley de MEYER
 
-- Es tarea fácil hacer que las cosas parezcan complejas, pero es complicado hacerlas sencillas.
+- Es tarea fácil hacer que las cosas parezcan complejas, pero es complicado hacerlas sencillas
 
-LEY DE HLADE.
+### Ley de HLADE
 
-- Si tiene una tarea difícil, confíesela a un hombre vago. El encontrará la forma más fácil de hacerla.
+- Si tiene una tarea difícil, confíesela a un hombre vago. El encontrará la forma más fácil de hacerla
 
-LEY DE HUNT.
+### Ley de HUNT
 
-- Cualquier gran idea tiene una desventaja mayor o igual a la grandeza de la misma.
+- Cualquier gran idea tiene una desventaja mayor o igual a la grandeza de la misma
 
-NAVAJA DE HANLON.
+### NAVAJA DE HANLON
 
-- No le atribuya nunca a la malicia lo que puede explicar la estupidez.
+- No le atribuya nunca a la malicia lo que puede explicar la estupidez
 
-## Contabilidología.
+## Contabilidología
 
-FALACIA DE FROTHINGHAM.
+### FALACIA DE FROTHINGHAM
 
-- El tiempo es oro.
+- El tiempo es oro
 
-LEY DE CRANE.
+### Ley de CRANE
 
-- No hay comidas gratuitas, tal cosa no existe.
+- No hay comidas gratuitas, tal cosa no existe
 
-LEY DE WIKER.
+### Ley de WIKER
 
-- El Gobierno se expande hasta absorber los beneficios y todo lo que caiga.
+- El Gobierno se expande hasta absorber los beneficios y todo lo que caiga
 
-LEY DE TUCILLE SOBRE LA REALIDAD.
+### Ley de TUCILLE SOBRE LA REALIDAD
 
-- La industria siempre avanza para rellenar un vacío económico.
+- La industria siempre avanza para rellenar un vacío económico
 
-REGLA DE WESTHEIMER.
+### REGLA DE WESTHEIMER
 
 Cálculo del tiempo que se necesita para llevar a cabo una tarea:
 
-- Calcule el tiempo que usted considere necesario.
+- Calcule el tiempo que usted considere necesario
 
-- Multiplíquelo por dos.
+- Multiplíquelo por dos
 
-- Cambie a la unidad de medida inmediatamente superior.
+- Cambie a la unidad de medida inmediatamente superior
 
-Así, le asignaremos dos días a un trabajo de media hora.
+Así, le asignaremos dos días a un trabajo de media hora
 
-LEY DE GRESHAM.
+### Ley de GRESHAM
 
-- Los asuntos triviales se solucionan con rapidez. Los asuntos importantes no se resuelven nunca.
+- Los asuntos triviales se solucionan con rapidez. Los asuntos importantes no se resuelven nunca
 
-LEY DE GRAY SOBRE LA PROGRAMACIÓN.
+### Ley de GRAY SOBRE LA PROGRAMACIÓN
 
-- Se espera que se terminen n+1 tareas triviales en el mismo tiempo en que se concluirían n tareas.
+- Se espera que se terminen n+1 tareas triviales en el mismo tiempo en que se concluirían n tareas
 
-REFUTACIÓN DE LOGG A LA LEY DE GRAY.
+### REFUTACIÓN DE LOGG A LA Ley de GRAY
 
-- Para concluir n+1 tareas triviales hace falta el doble de tiempo que para n.
+- Para concluir n+1 tareas triviales hace falta el doble de tiempo que para n
 
-LA REGLA 90/90 DE PROGRAMACIÓN DE PROYECTOS.
+### LA REGLA 90/90 DE PROGRAMACIÓN DE PROYECTOS
 
-- El primer 90 por 100 del trabajo requiere el 10 por 100 del tiempo y el último 10 por 100, el 90 por 100 restante.
+- El primer 90 por 100 del trabajo requiere el 10 por 100 del tiempo y el último 10 por 100, el 90 por 100 restante
 
-REGLA DE WEINBERGER.
+### REGLA DE WEINBERGER
 
-- El progreso se lleva a cabo un viernes sí y otro no.
+- El progreso se lleva a cabo un viernes sí y otro no
 
-PRINCIPIO DE LOS PEDIDOS.
+### PRINCIPIO DE LOS PEDIDOS
 
-- Los materiales necesarios para el experimento de ayer no se deben encargar después de mañana al mediodía.
+- Los materiales necesarios para el experimento de ayer no se deben encargar después de mañana al mediodía
 
-LEY DE KEOPS
+### Ley de KEOPS
 
-- No hay nada que se termine en los plazos previstos y que no se salga del presupuesto.
+- No hay nada que se termine en los plazos previstos y que no se salga del presupuesto
 
-EXTENSIÓN DEL PRINCIPIO DE EPSTEIN-HEISENBERG.
+### EXTENSIÓN DEL PRINCIPIO DE EPSTEIN-HEISENBERG
 
-En una órbita R & D, sólo se pueden definir simultáneamente dos de los tres parámetros existentes. Estos parámetros son: la tarea, el tiempo y los recursos (\$).
+En una órbita R & D, sólo se pueden definir simultáneamente dos de los tres parámetros existentes. Estos parámetros son: la tarea, el tiempo y los recursos (\$)
 
-1. Si se sabe cual es la tarea que se tiene que realizar y hay un tiempo límite para llevarla a cabo, entonces no se puede tener idea de lo que costará.
+1. Si se sabe cual es la tarea que se tiene que realizar y hay un tiempo límite para llevarla a cabo, entonces no se puede tener idea de lo que costará
 
-2. Si el tiempo y los recursos están claramente definidos, entonces es imposible saber cual es la parte de la tarea que se terminará.
+1. Si el tiempo y los recursos están claramente definidos, entonces es imposible saber cual es la parte de la tarea que se terminará
 
-3. Si la tarea está bien definida y se ha calculado cuidadosamente la cantidad de dinero necesaria para realizarla, entonces no se puede predecir cuando se finalizará, en caso de que se termine.
+1. Si la tarea está bien definida y se ha calculado cuidadosamente la cantidad de dinero necesaria para realizarla, entonces no se puede predecir cuando se finalizará, en caso de que se termine
 
-LEY DE PARETO (LEY 20/80).
+### Ley de PARETO (LEY 20/80)
 
-- El 20 por 100 de los clientes justifica el 80 por 100 del volumen de ventas.
+- El 20 por 100 de los clientes justifica el 80 por 100 del volumen de ventas
 
-- El 20 por 100 de los componentes justifica el 80 por 100 del coste, etc.
+- El 20 por 100 de los componentes justifica el 80 por 100 del coste, etc
 
-PRINCIPIO DE O’BRIEN (TEORÍA DE LOS 357,73\$).
+### PRINCIPIO DE O’BRIEN (TEORÍA DE LOS 357,73\$)
 
-- Los auditores siempre rechazan cualquier cuenta de gastos cuyo total sea divisible por 5 o por 10.
+- Los auditores siempre rechazan cualquier cuenta de gastos cuyo total sea divisible por 5 o por 10
 
-OBSERVACIÓN DE ISSAWI SOBRE EL CONSUMO DE PAPEL.
+### OBSERVACIÓN DE ISSAWI SOBRE EL CONSUMO DE PAPEL
 
-- Todo sistema cuenta con su propia forma de consumir enormes cantidades de papel. En los sistemas socialistas hay que rellenar por cuadruplicado impresos kilométricos. En las sociedades capitalistas se colocan inmensas vallas publicitarias y se envuelve todo con cuatro capas de cartulina.
+- Todo sistema cuenta con su propia forma de consumir enormes cantidades de papel. En los sistemas socialistas hay que rellenar por cuadruplicado impresos kilométricos. En las sociedades capitalistas se colocan inmensas vallas publicitarias y se envuelve todo con cuatro capas de cartulina
 
-COROLARIO COLATERAL DE JOHN.
+#### COROLARIO COLATERAL DE JOHN
 
-- Para conseguir un crédito, lo primero que tiene que hacer es demostrar que no lo necesita.
+- Para conseguir un crédito, lo primero que tiene que hacer es demostrar que no lo necesita
 
-LEY DE BRIEN.
+### Ley de BRIEN
 
-- En algún momento del ciclo vital de, virtualmente, todas las organizaciones, desaparece su capacidad para tener éxito, a pesar de seguir siendo ellas mismas.
+- En algún momento del ciclo vital de, virtualmente, todas las organizaciones, desaparece su capacidad para tener éxito, a pesar de seguir siendo ellas mismas
 
-LEY DE LAS INSTITUCIONES.
+### Ley de LAS INSTITUCIONES
 
-- La magnificencia de la recepción es inversamente proporcional a la solvencia de la empresa.
+- La magnificencia de la recepción es inversamente proporcional a la solvencia de la empresa
 
-LEY DE PAULG.
+### Ley de PAULG
 
-- En EE.UU., lo importante no es lo que cuesta un artículo, sino lo que usted se ahorra.
+- En EE.UU., lo importante no es lo que cuesta un artículo, sino lo que usted se ahorra
 
-LEY DE JUHANI.
+### Ley de JUHANI
 
-- El acuerdo siempre será más costoso que cualquiera de los puntos que se pacten.
+- El acuerdo siempre será más costoso que cualquiera de los puntos que se pacten
 
-## Diseñología.
+## Diseñología
 
-PROFECÍA DE POULSEN.
+### PROFECÍA DE POULSEN
 
-- Si se usa cualquier cosa hasta su máxima capacidad, se rompe.
+- Si se usa cualquier cosa hasta su máxima capacidad, se rompe
 
-LEY DE MAYNE.
+### Ley de MAYNE
 
-- Nadie nota los errores grandes.
+- Nadie nota los errores grandes
 
-PRINCIPIO DE INERCIA DEL DISEÑO.
+### PRINCIPIO DE INERCIA DEL DISEÑO
 
-- Al principio, todos los cambios parecen horribles.
+- Al principio, todos los cambios parecen horribles
 
-LEY DE WRIGHT SOBRE LA CALIDAD.
+### Ley de WRIGHT SOBRE LA CALIDAD
 
-- La calidad es inversamente proporcional al tiempo que queda para terminar el proyecto.
+- La calidad es inversamente proporcional al tiempo que queda para terminar el proyecto
 
-LEY DE LA PLANIFICACIÓN CORPORATIVA.
+### Ley de LA PLANIFICACIÓN CORPORATIVA
 
 - Cualquier cosa que se pueda cambiar, se cambiará hasta que no quede tiempo para cambiar nada
 
-. LEY DE BEACH.
+### . Ley de BEACH
 
-- No hay dos piezas idénticas que se parezcan.
+- No hay dos piezas idénticas que se parezcan
 
-LEY DE EDWARDS SOBRE EL ESFUERZO/TIEMPO.
+### Ley de EDWARDS SOBRE EL ESFUERZO/TIEMPO
 
-- Esfuerzo x Tiempo = Constante.
+- Esfuerzo x Tiempo = Constante
 
-- Dado un tiempo inicial grande para hacer algo, el esfuerzo inicial será pequeño.
+- Dado un tiempo inicial grande para hacer algo, el esfuerzo inicial será pequeño
 
-- A medida que el tiempo se aproxima a cero, el esfuerzo tiende a infinito.
+- A medida que el tiempo se aproxima a cero, el esfuerzo tiende a infinito
 
-Corolario.
+#### Corolario
 
-- Si no fuera por el último minuto, no se haría nada.
+- Si no fuera por el último minuto, no se haría nada
 
-TEORÍA DE McPHERSON SOBRE LA ENTROPÍA.
+### TEORÍA DE McPHERSON SOBRE LA ENTROPÍA
 
-- Se requiere menos energía para sacar un objeto de su sitio que para volverlo a colocar.
+- Se requiere menos energía para sacar un objeto de su sitio que para volverlo a colocar
 
-POSTULADO DE BITTON PARA LA ELECTRÓNICA.
+### Postulado de BITTON PARA LA ELECTRÓNICA
 
-- Si lo entiende, es que se ha quedado antiguo.
+- Si lo entiende, es que se ha quedado antiguo
 
-LEY DE MANUBAY PARA LOS PROGRAMADORES.
+### Ley de MANUBAY PARA LOS PROGRAMADORES
 
-1. Si funciona la modificación de un programador a un programa ya existente, es probable que no sea lo que quieren los usuarios.
+1. Si funciona la modificación de un programador a un programa ya existente, es probable que no sea lo que quieren los usuarios
 
-2. Los usuarios no saben realmente lo que quieren, pero saben con certeza lo que no quieren.
+1. Los usuarios no saben realmente lo que quieren, pero saben con certeza lo que no quieren
 
-AXIOMA DE JOSE.
+### AXIOMA DE JOSE
 
-- No hay nada tan temporal como lo que se denomina permanente.
+- No hay nada tan temporal como lo que se denomina permanente
 
-Corolario.
+#### Corolario
 
-- No hay nada tan permanente como lo que se denomina temporal.
+- No hay nada tan permanente como lo que se denomina temporal
 
-LEY DE RAP SOBRE LA REPRODUCCIÓN INANIMADA.
+### Ley de RAP SOBRE LA REPRODUCCIÓN INANIMADA
 
-- Si usted desarma una cosa, la vuelve a montar y repite el proceso varias veces, al final tendrá dos cosas.
+- Si usted desarma una cosa, la vuelve a montar y repite el proceso varias veces, al final tendrá dos cosas
 
-PRIMERA LEY DE LAS REVISIONES.
+### Primera Ley de LAS REVISIONES
 
 - Al diseñador se le notificará que es necesario modificar el diseño después - y sólo después - de que haya terminado los planos. (A menudo, es denominada como la Ley de "¡Y nos lo dice ahora!".)
 
-Corolario.
+#### Corolario
 
-- En ciertos casos en los que se advierte que hay una forma correcta evidente y una errónea, se aconseja elegir la equivocada para acelerar la revisión posterior.
+- En ciertos casos en los que se advierte que hay una forma correcta evidente y una errónea, se aconseja elegir la equivocada para acelerar la revisión posterior
 
-ECUACIONES DE SNAFU.
+### ECUACIONES DE SNAFU
 
-1. En cualquier problema con n ecuaciones, siempre habrá n+1 incógnitas.
+1. En cualquier problema con n ecuaciones, siempre habrá n+1 incógnitas
 
-2. La información más necesaria, siempre será la más inaccesible.
+1. La información más necesaria, siempre será la más inaccesible
 
-3. Cuando haya agotado todas las posibilidades y fracase, aparecerá una solución simple y evidente que estaba delante de sus narices.
+1. Cuando haya agotado todas las posibilidades y fracase, aparecerá una solución simple y evidente que estaba delante de sus narices
 
-4. Lo malo siempre viene a oleadas.
+1. Lo malo siempre viene a oleadas
 
-CONSTANTE DE SKINNER (FACTOR CHANCHULLO DE FLANNAGAN).
+### CONSTANTE DE SKINNER (FACTOR CHANCHULLO DE FLANNAGAN)
 
-- Es esa cantidad que cuando se multiplica, divide, suma o resta del resultado que usted ha obtenido, le proporciona el resultado que debería haber obtenido.
+- Es esa cantidad que cuando se multiplica, divide, suma o resta del resultado que usted ha obtenido, le proporciona el resultado que debería haber obtenido
 
-LEYES DE PROGRAMACIÓN DE ORDENADORES.
+### LEYES DE PROGRAMACIÓN DE ORDENADORES
 
-1. Cualquier programa, cuando funciona, es que se ha quedado antiguo.
+1. Cualquier programa, cuando funciona, es que se ha quedado antiguo
 
-2. Cualquier programa cuesta más caro y necesita más tiempo.
+1. Cualquier programa cuesta más caro y necesita más tiempo
 
-3. Si un programa es útil, habrá que cambiarlo.
+1. Si un programa es útil, habrá que cambiarlo
 
-4. Si un programa es inútil, habrá que demostrarlo.
+1. Si un programa es inútil, habrá que demostrarlo
 
-5. Cualquier programa se expandirá hasta ocupar todos los recursos del ordenador.
+1. Cualquier programa se expandirá hasta ocupar todos los recursos del ordenador
 
-6. La complejidad de un programa aumenta hasta superar la capacidad del programador que debe revisarlo.
+1. La complejidad de un programa aumenta hasta superar la capacidad del programador que debe revisarlo
 
-REGLAS DE GILB SOBRE LA NO FIABILIDAD.
+### REGLAS DE GILB SOBRE LA NO FIABILIDAD
 
-1. Los ordenadores no son fiables, pero los seres humanos lo son menos aún.
+1. Los ordenadores no son fiables, pero los seres humanos lo son menos aún
 
-2. Cualquier sistema que dependa de la fiabilidad humana, no es fiable.
+1. Cualquier sistema que dependa de la fiabilidad humana, no es fiable
 
-3. La variedad de los errores indetectables es infinita en contraste con los errores detectables que son, por definición, limitados.
+1. La variedad de los errores indetectables es infinita en contraste con los errores detectables que son, por definición, limitados
 
-4. Las inversiones en fiabilidad aumentarán hasta que superen el coste probable de los errores o hasta que alguien insista en que el trabajo se haga bien.
+1. Las inversiones en fiabilidad aumentarán hasta que superen el coste probable de los errores o hasta que alguien insista en que el trabajo se haga bien
 
-LEY DE BROOK.
+### Ley de BROOK
 
-- Si añade mano de obra a un proyecto que va retrasado, se retrasa todavía más.
+- Si añade mano de obra a un proyecto que va retrasado, se retrasa todavía más
 
-LEY DE LUBARSKY SOBRE LA ENTOMOLOGÍA CIBERNÉTICA.
+### Ley de LUBARSKY SOBRE LA ENTOMOLOGÍA CIBERNÉTICA
 
-- Siempre queda algún virus.
+- Siempre queda algún virus
 
-PRINCIPIO DE SHAW.
+### PRINCIPIO DE SHAW
 
-- Construya un sistema que pueda utilizar hasta un tonto y sólo lo querrán utilizar los tontos.
+- Construya un sistema que pueda utilizar hasta un tonto y sólo lo querrán utilizar los tontos
 
-## Maquinología.
+## Maquinología
 
-PRINCIPIO DE POLLYANNA SOBRE LA IBM.
+### PRINCIPIO DE POLLYANNA SOBRE LA IBM
 
-- Las máquinas deben funcionar y las personas pensar.
+- Las máquinas deben funcionar y las personas pensar
 
-LEY DE LA PERVERSIDAD DE LA NATURALEZA.
+### Ley de LA PERVERSIDAD DE LA NATURALEZA
 
-- No se puede determinar a priori en que lado de la tostada hay que poner la mantequilla.
+- No se puede determinar a priori en que lado de la tostada hay que poner la mantequilla
 
-LEY DE LA GRAVEDAD SELECTIVA.
+### Ley de LA GRAVEDAD SELECTIVA
 
-- Todos los objetos se caen al suelo de tal forma que causen más desperfectos.
+- Todos los objetos se caen al suelo de tal forma que causen más desperfectos
 
-Corolario de Jenning.
+#### Corolario de Jenning
 
-- La probabilidad de que la tostada caiga con la mantequilla hacia abajo es directamente proporcional al precio de la alfombra.
+- La probabilidad de que la tostada caiga con la mantequilla hacia abajo es directamente proporcional al precio de la alfombra
 
-Corolario de Klipstein.
+#### Corolario de Klipstein
 
-- La pieza más delicada será la que se caiga antes.
+- La pieza más delicada será la que se caiga antes
 
-LEY DE SPRINKEL.
+### Ley de SPRINKEL
 
-- Las cosas siempre caen en ángulo recto.
+- Las cosas siempre caen en ángulo recto
 
-LEY DE LA MOLESTIA.
+### Ley de LA MOLESTIA
 
-- Cuando esté haciendo un trabajo manual, si guarda una herramienta porque está seguro de que no la utilizará más, la volverá a necesitar en breves momentos.
+- Cuando esté haciendo un trabajo manual, si guarda una herramienta porque está seguro de que no la utilizará más, la volverá a necesitar en breves momentos
 
-LEY DE ANTHONY SOBRE EL TALLER.
+### Ley de ANTHONY SOBRE EL TALLER
 
-- Cualquier herramienta, cuando se suelta, rueda hasta el rincón más inaccesible de todo el taller.
+- Cualquier herramienta, cuando se suelta, rueda hasta el rincón más inaccesible de todo el taller
 
-Corolario.
+#### Corolario
 
-- Cuando vaya a recogerla, tropezará con otras herramientas y se hará polvo los dedos de los pies.
+- Cuando vaya a recogerla, tropezará con otras herramientas y se hará polvo los dedos de los pies
 
-PRINCIPIO DE LOS REPUESTOS.
+### PRINCIPIO DE LOS REPUESTOS
 
-- Los repuestos son más o menos accesibles y esto es directamente proporcional a su tamaño e inversamente proporcional a la urgencia de terminar el trabajo.
+- Los repuestos son más o menos accesibles y esto es directamente proporcional a su tamaño e inversamente proporcional a la urgencia de terminar el trabajo
 
-LEY DE PAUL.
+### Ley de PAUL
 
-- Es imposible caerse del suelo.
+- Es imposible caerse del suelo
 
-LEY DE JOHNSON.
+### Ley de JOHNSON
 
-- Si un artilugio mecánico falla, lo hará en el momento más inoportuno.
+- Si un artilugio mecánico falla, lo hará en el momento más inoportuno
 
-LEY DE WATSON.
+### Ley de WATSON
 
-- La fiabilidad de la máquina es inversamente proporcional al número y a la categoría de las personas que la manejan.
+- La fiabilidad de la máquina es inversamente proporcional al número y a la categoría de las personas que la manejan
 
-LEY DE WYSZKOWSKI.
+### Ley de WYSZKOWSKI
 
-- Cualquier cosa puede llegar a funcionar si se tiene en las manos el tiempo suficiente.
+- Cualquier cosa puede llegar a funcionar si se tiene en las manos el tiempo suficiente
 
-LEY DE SATTINGER.
+### Ley de SATTINGER
 
-- Funcionaría mejor si la enchufara.
+- Funcionaría mejor si la enchufara
 
-LEY DE LOWERY.
+### Ley de LOWERY
 
-- Si se traba, fuércela; si se rompe, es que había que cambiarla de todas maneras.
+- Si se traba, fuércela; si se rompe, es que había que cambiarla de todas maneras
 
-REGLA DEL TOCADISCOS.
+### REGLA DEL TOCADISCOS
 
-- El accesorio más caro es el que menos se utiliza.
+- El accesorio más caro es el que menos se utiliza
 
-LEY DE SCHMIDT.
+### Ley de SCHMIDT
 
-- Si manosea una cosa durante mucho tiempo, se romperá.
+- Si manosea una cosa durante mucho tiempo, se romperá
 
-LEY DE FUDD SOBRE LA OPOSICIÓN.
+### Ley de FUDD SOBRE LA OPOSICIÓN
 
-- Cuando se empuje algo con mucha fuerza, se caerá al suelo.
+- Cuando se empuje algo con mucha fuerza, se caerá al suelo
 
-LEY DE ANTHONY SOBRE LA FUERZA.
+### Ley de ANTHONY SOBRE LA FUERZA
 
-- No lo fuerce. Cómprese un martillo más grande.
+- No lo fuerce. Cómprese un martillo más grande
 
-POSTULADO DE HORNER SOBRE LOS MANAZAS.
+### Postulado de HORNER SOBRE LOS MANAZAS
 
-- La destreza es directamente proporcional al número de aparatos que haya estropeado por completo.
+- La destreza es directamente proporcional al número de aparatos que haya estropeado por completo
 
-AXIOMA DE CAHN.
+### AXIOMA DE CAHN
 
-- Cuando todo falle, lea las instrucciones.
+- Cuando todo falle, lea las instrucciones
 
-PRINCIPIO DE LOS APARATOS DE MÚLTIPLES USOS.
+### PRINCIPIO DE LOS APARATOS DE MÚLTIPLES USOS
 
-- Cuantas menos cosas pueda hacer un aparato, mejor las hará.
+- Cuantas menos cosas pueda hacer un aparato, mejor las hará
 
-PRINCIPIO DE COOPER.
+### PRINCIPIO DE COOPER
 
-- Todas las máquinas son amplificadores.
+- Todas las máquinas son amplificadores
 
-LEY DE JENKINSON.
+### Ley de JENKINSON
 
-- De todas maneras, no funcionará.
+- De todas maneras, no funcionará
 
-SUGERIDAS POR RODRIGO HERNÁNDEZ (rhernandez@nordson.com.mx)
+### SUGERIDAS POR RODRIGO HERNÁNDEZ (rhernandez nordson.com.mx)
 
 - Si al revisar un equipo, este funciona correctamente no implica que esté bien, sino que no ha revisado lo suficiente
 
-Corolario
+#### Corolario
 
 - El que lo haya revisado bien, no implica que vaya a encontrar la falla
 
-## Investigacionología y academiología.
+## Investigacionología y academiología
 
-LEY DE GORDON.
+### Ley de GORDON
 
-- Si una investigación no merece la pena, tampoco merece la pena hacerla bien.
+- Si una investigación no merece la pena, tampoco merece la pena hacerla bien
 
-LEY DE MURPHY SOBRE LA INVESTIGACIÓN.
+### Ley de Murphy SOBRE LA INVESTIGACIÓN
 
-- Las investigaciones que realice, sobre todo si son muchas, tenderán a apoyar sus teorías.
+- Las investigaciones que realice, sobre todo si son muchas, tenderán a apoyar sus teorías
 
-LEY DE MAIER.
+### Ley de MAIER
 
-- Si los hechos no se ajustan a la teoría, tendrá que deshacerse de ellos.
+- Si los hechos no se ajustan a la teoría, tendrá que deshacerse de ellos
 
-Corolarios.
+#### Corolarios
 
-1. Cuanto más amplia sea una teoría, mejor.
+1. Cuanto más amplia sea una teoría, mejor
 
-2. Se puede considerar que el experimento ha sido un éxito cuando (para que se ajuste a la teoría) no hay que eliminar más del 50 por 100 de las medidas.
+1. Se puede considerar que el experimento ha sido un éxito cuando (para que se ajuste a la teoría) no hay que eliminar más del 50 por 100 de las medidas
 
-LEY DE WILLIAMS Y HOLLAND.
+### Ley de WILLIAMS Y HOLLAND
 
-- Si se reúnen suficientes datos, se puede demostrar cualquier cosa con ayuda de la estadística.
+- Si se reúnen suficientes datos, se puede demostrar cualquier cosa con ayuda de la estadística
 
-LEY DE PEER.
+### Ley de PEER
 
-- La solución de un problema cambia la naturaleza del mismo.
+- La solución de un problema cambia la naturaleza del mismo
 
-LEY DE HARVARD.
+### Ley de HARVARD
 
-- En condiciones rigurosamente controladas de presión, temperatura, volumen, humedad y otras variables, el organismo actúa como le sale de las narices.
+- En condiciones rigurosamente controladas de presión, temperatura, volumen, humedad y otras variables, el organismo actúa como le sale de las narices
 
-CUARTA LEY DE LAS REVISIONES.
+### CUARTA Ley de LAS REVISIONES
 
-- Después de cuidadísimos y exactísimos análisis de una muestra, siempre resulta que no era esa la que se tenía que analizar.
+- Después de cuidadísimos y exactísimos análisis de una muestra, siempre resulta que no era esa la que se tenía que analizar
 
-LEY DE HERSH.
+### Ley de HERSH
 
-- La Bioquímica se expande hasta ocupar todo el espacio y tiempo disponibles en el campo editorial.
+- La Bioquímica se expande hasta ocupar todo el espacio y tiempo disponibles en el campo editorial
 
-LEY DE FETT DEL LABORATORIO.
+### Ley de FETT DEL LABORATORIO
 
-- Nunca intente repetir un experimento que haya salido bien.
+- Nunca intente repetir un experimento que haya salido bien
 
-LEY DE WYSZOWSKI.
+### Ley de WYSZOWSKI
 
-- Ningún experimento es reproducible.
+- Ningún experimento es reproducible
 
-LEY DE LA EXACTITUD.
+### Ley de LA EXACTITUD
 
-- Cuando se está trabajando para encontrar la solución a un problema, siempre resulta de gran ayuda saber la respuesta.
+- Cuando se está trabajando para encontrar la solución a un problema, siempre resulta de gran ayuda saber la respuesta
 
-LEY DE YOUNG.
+### Ley de YOUNG
 
-- Todos los grandes descubrimientos se hacen por error.
+- Todos los grandes descubrimientos se hacen por error
 
-Corolario.
+#### Corolario
 
-- Cuanto mayor es la subvención, más tiempo hace falta para cometer el error.
+- Cuanto mayor es la subvención, más tiempo hace falta para cometer el error
 
-FACTOR DE INUTILIDAD.
+### FACTOR DE INUTILIDAD
 
-- Ningún experimento es un fracaso absoluto. Siempre puede servir de ejemplo negativo.
+- Ningún experimento es un fracaso absoluto. Siempre puede servir de ejemplo negativo
 
-LEY DE PARKINSON SOBRE LA INVESTIGACIÓN MÉDICA.
+### Ley de PARKINSON SOBRE LA INVESTIGACIÓN MÉDICA
 
-- Las investigaciones que tienen éxito atraen las mayores subvenciones, y esto imposibilita las posteriores investigaciones en ese campo.
+- Las investigaciones que tienen éxito atraen las mayores subvenciones, y esto imposibilita las posteriores investigaciones en ese campo
 
-LEY DE PARKINSON.
+### Ley de PARKINSON
 
-- El progreso de la ciencia es inversamente proporcional al número de revistas especializadas que se publican.
+- El progreso de la ciencia es inversamente proporcional al número de revistas especializadas que se publican
 
-LEY DE BROOKE.
+### Ley de BROOKE
 
-- Cuando un sistema está completamente definido, siempre hay algún estúpido que encuentra algo que, o bien lo anula, o bien lo expande hasta que no haya Dios que lo reconozca.
+- Cuando un sistema está completamente definido, siempre hay algún estúpido que encuentra algo que, o bien lo anula, o bien lo expande hasta que no haya Dios que lo reconozca
 
-LEY DE TENENBAUN SOBRE LA REPLICABILIDAD.
+### Ley de TENENBAUN SOBRE LA REPLICABILIDAD
 
-- Los resultados más interesantes tienen lugar sólo una vez.
+- Los resultados más interesantes tienen lugar sólo una vez
 
-LEY DE SOUNDER.
+### Ley de SOUNDER
 
-- La repetición de un experimento no asegura la validez del mismo.
+- La repetición de un experimento no asegura la validez del mismo
 
-GUÍA DE HANDY PARA LA CIENCIA MODERNA.
+### GUÍA DE HANDY PARA LA CIENCIA MODERNA
 
-1. Si es verde o se retuerce, es Biología.
+1. Si es verde o se retuerce, es Biología
 
-2. Si apesta, es Química.
+1. Si apesta, es Química
 
-3. Si no funciona, es Física.
+1. Si no funciona, es Física
 
-EXTENSIONES DE CERF A LA GUÍA DE HANDY PARA LA CIENCIA MODERNA.
+### EXTENSIONES DE CERF A LA GUÍA DE HANDY PARA LA CIENCIA MODERNA
 
-4. Si es incomprensible, es Matemáticas.
+1. Si es incomprensible, es Matemáticas
 
-5. Si no tiene sentido, es Economía o Filosofía.
+1. Si no tiene sentido, es Economía o Filosofía
 
-PRINCIPIO DE BARR SOBRE LA INERCIA.
+### PRINCIPIO DE BARR SOBRE LA INERCIA
 
-- Pedirle a un grupo de científicos que revisen sus teorías es lo mismo que pedirle a un grupo de policías que revisen la ley.
+- Pedirle a un grupo de científicos que revisen sus teorías es lo mismo que pedirle a un grupo de policías que revisen la ley
 
-LA FALACIA DE SAGAN.
+### LA FALACIA DE SAGAN
 
-- Decir que un ser humano no es más que un conjunto de moléculas, es como decir que una obra de Shakespeare no es más que un conjunto de palabras.
+- Decir que un ser humano no es más que un conjunto de moléculas, es como decir que una obra de Shakespeare no es más que un conjunto de palabras
 
-PRIMERA LEY DE LA FÍSICA DE PARTÍCULAS.
+### Primera Ley de LA FÍSICA DE PARTÍCULAS
 
-- Cuanto más corta es la vida de una partícula, más caro resultará producirla.
+- Cuanto más corta es la vida de una partícula, más caro resultará producirla
 
-SEGUNDA LEY DE LA FÍSICA DE PARTÍCULAS.
+### Segunda Ley de LA FÍSICA DE PARTÍCULAS
 
-- Los bloques básicos que constituyen la materia no se dan en la naturaleza.
+- Los bloques básicos que constituyen la materia no se dan en la naturaleza
 
-PRIMERA LEY DEL PROGRESO CIENTÍFICO.
+### PRIMERA LEY DEL PROGRESO CIENTÍFICO
 
-- El avance de la ciencia se puede medir por la velocidad con que se acumulan las excepciones a las leyes anteriormente establecidas.
+- El avance de la ciencia se puede medir por la velocidad con que se acumulan las excepciones a las leyes anteriormente establecidas
 
-Corolarios.
+#### Corolarios
 
-1. Las excepciones son siempre más numerosas que las reglas.
+1. Las excepciones son siempre más numerosas que las reglas
 
-2. Siempre hay excepciones para las excepciones establecidas.
+1. Siempre hay excepciones para las excepciones establecidas
 
-3. Cuando se llegan a dominar las excepciones, nadie recuerda a que regla corresponden.
+1. Cuando se llegan a dominar las excepciones, nadie recuerda a que regla corresponden
 
-EXCLUSIONES DE GOLOMB A LOS MODELOS MATEMÁTICOS.
+### EXCLUSIONES DE GOLOMB A LOS MODELOS MATEMÁTICOS
 
-1. No crea en las consecuencias de 33º orden de un modelo de primer orden.
+1. No crea en las consecuencias de 33º orden de un modelo de primer orden
 
-Lema publicitario: Cum grano salis.
+### Lema publicitario: Cum grano salis
 
-2. No extrapole más allá de la región indicada.
+1. No extrapole más allá de la región indicada
 
-Lema publicitario: "No se pase de la raya".
+### Lema publicitario: "No se pase de la raya"
 
-3. No aplique ningún modelo hasta que no entienda los supuestos simplificados sobre los que se fundamenta y compruebe que es aplicable.
+1. No aplique ningún modelo hasta que no entienda los supuestos simplificados sobre los que se fundamenta y compruebe que es aplicable
 
-Lema publicitario: "Utilícese según las indicaciones".
+### Lema publicitario: "Utilícese según las indicaciones"
 
-4. No crea que el modelo es la realidad.
+1. No crea que el modelo es la realidad
 
-Lema publicitario: "No coma el menú".
+### Lema publicitario: "No coma el menú"
 
-5. No distorsione la realidad para que se ajuste al modelo.
+1. No distorsione la realidad para que se ajuste al modelo
 
-Lema publicitario: "El Método Procusto".
+### Lema publicitario: "El Método Procusto"
 
-6. No se limite a un solo modelo. Emplear más de uno puede ser útil para entender los distintos aspectos de un mismo fenómeno.
+1. No se limite a un solo modelo. Emplear más de uno puede ser útil para entender los distintos aspectos de un mismo fenómeno
 
-Lema publicitario: "Legalización de la poligamia".
+### Lema publicitario: "Legalización de la poligamia"
 
-7. No defienda un modelo desprestigiado.
+1. No defienda un modelo desprestigiado
 
-Lema publicitario: "No pida peras al olmo".
+### Lema publicitario: "No pida peras al olmo"
 
-8. No se enamore de su modelo.
+1. No se enamore de su modelo
 
-Lema publicitario: "Pigmalión".
+### Lema publicitario: "Pigmalión"
 
-9. No aplique la terminología del Tema A al Tema B si no es para enriquecer alguno de los dos.
+1. No aplique la terminología del Tema A al Tema B si no es para enriquecer alguno de los dos
 
-Lema publicitario: "Renovarse o morir".
+### Lema publicitario: "Renovarse o morir"
 
-10. No piense que ha destruido un demonio sólo porque le ha puesto nombre.
+1. No piense que ha destruido un demonio sólo porque le ha puesto nombre
 
-Lema publicitario: "Rumpelstiltskin".
+### Lema publicitario: "Rumpelstiltskin"
 
-LEY DE FELSON.
+### Ley de FELSON
 
-- Robar ideas a una persona es plagio. Robárselas a muchas es investigación.
+- Robar ideas a una persona es plagio. Robárselas a muchas es investigación
 
-REGLAS DE PAVLU PARA LA ECONOMÍA EN LA INVESTIGACIÓN.
+### REGLAS DE PAVLU PARA LA ECONOMÍA EN LA INVESTIGACIÓN
 
-1. Niegue la última verdad establecida de la lista.
+1. Niegue la última verdad establecida de la lista
 
-2. Añada su verdad.
+1. Añada su verdad
 
-3. Envíe la lista a sus colegas.
+1. Envíe la lista a sus colegas
 
-LEY DEL SEÑOR COOPER.
+### LEY DEL SEÑOR COOPER
 
-- Si no entiende un término específico en un texto técnico, páselo por alto. El texto tendrá sentido sin él.
+- Si no entiende un término específico en un texto técnico, páselo por alto. El texto tendrá sentido sin él
 
-COROLARIO DE BOGOVICH A LA LEY DEL SEÑOR COOPER.
+#### COROLARIO DE BOGOVICH
 
-- Si el texto no tiene sentido sin esa palabra, tampoco lo tendría con ella.
+- Si el texto no tiene sentido sin esa palabra, tampoco lo tendría con ella
 
-LEY DE SUPERVIVENCIA EN LA UNIVERSIDAD DE MEREDITH.
+### Ley de SUPERVIVENCIA EN LA UNIVERSIDAD DE MEREDITH
 
-- Nunca permita que el profesor de su especialidad se entere de que usted existe.
+- Nunca permita que el profesor de su especialidad se entere de que usted existe
 
-LEY DE ELLARD.
+### Ley de ELLARD
 
-- Los que quieren aprender, aprenderán.
+- Los que quieren aprender, aprenderán
 
-- Los que no quieren aprender, serán directores de empresa.
+- Los que no quieren aprender, serán directores de empresa
 
-- Los que sean incapaces de aprender y de dirigir empresas, serán los que controlen hasta la muerte la concesión de becas y empresas.
+- Los que sean incapaces de aprender y de dirigir empresas, serán los que controlen hasta la muerte la concesión de becas y empresas
 
-LEY DE VILE PARA LOS EDUCADORES.
+### Ley de VILE PARA LOS EDUCADORES
 
-- Nadie atiende en clase hasta que usted mete la pata.
+- Nadie atiende en clase hasta que usted mete la pata
 
-LEY DE VILE SOBRE EL ORDEN DE LOS PAPELES.
+### Ley de VILE SOBRE EL ORDEN DE LOS PAPELES
 
-- Todos los papeles de un montón que van después del primero, están, o bien al revés, o bien boca abajo, hasta que usted los ordena. Luego, se repite el proceso.
+- Todos los papeles de un montón que van después del primero, están, o bien al revés, o bien boca abajo, hasta que usted los ordena. Luego, se repite el proceso
 
-LEY DE WEINER SOBRE LAS BIBLIOTECAS.
+### Ley de WEINER SOBRE LAS BIBLIOTECAS
 
-- Nunca hay respuestas, sino referencias a otros textos.
+- Nunca hay respuestas, sino referencias a otros textos
 
-## Investigacionología avanzada.
+## Investigacionología avanzada
 
-LEY DEL TRABAJO DE LABORATORIO.
+### LEY DEL TRABAJO DE LABORATORIO
 
-- El vidrio caliente tiene la misma apariencia que el vidrio frío.
+- El vidrio caliente tiene la misma apariencia que el vidrio frío
 
-REGLA BÁSICA PARA LOS TRABAJADORES DE LOS LABORATORIOS.
+### REGLA BÁSICA PARA LOS TRABAJADORES DE LOS LABORATORIOS
 
-- Cuando no sepa que es lo que esta haciendo, hágalo con esmero y primor.
+- Cuando no sepa que es lo que esta haciendo, hágalo con esmero y primor
 
-REGLA DE FINAGLE.
+### REGLA DE FINAGLE
 
-- El trabajo en equipo es esencial. Le permitirá echarle la culpa al otro.
+- El trabajo en equipo es esencial. Le permitirá echarle la culpa al otro
 
-CREDO DE FINAGLE.
+### CREDO DE FINAGLE
 
-- La ciencia es verídica, no deje que le engañen los hechos.
+- La ciencia es verídica, no deje que le engañen los hechos
 
-LEY DE MUENCH.
+### Ley de MUENCH
 
-- No hay nada que perfeccione tanto una innovación como la falta de control.
+- No hay nada que perfeccione tanto una innovación como la falta de control
 
-LEY DE LERMAN SOBRE LA TECNOLOGÍA.
+### Ley de LERMAN SOBRE LA TECNOLOGÍA
 
-- Cualquier problema técnico se puede solucionar si se cuenta con suficiente tiempo y dinero.
+- Cualquier problema técnico se puede solucionar si se cuenta con suficiente tiempo y dinero
 
-Corolario de Lerman.
+#### Corolario de Lerman
 
-- Nunca se cuenta con suficiente tiempo y dinero.
+- Nunca se cuenta con suficiente tiempo y dinero
 
-LEY DE VESILIND SOBRE LA EXPERIMENTACIÓN.
+### Ley de VESILIND SOBRE LA EXPERIMENTACIÓN
 
-1. Si la repetición del experimento puede plantear problemas, hágalo sólo una vez.
+1. Si la repetición del experimento puede plantear problemas, hágalo sólo una vez
 
-2. Si se requiere un ajuste en línea recta, halle solamente dos puntos de referencia.
+1. Si se requiere un ajuste en línea recta, halle solamente dos puntos de referencia
 
-PRIMER POSTULADO DE THUMB.
+### PRIMER Postulado de THUMB
 
-- Es mejor resolver un problema con una aproximación grosera y conocer la verdad, 10 por 100 más o menos, que exigir una solución exacta y desconocer la verdad.
+- Es mejor resolver un problema con una aproximación grosera y conocer la verdad, 10 por 100 más o menos, que exigir una solución exacta y desconocer la verdad
 
-SEGUNDO POSTULADO DE THUMB.
+### SEGUNDO Postulado de THUMB
 
-- Una falsedad práctica y fácil de entender es más útil que una verdad compleja e incomprensible.
+- Una falsedad práctica y fácil de entender es más útil que una verdad compleja e incomprensible
 
-LA REGLA DE LAS REGLAS.
+### LA REGLA DE LAS REGLAS
 
-- La línea recta no existe.
+- La línea recta no existe
 
-LEY DE JONES.
+### Ley de JONES
 
-- Cualquier persona que haga una contribución significativa en cualquier campo y permanezca en este campo el tiempo suficiente, se convierte en un obstáculo para su progreso y esto es directamente proporcional a la importancia de su contribución original.
+- Cualquier persona que haga una contribución significativa en cualquier campo y permanezca en este campo el tiempo suficiente, se convierte en un obstáculo para su progreso y esto es directamente proporcional a la importancia de su contribución original
 
-LEY DE MANN (generalizada).
+### Ley de MANN (generalizada)
 
-- Si un científico descubre un hecho publicable, éste pasará a ser el centro de su teoría.
+- Si un científico descubre un hecho publicable, éste pasará a ser el centro de su teoría
 
-Corolario.
+#### Corolario
 
-- Y, a la vez, su teoría se convertirá en el centro de todo su pensamiento científico.
+- Y, a la vez, su teoría se convertirá en el centro de todo su pensamiento científico
 
-LEY DE GRELB SOBRE LOS ERRORES.
+### Ley de GRELB SOBRE LOS ERRORES
 
-- En cualquier serie de cálculos, los errores tienden a aparecer justo en el punto opuesto a aquel en el que usted empieza a comprobar si existen errores.
+- En cualquier serie de cálculos, los errores tienden a aparecer justo en el punto opuesto a aquel en el que usted empieza a comprobar si existen errores
 
-AXIOMA DE ROBERT.
+### AXIOMA DE ROBERT
 
-- Lo único que existe son los errores.
+- Lo único que existe son los errores
 
-COROLARIO DE BERMAN AL AXIOMA DE ROBERT.
+### COROLARIO DE BERMAN AL AXIOMA DE ROBERT
 
-- El error de un hombre es la información de otro.
+- El error de un hombre es la información de otro
 
-LEY DE LA FALTA DE FIABILIDAD.
+### Ley de LA FALTA DE FIABILIDAD
 
-- Errar es humano, pero para liar las cosas de verdad, hace falta un ordenador.
+- Errar es humano, pero para liar las cosas de verdad, hace falta un ordenador
 
-REGLA DE SUTIN.
+### REGLA DE SUTIN
 
-- De todas las cosas que se pueden hacer con un ordenador, las más inútiles son las más divertidas.
+- De todas las cosas que se pueden hacer con un ordenador, las más inútiles son las más divertidas
 
-LEY DE GREER.
+### Ley de GREER
 
-- Un programa de ordenador hace lo que usted le ordena que haga, no lo que quiere usted que haga.
+- Un programa de ordenador hace lo que usted le ordena que haga, no lo que quiere usted que haga
 
-AXIOMAS INFORMÁTICOS DE McCRISTY.
+### AXIOMAS INFORMÁTICOS DE McCRISTY
 
-Los archivos de apoyo nunca están completos.
+- Los archivos de apoyo nunca están completos
 
-Los fallos de software se pueden corregir sólo cuando la industria considera que se ha quedado obsoleto.
+- Los fallos de software se pueden corregir sólo cuando la industria considera que se ha quedado obsoleto
 
-AXIOMA INFORMÁTICO DE LEO BEISER.
+### AXIOMA INFORMÁTICO DE LEO BEISER
 
-- Cuando archive algo en la memoria, acuérdese de donde lo guardo.
+- Cuando archive algo en la memoria, acuérdese de donde lo guardo
 
-NORMA DE STEINBACH PARA LOS SISTEMAS DE PROGRAMACIÓN.
+### NORMA DE STEINBACH PARA LOS SISTEMAS DE PROGRAMACIÓN
 
-- No trate nunca de verificar una condición de error que no sepa manejar.
+- No trate nunca de verificar una condición de error que no sepa manejar
 
-## Academiología.
+## Academiología
 
-LEYES PARA LA PROGRAMACIÓN DE CLASES.
+### LEYES PARA LA PROGRAMACIÓN DE CLASES
 
-1. Si la asignatura que más le apetecía hacer tenía un número límite de n estudiantes, usted será el n+1 que solicitó matricularse.
+1. Si la asignatura que más le apetecía hacer tenía un número límite de n estudiantes, usted será el n+1 que solicitó matricularse
 
-2. Los horarios se elaboraran con el único y exclusivo objeto de que los estudiantes pierdan el máximo tiempo posible entre las clases.
+1. Los horarios se elaboraran con el único y exclusivo objeto de que los estudiantes pierdan el máximo tiempo posible entre las clases
 
-Corolario.
+### Corolario
 
-Si, por casualidad, consigue tener dos clases seguidas, se impartirán en los dos edificios más distantes entre sí de todo el recinto universitario.
+Si, por casualidad, consigue tener dos clases seguidas, se impartirán en los dos edificios más distantes entre sí de todo el recinto universitario
 
-3. Si para hacer una asignatura, que le apetece mucho necesita estudiar otra previamente, esta última sólo se ofrecerá durante el cuatrimestre siguiente a la deseada.
+1. Si para hacer una asignatura, que le apetece mucho necesita estudiar otra previamente, esta última sólo se ofrecerá durante el cuatrimestre siguiente a la deseada
 
-PRIMERA LEY DE LOS EXÁMENES FINALES.
+### Primera Ley de LOS EXÁMENES FINALES
 
-- Las pilas de la calculadora de bolsillo, que han durado todo el curso, se agotarán durante el examen final de matemáticas.
+- Las pilas de la calculadora de bolsillo, que han durado todo el curso, se agotarán durante el examen final de matemáticas
 
-Corolario.
+#### Corolario
 
-- Si lleva pilas de recambio, serán defectuosos.
+- Si lleva pilas de recambio, serán defectuosos
 
-SEGUNDA LEY DE LOS EXÁMENES FINALES.
+### Segunda Ley de LOS EXÁMENES FINALES
 
-- En su examen final más difícil, la compañera de clase más maciza y atractiva se sentará a su lado por primera vez en todo el curso.
+- En su examen final más difícil, la compañera de clase más maciza y atractiva se sentará a su lado por primera vez en todo el curso
 
-LEYES DEL TERROR APLICADO.
+### LEYES DEL TERROR APLICADO
 
-1. Cuando repase sus apuntes antes de un examen, se dará cuenta de que lo más importante es ilegible.
+1. Cuando repase sus apuntes antes de un examen, se dará cuenta de que lo más importante es ilegible
 
-2. Cuanto más haya estudiado para un examen, menos seguro estará de cual es la respuesta que le piden.
+1. Cuanto más haya estudiado para un examen, menos seguro estará de cual es la respuesta que le piden
 
-3. El 80 por 100 del examen final está extraido de la clase a la que faltó y del libro que no ha leído.
+1. El 80 por 100 del examen final está extraido de la clase a la que faltó y del libro que no ha leído
 
-4. La noche antes del parcial de Historia, el profesor de Biología le mandará que se lea doscientas páginas sobre insectos.
+1. La noche antes del parcial de Historia, el profesor de Biología le mandará que se lea doscientas páginas sobre insectos
 
-Corolario.
+#### Corolario
 
-Todos los profesores dan por sentado que lo único que usted tiene que hacer es estudiar su asignatura.
+Todos los profesores dan por sentado que lo único que usted tiene que hacer es estudiar su asignatura
 
-5. Si tiene que hacer un examen en el que se pueden usar libros, se le olvidará llevarlos.
+1. Si tiene que hacer un examen en el que se pueden usar libros, se le olvidará llevarlos
 
-Corolario.
+#### Corolario
 
-Si tiene que redactar un trabajo en casa, se le olvidará donde vive.
+Si tiene que redactar un trabajo en casa, se le olvidará donde vive
 
-6. A final de curso se acordará de que se había matriculado en una asignatura... y nunca ha ido a clase.
+1. A final de curso se acordará de que se había matriculado en una asignatura... y nunca ha ido a clase
 
-LEY DE NATALIE SOBRE EL ÁLGEBRA.
+### Ley de NATALIE SOBRE EL ÁLGEBRA
 
-- No lo comprenderá hasta después del examen.
+- No lo comprenderá hasta después del examen
 
-LEY DE SEIT SOBRE LA EDUCACIÓN SUPERIOR.
+### Ley de SEIT SOBRE LA EDUCACIÓN SUPERIOR
 
-- La única asignatura que le queda para licenciarse no se impartirá durante el segundo cuatrimestre.
+- La única asignatura que le queda para licenciarse no se impartirá durante el segundo cuatrimestre
 
-NORMAS DE ROMINGER PARA LOS ESTUDIANTES.
+### NORMAS DE ROMINGER PARA LOS ESTUDIANTES
 
-1. Cuanto más general sea el título del curso, menos aprenderá en él.
+1. Cuanto más general sea el título del curso, menos aprenderá en él
 
-2. Cuanto más específico sea, menos posibilidades tendrá de poder aplicarlo después.
+1. Cuanto más específico sea, menos posibilidades tendrá de poder aplicarlo después
 
-LEY DE MURPHY DEL TRABAJO DE FIN DE CURSO.
+### Ley de Murphy DEL TRABAJO DE FIN DE CURSO
 
-- El libro o la revista fundamental para terminar su trabajo de fin de curso será el único que no esté en la biblioteca.
+- El libro o la revista fundamental para terminar su trabajo de fin de curso será el único que no esté en la biblioteca
 
-Corolario.
+#### Corolario
 
-- Si no falta, le habrán arrancado las páginas más importante.
+- Si no falta, le habrán arrancado las páginas más importante
 
-LEY DE DUGGAN SOBRE LA INVESTIGACIÓN ERUDITA.
+### Ley de DUGGAN SOBRE LA INVESTIGACIÓN ERUDITA
 
-- No podrá determinar la fuente de la cita más valiosa.
+- No podrá determinar la fuente de la cita más valiosa
 
-Corolario.
+#### Corolario
 
-- La fuente de la cita que usted olvidó consignar, aparecerá en la crítica más desfavorable a su trabajo.
+- La fuente de la cita que usted olvidó consignar, aparecerá en la crítica más desfavorable a su trabajo
 
-REGLAS DE ROMINGER PARA LOS ENSEÑANTES.
+### REGLAS DE ROMINGER PARA LOS ENSEÑANTES
 
-1. Cuando un estudiante le pregunte por segunda vez si ya ha leído su resumen del libro, quiere decir que él no lo había leído.
+1. Cuando un estudiante le pregunte por segunda vez si ya ha leído su resumen del libro, quiere decir que él no lo había leído
 
-2. Si la asistencia diaria a clase es obligatoria, un examen anunciado producirá un mayor absentismo. Si es opcional, verá caras que no había visto nunca antes.
+1. Si la asistencia diaria a clase es obligatoria, un examen anunciado producirá un mayor absentismo. Si es opcional, verá caras que no había visto nunca antes
 
-## Murpyhología del trabajo y la oficina.
+## Murpyhología del trabajo y la oficina
 
-LEY DE HARDIN.
+### Ley de HARDIN
 
-- Nunca se puede hacer solamente una cosa.
+- Nunca se puede hacer solamente una cosa
 
-LEY DE HETCH.
+### Ley de HETCH
 
-- No hay mejor momento que el presente para que retrase lo que no quiere hacer.
+- No hay mejor momento que el presente para que retrase lo que no quiere hacer
 
-LEMA DE GROSSMAN.
+### LEMA DE GROSSMAN
 
-- Cualquier cosa que vale la pena hacer, ayer también valía la pena hacerla.
+- Cualquier cosa que vale la pena hacer, ayer también valía la pena hacerla
 
-DERIVADO DE KNAGG DE LA LEY DE MURPHY.
+### DERIVADO DE KNAGG DE LA Ley de Murphy
 
-- Cuanto más complicado y grandioso sea un plan, mayores serán las posibilidades de que se vaya al traste.
+- Cuanto más complicado y grandioso sea un plan, mayores serán las posibilidades de que se vaya al traste
 
-AXIOMA DE DEHAY.
+### AXIOMA DE DEHAY
 
-- Los trabajos sencillos siempre se dejan para después, porque ya habrá tiempo de hacerlos.
+- Los trabajos sencillos siempre se dejan para después, porque ya habrá tiempo de hacerlos
 
-LEY DE WESTHERN SOBRE EL JUICIO CONDICIONAL.
+### Ley de WESTHERN SOBRE EL JUICIO CONDICIONAL
 
-- La suposición es la madre de todas las pifias.
+- La suposición es la madre de todas las pifias
 
-REGLAS DE RAY SOBRE PRECISIÓN.
+### REGLAS DE RAY SOBRE PRECISIÓN
 
-Mida con micrómetro.
+- Mida con micrómetro
 
-Marque con tiza.
+- Marque con tiza
 
-Corte con hacha.
+- Corte con hacha
 
-EXTENSIÓN DE EINSTEIN A LA LEY DE MURPHY.
+### EXTENSIÓN DE EINSTEIN A LA Ley de Murphy
 
-- Un proyecto de trabajo se expande hasta llenar todo el espacio disponible.
+- Un proyecto de trabajo se expande hasta llenar todo el espacio disponible
 
-Corolario.
+#### Corolario
 
-- No importa lo grande que sea el espacio. Si hay dos proyectos que deben hacerse a la vez, los dos requerirán la misma porción de espacio de trabajo.
+- No importa lo grande que sea el espacio. Si hay dos proyectos que deben hacerse a la vez, los dos requerirán la misma porción de espacio de trabajo
 
-CUATRO PRINCIPIOS DE TALLER.
+### CUATRO PRINCIPIOS DE TALLER
 
-1. La llave inglesa o el taladro que usted necesite serán precisamente los que falten en la caja de herramientas.
+1. La llave inglesa o el taladro que usted necesite serán precisamente los que falten en la caja de herramientas
 
-2. Para la mayor parte de los montajes hacen falta tres manos.
+1. Para la mayor parte de los montajes hacen falta tres manos
 
-3. Las tuercas sobrantes nunca ajustan con los tornillos sobrantes.
+1. Las tuercas sobrantes nunca ajustan con los tornillos sobrantes
 
-4. Cuanto más cuidadosamente se planifique un proyecto, mayor confusión se producirá cuando algo falle.
+1. Cuanto más cuidadosamente se planifique un proyecto, mayor confusión se producirá cuando algo falle
 
-LEY DE LAS REPARACIONES.
+### Ley de LAS REPARACIONES
 
-- Si no se ha roto, no lo podrá arreglar.
+- Si no se ha roto, no lo podrá arreglar
 
-REGLA DEL PENSAMIENTO INTELIGENTE.
+### REGLA DEL PENSAMIENTO INTELIGENTE
 
-- Guarde todas las piezas.
+- Guarde todas las piezas
 
-LEY DE SMITH SOBRE LA REPARACIÓN DE ORDENADORES.
+### Ley de SMITH SOBRE LA REPARACIÓN DE ORDENADORES
 
-- Los orificios de acceso tendrán medio milímetro menos de diámetro.
+- Los orificios de acceso tendrán medio milímetro menos de diámetro
 
-Corolario.
+#### Corolario
 
-- Los que tengan el diámetro adecuado, no estarán en el sitio que les corresponda.
+- Los que tengan el diámetro adecuado, no estarán en el sitio que les corresponda
 
-LEY DE JARUK.
+### Ley de JARUK
 
-- Si fuera más barato comprar uno nuevo, la empresa insistiría en arreglar el viejo.
+- Si fuera más barato comprar uno nuevo, la empresa insistiría en arreglar el viejo
 
-DILEMA DE DEVRIES.
+### DILEMA DE DEVRIES
 
-- Si golpea al mismo tiempo dos teclas de la máquina de escribir, la letra que sale en el papel es la otra.
+- Si golpea al mismo tiempo dos teclas de la máquina de escribir, la letra que sale en el papel es la otra
 
-TEORÍA DE LA SUPERVISIÓN SELECTIVA.
+### TEORÍA DE LA SUPERVISIÓN SELECTIVA
 
-- El único momento del día en que uno se apoya cómodamente en el respaldo de la silla y se relaja es cuando el jefe se da una vuelta por la oficina.
+- El único momento del día en que uno se apoya cómodamente en el respaldo de la silla y se relaja es cuando el jefe se da una vuelta por la oficina
 
-OBSERVACIÓN DE LAUNEGAYER.
+### OBSERVACIÓN DE LAUNEGAYER
 
-- Es más fácil hacer preguntas estúpidas que corregir errores estúpidos.
+- Es más fácil hacer preguntas estúpidas que corregir errores estúpidos
 
-LEYES DE GORE SOBRE LA INGENIERÍA DE DISEÑO.
+### LEYES DE GORE SOBRE LA INGENIERÍA DE DISEÑO
 
-1. La función primaria de la ingeniería del diseño es poner las cosas difíciles al fabricantes e imposibles a los de mantenimiento.
+1. La función primaria de la ingeniería del diseño es poner las cosas difíciles al fabricantes e imposibles a los de mantenimiento
 
-2. En cualquier circuito, el componente que tenga menor duración se instalará en el punto menos accesible.
+1. En cualquier circuito, el componente que tenga menor duración se instalará en el punto menos accesible
 
-3. Cualquier circuito de diseño debe tener, por lo menos, una pieza obsoleta, dos que sean imposibles de encontrar y tres que se encuentren aún en periodo de prueba.
+1. Cualquier circuito de diseño debe tener, por lo menos, una pieza obsoleta, dos que sean imposibles de encontrar y tres que se encuentren aún en periodo de prueba
 
-Corolarios.
+#### Corolarios
 
-1. El ingeniero del proyecto cambiará los planos en el último momento.
+1. El ingeniero del proyecto cambiará los planos en el último momento
 
-2. Los cambios no aparecerán en el manual de funcionamiento.
+1. Los cambios no aparecerán en el manual de funcionamiento
 
-SEIS LEYES DE MURPHYOLOGÍA DE OFICINA.
+### SEIS LEYES DE MurphyOLOGÍA DE OFICINA
 
-1. Las cartas importantes que no tienen faltas, engendrarán varias cuando estén en el correo.
+1. Las cartas importantes que no tienen faltas, engendrarán varias cuando estén en el correo
 
-Corolario.
+#### Corolario
 
-Los errores correspondientes aparecerán en la carta mientras la esté leyendo el jefe.
+Los errores correspondientes aparecerán en la carta mientras la esté leyendo el jefe
 
-2. Las máquinas de la oficina, que funcionan perfectamente en las horas normales de trabajo, se descompondrán en cuanto vaya de tapadillo por la noche y las utilice para asuntos personales.
+1. Las máquinas de la oficina, que funcionan perfectamente en las horas normales de trabajo, se descompondrán en cuanto vaya de tapadillo por la noche y las utilice para asuntos personales
 
-3. Las máquinas que se hayan roto, funcionarán perfectamente en cuanto aparezca el técnico a repararlas.
+1. Las máquinas que se hayan roto, funcionarán perfectamente en cuanto aparezca el técnico a repararlas
 
-4. Los sobres y sellos que no se pegan cuando se chupan, se quedan adheridos a cualquier cosa cuando menos se desea.
+1. Los sobres y sellos que no se pegan cuando se chupan, se quedan adheridos a cualquier cosa cuando menos se desea
 
-5. Los papeles vitales demostrarán su vitalidad moviéndose espontáneamente desde el sitio en el que usted los dejó hasta donde no se puedan encontrar.
+1. Los papeles vitales demostrarán su vitalidad moviéndose espontáneamente desde el sitio en el que usted los dejó hasta donde no se puedan encontrar
 
-6. La última persona que se marchó o despidieron de la empresa, será la que tenga la culpa de que todo vaya mal... hasta que despidan a otra.
+1. La última persona que se marchó o despidieron de la empresa, será la que tenga la culpa de que todo vaya mal... hasta que despidan a otra
 
-LEY DE BOGOVICH.
+### Ley de BOGOVICH
 
-- El que duda, probablemente tiene razón.
+- El que duda, probablemente tiene razón
 
-LEY DE BRINTALL.
+### Ley de BRINTALL
 
-- Si le dan dos órdenes contradictorias, obedezca las dos.
+- Si le dan dos órdenes contradictorias, obedezca las dos
 
-LEY DE JOHNSON.
+### Ley de JOHNSON
 
-- El número de enfermedades menores entre los empleados es inversamente proporcional a la salud de la empresa.
+- El número de enfermedades menores entre los empleados es inversamente proporcional a la salud de la empresa
 
-PRINCIPIO DE TILLIS SOBRE ORGANIZACIÓN.
+### PRINCIPIO DE TILLIS SOBRE ORGANIZACIÓN
 
-- Si lo archiva, sabrá donde está, pero nunca le hará falta. Si no lo archiva, lo necesitará pero nunca sabrá donde se encuentra.
+- Si lo archiva, sabrá donde está, pero nunca le hará falta. Si no lo archiva, lo necesitará pero nunca sabrá donde se encuentra
 
-LEY DE SANDILAND.
+### Ley de SANDILAND
 
-- El tiempo libre del que puede disponer de una forma imprevista, lo malgastará inevitablemente.
+- El tiempo libre del que puede disponer de una forma imprevista, lo malgastará inevitablemente
 
-LEY DE DOANE SOBRE LA DEMORA.
+### Ley de DOANE SOBRE LA DEMORA
 
-1. Cuanto más eficiente se sea para llegar tarde. menos eficiente se será para todo lo demás.
+1. Cuanto más eficiente se sea para llegar tarde. menos eficiente se será para todo lo demás
 
-2. Cuanto más despacio se trabaja, menos errores se cometen.
+1. Cuanto más despacio se trabaja, menos errores se cometen
 
-LEY DE SCOTT SOBRE LOS NEGOCIOS.
+### Ley de SCOTT SOBRE LOS NEGOCIOS
 
-- No vaya nunca por el pasillo de su empresa sin llevar un papel en la mano.
+- No vaya nunca por el pasillo de su empresa sin llevar un papel en la mano
 
-LEY DE EDDIE SOBRE LOS NEGOCIOS.
+### Ley de EDDIE SOBRE LOS NEGOCIOS
 
-- No negocie nada nunca antes de las diez de la mañana ni después de las cuatro de la tarde. Antes de las diez, pensarán que está muy impaciente y después de las cuatro, que está desesperado.
+- No negocie nada nunca antes de las diez de la mañana ni después de las cuatro de la tarde. Antes de las diez, pensarán que está muy impaciente y después de las cuatro, que está desesperado
 
-TABLA DE EXCUSAS ÚTILES PARA LA OFICINA.
+### TABLA DE EXCUSAS ÚTILES PARA LA OFICINA
 
-1. Siempre se ha hecho así.
+1. Siempre se ha hecho así
 
-2. No sabía que lo necesitara con urgencia.
+1. No sabía que lo necesitara con urgencia
 
-3. Nadie me dijo que lo hiciera.
+1. Nadie me dijo que lo hiciera
 
-4. Estaba esperando su permiso.
+1. Estaba esperando su permiso
 
-5. ¿Cómo iba a saber que esto era diferente?.
+1. ¿Cómo iba a saber que esto era diferente?
 
-6. Este es su trabajo, no el mío.
+1. Este es su trabajo, no el mío
 
-7. Espera hasta que vuelva el jefe y pregúntale.
+1. Espera hasta que vuelva el jefe y pregúntale
 
-8. No hemos cometido muchos errores.
+1. No hemos cometido muchos errores
 
-9. No creía que fuera tan importante.
+1. No creía que fuera tan importante
 
-10. Estoy tan ocupado que no puedo dedicarle ni un minuto.
+1. Estoy tan ocupado que no puedo dedicarle ni un minuto
 
-11. Creía que te lo había dicho.
+1. Creía que te lo había dicho
 
-12. No me contrataron para hacer esto.
+1. No me contrataron para hacer esto
 
-LEY DE CONOR.
+### Ley de CONOR
 
-- Si hay un documento confidencial, alguien se lo dejará en la fotocopiadora.
+- Si hay un documento confidencial, alguien se lo dejará en la fotocopiadora
 
-LEY DE DRUMMOND SOBRE LA CONTRATACIÓN DE PERSONAL.
+### Ley de DRUMMOND SOBRE LA CONTRATACIÓN DE PERSONAL
 
-- El curriculum ideal llegará a sus manos un día después de que se haya cubierto la plaza.
+- El curriculum ideal llegará a sus manos un día después de que se haya cubierto la plaza
 
-LEY DE GLUCK.
+### Ley de GLUCK
 
-- Dé las vueltas que dé antes de entrar en el ascensor, los botones siempre estarán a su espalda.
+- Dé las vueltas que dé antes de entrar en el ascensor, los botones siempre estarán a su espalda
 
-LEY DE LYNCH.
+### Ley de LYNCH
 
-- En cuanto deje la cartera en el suelo, llegará el ascensor.
+- En cuanto deje la cartera en el suelo, llegará el ascensor
 
-FOX SOBRE LOS QUE SIEMPRE DICEN QUE SÍ AL JEFE.
+### FOX SOBRE LOS QUE SIEMPRE DICEN QUE SÍ AL JEFE
 
-- Vale la pena intrigar para ser portador de buenas noticias.
+- Vale la pena intrigar para ser portador de buenas noticias
 
-Corolario.
+#### Corolario
 
-- No esté en el edificio cuando lleguen las malas noticias.
+- No esté en el edificio cuando lleguen las malas noticias
 
-LEY DE PINTO.
+### Ley de PINTO
 
-- Si le hace a alguien un favor, le tendrá que hacer muchos más.
+- Si le hace a alguien un favor, le tendrá que hacer muchos más
 
-AXIOMA ORNITOLÓGICO DE LANGSAM.
+### AXIOMA ORNITOLÓGICO DE LANGSAM
 
-- Es difícil elevarse como las águilas cuando se trabaja con pavos.
+- Es difícil elevarse como las águilas cuando se trabaja con pavos
 
-## Sistemántica.
+## Sistemántica
 
-TEOREMA FUNDAMENTAL.
+### TEOREMA FUNDAMENTAL
 
-- Los nuevos sistemas generan nuevos problemas.
+- Los nuevos sistemas generan nuevos problemas
 
-Corolario.
+#### Corolario
 
-- No es aconsejable multiplicar innecesariamente el número de sistemas.
+- No es aconsejable multiplicar innecesariamente el número de sistemas
 
-PRINCIPIO DE LA INCERTIDUMBRE GENERALIZADA.
+### PRINCIPIO DE LA INCERTIDUMBRE GENERALIZADA
 
-Los sistemas tienden a crecer y, a medida que lo hacen, se pasan de la raya.
+Los sistemas tienden a crecer y, a medida que lo hacen, se pasan de la raya
 
-Formulaciones alternativas:
+#### Formulaciones alternativas:
 
-1. Los sistemas complicados producen resultados inesperados.
+1. Los sistemas complicados producen resultados inesperados
 
-2. No se puede predecir el comportamiento global de los grandes sistemas.
+1. No se puede predecir el comportamiento global de los grandes sistemas
 
-Corolario: Teorema de la No Aditividad del Comportamiento de los Sistemas.
+#### Corolario: Teorema de la No Aditividad del Comportamiento de los Sistemas
 
 - Un sistema grande, que se ha creado aumentando las dimensiones de un sistema pequeño, no se comporta de la misma manera que el sistema más pequeño
 
-ENGAÑO DEL FUNCIONARIO.
+### ENGAÑO DEL FUNCIONARIO
 
-- Las personas que trabajan con sistemas, no hacen lo que los sistemas dicen que están haciendo.
+- Las personas que trabajan con sistemas, no hacen lo que los sistemas dicen que están haciendo
 
-FALACIA OPERATIVA.
+### FALACIA OPERATIVA
 
-- El propio sistema no hace lo que dice que está haciendo.
+- El propio sistema no hace lo que dice que está haciendo
 
-PRIMERA LEY DE LA SISTEMÁNTICA.
+### Primera Ley de LA SISTEMÁNTICA
 
-- Está demostrado que un sistema complejo, que funciona, se ha creado siempre a partir de un sistema simple que funciona.
+- Está demostrado que un sistema complejo, que funciona, se ha creado siempre a partir de un sistema simple que funciona
 
-SEGUNDA LEY DE LA SISTEMÁNTICA.
+### Segunda Ley de LA SISTEMÁNTICA
 
-- Un sistema complejo diseñado partiendo de cero, no funciona nunca y no se puede modificar para que funcione. Hay que volver a empezar, partiendo de un sistema sencillo que funcione.
+- Un sistema complejo diseñado partiendo de cero, no funciona nunca y no se puede modificar para que funcione. Hay que volver a empezar, partiendo de un sistema sencillo que funcione
 
-POSTULADOS FUNDAMENTALES DE LA TEORÍA AVANZADA DE SISTEMAS.
+### POSTULADOS FUNDAMENTALES DE LA TEORÍA AVANZADA DE SISTEMAS
 
-1. Todo es un sistema.
+1. Todo es un sistema
 
-2. Todo es parte de un sistema mayor.
+1. Todo es parte de un sistema mayor
 
-3. El Universo está infinitamente sistematizado, tanto hacia arriba (sistemas más grandes) como hacia abajo (sistemas más pequeños).
+1. El Universo está infinitamente sistematizado, tanto hacia arriba (sistemas más grandes) como hacia abajo (sistemas más pequeños)
 
-4. Todos los sistemas son infinitamente complejos (La ilusión de que son simples proviene de centrar la atención en una o pocas variables).
+1. Todos los sistemas son infinitamente complejos (La ilusión de que son simples proviene de centrar la atención en una o pocas variables)
 
-PRINCIPIO DE CHATELIER
+### PRINCIPIO DE CHATELIER
 
-- Los sistemas complejos tienden a oponerse a sus propias funciones.
+- Los sistemas complejos tienden a oponerse a sus propias funciones
 
-## Murphyología situacional.
+## Murphyología situacional
 
-LEY DE DRAZEN SOBRE LA RESTITUCIÓN.
+### Ley de DRAZEN SOBRE LA RESTITUCIÓN
 
-- El tiempo necesario para rectificar una situación es inversamente proporcional al tiempo que se tardó en crearla.
+- El tiempo necesario para rectificar una situación es inversamente proporcional al tiempo que se tardó en crearla
 
 Ejemplo número 1:
 
-Hace falta más tiempo para pegar un florero que para romperlo.
+- Hace falta más tiempo para pegar un florero que para romperlo
 
 Ejemplo número 2:
 
-Hace falta más tiempo para perder x kilos que para ganarlos.
+- Hace falta más tiempo para perder x kilos que para ganarlos
 
-LEY DE LOS AUTOSERVICIOS.
+### Ley de LOS AUTOSERVICIOS
 
-- El plato que le llamó la atención desde que se puso usted en la cola se lo llevará el que va delante de usted.
+- El plato que le llamó la atención desde que se puso usted en la cola se lo llevará el que va delante de usted
 
-LEY DE DAVIS.
+### Ley de DAVIS
 
-- Si el titular de un periódico es una pregunta, la respuesta es "no".
+- Si el titular de un periódico es una pregunta, la respuesta es "no"
 
-OBSERVACIÓN DE ETORRE.
+### OBSERVACIÓN DE ETORRE
 
-- La otra cola es más rápida.
+- La otra cola es más rápida
 
-VARIACIÓN DE O’BRIEN A LA OBSERVACIÓN DE ETORRE.
+### VARIACIÓN DE O’BRIEN A LA OBSERVACIÓN DE ETORRE
 
-- Si cambia de cola, la que acaba de dejar empezará a avanzar más deprisa que la nueva.
+- Si cambia de cola, la que acaba de dejar empezará a avanzar más deprisa que la nueva
 
-Corolario de Kenton.
+#### Corolario de Kenton
 
-- Si vuelve a la primera, lo único que conseguirá es que se produzca un tumulto y todo el mundo se mosquee con usted.
+- Si vuelve a la primera, lo único que conseguirá es que se produzca un tumulto y todo el mundo se mosquee con usted
 
-PRINCIPIO DE LA ESPERA.
+### PRINCIPIO DE LA ESPERA
 
-- Cuanto más tiempo lleva en una cola, más probabilidades hay de que se haya equivocado de ventanilla.
+- Cuanto más tiempo lleva en una cola, más probabilidades hay de que se haya equivocado de ventanilla
 
-REGLA DE FLUGG.
+### REGLA DE FLUGG
 
-- El cajero más lento siempre está en la caja rápida.
+- El cajero más lento siempre está en la caja rápida
 
-REGLA DE WITTEN.
+### REGLA DE WITTEN
 
-- Siempre que se corte las uñas, le picará algo una hora después.
+- Siempre que se corte las uñas, le picará algo una hora después
 
-LEY DE STORRY SOBRE EL PROCESAMIENTO CRIMINAL.
+### Ley de STORRY SOBRE EL PROCESAMIENTO CRIMINAL
 
-- El grado de culpabilidad es directamente proporcional a la vehemencia con que se niega todo.
+- El grado de culpabilidad es directamente proporcional a la vehemencia con que se niega todo
 
-OBSERVACIÓN DE TRACY SOBRE EL TIEMPO.
+### OBSERVACIÓN DE TRACY SOBRE EL TIEMPO
 
-- Los buenos momentos terminan enseguida. Los malos se prolongan hasta la eternidad.
+- Los buenos momentos terminan enseguida. Los malos se prolongan hasta la eternidad
 
-LEY DE NORRIS.
+### Ley de NORRIS
 
-- La ola de calor aparece justo cuando se estropea el aire acondicionado de la oficina.
+- La ola de calor aparece justo cuando se estropea el aire acondicionado de la oficina
 
-LEYES DEL REVERENDO CHICHESTER.
+### LEYES DEL REVERENDO CHICHESTER
 
-1. Si hace un tiempo terriblemente malo, la asistencia a la iglesia será escasa.
+1. Si hace un tiempo terriblemente malo, la asistencia a la iglesia será escasa
 
-2. Si hace un tiempo estupendo, la asistencia a la iglesia será escasa.
+1. Si hace un tiempo estupendo, la asistencia a la iglesia será escasa
 
-3. Si quedan pocas hojas parroquiales, la asistencia superará todas las previsiones.
+1. Si quedan pocas hojas parroquiales, la asistencia superará todas las previsiones
 
-LEY DEL EQUILIBRIO.
+### LEY DEL EQUILIBRIO
 
-- Los malos hábitos inutilizan a los buenos.
+- Los malos hábitos inutilizan a los buenos
 
-Ejemplo: El zumo de naranja que se tomó para desayunar, quedará neutralizado por el cigarrillo que se fumó después y la chocolatina que se comió a media mañana.
+Ejemplo: El zumo de naranja que se tomó para desayunar, quedará neutralizado por el cigarrillo que se fumó después y la chocolatina que se comió a media mañana
 
-LEY DE JILLY.
+### Ley de JILLY
 
-- Cuanto más horrendo sea el corte de pelo, más despacio le crecerá.
+- Cuanto más horrendo sea el corte de pelo, más despacio le crecerá
 
-LEY DE JONES SOBRE LA IMPRENTA.
+### Ley de JONES SOBRE LA IMPRENTA
 
-- Hay errores que pasan desapercibidos hasta que el libro está en la imprenta.
+- Hay errores que pasan desapercibidos hasta que el libro está en la imprenta
 
-Corolario de Block.
+#### Corolario de Block
 
-- Cuando el autor recibe las pruebas y abre el libro al azar, se encuentra con el error más garrafal.
+- Cuando el autor recibe las pruebas y abre el libro al azar, se encuentra con el error más garrafal
 
-LEY DE WALLACE WOOD SOBRE EL DIBUJO.
+### Ley de WALLACE WOOD SOBRE EL DIBUJO
 
-1. No dibuje nunca lo que pueda copiar.
+1. No dibuje nunca lo que pueda copiar
 
-2. No copie nunca lo que pueda calcar.
+1. No copie nunca lo que pueda calcar
 
-3. No calque nunca lo que pueda recortar y pegar.
+1. No calque nunca lo que pueda recortar y pegar
 
-LEY DE HUTCHINSON.
+### Ley de HUTCHINSON
 
-- Si una situación exige toda su atención, al mismo tiempo sucederá algo que le distraerá por completo.
+- Si una situación exige toda su atención, al mismo tiempo sucederá algo que le distraerá por completo
 
-LEY DE FULLER SOBRE EL PERIODISMO.
+### Ley de FULLER SOBRE EL PERIODISMO
 
-- Cuanto más lejos sucede un accidente, mayor número de muertos y heridos hace falta para que sea noticia.
+- Cuanto más lejos sucede un accidente, mayor número de muertos y heridos hace falta para que sea noticia
 
-LEYES DE LA VERACIDAD EN LOS REPORTAJES.
+### LEYES DE LA VERACIDAD EN LOS REPORTAJES
 
-1. Cuanto más cerca se encuentre del lugar de los hechos, más evidentes serán los errores de los periódicos que cubran la información.
+1. Cuanto más cerca se encuentre del lugar de los hechos, más evidentes serán los errores de los periódicos que cubran la información
 
-2. Cuanto más lejos se encuentre del lugar de los hechos, experimentará mayor tendencia a creer lo que cuentan los periódicos que cubren la información.
+1. Cuanto más lejos se encuentre del lugar de los hechos, experimentará mayor tendencia a creer lo que cuentan los periódicos que cubren la información
 
-LEY DE LA CARTA.
+### Ley de LA CARTA
 
-- La mejor manera de inspirar nuevas ideas es sellar las cartas con lacre.
+- La mejor manera de inspirar nuevas ideas es sellar las cartas con lacre
 
-LEY DE JONES SOBRE LOS ZOOLÓGICOS Y MUSEOS.
+### Ley de JONES SOBRE LOS ZOOLÓGICOS Y MUSEOS
 
-- Los ejemplares más interesantes no tienen nombre.
+- Los ejemplares más interesantes no tienen nombre
 
-LEYES DEL FOTÓGRAFO.
+### LEYES DEL FOTÓGRAFO
 
-1. La posibilidad de hacer las mejores instantáneas surge siempre nada más terminar la última foto del carrete.
+1. La posibilidad de hacer las mejores instantáneas surge siempre nada más terminar la última foto del carrete
 
-2. Las mejores instantáneas posteriores intentaron hacerse con la tapa del objetivo puesta.
+1. Las mejores instantáneas posteriores intentaron hacerse con la tapa del objetivo puesta
 
-3. Las mejores instantáneas que sobrevivieron se estropearon cuando alguien abrió distraídamente la puerta del cuarto de revelar y entró un chorro de luz.
+1. Las mejores instantáneas que sobrevivieron se estropearon cuando alguien abrió distraídamente la puerta del cuarto de revelar y entró un chorro de luz
 
-LEY DE DEDERA.
+### Ley de DEDERA
 
-- En un edificio de tres plantas con un único ascensor, éste se encontrará en otro piso nueve de cada diez veces.
+- En un edificio de tres plantas con un único ascensor, éste se encontrará en otro piso nueve de cada diez veces
 
-LEY DE SIR WALTER.
+### Ley de SIR WALTER
 
-- La tendencia del humo de un cigarrillo, parrilla, fuego de campamento, etc., a dirigirse a la cara de una persona es directamente proporcional a la sensibilidad de esa persona al humo.
+- La tendencia del humo de un cigarrillo, parrilla, fuego de campamento, etc., a dirigirse a la cara de una persona es directamente proporcional a la sensibilidad de esa persona al humo
 
-LEY DE KAUFFMAN SOBRE LOS AEROPUERTOS.
+### Ley de KAUFFMAN SOBRE LOS AEROPUERTOS
 
-- La distancia a la puerta de embarque es inversamente proporcional al tiempo que se dispone para no perder el vuelo.
+- La distancia a la puerta de embarque es inversamente proporcional al tiempo que se dispone para no perder el vuelo
 
-LEY DE ROGERS.
+### Ley de ROGERS
 
-- En cuanto la azafata sirve el café, el avión entra en zona de turbulencias.
+- En cuanto la azafata sirve el café, el avión entra en zona de turbulencias
 
-Explicación de Davis a la Ley de Rogers.
+#### Explicación de Davis a la Ley de Rogers
 
-- Servir café en un avión produce turbulencias.
+- Servir café en un avión produce turbulencias
 
-PRINCIPIO BÁSICO DEL EQUIPAJE.
+### PRINCIPIO BÁSICO DEL EQUIPAJE
 
-- Se ponga junto a la cinta transportadora que se ponga, su equipaje vendrá por otra.
+- Se ponga junto a la cinta transportadora que se ponga, su equipaje vendrá por otra
 
-AXIOMA DE ANGUS SOBRE CAMBIO DE MONEDA.
+### AXIOMA DE ANGUS SOBRE CAMBIO DE MONEDA
 
-- Cuando se viaja al extranjero, el tipo de cambio mejorará mucho al día siguiente de haber comprado las divisas.
+- Cuando se viaja al extranjero, el tipo de cambio mejorará mucho al día siguiente de haber comprado las divisas
 
-Corolario.
+#### Corolario
 
-- Al regresar a casa, el tipo de cambio bajará de nuevo en cuanto se hayan cambiado todas las divisas sobrantes.
+- Al regresar a casa, el tipo de cambio bajará de nuevo en cuanto se hayan cambiado todas las divisas sobrantes
 
-LEY DE WAGNER SOBRE LAS RETRANSMISIONES DEPORTIVAS.
+### Ley de WAGNER SOBRE LAS RETRANSMISIONES DEPORTIVAS
 
-- Cuando la cámara se centra en un atleta, éste escupirá, se hurgará la nariz o se rascará.
+- Cuando la cámara se centra en un atleta, éste escupirá, se hurgará la nariz o se rascará
 
-LEY DE CROSBY.
+### Ley de CROSBY
 
-- Se puede saber lo malo que es un musical por el número de veces que el coro grita "¡Amor!".
+- Se puede saber lo malo que es un musical por el número de veces que el coro grita "¡Amor!"
 
-LEY DE FULTON SOBRE LA GRAVEDAD.
+### Ley de FULTON SOBRE LA GRAVEDAD
 
-- El esfuerzo para recoger al vuelo un objeto que se puede romper, producirá un desastre mucho mayor que dejarlo caer.
+- El esfuerzo para recoger al vuelo un objeto que se puede romper, producirá un desastre mucho mayor que dejarlo caer
 
-LEY AVANZADA DE VILE SOBRE EL ARTE DE HACER COLA.
+### LEY AVANZADA DE VILE SOBRE EL ARTE DE HACER COLA
 
-1. Si se dirige corriendo hacia una cola corta, antes de que llegue será larguísima.
+1. Si se dirige corriendo hacia una cola corta, antes de que llegue será larguísima
 
-2. Cuando esté esperando en una cola muy larga, la gente que está detrás de usted maniobrará y se colocará en la caja que acaba de abrir.
+1. Cuando esté esperando en una cola muy larga, la gente que está detrás de usted maniobrará y se colocará en la caja que acaba de abrir
 
-3. Si abandona durante un segundo una cola corta, se convertirá en una larga hilera.
+1. Si abandona durante un segundo una cola corta, se convertirá en una larga hilera
 
-4. Si se encuentra usted en una cola corta, la gente de delante colará a todos sus amigos y parientes y se convertirá en una cola larguísima.
+1. Si se encuentra usted en una cola corta, la gente de delante colará a todos sus amigos y parientes y se convertirá en una cola larguísima
 
-5. Una cola corta en el exterior de un edificio se convertirá en una cola larguísima en el interior.
+1. Una cola corta en el exterior de un edificio se convertirá en una cola larguísima en el interior
 
-6. Si se queda parado en un sitio el tiempo suficiente, se formará una cola detrás de usted.
+1. Si se queda parado en un sitio el tiempo suficiente, se formará una cola detrás de usted
 
-LEY DE HOWDEN.
+### Ley de HOWDEN
 
-- Sólo se acordará de que tiene que echar una carta cuando no haya ningún buzón cerca.
+- Sólo se acordará de que tiene que echar una carta cuando no haya ningún buzón cerca
 
-LEYES DEL REPARTO DE CORREOS.
+### LEYES DEL REPARTO DE CORREOS
 
-1. Las cartas de amor, los contratos de negocios y el dinero que le deben siempre llegan con tres semanas de retraso.
+1. Las cartas de amor, los contratos de negocios y el dinero que le deben siempre llegan con tres semanas de retraso. La publicidad siempre llega el mismo día en que la enviaron
 
-La publicidad siempre llega el mismo día en que la enviaron.
+### Ley de WRIGHT
 
-LEY DE WRIGHT.
+- Un médico puede enterrar sus errores, pero un arquitecto sólo le puede aconsejar al cliente que plante geranios
 
-- Un médico puede enterrar sus errores, pero un arquitecto sólo le puede aconsejar al cliente que plante geranios.
+### Ley de RUSH SOBRE LA GRAVEDAD
 
-LEY DE RUSH SOBRE LA GRAVEDAD.
+- Cuando una máquina de tabaco o de chicle le devuelve el cambio, los duros se le caerán a los pies, mientras que las monedas de veinticinco rodarán lejos de su vista
 
-- Cuando una máquina de tabaco o de chicle le devuelve el cambio, los duros se le caerán a los pies, mientras que las monedas de veinticinco rodarán lejos de su vista.
+### Ley de REYNOLD SOBRE LA CLIMATOLOGÍA
 
-LEY DE REYNOLD SOBRE LA CLIMATOLOGÍA.
+- La velocidad del tiempo es directamente proporcional al coste de la factura que acaba de pagar en la peluquería
 
-- La velocidad del tiempo es directamente proporcional al coste de la factura que acaba de pagar en la peluquería.
+## Sociomurphyología (humanismo)
 
-## Sociomurphyología (humanismo).
+### Ley de SHIRLEY
 
-LEY DE SHIRLEY.
+- La mayor parte de las personas se merecen a su pareja
 
-- La mayor parte de las personas se merecen a su pareja.
+### LEYES DE ARTHUR SOBRE EL AMOR
 
-LEYES DE ARTHUR SOBRE EL AMOR.
+1. Las personas que le atraen invariablemente, piensan que usted les recuerda a alguien
 
-1. Las personas que le atraen invariablemente, piensan que usted les recuerda a alguien.
+1. La carta de amor que finalmente tuvo el valor de enviar, se retrasará en el correo el tiempo suficiente como para que usted haga el ridículo personalmente
 
-2. La carta de amor que finalmente tuvo el valor de enviar, se retrasará en el correo el tiempo suficiente como para que usted haga el ridículo personalmente.
+1. Los gestos románticos de otras personas parecen originales y excitantes. Los gestos románticos propios parecen ridículos y torpes
 
-3. Los gestos románticos de otras personas parecen originales y excitantes. Los gestos románticos propios parecen ridículos y torpes.
+### Ley de LAS PECULIARIDADES HUMANAS
 
-LEY DE LAS PECULIARIDADES HUMANAS.
+- Todo el mundo quiere que le miren, pero nadie quiere que le observen
 
-- Todo el mundo quiere que le miren, pero nadie quiere que le observen.
+### Ley de THOMAS SOBRE LA FELICIDAD EN EL MATRIMONIO
 
-LEY DE THOMAS SOBRE LA FELICIDAD EN EL MATRIMONIO.
+- La duración de un matrimonio es inversamente proporcional a la cantidad gastada en la boda
 
-- La duración de un matrimonio es inversamente proporcional a la cantidad gastada en la boda.
+### Primera Ley de Murphy SOBRE LOS MARIDOS
 
-PRIMERA LEY DE MURPHY SOBRE LOS MARIDOS.
+- La primera vez que salga a la calle después del cumpleaños de su esposa, verá el regalo que le compró con un descuento del 50 por 100
 
-- La primera vez que salga a la calle después del cumpleaños de su esposa, verá el regalo que le compró con un descuento del 50 por 100.
+#### Corolario
 
-Corolario.
+- Si ella va con usted, dará por sentado que lo compró porque era muy barato
 
-- Si ella va con usted, dará por sentado que lo compró porque era muy barato.
+### Segunda Ley de Murphy SOBRE LOS MARIDOS
 
-SEGUNDA LEY DE MURPHY SOBRE LOS MARIDOS.
+- Los regalos que usted le compra a su esposa nunca son tan aparentes como los que su vecino le compra a la suya
 
-- Los regalos que usted le compra a su esposa nunca son tan aparentes como los que su vecino le compra a la suya.
+### TERCERA Ley de Murphy SOBRE LOS MARIDOS
 
-TERCERA LEY DE MURPHY SOBRE LOS MARIDOS.
+- Los cachivaches que atesora su esposa, siempre estarán colocados encima de los que atesora usted
 
-- Los cachivaches que atesora su esposa, siempre estarán colocados encima de los que atesora usted.
+### Primera Ley de Murphy SOBRE LAS ESPOSAS
 
-PRIMERA LEY DE MURPHY SOBRE LAS ESPOSAS.
+- Si le pide a su marido que compre cinco cosas en la tienda y luego añade otra más que se le acaba de ocurrir, se le olvidarán dos de las cinco primeras
 
-- Si le pide a su marido que compre cinco cosas en la tienda y luego añade otra más que se le acaba de ocurrir, se le olvidarán dos de las cinco primeras.
+### Segunda Ley de Murphy SOBRE LAS ESPOSAS
 
-SEGUNDA LEY DE MURPHY SOBRE LAS ESPOSAS.
+- Su marido siempre sale más favorecido en las fotos que le hace usted que usted en las que le hace él
 
-- Su marido siempre sale más favorecido en las fotos que le hace usted que usted en las que le hace él.
+### TERCERA Ley de Murphy SOBRE LAS ESPOSAS
 
-TERCERA LEY DE MURPHY SOBRE LAS ESPOSAS.
+- Haga la división que haga de las tareas domésticas, a su marido siempre le tocarán las más sencillas
 
-- Haga la división que haga de las tareas domésticas, a su marido siempre le tocarán las más sencillas.
+### TEORÍA DE JANA SOBRE EL AMOR
 
-TEORÍA DE JANA SOBRE EL AMOR.
+- En el amor, la mujer nunca consigue lo que espera y el hombre nunca espera lo que consigue
 
-- En el amor, la mujer nunca consigue lo que espera y el hombre nunca espera lo que consigue.
+### REGLA SOBRE LOS COMPAÑEROS DE CAMA
 
-REGLA SOBRE LOS COMPAÑEROS DE CAMA.
+- El que ronca es el que se duerme primero
 
-- El que ronca es el que se duerme primero.
+### LEYES (asexuadas) DE GILESON SOBRE LAS EXPECTATIVAS
 
-LEYES (asexuadas) DE GILESON SOBRE LAS EXPECTATIVAS.
+1. Nunca se haga ilusiones sobre una cita a ciegas por el tono de voz que escuchó por teléfono
 
-1. Nunca se haga ilusiones sobre una cita a ciegas por el tono de voz que escuchó por teléfono.
+1. Nunca se haga ilusiones sobre una persona por el aspecto que tiene de espaldas
 
-2. Nunca se haga ilusiones sobre una persona por el aspecto que tiene de espaldas.
+### PREMISAS LÓGICAS DE COLVARD
 
-PREMISAS LÓGICAS DE COLVARD.
+- La probabilidad de que ocurra cualquier cosa es del 50 por 100. O sucede o no sucede
 
-- La probabilidad de que ocurra cualquier cosa es del 50 por 100. O sucede o no sucede.
+### CREDO DEL AGRICULTOR
 
-Comentario desmedido de Colvard.
+- Siembra tu amor el sábado por la noche y... reza el domingo para que se pierda la cosecha
 
-- Esto es cierto, especialmente, en el caso de las mujeres.
+### PRINCIPIO DE RUBY SOBRE LOS ENCUENTROS
 
-CREDO DEL AGRICULTOR.
+- La probabilidad de que se encuentre con un conocido aumenta cuando esté en compañía de alguien con quien no quiere que le vean
 
-- Siembra tu amor el sábado por la noche y... reza el domingo para que se pierda la cosecha.
+### LAMENTO DE CHEIT
 
-PRINCIPIO DE RUBY SOBRE LOS ENCUENTROS.
+- Si ayuda a un amigo con problemas, se acordará de usted con toda seguridad.. la próxima vez que los tenga
 
-- La probabilidad de que se encuentre con un conocido aumenta cuando esté en compañía de alguien con quien no quiere que le vean.
+#### Corolario de Denniston
 
-LAMENTO DE CHEIT.
+- Si hace algo bueno una vez, alguien le pedirá que lo repita
 
-- Si ayuda a un amigo con problemas, se acordará de usted con toda seguridad.. la próxima vez que los tenga.
+### Ley de MASON SOBRE LA SINERGIA
 
-Corolario de Denniston.
+- El día que uno vendería su alma a cualquier precio, sobran almas
 
-- Si hace algo bueno una vez, alguien le pedirá que lo repita.
+### OBSERVACIONES DE RON PARA ADOLESCENTES
 
-LEY DE MASON SOBRE LA SINERGIA.
+1. Las espinillas aparecen justo una hora antes de la cita
 
-- El día que uno vendería su alma a cualquier precio, sobran almas.
+1. El arañazo del disco siempre cae en su canción favorito
 
-OBSERVACIONES DE RON PARA ADOLESCENTES.
+### Ley de SCHRIMPTON SOBRE LA OPORTUNIDAD DE LOS ADOLESCENTES
 
-1.Las espinillas aparecen justo una hora antes de la cita.
+- Cuando la oportunidad llame a su puerta, tendrá los auriculares puestos
 
-2.El arañazo del disco siempre cae en su canción favorito.
+### LEMA DEL PROFESOR BLOCK
 
-LEY DE SCHRIMPTON SOBRE LA OPORTUNIDAD DE LOS ADOLESCENTES.
+- Perdona y recuerda
 
-- Cuando la oportunidad llame a su puerta, tendrá los auriculares puestos.
+### Ley de JACOB
 
-LEMA DEL PROFESOR BLOCK.
+- Errar es humano. Echarle la culpa a otro es más humano todavía
 
-- Perdona y recuerda.
+### CONSEJO DE EDELSTEIN
 
-LEY DE JACOB.
+- No se preocupe por lo que otros piensen de usted. Están demasiado ocupados preocupándose por lo que usted piensa de ellos
 
-- Errar es humano. Echarle la culpa a otro es más humano todavía.
+### Ley de BLOCKAGE
 
-CONSEJO DE EDELSTEIN.
+- El que ríe el último... probablemente lo hace porque no ha entendido el chiste
 
-- No se preocupe por lo que otros piensen de usted. Están demasiado ocupados preocupándose por lo que usted piensa de ellos.
-
-LEY DE BLOCKAGE.
-
-- El que ríe el último... probablemente lo hace porque no ha entendido el chiste.
-
-PRINCIPIO DE BEIFELD.
+### PRINCIPIO DE BEIFELD
 
 La probabilidad de que un hombre conozca a una joven receptiva y deseable aumenta en proporción piramidal cuando está en compañía de:
 
-- Otra joven.
+- Otra joven
 
-- Su esposa.
+- Su esposa
 
-- Un amigo más guapo y con dinero.
+- Un amigo más guapo y con dinero
 
-PRIMERA LEY DE SOCIOGENÉTICA.
+### Primera Ley de SOCIOGENÉTICA
 
-- El celibato no es hereditario.
+- El celibato no es hereditario
 
-LEY DE HARTLEY.
+### Ley de HARTLEY
 
-- Nunca se acueste con nadie que esté más loco que usted.
+- Nunca se acueste con nadie que esté más loco que usted
 
-LEY DE BECKHAP.
+### Ley de BECKHAP
 
-- Belleza por cerebro igual a constante.
+- Belleza por cerebro igual a constante
 
-POSTULADOS DE PARDO.
+### POSTULADOS DE PARDO
 
-1. Todas las cosas buenas de la vida son ilegales, inmorales o engordan.
+1. Todas las cosas buenas de la vida son ilegales, inmorales o engordan
 
-2. Las tres cosas más leales de la vida son el dinero, un perro y una mujer vieja.
+1. Las tres cosas más leales de la vida son el dinero, un perro y una mujer vieja
 
-3. No se preocupe por el dinero, mientras pueda vivir bien y tener todo lo que le apetezca.
+1. No se preocupe por el dinero, mientras pueda vivir bien y tener todo lo que le apetezca
 
-EXTENSIÓN DE STEINKOPFF AL PRIMER POSTULADO DE PARDO.
+### EXTENSIÓN DE STEINKOPFF AL PRIMER Postulado de PARDO
 
-- Las cosas buenas de la vida también producen cáncer a las ratas de laboratorio y tienen impuestos escandalosos.
+- Las cosas buenas de la vida también producen cáncer a las ratas de laboratorio y tienen impuestos escandalosos
 
-LEY DE PARKER.
+### Ley de PARKER
 
-- La belleza es interior. La fealdad aflora rápidamente a la superficie.
+- La belleza es interior. La fealdad aflora rápidamente a la superficie
 
-LEY DEL CAPITÁN PENNY.
+### LEY DEL CAPITÁN PENNY
 
-- Podrá engañar algunas veces a todo el mundo, y a algunas personas siempre. Pero nunca podrá engañar a MAMÁ.
+- Podrá engañar algunas veces a todo el mundo, y a algunas personas siempre. Pero nunca podrá engañar a MAMÁ
 
-LEY DE KATZ.
+### Ley de KATZ
 
-- Los hombres y las naciones actúan razonablemente cuando ya han agotado todas las otras posibilidades.
+- Los hombres y las naciones actúan razonablemente cuando ya han agotado todas las otras posibilidades
 
-LEY DE PARKER SOBRE LAS DECLARACIONES POLÍTICAS.
+### Ley de PARKER SOBRE LAS DECLARACIONES POLÍTICAS
 
-- La veracidad de cualquier proposición no tiene nada que ver con su credibilidad y viceversa.
+- La veracidad de cualquier proposición no tiene nada que ver con su credibilidad y viceversa
 
-AXIOMA DEL SEÑOR COLE.
+### AXIOMA DEL SEÑOR COLE
 
-- La cantidad total de inteligencia del planeta permanece constante. La población, sin embargo, sigue aumentando.
+- La cantidad total de inteligencia del planeta permanece constante. La población, sin embargo, sigue aumentando
 
-PLAGIO DE STEELE A LA FILOSOFÍA DE ALGUIEN.
+### PLAGIO DE STEELE A LA FILOSOFÍA DE ALGUIEN
 
-- Todos deberíamos creer en algo. Yo creo que me tomaré otra copa.
+- Todos deberíamos creer en algo. Yo creo que me tomaré otra copa
 
-LA CONSTANTE DE KENNEDY.
+### LA CONSTANTE DE KENNEDY
 
-- No se enfade, vénguese.
+- No se enfade, vénguese
 
-LEMA DE CANADA BILL JONES.
+### LEMA DE CANADA BILL JONES
 
-- Es un desatino moral permitir que los primos conserven su dinero.
+- Es un desatino moral permitir que los primos conserven su dinero
 
-LEMA DE JONES.
+### LEMA DE JONES
 
-- Los amigos van y vienen, pero los enemigos se amontonan.
+- Los amigos van y vienen, pero los enemigos se amontonan
 
-ANEXO DE McCLAUGHRY AL LEMA DE JONES.
+### ANEXO DE McCLAUGHRY AL LEMA DE JONES
 
-- Si quiere tener un enemigo, haga un favor a alguien.
+- Si quiere tener un enemigo, haga un favor a alguien
 
-LEY DE VIQUE.
+### Ley de VIQUE
 
-- Un hombre sin religión es como un pez sin bicicleta.
+- Un hombre sin religión es como un pez sin bicicleta
 
-LEY DE HEIDI.
+### Ley de HEIDI
 
-- La liberación de la mujer no fue tal.
+- La liberación de la mujer no fue tal
 
-OBSERVACIÓN DE DOOLEY.
+### OBSERVACIÓN DE DOOLEY
 
-- Fíjese en todo el mundo, pero sea usted el que corte el bacalao.
+- Fíjese en todo el mundo, pero sea usted el que corte el bacalao
 
-LEY DE ZAPPA.
+### Ley de ZAPPA
 
-- Hay dos cosas en la tierra que son universales: el hidrógeno y la estupidez.
+- Hay dos cosas en la tierra que son universales: el hidrógeno y la estupidez
 
-RECORDATORIO DE GRELB.
+### RECORDATORIO DE GRELB
 
-- El 80 por 100 de las personas se consideran mejores conductores que la media.
+- El 80 por 100 de las personas se consideran mejores conductores que la media
 
-TEOREMA DE MUNDER.
+### Teorema de MUNDER
 
-- Por cada "10" hay diez "1".
+- Por cada "10" hay diez "1"
 
-LEY DE DYKSTRA.
+### Ley de DYKSTRA
 
-- Cada uno de nosotros es la persona más rara del mundo según el otro.
+- Cada uno de nosotros es la persona más rara del mundo según el otro
 
-LEY DE MEYERS.
+### Ley de MEYERS
 
-- En una situación social, lo más difícil de hacer suele ser lo correcto.
+- En una situación social, lo más difícil de hacer suele ser lo correcto
 
-REGLA DEL CRITERIO AMPLIO.
+### REGLA DEL CRITERIO AMPLIO
 
-- La gente que se resiste al cambio no puede resistir cambiar a peor.
+- La gente que se resiste al cambio no puede resistir cambiar a peor
 
-POSTULADO DE WEATHERWAX.
+### Postulado de WEATHERWAX
 
-- La vehemencia con que usted reacciona ante una información es inversamente proporcional a la exactitud de la misma.
+- La vehemencia con que usted reacciona ante una información es inversamente proporcional a la exactitud de la misma
 
-PRINCIPIO DE LA IRA.
+### PRINCIPIO DE LA IRA
 
-- No intente nunca calmar a nadie que se encuentre en el punto máximo de la ira.
+- No intente nunca calmar a nadie que se encuentre en el punto máximo de la ira
 
-LEY DE KENT SOBRE LA FAMILIA.
+### Ley de KENT SOBRE LA FAMILIA
 
-- No cambie nunca los planes a causa del tiempo.
+- No cambie nunca los planes a causa del tiempo
 
-LEY DE ELY.
+### Ley de ELY
 
-- Use la ropa adecuada y el papel se representará sólo.
+- Use la ropa adecuada y el papel se representará sólo
 
-PRIMERA REGLA DE LA ACTUACIÓN.
+### PRIMERA REGLA DE LA ACTUACIÓN
 
-- Pase lo que pase, haga creer que fue intencionado.
+- Pase lo que pase, haga creer que fue intencionado
 
-LEY DE LIVINGSTONE SOBRE LA GORDURA.
+### Ley de LIVINGSTONE SOBRE LA GORDURA
 
-1. La grasa se expande y llena cualquier ropa que se ponga.
+1. La grasa se expande y llena cualquier ropa que se ponga
 
-2. Una persona obesa camina siempre por el medio del pasillo.
+1. Una persona obesa camina siempre por el medio del pasillo
 
-Corolario.
+#### Corolario
 
-- Dos personas obesas, se conozcan o no, caminarán siempre la una al lado de la otra.
+- Dos personas obesas, se conozcan o no, caminarán siempre la una al lado de la otra
 
-LEY DE LA LLEGADA.
+### Ley de LA LLEGADA
 
-- Los que viven más cerca, llegan más tarde.
+- Los que viven más cerca, llegan más tarde
 
-LEY DE ZADRA SOBRE LA BIOMECÁNICA.
+### Ley de ZADRA SOBRE LA BIOMECÁNICA
 
-- La intensidad del picor es inversamente proporcional a la facilidad de acceso del punto en que se produce.
+- La intensidad del picor es inversamente proporcional a la facilidad de acceso del punto en que se produce
 
-LAS TRES FRASES MENOS CREÍBLES.
+### LAS TRES FRASES MENOS CREÍBLES
 
-1. "El cheque ya está enviado".
+1. "El cheque ya está enviado"
 
-2. "Claro que te respetaré por la mañana".
+1. "Claro que te respetaré por la mañana"
 
-3. "Soy del Gobierno y estoy aquí para ayudarle".
+1. "Soy del Gobierno y estoy aquí para ayudarle"
 
-LEY DE VOLTAIRE.
+### Ley de VOLTAIRE
 
-- No hay nada más respetable que una maldad antigua.
+- No hay nada más respetable que una maldad antigua
 
-## Murphyología médica.
+## Murphyología médica
 
-SEIS PRINCIPIOS PARA LOS PACIENTES.
+### SEIS PRINCIPIOS PARA LOS PACIENTES
 
-1. Sólo porque el médico sepa el nombre de su enfermedad, no significa que sepa lo que es.
+1. Sólo porque el médico sepa el nombre de su enfermedad, no significa que sepa lo que es
 
-2. Cuanto más viejas y aburridas sean las revistas de la sala de espera, más tiempo tendrá que aguardar a que le reciban.
+1. Cuanto más viejas y aburridas sean las revistas de la sala de espera, más tiempo tendrá que aguardar a que le reciban
 
-3. Sólo los adultos tienen problemas con las botellas a prueba de niños.
+1. Sólo los adultos tienen problemas con las botellas a prueba de niños
 
-4. Nunca quedan bastantes pastillas para el último día de tratamiento.
+1. Nunca quedan bastantes pastillas para el último día de tratamiento
 
-5. Las pastillas que hay que tomar en las comidas son las más asquerosas.
+1. Las pastillas que hay que tomar en las comidas son las más asquerosas
 
-Corolario.
+#### Corolario
 
-Hasta el agua sabe mal cuando se toma por prescripción facultativa.
+1. Hasta el agua sabe mal cuando se toma por prescripción facultativa
 
-6. Si parece que sus padecimientos están mejorando, lo más probable es que su médico esté poniéndose enfermo.
+1. Si parece que sus padecimientos están mejorando, lo más probable es que su médico esté poniéndose enfermo
 
-LEYES DE SMITH SOBRE EL BRIDGE.
+### LEYES DE SMITH SOBRE EL BRIDGE
 
-1. Si tiene un semifallo o no tiene nada, entonces su compañero no pasa.
+1. Si tiene un semifallo o no tiene nada, entonces su compañero no pasa
 
-2. Si tiene la K, la J y el 9 de diamantes y el as de picas, el idiota de su derecha tendrá el as, la Q y el 10 de diamantes y el rey de picas.
+1. Si tiene la K, la J y el 9 de diamantes y el as de picas, el idiota de su derecha tendrá el as, la Q y el 10 de diamantes y el rey de picas
 
-3. Cuando es usted el que da, siempre pinta lo que peor le viene.
+1. Cuando es usted el que da, siempre pinta lo que peor le viene
 
-LEY DE THOMAS.
+### Ley de THOMAS
 
-- El que no quiere jugar es el que gana todas las manos.
+- El que no quiere jugar es el que gana todas las manos
 
-RASGO DE HENRY SOBRE LA NATURALEZA HUMANA.
+### RASGO DE HENRY SOBRE LA NATURALEZA HUMANA
 
-- Nadie ama a un ganador que gana siempre.
+- Nadie ama a un ganador que gana siempre
 
-LEY DE TODD.
+### Ley de TODD
 
-- Si todo sigue igual, usted perderá.
+- Si todo sigue igual, usted perderá
 
-Corolario.
+#### Corolario
 
-- Si todo se pone a su favor, perderá lo mismo.
+- Si todo se pone a su favor, perderá lo mismo
 
-LEY DE JENSEN.
+### Ley de JENSEN
 
-- Gane o pierda, perderá.
+- Gane o pierda, perderá
 
-LEYES DE PORKINGHAM SOBRE LA PESCA.
+### LEYES DE PORKINGHAM SOBRE LA PESCA
 
-1. El tiempo del que disponga para ir de pesca disminuirá a medida que se acerque la temporada.
+1. El tiempo del que disponga para ir de pesca disminuirá a medida que se acerque la temporada
 
-2. El pescador con menos experiencia siempre es el que pesca el pez más grande.
+1. El pescador con menos experiencia siempre es el que pesca el pez más grande
 
-Corolario.
+#### Corolario
 
-Cuanto más sofisticado y caro sea su equipo, más probabilidades tiene de pararse en la pescadería a la vuelta.
+1. Cuanto más sofisticado y caro sea su equipo, más probabilidades tiene de pararse en la pescadería a la vuelta
 
-3. Cuanto más se le haya enredado el sedal, más peces habrá por los alrededores.
+1. Cuanto más se le haya enredado el sedal, más peces habrá por los alrededores
 
-LEY DE MITCHELL PARA LOS FUTUROS ESCALADORES.
+### Ley de MITCHELL PARA LOS FUTUROS ESCALADORES
 
-- La montaña parece más empinada a medida que se acerca.
+- La montaña parece más empinada a medida que se acerca
 
-Corolario de Frothingam.
+#### Corolario de Frothingam
 
-- Parece que la montaña esté más cerca de lo que está.
+- Parece que la montaña esté más cerca de lo que está
 
-LEY DE SHEDENHELM SOBRE LA MARCHA EN MONTAÑA.
+### Ley de SHEDENHELM SOBRE LA MARCHA EN MONTAÑA
 
-- Todos los senderos tienen más tramos cuesta arriba que cuesta abajo, independientemente del sentido de la marcha.
+- Todos los senderos tienen más tramos cuesta arriba que cuesta abajo, independientemente del sentido de la marcha
 
-LEY DEL MUS.
+### LEY DEL MUS
 
-- El compañero siempre tiene la culpa.
+- El compañero siempre tiene la culpa
 
-LEY INDISCUTIBLE DE LOS CONTRATOS DEPORTIVOS.
+### LEY INDISCUTIBLE DE LOS CONTRATOS DEPORTIVOS
 
-- Cuanto mayor es la cantidad que figura en el contrato, menos eficaz es la temporada siguiente.
+- Cuanto mayor es la cantidad que figura en el contrato, menos eficaz es la temporada siguiente
 
-PRINCIPIO DE KNOX SOBRE LA CALIDAD DE LA ESTRELLA.
+### PRINCIPIO DE KNOX SOBRE LA CALIDAD DE LA ESTRELLA
 
-- Cuando traspasan a una superestrella a su equipo favorito, se apaga. Cuando su equipo traspasa a un desconocido inútil, inmediatamente se eleva al estrellato.
+- Cuando traspasan a una superestrella a su equipo favorito, se apaga. Cuando su equipo traspasa a un desconocido inútil, inmediatamente se eleva al estrellato
 
-LEY DE HERTZBERG PARA CAMINAR SOBRE EL ALA.
+### Ley de HERTZBERG PARA CAMINAR SOBRE EL ALA
 
-- Nunca se suelte de donde esté agarrado hasta que no se haya agarrado a otra cosa.
+- Nunca se suelte de donde esté agarrado hasta que no se haya agarrado a otra cosa
 
-LEYES DE DEAL SOBRE LA NAVEGACIÓN.
+### LEYES DE DEAL SOBRE LA NAVEGACIÓN
 
-1. La cantidad de viento variará en una relación inversamente proporcional al número y experiencia de las personas que lleve a bordo.
+1. La cantidad de viento variará en una relación inversamente proporcional al número y experiencia de las personas que lleve a bordo
 
-2. No importa lo fuerte que sea la brisa cuando sale del muelle; en cuanto llegue al punto más alejado del puerto, el viento se quedará en calma.
+1. No importa lo fuerte que sea la brisa cuando sale del muelle; en cuanto llegue al punto más alejado del puerto, el viento se quedará en calma
 
-## Deportivismología-logía.
+## Deportivismología
 
-LAMENTO DEL HINCHA SABIO.
+### LAMENTO DEL HINCHA SABIO
 
-- Los tontos entran precipitadamente... y consiguen los mejores asientos.
+- Los tontos entran precipitadamente... y consiguen los mejores asientos
 
-REGLA DE BREDA.
+### REGLA DE BREDA
 
-- En todos los espectáculos, las personas cuyos asientos están más lejos del pasillo son las que llegan tarde.
+- En todos los espectáculos, las personas cuyos asientos están más lejos del pasillo son las que llegan tarde
 
-LEY DE MOSER SOBRE LOS DEPORTES ESPECTÁCULO.
+### Ley de MOSER SOBRE LOS DEPORTES ESPECTÁCULO
 
-- Las jugadas emocionantes siempre suceden cuando usted está mirando el marcador o ha salido a comprar palomitas.
+- Las jugadas emocionantes siempre suceden cuando usted está mirando el marcador o ha salido a comprar palomitas
 
-LEY DE BOB SOBRE LOS DEPORTES TELEVISADOS.
+### Ley de BOB SOBRE LOS DEPORTES TELEVISADOS
 
-- Si durante un partido cambia de un canal a otro para no ver los anuncios, en el segundo canal también habrá anuncios.
+- Si durante un partido cambia de un canal a otro para no ver los anuncios, en el segundo canal también habrá anuncios
 
-LEYES DE MURRAY SOBRE LA PISTA.
+### LEYES DE MURRAY SOBRE LA PISTA
 
-1. No hay nada tan malo que no se pueda empeorar despidiendo al entrenador.
+1. No hay nada tan malo que no se pueda empeorar despidiendo al entrenador
 
-2. El peor delantero centro es el que está en el campo.
+1. El peor delantero centro es el que está en el campo
 
-3. Un agente libre es todo menos eso.
+1. Un agente libre es todo menos eso
 
-4. El fútbol es un deporte en el que participan once buenos jugadores y el equipo de casa.
+1. El fútbol es un deporte en el que participan once buenos jugadores y el equipo de casa
 
-5. Todo lo que pueda ir al Madrid, irá.
+1. Todo lo que pueda ir al Madrid, irá
 
-COMENTARIO DE LORD COHEN.
+### COMENTARIO DE LORD COHEN
 
-- La viabilidad de una operación no es el mejor indicativo de sus resultados.
+- La viabilidad de una operación no es el mejor indicativo de sus resultados
 
-LEYES DE TELESCO SOBRE LA ENFERMERÍA.
+### LEYES DE TELESCO SOBRE LA ENFERMERÍA
 
-1. Todas las intravenosas están al otro extremo del pasillo.
+1. Todas las intravenosas están al otro extremo del pasillo
 
-2. La capacidad de un médico es inversamente proporcional a su tiempo disponible.
+1. La capacidad de un médico es inversamente proporcional a su tiempo disponible
 
-3. Existen dos tipos de esparadrapo: el que no se pega y el que no puede despegarse.
+1. Existen dos tipos de esparadrapo: el que no se pega y el que no puede despegarse
 
-4. Todo el mundo quiere al mismo tiempo una inyección calmante.
+1. Todo el mundo quiere al mismo tiempo una inyección calmante
 
-5. Todos los que no quieren una inyección calmante cuando usted las ofreció, la quieren cuando pasa las pastillas para dormir.
+1. Todos los que no quieren una inyección calmante cuando usted las ofreció, la quieren cuando pasa las pastillas para dormir
 
-LEY DE BARACH.
+### Ley de BARACH
 
-- Un alcohólico es aquel que bebe más que su médico.
+- Un alcohólico es aquel que bebe más que su médico
 
-ADVERTENCIA DE MATZ.
+### ADVERTENCIA DE MATZ
 
-- Tenga cuidado con el médico que es muy hábil para salir de dificultades.
+- Tenga cuidado con el médico que es muy hábil para salir de dificultades
 
-LEY DE SILVER SOBRE LOS MÉDICOS.
+### Ley de SILVER SOBRE LOS MÉDICOS
 
-- Nunca cicatriza bien.
+- Nunca cicatriza bien
 
-REGLA DE MATZ SOBRE LAS MEDICINAS.
+### REGLA DE MATZ SOBRE LAS MEDICINAS
 
-- Una medicina es una sustancia que, cuando se inyecta a una rata, produce un informe científico.
+- Una medicina es una sustancia que, cuando se inyecta a una rata, produce un informe científico
 
-AFORISMO DE COCHRANE.
+### AFORISMO DE COCHRANE
 
 Antes de hacerse un análisis, decida que es lo que hará si sale:
 
-- positivo.
+- positivo
 
-- negativo.
+- negativo
 
-Si las dos respuestas son iguales, no se lo haga.
+Si las dos respuestas son iguales, no se lo haga
 
-LEY DE EDD SOBRE LA RADIOLOGÍA.
+### Ley de EDD SOBRE LA RADIOLOGÍA
 
-- Cuanto más fría esté la placa de las radiografías, más se la pegarán al cuerpo.
+- Cuanto más fría esté la placa de las radiografías, más se la pegarán al cuerpo
 
-PRECEPTO DE BERNSTEIN.
+### Precepto de BERNSTEIN
 
-- La flor nacional de los radiólogos es la evasiva.
+- La flor nacional de los radiólogos es la evasiva
 
-## Cortesía en carretera.
+## Cortesía en carretera
 
-LEY DE OLIVER SOBRE LA POSICIÓN.
+### Ley de OLIVER SOBRE LA POSICIÓN
 
-- Vaya donde vaya, ahí está.
+- Vaya donde vaya, ahí está
 
-PRIMERA LEY DEL VIAJE.
+### PRIMERA LEY DEL VIAJE
 
-- Siempre se tarda más en ir que en volver.
+- Siempre se tarda más en ir que en volver
 
-LEY DEL AVIÓN.
+### LEY DEL AVIÓN
 
-- Cuando tiene que hacer un transbordo, si el avión en el que va lleva retraso, el otro no lo lleva.
+- Cuando tiene que hacer un transbordo, si el avión en el que va lleva retraso, el otro no lo lleva
 
-LEY DE KELLY SOBRE LA NAVEGACIÓN AÉREA.
+### Ley de KELLY SOBRE LA NAVEGACIÓN AÉREA
 
-- La información más importante de cualquier carta de navegación está en el doblez.
+- La información más importante de cualquier carta de navegación está en el doblez
 
-LEY DEL ABUELO CHARNOK.
+### LEY DEL ABUELO CHARNOK
 
-- No sabrá lo que es blasfemar hasta que no aprenda a conducir.
+- No sabrá lo que es blasfemar hasta que no aprenda a conducir
 
-LEY DE VILE SOBRE LA CARRETERA.
+### Ley de VILE SOBRE LA CARRETERA
 
-- Su coche gasta más gasolina y aceite que el de los demás.
+- Su coche gasta más gasolina y aceite que el de los demás
 
-PRINCIPIO DE PHILLIP.
+### PRINCIPIO DE PHILLIP
 
-- Conducir un vehículo de cuatro ruedas significa simplemente que puede quedarse atascado en los lugares más inverosímiles.
+- Conducir un vehículo de cuatro ruedas significa simplemente que puede quedarse atascado en los lugares más inverosímiles
 
-LEY DE HUMPHRIES SOBRE CICLISMO.
+### Ley de HUMPHRIES SOBRE CICLISMO
 
-- El camino más corto es el que tiene las cuestas más empinadas.
+- El camino más corto es el que tiene las cuestas más empinadas
 
-LEY DEL CAMINO DE LA VIDA.
+### LEY DEL CAMINO DE LA VIDA
 
-- Si todo viene hacia usted, es que se ha equivocado de carril.
+- Si todo viene hacia usted, es que se ha equivocado de carril
 
-LEYES DE ATHENA DE LA CORTESÍA AL VOLANTE.
+### LEYES DE ATHENA DE LA CORTESÍA AL VOLANTE
 
-- Si permite que alguien se ponga delante de usted:
+Si permite que alguien se ponga delante de usted:
 
 1. El coche de delante será el último en atravesar un paso a nivel y usted se quedará sin poder moverse hasta que termine de pasar un tren largo y lento; o
 
-2. Los dos irán al mismo sitio y el otro ocupará la última plaza de aparcamiento libre.
+1. Los dos irán al mismo sitio y el otro ocupará la última plaza de aparcamiento libre
 
-POSTULADO DE LEMAR SOBRE EL APARCAMIENTO.
+### Postulado de LEMAR SOBRE EL APARCAMIENTO
 
-- Si tuvo que dejar el coche a seis manzanas, encontrará dos huecos justo a la entrada del edificio.
+- Si tuvo que dejar el coche a seis manzanas, encontrará dos huecos justo a la entrada del edificio
 
-LEY DE GRAY PARA LOS AUTOBUSES.
+### Ley de GRAY PARA LOS AUTOBUSES
 
-- Un autobús que no llega, sólo aparecerá cuando el pasajero potencial haya ido andando hasta un punto tan cercano al destino que ya no merezca la pena coger el autobús.
+- Un autobús que no llega, sólo aparecerá cuando el pasajero potencial haya ido andando hasta un punto tan cercano al destino que ya no merezca la pena coger el autobús
 
-LEY DE McKEE.
+### Ley de McKEE
 
-- Cuando no tenga prisa, el semáforo se pondrá verde antes de para el coche.
+- Cuando no tenga prisa, el semáforo se pondrá verde antes de para el coche
 
-LEY DE QUIGLEY.
+### Ley de QUIGLEY
 
-- Un coche y un camión que se van a cruzar en una carretera desierta, se encontrarán siempre en el paso más estrecho.
+- Un coche y un camión que se van a cruzar en una carretera desierta, se encontrarán siempre en el paso más estrecho
 
-PRIMERA LEY DEL TRÁFICO.
+### PRIMERA LEY DEL TRÁFICO
 
-- El carril lento en el que ha estado parado tanto tiempo, empezará a moverse cuando usted se haya cambiado al otro.
+- El carril lento en el que ha estado parado tanto tiempo, empezará a moverse cuando usted se haya cambiado al otro
 
-SEGUNDA LEY DEL TRÁFICO.
+### Segunda Ley DEL TRÁFICO
 
-- La hora de margen que tomó por el tráfico se quedará corta, porque se pasará hora y media en un atasco.
+- La hora de margen que tomó por el tráfico se quedará corta, porque se pasará hora y media en un atasco
 
-LEY DE REECE.
+### Ley de REECE
 
-- La velocidad de un vehículo que se acerca es directamente proporcional al espacio de la zona de cruce.
+- La velocidad de un vehículo que se acerca es directamente proporcional al espacio de la zona de cruce
 
-LEY DE DREW SOBRE LA BIOLOGÍA EN LA AUTOPISTA.
+### Ley de DREW SOBRE LA BIOLOGÍA EN LA AUTOPISTA
 
-- El primer bicho que se estrella contra un parabrisas, lo hace siempre a la altura de los ojos.
+- El primer bicho que se estrella contra un parabrisas, lo hace siempre a la altura de los ojos
 
-AXIOMA DE WINFIELD SOBRE EL ARTE DE DAR UNA DIRECCIÓN.
+### AXIOMA DE WINFIELD SOBRE EL ARTE DE DAR UNA DIRECCIÓN
 
-- La posibilidad de perderse es directamente proporcional al número de veces que le digan "no puedes perderte".
+- La posibilidad de perderse es directamente proporcional al número de veces que le digan "no puedes perderte"
 
-LEY DE JEAN SOBRE LOS AUTOMÓVILES.
+### Ley de JEAN SOBRE LOS AUTOMÓVILES
 
-- Todo coche que se utilice como "segundo vehículo" se romperá en cuanto el otro tenga una avería.
+- Todo coche que se utilice como "segundo vehículo" se romperá en cuanto el otro tenga una avería
 
-LEYES DE BROMBERG SOBRE LA REPARACIÓN DE AUTOMÓVILES.
+### LEYES DE BROMBERG SOBRE LA REPARACIÓN DE AUTOMÓVILES
 
-1. Si puede localizar la pieza averiada, no tendrá herramientas para sacarla.
+1. Si puede localizar la pieza averiada, no tendrá herramientas para sacarla
 
-2. Cuando pueda sacarla, en la tienda de repuestos le dirán que no la tienen ahora, pero que está pedida.
+1. Cuando pueda sacarla, en la tienda de repuestos le dirán que no la tienen ahora, pero que está pedida
 
-3. Si en la tienda tienen existencias, es que no necesitaba cambiarla.
+1. Si en la tienda tienen existencias, es que no necesitaba cambiarla
 
-LEY DE MILLER SOBRE LOS SEGUROS.
+### Ley de MILLER SOBRE LOS SEGUROS
 
-- El seguro lo cubre todo, excepto lo que pasa.
+- El seguro lo cubre todo, excepto lo que pasa
 
-PRINCIPIO DE MILSTEAD SOBRE LA CONDUCCIÓN.
+### PRINCIPIO DE MILSTEAD SOBRE LA CONDUCCIÓN
 
-- Si necesita parar un momento para retocarse el maquillaje, todos los semáforos estarán en verde.
+- Si necesita parar un momento para retocarse el maquillaje, todos los semáforos estarán en verde
 
-LEYES DE BROMBERG SOBRE LA REPARACIÓN DEL MOTOR.
+### LEYES DE BROMBERG SOBRE LA REPARACIÓN DEL MOTOR
 
-1. Cuando se presenta la necesidad, cualquier objeto o herramienta que tenga a mano se convierte en un martillo.
+1. Cuando se presenta la necesidad, cualquier objeto o herramienta que tenga a mano se convierte en un martillo
 
-2. Aunque la reparación sea pequeña, usted terminará lleno de grasa y aceite.
+1. Aunque la reparación sea pequeña, usted terminará lleno de grasa y aceite
 
-3. En caso necesario, pueden usarse indistintamente las herramientas en sistema métrico o en pulgadas.
+1. En caso necesario, pueden usarse indistintamente las herramientas en sistema métrico o en pulgadas
 
-Murpyhología doméstica.
+## Murpyhología doméstica
 
-LEY DE O’REILLY SOBRE LA COCINA.
+### Ley de O’REILLY SOBRE LA COCINA
 
-- La limpieza es algo casi imposible.
+- La limpieza es algo casi imposible
 
-SIETE REGLAS DEL DESORDEN EN LA COCINA.
+### SIETE REGLAS DEL DESORDEN EN LA COCINA
 
-1. Los aparatos multiusos no cumplen adecuadamente ninguna de sus funciones.
+1. Los aparatos multiusos no cumplen adecuadamente ninguna de sus funciones
 
-Corolario.
+#### Corolario
 
-Cuanto más caro sea el artefacto, menos se usará.
+Cuanto más caro sea el artefacto, menos se usará
 
-2. Cuanto más sencillas sean las instrucciones (por ejemplo, "Presionar aquí"), más difícil será abrir la caja.
+1. Cuanto más sencillas sean las instrucciones (por ejemplo, "Presionar aquí"), más difícil será abrir la caja
 
-3. Si encuentra una receta de su abuela en un libro viejo, el ingrediente más importante será ilegible.
+1. Si encuentra una receta de su abuela en un libro viejo, el ingrediente más importante será ilegible
 
-Corolario.
+#### Corolario
 
-Descubrirá que es ilegible sólo después de haber mezclado todos los demás ingredientes.
+Descubrirá que es ilegible sólo después de haber mezclado todos los demás ingredientes
 
-4. Una vez que se haya estropeado un guiso, cualquier cosa que añada para arreglarlo lo empeorará.
+1. Una vez que se haya estropeado un guiso, cualquier cosa que añada para arreglarlo lo empeorará
 
-5. Siempre recibirá alabanzas por el plato más fácil de preparar.
+1. Siempre recibirá alabanzas por el plato más fácil de preparar
 
-Ejemplo: Si hace "pato à l’orange" le felicitarán por las patatas asadas.
+Ejemplo: Si hace "pato à l’orange" le felicitarán por las patatas asadas
 
-6. Su invitado será alérgico al único ingrediente que le costó trabajo encontrar.
+1. Su invitado será alérgico al único ingrediente que le costó trabajo encontrar
 
-7. Cuanto más tiempo y energía dedique a preparar un plato, más posibilidades tiene de que sus invitados se pasen la comida comentando los manjares que han tomado en otros sitios.
+1. Cuanto más tiempo y energía dedique a preparar un plato, más posibilidades tiene de que sus invitados se pasen la comida comentando los manjares que han tomado en otros sitios
 
-LEYES DE TRABAJO DE LA COCINERA.
+### LEYES DE TRABAJO DE LA COCINERA
 
-- Si no recuerda si ha sacado la carne del congelador, es que no lo ha hecho.
+- Si no recuerda si ha sacado la carne del congelador, es que no lo ha hecho
 
-- Si no recuerda si se ha dejado la cafetera enchufada, es que sí se la ha dejado.
+- Si no recuerda si se ha dejado la cafetera enchufada, es que sí se la ha dejado
 
-- Si no recuerda si tiene que comprar pan y huevos, es que no quedan.
+- Si no recuerda si tiene que comprar pan y huevos, es que no quedan
 
-- Si no sabe si tiene suficiente dinero para invitar a su familia a comer fuera, es que no tiene.
+- Si no sabe si tiene suficiente dinero para invitar a su familia a comer fuera, es que no tiene
 
-LEYES DE ALICE HAMMOND SOBRE LA COCINA.
+### LEYES DE ALICE HAMMOND SOBRE LA COCINA
 
-1. Los soufflés suben y la crema queda bien batida sólo para la familia y para los comensales a los que se ve obligado a invitar.
+1. Los soufflés suben y la crema queda bien batida sólo para la familia y para los comensales a los que se ve obligado a invitar
 
-2. El huevo podrido será el que ponga en la masa del pastel.
+1. El huevo podrido será el que ponga en la masa del pastel
 
-3. Cualquier utensilio que acabe de poner en el lavavajillas lo necesitará inmediatamente para otra cosa; cualquier taza de medida que haya empleado para un líquido la necesitará inmediatamente después para un ingrediente seco.
+1. Cualquier utensilio que acabe de poner en el lavavajillas lo necesitará inmediatamente para otra cosa; cualquier taza de medida que haya empleado para un líquido la necesitará inmediatamente después para un ingrediente seco
 
-4. El tiempo que se tarda en consumir una comida es inversamente proporcional al tiempo que usted invirtió en prepararla.
+1. El tiempo que se tarda en consumir una comida es inversamente proporcional al tiempo que usted invirtió en prepararla
 
-5. Haga lo que haga de cena, alguien lo habrá tomado a la hora de comer.
+1. Haga lo que haga de cena, alguien lo habrá tomado a la hora de comer
 
-LEY DE LA FIESTA.
+### Ley de LA FIESTA
 
-- Cuantas más cosas prepare, menos comerán los invitados.
+- Cuantas más cosas prepare, menos comerán los invitados
 
-LEY DE LA SEÑORA WEILER.
+### Ley de LA SEÑORA WEILER
 
-- Se puede comer cualquier cosa siempre que se parta en trocitos muy pequeños.
+- Se puede comer cualquier cosa siempre que se parta en trocitos muy pequeños
 
-DEFINICIÓN DE FAUSNER.
+### DEFINICIÓN DE FAUSNER
 
-- El trabajo doméstico es eso que no se nota a no ser que no se haya hecho.
+- El trabajo doméstico es eso que no se nota a no ser que no se haya hecho
 
-LEY DE WALKER PARA EL TRABAJO DOMÉSTICO.
+### Ley de WALKER PARA EL TRABAJO DOMÉSTICO
 
-- Siempre hay más ropa para lavar que ropa limpia.
+- Siempre hay más ropa para lavar que ropa limpia
 
-REFUTACIÓN DE CLIVE A LA LEY DE WALKER.
+#### REFUTACIÓN DE CLIVE A LA Ley de WALKER
 
-- Si está limpia, no es ropa.
+- Si está limpia, no es ropa
 
-LEY DE SKOFF.
+### Ley de SKOFF
 
-- Un niño nunca derramará nada en un suelo sucio.
+- Un niño nunca derramará nada en un suelo sucio
 
-LEY DE VAN ROY.
+### Ley de VAN ROY
 
-- Un juguete irrompible sirve para romper otros.
+- Un juguete irrompible sirve para romper otros
 
-LEYES DE WITZLING SOBRE EL COMPORTAMIENTO DE LA PROGENIE.
+### LEYES DE WITZLING SOBRE EL COMPORTAMIENTO DE LA PROGENIE
 
-1. Cualquier niño que habla sin parar en casa, se niega obstinadamente a abrir la boca cuando se le pide que diga una gracia delante de las visitas.
+1. Cualquier niño que habla sin parar en casa, se niega obstinadamente a abrir la boca cuando se le pide que diga una gracia delante de las visitas
 
-2. Cualquier niño introvertido y tímido escogerá un lugar público y lleno de gente para ensayar a voz en grito su nuevo vocabulario (coño, joder, etc.).
+1. Cualquier niño introvertido y tímido escogerá un lugar público y lleno de gente para ensayar a voz en grito su nuevo vocabulario (coño, joder, etc.)
 
-COROLARIO DE FISKE SOBRE LOS ADOLESCENTES PARA LA LEY DE PARKINSON.
+### COROLARIO DE FISKE SOBRE LOS ADOLESCENTES PARA LA Ley de PARKINSON
 
-- El estómago se expande hasta alojar cantidades ingentes de porquerías.
+- El estómago se expande hasta alojar cantidades ingentes de porquerías
 
-PRINCIPIO DEL PLÁTANO.
+### PRINCIPIO DEL PLÁTANO
 
-- Si compra plátanos o aguacates antes de que estén maduros, no quedará ninguno para cuando estén maduros. Pero si los compra maduros, se pudren antes de que nadie se los coma.
+- Si compra plátanos o aguacates antes de que estén maduros, no quedará ninguno para cuando estén maduros. Pero si los compra maduros, se pudren antes de que nadie se los coma
 
-LEY DE BALLANCE SOBRE LA RELATIVIDAD.
+### Ley de BALLANCE SOBRE LA RELATIVIDAD
 
-- La duración de un minuto depende del lado de la puerta del baño en que se encuentre.
+- La duración de un minuto depende del lado de la puerta del baño en que se encuentre
 
-POSTULADO DE BRITT SOBRE LAS PLANTAS.
+### Postulado de BRITT SOBRE LAS PLANTAS
 
-- La esperanza de vida de una planta es inversamente proporcional al precio y directamente proporcional a la fealdad de la misma.
+- La esperanza de vida de una planta es inversamente proporcional al precio y directamente proporcional a la fealdad de la misma
 
-LEY DE MINTON SOBRE LA PINTURA.
+### Ley de MINTON SOBRE LA PINTURA
 
-- Todas las pinturas, sea cual sea su composición, se adhieren permanentemente a cualquier superficie (preparada o no) si caen sobre ella accidentalmente.
+- Todas las pinturas, sea cual sea su composición, se adhieren permanentemente a cualquier superficie (preparada o no) si caen sobre ella accidentalmente
 
-LEY DE LAS REPOSICIONES.
+### Ley de LAS REPOSICIONES
 
-- Si ha visto sólo una vez una serie de televisión, cuando la vuelva a ver será una reposición del mismo capítulo.
+- Si ha visto sólo una vez una serie de televisión, cuando la vuelva a ver será una reposición del mismo capítulo
 
-LEY DE JONES SOBRE LA PROGRAMACIÓN DE TELEVISIÓN.
+### Ley de JONES SOBRE LA PROGRAMACIÓN DE TELEVISIÓN
 
-1. Si sólo hay dos programas que merece la pena ver, serán a la misma hora.
+1. Si sólo hay dos programas que merece la pena ver, serán a la misma hora
 
-2. El único programa nuevo que merece la pena ver lo suprimirán.
+1. El único programa nuevo que merece la pena ver lo suprimirán
 
-3. El programa que ha estado deseando ver toda la semana estará codificado.
+1. El programa que ha estado deseando ver toda la semana estará codificado
 
-PRINCIPIOS UNIVERSALES DE BESS.
+### PRINCIPIOS UNIVERSALES DE BESS
 
-1. Siempre suena el teléfono cuando usted está al otro lado de la puerta y no encuentra las llaves.
+1. Siempre suena el teléfono cuando usted está al otro lado de la puerta y no encuentra las llaves
 
-2. Cogerá el aparato justo a tiempo para oír colgar a quien llamaba.
+1. Cogerá el aparato justo a tiempo para oír colgar a quien llamaba
 
-PROBLEMA DE KOVAC.
+### PROBLEMA DE KOVAC
 
-- Cuando se equivoca al marcar, nunca está comunicando.
+- Cuando se equivoca al marcar, nunca está comunicando
 
-DILEMA DE DINER.
+### DILEMA DE DINER
 
-- Las corbatas limpias atraen la sopa.
+- Las corbatas limpias atraen la sopa
 
-LEY DE THIESSEN SOBRE LA GASTRONOMÍA.
+### Ley de THIESSEN SOBRE LA GASTRONOMÍA
 
-- La dureza de la mantequilla es directamente proporcional a la blandura de la tostada.
+- La dureza de la mantequilla es directamente proporcional a la blandura de la tostada
 
-TEOREMA DE BELL.
+### Teorema de BELL
 
-- Cuando un cuerpo se sumerge en agua suena el teléfono.
+- Cuando un cuerpo se sumerge en agua suena el teléfono
 
-LEY DE LA BOLSA DE LA COMPRA.
+### Ley de LA BOLSA DE LA COMPRA
 
-- La chocolatina que pensaba comerse por el camino siempre está en el fondo de la bolsa.
+- La chocolatina que pensaba comerse por el camino siempre está en el fondo de la bolsa
 
-PRINCIPIO DE WOODSIDE SOBRE LA COMPRA.
+### PRINCIPIO DE WOODSIDE SOBRE LA COMPRA
 
-- La bolsa que se rompe siempre es la de los huevos.
+- La bolsa que se rompe siempre es la de los huevos
 
-PRINCIPIO DE STITZER SOBRE LAS VACACIONES.
+### PRINCIPIO DE STITZER SOBRE LAS VACACIONES
 
-- Cuando esté haciendo el equipaje, meta la mitad de la ropa que había pensado y el doble de dinero.
+- Cuando esté haciendo el equipaje, meta la mitad de la ropa que había pensado y el doble de dinero
 
-LEY DE ESTHER.
+### Ley de ESTHER
 
-- A la persona más exigente siempre le tocará la taza de café desconchada, el vaso con restos de pintura de labios o el pelo en la sopa.
+- A la persona más exigente siempre le tocará la taza de café desconchada, el vaso con restos de pintura de labios o el pelo en la sopa
 
-LEY DE HOROWITZ.
+### Ley de HOROWITZ
 
-- Siempre que ponga la radio, escuchará las últimas notas de su canción favorita.
+- Siempre que ponga la radio, escuchará las últimas notas de su canción favorita
 
-LEY DE GERARD.
+### Ley de GERARD
 
-- Cuando tiene fondos en su cuenta corriente, tardan dos semanas en pasarle los cheques. Cuando no tiene fondos, se los pasan el mismo día.
+- Cuando tiene fondos en su cuenta corriente, tardan dos semanas en pasarle los cheques. Cuando no tiene fondos, se los pasan el mismo día
 
-LEY DE PANTUSO.
+### Ley de PANTUSO
 
-- El libro por el que acaba de pagar 7.800 pesetas saldrá mañana en edición de bolsillo.
+- El libro por el que acaba de pagar 7.800 pesetas saldrá mañana en edición de bolsillo
 
-LEYES DE RILEY SOBRE "LAS LEYES DE MURPHY".
+### LEYES DE RILEY SOBRE "LAS LEYES DE Murphy"
 
-1. Las librerías que tienen el volumen I no saben nada del volumen II.
+1. Las librerías que tienen el volumen I no saben nada del volumen II
 
-2. En las librerías que tienen el volumen II se les ha agotado el volumen I.
+1. En las librerías que tienen el volumen II se les ha agotado el volumen I
 
-3. Ed Murphy no conoce la existencia de ninguno de los dos libros.
+1. Ed Murphy no conoce la existencia de ninguno de los dos libros
 
-LEY DE VILE SOBRE EL VALOR.
+### Ley de VILE SOBRE EL VALOR
 
-- Cuanto más caro es un artefacto, más lejos está el taller de reparaciones.
+- Cuanto más caro es un artefacto, más lejos está el taller de reparaciones
 
-LEYES DE MURRAY.
+### LEYES DE MURRAY
 
-1. No le pregunte nunca a un peluquero si le hace falta un corte de pelo.
+1. No le pregunte nunca a un peluquero si le hace falta un corte de pelo
 
-2. No le pregunte nunca a un vendedor si su precio es ajustado.
+1. No le pregunte nunca a un vendedor si su precio es ajustado
 
-LEY DE GLASER.
+### Ley de GLASER
 
-- Si la etiqueta dice "Talla única", le quedará fatal a todo el mundo.
+- Si la etiqueta dice "Talla única", le quedará fatal a todo el mundo
 
-REGLAS DE GOLDENSTERN.
+### REGLAS DE GOLDENSTERN
 
-1. Contrate siempre a un abogado rico.
+1. Contrate siempre a un abogado rico
 
-2. No le compre nada a un vendedor rico.
+1. No le compre nada a un vendedor rico
 
-Consumidorología y el arte de vender.
+## Consumidorología y el arte de vender
 
-LEY DE HERBLOCK.
+### Ley de HERBLOCK
 
-- Si es bueno, dejan de fabricarlo.
+- Si es bueno, dejan de fabricarlo
 
-LEY DE GOLD.
+### Ley de GOLD
 
-- Si el zapato le queda bien, es feísimo.
+- Si el zapato le queda bien, es feísimo
 
-LEYES DE HADLEY SOBRE LA COMPRA DE ROPA.
+### LEYES DE HADLEY SOBRE LA COMPRA DE ROPA
 
-1. Si le gusta, no tienen su talla.
+1. Si le gusta, no tienen su talla
 
-2. Si le gusta y tienen su talla, no le sienta bien.
+1. Si le gusta y tienen su talla, no le sienta bien
 
-3. Si le gusta y le sienta bien, es tan caro que no puede comprarlo.
+1. Si le gusta y le sienta bien, es tan caro que no puede comprarlo
 
-4. Si le gusta, le sienta bien y se puede permitir el lujo de comprarlo, se romperá la primera vez que se lo ponga.
+1. Si le gusta, le sienta bien y se puede permitir el lujo de comprarlo, se romperá la primera vez que se lo ponga
 
-PRINCIPIO DE FINMAN SOBRE LA SECCIÓN DE OPORTUNIDADES.
+### PRINCIPIO DE FINMAN SOBRE LA SECCIÓN DE OPORTUNIDADES
 
-- Lo que usted quiere nunca está rebajado.
+- Lo que usted quiere nunca está rebajado
 
-Corolario de Baker al Principio de la Sección de Oportunidades de Finman.
+#### Corolario de Baker al Principio de la Sección de Oportunidades de Finman
 
-- Lo que puede comprar siempre es feo.
+- Lo que puede comprar siempre es feo
 
-AXIOMA DE MADISON AVENUE DE McGOWAN.
+### AXIOMA DE MADISON AVENUE DE McGOWAN
 
-- Si se anuncia que el precio de un artículo es "menos de 15.000", se puede apostar la cabeza a que no costará 2.130.
+- Si se anuncia que el precio de un artículo es "menos de 15.000", se puede apostar la cabeza a que no costará 2.130
 
-REGLAS DE HERSHISER.
+### REGLAS DE HERSHISER
 
-1. Cualquier cosa que lleve la etiqueta "NUEVA" y/o "FÓRMULA PERFECCIONADA", no lo es.
+1. Cualquier cosa que lleve la etiqueta "NUEVA" y/o "FÓRMULA PERFECCIONADA", no lo es
 
-2. La etiqueta "NUEVA" y/o "FÓRMULA PERFECCIONADA", significa que ha subido.
+1. La etiqueta "NUEVA" y/o "FÓRMULA PERFECCIONADA", significa que ha subido
 
-3. La etiqueta "COMPLETAMENTE NUEVO", "TODO NUEVO" o "GRAN NOVEDAD", significa que el precio se ha puesto por las nubes.
+1. La etiqueta "COMPLETAMENTE NUEVO", "TODO NUEVO" o "GRAN NOVEDAD", significa que el precio se ha puesto por las nubes
 
-LEY DE SINETO SOBRE EL CONSUMISMO.
+### Ley de SINETO SOBRE EL CONSUMISMO
 
-- Una garantía de sesenta días es la promesa de que el objeto se autodestruirá el día sexagésimo primero.
+- Una garantía de sesenta días es la promesa de que el objeto se autodestruirá el día sexagésimo primero
 
-LEY DE SAVIGNANO SOBRE LOS PEDIDOS POR CORREO.
+### Ley de SAVIGNANO SOBRE LOS PEDIDOS POR CORREO
 
-- Si no escribe una carta de reclamación, no recibirá su pedido.
+- Si no escribe una carta de reclamación, no recibirá su pedido
 
-Si la escribe, recibirá sus artículos antes de que la carta llegue a su destino.
+Si la escribe, recibirá sus artículos antes de que la carta llegue a su destino
 
-LEY DE BERYL.
+### Ley de BERYL
 
-- El artículo sobre un producto en "La Revista del Consumidor" aparecerá justo una semana después de que lo haya comprado.
+- El artículo sobre un producto en "La Revista del Consumidor" aparecerá justo una semana después de que lo haya comprado
 
-Corolarios.
+#### Corolarios
 
 1. El que usted compró estará clasificado como "Inaceptable"
 
-2. El que estuvo a punto de comprar, pero no se decidió, recibirá la calificación de "El Mejor".
+1. El que estuvo a punto de comprar, pero no se decidió, recibirá la calificación de "El Mejor"
 
-LEY DE LEWIS.
+### Ley de LEWIS
 
-- La gente compra cualquier cosa de la que se venda un sólo artículo por comprador.
+- La gente compra cualquier cosa de la que se venda un sólo artículo por comprador
 
-Problemática.
+## Problemática
 
-LEY DE SMITH.
+### Ley de SMITH
 
-- Ningún problema verdadero tiene solución.
+- Ningún problema verdadero tiene solución
 
-LEY DE HOARE SOBRE LOS GRANDES PROBLEMAS.
+### Ley de HOARE SOBRE LOS GRANDES PROBLEMAS
 
-- En cada problema grande hay un problema pequeño que lucha por salir.
+- En cada problema grande hay un problema pequeño que lucha por salir
 
-LEY INVERSA DE SCHAINKER A LA LEY DE HOARE SOBRE LOS GRANDES PROBLEMAS.
+### LEY INVERSA DE SCHAINKER A LA Ley de HOARE SOBRE LOS GRANDES PROBLEMAS
 
-- En cada problema pequeño hay un problema grande que lucha por salir.
+- En cada problema pequeño hay un problema grande que lucha por salir
 
-OBSERVACIÓN DE BARUCH.
+### OBSERVACIÓN DE BARUCH
 
-- Si todo lo que tiene es un martillo, cualquier cosa que vea le parecerá un clavo.
+- Si todo lo que tiene es un martillo, cualquier cosa que vea le parecerá un clavo
 
-LEY DE BIONDI.
+### Ley de BIONDI
 
-- Si su proyecto no funciona, investigue la parte que pensó que no tenía importancia.
+- Si su proyecto no funciona, investigue la parte que pensó que no tenía importancia
 
-REGLA ROMANA.
+### REGLA ROMANA
 
-- El que afirma que no se puede hacer, no debe interrumpir al que lo está haciendo.
+- El que afirma que no se puede hacer, no debe interrumpir al que lo está haciendo
 
-OBSERVACIÓN DE BLAIR.
+### OBSERVACIÓN DE BLAIR
 
-- Los mejores proyectos realizados por hombres y por ratones, suelen ser casi iguales.
+- Los mejores proyectos realizados por hombres y por ratones, suelen ser casi iguales
 
-LEY DE SEAY.
+### Ley de SEAY
 
 - Nada sale nunca como se planeó
 
-LEY DE RUCKERT.
+### Ley de RUCKERT
 
-- No hay nada tan pequeño que no pueda explotar violentamente.
+- No hay nada tan pequeño que no pueda explotar violentamente
 
-LEY DE VAN HERPEN.
+### Ley de VAN HERPEN
 
-- La solución de un problema consiste en encontrar a alguien que lo resuelva.
+- La solución de un problema consiste en encontrar a alguien que lo resuelva
 
-LEY DE BAXTER.
+### Ley de BAXTER
 
-- El error en la premisa aparecerá en la conclusión.
+- El error en la premisa aparecerá en la conclusión
 
-LEY DE McGEE.
+### Ley de McGEE
 
-- Es sorprendente el tiempo que se necesita para terminar algo en lo que no se está trabajando.
+- Es sorprendente el tiempo que se necesita para terminar algo en lo que no se está trabajando
 
-LEY DE SEVAREID.
+### Ley de SEVAREID
 
-- La causa principal de los problemas son las soluciones.
+- La causa principal de los problemas son las soluciones
 
-Cosmomurphyología.
+## Cosmomurphyología
 
-LEY DE LA VIDA.
+### Ley de LA VIDA
 
-- En cuanto se ponga a hacer lo que siempre ha deseado, se dará cuenta de que le apetece hacer otra cosa.
+- En cuanto se ponga a hacer lo que siempre ha deseado, se dará cuenta de que le apetece hacer otra cosa
 
-LEY DE OLIVIER.
+### Ley de OLIVIER
 
-- La experiencia es algo que se consigue cuando ya no se necesita.
+- La experiencia es algo que se consigue cuando ya no se necesita
 
-OBSERVACIÓN DE GABITOL.
+### OBSERVACIÓN DE GABITOL
 
-- Los sabios están satisfechos cuando descubren la verdad; los necios, cuando descubren la falsedad.
+- Los sabios están satisfechos cuando descubren la verdad; los necios, cuando descubren la falsedad
 
-PRIMER PRINCIPIO DE AUTODETERMINACIÓN
+### PRIMER PRINCIPIO DE AUTODETERMINACIÓN
 
-- Si resiste, vencerá.
+- Si resiste, vencerá
 
-PRECEPTOS DE STEINER.
+### PRECEPTOS DE STEINER
 
-1. El conocimiento que se fundamenta en la evidencia externa, no es fiable.
+1. El conocimiento que se fundamenta en la evidencia externa, no es fiable
 
-2. La lógica no puede decidir nunca lo que es posible y lo que no lo es.
+1. La lógica no puede decidir nunca lo que es posible y lo que no lo es
 
-LEY DE HOFFER.
+### Ley de HOFFER
 
-- Cuando las personas son libres de hacer lo que quieran, suelen imitarse unas a otras.
+- Cuando las personas son libres de hacer lo que quieran, suelen imitarse unas a otras
 
-SEGUNDA LEY DE BERRA.
+### Segunda Ley de BERRA
 
-- Cualquiera que sea popular está condenado a caer antipático.
+- Cualquiera que sea popular está condenado a caer antipático
 
-OBSERVACIÓN DE KIERKEGARD.
+### OBSERVACIÓN DE KIERKEGARD
 
-- La vida sólo se comprende mirando hacia atrás, pero se debe vivir hacia delante.
+- La vida sólo se comprende mirando hacia atrás, pero se debe vivir hacia delante
 
-Metaleyes.
+## Metaleyes
 
-METALEY DE LOS MISERABLES.
+### Metaley de LOS MISERABLES
 
-- Todas las leyes, buenas, malas o indiferentes, se deben obedecer al pie de la letra.
+- Todas las leyes, buenas, malas o indiferentes, se deben obedecer al pie de la letra
 
-POSTULADO DE PERSIG.
+### Postulado de PERSIG
 
-- El número de hipótesis que pueden explicar un fenómeno dado es infinito.
+- El número de hipótesis que pueden explicar un fenómeno dado es infinito
 
-METALEY DE LILLY.
+### Metaley de LILLY
 
-- Todas las leyes son simulacros de la realidad.
+- Todas las leyes son simulacros de la realidad
 
-LEY DE DIGIOVANNI.
+### Ley de DIGIOVANNI
 
-- El número de leyes se multiplicará hasta cubrir todo el espacio editorial disponible.
+- El número de leyes se multiplicará hasta cubrir todo el espacio editorial disponible
 
-OBSERVACIÓN DE ROGERS SOBRE LAS LEYES.
+### OBSERVACIÓN DE ROGERS SOBRE LAS LEYES
 
-- En una jerarquía burocrática, cuanto más se asciende en el escalafón, menos se perciben las Leyes de Murphy, las Leyes de Peter, etc.
+- En una jerarquía burocrática, cuanto más se asciende en el escalafón, menos se perciben las Leyes de Murphy, las Leyes de Peter, etc
 
-POSTULADO POLÍTICO DE ANDRA.
+### POSTULADO POLÍTICO DE ANDRA
 
-- La fundación de un partido político señala la disolución del movimiento.
+- La fundación de un partido político señala la disolución del movimiento
 
-REGLA POLÍTICA DE MARX.
+### REGLA POLÍTICA DE MARX
 
-- En cuanto se hacen ricos, se vuelven conservadores.
+- En cuanto se hacen ricos, se vuelven conservadores
 
-PRECEPTO DE JAFFE.
+### Precepto de JAFFE
 
-- Es imposible conocer algunas cosas, pero es imposible saber cuáles son.
+- Es imposible conocer algunas cosas, pero es imposible saber cuáles son
 
-REGLA DE LAS PROMESAS POLÍTICAS.
+### REGLA DE LAS PROMESAS POLÍTICAS
 
-- La verdad varía.
+- La verdad varía
 
-LEY DE LA DISTINCIÓN ARBITRARIA.
+### Ley de LA DISTINCIÓN ARBITRARIA
 
-- Puede dividir cualquier cosa en tantas partes como desee.
+- Puede dividir cualquier cosa en tantas partes como desee
 
-Corolario.
+#### Corolario
 
-- Todo se puede dividir en tantas partes como usted desee.
+- Todo se puede dividir en tantas partes como usted desee
 
-Comentario al corolario.
+##### Comentario al corolario
 
-- En este caso, se puede considerar que todo es un subconjunto de cualquier cosa.
+- En este caso, se puede considerar que todo es un subconjunto de cualquier cosa
 
-OBSERVACIÓN DE WALLACE.
+### OBSERVACIÓN DE WALLACE
 
-- Todas las cosas se encuentran en estado de desmelene absoluto.
+- Todas las cosas se encuentran en estado de desmelene absoluto
 
-LEY DE WEAVER.
+### Ley de WEAVER
 
-- Cuando varios periodistas van en el mismo taxi a cubrir una noticia, paga el que va delante.
+- Cuando varios periodistas van en el mismo taxi a cubrir una noticia, paga el que va delante
 
-Corolario de Doyle.
+#### Corolario de Doyle
 
-- Vayan los que vayan y pague quien pague, todos incluyen el precio de la carrera en su cuenta de gastos.
+- Vayan los que vayan y pague quien pague, todos incluyen el precio de la carrera en su cuenta de gastos
 
-LEY DE MATSCH.
+### Ley de MATSCH
 
-- Es mejor tener un horrible final que sufrir horrores sin fin.
+- Es mejor tener un horrible final que sufrir horrores sin fin
 
-PARADOJA DE TRISCHMANN.
+### Paradoja de TRISCHMANN
 
-- Una pipa proporciona tiempo al sabio para pensar y algo que llevarse a la boca al necio.
+- Una pipa proporciona tiempo al sabio para pensar y algo que llevarse a la boca al necio
 
-COMENTARIO DE CHURCHILL SOBRE EL HOMBRE.
+### COMENTARIO DE CHURCHILL SOBRE EL HOMBRE
 
-- En ocasiones, el hombre tropieza con la verdad pero, casi siempre, evita caerse y sigue adelante.
+- En ocasiones, el hombre tropieza con la verdad pero, casi siempre, evita caerse y sigue adelante
 
-LEY DE HALDANE.
+### Ley de HALDANE
 
-- El universo no sólo es más misterioso de lo que imaginamos, sino que lo es más de lo que podemos imaginar.
+- El universo no sólo es más misterioso de lo que imaginamos, sino que lo es más de lo que podemos imaginar
 
-LEY DE KERR-MARTIN.
+### Ley de KERR-MARTIN
 
-1. Cuando tratan de resolver sus propios problemas, los enseñantes son de lo más conservadores.
+1. Cuando tratan de resolver sus propios problemas, los enseñantes son de lo más conservadores
 
-2. Cuando tratan de resolver problemas ajenos son extremadamente liberales.
+1. Cuando tratan de resolver problemas ajenos son extremadamente liberales
 
-TEOREMA DE CHAPPAQUIDICK DE WHITE.
+### Teorema de CHAPPAQUIDICK DE WHITE
 
-- Cuanto antes se anuncien las malas noticias y cuantos más detalles se den, mejor.
-
----
+- Cuanto antes se anuncien las malas noticias y cuantos más detalles se den, mejor
