@@ -56,9 +56,9 @@ Recording at <https://www.youtube.com/watch?v=SDzzqrUdn5A>
 - For example, with Citellus you can detect:
   - Failed keystone token purges.
   - missing parameters in expired ceilometer data, which can lead to filling up your hard drive.
-  - unsynced ntp.
+  - unsynced NTP.
   - outdated packages that have known critical issues.
-  - others! (119 plugins as of this writting some of them with more than one issue detected)
+  - others! (119 plugins as of this writing some of them with more than one issue detected)
 - Whatever else you can imagine or code 😉
 
 ---

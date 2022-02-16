@@ -469,6 +469,7 @@
     "LDAP",
     "LinkedIn",
     "PXE",
-    "translationKey"
+    "translationKey",
+    "Gitlab"
   ]
 }

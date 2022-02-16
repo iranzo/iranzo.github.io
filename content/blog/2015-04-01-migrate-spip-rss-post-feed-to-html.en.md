@@ -8,7 +8,7 @@ tags:
   - markdown
   - html
   - foss
-modified: "2022-01-16T21:11:30.905Z"
+modified: "2022-02-16T12:43:48.237Z"
 ---
 
 I had my old blog based on [SPIP](http://www.spip.net), and I wanted to keep all the posts together, to make it easier to migrate in the future.
@@ -39,7 +39,7 @@ for item in feed["items"]:
     filename = (
         item["date"][0:10] + "-" + item["link"][23:]
     )  # remove the first 23 chars from article url http+domain
-    print filename
+    print(filename)
     with codecs.open(filename, "w", "utf-8") as f:
         f.write("---\n")
         f.write("layout: post\n")
