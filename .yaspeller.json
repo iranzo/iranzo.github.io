@@ -470,6 +470,11 @@
     "LinkedIn",
     "PXE",
     "translationKey",
-    "Gitlab"
+    "Gitlab",
+    "ZTP",
+    "ACM",
+    "Tekton",
+    "PVCs",
+    "ICSPs"
   ]
 }
