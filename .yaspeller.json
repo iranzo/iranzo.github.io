@@ -475,6 +475,8 @@
     "ACM",
     "Tekton",
     "PVCs",
-    "ICSPs"
+    "ICSPs",
+    "WireGuard",
+    "Ansible's"
   ]
 }
