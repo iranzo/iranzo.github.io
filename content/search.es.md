@@ -4,6 +4,7 @@ layout: search
 summary: Buscar
 lang: es
 translationKey: search
-modified: "2022-01-18T09:40:44.976Z"
+modified: 2022-03-20T20:09:59.731Z
 url: /es/search
+placeholder: Palabras a buscar
 ---
