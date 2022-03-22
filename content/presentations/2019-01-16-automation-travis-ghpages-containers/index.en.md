@@ -1,10 +1,9 @@
 ---
 author: Pablo Iranzo Gómez
 title: Project automation with Travis, GitHub Pages and Quay
-tags: [pelican, foss, travis, quay, docker, dockerhub]
+tags: [pelican, FOSS, Travis, Quay, docker, DockerHub]
 layout: post
 date: 2019-01-16 16:00:00 +0100
-
 category: presentations
 outputs:
   - Reveal
@@ -43,7 +42,7 @@ Automation: Be lazy, have someone else doing it for you.
 
 ## Git Hub / Gitlab
 
-- Lot of source code is hosted at github or gitlab, but it's a code repository.
+- Lot of source code is hosted at Github, Gitlab or other services, but it's a code repository.
 - We want a website!!
 
 ---
@@ -53,9 +52,9 @@ Automation: Be lazy, have someone else doing it for you.
 - Git Hub provides a service called [GitHub Pages](https://pages.github.com/)
 - Git lab provides [Gitlab pages](https://about.gitlab.com/product/pages/)
 
-Both provide a 'static' webserver to be used for your projects **for free**.
+Both provide a 'static' Webserver to be used for your projects **for free**.
 
-G(H/L) serve from a branch in your repo (usually 'yourusername.github.io' repo)
+G(H/L) serve from a branch in your repo (usually `yourusername.github.io` repo)
 
 You can buy a domain and point it to your website.
 
@@ -94,8 +93,8 @@ Think about endless possibilities!!!
 
 ## Some food for thought
 
-- Repos have branches
-- Repos can have automation
+- Repositories have branches
+- Repositories can have automation
 - External automation like Travis CI can do things for you
 
 Note:
@@ -120,9 +119,9 @@ We've all the pieces to push a new markdown file and have it triggering a websit
 
 Automation for projects:
 
-- Free for OpenSource projects
+- Free for Open Source projects
 - Configured via `.travis.yml`
-- Some other settings via Web UI (env vars, etc)
+- Some other settings via Web Interface (environment variables, etc)
 
 ---
 
@@ -183,7 +182,7 @@ after_success:
 ## Fancy things
 
 - Build one repo and deploy to another branch/repo
-- Upload pypi package
+- Upload `pypi` package
 - Call triggers
 - etc
 
@@ -215,7 +214,7 @@ What else?
 
 ## Container creation - Quay
 
-Quay and DockerHub allow to automate build on branch commit
+DockerHub and Quay allow to automate build on branch commit
 ![](2018-12-24-12-22-08.png)
 
 ---
@@ -235,9 +234,9 @@ Try <https://github.com/iranzo/blog-o-matic/>
 
 Fork to your repo and get:
 
-- minimal setup steps (github token, travis-ci activation)
-- Automated setup of Pelican + Elegant theme via travis-ci job that builds on each commit.
-- Ready to be submitted to search engines via sitemap, and web claiming
+- minimal setup steps (Github token, `travis-ci` activation)
+- Automated setup of Pelican + Elegant theme via `travis-ci` job that builds on each commit.
+- Ready to be submitted to search engines via `sitemap`, and web claiming
 
 ---
 

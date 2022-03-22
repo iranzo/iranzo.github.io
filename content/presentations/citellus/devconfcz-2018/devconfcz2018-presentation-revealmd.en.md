@@ -65,7 +65,7 @@ Recording at <https://www.youtube.com/watch?v=SDzzqrUdn5A>
 
 ## Some numbers on plugin count:
 
-<small>
+```console
 bugzilla : 15 ['openstack/swift: 1', 'openstack/keystone/templates: 1', 'openstack/ceph: 1', 'httpd: 1', 'openstack/keystone: 1', 'openstack/ceilometer: 1', 'openstack/nova: 2', 'openstack/httpd: 1', 'systemd: 1', 'openstack/tripleo: 1', 'openstack/neutron: 4']
 
 launchpad : 1 ['openstack/keystone: 1']
@@ -81,8 +81,7 @@ security : 12 ['meltdown: 2', 'spectre: 8']
 system : 28 []
 
 virtualization : 1 []
-
-</small>
+```
 
 ---
 
@@ -307,7 +306,7 @@ mode: fs snapshot sosreport-20170724-175510/crta02
 
 - Citellus works on individual sosreports against a set of tests (all by default), but some problems require checks across several systems.
 
-<small>For example, galera requires to check seqno across all controllers running database.</small>
+<small>For example, Galera requires to check `seqno` across all controllers running database.</small>
 
 ---
 
@@ -352,7 +351,7 @@ It’s delivered in citellus repo and can be executed by specifying sosreports:
   - Aggregate data from citellus sorted by plugin for quick comparison
   - Show 'metadata' extension separated to quickly compare across values
   - pipeline-yaml different across sosreports
-  - seqno and highest seqno in galera
+  - `seqno` and highest `seqno` in Galera
   - release check across hosts
 
 ---
@@ -362,7 +361,7 @@ It’s delivered in citellus repo and can be executed by specifying sosreports:
 - Add more plugins!
 - Evangelize about the tool so we can work together in solving our common issues on the same framework.
 - Get moving fast enough that the tool has continuity, other tools just died by having a ‘solo’ developer working on spare time
-- Start implementing more tests in Magui that provide real intelligence (for example we do report and check on seqno or pipeline-yaml but lot of other issues can benefit from this).
+- Start implementing more tests in Magui that provide real intelligence (for example we do report and check on `seqno` or pipeline-yaml but lot of other issues can benefit from this).
 
 ---
 

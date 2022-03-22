@@ -46,7 +46,7 @@ Web costs money:
 Generate a static webpage
 
 - Think of it as rendering templates into HTML
-- Has no requirements on the web server, any simple webserver is enough:
+- Has no requirements on the web server, any simple Webserver is enough:
   - Look ma!, no database!
   - Look ma!, no users!
   - Look ma!, no security issues!
@@ -57,7 +57,7 @@ Generate a static webpage
 
 - We write an article
 - Command for generating html from templates is used
-- New files uploaded to webserver
+- New files uploaded to Webserver
 
 ---
 
@@ -76,7 +76,7 @@ Automation: Be lazy, have someone else doing it for you.
 
 ## Git Hub / Gitlab
 
-- Lot of source code is hosted at github or gitlab, but it's a code repository.
+- Lot of source code is hosted at GitHub, Gitlab or other services, but it's a code repository.
 - BUT: We want a website!!
 
 ---
@@ -86,9 +86,9 @@ Automation: Be lazy, have someone else doing it for you.
 - Git Hub provides a service called [GitHub Pages](https://pages.github.com/)
 - Git lab provides [Gitlab pages](https://about.gitlab.com/product/pages/)
 
-Both provide a 'static' webserver to be used for your projects **for free** 😜
+Both provide a 'static' Webserver to be used for your projects **for free** 😜
 
-G(H/L) serve from a branch in your repo (usually 'yourusername.github.io' repo)
+G(H/L) serve from a branch in your repo (usually `yourusername.github.io` repo)
 
 You can buy a domain and point it to your repo.
 
@@ -142,7 +142,7 @@ Think about endless possibilities!!!
   - Allows third-party integration: Travis, Jenkins, bots, etc
 
 - Github added GitHub Actions
-  - For all repos
+  - For all repositories
   - For free
   - Easy to define new actions
   - 'cloning' with just a yaml in the repo
@@ -162,8 +162,8 @@ Think about endless possibilities!!!
 
 ## Some food for thought
 
-- Repos have branches
-- Repos can have automation
+- Repositories have branches
+- Repositories can have automation
 - External automation like Travis CI can do things for you
 
 Note:
@@ -186,7 +186,7 @@ Automation for projects:
 
 - Free for Open Source projects
 - Configured via `.travis.yml`
-- Some other settings via Web UI (env vars, etc)
+- Some other settings via Web interface (environment variables, etc)
 
 ---
 
@@ -214,7 +214,7 @@ Fork to your repo and get:
 
 - minimal setup steps
 - Automated setup of Pelican + Elegant theme via Git Hub action that builds on each commit.
-- Ready to be submitted to search engines via sitemap, and web claiming
+- Ready to be submitted to search engines via `sitemap`, and web claiming
 
 ---
 
