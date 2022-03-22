@@ -31,7 +31,7 @@ Redken uses admin privileges to:
 
 - read the user admin level changes
 - allow it to remove service messages (message pinned, user joined, etc)
-- expand short urls into longer ones
+- expand short URLs into longer ones
 - kick users out of the chat, for example when a user is reported as spammer
 - etc
 

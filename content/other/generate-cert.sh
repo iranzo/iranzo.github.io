@@ -1,15 +1,15 @@
 #!/bin/bash
 # Description: Generate certificate for service
 
-if [[ "$1" == "" ]]; then
-	echo -e "ERROR: Service name should be provided as first argument\n"
-	exit 1
+if [[ $1 == "" ]]; then
+    echo -e "ERROR: Service name should be provided as first argument\n"
+    exit 1
 fi
 
 for file in ca.pem ca-key.pem ca-config.json; do
-	if [[ ! -f ${file} ]]; then
-		echo "ERROR: File ${file} is missing, please run generate-ca.sh first"
-	fi
+    if [[ ! -f ${file} ]]; then
+        echo "ERROR: File ${file} is missing, please run generate-ca.sh first"
+    fi
 done
 
 SERVICE_NAME="$1"

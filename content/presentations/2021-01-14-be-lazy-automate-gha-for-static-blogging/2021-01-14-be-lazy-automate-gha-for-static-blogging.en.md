@@ -145,7 +145,7 @@ Think about endless possibilities!!!
   - For all repos
   - For free
   - Easy to define new actions
-  - 'clonable' with just a yaml in the
+  - 'cloning' with just a yaml in the repo
 
 ---
 
@@ -184,7 +184,7 @@ We've all the pieces to push a new markdown file and have it triggering a websit
 
 Automation for projects:
 
-- Free for OpenSource projects
+- Free for Open Source projects
 - Configured via `.travis.yml`
 - Some other settings via Web UI (env vars, etc)
 
@@ -193,7 +193,7 @@ Automation for projects:
 ## Why Actions?
 
 - Configured within yaml files in the repo
-- GH pre-creates a token that can be used to push new files, branches, etc
+- GitHub pre-creates a token that can be used to push new files, branches, etc
 - Without too much hassle, we've all the pieces!
 
 ---
