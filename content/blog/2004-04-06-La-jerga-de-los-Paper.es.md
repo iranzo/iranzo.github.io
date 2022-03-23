@@ -5,7 +5,7 @@ date: 2004-04-06T20:01:00.000Z
 tags:
   - general
 lang: es
-modified: "2022-01-16T21:11:30.755Z"
+modified: 2022-03-23T09:58:11.229Z
 ---
 
 Extraído de un artículo publicado por el periódico El País:

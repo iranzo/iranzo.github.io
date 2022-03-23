@@ -8,7 +8,7 @@ tags:
   - operator
 category: tech
 author: Pablo Iranzo Gómez
-modified: "2022-01-17T07:42:20.501Z"
+modified: 2022-03-23T10:01:22.701Z
 ---
 
 This article was published originally at <https://metal3.io/blog/2019/09/11/Baremetal-operator.html>

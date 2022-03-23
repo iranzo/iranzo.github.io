@@ -8,10 +8,12 @@ tags:
   - NASA
   - Apollo 11
 layout: post
-date: "2020-04-08 20:48:24 +0100"
+date: 2020-04-08 20:48:24 +0100
 category: blog
 lang: en
-modified: "2022-01-18T06:17:17.639Z"
+modified: 2022-03-23T09:47:33.440Z
+cover:
+  image: https://i.imgur.com/gsSeZZz.jpg.jpg
 ---
 
 Today, as part of my confinement Lego catchup I was building the [Lego NASA Lunar Lander Apollo 11

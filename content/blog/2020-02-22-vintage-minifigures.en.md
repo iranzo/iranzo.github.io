@@ -12,10 +12,12 @@ tags:
   - tribes
   - archer
 layout: post
-date: "2020-02-22 20:30:24 +0100"
+date: 2020-02-22 20:30:24 +0100
 category: blog
 lang: en
-modified: "2022-01-18T05:58:00.176Z"
+modified: 2022-03-23T09:44:43.552Z
+cover:
+  image: https://i.imgur.com/CeV61xr.jpg.jpg
 ---
 
 Just some pics I made during some sorting of minifigs from my childhood.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Contributing to OSP upstream a.k.a. Peer Review
-date: "2018-10-16 07:32:47 +0200"
+date: 2018-10-16 07:32:47 +0200
 tags:
   - python
   - OpenStack
@@ -13,7 +13,7 @@ tags:
   - citellus
   - risu
 category: tech
-modified: "2022-01-17T10:54:54.367Z"
+modified: 2022-03-23T10:00:04.669Z
 ---
 
 ## Introduction

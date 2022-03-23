@@ -1,14 +1,14 @@
 ---
 layout: post
 title: RHEV/oVirt API with Python
-date: "2012-10-24 13:38:00 +0200"
+date: 2012-10-24 13:38:00 +0200
 author: Pablo Iranzo Gómez
 tags:
   - Python
   - RHEV
   - oVirt
   - FOSS
-modified: "2022-01-16T21:11:30.896Z"
+modified: 2022-03-23T09:59:30.708Z
 ---
 
 `RHEV`/`oVirt` API allows faster and simple development of scripts and utilities ranging from gathering of information to VM/host, etc manipulation.

@@ -6,7 +6,7 @@ tags:
   - hardware
 lang: es
 slug: Error-segun-numero-de-pitidos-en-es
-modified: "2022-01-18T09:07:39.972Z"
+modified: 2022-03-23T09:58:12.697Z
 ---
 
 Las BIOS (Basic Input Output System) de los pc's informan de los errores del hardware del pc en el arranque mediante un código de pitidos en el caso en el que no puede aparece nada por pantalla... aqui los podrás ver..

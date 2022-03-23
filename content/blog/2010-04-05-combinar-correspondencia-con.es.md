@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Combinar correspondencia con OpenOffice.org
-date: "2010-04-05 21:50:00 +0200"
+date: 2010-04-05 21:50:00 +0200
 author: Pablo Iranzo Gómez
 tags:
   - fedora
   - foss
 lang: es
-modified: "2022-01-16T21:11:30.877Z"
+modified: 2022-03-23T09:59:22.533Z
 ---
 
 Hacía un tiempo que no usaba la función de combinar correspondencia y en el equipo de sobremesa con Fedora 13 x86_64 no conseguía hacerla funcionar.

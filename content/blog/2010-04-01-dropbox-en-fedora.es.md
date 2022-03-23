@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Dropbox en Fedora
-date: "2010-04-01 11:54:00 +0200"
+date: 2010-04-01 11:54:00 +0200
 author: Pablo Iranzo Gómez
 tags:
   - fedora
   - dropbox
   - foss
 lang: es
-modified: "2022-01-16T21:11:30.876Z"
+modified: 2022-03-23T09:59:03.021Z
 ---
 
 Para instalar dropbox en Fedora, no es necesario realizar excesivos pasos:

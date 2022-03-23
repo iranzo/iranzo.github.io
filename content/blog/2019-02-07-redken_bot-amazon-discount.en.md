@@ -9,9 +9,9 @@ tags:
   - programming
   - redken
 layout: post
-date: "2019-02-07 21:04:14 +0100"
+date: 2019-02-07 21:04:14 +0100
 category: tech
-modified: "2022-01-17T10:57:49.859Z"
+modified: 2022-03-23T10:00:16.768Z
 ---
 
 # Introduction

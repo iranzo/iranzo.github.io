@@ -7,9 +7,11 @@ tags:
   - 10242
   - review
 layout: post
-date: "2019-07-27 14:39:14 +0200"
+date: 2019-07-27 14:39:14 +0200
 category: blog
-modified: "2022-01-17T22:52:53.180Z"
+modified: 2022-03-23T09:38:48.247Z
+cover:
+  image: https://i.imgur.com/ewbaE5b.jpg.jpg
 ---
 
 I've uploaded those pics from the model, as it seems that people likes it.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paella Howto
-date: "2012-07-08 11:35:14 +0200"
+date: 2012-07-08 11:35:14 +0200
 tags:
   - paella
   - recipe
@@ -11,7 +11,9 @@ category: blog
 lang: en
 slug: paella-howto
 translationKey: paella-howto
-modified: "2022-01-20T17:40:34.987Z"
+modified: 2022-03-23T09:52:50.576Z
+cover:
+  image: 20120708134340.jpg
 ---
 
 This document is based on the original recipe and pictures that I gave to my colleague [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) which he assembled in an internal company document and that he kindly translated for increased reach.

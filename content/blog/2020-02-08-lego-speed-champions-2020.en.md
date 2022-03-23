@@ -16,10 +16,10 @@ tags:
   - 76896
   - 76895
 layout: post
-date: "2020-02-08 16:30:24 +0100"
+date: 2020-02-08 16:30:24 +0100
 category: blog
 lang: en
-modified: "2022-01-16T21:44:56.340Z"
+modified: 2022-03-23T09:45:53.865Z
 ---
 
 ## Introduction on the new models

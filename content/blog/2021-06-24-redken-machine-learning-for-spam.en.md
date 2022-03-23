@@ -11,9 +11,9 @@ tags:
   - machine learning
   - ML
 layout: post
-date: "2021-06-24 22:00:00 +0200"
+date: 2021-06-24 22:00:00 +0200
 category: tech
-modified: "2022-01-17T08:25:53.574Z"
+modified: 2022-03-23T10:00:57.910Z
 ---
 
 For some of the telegram groups I'm in, I've been detecting users that after some period of time, just publish spam messages of any topic.

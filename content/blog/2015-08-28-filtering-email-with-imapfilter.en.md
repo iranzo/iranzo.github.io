@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering email with imapfilter
-date: "2015-08-28 15:27:47 +0200"
+date: 2015-08-28 15:27:47 +0200
 tags:
   - Linux
   - email
@@ -9,7 +9,7 @@ tags:
   - imapfilter
   - Fedora
   - FOSS
-modified: "2022-01-16T21:11:30.927Z"
+modified: 2022-03-23T09:59:45.108Z
 ---
 
 Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&drop reordering of rules, cloning, etc.

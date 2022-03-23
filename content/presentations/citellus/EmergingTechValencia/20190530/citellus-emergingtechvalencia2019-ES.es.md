@@ -9,6 +9,8 @@ category: presentations
 outputs:
   - Reveal
 layout: bundle
+cover:
+  image: www.png
 ---
 
 ## [Citellus](https://risuorg.github.io):

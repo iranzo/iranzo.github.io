@@ -12,9 +12,9 @@ tags:
   - ppt
   - presentations
 layout: post
-date: "2019-01-22 20:51:27 +0100"
+date: 2019-01-22 20:51:27 +0100
 category: tech
-modified: "2022-01-18T07:47:30.237Z"
+modified: 2022-03-23T10:00:15.320Z
 ---
 
 # Introduction

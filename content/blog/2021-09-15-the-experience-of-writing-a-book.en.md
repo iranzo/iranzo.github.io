@@ -10,10 +10,10 @@ tags:
   - RHCSA
   - writing a book
 layout: post
-date: "2021-09-15 00:00:00 +0100"
+date: 2021-09-15 00:00:00 +0100
 category: blog
 lang: en
-modified: "2022-01-17T12:05:38.575Z"
+modified: 2022-03-23T10:01:01.686Z
 ---
 
 I wanted to write about my experience (before I forget about it), and as some colleagues asked about it... here we go...

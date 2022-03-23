@@ -13,10 +13,10 @@ tags:
   - US-8
   - AX92U
 layout: post
-date: "2021-01-01 00:00:00 +0200"
+date: 2021-01-01 00:00:00 +0200
 category: tech
 lang: en
-modified: "2022-01-18T06:34:49.753Z"
+modified: 2022-03-23T10:00:47.222Z
 ---
 
 ## Introduction

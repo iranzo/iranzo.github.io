@@ -10,10 +10,10 @@ tags:
   - Kubernetes
   - tips
 layout: post
-date: "2020-12-07 14:10:34 +0200"
+date: 2020-12-07 14:10:34 +0200
 category: tech
 lang: en
-modified: "2022-01-16T21:44:56.332Z"
+modified: 2022-03-23T10:00:46.421Z
 ---
 
 ## Introduction

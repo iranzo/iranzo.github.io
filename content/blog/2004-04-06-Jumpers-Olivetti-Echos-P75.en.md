@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Jumpers Olivetti Echos P75
-date: "2004-04-06 10:01:00 +0200"
+date: 2004-04-06 10:01:00 +0200
 tags:
   - hardware
   - general
-modified: "2022-01-16T21:11:30.752Z"
+modified: 2022-03-23T09:58:09.876Z
 ---
 
 Olivetti Echos Family (Tested on my P75, but obtained from the Internet)

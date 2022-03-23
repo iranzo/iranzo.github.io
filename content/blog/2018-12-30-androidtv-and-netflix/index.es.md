@@ -7,12 +7,14 @@ tags:
   - kodi
 author: Pablo Iranzo Gómez
 layout: post
-date: "2018-12-30 19:26:00 +0100"
+date: 2018-12-30 19:26:00 +0100
 category: tech
 lang: es
 slug: AndroidTV-and-Netflix-tvq-pm-100
-modified: "2022-01-20T17:51:19.445Z"
+modified: 2022-03-23T09:52:10.946Z
 translationKey: AndroidTV-and-Netflix-tvq-pm-100
+cover:
+  image: netflix-tvq-pm-100.png
 ---
 
 # Android TV versus Android TV-Box

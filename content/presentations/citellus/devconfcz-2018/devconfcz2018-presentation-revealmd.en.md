@@ -10,6 +10,8 @@ category: presentations
 outputs:
   - Reveal
 layout: bundle
+cover:
+  image: www.png
 ---
 
 ## [Citellus](https://github.com/citellusorg/citellus):

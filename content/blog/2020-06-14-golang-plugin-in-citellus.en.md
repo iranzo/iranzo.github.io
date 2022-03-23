@@ -7,10 +7,10 @@ tags:
   - citellus
   - risu
 layout: post
-date: "2020-06-14 11:44:24 +0200"
+date: 2020-06-14 11:44:24 +0200
 category: tech
 lang: en
-modified: "2022-01-16T21:11:31.131Z"
+modified: 2022-03-23T10:00:43.331Z
 ---
 
 I wanted to practice a bit Go programing, so I divided that task in two parts, one, adding a golang extension for Citellus and a sample, but working plugin using it.

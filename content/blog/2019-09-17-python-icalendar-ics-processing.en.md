@@ -10,11 +10,13 @@ tags:
   - calendar
   - webcal
 layout: post
-date: "2019-09-17 07:00:36 +0200"
+date: 2019-09-17 07:00:36 +0200
 category: tech
-description: This article covers  how to do Internet Calendar processing of events in python and how those are leveraged in @redken_bot
+description:
+  This article covers  how to do Internet Calendar processing of events in
+  python and how those are leveraged in @redken_bot
 lang: en
-modified: "2022-01-16T21:44:56.357Z"
+modified: 2022-03-23T10:00:28.304Z
 ---
 
 ## Introduction

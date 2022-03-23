@@ -10,10 +10,10 @@ tags:
   - syncthing
   - FOSS
 layout: post
-date: "2021-06-12 21:40:34 +0200"
+date: 2021-06-12 21:40:34 +0200
 category: tech
 lang: en
-modified: "2022-01-16T21:11:30.979Z"
+modified: 2022-03-23T10:00:56.858Z
 ---
 
 Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc

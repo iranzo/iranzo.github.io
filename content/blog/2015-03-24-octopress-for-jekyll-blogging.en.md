@@ -1,14 +1,14 @@
 ---
 layout: post
 title: OctoPress for Jekyll blogging
-date: "2015-03-24 13:23:15 +0100"
+date: 2015-03-24 13:23:15 +0100
 tags:
   - Jekyll
   - Markdown
   - OctoPress
   - FOSS
 category: tech
-modified: "2022-01-16T21:11:30.902Z"
+modified: 2022-03-23T09:59:33.295Z
 ---
 
 After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.

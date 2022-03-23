@@ -1,14 +1,14 @@
 ---
 layout: post
 title: OCS Inventory Package deployment
-date: "2006-07-27 20:29:00 +0200"
+date: 2006-07-27 20:29:00 +0200
 tags:
   - hardware
   - Linux
   - software
   - OCS
   - FOSS
-modified: "2022-01-17T08:37:39.769Z"
+modified: 2022-03-23T09:58:25.346Z
 ---
 
 ### Introduction

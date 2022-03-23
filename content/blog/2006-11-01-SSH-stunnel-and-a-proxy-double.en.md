@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "SSH, stunnel and a proxy - double stunnel bypass"
+title: SSH, stunnel and a proxy - double stunnel bypass
 date: 2006-11-01T17:47:00.000Z
 tags:
   - Linux
   - network
   - FOSS
-modified: "2022-01-16T21:44:56.478Z"
+modified: 2022-03-23T09:58:33.925Z
 ---
 
 ### Introduction

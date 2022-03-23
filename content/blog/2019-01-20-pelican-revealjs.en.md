@@ -11,9 +11,9 @@ tags:
   - Linux
   - pandoc
 layout: post
-date: "2019-01-20 23:12:17 +0100"
+date: 2019-01-20 23:12:17 +0100
 category: tech
-modified: "2022-01-17T10:55:39.098Z"
+modified: 2022-03-23T10:00:14.157Z
 ---
 
 ## Introduction

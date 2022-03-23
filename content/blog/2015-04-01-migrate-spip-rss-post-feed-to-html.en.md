@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Migrate SPIP-RSS post feed to HTML
-date: "2015-04-01 16:49:13 +0200"
+date: 2015-04-01 16:49:13 +0200
 tags:
   - python
   - SPIP
   - markdown
   - html
   - foss
-modified: "2022-02-16T12:43:48.237Z"
+modified: 2022-03-23T09:59:40.171Z
 ---
 
 I had my old blog based on [SPIP](http://www.spip.net), and I wanted to keep all the posts together, to make it easier to migrate in the future.

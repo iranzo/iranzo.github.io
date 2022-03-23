@@ -9,10 +9,10 @@ tags:
   - dit
   - foss
 layout: post
-date: "2020-12-01 14:10:34 +0200"
+date: 2020-12-01 14:10:34 +0200
 category: tech
 lang: en
-modified: "2022-01-16T21:11:31.143Z"
+modified: 2022-03-23T10:00:45.531Z
 ---
 
 During last year I've worked with the <https://github.com/openshift-kni/baremetal-deploy/> repository after being working in the KNI Community team that was in charge of <KubeVirt.io> and <Metal3.io> where some of the below things were applied.

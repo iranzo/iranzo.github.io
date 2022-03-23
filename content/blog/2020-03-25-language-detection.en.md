@@ -8,10 +8,10 @@ tags:
   - foss
   - telegram
 layout: post
-date: "2020-03-25 20:00:24 +0100"
+date: 2020-03-25 20:00:24 +0100
 category: tech
 lang: en
-modified: "2022-01-16T21:44:56.330Z"
+modified: 2022-03-23T10:00:40.070Z
 ---
 
 ## Introduction

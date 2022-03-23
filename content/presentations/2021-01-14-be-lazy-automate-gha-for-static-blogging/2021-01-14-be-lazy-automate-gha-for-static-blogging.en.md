@@ -4,7 +4,6 @@ title: "Be lazy, automate: GitHub actions for static blogging"
 tags: [pelican, foss, github, github actions]
 layout: post
 date: 2021-01-14 22:24:00 +0100
-
 category: presentations
 outputs:
   - Reveal

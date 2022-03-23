@@ -7,10 +7,12 @@ tags:
   - 70620
   - review
 layout: post
-date: "2020-02-24 21:30:24 +0100"
+date: 2020-02-24 21:30:24 +0100
 category: blog
 lang: en
-modified: "2022-01-18T06:06:59.142Z"
+modified: 2022-03-23T09:45:14.848Z
+cover:
+  image: https://i.imgur.com/v5ulbTA.jpg.jpg
 ---
 
 Some pics about the 'almost' modular [Lego Ninjago City 🛒](https://www.amazon.es/dp/B074XCNQSY?tag=redken-21).

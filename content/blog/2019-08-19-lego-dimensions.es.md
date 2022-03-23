@@ -12,12 +12,14 @@ tags:
   - NFS
   - reseña
 layout: post
-date: "2019-08-19 22:00:36 +0200"
+date: 2019-08-19 22:00:36 +0200
 category: blog
 lang: es
 slug: lego-dimensions
 translationKey: lego-dimensions
-modified: "2022-01-18T08:13:45.929Z"
+modified: 2022-03-23T09:41:32.781Z
+cover:
+  image: https://www.lego.com/cdn/cs/set/assets/blt866dc839f8c741cf/dimensions-logo.png
 ---
 
 ## Introducción

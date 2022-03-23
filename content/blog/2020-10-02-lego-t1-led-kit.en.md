@@ -10,10 +10,12 @@ tags:
   - LED kit
   - Camper van
 layout: post
-date: "2020-10-02 19:45:24 +0200"
+date: 2020-10-02 19:45:24 +0200
 category: blog
 lang: en
-modified: "2022-01-18T06:31:24.704Z"
+modified: 2022-03-23T09:49:16.151Z
+cover:
+  image: https://i.imgur.com/AI136I0.jpg.jpg
 ---
 
 I've the [Lego Volkswagen T1 Camper van 🛒](https://www.amazon.es/dp/B00PGZP8HE?tag=redken-21) (which I made a MOC for at [Lego T1 Trailer MOC]({{<ref "2020-09-17-lego-t1-volskwagen-trailer.en.md">}})) and just received my [LED Lightning Kit 🛒](https://www.amazon.es/dp/B079LHQFYM?tag=redken-21) (or [AliExpress 🛒](https://s.click.aliexpress.com/e/_dY2hmRx)) after my experience with the [Bugatti Chiron]({{<ref "2020-09-25-lego-bugatti-chiron-led-kit.en.md">}}) one

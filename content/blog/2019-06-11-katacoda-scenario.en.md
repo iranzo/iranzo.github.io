@@ -11,9 +11,9 @@ tags:
   - Kubernetes
   - k8s
 layout: post
-date: "2019-06-11 21:16:14 +0200"
+date: 2019-06-11 21:16:14 +0200
 category: tech
-modified: "2022-01-16T21:11:31.056Z"
+modified: 2022-03-23T10:00:18.946Z
 ---
 
 After some time checking the scenarios at <https://learn.openshift.com>, I decided to give it a try.

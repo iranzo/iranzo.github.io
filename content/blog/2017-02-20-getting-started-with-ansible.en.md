@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Ansible
-date: "2017-02-20 23:10:00 +0100"
+date: 2017-02-20 23:10:00 +0100
 tags:
   - python
   - ansible
@@ -9,7 +9,7 @@ tags:
   - sysmgmt
   - foss
 category: tech
-modified: "2022-01-16T21:44:56.423Z"
+modified: 2022-03-23T09:59:51.480Z
 ---
 
 ## Introduction

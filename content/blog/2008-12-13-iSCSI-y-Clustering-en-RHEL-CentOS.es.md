@@ -8,7 +8,7 @@ tags:
   - rhel
   - centos
   - foss
-modified: "2022-01-17T08:44:30.435Z"
+modified: 2022-03-23T09:58:57.544Z
 ---
 
 ## Introducción

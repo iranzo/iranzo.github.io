@@ -7,7 +7,7 @@ tags:
   - linux
   - foss
 lang: es
-modified: "2022-01-17T07:42:06.511Z"
+modified: 2022-03-23T09:58:14.067Z
 ---
 
 ### ¿Qué es una patente?

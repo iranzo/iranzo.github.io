@@ -7,8 +7,8 @@ tags:
   - python
   - redken
 layout: post
-date: "2019-03-04 18:34:14 +0100"
-modified: "2022-01-17T12:06:41.161Z"
+date: 2019-03-04 18:34:14 +0100
+modified: 2022-03-23T10:03:20.963Z
 category: tech
 description: null
 lang: en

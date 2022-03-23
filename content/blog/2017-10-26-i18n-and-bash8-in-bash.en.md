@@ -1,7 +1,7 @@
 ---
 layout: post
 title: i18n and 'bash8' in bash
-date: "2017-10-26 21:17:00 +0200"
+date: 2017-10-26 21:17:00 +0200
 tags:
   - bash
   - gettext
@@ -10,7 +10,7 @@ tags:
   - bashate
   - FOSS
 category: tech
-modified: "2022-01-17T10:53:33.297Z"
+modified: 2022-03-23T09:59:56.938Z
 ---
 
 ## Introduction

@@ -9,10 +9,12 @@ tags:
   - LED kit
   - GT3 RS
 layout: post
-date: "2020-10-12 20:32:34 +0200"
+date: 2020-10-12 20:32:34 +0200
 category: blog
 lang: en
-modified: "2022-01-18T06:33:17.264Z"
+modified: 2022-03-23T09:49:28.124Z
+cover:
+  image: https://i.imgur.com/AieeM54.jpg.jpg
 ---
 
 As with other kits, I bought the Led kit for the [Porsche 911 GT3 RS 🛒](https://www.amazon.es/dp/B01CCT2ZHC?tag=redken-21) (more pics at [Porsche 911 GT3]({{<ref "2020-02-21-lego-bugatti-chiron-porsche-911-GT3-RS.en.md">}})) and just received my [LED Kit 🛒](https://www.amazon.es/dp/B07C31ZFDM?tag=redken-21) (or [AliExpress 🛒](https://s.click.aliexpress.com/e/_eKUAhL)) after my experience with the [Bugatti Chiron]({{<ref "2020-09-25-lego-bugatti-chiron-led-kit.en.md">}}) one.

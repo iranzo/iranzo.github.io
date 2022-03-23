@@ -1,8 +1,8 @@
 ---
-modified: "2022-01-18T09:47:50.684Z"
+modified: 2022-03-23T10:01:30.150Z
 title: About
 layout: post
-date: "2016-06-02 17:27:47 +0200"
+date: 2016-06-02 17:27:47 +0200
 description: About page for the site
 translationKey: about
 url: /about

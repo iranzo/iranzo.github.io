@@ -4,10 +4,10 @@ title: Tablas para no decir nada
 tags:
   - lenguaje
 layout: post
-date: "2008-11-08 23:16:14 +0200"
+date: 2008-11-08 23:16:14 +0200
 category: blog
 lang: es
-modified: "2022-01-17T12:15:46.308Z"
+modified: 2022-03-23T09:58:55.043Z
 ---
 
 {{<hint title="Método de uso">}}

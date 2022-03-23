@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Recent changes in Magui and Citellus
-date: "2018-01-16 21:17:00 +0200"
+date: 2018-01-16 21:17:00 +0200
 tags:
   - Citellus
   - Magui
   - FOSS
   - risu
 category: tech
-modified: "2022-01-17T10:54:02.388Z"
+modified: 2022-03-23T09:59:58.135Z
 ---
 
 ## What's new?

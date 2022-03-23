@@ -9,11 +9,13 @@ tags:
   - discord
   - tutorial
 layout: post
-date: "2022-01-20 17:20:14 +0100"
+date: 2022-01-20 17:20:14 +0100
 category: tech
 description: See how to use @redken_bot in Telegram or discord with some examples!
 lang: en
-modified: "2022-01-20T16:22:15.118Z"
+modified: 2022-03-23T09:57:32.617Z
+cover:
+  image: karma.png
 ---
 
 # Redken in action with some examples

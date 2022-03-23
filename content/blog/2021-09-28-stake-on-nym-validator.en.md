@@ -1,6 +1,6 @@
 ---
 author: Pablo Iranzo Gómez
-title: "How to stake on NYM Validator \U0001F433\U0001F433\U0001F433"
+title: How to stake on NYM Validator 🐳🐳🐳
 tags:
   - NYM
   - crypto
@@ -11,11 +11,11 @@ tags:
   - foss
   - cosmos
 layout: post
-date: "2021-09-28 17:20:34 +0200"
+date: 2021-09-28 17:20:34 +0200
 category: tech
 description: This article describes how to stake your token against a NYM cosmos validator
 lang: en
-modified: "2022-01-17T12:19:59.266Z"
+modified: 2022-03-23T10:01:08.908Z
 slug: stake-nym-validator
 ---
 

@@ -6,7 +6,7 @@ tags:
   - software
   - privacy
 lang: es
-modified: "2022-01-17T08:37:05.951Z"
+modified: 2022-03-23T09:58:15.429Z
 ---
 
 Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto.

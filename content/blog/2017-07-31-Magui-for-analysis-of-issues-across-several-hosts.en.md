@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Magui for analysis of issues across several hosts.
-date: "2017-07-31 12:45:00 +0200"
+date: 2017-07-31 12:45:00 +0200
 tags:
   - Python
   - OpenStack
@@ -12,7 +12,7 @@ tags:
   - Magui
   - FOSS
 category: tech
-modified: "2022-01-17T08:45:42.130Z"
+modified: 2022-03-23T09:59:55.768Z
 ---
 
 ## Background

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: First post on Red Hat blog
-date: "2018-06-07 22:32:00 +0200"
+date: 2018-06-07 22:32:00 +0200
 tags:
   - Citellus
   - Magui
   - Red Hat
   - FOSS
 category: tech
-modified: "2022-01-16T21:11:31.015Z"
+modified: 2022-03-23T10:00:02.254Z
 ---
 
 ## New blog post!

@@ -7,7 +7,7 @@ tags:
   - Fedora
   - backup
   - FOSS
-modified: "2022-01-16T21:11:30.885Z"
+modified: 2022-03-23T09:59:27.215Z
 ---
 
 A few days ago, I was checking a friend's system for backing up.

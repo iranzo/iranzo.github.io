@@ -9,7 +9,7 @@ tags:
   - Linux
   - installation
   - FOSS
-modified: "2022-01-18T09:00:50.798Z"
+modified: 2022-03-23T09:59:00.948Z
 ---
 
 ## Introduction

@@ -7,7 +7,7 @@ tags:
   - spip
   - foss
 lang: es
-modified: "2022-01-17T07:41:58.752Z"
+modified: 2022-03-23T09:58:19.186Z
 ---
 
 ### Manual de instrucciones de la web

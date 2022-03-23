@@ -11,10 +11,10 @@ tags:
   - RHEL
   - foss
 layout: post
-date: "2021-05-09 12:40:34 +0200"
+date: 2021-05-09 12:40:34 +0200
 category: tech
 lang: en
-modified: "2022-01-17T12:20:11.144Z"
+modified: 2022-03-23T10:00:54.883Z
 ---
 
 As said in the article about [mixnodes]({{<ref "2021-05-09-run-a-nym-mixnode.en.md">}}), NYM is a technology aiming for providing privacy for the communications.

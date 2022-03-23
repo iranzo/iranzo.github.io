@@ -12,9 +12,9 @@ tags:
   - continuous integration
   - continuous deployment
 layout: post
-date: "2018-12-07 16:00:47 +0100"
+date: 2018-12-07 16:00:47 +0100
 category: tech
-modified: "2022-01-16T21:44:56.402Z"
+modified: 2022-03-23T10:00:05.745Z
 ---
 
 # Background

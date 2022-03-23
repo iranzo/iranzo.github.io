@@ -13,10 +13,10 @@ tags:
   - PhotoSwipe
   - FOSS
 layout: post
-date: "2020-02-12 07:30:24 +0100"
+date: 2020-02-12 07:30:24 +0100
 category: tech
 lang: en
-modified: "2022-01-17T11:58:46.192Z"
+modified: 2022-03-23T10:00:32.150Z
 ---
 
 ## Introduction

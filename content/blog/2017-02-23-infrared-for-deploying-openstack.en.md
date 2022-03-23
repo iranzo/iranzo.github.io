@@ -1,7 +1,7 @@
 ---
 layout: post
 title: InfraRed for deploying OpenStack
-date: "2017-02-23 23:27:00 +0100"
+date: 2017-02-23 23:27:00 +0100
 tags:
   - python
   - ansible
@@ -10,7 +10,7 @@ tags:
   - InfraRed
   - foss
 category: tech
-modified: "2022-01-17T12:17:06.890Z"
+modified: 2022-03-23T09:59:54.533Z
 ---
 
 [InfraRed](https://github.com/redhat-openstack/infrared/) is tool that allows to install/provision OpenStack. You can find the documentation for the project at <http://infrared.readthedocs.io>.

@@ -9,7 +9,7 @@ tags:
   - desktop
   - foss
 lang: es
-modified: "2022-01-18T08:59:48.281Z"
+modified: 2022-03-23T09:58:48.593Z
 ---
 
 ## Antecedentes

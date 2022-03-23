@@ -9,9 +9,11 @@ tags:
   - review
   - 80101
 layout: post
-date: "2019-06-28 20:00:14 +0200"
+date: 2019-06-28 20:00:14 +0200
 category: blog
-modified: "2022-01-17T22:43:40.946Z"
+modified: 2022-03-23T09:39:06.959Z
+cover:
+  image: https://i.imgur.com/xIIP1ER.jpg.jpg
 ---
 
 This is the pictures of the set that my colleague Raúl brought back from his trip to APAC, hope you enjoy it!

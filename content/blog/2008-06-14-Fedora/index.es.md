@@ -8,7 +8,9 @@ tags:
   - linux
   - foss
 lang: es
-modified: "2022-01-20T17:29:49.668Z"
+modified: 2022-03-23T09:56:45.849Z
+cover:
+  image: Pantallazo-00.png
 ---
 
 ### Introducción

@@ -15,9 +15,9 @@ tags:
   - continuous integration
   - continuous delivery
 layout: post
-date: "2019-05-16 22:29:14 +0200"
+date: 2019-05-16 22:29:14 +0200
 category: tech
-modified: "2022-01-17T10:59:02.434Z"
+modified: 2022-03-23T10:00:17.817Z
 ---
 
 As a recipe, if you want to enable a custom domain name on [blog-o-matic]({{<ref "2019-01-09-blog-o-matic.en.md">}}) a special file needs to be created on the 'GitHub Pages' served 'master' branch.

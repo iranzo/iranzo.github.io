@@ -1,8 +1,8 @@
 ---
-modified: "2022-01-18T09:42:41.931Z"
+modified: 2022-03-23T10:01:31.764Z
 title: Proyectos
 layout: post
-date: "2020-01-17"
+date: 2020-01-17
 description: Proyectos en los que he estado involucrado
 url: /es/projects
 translationKey: projects

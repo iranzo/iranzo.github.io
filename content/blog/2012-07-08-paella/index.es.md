@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cómo hacer una Paella
-date: "2012-07-08 11:35:14 +0200"
+date: 2012-07-08 11:35:14 +0200
 tags:
   - paella
   - receta
@@ -10,7 +10,9 @@ category: blog
 lang: es
 slug: paella-howto
 translationKey: paella-howto
-modified: "2022-01-20T17:42:38.847Z"
+modified: 2022-03-23T09:52:56.889Z
+cover:
+  image: 20120708134340.jpg
 ---
 
 Este documento está basado en la receta original y fotos que le pasé a mi compañero [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) que a su vez, documentó y tradujo internamente para su difusión.

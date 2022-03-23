@@ -7,8 +7,8 @@ tags:
   - python
   - redken
 layout: post
-date: "2019-03-04 18:34:14 +0100"
-modified: "2022-01-18T09:46:17.293Z"
+date: 2019-03-04 18:34:14 +0100
+modified: 2022-03-23T10:01:34.116Z
 category: tech
 description: Learn about Redken Telegram Bot usage and configuration settings.
 lang: es

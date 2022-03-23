@@ -6,9 +6,9 @@ tags:
   - UEFI
   - efibootmgr
 layout: post
-date: "2021-07-01 22:00:00 +0200"
+date: 2021-07-01 22:00:00 +0200
 category: tech
-modified: "2022-01-16T21:11:30.933Z"
+modified: 2022-03-23T10:01:04.432Z
 ---
 
 Hi,

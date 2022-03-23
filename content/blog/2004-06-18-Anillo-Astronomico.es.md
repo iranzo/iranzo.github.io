@@ -8,7 +8,7 @@ tags:
   - astronomía
   - ciencia
 lang: es
-modified: "2022-01-17T07:41:54.069Z"
+modified: 2022-03-23T09:58:17.960Z
 ---
 
 ### ¿Qué es?

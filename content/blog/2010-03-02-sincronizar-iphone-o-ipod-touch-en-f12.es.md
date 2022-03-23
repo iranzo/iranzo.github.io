@@ -1,13 +1,15 @@
 ---
 layout: post
 title: Sincronizar 'basicamente' iPhone o iPod Touch en Fedora 12
-date: "2010-03-02 14:43:00 +0100"
+date: 2010-03-02 14:43:00 +0100
 author: Pablo Iranzo Gómez
 tags:
   - fedora
   - foss
+  - iPod
+  - iPhone
 lang: es
-modified: "2022-01-16T21:11:30.873Z"
+modified: 2022-03-23T09:59:16.407Z
 ---
 
 Las nuevas versiones no están todavía soportadas en Fedora 12, así que tendremos que utilizar las de rawhide.

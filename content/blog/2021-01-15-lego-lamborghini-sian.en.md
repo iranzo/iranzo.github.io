@@ -8,10 +8,12 @@ tags:
   - Sian
   - FKP47
 layout: post
-date: "2021-01-15 20:32:34 +0200"
+date: 2021-01-15 20:32:34 +0200
 category: blog
 lang: en
-modified: "2022-01-18T06:38:03.905Z"
+modified: 2022-03-23T09:50:11.650Z
+cover:
+  image: https://i.imgur.com/R7qkoY6.jpg.jpg
 ---
 
 Xmas came with a good gift that I was able to finish mounting today, the [Lego Lamborghini Sian FKP47 🛒](https://www.amazon.es/dp/B0813RJRYC?tag=redken-21).

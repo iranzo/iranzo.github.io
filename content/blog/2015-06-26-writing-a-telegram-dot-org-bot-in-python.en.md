@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Writing a Telegram.org bot in Python
-date: "2015-06-26 17:12:30 +0200"
+date: 2015-06-26 17:12:30 +0200
 tags:
   - Python
   - programming
   - Telegram
   - FOSS
   - redken
-modified: "2022-01-16T21:11:30.910Z"
+modified: 2022-03-23T09:59:42.970Z
 ---
 
 Hi,

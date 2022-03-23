@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Citellus: framework for detecting known issues in systems."
-date: "2017-07-26 22:26:00 +0200"
+date: 2017-07-26 22:26:00 +0200
 tags:
   - Python
   - OpenStack
@@ -11,8 +11,10 @@ tags:
   - Citellus
   - FOSS
 category: tech
-description: "Learn about Citellus, a framework that will help you detect known issues, and more insightful information about your system"
-modified: "2022-01-16T21:44:56.417Z"
+description:
+  Learn about Citellus, a framework that will help you detect known issues, and
+  more insightful information about your system
+modified: 2022-03-23T09:59:53.423Z
 ---
 
 ## Background

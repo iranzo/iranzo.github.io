@@ -9,10 +9,12 @@ tags:
   - review
   - 80102
 layout: post
-date: "2019-06-28 20:32:14 +0200"
+date: 2019-06-28 20:32:14 +0200
 category: blog
 description: Lego Chinese Dragon Dance review
-modified: "2022-01-17T22:48:43.205Z"
+modified: 2022-03-23T09:38:07.612Z
+cover:
+  image: https://i.imgur.com/8j1Drm8.jpg.jpg
 ---
 
 This is the pictures of the set that my colleague Raúl brought back from his trip to APAC.

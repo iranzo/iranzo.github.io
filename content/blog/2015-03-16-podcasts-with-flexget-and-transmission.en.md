@@ -2,11 +2,11 @@
 layout: post
 title: Podcasts with flexget and transmission
 author: Pablo Iranzo Gómez
-date: "2015-03-16 21:45:00 +0200"
+date: 2015-03-16 21:45:00 +0200
 tags:
   - Fedora
   - FOSS
-modified: "2022-01-16T21:11:30.900Z"
+modified: 2022-03-23T09:59:31.944Z
 ---
 
 Some podcasts are available via RSS feeds, so you can get notified of new episodes, so the best way I've found so far to automate this procedure is to use the utility `flexget`.

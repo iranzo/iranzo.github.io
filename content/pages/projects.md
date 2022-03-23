@@ -1,8 +1,8 @@
 ---
-modified: "2022-01-18T09:41:12.476Z"
+modified: 2022-03-23T10:01:33.035Z
 title: Projects
 layout: post
-date: "2020-01-17"
+date: 2020-01-17
 description: Projects I've been involved with
 url: /projects
 translationKey: projects

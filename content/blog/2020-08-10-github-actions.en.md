@@ -7,10 +7,10 @@ tags:
   - github actions
   - blog-o-matic
 layout: post
-date: "2020-08-10 07:44:24 +0200"
+date: 2020-08-10 07:44:24 +0200
 category: tech
 lang: en
-modified: "2022-01-17T12:01:40.455Z"
+modified: 2022-03-23T10:00:44.470Z
 ---
 
 When I started with [blog-o-matic]({{<ref "2019-01-09-blog-o-matic.en.md">}}) I had to involve external 'Travis-CI', generating a token on GitHub, setting environment variables on Travis, etc

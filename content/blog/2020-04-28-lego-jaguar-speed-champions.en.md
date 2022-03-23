@@ -8,10 +8,12 @@ tags:
   - Speed champions
   - 76898
 layout: post
-date: "2020-04-28 22:30:24 +0200"
+date: 2020-04-28 22:30:24 +0200
 category: blog
 lang: en
-modified: "2022-01-18T06:19:51.094Z"
+modified: 2022-03-23T09:47:46.658Z
+cover:
+  image: https://i.imgur.com/fYx5Jtr.jpg.jpg
 ---
 
 Today I built the [Jaguar Racing GEN2 car & Jaguar I-PACE eTROPHY 🛒](https://www.amazon.es/dp/B07W5PXDYZ?tag=redken-21).

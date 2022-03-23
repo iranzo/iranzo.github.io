@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Rescate de sistemas virtuales (Xen)
-date: "2010-04-23 23:31:00 +0200"
+date: 2010-04-23 23:31:00 +0200
 author: Pablo Iranzo Gómez
 tags:
   - fedora
   - xen
   - foss
 lang: es
-modified: "2022-01-16T21:11:30.882Z"
+modified: 2022-03-23T09:59:24.737Z
 ---
 
 A raíz de un problema debido a reiterados apagones, me vi en la necesidad de levantar una máquina virtual que ya no arrancaba.

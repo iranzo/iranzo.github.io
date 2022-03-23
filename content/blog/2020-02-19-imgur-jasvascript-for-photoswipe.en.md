@@ -9,10 +9,10 @@ tags:
   - imgur
   - PhotoSwipe
 layout: post
-date: "2020-02-19 21:55:24 +0100"
+date: 2020-02-19 21:55:24 +0100
 category: tech
 lang: en
-modified: "2022-01-18T09:33:49.537Z"
+modified: 2022-03-23T10:00:33.405Z
 ---
 
 Hi,

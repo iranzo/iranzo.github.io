@@ -10,9 +10,9 @@ tags:
   - blog
   - python
 layout: post
-date: "2018-12-11 21:49:47 +0100"
+date: 2018-12-11 21:49:47 +0100
 category: tech
-modified: "2022-01-17T10:55:24.514Z"
+modified: 2022-03-23T10:00:06.777Z
 ---
 
 # Introduction

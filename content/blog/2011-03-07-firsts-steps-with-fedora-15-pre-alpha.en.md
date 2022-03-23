@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Firsts steps with Fedora 15 pre-alpha
-date: "2011-03-07 17:26:00 +0100"
+date: 2011-03-07 17:26:00 +0100
 author: Pablo Iranzo Gómez
 tags:
   - fedora
   - foss
-modified: "2022-01-16T21:11:30.884Z"
+modified: 2022-03-23T09:59:26.151Z
 ---
 
 Today I've decided to give it a try to F15-prealpha (expected to release tomorrow).

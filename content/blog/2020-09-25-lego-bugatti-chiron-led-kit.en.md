@@ -10,10 +10,12 @@ tags:
   - LED kit
   - Bugatti Chiron
 layout: post
-date: "2020-09-25 19:30:24 +0200"
+date: 2020-09-25 19:30:24 +0200
 category: blog
 lang: en
-modified: "2022-01-18T06:30:00.522Z"
+modified: 2022-03-23T09:48:53.585Z
+cover:
+  image: https://i.imgur.com/YUmxxRW.jpg.jpg
 ---
 
 I've the [Lego Bugatti Chiron 🛒](https://www.amazon.es/dp/B0792RB3B6?tag=redken-21) (more pics at its [review]({{<ref "2020-02-21-lego-bugatti-chiron-porsche-911-GT3-RS.en.md">}}) and just recently via a credit coupon I got a [LED Lightning Kit from `Lightailing` 🛒](https://www.amazon.es/dp/B07KG3LV8F?tag=redken-21) (or [AliExpress 🛒](https://s.click.aliexpress.com/e/_bWTEpe2)).

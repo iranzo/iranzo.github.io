@@ -2,14 +2,14 @@
 layout: post
 title: Jekyll and Markdown
 author: Pablo Iranzo Gómez
-date: "2015-03-16 09:06:00 +0100"
+date: 2015-03-16 09:06:00 +0100
 tags:
   - Jekyll
   - FOSS
   - Markdown
   - SPIP
   - Blogger
-modified: "2022-01-16T21:11:30.897Z"
+modified: 2022-03-23T09:59:38.305Z
 ---
 
 For my work I've been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the formating.

@@ -12,10 +12,12 @@ tags:
   - Bugatti Chiron
   - Porsche 911
 layout: post
-date: "2020-02-21 20:30:24 +0100"
+date: 2020-02-21 20:30:24 +0100
 category: blog
 lang: en
-modified: "2022-01-17T23:01:49.825Z"
+modified: 2022-03-23T09:43:46.714Z
+cover:
+  image: https://i.imgur.com/bIQfCLi.jpg.jpg
 ---
 
 Here you can see a photo comparison between [Porsche 911 GT3 RS 🛒](https://www.amazon.es/dp/B01CCT2ZHC?tag=redken-21) and [Bugatti Chiron 🛒](https://www.amazon.es/dp/B0792RB3B6?tag=redken-21).

@@ -6,10 +6,12 @@ tags:
   - spill
   - prestige
 layout: post
-date: "2020-02-25 21:30:24 +0100"
+date: 2002-02-25 21:30:24 +0100
 category: blog
 lang: en
-modified: "2022-01-18T06:46:23.784Z"
+modified: 2022-03-23T09:46:49.009Z
+cover:
+  image: https://i.imgur.com/GkwY1be.jpg.jpg
 ---
 
 Those are some pics I took during December in 2002 around Camelle and Costa da Morte area in North of Spain after the Prestige oil spill.

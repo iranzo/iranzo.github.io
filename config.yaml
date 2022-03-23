@@ -59,9 +59,9 @@ params:
       SiteVerificationTag: "993ede96cdfbee95"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    hidden: False # hide everywhere but not in structured data
+    hiddenInList: False # hide on list pages and home
+    hiddenInSingle: True # hide on single page
 
   # for search
   # https://fusejs.io/api/options.html

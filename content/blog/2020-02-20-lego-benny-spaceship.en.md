@@ -9,10 +9,12 @@ tags:
   - benny
   - spaceship
 layout: post
-date: "2020-02-20 19:30:24 +0100"
+date: 2020-02-20 19:30:24 +0100
 category: blog
 lang: en
-modified: "2022-01-17T22:56:22.912Z"
+modified: 2022-03-23T09:44:11.076Z
+cover:
+  image: https://i.imgur.com/69ePXLB.jpg.jpg
 ---
 
 I bought [Lego 70821 Emmet Garage and Benny Spaceship 🛒](https://www.amazon.es/dp/B07FP2KS4F?tag=redken-21) because I loved the astronaut minifigures from my childhood, and I even loved the `broken` helmet (as I used to have them broken in the same way).

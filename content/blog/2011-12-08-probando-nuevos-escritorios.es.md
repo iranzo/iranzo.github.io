@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Probando nuevos escritorios
-date: "2011-12-08 11:13:00 +0100"
+date: 2011-12-08 11:13:00 +0100
 author: Pablo Iranzo Gómez
 lang: es
 tags:
   - fedora
   - foss
-modified: "2022-01-16T21:11:30.891Z"
+modified: 2022-03-23T09:59:29.535Z
 ---
 
 Hace ya años que pasé de KDE con la llegada de KDE 3 a utilizar GNOME, más 'espartano', pero con mejor rendimiento.

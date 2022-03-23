@@ -4,10 +4,10 @@ title: Las Leyes de Murphy
 tags:
   - Murphy
 layout: post
-date: "2007-10-03 17:55:54 +0100"
+date: 2007-10-03 17:55:54 +0100
 category: blog
 lang: es
-modified: "2022-02-02T12:46:17.034Z"
+modified: 2022-03-23T09:58:35.488Z
 ---
 
 # Las leyes de Murphy

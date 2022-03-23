@@ -6,7 +6,7 @@ tags:
   - OCS
   - Linux
   - FOSS
-modified: "2022-01-17T08:40:16.642Z"
+modified: 2022-03-23T09:58:26.215Z
 ---
 
 Prior to using the following info for creating own-made packages, let's test if everything is working fine.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RHEV-M with nested VM for OSP
-date: "2015-07-17 18:34:17 +0200"
+date: 2015-07-17 18:34:17 +0200
 tags:
   - Linux
   - OpenStack
@@ -12,7 +12,7 @@ tags:
   - nestedvt
   - FOSS
   - nested virtualization
-modified: "2022-01-16T21:11:30.912Z"
+modified: 2022-03-23T09:59:44.059Z
 ---
 
 Since some time ago, I've been mostly dealing with OpenStack, requiring different releases to test for different tests, etc.

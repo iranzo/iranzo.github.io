@@ -9,11 +9,11 @@ tags:
   - yaspeller
   - tips
 layout: post
-date: "2020-03-12 14:38:00 +0100"
+date: 2020-03-12 14:38:00 +0100
 category: tech
 lang: en
 slug: yaspeller-hook-for-pre-commit
-modified: "2022-01-17T12:19:31.624Z"
+modified: 2022-03-23T10:00:36.997Z
 ---
 
 I've made a PR that got merged into Yaspeller repository which adds support for `pre-commit` to spell check your files.

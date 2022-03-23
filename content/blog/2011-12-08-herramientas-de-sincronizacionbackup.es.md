@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Herramientas de sincronización/backup
-date: "2011-12-08 11:52:00 +0100"
+date: 2011-12-08 11:52:00 +0100
 author: Pablo Iranzo Gómez
 lang: es
 tags:
   - fedora
   - dropbox
   - foss
-modified: "2022-01-16T21:11:30.887Z"
+modified: 2022-03-23T09:59:28.395Z
 ---
 
 Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de 'backup' en caso de fallo hardware de algún equipo.

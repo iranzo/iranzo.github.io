@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible (Linux/Windows)
-date: "2010-04-15 14:18:00 +0200"
+title:
+  Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible
+  (Linux/Windows)
+date: 2010-04-15 14:18:00 +0200
 author: Pablo Iranzo Gómez
 lang: es
 tags:
   - fedora
   - foss
-modified: "2022-01-16T21:11:30.881Z"
+modified: 2022-03-23T09:59:23.528Z
 ---
 
 Usando unetbootin (<http://unetbootin.sourceforge.net/>) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.

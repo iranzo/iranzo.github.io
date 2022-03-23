@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Intel AMT on Linux for remote control/fencing
-date: "2015-05-01 11:35:14 +0200"
+date: 2015-05-01 11:35:14 +0200
 tags:
   - Linux
   - fencing
   - management
   - foss
-modified: "2022-01-16T21:11:30.907Z"
+modified: 2022-03-23T09:59:41.792Z
 ---
 
 Hi,

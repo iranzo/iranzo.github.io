@@ -10,10 +10,10 @@ tags:
   - python
   - foss
 layout: post
-date: "2019-11-28 17:11:36 +0100"
+date: 2019-11-28 17:11:36 +0100
 category: tech
 lang: en
-modified: "2022-01-17T12:18:00.802Z"
+modified: 2022-03-23T10:00:29.650Z
 ---
 
 ## Introduction

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Contributing to OpenStack
-date: "2016-07-21 17:32:47 +0200"
+date: 2016-07-21 17:32:47 +0200
 tags:
   - python
   - OpenStack
   - foss
 category: tech
-modified: "2022-01-16T21:11:30.929Z"
+modified: 2022-03-23T09:59:50.380Z
 ---
 
 Contributing to an opensource project might take some time at the beginning, the good thing with OpenStack is that there are lot of guides on how to start and collaborate.
