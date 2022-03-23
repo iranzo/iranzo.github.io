@@ -11,6 +11,8 @@ translationKey: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 outputs:
   - Reveal
 layout: bundle
+cover:
+  image: aurora.jpg
 ---
 
 ## Disclaimer
