@@ -2,7 +2,7 @@
 title: Emerging Tech VLC'19 - Citellus - Automatización de comprobaciones
 category: presentations
 author: Pablo Iranzo Gómez
-tags: [citellus, foss, bash, magui, troubleshooting, devconf, openstack, docker, container, python, emergingtechvlc]
+tags: [citellus, foss, bash, magui, troubleshooting, devconf, openstack, docker, container, python, emergingtechvlc,reveal]
 layout: post
 date: 2019-05-30 18:30:00 +0100
 category: presentations

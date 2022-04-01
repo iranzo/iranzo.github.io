@@ -2,7 +2,7 @@
 author: Pablo Iranzo Gómez
 title: Administración de Sistemas y Seguridad
 lang: es
-tags: [foss, sysadmin, security]
+tags: [foss, sysadmin, security,reveal]
 layout: post
 date: 2002-04-15 16:00:00 +0100
 category: presentations

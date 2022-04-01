@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Introducción al Software Libre
-tags: [foss, valux]
+tags: [foss, valux,reveal]
 lang: es
 layout: post
 date: 2010-03-08 16:00:00 +0100

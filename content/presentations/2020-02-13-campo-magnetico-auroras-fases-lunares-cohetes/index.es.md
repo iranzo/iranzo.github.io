@@ -1,108 +1,111 @@
 ---
-title: Magnetic field, aurora, moon phases, eclipse and rockets
+title: Campo magnético, auroras, fases lunares, eclipses y cohetes
 category: presentations
 author: Pablo Iranzo Gómez
-tags: [aurora, eclipse, rocket, moon phase, magnetic field, astronomy]
+tags: [aurora, eclipse, cohetes, fases lunares, campo magnético, astronomía, ciencia, astronomy,reveal]
 layout: post
-date: 2020-02-13 22:15:00 +0100
-lang: en
+date: 2020-02-06 22:30:00 +0100
+lang: es
 slug: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 translationKey: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 outputs:
   - Reveal
 layout: bundle
+cover:
+  image: aurora.jpg
 ---
 
 ## Disclaimer
 
-- Simple talk oriented to 4 y-o children
-- Vídeos, etc have been reduced from the originals (credits in bibliography)
+- Charla sencilla orientada para niños de 4 años
+- Vídeos, etc recortados de los originales (Créditos en bibliografía)
 
 ---
 
-## Magnetic Field, Aurora, Moon Phases and Rockets
+## Campo Magnético, Auroras, Fases Lunares, Eclipses y Cohetes
 
 Pablo Iranzo Gómez<br><https://iranzo.github.io>
 
-<small>Thursday 13th, February 2020</small>
+<small>Jueves 13 Febrero 2020</small>
 
 ---
 
-## Introduction
+## Introducción
 
-- Magnetic field
+- Campo magnético
   - Auroras
-- Moon-Earth-Sun movement
-  - Moon phases
+- Movimiento Sol-Tierra-Luna
+  - Fases Lunares
   - Eclipses
-- Rockets
-- End
+- Cohetes
+- Fin
 
 ---
 
-## Magnetic Field
+## Campo magnético
 
-Magnetic field surrounds us, but it's invisible although we can detect and
-measure.
+El campo magnético es algo que nos rodea, que es invisible pero que podemos
+detectar y medir.
 
-Easiest way to check it is to use a compass.
+La forma más sencilla es con una brújula.
 
 ![](brujula.jpg)
 
-Note: Use magnets and compass
+Note: Usar imanes y brújulas.
 
 ---
 
-### 'See' the magnetic field
+### Ver el campo magnético
 
-We can see it by using iron powder and magnets.
+Podemos verlo con limaduras de hierro y unos imanes.
 
 ![](limaduras.jpg)
 
-Note: Use magnets and iron powder
+Note: Usar imanes y limaduras hierro
 
 ---
 
-#### 'See' the magnetic field 2
+#### Ver el campo magnético 2
 
 ![](campo.jpg)
 
 ---
 
-### Origin
+### Origen
 
-- Earth has metal inside that moves and generates the magnetic field (pole)
-- Earht is also very big and generates gravity field.
+- La Tierra tiene metal que se mueve en su interior y genera campo magnético (polos)
+- La Tierra es muy grande y genera un campo gravitatorio.
 
 ![](tierra.jpg)
 
-Note: Vulcanos spit that inner melted materials to the surface of Earth
+Note: Mencionar volcanes que tiran el interior de la Tierra.
 
 ---
 
-### Solar storms, solar wind and flares
+### Tormentas solares, viento solar, llamaradas
 
-The Sun, sometines has storms and particles (debris) is launched towards earth and others with the `solar wind`.
+El Sol a veces tiene tormentas y llegan partículas a la tierra con el
+`viento solar`.
 
 ![](flare.jpg)
 
-Note: Analogy with water and storm
+Note: Analogía 'agua'
 
 ---
 
-### Earth's shield
+### El escudo de la tierra
 
-Magnetic field is Earth's shield against solar wind.
+El campo magnético, es el escudo de la tierra.
 
 ![](solarwind.jpg)
 
-Note: Analogy with umbrella
+Note: Analogía paraguas
 
 ---
 
 ### Auroras
 
-Auroras are created when the solar wind arrives to earth
+Las auroras se producen cuando el viento solar llega a la tierra
 
 ![](aurora.jpg)
 
@@ -114,30 +117,30 @@ Auroras are created when the solar wind arrives to earth
 
 ---
 
-## Moon-Earth-Sun movement
+## Movimiento Sol-Tierra-Luna
 
-Earth turns around the Sun and Moon around Earth.
+La Tierra gira alrededor del Sol y la Luna alrededor de la Tierra.
 
 ![](soltierraluna.jpg)
 
-Note: Use 3 kids for explaining the movement and 'eclipse' between them
+Note: Usar a 3 niños para explicar el movimiento y 'taparse'
 
 ---
 
-## Moon phases
+## Fases Lunares
 
-Depending on Moon position relative to Earth and Sun, it illuminates different fractions of it causing the phases we see:
+Según dónde esté la Luna, el Sol ilumina una parte y provoca las fases que vemos desde la Tierra:
 
-- New Moon
-- Crescent Moon
-- Full Moon
-- Waning moon
+- Luna Nueva
+- Cuarto Creciente
+- Luna Llena
+- Cuarto Menguante
 
-Note: When the moon is 'C'-shaped, it's in Waning phase.
+Note: Cuando la Luna tiene forma de 'C', está menguando.
 
 ---
 
-## Moon Phases 2
+## Fases Lunares 2
 
 ![](faseslunares.jpg)
 
@@ -145,9 +148,9 @@ Note: When the moon is 'C'-shaped, it's in Waning phase.
 
 ## Eclipses
 
-Sometimes, the Moon is between Earth and Sun
+A veces, es la Luna quien se pone entre el Sol y la Tierra
 
-- Eclipses can be total or partial
+- Hay eclipses parciales o totales
 
 ---
 
@@ -155,7 +158,7 @@ Sometimes, the Moon is between Earth and Sun
 
 ![](eclstart.jpg)
 
-Note: Make a point on Moon round shape while it puts between Earth and Sun
+Note: Destacar forma redonda de la Luna mientras se posiciona.
 
 ---
 
@@ -171,19 +174,19 @@ Note: Make a point on Moon round shape while it puts between Earth and Sun
 
 ---
 
-## Rockets
+## Cohetes
 
-Rockets fight againsts the other Earth: 'gravity'
+Los cohetes luchan contra el otro 'campo' de la Tierra: la Gravedad.
 
-Moon's gravity causes tides on Earth
+La Gravedad de la Luna, provoca las Mareas
 
 ---
 
-## Escaping Earth
+## Escapar de la Tierra
 
-In order to escape Earth, speed must be very high (40.280 km/h).
+Para escapar de la tierra hace falta mucha velocidad (40.280 km/h).
 
-Rockets are made in 'sections' that can be dropped to be lighter and use less energy to lift off.
+Los cohetes se hacen con 'fases' para ser más ligeros y gastar menos energía.
 
 ---
 
@@ -193,42 +196,42 @@ Rockets are made in 'sections' that can be dropped to be lighter and use less en
 
 ---
 
-## Take off
+## Despegar
 
 - [Shuttle](https://youtu.be/2zJlSUZLTms)
 - [Falcon Heavy](https://youtu.be/Xh7-ns1LvTQ)
 
 ---
 
-## Trip to Moon
+## El viaje a la luna
 
-![](apollotrip.jpg)
-
----
-
-## Going back to Earth
-
-![](apollo11.jpg)
+<img src='apollotrip.jpg' width="60%" border=0>
 
 ---
 
-## Going back to Earth 2
+## Volver a la tierra
+
+<img src='apollo11.jpg' width="60%" border=0>
+
+---
+
+## Volver a la Tierra 2
 
 [Shuttle](https://youtu.be/zh1NMzNHQ0Q)
 
 ---
 
-## Bibliography
+## Bibliografía
 
-- [Solar storms](https://www.xataka.com/espacio/tormentas-solares-los-efectos-directos-e-indirectos-sobre-la-tierra-de-las-llamaradas-solares-m)
-- [Auroras: Magic in the sky](https://iranzo.github.io/blog/2004/05/24/auroras-magia-en-el-cielo-es/)
-- [How things started](https://www.amazon.es/dp/B00IMJU4HK?tag=redken-21)
+- [Tormentas solares](https://www.xataka.com/espacio/tormentas-solares-los-efectos-directos-e-indirectos-sobre-la-tierra-de-las-llamaradas-solares-m)
+- [Auroras: Magia en el cielo](https://iranzo.github.io/blog/2004/05/24/auroras-magia-en-el-cielo-es/)
+- [Cómo empezaron las cosas](https://www.amazon.es/dp/B00IMJU4HK?tag=redken-21)
 
 ---
 
-## Videos
+## Vídeos
 
-Edited/reduced from originals:
+Editados/Reducidos desde los originales:
 
 - [Auroras](https://www.youtube.com/watch?v=O-_DbdhSSnI)
 - [Shuttle Launch](https://www.youtube.com/watch?v=Tch8ef-y208)
@@ -237,36 +240,36 @@ Edited/reduced from originals:
 
 ---
 
-## ¡End!
+## ¡Fin!
 
-¡Thanks!
+¡Gracias!
 
-Note: Give away compass and stickers
+Note: Repartir brújula y pegatinas
 
 ---
 
-## Materials
+## Materiales
 
 <small>
 
-- [Compass](https://www.amazon.es/dp/B071474V6F?tag=redken-21)
-- [Stickers](https://www.amazon.es/dp/B07NKBVNZ4?tag=redken-21)
-- [Eclipse model](https://www.amazon.es/dp/B07S88VC45?tag=redken-21)
-- [Iron powder](https://www.amazon.es/dp/B004S0H5I8?tag=redken-21)
-- [Magnets](https://www.amazon.es/dp/B001RX0KFO?tag=redken-21)
-- [Balloon](https://www.amazon.es/dp/B0742DWHLK?tag=redken-21)
-- [Pegs](https://www.amazon.es/dp/B002LLN7U6?tag=redken-21)
-- [Wool](https://www.amazon.es/dp/B07GTF4CDS?tag=redken-21)
-- [Straws](https://www.amazon.es/dp/B07ZR28655?tag=redken-21)
+- [Brújulas](https://www.amazon.es/dp/B071474V6F?tag=redken-21)
+- [Pegatinas](https://www.amazon.es/dp/B07NKBVNZ4?tag=redken-21)
+- [Modelo eclipse](https://www.amazon.es/dp/B07S88VC45?tag=redken-21)
+- [Limadura hierro](https://www.amazon.es/dp/B004S0H5I8?tag=redken-21)
+- [Imanes](https://www.amazon.es/dp/B001RX0KFO?tag=redken-21)
+- [Globos](https://www.amazon.es/dp/B0742DWHLK?tag=redken-21)
+- [Pinzas](https://www.amazon.es/dp/B002LLN7U6?tag=redken-21)
+- [Lana](https://www.amazon.es/dp/B07GTF4CDS?tag=redken-21)
+- [Pajitas](https://www.amazon.es/dp/B07ZR28655?tag=redken-21)
 
 </small>
 
 ---
 
-## Activities
+## Actividades
 
-- Magnets + compass
-- Magnets + iron powder
-- Eclipse model
-- Ballons with wool for rocket
-- Plastic parachute
+- Imanes + brújulas
+- Imanes + limadura hierro
+- Modelo solar/luna para eclipses
+- Globos con lana para cohete
+- Paracaídas con plástico

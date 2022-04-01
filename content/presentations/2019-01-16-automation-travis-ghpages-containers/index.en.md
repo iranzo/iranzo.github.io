@@ -1,7 +1,7 @@
 ---
 author: Pablo Iranzo Gómez
 title: Project automation with Travis, GitHub Pages and Quay
-tags: [pelican, FOSS, Travis, Quay, docker, DockerHub]
+tags: [pelican, FOSS, Travis, Quay, docker, DockerHub,reveal]
 layout: post
 date: 2019-01-16 16:00:00 +0100
 category: presentations
