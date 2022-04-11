@@ -7,14 +7,14 @@ description: About page for the site
 translationKey: about
 url: /about
 lang: en
-lastmod: 2022-04-11T09:37:50.103Z
+lastmod: 2022-04-11T09:39:51.855Z
 ---
 
 ### Who am I?
 
-My name is Pablo and I've been working with OpenSource since before I started university.
+My name is Pablo and I've been working with Open Source since before I started university.
 
-Part of my evolution with OpenSource is described in this article [Linux]({{<ref path="2008-06-03-mi-Evolucion-con-Linux.es.md" lang="es">}}).
+Part of my evolution with Open Source is described in this article [Linux]({{<ref path="2008-06-03-mi-Evolucion-con-Linux.es.md" lang="es">}}).
 
 Since 2006 I work for Red Hat, where I started as a Dedicated Enterprise Engineer (Onsite Consultant) for a country-wide retail company with headquarters in Valencia.
 
@@ -22,7 +22,7 @@ After two more years of visiting the biggest customers in the country, I moved t
 
 Shortly after my start as TAM, I started working with Cloud customers, providing support to their OpenStack deployment as Senior Cloud Technical Account Manager.
 
-Since September 2016, I moved to a new role within the Customer Experience and Engagement organization, starting as Senior Software Maintenance Engineer - Openstack (SEG: Support Engineering Group) where I do collaborate with my colleagues handling the OpenStack support cases created in EMEA region and the global ones on Follow-The-Sun.
+Since September 2016, I moved to a new role within the Customer Experience and Engagement organization, starting as Senior Software Maintenance Engineer - OpenStack (SEG: Support Engineering Group) where I do collaborate with my colleagues handling the OpenStack support cases created in EMEA region and the global ones on Follow-The-Sun.
 
 Since April 1st 2018, I got promoted to Principal Software Maintenance Engineer - OpenStack, where I did still worked with the same 'stuff'.
 
