@@ -6,13 +6,15 @@ date: 2016-06-02 17:27:47 +0200
 description: About page for the site
 translationKey: about
 url: /about
+lang: en
+lastmod: 2022-04-11T09:37:50.103Z
 ---
 
 ### Who am I?
 
-My name is Pablo and I've been working with opensource since before I started university.
+My name is Pablo and I've been working with OpenSource since before I started university.
 
-Part of my evolution with opensource is described in this article [Linux]({{<ref path="2008-06-03-mi-Evolucion-con-Linux.es.md" lang="es">}}).
+Part of my evolution with OpenSource is described in this article [Linux]({{<ref path="2008-06-03-mi-Evolucion-con-Linux.es.md" lang="es">}}).
 
 Since 2006 I work for Red Hat, where I started as a Dedicated Enterprise Engineer (Onsite Consultant) for a country-wide retail company with headquarters in Valencia.
 
@@ -25,6 +27,8 @@ Since September 2016, I moved to a new role within the Customer Experience and E
 Since April 1st 2018, I got promoted to Principal Software Maintenance Engineer - OpenStack, where I did still worked with the same 'stuff'.
 
 Since September 1st 2018, I moved to the Solutions Engineering team, working on Kubernetes/OpenShift Federation and Quay registry among other topics, Community Ecosystem for KubeVirt and Metal³ and later, including Telco 5G deployments on OpenShift Installer-Provisioned Infrastructure on bare-metal and later Management Integration using Advanced Cluster Management (ACM) on OpenShift to explore the requirements of Telco Edge architectures.
+
+In April 1st 2022, I got promoted to Principal Software Engineer while working the Management Integration Team.
 
 I'm also contributing on regular basis to [Citellus project](https://risuorg.github.io) to help automating diagnosis on known issues at system configuration, package sets, etc.
 

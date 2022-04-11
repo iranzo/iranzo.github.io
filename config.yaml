@@ -24,7 +24,7 @@ params:
   images: ["/mugshot.png"]
   defaultTheme: auto # dark, light
   disableThemeToggle: false
-
+  responsiveImages: true
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
@@ -90,6 +90,10 @@ menu:
     - identifier: projects
       name: 📐 Projects
       url: /projects/
+      weight: 20
+    - identifier: archives
+      name: 🗄️ Archives
+      url: /archives/
       weight: 20
     - identifier: tags
       name: 🏷️ Tags
