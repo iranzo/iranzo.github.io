@@ -7,8 +7,7 @@ tags:
   - PlayStation
   - Switch
   - Nintendo
-modified: 2022-04-11T09:15:35.087Z
-lastmod: 2022-04-11T09:35:10.107Z
+modified: 2022-04-13T21:56:43.312Z
 cover:
   image: https://m.media-amazon.com/images/I/71y+jn1bMPL.jpg
 ---

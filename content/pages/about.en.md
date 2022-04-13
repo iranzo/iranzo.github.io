@@ -1,5 +1,5 @@
 ---
-modified: 2022-03-23T10:01:30.150Z
+modified: 2022-04-13T21:57:09.184Z
 title: About
 layout: post
 date: 2016-06-02 17:27:47 +0200
@@ -7,7 +7,6 @@ description: About page for the site
 translationKey: about
 url: /about
 lang: en
-lastmod: 2022-04-11T09:39:51.855Z
 ---
 
 ### Who am I?
