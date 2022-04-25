@@ -8,7 +8,7 @@ tags:
   - operator
 category: tech
 author: Pablo Iranzo Gómez
-modified: 2022-03-23T10:01:22.701Z
+modified: 2022-04-25T01:14:06.594Z
 ---
 
 This article was published originally at <https://metal3.io/blog/2019/09/11/Baremetal-operator.html>
@@ -156,8 +156,9 @@ status:
   lastUpdated: "2019-07-08T15:30:44Z"
 ```
 
-> info ""
-> In the output above, the host assigned was the one we've defined earlier as well as the other parameters like IP's, etc generated.
+{{<tip >}}
+In the output above, the host assigned was the one we've defined earlier as well as the other parameters like IP's, etc generated.
+{{</tip>}}
 
 Now, if we check the baremetal hosts, we can see how it's getting provisioned:
 

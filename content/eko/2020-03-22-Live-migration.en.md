@@ -14,7 +14,7 @@ tags:
   - Live Migration
   - node drain
 date: 2020-03-22 00:00:00 +0200
-modified: 2022-03-23T10:01:24.612Z
+modified: 2022-04-25T01:13:14.235Z
 ---
 
 This article was published originally at <https://kubevirt.io/2020/Live-migration.html>
@@ -51,8 +51,6 @@ data:
   feature-gates: "LiveMigration"
 ```
 
-<br>
-
 A current `kubevirt-config` can be edited to append "`LiveMigration`" to an existing configuration:
 
 ```sh
@@ -63,8 +61,6 @@ kubectl edit configmap kubevirt-config -n kubevirt
 data:
   feature-gates: "DataVolumes,LiveMigration"
 ```
-
-<br>
 
 ## Configuring Live Migration
 
@@ -100,12 +96,12 @@ Parameters are explained in the below table (check the documentation for more de
 
 ## Performing the Live Migration
 
-> error "Limitations"
->
-> 1. Virtual Machines using PVC must have a `RWX` access mode to be Live-Migrated
-> 1. Additionally, pod network binding of bridge interface is not allowed
+{{< error "Limitations" >}}
 
-Live migration is initiated by posting an object `VirtualMachineInstanceMigration` to the cluster, indicating the VM name to migrate, like in the following example:
+1.  Virtual Machines using PVC must have a `RWX` access mode to be Live-Migrated
+1.  Additionally, pod network binding of bridge interface is not allowed
+    {{</error>}}
+    Live migration is initiated by posting an object `VirtualMachineInstanceMigration` to the cluster, indicating the VM name to migrate, like in the following example:
 
 ```yaml
 apiVersion: kubevirt.io/v1alpha3
@@ -118,28 +114,30 @@ spec:
 
 This will trigger the process for the VM.
 
-> note "NOTE"
->
-> When a VM is started, a calculation has been already performed indicating if the VM is live-migratable or not. This information is stored in the `VMI.status.conditions`. Currently, most of the calculation is based on the `Access Mode` for the VMI volumes but can be based on multiple parameters. For example:
->
-> ```yaml
-> Status:
->   Conditions:
->     Status: True
->     Type: LiveMigratable
->   Migration Method: BlockMigration
-> ```
+{{< note>}}
 
+When a VM is started, a calculation has been already performed indicating if the VM is live-migratable or not. This information is stored in the `VMI.status.conditions`. Currently, most of the calculation is based on the `Access Mode` for the VMI volumes but can be based on multiple parameters. For example:
+
+```yaml
+Status:
+  Conditions:
+    Status: True
+    Type: LiveMigratable
+  Migration Method: BlockMigration
+```
+
+{{</note>}}
 If the VM is Live-Migratable, the request will submit successfully. The status change will be reported under `VMI.status`. Once live migration is complete, a status of `Completed` or `Failed` will be indicated.
 
-> info "Watch out!"
->
-> The `Migration Method` field can contain:
->
-> - `BlockMigration` : meaning that the disk data is being copied from source to destination
-> - `LiveMigration`: meaning that only the memory is copied from source to destination
->
-> VMs with block devices located on shared storage backends like the ones provided by [Rook](https://rook.io/) that provide PVCs with ReadWriteMany access have the option to live-migrate only memory contents instead of having to also migrate the block devices.
+{{<important "Watch out">}}
+
+The `Migration Method` field can contain:
+
+- `BlockMigration` : meaning that the disk data is being copied from source to destination
+- `LiveMigration`: meaning that only the memory is copied from source to destination
+
+VMs with block devices located on shared storage backends like the ones provided by [Rook](https://rook.io/) that provide PVCs with ReadWriteMany access have the option to live-migrate only memory contents instead of having to also migrate the block devices.
+{{</important>}}
 
 ### Cancelling a Live Migration
 
@@ -192,9 +190,11 @@ It is possible to use **selectors**, for example, move all the virtual machines 
 kubectl drain <node name> --delete-local-data --ignore-daemonsets=true --force --pod-selector=kubevirt.io=virt-launcher
 ```
 
-> warning "Reenabling node after eviction"
->
-> Once the node has been tainted for eviction, we can use `kubectl uncordon <nodename>` to make it schedulable again.
+{{<warning "Reenabling node after eviction">}}
+
+Once the node has been tainted for eviction, we can use `kubectl uncordon <nodename>` to make it schedulable again.
+
+{{</warning>}}
 
 According to documentation, `--delete-local-data`, `--ignore-daemonsets` and `--force` are required because:
 
@@ -204,16 +204,17 @@ According to documentation, `--delete-local-data`, `--ignore-daemonsets` and `--
 
 If we omit the `--pod-selector`, we'll force eviction of all Pods and VM's from a node.
 
-> important "Live Migration eviction"
->
-> In order to have VMIs using `LiveMigration` for eviction, we have to add a specific spec in the VMI YAML, so that when the node is tainted with `kubevirt.io/drain:NoSchedule` is added to a node.
->
-> ```yaml
-> spec:
->   evictionStrategy: LiveMigrate
-> ```
->
-> From that point, when `kubectl taint nodes <foo> kubevirt.io/drain=draining:NoSchedule` is executed, the migrations will start.
+{{<important "Live migration eviction">}}
+
+In order to have VMIs using `LiveMigration` for eviction, we have to add a specific spec in the VMI YAML, so that when the node is tainted with `kubevirt.io/drain:NoSchedule` is added to a node.
+
+```yaml
+spec:
+  evictionStrategy: LiveMigrate
+```
+
+From that point, when `kubectl taint nodes <foo> kubevirt.io/drain=draining:NoSchedule` is executed, the migrations will start.
+{{</important>}}
 
 ## Conclusion
 
