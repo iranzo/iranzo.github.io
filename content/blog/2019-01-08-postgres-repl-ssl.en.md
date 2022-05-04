@@ -11,9 +11,11 @@ tags:
   - OpenShift
 layout: post
 date: 2019-01-08 17:30:36 +0100
-category: tech
+categories:
+  - tech
+  - Kubernetes
 lang: en
-modified: 2022-03-23T10:00:11.656Z
+modified: 2022-05-04T13:32:56.830Z
 ---
 
 # Postgres across clusters

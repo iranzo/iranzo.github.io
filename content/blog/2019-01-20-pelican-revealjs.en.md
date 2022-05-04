@@ -12,8 +12,10 @@ tags:
   - pandoc
 layout: post
 date: 2019-01-20 23:12:17 +0100
-category: tech
-modified: 2022-03-23T10:00:14.157Z
+categories:
+  - tech
+  - CMS
+modified: 2022-05-04T13:32:56.825Z
 ---
 
 ## Introduction

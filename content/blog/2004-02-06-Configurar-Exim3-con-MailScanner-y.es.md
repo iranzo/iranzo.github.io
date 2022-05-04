@@ -7,7 +7,10 @@ tags:
   - exim
   - foss
 lang: es
-modified: 2022-03-23T09:57:51.111Z
+modified: 2022-05-04T14:43:39.161Z
+categories:
+  - blog
+  - FOSS
 ---
 
 ### Prerequisitos:

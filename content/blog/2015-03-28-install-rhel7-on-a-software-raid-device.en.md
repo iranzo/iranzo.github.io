@@ -8,7 +8,10 @@ tags:
   - Fedora
   - RHEL
   - FOSS
-modified: 2022-03-23T09:59:34.320Z
+modified: 2022-05-04T13:19:38.428Z
+categories:
+  - FOSS
+  - Fedora
 ---
 
 Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.

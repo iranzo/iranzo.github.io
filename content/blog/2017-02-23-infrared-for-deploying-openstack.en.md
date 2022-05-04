@@ -9,8 +9,11 @@ tags:
   - sysmgmt
   - InfraRed
   - foss
-category: tech
-modified: 2022-03-23T09:59:54.533Z
+categories:
+  - tech
+  - OpenStack
+  - Ansible
+modified: 2022-05-04T14:31:27.728Z
 ---
 
 [InfraRed](https://github.com/redhat-openstack/infrared/) is tool that allows to install/provision OpenStack. You can find the documentation for the project at <http://infrared.readthedocs.io>.

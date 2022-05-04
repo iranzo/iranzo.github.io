@@ -8,8 +8,9 @@ tags:
   - review
 layout: post
 date: 2019-07-27 14:39:14 +0200
-category: blog
-modified: 2022-03-23T09:38:48.247Z
+categories:
+  - LEGO
+modified: 2022-05-04T13:32:56.798Z
 cover:
   image: https://i.imgur.com/ewbaE5b.jpg.jpg
 ---

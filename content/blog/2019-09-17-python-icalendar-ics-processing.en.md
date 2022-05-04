@@ -11,12 +11,15 @@ tags:
   - webcal
 layout: post
 date: 2019-09-17 07:00:36 +0200
-category: tech
+categories:
+  - tech
+  - python
+  - redken_bot
 description:
   This article covers  how to do Internet Calendar processing of events in
   python and how those are leveraged in @redken_bot
 lang: en
-modified: 2022-03-23T10:00:28.304Z
+modified: 2022-05-04T13:44:47.596Z
 ---
 
 ## Introduction

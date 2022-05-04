@@ -8,7 +8,9 @@ tags:
   - astronomía
   - astronomy
 lang: es
-modified: 2022-03-23T09:58:16.704Z
+modified: 2022-05-04T14:42:50.270Z
+categories:
+  - blog
 ---
 
 ### Introducción

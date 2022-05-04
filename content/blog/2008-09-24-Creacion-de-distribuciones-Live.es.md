@@ -8,7 +8,9 @@ tags:
   - fedora
   - foss
 lang: es
-modified: 2022-03-23T09:58:53.660Z
+modified: 2022-05-04T13:15:43.533Z
+categories:
+  - FOSS
 ---
 
 ## Introducción

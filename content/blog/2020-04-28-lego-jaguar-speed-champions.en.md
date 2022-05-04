@@ -9,9 +9,10 @@ tags:
   - 76898
 layout: post
 date: 2020-04-28 22:30:24 +0200
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:47:46.658Z
+modified: 2022-05-04T13:32:56.730Z
 cover:
   image: https://i.imgur.com/fYx5Jtr.jpg.jpg
 ---

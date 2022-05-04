@@ -8,8 +8,9 @@ tags:
   - OpenStack
   - sysmgmt
   - foss
-category: tech
-modified: 2022-03-23T09:59:51.480Z
+categories:
+  - Ansible
+modified: 2022-05-04T13:19:38.408Z
 ---
 
 ## Introduction

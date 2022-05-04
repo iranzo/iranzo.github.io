@@ -9,9 +9,10 @@ tags:
   - FKP47
 layout: post
 date: 2021-01-15 20:32:34 +0200
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:50:11.650Z
+modified: 2022-05-04T13:32:56.696Z
 cover:
   image: https://i.imgur.com/R7qkoY6.jpg.jpg
 ---

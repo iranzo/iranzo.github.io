@@ -13,11 +13,12 @@ tags:
   - review
 layout: post
 date: 2019-08-19 22:00:36 +0200
-category: blog
+categories:
+  - LEGO
 lang: en
 slug: lego-dimensions
 translationKey: lego-dimensions
-modified: 2022-03-23T09:41:28.338Z
+modified: 2022-05-04T13:32:56.795Z
 cover:
   image: https://www.lego.com/cdn/cs/set/assets/blt866dc839f8c741cf/dimensions-logo.png
 ---

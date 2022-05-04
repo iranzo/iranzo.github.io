@@ -7,11 +7,11 @@ tags:
   - recipe
   - cooking
   - HOWTO
-category: blog
+categories: blog
 lang: en
 slug: paella-howto
 translationKey: paella-howto
-modified: 2022-03-23T09:52:50.576Z
+modified: 2022-05-04T12:50:57.150Z
 cover:
   image: 20120708134340.jpg
 ---

@@ -6,7 +6,10 @@ author: Pablo Iranzo Gómez
 tags:
   - fedora
   - foss
-modified: 2022-03-23T09:59:26.151Z
+modified: 2022-05-04T13:19:38.455Z
+categories:
+  - FOSS
+  - Fedora
 ---
 
 Today I've decided to give it a try to F15-prealpha (expected to release tomorrow).

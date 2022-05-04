@@ -7,8 +7,9 @@ tags:
   - python
   - markdown
   - foss
-category: tech
-modified: 2022-03-23T09:59:49.234Z
+categories:
+  - CMS
+modified: 2022-05-04T13:36:57.560Z
 ---
 
 As always, I don't usually find myself keen to write about things I do, until I later realize they might be helpful for others, and that's why in the past I decided to switch the place I was putting the information about why did to Github and also, take benefit of practicing markdown for writing the entries.

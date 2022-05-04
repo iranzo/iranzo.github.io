@@ -10,9 +10,11 @@ tags:
   - PhotoSwipe
 layout: post
 date: 2020-02-19 21:55:24 +0100
-category: tech
+categories:
+  - tech
+  - CMS
 lang: en
-modified: 2022-03-23T10:00:33.405Z
+modified: 2022-05-04T13:32:56.769Z
 ---
 
 Hi,

@@ -10,9 +10,10 @@ tags:
   - spaceship
 layout: post
 date: 2020-02-20 19:30:24 +0100
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:44:11.076Z
+modified: 2022-05-04T13:32:56.763Z
 cover:
   image: https://i.imgur.com/69ePXLB.jpg.jpg
 ---

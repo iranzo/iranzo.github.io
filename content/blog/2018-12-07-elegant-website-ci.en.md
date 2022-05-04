@@ -13,8 +13,10 @@ tags:
   - continuous deployment
 layout: post
 date: 2018-12-07 16:00:47 +0100
-category: tech
-modified: 2022-03-23T10:00:05.745Z
+categories:
+  - tech
+  - CMS
+modified: 2022-05-04T13:32:56.837Z
 ---
 
 # Background

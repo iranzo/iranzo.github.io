@@ -5,9 +5,9 @@ tags:
   - Murphy
 layout: post
 date: 2007-10-03 17:55:54 +0100
-category: blog
+categories: blog
 lang: es
-modified: 2022-03-23T09:58:35.488Z
+modified: 2022-05-04T12:50:57.146Z
 ---
 
 # Las leyes de Murphy

@@ -8,9 +8,12 @@ tags:
   - email filtering
 layout: post
 date: 2021-07-07 22:00:00 +0200
-category: tech
+categories:
+  - tech
+  - FOSS
+  - Fedora
 description: Learn on how to use imapfilter against Gmail for classifying the messages
-modified: 2022-03-23T10:01:06.305Z
+modified: 2022-05-04T13:32:56.682Z
 ---
 
 Until two weeks ago I was using an IMAP server (based on Zimbra) for my work email, but the date for migration to Gmail arrived with no choice to postpone...

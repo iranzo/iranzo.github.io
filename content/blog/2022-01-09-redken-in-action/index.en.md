@@ -10,10 +10,12 @@ tags:
   - tutorial
 layout: post
 date: 2022-01-20 17:20:14 +0100
-category: tech
+categories:
+  - python
+  - redken_bot
 description: See how to use @redken_bot in Telegram or discord with some examples!
 lang: en
-modified: 2022-03-23T09:57:32.617Z
+modified: 2022-05-04T13:44:33.201Z
 cover:
   image: karma.png
 ---

@@ -11,9 +11,12 @@ tags:
   - FOSS
 layout: post
 date: 2021-06-12 21:40:34 +0200
-category: tech
+categories:
+  - tech
+  - FOSS
+  - Fedora
 lang: en
-modified: 2022-03-23T10:00:56.858Z
+modified: 2022-05-04T13:32:56.689Z
 ---
 
 Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc

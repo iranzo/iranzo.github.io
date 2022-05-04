@@ -5,7 +5,9 @@ date: 2004-04-06T20:01:00.000Z
 tags:
   - general
 lang: es
-modified: 2022-03-23T09:58:11.229Z
+modified: 2022-05-04T14:43:57.966Z
+categories:
+  - blog
 ---
 
 Extraído de un artículo publicado por el periódico El País:

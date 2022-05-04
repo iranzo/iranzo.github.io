@@ -7,11 +7,13 @@ tags:
   - linux
   - lvm
   - foss
+categories:
+  - FOSS
 lang: es
 save_as: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/index.html
 url: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/
 translationKey: LVM
-modified: 2022-03-23T10:12:42.165Z
+modified: 2022-05-04T13:01:52.468Z
 cover:
   image: lvm8.jpg
 ---

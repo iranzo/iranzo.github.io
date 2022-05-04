@@ -5,7 +5,9 @@ date: 2004-04-06 10:01:00 +0200
 tags:
   - hardware
   - general
-modified: 2022-03-23T09:58:09.876Z
+modified: 2022-05-04T14:44:05.864Z
+categories:
+  - blog
 ---
 
 Olivetti Echos Family (Tested on my P75, but obtained from the Internet)

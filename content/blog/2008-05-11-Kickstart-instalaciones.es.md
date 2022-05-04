@@ -9,7 +9,9 @@ tags:
   - unattended
   - foss
 lang: es
-modified: 2022-03-23T09:58:46.154Z
+modified: 2022-05-04T13:15:43.548Z
+categories:
+  - FOSS
 ---
 
 ### Instalar linux

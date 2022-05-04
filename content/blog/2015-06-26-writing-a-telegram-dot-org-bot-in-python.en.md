@@ -8,7 +8,9 @@ tags:
   - Telegram
   - FOSS
   - redken
-modified: 2022-03-23T09:59:42.970Z
+modified: 2022-05-04T13:44:53.872Z
+categories:
+  - redken_bot
 ---
 
 Hi,

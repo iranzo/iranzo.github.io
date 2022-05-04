@@ -10,9 +10,10 @@ tags:
   - GT3 RS
 layout: post
 date: 2020-10-12 20:32:34 +0200
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:49:28.124Z
+modified: 2022-05-04T13:32:56.709Z
 cover:
   image: https://i.imgur.com/AieeM54.jpg.jpg
 ---

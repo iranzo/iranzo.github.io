@@ -10,11 +10,13 @@ tags:
   - sosreport
   - Citellus
   - FOSS
-category: tech
+categories:
+  - tech
+  - risu
 description:
   Learn about Citellus, a framework that will help you detect known issues, and
   more insightful information about your system
-modified: 2022-03-23T09:59:53.423Z
+modified: 2022-05-04T13:32:56.853Z
 ---
 
 ## Background

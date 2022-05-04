@@ -11,8 +11,9 @@ tags:
   - 75894
 layout: post
 date: 2019-06-09 01:16:14 +0200
-category: blog
-modified: 2022-03-23T09:40:13.280Z
+categories:
+  - LEGO
+modified: 2022-05-04T13:36:42.872Z
 cover:
   image: https://i.imgur.com/RI1kBQt.jpg.jpg
 ---

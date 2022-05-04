@@ -5,9 +5,10 @@ tags:
   - lenguaje
 layout: post
 date: 2008-11-08 23:16:14 +0200
-category: blog
+categories:
+  - blog
 lang: es
-modified: 2022-03-23T09:58:55.043Z
+modified: 2022-05-04T13:14:07.830Z
 ---
 
 {{<hint title="Método de uso">}}

@@ -9,8 +9,10 @@ tags:
   - Citellus
   - bashate
   - FOSS
-category: tech
-modified: 2022-03-23T09:59:56.938Z
+categories:
+  - tech
+  - risu
+modified: 2022-05-04T13:32:56.848Z
 ---
 
 ## Introduction

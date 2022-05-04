@@ -8,8 +8,10 @@ tags:
   - redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
-modified: 2022-03-23T10:01:35.099Z
-category: tech
+modified: 2022-05-04T13:45:08.764Z
+categories:
+  - tech
+  - redken_bot
 description: Learn about Redken Telegram Bot usage and configuration settings.
 lang: en
 slug: redken_bot

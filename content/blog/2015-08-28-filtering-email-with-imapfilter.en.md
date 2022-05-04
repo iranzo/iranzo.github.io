@@ -9,7 +9,10 @@ tags:
   - imapfilter
   - Fedora
   - FOSS
-modified: 2022-03-23T09:59:45.108Z
+modified: 2022-05-04T13:19:38.420Z
+categories:
+  - FOSS
+  - Fedora
 ---
 
 Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&drop reordering of rules, cloning, etc.

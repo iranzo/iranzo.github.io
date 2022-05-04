@@ -14,9 +14,10 @@ tags:
   - AX92U
 layout: post
 date: 2021-01-01 00:00:00 +0200
-category: tech
+categories:
+  - tech
 lang: en
-modified: 2022-03-23T10:00:47.222Z
+modified: 2022-05-04T14:05:41.681Z
 ---
 
 ## Introduction
@@ -76,8 +77,7 @@ As I was happy with the UniFi setup, I also got some other hardware:
 
 They were connected in the following way:
 
-{% graphviz
-dot {
+{{< gravizo>}}
 digraph connected {
 // title
 labelloc="t";
@@ -89,11 +89,9 @@ label="Network Setup";
 "UniFi 8 switch" -> "NAS" [color=red,dir="both",shape=square]
 "UniFi 8 switch" -> "Laptop" [color=red,dir="both",shape=square]
 "UniFi 8 switch" -> "NUC" [color=red,dir="both",shape=square]
-
-    }
-
 }
-%}
+
+{{< /gravizo>}}
 
 The Controller software is running as a container in the `NAS` system and manages the full infrastructure.
 

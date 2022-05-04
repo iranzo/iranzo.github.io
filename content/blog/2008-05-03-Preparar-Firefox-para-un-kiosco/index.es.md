@@ -8,9 +8,11 @@ tags:
   - desktop
   - foss
 lang: es
-modified: 2022-03-23T09:56:16.760Z
+modified: 2022-05-04T13:03:26.699Z
 cover:
   image: firefox-reducido.jpg
+categories:
+  - FOSS
 ---
 
 ### userChrome.css

@@ -14,10 +14,11 @@ tags:
   - ntag213
 layout: post
 date: 2020-02-04 00:30:24 +0100
-category: blog
+categories:
+  - LEGO
 lang: es
 slug: lego-dimensions-cloning
-modified: 2022-03-23T10:12:42.147Z
+modified: 2022-05-04T13:36:24.876Z
 cover:
   image: ntag213.png
 ---

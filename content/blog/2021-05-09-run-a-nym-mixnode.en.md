@@ -12,9 +12,10 @@ tags:
   - foss
 layout: post
 date: 2021-05-09 12:30:34 +0200
-category: tech
+categories:
+  - tech
 lang: en
-modified: 2022-03-23T10:00:54.013Z
+modified: 2022-05-04T13:03:13.546Z
 ---
 
 Some time ago I've started running a NYM mixnode. `NYM` is a project that targets improving privacy by decomposing network packages from different hosts, so that origin and target cannot be traced.

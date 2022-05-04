@@ -11,8 +11,10 @@ tags:
   - Citellus
   - Magui
   - FOSS
-category: tech
-modified: 2022-03-23T09:59:55.768Z
+categories:
+  - tech
+  - risu
+modified: 2022-05-04T13:32:56.850Z
 ---
 
 ## Background

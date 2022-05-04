@@ -9,7 +9,9 @@ tags:
 lang: en
 slug: Creating-Jigsaw-Download-JigDo
 translationKey: Creating-Jigsaw-Download-JigDo
-modified: 2022-03-23T09:58:39.353Z
+modified: 2022-05-04T13:15:43.562Z
+categories:
+  - FOSS
 ---
 
 ### Introduction

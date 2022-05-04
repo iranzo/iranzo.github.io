@@ -8,9 +8,11 @@ tags:
   - risu
 layout: post
 date: 2020-06-14 11:44:24 +0200
-category: tech
+categories:
+  - tech
+  - risu
 lang: en
-modified: 2022-03-23T10:00:43.331Z
+modified: 2022-05-04T13:32:56.723Z
 ---
 
 I wanted to practice a bit Go programing, so I divided that task in two parts, one, adding a golang extension for Citellus and a sample, but working plugin using it.

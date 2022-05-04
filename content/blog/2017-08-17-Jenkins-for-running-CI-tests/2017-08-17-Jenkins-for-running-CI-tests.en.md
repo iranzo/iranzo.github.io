@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jenkins for running CI tests
-date: "2017-08-17 23:54:00 +0200"
+date: 2017-08-17 23:54:00 +0200
 tags:
   - python
   - OpenStack
@@ -14,8 +14,9 @@ tags:
   - Gerrit
   - magui
   - foss
-category: tech
-modified: "2022-01-20T17:45:53.694Z"
+categories:
+  - tech
+modified: 2022-05-04T13:03:13.691Z
 ---
 
 ## Why?

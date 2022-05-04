@@ -11,9 +11,10 @@ tags:
   - writing a book
 layout: post
 date: 2021-09-15 00:00:00 +0100
-category: blog
+categories:
+  - Book
 lang: en
-modified: 2022-03-23T10:01:01.686Z
+modified: 2022-05-04T13:32:56.669Z
 ---
 
 I wanted to write about my experience (before I forget about it), and as some colleagues asked about it... here we go...

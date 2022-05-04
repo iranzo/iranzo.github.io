@@ -16,10 +16,11 @@ tags:
   - exclusive
 layout: post
 date: 2021-07-25 22:30:24 +0200
-category: blog
+categories:
+  - LEGO
 description: Lego promotional material for Technic Owners using your own's car license plate
 lang: en
-modified: 2022-03-23T10:01:00.025Z
+modified: 2022-05-04T13:32:56.677Z
 ---
 
 If you're the owner of one of the following sets:

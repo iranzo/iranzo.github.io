@@ -11,9 +11,10 @@ tags:
   - Camper van
 layout: post
 date: 2020-10-02 19:45:24 +0200
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:49:16.151Z
+modified: 2022-05-04T13:32:56.714Z
 cover:
   image: https://i.imgur.com/AI136I0.jpg.jpg
 ---

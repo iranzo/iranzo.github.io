@@ -10,8 +10,11 @@ tags:
   - redken
 layout: post
 date: 2019-02-07 21:04:14 +0100
-category: tech
-modified: 2022-03-23T10:00:16.768Z
+categories:
+  - tech
+  - python
+  - redken_bot
+modified: 2022-05-04T13:44:49.584Z
 ---
 
 # Introduction

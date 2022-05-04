@@ -12,12 +12,13 @@ tags:
   - telegram
 layout: post
 date: 2021-10-19 22:34:34 +0200
-category: tech
+categories:
+  - Python
 description:
   This article describes how to use python to bind against an LDAP server and
   perform queries
 lang: en
-modified: 2022-03-23T10:01:10.205Z
+modified: 2022-05-04T13:39:27.972Z
 ---
 
 Recently, some colleagues commented about validating if users in a Telegram group were or not employees anymore, so that the process could be automated without having to chase down the users that left the company.

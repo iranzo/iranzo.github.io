@@ -8,7 +8,9 @@ tags:
   - RHEV
   - oVirt
   - FOSS
-modified: 2022-03-23T09:59:30.708Z
+modified: 2022-05-04T13:19:38.442Z
+categories:
+  - python
 ---
 
 `RHEV`/`oVirt` API allows faster and simple development of scripts and utilities ranging from gathering of information to VM/host, etc manipulation.

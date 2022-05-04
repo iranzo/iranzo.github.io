@@ -6,8 +6,9 @@ tags:
   - Linux
   - SELinux
   - Foss
-category: tech
-modified: 2022-03-23T09:58:44.467Z
+categories:
+  - FOSS
+modified: 2022-05-04T13:15:43.552Z
 ---
 
 ### Introduction

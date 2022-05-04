@@ -9,8 +9,10 @@ tags:
   - Custom keyboard mapping
 layout: post
 date: 2022-04-01T07:31:42.603Z
-category: tech
-modified: 2022-04-13T21:57:04.857Z
+categories:
+  - tech
+  - FOSS
+modified: 2022-05-04T13:32:56.654Z
 cover:
   image: https://m.media-amazon.com/images/I/51-7XfmB4ZL.jpg
 ---

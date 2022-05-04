@@ -6,8 +6,8 @@ tags:
   - coronavirus
 layout: post
 date: 2020-03-14 23:30:00 +0100
-modified: 2022-03-23T10:00:37.869Z
-category: blog
+modified: 2022-05-04T12:50:56.972Z
+categories: blog
 lang: es
 ---
 

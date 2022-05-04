@@ -17,9 +17,10 @@ tags:
   - 76895
 layout: post
 date: 2020-02-08 16:30:24 +0100
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:45:53.865Z
+modified: 2022-05-04T13:32:56.778Z
 ---
 
 ## Introduction on the new models

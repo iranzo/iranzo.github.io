@@ -10,11 +10,12 @@ tags:
   - RHCSA
 layout: post
 date: 2021-09-11 00:00:00 +0100
-category: tech
+categories:
+  - Book
 description: RHEL8 System Administration book now available!
 lang: en
 slug: rhel8-administration
-modified: 2022-03-23T09:55:29.671Z
+modified: 2022-05-04T13:41:02.622Z
 cover:
   image: rhel8-cover.png
 ---

@@ -12,9 +12,10 @@ tags:
   - 10220
 layout: post
 date: 2020-09-17 19:00:24 +0200
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:48:29.769Z
+modified: 2022-05-04T13:32:56.720Z
 cover:
   image: https://i.imgur.com/RwERShO.jpg.jpg
 ---

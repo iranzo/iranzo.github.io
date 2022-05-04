@@ -7,8 +7,10 @@ tags:
   - Magui
   - FOSS
   - risu
-category: tech
-modified: 2022-03-23T09:59:58.135Z
+categories:
+  - tech
+  - risu
+modified: 2022-05-04T13:32:56.847Z
 ---
 
 ## What's new?

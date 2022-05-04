@@ -1,8 +1,18 @@
 ---
 title: Campo magnético, auroras, fases lunares, eclipses y cohetes
-category: presentations
+categories:
+  - presentations
 author: Pablo Iranzo Gómez
-tags: [aurora, eclipse, cohetes, fases lunares, campo magnético, astronomía, ciencia, astronomy,reveal]
+tags:
+  - aurora
+  - eclipse
+  - cohetes
+  - fases lunares
+  - campo magnético
+  - astronomía
+  - ciencia
+  - astronomy
+  - reveal
 layout: post
 date: 2020-02-06 22:30:00 +0100
 lang: es
@@ -10,9 +20,10 @@ slug: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 translationKey: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 outputs:
   - Reveal
-layout: bundle
+
 cover:
   image: aurora.jpg
+modified: 2022-05-04T13:58:27.075Z
 ---
 
 ## Disclaimer

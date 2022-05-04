@@ -6,8 +6,11 @@ tags:
   - python
   - OpenStack
   - foss
-category: tech
-modified: 2022-03-23T09:59:50.380Z
+categories:
+  - tech
+  - OpenStack
+
+modified: 2022-05-04T13:19:38.410Z
 ---
 
 Contributing to an opensource project might take some time at the beginning, the good thing with OpenStack is that there are lot of guides on how to start and collaborate.

@@ -1,13 +1,20 @@
 ---
 author: Pablo Iranzo Gómez
 title: "Be lazy, automate: GitHub actions for static blogging"
-tags: [pelican, foss, github, github actions,reveal]
+tags:
+  - pelican
+  - foss
+  - github
+  - github actions
+  - reveal
 layout: post
 date: 2021-01-14 22:24:00 +0100
-category: presentations
+categories:
+  - presentations
+  - CMS
 outputs:
   - Reveal
-layout: bundle
+modified: 2022-05-04T13:59:14.076Z
 ---
 
 ## Be lazy, automate: GitHub Actions for static blogging

@@ -1,14 +1,28 @@
 ---
-title: "SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de configuración, logs etc mediante scripts en bash, python, ruby, etc"
-category: presentations
+title: "SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de
+  configuración, logs etc mediante scripts en bash, python, ruby, etc"
+
 author: Pablo Iranzo Gómez
-tags: [citellus, foss, bash, magui, troubleshooting, devconf, openstack, docker, container, python,reveal]
+tags:
+  - citellus
+  - foss
+  - bash
+  - magui
+  - troubleshooting
+  - devconf
+  - openstack
+  - docker
+  - container
+  - python
+  - reveal
 layout: post
 date: 2018-05-13 16:00:00 +0100
-category: presentations
+categories:
+  - presentations
+  - risu
 outputs:
   - Reveal
-layout: bundle
+modified: 2022-05-04T14:45:27.150Z
 ---
 
 ## [Citellus](https://risuorg.github.io):

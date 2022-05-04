@@ -9,7 +9,9 @@ tags:
   - desktop
   - foss
 lang: es
-modified: 2022-03-23T09:58:48.593Z
+modified: 2022-05-04T13:15:43.544Z
+categories:
+  - FOSS
 ---
 
 ## Antecedentes

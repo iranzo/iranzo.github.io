@@ -10,8 +10,9 @@ tags:
   - 80101
 layout: post
 date: 2019-06-28 20:00:14 +0200
-category: blog
-modified: 2022-03-23T09:39:06.959Z
+categories:
+  - LEGO
+modified: 2022-05-04T13:32:56.804Z
 cover:
   image: https://i.imgur.com/xIIP1ER.jpg.jpg
 ---

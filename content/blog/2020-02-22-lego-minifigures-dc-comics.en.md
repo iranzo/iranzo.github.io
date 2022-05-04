@@ -11,9 +11,10 @@ tags:
   - Flash
 layout: post
 date: 2020-02-22 20:56:24 +0100
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T10:00:35.572Z
+modified: 2022-05-04T13:32:56.757Z
 ---
 
 Here are my findings from today's 'hunt' for [Lego Minifigures DC Comics 🛒](https://www.amazon.es/dp/B07YG7QVPX?tag=redken-21):

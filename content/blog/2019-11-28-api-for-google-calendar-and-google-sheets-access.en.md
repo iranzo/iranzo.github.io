@@ -11,9 +11,12 @@ tags:
   - foss
 layout: post
 date: 2019-11-28 17:11:36 +0100
-category: tech
+categories:
+  - tech
+  - python
+  - redken_bot
 lang: en
-modified: 2022-03-23T10:00:29.650Z
+modified: 2022-05-04T13:44:11.327Z
 ---
 
 ## Introduction

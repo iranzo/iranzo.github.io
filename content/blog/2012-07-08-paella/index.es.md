@@ -6,11 +6,11 @@ tags:
   - paella
   - receta
   - tutorial
-category: blog
+categories: blog
 lang: es
 slug: paella-howto
 translationKey: paella-howto
-modified: 2022-03-23T09:52:56.889Z
+modified: 2022-05-04T12:50:57.153Z
 cover:
   image: 20120708134340.jpg
 ---

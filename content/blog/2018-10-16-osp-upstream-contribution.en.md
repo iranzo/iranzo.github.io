@@ -12,8 +12,10 @@ tags:
   - fedora
   - citellus
   - risu
-category: tech
-modified: 2022-03-23T10:00:04.669Z
+categories:
+  - tech
+  - OpenStack
+modified: 2022-05-04T13:21:44.509Z
 ---
 
 ## Introduction

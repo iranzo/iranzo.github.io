@@ -7,7 +7,10 @@ tags:
   - fencing
   - management
   - foss
-modified: 2022-03-23T09:59:41.792Z
+modified: 2022-05-04T13:18:03.806Z
+categories:
+  - tech
+  - FOSS
 ---
 
 Hi,

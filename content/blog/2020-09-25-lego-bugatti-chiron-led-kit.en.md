@@ -11,9 +11,10 @@ tags:
   - Bugatti Chiron
 layout: post
 date: 2020-09-25 19:30:24 +0200
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:48:53.585Z
+modified: 2022-05-04T13:32:56.716Z
 cover:
   image: https://i.imgur.com/YUmxxRW.jpg.jpg
 ---

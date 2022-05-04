@@ -8,7 +8,9 @@ tags:
   - mdadm
   - foss
 lang: es
-modified: 2022-03-23T09:58:20.343Z
+modified: 2022-05-04T13:03:54.960Z
+categories:
+  - FOSS
 ---
 
 ## Introducción

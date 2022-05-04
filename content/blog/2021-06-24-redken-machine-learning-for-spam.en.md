@@ -12,8 +12,11 @@ tags:
   - ML
 layout: post
 date: 2021-06-24 22:00:00 +0200
-category: tech
-modified: 2022-03-23T10:00:57.910Z
+categories:
+  - tech
+  - python
+  - redken_bot
+modified: 2022-05-04T13:44:27.881Z
 ---
 
 For some of the telegram groups I'm in, I've been detecting users that after some period of time, just publish spam messages of any topic.

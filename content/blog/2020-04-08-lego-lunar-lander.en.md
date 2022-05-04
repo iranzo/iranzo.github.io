@@ -9,9 +9,10 @@ tags:
   - Apollo 11
 layout: post
 date: 2020-04-08 20:48:24 +0100
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:47:33.440Z
+modified: 2022-05-04T13:32:56.736Z
 cover:
   image: https://i.imgur.com/gsSeZZz.jpg.jpg
 ---

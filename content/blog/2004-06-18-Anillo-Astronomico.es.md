@@ -8,7 +8,9 @@ tags:
   - astronomía
   - ciencia
 lang: es
-modified: 2022-03-23T09:58:17.960Z
+modified: 2022-05-04T14:44:05.881Z
+categories:
+  - blog
 ---
 
 ### ¿Qué es?

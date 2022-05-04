@@ -76,31 +76,36 @@ params:
 menu:
   main:
     - identifier: home
-      name: 🏠 Home
+      name: 🏠Home
       url: /
       weight: 10
     - identifier: About
-      name: 🗒️ About
+      name: 🗒️About
       url: /about/
       weight: 15
     - identifier: redken
-      name: 🐘 redken_bot
+      name: 🐘redken_bot
       url: /redken_bot/
       weight: 20
     - identifier: projects
-      name: 📐 Projects
+      name: 📐Projects
       url: /projects/
       weight: 20
     - identifier: archives
       name: 🗄️ Archives
       url: /archives/
       weight: 20
-    - identifier: tags
-      name: 🏷️ Tags
-      url: /tags/
+
+    - identifier: categories
+      name: 🗺️Categories
+      url: /categories/
       weight: 30
+    - identifier: tags
+      name: 🏷️Tags
+      url: /tags/
+      weight: 35
     - identifier: search
-      name: 🔎 Search
+      name: 🔎Search
       url: /search
       weight: 40
 
@@ -135,3 +140,9 @@ languages:
   es:
     languageName: Spanish
     weight: 2
+
+
+taxonomies:
+  categories: categories
+  series: series
+  tag: tags

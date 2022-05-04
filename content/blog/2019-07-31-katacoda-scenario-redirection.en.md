@@ -9,8 +9,9 @@ tags:
   - risu
 layout: post
 date: 2019-07-31 07:39:14 +0200
-category: tech
-modified: 2022-03-23T10:00:21.243Z
+categories:
+  - tech
+modified: 2022-05-04T13:03:13.518Z
 ---
 
 After my post about [Katacoda]({{<ref "2019-06-11-katacoda-scenario.en.md">}}), I did split my initial scenarios into 'organizations'.

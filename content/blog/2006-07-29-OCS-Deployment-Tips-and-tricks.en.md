@@ -6,7 +6,9 @@ tags:
   - OCS
   - Linux
   - FOSS
-modified: 2022-03-23T09:58:26.215Z
+modified: 2022-05-04T13:15:43.573Z
+categories:
+  - FOSS
 ---
 
 Prior to using the following info for creating own-made packages, let's test if everything is working fine.

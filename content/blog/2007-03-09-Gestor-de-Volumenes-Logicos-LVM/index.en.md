@@ -9,7 +9,9 @@ tags:
   - FOSS
   - logical volumes
 lang: en
-modified: 2022-03-23T09:55:59.441Z
+categories:
+  - FOSS
+modified: 2022-05-04T13:03:24.481Z
 translationKey: LVM
 cover:
   image: lvm8.jpg

@@ -7,8 +7,10 @@ tags:
   - Markdown
   - OctoPress
   - FOSS
-category: tech
-modified: 2022-03-23T09:59:33.295Z
+categories:
+  - CMS
+  - FOSS
+modified: 2022-05-04T13:37:27.694Z
 ---
 
 After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.

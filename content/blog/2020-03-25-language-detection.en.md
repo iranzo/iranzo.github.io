@@ -9,9 +9,12 @@ tags:
   - telegram
 layout: post
 date: 2020-03-25 20:00:24 +0100
-category: tech
+categories:
+  - tech
+  - python
+  - redken_bot
 lang: en
-modified: 2022-03-23T10:00:40.070Z
+modified: 2022-05-04T13:44:24.598Z
 ---
 
 ## Introduction

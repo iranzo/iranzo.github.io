@@ -10,9 +10,11 @@ tags:
   - foss
 layout: post
 date: 2020-12-01 14:10:34 +0200
-category: tech
+categories:
+  - tech
+  - CMS
 lang: en
-modified: 2022-03-23T10:00:45.531Z
+modified: 2022-05-04T14:03:30.778Z
 ---
 
 During last year I've worked with the <https://github.com/openshift-kni/baremetal-deploy/> repository after being working in the KNI Community team that was in charge of <KubeVirt.io> and <Metal3.io> where some of the below things were applied.
@@ -45,30 +47,30 @@ We've added GitHub actions for:
 
 This whole process has automated our workflow, reducing the time spent on checking changes and by having a live preview of new changes and automatically built PDF versions that can be downloaded and accessed offline for onsite customer visits.
 
-{% graphviz
-    dot {
-        digraph flow {
-            "New Commit" -> "Run CI"
-            "Run CI" -> "GitHub Actions"
-            "Run CI" -> "Netlify"
-            "Netlify" -> "Is the PR Correct?"
-            "Is the PR Correct?" [shape=diamond]
-            "GitHub Actions" -> "Page Build"
-            "GitHub Actions" -> "Spell Check"
-            "GitHub Actions" -> "Greetings"
-            "GitHub Actions" -> "Label"
-            "Spell Check" -> "Is the PR Correct?"
-            "Page Build" -> "Is the PR Correct?"
-            "Is the PR Correct?" -> "New Commit" [label="Fix commit and resend"];
-            "Greetings" -> "Ready for Merging"
-            "Label" -> "Ready for Merging"
-            "Ready for Merging" -> "Page Build"
-            "Is the PR Correct?" -> "Final Page Build" [label="Yes"];
-            "Final Page Build" -> "Site is Live" [label="push to branch"];
-            "Site is Live" [shape=square];
-        }
-    }
-%}
+{{< gravizo>}}
+
+digraph flow {
+"New Commit" -> "Run CI"
+"Run CI" -> "GitHub Actions"
+"Run CI" -> "Netlify"
+"Netlify" -> "Is the PR Correct?"
+"Is the PR Correct?" [shape=diamond]
+"GitHub Actions" -> "Page Build"
+"GitHub Actions" -> "Spell Check"
+"GitHub Actions" -> "Greetings"
+"GitHub Actions" -> "Label"
+"Spell Check" -> "Is the PR Correct?"
+"Page Build" -> "Is the PR Correct?"
+"Is the PR Correct?" -> "New Commit" [label="Fix commit and resend"];
+"Greetings" -> "Ready for Merging"
+"Label" -> "Ready for Merging"
+"Ready for Merging" -> "Page Build"
+"Is the PR Correct?" -> "Final Page Build" [label="Yes"];
+"Final Page Build" -> "Site is Live" [label="push to branch"];
+"Site is Live" [shape=square];
+}
+
+{{< /gravizo>}}
 
 Best practices:
 

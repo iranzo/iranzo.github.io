@@ -1,8 +1,16 @@
 ---
 title: Magnetic field, aurora, moon phases, eclipse and rockets
-category: presentations
+categories:
+  - presentations
 author: Pablo Iranzo Gómez
-tags: [aurora, eclipse, rocket, moon phase, magnetic field, astronomy,reveal]
+tags:
+  - aurora
+  - eclipse
+  - rocket
+  - moon phase
+  - magnetic field
+  - astronomy
+  - reveal
 layout: post
 date: 2020-02-13 22:15:00 +0100
 lang: en
@@ -10,7 +18,7 @@ slug: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 translationKey: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 outputs:
   - Reveal
-layout: bundle
+modified: 2022-05-04T13:56:41.193Z
 ---
 
 ## Disclaimer

@@ -7,8 +7,9 @@ tags:
   - efibootmgr
 layout: post
 date: 2021-07-01 22:00:00 +0200
-category: tech
-modified: 2022-03-23T10:01:04.432Z
+categories:
+  - tech
+modified: 2022-05-04T13:03:13.564Z
 ---
 
 Hi,

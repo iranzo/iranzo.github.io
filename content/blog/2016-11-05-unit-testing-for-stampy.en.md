@@ -8,8 +8,9 @@ tags:
   - OpenStack
   - FOSS
   - redken
-category: tech
-modified: 2022-03-23T09:59:47.433Z
+categories:
+  - redken_bot
+modified: 2022-05-04T13:43:58.208Z
 ---
 
 Since my prior post on [Contributing to OpenStack]({{<ref "2016-07-21-contributing-to-openstack.en.md">}}), I liked the idea of using some automated tests to validate functionality and specifically, the corner cases that could arise when playing with the code.

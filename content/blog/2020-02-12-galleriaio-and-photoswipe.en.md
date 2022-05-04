@@ -14,9 +14,11 @@ tags:
   - FOSS
 layout: post
 date: 2020-02-12 07:30:24 +0100
-category: tech
+categories:
+  - tech
+  - CMS
 lang: en
-modified: 2022-03-23T10:00:32.150Z
+modified: 2022-05-04T13:32:56.773Z
 ---
 
 ## Introduction

@@ -2,13 +2,18 @@
 author: Pablo Iranzo Gómez
 title: Administración de Sistemas y Seguridad
 lang: es
-tags: [foss, sysadmin, security,reveal]
+tags:
+  - foss
+  - sysadmin
+  - security
+  - reveal
 layout: post
 date: 2002-04-15 16:00:00 +0100
-category: presentations
+categories:
+  - presentations
 outputs:
   - Reveal
-layout: bundle
+modified: 2022-05-04T13:58:37.375Z
 ---
 
 # Introducción

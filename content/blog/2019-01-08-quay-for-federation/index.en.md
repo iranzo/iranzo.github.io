@@ -9,10 +9,12 @@ tags:
   - OpenShift
   - FOSS
 layout: post
-date: "2019-01-08 17:30:36 +0100"
-category: tech
+date: 2019-01-08 17:30:36 +0100
+categories:
+  - FOSS
+  - Kubernetes
 lang: en
-modified: "2022-01-20T17:47:13.500Z"
+modified: 2022-05-04T14:21:49.240Z
 ---
 
 ## Why this article?

@@ -8,7 +8,9 @@ tags:
   - rhel
   - centos
   - foss
-modified: 2022-03-23T09:58:57.544Z
+modified: 2022-05-04T13:15:43.528Z
+categories:
+  - FOSS
 ---
 
 ## Introducción

@@ -8,9 +8,9 @@ tags:
   - vocabulary
 layout: post
 date: 2020-03-24 09:30:24 +0100
-category: blog
+categories: blog
 lang: en
-modified: 2022-03-23T10:00:39.038Z
+modified: 2022-05-04T12:50:56.952Z
 ---
 
 ## Introduction

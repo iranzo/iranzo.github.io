@@ -7,7 +7,9 @@ tags:
   - PlayStation
   - Switch
   - Nintendo
-modified: 2022-04-13T21:56:43.312Z
+modified: 2022-05-04T13:32:56.650Z
+categories:
+  - LEGO
 cover:
   image: https://m.media-amazon.com/images/I/71y+jn1bMPL.jpg
 ---

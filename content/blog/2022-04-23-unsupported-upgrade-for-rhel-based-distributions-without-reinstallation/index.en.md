@@ -3,7 +3,8 @@ author: Pablo Iranzo Gómez
 title: Unsupported upgrade for RHEL-based distributions without reinstallation
 layout: post
 date: 2022-04-23T21:23:48.013Z
-category: tech
+categories:
+  - tech
 tags:
   - Linux
   - FOSS
@@ -13,7 +14,7 @@ tags:
   - AlmaLinux
   - Oracle Linux
   - Rocky Linux
-modified: 2022-04-23T21:38:29.001Z
+modified: 2022-05-04T13:03:13.591Z
 ---
 
 Most systems, based on RHEL, were not able to upgrade without

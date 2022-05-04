@@ -11,9 +11,12 @@ tags:
   - tips
 layout: post
 date: 2021-05-10 14:30:34 +0200
-category: tech
+categories:
+  - tech
+  - FOSS
+  - Ansible
 lang: en
-modified: 2022-03-23T10:00:55.895Z
+modified: 2022-05-04T13:32:56.691Z
 ---
 
 I was improving a playbook in Ansible and wanted to find a way to find if a system was virtual or not to decide about some tunning like setting `tuned-adm profile virtual-guest` or disable the power off when the lid is closed.

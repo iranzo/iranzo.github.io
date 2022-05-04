@@ -11,17 +11,18 @@ tags:
   - tips
 layout: post
 date: 2020-12-07 14:10:34 +0200
-category: tech
+categories:
+  - tech
+  - Kubernetes
 lang: en
-modified: 2022-03-23T10:00:46.421Z
+modified: 2022-05-04T13:52:37.064Z
 ---
 
 ## Introduction
 
 In a regular OpenShift environment, NTP server is more less like this:
+{{< gravizo>}}
 
-{% graphviz
-    dot {
       digraph connected {
           // title
           labelloc="t";
@@ -37,14 +38,13 @@ In a regular OpenShift environment, NTP server is more less like this:
           "Worker 2" -> "External NTP Server"[color=red]
           "Worker 3" -> "External NTP Server"[color=red]
     }
-  }
-%}
+
+{{< /gravizo >}}
 
 In a self-contained cluster with no connection to external networks NTP server is not reachable, but a reachable NTP server is required for proper cluster synchronization.
 Cluster does use SSL certificates that require validation and might fail if the dates between the systems are not in sync or at least pretty close in time.
 
-{% graphviz
-dot {
+{{< gravizo>}}
 digraph disconnected {
 // title
 labelloc="t";
@@ -68,9 +68,7 @@ node [shape = circle];
 "Worker 3" -> "Master 2" [color="red"]
 "Worker 3" -> "Master 3" [color="green"]
 }
-}
-
-%}
+{{< /gravizo >}}
 
 We've several components already available in our OpenShift cluster that are very useful:
 

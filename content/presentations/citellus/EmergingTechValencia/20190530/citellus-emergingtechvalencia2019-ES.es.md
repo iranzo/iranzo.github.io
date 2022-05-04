@@ -1,16 +1,31 @@
 ---
 title: Emerging Tech VLC'19 - Citellus - Automatización de comprobaciones
-category: presentations
+
 author: Pablo Iranzo Gómez
-tags: [citellus, foss, bash, magui, troubleshooting, devconf, openstack, docker, container, python, emergingtechvlc,reveal]
+tags:
+  - citellus
+  - foss
+  - bash
+  - magui
+  - troubleshooting
+  - devconf
+  - openstack
+  - docker
+  - container
+  - python
+  - emergingtechvlc
+  - reveal
 layout: post
 date: 2019-05-30 18:30:00 +0100
-category: presentations
+categories:
+  - presentations
+  - risu
 outputs:
   - Reveal
-layout: bundle
+
 cover:
   image: www.png
+modified: 2022-05-04T13:59:36.455Z
 ---
 
 ## [Citellus](https://risuorg.github.io):

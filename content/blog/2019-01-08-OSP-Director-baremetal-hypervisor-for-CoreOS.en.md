@@ -10,9 +10,11 @@ tags:
   - Linux
 layout: post
 date: 2019-01-08 17:30:36 +0100
-category: tech
+categories:
+  - tech
+  - OpenStack
 lang: en
-modified: 2022-03-23T10:00:10.482Z
+modified: 2022-05-04T13:32:56.833Z
 ---
 
 ## OSP Director

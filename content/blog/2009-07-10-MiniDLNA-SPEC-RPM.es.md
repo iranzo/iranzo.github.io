@@ -9,10 +9,12 @@ tags:
   - rpm
   - spec
   - foss
-modified: 2022-03-23T09:58:58.541Z
+modified: 2022-05-04T13:15:43.521Z
+categories:
+  - FOSS
 ---
 
-MiniDLNA provides an opensource DLNA server software that can index and present specific folders on your computer to DLNA clients on your network.
+MiniDLNA provides an OpenSource DLNA server software that can index and present specific folders on your computer to DLNA clients on your network.
 
 Project at sourceforge is distributed as CVS code that you need to checkout and compile for it to work on your computer.
 

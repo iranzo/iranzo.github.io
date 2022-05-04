@@ -6,9 +6,11 @@ tags:
   - Kubernetes
   - Metal³
   - operator
-category: tech
+categories:
+  - tech
+  - Kubernetes
 author: Pablo Iranzo Gómez
-modified: 2022-04-25T01:14:06.594Z
+modified: 2022-05-04T13:32:56.647Z
 ---
 
 This article was published originally at <https://metal3.io/blog/2019/09/11/Baremetal-operator.html>

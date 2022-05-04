@@ -8,12 +8,15 @@ tags:
   - reveal
 lang: es
 layout: post
-date: '2008-08-30 16:00:00 +0100'
-category: presentations
+date: 2008-08-30 16:00:00 +0100
+categories:
+  - presentations
+  - FOSS
+  - Fedora
 outputs:
   - Reveal
-layout: bundle
-modified: '2022-01-18T07:43:37.073Z'
+
+modified: 2022-05-04T13:58:50.914Z
 ---
 
 ## ¿Qué es Fedora?

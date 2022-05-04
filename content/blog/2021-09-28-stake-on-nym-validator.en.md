@@ -12,10 +12,11 @@ tags:
   - cosmos
 layout: post
 date: 2021-09-28 17:20:34 +0200
-category: tech
+categories:
+  - tech
 description: This article describes how to stake your token against a NYM cosmos validator
 lang: en
-modified: 2022-03-23T10:01:08.908Z
+modified: 2022-05-04T13:03:13.559Z
 slug: stake-nym-validator
 ---
 

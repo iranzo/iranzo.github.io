@@ -7,8 +7,10 @@ tags:
   - Magui
   - Red Hat
   - FOSS
-category: tech
-modified: 2022-03-23T10:00:02.254Z
+categories:
+  - tech
+  - risu
+modified: 2022-05-04T13:32:56.841Z
 ---
 
 ## New blog post!

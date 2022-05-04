@@ -10,9 +10,10 @@ tags:
   - 80102
 layout: post
 date: 2019-06-28 20:32:14 +0200
-category: blog
+categories:
+  - LEGO
 description: Lego Chinese Dragon Dance review
-modified: 2022-03-23T09:38:07.612Z
+modified: 2022-05-04T13:32:56.801Z
 cover:
   image: https://i.imgur.com/8j1Drm8.jpg.jpg
 ---

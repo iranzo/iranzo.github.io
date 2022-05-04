@@ -8,9 +8,10 @@ tags:
   - review
 layout: post
 date: 2020-02-24 21:30:24 +0100
-category: blog
+categories:
+  - LEGO
 lang: en
-modified: 2022-03-23T09:45:14.848Z
+modified: 2022-05-04T13:32:56.747Z
 cover:
   image: https://i.imgur.com/v5ulbTA.jpg.jpg
 ---

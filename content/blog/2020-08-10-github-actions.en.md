@@ -8,9 +8,10 @@ tags:
   - blog-o-matic
 layout: post
 date: 2020-08-10 07:44:24 +0200
-category: tech
+categories:
+  - tech
 lang: en
-modified: 2022-03-23T10:00:44.470Z
+modified: 2022-05-04T13:03:13.587Z
 ---
 
 When I started with [blog-o-matic]({{<ref "2019-01-09-blog-o-matic.en.md">}}) I had to involve external 'Travis-CI', generating a token on GitHub, setting environment variables on Travis, etc

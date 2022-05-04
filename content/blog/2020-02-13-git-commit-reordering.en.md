@@ -7,9 +7,10 @@ tags:
   - Linux
 layout: post
 date: 2020-02-13 20:30:24 +0100
-category: tech
+categories:
+  - tech
 lang: en
-modified: 2022-03-23T10:00:31.103Z
+modified: 2022-05-04T13:03:13.612Z
 ---
 
 While I was working for a presentation for kid's school at [Magnetic field, Aurora, Lunar Phases and Rockets]("campo-magnetico-auroras-fases-lunares-cohetes.md"), I added 4 big videos to the presentation (as I was going to use them offline while presenting).

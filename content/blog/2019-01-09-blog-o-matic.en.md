@@ -1,6 +1,8 @@
 ---
 author: Pablo Iranzo Gómez
-title: "Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with little setup steps."
+title:
+  Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with
+  little setup steps.
 tags:
   - Pelican
   - FOSS
@@ -15,9 +17,11 @@ tags:
   - continuous integration
   - continuous delivery
 layout: post
-date: "2019-01-09 22:00:47 +0100"
-category: tech
-modified: "2022-01-16T21:44:56.368Z"
+date: 2019-01-09 22:00:47 +0100
+categories:
+  - tech
+  - CMS
+modified: 2022-05-04T13:32:56.828Z
 ---
 
 # Introduction

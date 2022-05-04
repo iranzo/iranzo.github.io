@@ -9,7 +9,10 @@ lang: es
 tags:
   - fedora
   - foss
-modified: 2022-03-23T09:59:23.528Z
+modified: 2022-05-04T13:15:19.447Z
+categories:
+  - FOSS
+  - Fedora
 ---
 
 Usando unetbootin (<http://unetbootin.sourceforge.net/>) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.

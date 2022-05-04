@@ -1,17 +1,31 @@
 ---
 title: "DevConf.cz 2018: Citellus - Detecting common pitfalls of deployments"
-category: presentations
+
 author: Pablo Iranzo Gómez
-tags: [citellus, FOSS, bash, magui, troubleshooting, DevConf, OpenStack, docker, container, python,reveal]
+tags:
+  - citellus
+  - FOSS
+  - bash
+  - magui
+  - troubleshooting
+  - DevConf
+  - OpenStack
+  - docker
+  - container
+  - python
+  - reveal
 layout: post
 date: 2018-01-27 16:00:00 +0100
 
-category: presentations
+categories:
+  - presentations
+  - risu
 outputs:
   - Reveal
-layout: bundle
+
 cover:
   image: www.png
+modified: 2022-05-04T13:59:27.949Z
 ---
 
 ## [Citellus](https://github.com/citellusorg/citellus):

@@ -8,8 +8,11 @@ tags:
   - redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
-modified: 2022-03-23T10:03:20.963Z
-category: tech
+modified: 2022-05-04T13:44:58.779Z
+categories:
+  - tech
+  - python
+  - redken_bot
 description: null
 lang: en
 slug: telegram-redken_bot-documentation
