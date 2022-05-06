@@ -9,7 +9,7 @@ tags:
   - Linux
   - installation
   - FOSS
-modified: 2022-05-04T13:15:43.511Z
+modified: 2022-05-06T22:05:08.071Z
 categories:
   - FOSS
 ---
@@ -38,7 +38,7 @@ After we've copied everything from our install media, we'll start customizing :)
 
 We can customize DVD background image and even keyboard layout by tweaking `isolinux/isolinux.cfg` with all required fields (Check [`Syslinux`](http://syslinux.zytor.com/wiki/index.php/SYSLINUX) Documentation to check proper syntax)
 
-On [`Kickstart: instalaciones automatizadas para anaconda`]({{<ref path="2008-05-11-Kickstart-instalaciones.es.md" lang="es">}}) (Spanish) you can also check how to create a kickstart, so you can embed it on this DVD and configure `isolinux.cfg` to automatic provision a system
+On [`Kickstart: instalaciones automatizadas para anaconda`]({{<relref path="2008-05-11-Kickstart-instalaciones.es.md" lang="es">}}) (Spanish) you can also check how to create a kickstart, so you can embed it on this DVD and configure `isolinux.cfg` to automatic provision a system
 
 ## Including updates
 

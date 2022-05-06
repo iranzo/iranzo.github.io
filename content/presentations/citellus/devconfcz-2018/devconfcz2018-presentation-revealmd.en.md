@@ -25,7 +25,7 @@ outputs:
 
 cover:
   image: www.png
-modified: 2022-05-04T13:59:27.949Z
+modified: 2022-05-06T22:09:05.424Z
 ---
 
 ## [Citellus](https://github.com/citellusorg/citellus):
@@ -140,7 +140,7 @@ Note: Change speaker after this
 - This is an open source project. All the scripts should be committed upstream and shared (and we are willing to foster this)
   - Project on GitHub: <https://github.com/citellusorg/citellus/>
 - We want contributions to happen from anyone.
-- We follow an approach similar to other opensource projects: we do use Gerrit for reviewing the code and UT's for validating basic functionality.
+- We follow an approach similar to other OpenSource projects: we do use Gerrit for reviewing the code and UT's for validating basic functionality.
 
 ---
 

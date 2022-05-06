@@ -12,12 +12,12 @@ tags:
 categories:
   - tech
   - risu
-modified: 2022-05-04T13:32:56.848Z
+modified: 2022-05-06T22:05:08.007Z
 ---
 
 ## Introduction
 
-In order to improve [Citellus]({{<ref "2017-07-26-Citellus-framework-for-detecting-known-issues.en.md">}}) and [Magui]({{< ref "2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.en.md">}}), we did implement some [Unit testing]({{<ref "2017-08-17-Jenkins-for-running-CI-tests.en.md">}}) to improve code quality.
+In order to improve [Citellus]({{<relref "2017-07-26-Citellus-framework-for-detecting-known-issues.en.md">}}) and [Magui]({{< ref "2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.en.md">}}), we did implement some [Unit testing]({{<relref "2017-08-17-Jenkins-for-running-CI-tests.en.md">}}) to improve code quality.
 
 The tests written were made in python and with some changes it was also possible to validate the actual tests.
 

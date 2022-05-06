@@ -13,12 +13,12 @@ layout: post
 date: 2018-12-11 21:49:47 +0100
 categories:
   - tech
-modified: 2022-05-04T13:03:13.654Z
+modified: 2022-05-06T22:05:08.091Z
 ---
 
 # Introduction
 
-After setting up [build automation]({{<ref "2018-12-07-elegant-website-ci.en.md">}}) we also wanted it not to happen only when updating the `documentation` repository.
+After setting up [build automation]({{<relref "2018-12-07-elegant-website-ci.en.md">}}) we also wanted it not to happen only when updating the `documentation` repository.
 
 Besides hosting documentation, Elegant website also serves as a live demo of the current release. This meant, the website should be regenerated and updated every time when a documented is added or edited, and also when Elegant theme is updated.
 
@@ -114,7 +114,7 @@ travis.authenticate({
 As you can see, in line 14, it grabs the github token from environment variable `TRATOKEN` that we've defined in
 Travis-CI environment for the build.
 
-This is similar to [what we did]({{<ref "2018-12-07-elegant-website-ci.en.md">}}) in the documentation repo to push the built website to another repo.
+This is similar to [what we did]({{<relref "2018-12-07-elegant-website-ci.en.md">}}) in the documentation repo to push the built website to another repo.
 
 With this solution in place, when a new commit is merged on 'master' branch on the 'theme' repo [(`elegant`)](https://github.com/Pelican-Elegant/elegant), Travis does get invoked to schedule a build on the [`documentation`](https://github.com/Pelican-Elegant/documentation) repo, thus, rendering the live website with latest templates.
 

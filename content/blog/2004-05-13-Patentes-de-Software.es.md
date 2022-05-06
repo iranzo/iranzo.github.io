@@ -7,7 +7,7 @@ tags:
   - linux
   - foss
 lang: es
-modified: 2022-05-04T14:42:56.329Z
+modified: 2022-05-06T22:09:05.529Z
 categories:
   - blog
 ---

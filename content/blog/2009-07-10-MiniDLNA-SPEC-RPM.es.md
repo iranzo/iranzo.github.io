@@ -9,7 +9,7 @@ tags:
   - rpm
   - spec
   - foss
-modified: 2022-05-04T13:15:43.521Z
+modified: 2022-05-06T22:09:05.475Z
 categories:
   - FOSS
 ---

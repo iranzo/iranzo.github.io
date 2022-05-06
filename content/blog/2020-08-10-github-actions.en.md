@@ -11,10 +11,10 @@ date: 2020-08-10 07:44:24 +0200
 categories:
   - tech
 lang: en
-modified: 2022-05-04T13:03:13.587Z
+modified: 2022-05-06T22:05:07.961Z
 ---
 
-When I started with [blog-o-matic]({{<ref "2019-01-09-blog-o-matic.en.md">}}) I had to involve external 'Travis-CI', generating a token on GitHub, setting environment variables on Travis, etc
+When I started with [blog-o-matic]({{<relref "2019-01-09-blog-o-matic.en.md">}}) I had to involve external 'Travis-CI', generating a token on GitHub, setting environment variables on Travis, etc
 
 GitHub started enabling [`actions`](https://github.com/features/actions) which allows to automate workflows in a similar way than Travis or other external providers allowed, but with one extra feature: configuration is defined inside `.github/` folder of your repository, which makes incredibly easy to copy the setup for one tool to another (except of optional required tokens that are configured per repo).
 

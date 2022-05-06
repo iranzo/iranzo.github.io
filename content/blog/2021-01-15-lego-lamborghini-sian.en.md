@@ -12,7 +12,7 @@ date: 2021-01-15 20:32:34 +0200
 categories:
   - LEGO
 lang: en
-modified: 2022-05-04T13:32:56.696Z
+modified: 2022-05-06T22:05:08.132Z
 cover:
   image: https://i.imgur.com/R7qkoY6.jpg.jpg
 ---
@@ -27,7 +27,7 @@ The build experience was good, except for some issues related with not building 
 
 The biggest issue was that for the 2nd issue, I got into the motor drive had to be resettled and included some more dismantling, but nothing impossible.
 
-Size is very similar to the [Porsche and Bugatti]({{<ref "2020-02-21-lego-bugatti-chiron-porsche-911-GT3-RS.en.md">}})) and had interesting build techniques for the frontal, the doors, etc.
+Size is very similar to the [Porsche and Bugatti]({{<relref "2020-02-21-lego-bugatti-chiron-porsche-911-GT3-RS.en.md">}})) and had interesting build techniques for the frontal, the doors, etc.
 
 Here you have some pictures of it:
 

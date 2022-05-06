@@ -8,7 +8,7 @@ tags:
   - fedora
   - dropbox
   - foss
-modified: 2022-05-04T13:19:38.448Z
+modified: 2022-05-06T22:09:05.505Z
 categories:
   - FOSS
   - Fedora
@@ -27,7 +27,7 @@ Estuve probando y evaluando diversas herramientas multiplataforma y junto a algu
 
 Actualmente necesito 'salvar/sincronizar' unos 35Gb de datos (fotos la gran mayoría y no precisamente en RAW), lo que provocó estas comparativas, preferiblemente de servicios que ofrecieran espacio gratuito.
 
-En resumen, de las opensource (Syncany/Sparkleshare), están todavía bastante en pañales, aunque prometen mucho, más syncany por la variedad de posibles destinos de copias que sparkleshare (necesidad de repositorio git, etc).
+En resumen, de las OpenSource (Syncany/Sparkleshare), están todavía bastante en pañales, aunque prometen mucho, más syncany por la variedad de posibles destinos de copias que sparkleshare (necesidad de repositorio git, etc).
 
 De las 'comerciales', Wuala ofrecía posibilidad de compartir espacio local a cambio de espacio en la nube que permitía compartir esos GB no utilizados por GB fuera de donde tenías tus ordenadores, garantizando que en caso de problemas fisicos, ambientales,etc, poder acceder a los datos, pero en Octubre de 2011, con la salida de la nueva versión, dejaron de ofrecer el servicio, convirtiendo el espacio conseguido en un 'vale' hasta Octubre de 2012... que ha provocado que tenga que reemplazar esa solución que venía utilizando.
 

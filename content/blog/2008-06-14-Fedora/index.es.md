@@ -10,14 +10,14 @@ tags:
 lang: es
 categories:
   - FOSS
-modified: 2022-05-04T13:02:12.902Z
+modified: 2022-05-06T22:05:07.946Z
 cover:
   image: Pantallazo-00.png
 ---
 
 ### Introducción
 
-[Fedora](http://fedoraproject.org/) es una distribución [Linux]({{<ref "2004-03-18-Que-es-Linux.es.md">}}) fruto del desarrollo de la extinta Red Hat Linux.
+[Fedora](http://fedoraproject.org/) es una distribución [Linux]({{<relref "2004-03-18-Que-es-Linux.es.md">}}) fruto del desarrollo de la extinta Red Hat Linux.
 
 Red Hat Linux se readaptó al entorno empresarial proporcionado las opciones de soporte que las empresas buscaban en el software libre y del código de Red Linux, nacieron dos versiones, Red Hat Enterprise Linux, disponible para clientes con subscripciones (Red Hat no vende "licencias de uso", vende servicios de soporte, actualización en forma de subscripciones, puede verse como una especie de tarifa plana para acceder a todas las versiones de los productos subscritos, soporte, etc) válidas y Fedora Core, sucesor directo de Red Hat Linux.
 
@@ -42,11 +42,11 @@ Una de las características que más tiempo llevan es Anaconda, el instalador qu
 
 Aparte del interfaz gráfico de instalación y una versión en modo texto muy similar dispone de una funcionalidad que lo convierte en único: La posibilidad de utilizar guiones de instalación que permitan automatizar completamente una instalación sin requerir interacción alguna por parte del usuario (ideal para instalar aulas de informática, colegios, lugares públicos tales como zonas de navegación, bibliotecas, etc).
 
-Puedes consultar información al respecto en [Kickstart: instalaciones automatizadas para anaconda]({{<ref "2008-05-11-Kickstart-instalaciones.es.md">}})
+Puedes consultar información al respecto en [Kickstart: instalaciones automatizadas para anaconda]({{<relref "2008-05-11-Kickstart-instalaciones.es.md">}})
 
 #### Security Enhanced Linux (SELinux)
 
-[SELinux]({{<ref path="2008-01-04-Security-Enhanced-Linux-SELinux.en.md" lang="en">}}) es un conjunto de módulos de seguridad para el kernel incorporados y activados por defecto en Fedora que confinan los programas en sus "compartimentos", impidiendo que realicen acciones que no deberían.
+[SELinux]({{<relref path="2008-01-04-Security-Enhanced-Linux-SELinux.en.md" lang="en">}}) es un conjunto de módulos de seguridad para el kernel incorporados y activados por defecto en Fedora que confinan los programas en sus "compartimentos", impidiendo que realicen acciones que no deberían.
 
 Por ejemplo SELInux, puede proteger un sistema con un Apache afectado por una vulnerabilidad impidiendo que un atacante pueda acceder a ficheros ya sea para leer o escribir que no debiera.
 
@@ -56,7 +56,7 @@ SELinux fue desarrollado en colaboración con la Agencia de Seguridad Nacional N
 
 #### LVM
 
-[Gestor de Volúmenes Lógicos (LVM)]({{<ref "2007-03-09-Gestor-de-Volumenes-Logicos-LVM.es.md">}}) viene incorporado de serie y habilitado por defecto en Fedora desde hace ya muchas versiones, como novedad en la versión 9 es la inclusión de la posibilidad de utilizar volúmenes cifrados para todos los datos (hasta el momento se podía hacer con volúmenes que no fueran el de sistema, por ejemplo con /home), aumentando así la seguridad de los datos confidenciales que se llevan en dispositivos portátileso PC's de cara a posibles [pérdidas o robos](http://news.google.es/news?hl=es&ned=es&q=datos++port%C3%A1til+robado&btnG=Buscar).
+[Gestor de Volúmenes Lógicos (LVM)]({{<relref "2007-03-09-Gestor-de-Volumenes-Logicos-LVM.es.md">}}) viene incorporado de serie y habilitado por defecto en Fedora desde hace ya muchas versiones, como novedad en la versión 9 es la inclusión de la posibilidad de utilizar volúmenes cifrados para todos los datos (hasta el momento se podía hacer con volúmenes que no fueran el de sistema, por ejemplo con /home), aumentando así la seguridad de los datos confidenciales que se llevan en dispositivos portátileso PC's de cara a posibles [pérdidas o robos](http://news.google.es/news?hl=es&ned=es&q=datos++port%C3%A1til+robado&btnG=Buscar).
 
 #### PackageKit
 

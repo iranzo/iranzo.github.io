@@ -9,6 +9,8 @@ buildFuture: false
 buildExpired: false
 GoogleAnalytics: G-ZL9P943TP1
 
+relativeURLs: true
+
 minify:
   disableXML: true
   minifyOutput: true

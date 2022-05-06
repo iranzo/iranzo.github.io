@@ -15,12 +15,12 @@ date: 2019-01-20 23:12:17 +0100
 categories:
   - tech
   - CMS
-modified: 2022-05-04T13:32:56.825Z
+modified: 2022-05-06T22:05:08.155Z
 ---
 
 ## Introduction
 
-After my recent talk about [blog-o-matic]({{<ref "2019-01-09-blog-o-matic.en.md">}}), I was trying to upload somewhere the slides I used.
+After my recent talk about [blog-o-matic]({{<relref "2019-01-09-blog-o-matic.en.md">}}), I was trying to upload somewhere the slides I used.
 
 Since some time ago I started using Reveal-MD, so I could use Markdown to create and show slides, but wanted also a way to upload them for consumption.
 

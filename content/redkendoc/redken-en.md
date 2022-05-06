@@ -8,7 +8,7 @@ tags:
   - redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
-modified: 2022-05-04T13:44:58.779Z
+modified: 2022-05-06T22:05:07.894Z
 categories:
   - tech
   - python
@@ -19,4 +19,4 @@ slug: telegram-redken_bot-documentation
 redirect: /redken_bot
 ---
 
-The new document is at [Redken Documentation]({{<ref "redken-en.md">}}).
+The new document is at [Redken Documentation]({{<relref "redken-en.md">}}).

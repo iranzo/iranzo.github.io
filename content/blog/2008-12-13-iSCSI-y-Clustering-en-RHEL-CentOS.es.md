@@ -8,7 +8,7 @@ tags:
   - rhel
   - centos
   - foss
-modified: 2022-05-04T13:15:43.528Z
+modified: 2022-05-06T22:05:08.002Z
 categories:
   - FOSS
 ---
@@ -25,7 +25,7 @@ Bueno, a medias :-)
 
 Siempre es complicado compartir sistemas de ficheros, existen problemas de bloqueos de ficheros, accesos recurrentes, etc, en el caso de iSCSI no sólo es el FS sino la unidad, desde cualquier equipo podemos particionarla, etc, es por ello que se necesitan algunas utilidades preparadas para dicho funcionamiento en red, así como por supuesto, un sistema de ficheros que soporte dicho uso simultáneo.
 
-Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster [LVM]({{<ref "2007-03-09-Gestor-de-Volumenes-Logicos-LVM.es.md">}})) como de GFS (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.
+Con las últimas versiones del kernel, disponemos tanto de clvm (Cluster [LVM]({{<relref "2007-03-09-Gestor-de-Volumenes-Logicos-LVM.es.md">}})) como de GFS (Global File System), que permiten, por un lado, poder operar en red desde varios equipos con los volúmenes lógicos, redimensionarlos, etc sin afectar a la producción, como de un sistema de ficheros preparado para trabajar en red con varios equipos.
 
 Piensa por un momento, la posibilidad de tener ese host tan potente o una SAN con copias de seguridad bien controladas, etc
 

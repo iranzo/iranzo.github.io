@@ -10,12 +10,12 @@ tags:
 categories:
   - tech
   - risu
-modified: 2022-05-04T13:32:56.847Z
+modified: 2022-05-06T22:05:08.124Z
 ---
 
 ## What's new?
 
-During recent weeks we've been coding and performing several changes to [Citellus]({{<ref "2017-07-26-Citellus-framework-for-detecting-known-issues.en.md">}}) and [Magui]({{<ref "2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.en.md">}}).
+During recent weeks we've been coding and performing several changes to [Citellus]({{<relref "2017-07-26-Citellus-framework-for-detecting-known-issues.en.md">}}) and [Magui]({{<relref "2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.en.md">}}).
 
 Checking the latest logs or list of issues open and closed on github is probably not an easy task or the best way to get 'up-to-date' with changes, so I'll try to compile a few here.
 

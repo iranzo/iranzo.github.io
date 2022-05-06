@@ -14,12 +14,12 @@ categories:
   - tech
   - python
   - redken_bot
-modified: 2022-05-04T13:44:49.584Z
+modified: 2022-05-06T22:05:08.021Z
 ---
 
 # Introduction
 
-During last years of increased Telegram adoption among contacts, [the low learning curve to write bots]({{<ref "2015-06-26-writing-a-telegram-dot-org-bot-in-python.en.md">}}) for it as well as the capacity of bigger group chats and 'channels' for one-way publishing of information has helped the proliferation of 'bargain' groups.
+During last years of increased Telegram adoption among contacts, [the low learning curve to write bots]({{<relref "2015-06-26-writing-a-telegram-dot-org-bot-in-python.en.md">}}) for it as well as the capacity of bigger group chats and 'channels' for one-way publishing of information has helped the proliferation of 'bargain' groups.
 
 In those groups, there are 'discounts', 'sales', about any range of products you can imagine (clothing, shoes, toys, mobiles, tv's, beauty, etc).
 

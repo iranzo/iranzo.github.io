@@ -10,10 +10,10 @@ categories:
   - tech
   - OpenStack
 
-modified: 2022-05-04T13:19:38.410Z
+modified: 2022-05-06T22:09:05.518Z
 ---
 
-Contributing to an opensource project might take some time at the beginning, the good thing with OpenStack is that there are lot of guides on how to start and collaborate.
+Contributing to an OpenSource project might take some time at the beginning, the good thing with OpenStack is that there are lot of guides on how to start and collaborate.
 
 What I did is to look for a bug in the project tagged as [low-hanging-fruit](https://bugs.launchpad.net/openstack/+bugs?field.tag=low-hanging-fruit&orderby=status&start=0), this allows to browse a large list of bugs that are classified as `easy`, so they are the best place for new starters to get familiar with the workflow.
 

@@ -11,10 +11,10 @@ layout: post
 date: 2019-07-31 07:39:14 +0200
 categories:
   - tech
-modified: 2022-05-04T13:03:13.518Z
+modified: 2022-05-06T22:05:08.116Z
 ---
 
-After my post about [Katacoda]({{<ref "2019-06-11-katacoda-scenario.en.md">}}), I did split my initial scenarios into 'organizations'.
+After my post about [Katacoda]({{<relref "2019-06-11-katacoda-scenario.en.md">}}), I did split my initial scenarios into 'organizations'.
 
 One of them, is in progress to get contributed upstream to [KubeVirt project Katacoda](https://katacoda.com/kubevirt) (still getting some reviews to land on final repo), and the other is under [Citellus organization](https://katacoda.com/citellus).
 

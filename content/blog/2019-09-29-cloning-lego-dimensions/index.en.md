@@ -18,14 +18,14 @@ categories:
   - LEGO
 lang: en
 slug: lego-dimensions-cloning
-modified: 2022-05-04T13:37:32.376Z
+modified: 2022-05-06T22:05:08.048Z
 cover:
   image: ntag213.png
 ---
 
 ## Introduction
 
-In the article [Lego Dimensions]({{<ref "2019-08-19-lego-dimensions.en.md">}}), I covered all the available packs for playing with the console.
+In the article [Lego Dimensions]({{<relref "2019-08-19-lego-dimensions.en.md">}}), I covered all the available packs for playing with the console.
 
 Unfortunately, not all of them are available for purchase anymore except from collectors, <brickset.com> or some resellers.
 

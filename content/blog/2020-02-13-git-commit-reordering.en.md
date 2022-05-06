@@ -10,14 +10,14 @@ date: 2020-02-13 20:30:24 +0100
 categories:
   - tech
 lang: en
-modified: 2022-05-04T13:03:13.612Z
+modified: 2022-05-06T22:05:08.109Z
 ---
 
 While I was working for a presentation for kid's school at [Magnetic field, Aurora, Lunar Phases and Rockets]("campo-magnetico-auroras-fases-lunares-cohetes.md"), I added 4 big videos to the presentation (as I was going to use them offline while presenting).
 
 I know what git is not the place for big binary files, and even Github proposed to use the LFS backend for that, but as it was just temporary, I went ahead.
 
-After that commit, I also wrote two more articles, the one on [Lego Speed Champions]({{<ref "2020-02-08-lego-speed-champions-2020.en.md">}}) and the one on [Galleria.io and PhotoSwipe]({{<ref "2020-02-12-galleriaio-and-photoswipe.en.md">}}), so it became a problem to have big files in between, when my plan was to remove them in the end.
+After that commit, I also wrote two more articles, the one on [Lego Speed Champions]({{<relref "2020-02-08-lego-speed-champions-2020.en.md">}}) and the one on [Galleria.io and PhotoSwipe]({{<relref "2020-02-12-galleriaio-and-photoswipe.en.md">}}), so it became a problem to have big files in between, when my plan was to remove them in the end.
 
 Git allows you to create branches at any point and play around with the commits, cherry-picking them into your branch, etc so for continue working I did create a new branch:
 

@@ -7,7 +7,7 @@ tags:
   - photography
   - gallery
   - Instagram
-  - opensource
+  - OpenSource
   - open source
   - galleria.io
   - PhotoSwipe
@@ -18,14 +18,14 @@ categories:
   - tech
   - CMS
 lang: en
-modified: 2022-05-04T13:32:56.773Z
+modified: 2022-05-06T22:08:31.886Z
 ---
 
 ## Introduction
 
 I was looking for an alternative for my (this) blog and hold pictures. I'm a lego fan so I wanted to get some pictures uploaded but without bloating the site.
 
-In the article [Lego Mini Cooper MOC]({{<ref "2019-06-09-lego-mini-cooper-moc.en.md">}}) I did add lot of pictures, same for [Lego Chinese dinner]({{<ref "2019-06-28-chinese-dinner.en.md">}}) and [Lego Dragon Dance]({{<ref "2019-06-28-dragon-dance.en.md">}}).
+In the article [Lego Mini Cooper MOC]({{<relref "2019-06-09-lego-mini-cooper-moc.en.md">}}) I did add lot of pictures, same for [Lego Chinese dinner]({{<relref "2019-06-28-chinese-dinner.en.md">}}) and [Lego Dragon Dance]({{<relref "2019-06-28-dragon-dance.en.md">}}).
 
 I was checking and how telegram does handle some links and found that
 Instagram 'links' get expanded to list the images inside directly to see if that could help in a task I was helping at [Pelican-Elegant theme](https://github.com/Pelican-Elegant/elegant) used at this site for creating a gallery.

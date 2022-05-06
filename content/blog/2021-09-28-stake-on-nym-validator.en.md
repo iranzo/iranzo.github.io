@@ -16,11 +16,11 @@ categories:
   - tech
 description: This article describes how to stake your token against a NYM cosmos validator
 lang: en
-modified: 2022-05-04T13:03:13.559Z
+modified: 2022-05-06T22:05:07.967Z
 slug: stake-nym-validator
 ---
 
-As said in the article about [mixnodes]({{<ref "2021-05-09-run-a-nym-mixnode.en.md">}}) and [validators]({{<ref "2021-05-09-run-a-nym-validator.en.md">}}), NYM is a technology aiming for providing privacy for the communications.
+As said in the article about [mixnodes]({{<relref "2021-05-09-run-a-nym-mixnode.en.md">}}) and [validators]({{<relref "2021-05-09-run-a-nym-validator.en.md">}}), NYM is a technology aiming for providing privacy for the communications.
 
 Once you get some tokens, `PUNK` at this time, you can use the web wallet to check the balance of your account and delegate it to mixnodes or gateways... but, using the binaries, you can additionally delegate to validators.
 

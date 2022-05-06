@@ -1,5 +1,5 @@
 ---
-modified: 2022-04-13T21:57:09.184Z
+modified: 2022-05-06T22:05:07.845Z
 title: About
 layout: post
 date: 2016-06-02 17:27:47 +0200
@@ -13,7 +13,7 @@ lang: en
 
 My name is Pablo and I've been working with Open Source since before I started university.
 
-Part of my evolution with Open Source is described in this article [Linux]({{<ref path="2008-06-03-mi-Evolucion-con-Linux.es.md" lang="es">}}).
+Part of my evolution with Open Source is described in this article [Linux]({{<relref path="2008-06-03-mi-Evolucion-con-Linux.es.md" lang="es">}}).
 
 Since 2006 I work for Red Hat, where I started as a Dedicated Enterprise Engineer (Onsite Consultant) for a country-wide retail company with headquarters in Valencia.
 

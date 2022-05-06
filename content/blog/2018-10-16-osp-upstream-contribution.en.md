@@ -15,12 +15,12 @@ tags:
 categories:
   - tech
   - OpenStack
-modified: 2022-05-04T13:21:44.509Z
+modified: 2022-05-06T22:05:08.040Z
 ---
 
 ## Introduction
 
-In the article "[Contributing to OpenStack]({{<ref "2016-07-21-contributing-to-openstack.en.md">}})" we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find `low hanging fruits` to start contributing).
+In the article "[Contributing to OpenStack]({{<relref "2016-07-21-contributing-to-openstack.en.md">}})" we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find `low hanging fruits` to start contributing).
 
 Here, we'll cover what happens behind the scene to get change published.
 
@@ -119,7 +119,7 @@ In [Citellus](https://risuorg.github.io/) we've replicated more or less what we'
 
 Citellus does use <https://gerrithub.io> (free service that hooks on github and allows to do PR)
 
-We've setup a machine that runs [Jenkins]({{<ref "2017-08-17-Jenkins-for-running-CI-tests.en.md">}}) to do 'CI' on the tests we've defined (mostly for python wrapper and some tests) and what effectively does is to run `tox`, and also, we do use <https://travis-ci.org> free Tier to repeat the same on other platform.
+We've setup a machine that runs [Jenkins]({{<relref "2017-08-17-Jenkins-for-running-CI-tests.en.md">}}) to do 'CI' on the tests we've defined (mostly for python wrapper and some tests) and what effectively does is to run `tox`, and also, we do use <https://travis-ci.org> free Tier to repeat the same on other platform.
 
 `tox` is a tool that allows to define several commands that are executed inside python virtual environments, so without touching your system libraries, it can get installed new ones or removed just for the boundaries of that test, helping into running:
 

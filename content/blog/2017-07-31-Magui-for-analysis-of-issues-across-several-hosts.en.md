@@ -14,12 +14,12 @@ tags:
 categories:
   - tech
   - risu
-modified: 2022-05-04T13:32:56.850Z
+modified: 2022-05-06T22:05:08.143Z
 ---
 
 ## Background
 
-[Citellus]({{<ref "2017-07-26-Citellus-framework-for-detecting-known-issues.en.md">}}) allows to check a sosreport against known problems identified on the provided tests.
+[Citellus]({{<relref "2017-07-26-Citellus-framework-for-detecting-known-issues.en.md">}}) allows to check a sosreport against known problems identified on the provided tests.
 
 This approach is easy to implement and easy to test but has limitations when a problem can span across several hosts and only the problem reveals itself when a general analysis is performed.
 

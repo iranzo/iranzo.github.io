@@ -16,12 +16,12 @@ date: 2019-01-22 20:51:27 +0100
 categories:
   - tech
   - CMS
-modified: 2022-05-04T13:32:56.821Z
+modified: 2022-05-06T22:05:08.062Z
 ---
 
 # Introduction
 
-For some time now, I wanted to put the presentations I did in the past to be available, and since I've added support to [my blog to render revealjs slides]({{<ref "2019-01-20-pelican-revealjs.en.md">}}), I wanted to also put other presentations that I did in the past, probably (or for sure) outdated, but that were sitting in my computer drive.
+For some time now, I wanted to put the presentations I did in the past to be available, and since I've added support to [my blog to render revealjs slides]({{<relref "2019-01-20-pelican-revealjs.en.md">}}), I wanted to also put other presentations that I did in the past, probably (or for sure) outdated, but that were sitting in my computer drive.
 
 The presentations already got several transformations, but in the actual status they are stored as LibreOffice ODP files, that made it a bit difficult.
 

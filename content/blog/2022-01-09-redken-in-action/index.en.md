@@ -15,7 +15,7 @@ categories:
   - redken_bot
 description: See how to use @redken_bot in Telegram or discord with some examples!
 lang: en
-modified: 2022-05-04T13:44:33.201Z
+modified: 2022-05-06T22:05:08.163Z
 cover:
   image: karma.png
 ---
@@ -41,7 +41,7 @@ Redken uses admin privileges to:
 
 When the user is an admin of the chat, some commands like `/gconfig` will be available, but ignored for non-admin users, we'll come back to this later in this tutorial.
 
-I assume you might have checked the [Redken documentation]({{<ref "/pages/redken-en.md">}})... but let's go with the easy approach:
+I assume you might have checked the [Redken documentation]({{<relref "/pages/redken-en.md">}})... but let's go with the easy approach:
 
 As said in the docs:
 

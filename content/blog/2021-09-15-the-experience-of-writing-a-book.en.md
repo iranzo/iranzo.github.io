@@ -14,12 +14,12 @@ date: 2021-09-15 00:00:00 +0100
 categories:
   - Book
 lang: en
-modified: 2022-05-04T13:32:56.669Z
+modified: 2022-05-06T22:05:07.988Z
 ---
 
 I wanted to write about my experience (before I forget about it), and as some colleagues asked about it... here we go...
 
-As published in the blog entry [RHEL8 Administration book]({{<ref "2021-09-11-rhel8-administration.en.md">}}), some colleagues and I wrote a book on RHEL8 administration, which can be bought [here](https://s.iranzo.io/rhel8).
+As published in the blog entry [RHEL8 Administration book]({{<relref "2021-09-11-rhel8-administration.en.md">}}), some colleagues and I wrote a book on RHEL8 administration, which can be bought [here](https://s.iranzo.io/rhel8).
 
 Many years ago I started one about Linux, but every time a new paragraph was added, a lot of new 'TO-DO' items were appended as the information growth... and as it was a 'solo' project, I had other stuff to work on and was parked.
 

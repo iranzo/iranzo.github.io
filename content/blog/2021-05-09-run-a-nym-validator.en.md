@@ -15,10 +15,10 @@ date: 2021-05-09 12:40:34 +0200
 categories:
   - tech
 lang: en
-modified: 2022-05-04T13:03:13.637Z
+modified: 2022-05-06T22:05:07.935Z
 ---
 
-As said in the article about [mixnodes]({{<ref "2021-05-09-run-a-nym-mixnode.en.md">}}), NYM is a technology aiming for providing privacy for the communications.
+As said in the article about [mixnodes]({{<relref "2021-05-09-run-a-nym-mixnode.en.md">}}), NYM is a technology aiming for providing privacy for the communications.
 
 Apart of the mixnodes, other key piece in the infrastructure are the validators.
 
