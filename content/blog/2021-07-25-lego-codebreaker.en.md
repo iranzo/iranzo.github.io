@@ -20,7 +20,7 @@ categories:
   - LEGO
 description: Lego promotional material for Technic Owners using your own's car license plate
 lang: en
-modified: 2022-05-04T13:32:56.677Z
+modified: 2022-07-14T20:50:20.635Z
 ---
 
 If you're the owner of one of the following sets:
@@ -46,6 +46,7 @@ And go to the following URL's:
 - Porsche: <https://www.lego.com/es-es/campaigns/technic/codebreaker>
 - Bugatti: <https://www.lego.com/es-ar/campaigns/technic/bugatti-chiron/codebreaker>
 - Sian <https://www.lego.com/en-us/campaigns/lamborghini-sian/owners-club>
+- Ferrari Daytona SP3 <https://www.lego.com/es-es/vip-legotechnicferrari>
 
 Once your name and code is provided, you'll be redirected to a page with links to each one of the additional files
 
