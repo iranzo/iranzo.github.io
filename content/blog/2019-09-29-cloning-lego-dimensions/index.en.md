@@ -62,6 +62,6 @@ Trick here is:
 
 Doing this, you'll be able to clone or write the tags that were damaged and put new ones in their place to allow you continue playing as you did before!
 
-There was also a 'ready-to-print' set of pics for the tags in one of the forum posts at <http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip> which contains the images for each tag and possible vehicle.
+There was also a 'ready-to-print' set of pics for the tags in one of the forum posts at [http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip](https://web.archive.org/web/20210113032332/http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip/file) which contains the images for each tag and possible vehicle.
 
 Enjoy!
