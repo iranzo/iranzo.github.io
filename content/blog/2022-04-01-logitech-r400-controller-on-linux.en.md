@@ -17,17 +17,17 @@ cover:
   image: https://m.media-amazon.com/images/I/51-7XfmB4ZL.jpg
 ---
 
-Since long ago I had it in my mind getting one remote presenter, but most presenters just had two buttons, and the ones that looked to be valid for my use case, required four and seems that only `Rii` had similar devices, but I din't went for it as it was not a huge need, so I ended up with a mini keyboard I had for Rasbperry Pi and some debugging in case I had that need.
+Since long ago I had it in my mind getting one remote presenter, but most presenters just had two buttons, and the ones that looked to be valid for my use case, required four and seems that only `Rii` had similar devices, but I didn't went for it as it was not a huge need, so I ended up with a mini keyboard I had for Raspberry Pi and some debugging in case I had that need.
 
 But yesterday I found in the recycling IT area, together with several really old computers, a [Logitech R400 presentation remote](https://www.amazon.com/dp/B002GHBUTK?tag=redken08-20). It has one of those rubber coatings that make it comfortable at hand when it's new, but it's sticky once it gets older (had similar experience with other stuff, even umbrellas...)
 
-Some alcohol and a soft cloth helped removing that stickyness, so next step was to test it... plugged the receiver in the usb port, and put two batteries in... and it powered up, bot left and right buttons were working, and the laser pointer. Thing is that the remote has two additional buttons for starting presentation and going to blank screen that didn't worked.
+Some alcohol and a soft cloth helped removing that stickyness, so next step was to test it... plugged the receiver in the USB port, and put two batteries in... and it powered up, bot left and right buttons were working, and the laser pointer. Thing is that the remote has two additional buttons for starting presentation and going to blank screen that didn't worked.
 
-In a rush, I tought about opening it, thinking that the reason of having it discarded was that one, but nothing strange in the inside, everything was clean, no battery spill, etc, so I reassembed and started looking for information about it.
+In a rush, I thought about opening it, thinking that the reason of having it discarded was that one, but nothing strange in the inside, everything was clean, no battery spill, etc, so I reassembled and started looking for information about it.
 
 Using `xev` I was able to see that the key buttons were received on the computer, the one on the left, provided two different key codes and the one on the right just one, but was not mapped to anything.
 
-After some search, I found this [blogpost](https://derickrethans.nl/logitech-r400.html), but a copy-paste didn't worked... seems that the USB receiver had changed the identifier in the meantime so I had to update to match mines.
+After some search, I found this [blog post](https://derickrethans.nl/logitech-r400.html), but a copy-paste didn't worked... seems that the USB receiver had changed the identifier in the meantime so I had to update to match mines.
 
 First of all, I did checked with `lsusb` the device ID and Vendor ID, which was `046D` and `C52D`, so I used those values when filling the next two files.
 

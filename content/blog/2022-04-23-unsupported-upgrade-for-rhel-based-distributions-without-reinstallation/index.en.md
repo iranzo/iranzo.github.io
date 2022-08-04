@@ -67,7 +67,7 @@ In order to start, it is safe to perform some steps:
 - Have access to remote console, either via `BMC` or the virtualization platform if that's the case.
 - Check the documentation for the next release to see what are the breaking changes included in the release notes for each version, this will give us some hints about packages that we were using and are no longer available in our system.
 
-[^1]: `tmux` or `screen` allows to disconnect, reattach or even open new terminals without having to open a new ssh connection, this makes it a lot easier to spawn a new shell and operate without risking a disconnection from our system.
+[^1]: `tmux` or `screen` allows to disconnect, re-attach or even open new terminals without having to open a new ssh connection, this makes it a lot easier to spawn a new shell and operate without risking a disconnection from our system.
 
 ### Upgrade the system
 
@@ -128,7 +128,7 @@ Host 192.168.2.82
 RHEL 4.8 used `up2date` as method for connecting to `RHN`, however, as it is out of the support cycle I wouldn't expect to get RHN working for it.
 
 At that time, CentOS had the chance to create repositories and copy over the
-`yum` command so that it could be used on it, but't let's try to use what
+`yum` command so that it could be used on it, but let's try to use what
 we've in the system... first of all, we need to load the `RHEL` ISO image
 into our system.
 
@@ -331,7 +331,7 @@ package yum is not installed
 
 BAM!, rpm can't find the packages...
 
-Let's remove the old database of rpm's:
+Let's remove the old database of `rpm`:
 
 ```sh
 rm -fv /var/lib/rpm/__db*
@@ -498,7 +498,7 @@ Ok, so we're back on having issues with rpm features that we don't have at EL5..
 
 This approach brings us to the egg-chicken issue... we can't install the packages because our installed version is old, and until we update them, we can't install the other updates... and even `cpio` is older than the version used, so we might need to use an intermediate machine to uncompress the rpm related packages copy them over, and use them to install the updates on the system itself.
 
-We need to prepare and uncompress the following files fromt the install media on a newer machine
+We need to prepare and uncompress the following files from the install media on a newer machine
 
 ```sh
 PACKAGES="db4-4.7.25-16.el6.x86_64.rpm glibc-2.12-1.7.el6.x86_64.rpm glibc-common-2.12-1.7.el6.x86_64.rpm glibc-utils-2.12-1.7.el6.x86_64.rpm libcap-2.16-5.2.el6.x86_64.rpm lua-5.1.4-4.1.el6.x86_64.rpm popt-1.13-7.el6.x86_64.rpm rpm-4.8.0-12.el6.x86_64.rpm rpm-build-4.8.0-12.el6.x86_64.rpm rpm-libs-4.8.0-12.el6.x86_64.rpm rpm-python-4.8.0-12.el6.x86_64.rpm xz-libs-4.999.9-0.3.beta.20091007git.el6.x86_64.rpm"

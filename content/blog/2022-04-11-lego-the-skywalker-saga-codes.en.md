@@ -3,7 +3,7 @@ title: Lego The SkyWalker Saga Codes
 date: 2022-04-10T23:15:35.086Z
 tags:
   - LEGO
-  - XBox
+  - Xbox
   - PlayStation
   - Switch
   - Nintendo
@@ -14,7 +14,7 @@ cover:
   image: https://m.media-amazon.com/images/I/71y+jn1bMPL.jpg
 ---
 
-Inside the game The Sky Walker Saga [PS4](https://www.amazon.es/dp/B08VTB4X2J?tag=redken-21), [PS5](https://www.amazon.es/dp/B08VTC518G?tag=redken-21), [XBox](https://www.amazon.es/dp/B08VTBT8TY?tag=redken-21), [Nintendo Switch](https://www.amazon.es/dp/B08VTDBTDB?tag=redken-21), you can introduce some codes to unlock additional characters to use, so far this is the list I've found:
+Inside the game The Sky Walker Saga [PS4](https://www.amazon.es/dp/B08VTB4X2J?tag=redken-21), [PS5](https://www.amazon.es/dp/B08VTC518G?tag=redken-21), [Xbox](https://www.amazon.es/dp/B08VTBT8TY?tag=redken-21), [Nintendo Switch](https://www.amazon.es/dp/B08VTDBTDB?tag=redken-21), you can introduce some codes to unlock additional characters to use, so far this is the list I've found:
 
 | Code      | Character/vehicle           |
 | --------- | --------------------------- |
