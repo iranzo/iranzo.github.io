@@ -192,7 +192,7 @@ It is possible to use **selectors**, for example, move all the virtual machines 
 kubectl drain <node name> --delete-local-data --ignore-daemonsets=true --force --pod-selector=kubevirt.io=virt-launcher
 ```
 
-{{<warning "Reenabling node after eviction">}}
+{{<warning title="Reenabling node after eviction">}}
 
 Once the node has been tainted for eviction, we can use `kubectl uncordon <nodename>` to make it schedulable again.
 
