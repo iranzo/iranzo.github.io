@@ -25,7 +25,7 @@ outputs:
 
 cover:
   image: www.png
-modified: 2022-05-06T22:09:05.424Z
+modified: 2022-08-19T11:26:59.267Z
 ---
 
 ## [Citellus](https://github.com/citellusorg/citellus):
@@ -329,7 +329,7 @@ mode: fs snapshot sosreport-20170724-175510/crta02
 ### What does M.a.g.u.i. Does?
 
 - It runs citellus against each sosreport, gathers and groups the data per plugin.
-- Runs its own plugins against the data received to hilight issues that depend on several systems
+- Runs its own plugins against the data received to highlight issues that depend on several systems
 - Allows to grab remote host data via ansible host lists
 
 ---

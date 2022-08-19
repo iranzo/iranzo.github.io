@@ -12,7 +12,7 @@ date: 2022-04-01T07:31:42.603Z
 categories:
   - tech
   - FOSS
-modified: 2022-05-04T13:32:56.654Z
+modified: 2022-08-19T11:25:21.501Z
 cover:
   image: https://m.media-amazon.com/images/I/51-7XfmB4ZL.jpg
 ---
@@ -21,7 +21,7 @@ Since long ago I had it in my mind getting one remote presenter, but most presen
 
 But yesterday I found in the recycling IT area, together with several really old computers, a [Logitech R400 presentation remote](https://www.amazon.com/dp/B002GHBUTK?tag=redken08-20). It has one of those rubber coatings that make it comfortable at hand when it's new, but it's sticky once it gets older (had similar experience with other stuff, even umbrellas...)
 
-Some alcohol and a soft cloth helped removing that stickyness, so next step was to test it... plugged the receiver in the USB port, and put two batteries in... and it powered up, bot left and right buttons were working, and the laser pointer. Thing is that the remote has two additional buttons for starting presentation and going to blank screen that didn't worked.
+Some alcohol and a soft cloth helped removing that stickiness, so next step was to test it... plugged the receiver in the USB port, and put two batteries in... and it powered up, bot left and right buttons were working, and the laser pointer. Thing is that the remote has two additional buttons for starting presentation and going to blank screen that didn't worked.
 
 In a rush, I thought about opening it, thinking that the reason of having it discarded was that one, but nothing strange in the inside, everything was clean, no battery spill, etc, so I reassembled and started looking for information about it.
 
