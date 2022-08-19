@@ -25,7 +25,7 @@ outputs:
 
 cover:
   image: www.png
-modified: 2022-08-19T11:26:59.267Z
+modified: 2022-08-19T11:27:51.635Z
 ---
 
 ## [Citellus](https://github.com/citellusorg/citellus):
@@ -167,7 +167,7 @@ For example, it will be easy to report on systems registered against RHN instead
 - It’s not Citellus or ‘sosreports’, SOS collects data from the system, Citellus, runs tests/plugins against the data collected.
 - Sosreport is installed in RHEL base channels, this makes it well spread, but also, slower to get changes.
 - Frequently, data about errors or errors to be, is already in sosreports.
-- Citellus is based on known issues and easy to extend with new ones, requires faster devel cycle, targeting more a devops or support teams as target audience.
+- Citellus is based on known issues and easy to extend with new ones, requires faster devel cycle, targeting more a DEVOPS or support teams as target audience.
 
 Note: Change speaker after this
 
