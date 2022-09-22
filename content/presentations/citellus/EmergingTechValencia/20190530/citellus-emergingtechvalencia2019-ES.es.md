@@ -15,7 +15,7 @@ tags:
   - python
   - emergingtechvlc
   - reveal
-layout: post
+layout: list
 date: 2019-05-30 18:30:00 +0100
 categories:
   - presentations

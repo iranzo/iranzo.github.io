@@ -9,7 +9,7 @@ tags:
   - docker
   - DockerHub
   - reveal
-layout: post
+layout: list
 date: 2019-01-16 16:00:00 +0100
 categories:
   - presentations

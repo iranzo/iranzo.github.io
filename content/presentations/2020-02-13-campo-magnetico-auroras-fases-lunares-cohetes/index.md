@@ -11,7 +11,7 @@ tags:
   - magnetic field
   - astronomy
   - reveal
-layout: post
+layout: list
 date: 2020-02-13 22:15:00 +0100
 lang: en
 slug: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes

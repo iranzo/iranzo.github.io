@@ -7,7 +7,7 @@ tags:
   - fedora
   - reveal
 lang: es
-layout: post
+layout: list
 date: 2008-08-30 16:00:00 +0100
 categories:
   - presentations

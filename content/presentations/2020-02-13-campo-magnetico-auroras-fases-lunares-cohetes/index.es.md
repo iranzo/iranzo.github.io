@@ -13,7 +13,7 @@ tags:
   - ciencia
   - astronomy
   - reveal
-layout: post
+layout: list
 date: 2020-02-06 22:30:00 +0100
 lang: es
 slug: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes

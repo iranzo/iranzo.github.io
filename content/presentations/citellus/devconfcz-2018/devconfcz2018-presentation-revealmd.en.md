@@ -14,7 +14,7 @@ tags:
   - container
   - python
   - reveal
-layout: post
+layout: list
 date: 2018-01-27 16:00:00 +0100
 
 categories:

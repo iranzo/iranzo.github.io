@@ -7,7 +7,7 @@ tags:
   - sysadmin
   - security
   - reveal
-layout: post
+layout: list
 date: 2002-04-15 16:00:00 +0100
 categories:
   - presentations

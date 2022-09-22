@@ -6,7 +6,7 @@ tags:
   - valux
   - reveal
 lang: es
-layout: post
+layout: list
 date: 2010-03-08 16:00:00 +0100
 categories:
   - presentations

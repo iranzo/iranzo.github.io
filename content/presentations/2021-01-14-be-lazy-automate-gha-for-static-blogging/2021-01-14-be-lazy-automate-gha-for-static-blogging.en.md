@@ -7,7 +7,7 @@ tags:
   - github
   - github actions
   - reveal
-layout: post
+layout: list
 date: 2021-01-14 22:24:00 +0100
 categories:
   - presentations
