@@ -19,3 +19,8 @@ jobs:
     steps:
       - name: Broken Link Check
         uses: technote-space/broken-link-checker-action@v2.3.1
+        with:
+          EXCLUDED_KEYWORDS: |
+            docs.github.com
+            camo.githubusercontent.com
+            github.com/apps/dependabot
