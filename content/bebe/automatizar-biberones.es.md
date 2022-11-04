@@ -2,7 +2,7 @@
 lang: es
 title: Automatizar los biberones...
 layout: post
-date: 2012-11-04 00:00:47 +0100
+date: 2022-11-04 00:00:47 +0100
 comments: true
 tags:
   - crianza
@@ -10,6 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
+modified: 2022-11-04T12:17:10.289Z
 ---
 
 Hace tiempo en el articulo [Biberones]({{<relref "biberones.es.md">}}) se hablaba del proceso de uso, preparación, etc...
