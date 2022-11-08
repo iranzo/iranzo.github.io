@@ -8,6 +8,7 @@ tags:
   - automation
   - dit
   - foss
+  - ansible
 layout: post
 date: 2020-12-01 14:10:34 +0200
 categories:

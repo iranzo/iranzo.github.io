@@ -9,6 +9,7 @@ tags:
   - system administration
   - RHCSA
   - writing a book
+  - ansible
 layout: post
 date: 2021-09-15 00:00:00 +0100
 categories:

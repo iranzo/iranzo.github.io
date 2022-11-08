@@ -6,6 +6,7 @@ tags:
   - Citellus
   - Magui
   - FOSS
+  - ansible
   - risu
 categories:
   - tech

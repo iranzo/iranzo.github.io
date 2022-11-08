@@ -7,6 +7,7 @@ categories:
 title: Ansible - dynamically include Jinja templates and tasks
 tags:
   - Tips
+  - ansible
 date: 2022-09-24T11:13:32.418Z
 ---
 
