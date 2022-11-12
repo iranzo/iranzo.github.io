@@ -10,7 +10,7 @@ categories: blog
 lang: es
 slug: paella-howto
 translationKey: paella-howto
-modified: 2022-05-04T12:50:57.153Z
+modified: 2022-11-12T00:18:48.927Z
 cover:
   image: 20120708134340.jpg
 ---
@@ -23,8 +23,8 @@ Este documento está basado en la receta original y fotos que le pasé a mi comp
 - [Arroz bomba 🛒](https://www.amazon.es/dp/B00986HSH0?tag=redken-21) (equivalente a 7 puñados)
 - Pollo y conejo (700 y 400 gr)
 - Tomate rallado (equivalente a 5 cucharadas)
-- [Pimentón Rojo 🛒](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21&psc=1)
-- [Colorante 🛒](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) / [Azafrán](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21&psc=1) (una cucharadita rasa / 300mg hebra)
+- [Pimentón Rojo 🛒](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21)
+- [Colorante 🛒](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) / [Azafrán](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21) (una cucharadita rasa / 300mg hebra)
 - [Aceite de oliva 🛒](https://www.amazon.es/dp/B0781Z7TD4?tag=redken-21) para sofreir (poca cantidad para que no quede aceitosa)
 - Sal
 - Agua (preferiblemente de Valencia)

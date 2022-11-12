@@ -17,7 +17,7 @@ date: 2021-01-01 00:00:00 +0200
 categories:
   - tech
 lang: en
-modified: 2022-05-04T14:05:41.681Z
+modified: 2022-11-12T00:18:48.905Z
 ---
 
 ## Introduction
@@ -71,8 +71,8 @@ This device, in comparison, had better throughput in 5Ghz mode (with a bit highe
 
 As I was happy with the UniFi setup, I also got some other hardware:
 
-- [US-Gateway](https://www.amazon.es/dp/B00LV8YZLK?tag=redken-21&psc=1) to be directly connected to my router
-- [US-8 ports switch](https://www.amazon.es/dp/B01N362YPG?tag=redken-21&psc=1) to replace a underused 24 ports one
+- [US-Gateway](https://www.amazon.es/dp/B00LV8YZLK?tag=redken-21) to be directly connected to my router
+- [US-8 ports switch](https://www.amazon.es/dp/B01N362YPG?tag=redken-21) to replace a underused 24 ports one
 - 2 [NanoHD AP](https://www.amazon.es/dp/B07FFNTLJD?tag=redken-21)
 
 They were connected in the following way:

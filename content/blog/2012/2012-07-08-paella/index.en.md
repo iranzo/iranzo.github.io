@@ -11,7 +11,7 @@ categories: blog
 lang: en
 slug: paella-howto
 translationKey: paella-howto
-modified: 2022-05-04T12:50:57.150Z
+modified: 2022-11-12T00:18:48.919Z
 cover:
   image: 20120708134340.jpg
 ---
@@ -25,8 +25,8 @@ This document is based on the original recipe and pictures that I gave to my col
 - [Rice `bomba` 🛒](https://www.amazon.es/dp/B00986HSH0?tag=redken-21) (7 handfuls)
 - Chicken and Rabbit (700 and 400 grams)
 - Grated tomato (The equivalent to 5 spoons)
-- Sweet Red Paprika Powder ([`Pimentón Rojo` 🛒](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21&psc=1))
-- [Spanish Saffron 🛒](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21&psc=1) (300mg in threads) or [E102 dye](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) (small spoon just to the border)
+- Sweet Red Paprika Powder ([`Pimentón Rojo` 🛒](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21))
+- [Spanish Saffron 🛒](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21) (300mg in threads) or [E102 dye](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) (small spoon just to the border)
 - [Olive oil 🛒](https://www.amazon.es/dp/B0781Z7TD4?tag=redken-21) to stir-fry (not much, so it doesn't get oily)
 - [Rosemary 🛒](https://www.amazon.es/dp/B01HN23N3S?tag=redken-21)
 - Salt

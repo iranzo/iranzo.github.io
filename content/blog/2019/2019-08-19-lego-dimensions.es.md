@@ -18,7 +18,7 @@ categories:
 lang: es
 slug: lego-dimensions
 translationKey: lego-dimensions
-modified: 2022-05-04T13:32:56.792Z
+modified: 2022-11-12T00:18:48.911Z
 cover:
   image: https://www.lego.com/cdn/cs/set/assets/blt866dc839f8c741cf/dimensions-logo.png
 ---
@@ -132,12 +132,12 @@ Los `Fun Pack` añaden personaje y un gadget o vehículo:
 | 71237   | Fun pack | [Aquaman 🛒](https://www.amazon.es/dp/B00Y2W15G0?tag=redken-21)                                         | [![Aquaman](http://images.amazon.com/images/P/B00Y2W15G0.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B00Y2W15G0?tag=redken-21)                     |
 | 71238   | Fun pack | [Cyberman 🛒](https://www.amazon.es/dp/B0119SE9XU?tag=redken-21)                                        | [![Cyberman](http://images.amazon.com/images/P/B0119SE9XU.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B0119SE9XU?tag=redken-21)                    |
 | 71239   | Fun pack | [Ninjago - Lloyd 🛒](https://www.amazon.es/dp/B00Y2W0EA8?tag=redken-21)                                 | [![Ninjago Lloyd](http://images.amazon.com/images/P/B00Y2W0EA8.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B00Y2W0EA8?tag=redken-21)               |
-| 71240   | Fun pack | [DC Bane 🛒](https://www.amazon.es/dp/B00Y2W1DNA?tag=redken-21&psc=1)                                   | [![Bane DC COmics](http://images.amazon.com/images/P/B00Y2W1DNA.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B00Y2W1DNA?tag=redken-21&psc=1)        |
+| 71240   | Fun pack | [DC Bane 🛒](https://www.amazon.es/dp/B00Y2W1DNA?tag=redken-21)                                         | [![Bane DC COmics](http://images.amazon.com/images/P/B00Y2W1DNA.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B00Y2W1DNA?tag=redken-21)              |
 | 71241   | Fun pack | [Moquete 🛒](https://www.amazon.es/dp/B013WOAYHO?tag=redken-21)                                         | [![Slimer - Moquete](http://images.amazon.com/images/P/B013WOAYHO.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B013WOAYHO?tag=redken-21)            |
 | 71251   | Fun pack | [El equipo A 🛒](https://www.amazon.es/dp/B01H1R5GZS?tag=redken-21)                                     | [![El equipo A](http://images.amazon.com/images/P/B01H1R5GZS.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01H1R5GZS?tag=redken-21)                 |
 | 71257   | Fun pack | [Animales fantásticos - Tina 🛒](https://www.amazon.es/dp/B01GG2ZAGY?tag=redken-21)                     | [![Tina Goldstein](http://images.amazon.com/images/P/B01GG2ZAGY.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01GG2ZAGY?tag=redken-21)              |
 | 71258   | Fun pack | [E.T.](https://www.amazon.es/dp/B01FYJXHYC?tag=redken-21)                                               | [![E.T. El extraterrestre](http://images.amazon.com/images/P/B01FYJXHYC.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01FYJXHYC?tag=redken-21)      |
-| 71266   | Fun pack | [Lego City - Chase McCain 🛒](https://www.amazon.es/dp/B01N3B36TX?tag=redken-21&psc=1)                  | [![Chase McCain](http://images.amazon.com/images/P/B01N3B36TX.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01N3B36TX?tag=redken-21&psc=1)          |
+| 71266   | Fun pack | [Lego City - Chase McCain 🛒](https://www.amazon.es/dp/B01N3B36TX?tag=redken-21)                        | [![Chase McCain](http://images.amazon.com/images/P/B01N3B36TX.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01N3B36TX?tag=redken-21)                |
 | 71285   | Fun pack | [Hora de Aventuras - Marceline, la reina vampira 🛒](https://www.amazon.es/dp/B01GG2ZAHI?tag=redken-21) | [![Marceline Hora de aventuras](http://images.amazon.com/images/P/B01GG2ZAHI.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01GG2ZAHI?tag=redken-21) |
 | 71286   | Fun pack | [Michael Knight - El coche fantástico 🛒](https://www.amazon.es/dp/B01N2JPO9J?tag=redken-21)            | [![El coche fantástico](http://images.amazon.com/images/P/B01N2JPO9J.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B01N2JPO9J?tag=redken-21)         |
 | 71287   | Fun pack | [Teen Titans GO! 🛒](https://www.amazon.es/dp/B072JH91YN?tag=redken-21)                                 | [![Teen Titans Go!](http://images.amazon.com/images/P/B072JH91YN.01._PI_SCMZZZZZZZ_.jpg)](https://www.amazon.es/dp/B072JH91YN?tag=redken-21)             |

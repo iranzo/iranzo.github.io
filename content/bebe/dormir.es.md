@@ -16,7 +16,7 @@ tags:
 categories:
   - bebe
 
-modified: 2022-05-04T12:56:27.696Z
+modified: 2022-11-12T00:18:48.892Z
 ---
 
 Tema complicado donde los haya... aquí podrás escuchar de todo:
@@ -33,7 +33,7 @@ En cualquier caso, cosas importantes a tener en cuenta:
 
 - En el caso de cuna de colecho o separada, se suele recomendar poner algo de ropa de la madre para que el niño la huela y le ayude a estar calmado.
 - Utilizar una pequeña ['cuña' que levante el colchón un poco](https://www.amazon.es/dp/B00TV61QF2?tag=redken-21) (dejando los pies más abajo, para que en caso de que el niño regurgite o tenga mocos, facilitando que los expulse y no se acumulen en la parte superior del tronco).
-- Las almohadas no son recomendables para los bebés, es conveniente que duerman sin ninguna y que tengan un almohadón lateral llamado [antivuelco](https://www.amazon.es/dp/B01I2YJXLC?tag=redken-21&psc=1) por los dos lados, para evitar que el niño se pueda poner 'boca abajo'.
+- Las almohadas no son recomendables para los bebés, es conveniente que duerman sin ninguna y que tengan un almohadón lateral llamado [antivuelco](https://www.amazon.es/dp/B01I2YJXLC?tag=redken-21) por los dos lados, para evitar que el niño se pueda poner 'boca abajo'.
 - En todos los casos, es recomendable un [colchón firme](https://www.amazon.es/dp/B01M33ULBQ?tag=redken-21) (para evitar que el niño se 'hunda'), así como poner un [empapador](https://www.amazon.es/dp/B019CR0NN0?tag=redken-21) por debajo de las sábanas bajeras y en algunos casos un protector de colchón (el problema es que suelen ser plásticos y no favorecen la transpiración).
 - En caso de niños 'movidos', considerar el uso de [sábanas con 'pinzas' o saco](https://www.amazon.es/dp/B07B9YK6QL?tag=redken-21) para que el niño no las pueda mover, o directamente dormir con un 'mono', que lo mantendrá abrigado pero con libertad de movimiento
 

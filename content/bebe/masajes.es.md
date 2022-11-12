@@ -13,7 +13,7 @@ tags:
 categories:
   - bebe
 
-modified: 2022-05-04T12:58:50.636Z
+modified: 2022-11-12T00:18:48.901Z
 ---
 
 Los masajes forman parte del cuidado tanto de la madre como del niño, desde los primeros momentos del embarazo para una a los primeros momentos del bebé.
@@ -30,7 +30,7 @@ Para realizarlos:
   - dando círculos
 - Pechos:
   - Circular ascendente
-  - Pezón: [antigrietas (100% lanolina)](https://www.amazon.es/dp/B001TPS9XU?tag=redken-21&psc=1) a partir del 6º mes de embarazo.
+  - Pezón: [antigrietas (100% lanolina)](https://www.amazon.es/dp/B001TPS9XU?tag=redken-21) a partir del 6º mes de embarazo.
     - Si el bebé ya ha nacido, ha de ser uno compatible con la lactancia (como el indicado arriba).
 
 ## Masajes para el bebé

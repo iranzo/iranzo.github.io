@@ -10,7 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2022-05-06T22:05:07.853Z
+modified: 2022-11-12T00:18:48.897Z
 ---
 
 ## Baño
@@ -46,7 +46,7 @@ El cambio para la espalda fue a mejor, pero bien es cierto, de los primeros día
 
 Bien es cierto que en las dos bañeras, había un pequeño respaldo para apoyarlo, que daba algo de libertad para liberar una mano y usar mejor el jabón, manopla, etc que se agradecía bastante.
 
-Actualmente, y desde que por desarrollo normal del niño, ya aguantaba mejor algo incorporado, pasamos a una bañera 'plegable' que nos dejaron de [Stokke](https://www.amazon.es/dp/B00KFH13QI?tag=redken-21&psc=1) y en los viajes, a una rígida tipo IKEA.
+Actualmente, y desde que por desarrollo normal del niño, ya aguantaba mejor algo incorporado, pasamos a una bañera 'plegable' que nos dejaron de [Stokke](https://www.amazon.es/dp/B00KFH13QI?tag=redken-21) y en los viajes, a una rígida tipo IKEA.
 
 A día de hoy, si tuviera que volver a empezar y considerando los problemas de 'espacio' que tienes si no te deja alguien las cosas, quizás una bañera plegable con un [pequeño respaldo](https://www.amazon.es/dp/B004WZGO36?tag=redken-21) que se pueda introducir o retirar habría sido lo más cómodo.
 
