@@ -14,9 +14,9 @@ done
 
 SERVICE_NAME="$1"
 NAMESPACE="quay-enterprise"
-ROUTE_HOST_PIT="${SERVICE_NAME}.${NAMESPACE}.apps.pit-fed.e2e.bos.redhat.com"
-ROUTE_HOST_LEO="${SERVICE_NAME}.${NAMESPACE}.apps.leo-fed.e2e.bos.redhat.com"
-ROUTE_HOST_AWS="${SERVICE_NAME}.${NAMESPACE}.apps.aws-fed.e2e.bos.redhat.com"
+ROUTE_HOST_PIT="${SERVICE_NAME}.${NAMESPACE}.apps.pit-fed.example.com"
+ROUTE_HOST_LEO="${SERVICE_NAME}.${NAMESPACE}.apps.leo-fed.example.com"
+ROUTE_HOST_AWS="${SERVICE_NAME}.${NAMESPACE}.apps.aws-fed.example.com"
 
 sans="localhost,localhost.localdomain,127.0.0.1,${ROUTE_HOST_PIT},${ROUTE_HOST_LEO},${ROUTE_HOST_AWS},${SERVICE_NAME},${SERVICE_NAME}.${NAMESPACE},${SERVICE_NAME}.${NAMESPACE}.svc.cluster.local"
 
