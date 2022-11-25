@@ -12,7 +12,7 @@ categories:
   - tech
   - risu
 lang: en
-modified: 2022-05-04T13:32:56.723Z
+modified: 2022-11-25T13:19:53.861Z
 ---
 
 I wanted to practice a bit Go programing, so I divided that task in two parts, one, adding a golang extension for Citellus and a sample, but working plugin using it.
@@ -93,7 +93,7 @@ Things to have in consideration:
 - Undefined variables will make the program compilation to fail.
 - Variable types are checked, so expect to use conversion when reading values, etc to have it compiling and working.
 
-For the [citellus]({tag}citellus) specifics:
+For the [citellus]({{< relref "/tags/citellus" >}}) specifics:
 
 - In above example, we use Citellus Return Codes as defined in the citellus guidelines, but when executed with `go run XXX` only standard error codes are returned
 - As citellus metadata parser gets it from headers, an update to the default function was done so that the comment character can be defined, in case of Go programs it is: `//` citellus then takes it into consideration for the offsets to grab the data.
