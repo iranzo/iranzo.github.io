@@ -13,14 +13,14 @@ categories:
   - FOSS
 outputs:
   - Reveal
-modified: 2022-05-04T13:59:44.646Z
+modified: 2022-12-14T14:52:45.349Z
 ---
 
 # Introducción al Software Libre
 
 > Res publica non dominetur
 
-Pablo Iranzo Gómez (https://iranzo.github.io)
+Pablo Iranzo Gómez (https://iranzo.io)
 
 ---
 

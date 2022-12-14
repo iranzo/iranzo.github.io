@@ -15,12 +15,12 @@ categories:
   - presentations
 outputs:
   - Reveal
-modified: 2022-05-04T13:58:18.556Z
+modified: 2022-12-14T14:52:45.400Z
 ---
 
 ## Project hosting and automation
 
-/me: Pablo Iranzo Gómez ( <https://iranzo.github.io> )
+/me: Pablo Iranzo Gómez ( <https://iranzo.io> )
 
 ---
 
@@ -251,4 +251,4 @@ Fork to your repo and get:
 ## Questions?
 
 Pablo.Iranzo@gmail.com
-<https://iranzo.github.io>
+<https://iranzo.io>

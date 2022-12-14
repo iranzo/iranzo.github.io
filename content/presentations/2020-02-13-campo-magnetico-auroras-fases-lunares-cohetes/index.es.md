@@ -23,7 +23,7 @@ outputs:
 
 cover:
   image: aurora.jpg
-modified: 2022-05-04T13:58:27.075Z
+modified: 2022-12-14T14:56:16.491Z
 ---
 
 ## Disclaimer
@@ -35,7 +35,7 @@ modified: 2022-05-04T13:58:27.075Z
 
 ## Campo Magnético, Auroras, Fases Lunares, Eclipses y Cohetes
 
-Pablo Iranzo Gómez<br><https://iranzo.github.io>
+Pablo Iranzo Gómez<br><https://iranzo.io>
 
 <small>Jueves 13 Febrero 2020</small>
 
@@ -235,7 +235,7 @@ Los cohetes se hacen con 'fases' para ser más ligeros y gastar menos energía.
 ## Bibliografía
 
 - [Tormentas solares](https://www.xataka.com/espacio/tormentas-solares-los-efectos-directos-e-indirectos-sobre-la-tierra-de-las-llamaradas-solares-m)
-- [Auroras: Magia en el cielo](https://iranzo.github.io/blog/2004/05/24/auroras-magia-en-el-cielo-es/)
+- [Auroras: Magia en el cielo]({{<relref "2004-05-24-Auroras-Magia-en-el-Cielo.es.md"  >}})
 - [Cómo empezaron las cosas](https://www.amazon.es/dp/B00IMJU4HK?tag=redken-21)
 
 ---

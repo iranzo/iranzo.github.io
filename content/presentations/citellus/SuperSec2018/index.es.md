@@ -22,7 +22,7 @@ categories:
   - risu
 outputs:
   - Reveal
-modified: 2022-05-04T14:45:27.150Z
+modified: 2022-12-14T15:18:57.059Z
 ---
 
 ## [Citellus](https://risuorg.github.io):
@@ -44,7 +44,7 @@ SuperSec 2018 Almería 12-13 Mayo
     - Principal Software Maintenance Engineer - OpenStack - Enterprise Cloud Support
         - RHCA Level V: #110-215-852 (RHC{A,SS,DS,VA,E,SA,SP,AOSP}, JBCAA)
 - URLS
-    - blog: https://iranzo.github.io
+    - blog: https://iranzo.io
     - <https://linkedin.com/in/iranzo/>
     - <https://github.com/iranzo>
     - <https://twitter.com/iranzop>
@@ -69,7 +69,7 @@ Empecé a 'vivir' del software libre en 2004 y a trabajar en Red Hat en 2006 com
 
 - [Robin Černín](https://zerodayz.github.io/) un compañero de soporte tras una guardia de fin de semana revisando una y otra vez las mismas configuraciones en diversos hosts comenzó la idea.
 
-- Unos scripts sencillos y un 'wrapper' después, la herramienta fue tomando forma, poco después, [Pablo Iranzo](https://iranzo.github.io) adaptó el 'wrapper' a python para proporcionarle características más avanzadas.
+- Unos scripts sencillos y un 'wrapper' después, la herramienta fue tomando forma, poco después, [Pablo Iranzo](https://iranzo.io) adaptó el 'wrapper' a python para proporcionarle características más avanzadas.
 
 - En esos primeros momentos también se mantuvieron conversaciones con ingeniería y como resultado, un nuevo diseño de los tests más sencillo fue adoptado.
 
@@ -421,7 +421,7 @@ mode: fs snapshot sosreport-20170724-175510/crta02
 
 - Viene en el mismo repositorio que Citellus y se ejecuta especificando los diversos sosreports:
 
-  ```sh
+  ````sh
   [piranzo@collab-shell]$ ~/citellus/magui.py * -i seqno
       _
   _( )_  Magui:
@@ -442,28 +442,27 @@ mode: fs snapshot sosreport-20170724-175510/crta02
                                                               'rc': 10},
                                               'controller2': {'err': u'2b65adb0-787e-11e7-81a8-26480628c14c:285019878\n',
                                                               'out': u'',
-                                                              'rc': 10}}}
-  ```
+                                                              'rc': 10}}}```
 
-```
+  ````
 
 - En este ejemplo (UUID and SEQNO se muestra para cada controlador y vemos que el controller2 tiene una sequencia distinta y menos actualizada.
 
 </small>
 
-----
+---
 
 ## Siguientes pasos con Magui?
 
 <small>
 
 - Dispone de algunos plugins en este momento:
-    - Agregan data de citellus ordenada por plugin para comparar rápidamente
-    - Muestra los datos de 'metadatos' de forma separada para contrastar valores
-    - `pipeline-yaml`, `policy.json` y otros (asociados a OpenStack)
-    - `seqno` de galera
-    - `redhat-release` entre equipos
-    - Faraday: compara ficheros que deban ser iguales o distintos entre equipos
+  - Agregan data de citellus ordenada por plugin para comparar rápidamente
+  - Muestra los datos de 'metadatos' de forma separada para contrastar valores
+  - `pipeline-yaml`, `policy.json` y otros (asociados a OpenStack)
+  - `seqno` de galera
+  - `redhat-release` entre equipos
+  - Faraday: compara ficheros que deban ser iguales o distintos entre equipos
 
 </small>
 
@@ -483,17 +482,22 @@ mode: fs snapshot sosreport-20170724-175510/crta02
 ---
 
 ## Otros recursos
+
 Blog posts:
 
 <small>
 
-- Citellus tagged posts: https://iranzo.github.io/blog/tag/citellus/
-- <http://iranzo.github.io/blog/2017/07/26/Citellus-framework-for-detecting-known-issues/>
-- <https://iranzo.github.io/blog/2017/07/31/Magui-for-analysis-of-issues-across-several-hosts/>
-- <https://iranzo.github.io/blog/2017/08/17/Jenkins-for-running-CI-tests/>
-- <https://iranzo.github.io/blog/2017/10/26/i18n-and-bash8-in-bash/>
-- <https://iranzo.github.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/>
-- DevConf.cz 2018 recording <https://www.youtube.com/watch?v=SDzzqrUdn5A>
+- [Citellus tagged posts]({{< relref "/tags/citellus" >}})
+- [Citellus Framework for detecting known issues]({{< relref path="2017-07-26-Citellus-framework-for-detecting-known-issues.en.md" lang="en" >}})
+- [Magui for analysis of issues across several hosts]({{< relref path="2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.en.md" lang="en" >}})
+
+- [Jenkins for running CI tests]({{< relref path="/blog/2017/2017-08-17-Jenkins-for-running-CI-tests/2017-08-17-Jenkins-for-running-CI-tests.en.md" lang="en" >}})
+
+- [i18n and bash]({{< relref path="2017-10-26-i18n-and-bash8-in-bash.en.md" lang="en" >}})
+
+- [Recent changes in Magui and Citellus]({{< relref path="2018-01-16-recent-changes-in-magui-and-citellus.en.md" lang="en" >}})
+
+- [DevConf.cz 2018 recording](https://www.youtube.com/watch?v=SDzzqrUdn5A)
 
 </small>
 
@@ -509,7 +513,7 @@ Ven a #citellus en Freenode o contacta con nosotros:
 
 - https://risuorg.github.io
 - citellus _AT_ googlegroups.com
-    - <https://groups.google.com/forum/#!forum/citellus>
+  - <https://groups.google.com/forum/#!forum/citellus>
 - Issue en github <https://github.com/citellusorg/citellus/issues>
 
 </small>

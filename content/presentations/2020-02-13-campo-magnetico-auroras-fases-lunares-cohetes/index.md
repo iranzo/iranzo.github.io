@@ -18,7 +18,7 @@ slug: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 translationKey: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 outputs:
   - Reveal
-modified: 2022-05-04T13:56:41.193Z
+modified: 2022-12-14T14:59:37.945Z
 ---
 
 ## Disclaimer
@@ -30,7 +30,7 @@ modified: 2022-05-04T13:56:41.193Z
 
 ## Magnetic Field, Aurora, Moon Phases and Rockets
 
-Pablo Iranzo Gómez<br><https://iranzo.github.io>
+Pablo Iranzo Gómez<br><https://iranzo.io>
 
 <small>Thursday 13th, February 2020</small>
 
@@ -229,7 +229,8 @@ Rockets are made in 'sections' that can be dropped to be lighter and use less en
 ## Bibliography
 
 - [Solar storms](https://www.xataka.com/espacio/tormentas-solares-los-efectos-directos-e-indirectos-sobre-la-tierra-de-las-llamaradas-solares-m)
-- [Auroras: Magic in the sky](https://iranzo.github.io/blog/2004/05/24/auroras-magia-en-el-cielo-es/)
+- [Auroras: Magic in the sky]({{<relref path="2004-05-24-Auroras-Magia-en-el-Cielo.es.md"  lang="es" >}})
+
 - [How things started](https://www.amazon.es/dp/B00IMJU4HK?tag=redken-21)
 
 ---

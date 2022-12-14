@@ -3,7 +3,7 @@ https://keybase.io/iranzo
 
 I hereby claim:
 
-  * I am an admin of https://iranzo.github.io
+  * I am an admin of https://iranzo.io
   * I am iranzo (https://keybase.io/iranzo) on keybase.
   * I have a public key ASA0uqX-6IrtxKWWXqYBw8Dua_eWzatdfHNWavjIiFb_Fwo
 
@@ -19,7 +19,7 @@ To do so, I am signing this object:
             "username": "iranzo"
         },
         "service": {
-            "hostname": "iranzo.github.io",
+            "hostname": "iranzo.io",
             "protocol": "https:"
         },
         "type": "web_service_binding",

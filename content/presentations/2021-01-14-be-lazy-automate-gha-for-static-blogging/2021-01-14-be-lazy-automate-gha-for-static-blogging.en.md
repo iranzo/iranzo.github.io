@@ -14,12 +14,12 @@ categories:
   - CMS
 outputs:
   - Reveal
-modified: 2022-05-04T13:59:14.076Z
+modified: 2022-12-14T14:52:45.360Z
 ---
 
 ## Be lazy, automate: GitHub Actions for static blogging
 
-/me: Pablo Iranzo Gómez ( <https://iranzo.github.io> )
+/me: Pablo Iranzo Gómez ( <https://iranzo.io> )
 
 ---
 
@@ -228,4 +228,4 @@ Fork to your repo and get:
 
 Pablo.Iranzo@gmail.com
 
-- <https://iranzo.github.io>
+- <https://iranzo.io>

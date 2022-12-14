@@ -25,7 +25,7 @@ outputs:
 
 cover:
   image: www.png
-modified: 2022-05-04T13:59:36.455Z
+modified: 2022-12-14T15:02:23.616Z
 ---
 
 ## [Citellus](https://risuorg.github.io):
@@ -48,7 +48,7 @@ Emerging Tech Valencia 2019: 30 Mayo
   - Senior Software Engineer - Solutions Engineering - Red Hat
     - RHCA Level V: #110-215-852 (RHC{A,SS,DS,VA,E,SA,SP,AOSP}, JBCAA)
 - URLS
-  - blog: <https://iranzo.github.io>
+  - blog: <https://iranzo.io>
   - <https://linkedin.com/in/iranzo/>
   - <https://github.com/iranzo>
   - <https://twitter.com/iranzop>
@@ -489,13 +489,17 @@ Blog posts:
 
 <small>
 
-- Citellus tagged posts: <https://iranzo.github.io/blog/tag/citellus/>
-- <http://iranzo.github.io/blog/2017/07/26/Citellus-framework-for-detecting-known-issues/>
-- <https://iranzo.github.io/blog/2017/07/31/Magui-for-analysis-of-issues-across-several-hosts/>
-- <https://iranzo.github.io/blog/2017/08/17/Jenkins-for-running-CI-tests/>
-- <https://iranzo.github.io/blog/2017/10/26/i18n-and-bash8-in-bash/>
-- <https://iranzo.github.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/>
-- DevConf.cz 2018 recording <https://www.youtube.com/watch?v=SDzzqrUdn5A>
+- [Citellus tagged posts]({{< relref "/tags/citellus" >}})
+- [Citellus Framework for detecting known issues]({{< relref path="2017-07-26-Citellus-framework-for-detecting-known-issues.en.md" lang="en" >}})
+- [Magui for analysis of issues across several hosts]({{< relref path="2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.en.md" lang="en" >}})
+
+- [Jenkins for running CI tests]({{< relref path="/blog/2017/2017-08-17-Jenkins-for-running-CI-tests/2017-08-17-Jenkins-for-running-CI-tests.en.md" lang="en" >}})
+
+- [i18n and bash]({{< relref path="2017-10-26-i18n-and-bash8-in-bash.en.md" lang="en" >}})
+
+- [Recent changes in Magui and Citellus]({{< relref path="2018-01-16-recent-changes-in-magui-and-citellus.en.md" lang="en" >}})
+
+- [DevConf.cz 2018 recording](https://www.youtube.com/watch?v=SDzzqrUdn5A)
 
 </small>
 
@@ -516,7 +520,7 @@ Ven a #citellus en Freenode, <https://t.me/citellusUG> en Telegram o contacta co
 
 Presentación disponible en:
 
-<https://iranzo.github.io>
+<https://iranzo.io>
 
 ![](../../../../extra/blogqr.png)
 ```

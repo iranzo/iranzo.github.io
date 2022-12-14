@@ -25,7 +25,7 @@ outputs:
 
 cover:
   image: www.png
-modified: 2022-08-19T11:27:51.635Z
+modified: 2022-12-14T14:52:45.377Z
 ---
 
 ## [Citellus](https://github.com/citellusorg/citellus):
@@ -399,11 +399,18 @@ For additional questions, come to #citellus on Freenode or email us:
 Blog posts:
 <small>
 
-- <http://iranzo.github.io/blog/2017/07/26/Citellus-framework-for-detecting-known-issues/>
-- <https://iranzo.github.io/blog/2017/07/31/Magui-for-analysis-of-issues-across-several-hosts/>
-- <https://iranzo.github.io/blog/2017/08/17/Jenkins-for-running-CI-tests/>
-- <https://iranzo.github.io/blog/2017/10/26/i18n-and-bash8-in-bash/>
-- <https://iranzo.github.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/>
+- [Citellus tagged posts]({{< relref "/tags/citellus" >}})
+- [Citellus Framework for detecting known issues]({{< relref path="2017-07-26-Citellus-framework-for-detecting-known-issues.en.md" lang="en" >}})
+- [Magui for analysis of issues across several hosts]({{< relref path="2017-07-31-Magui-for-analysis-of-issues-across-several-hosts.en.md" lang="en" >}})
+
+- [Jenkins for running CI tests]({{< relref path="/blog/2017/2017-08-17-Jenkins-for-running-CI-tests/2017-08-17-Jenkins-for-running-CI-tests.en.md" lang="en" >}})
+
+- [i18n and bash]({{< relref path="2017-10-26-i18n-and-bash8-in-bash.en.md" lang="en" >}})
+
+- [Recent changes in Magui and Citellus]({{< relref path="2018-01-16-recent-changes-in-magui-and-citellus.en.md" lang="en" >}})
+
+- [DevConf.cz 2018 recording](https://www.youtube.com/watch?v=SDzzqrUdn5A)
+
 - DevConf.cz 2018 <https://devconfcz2018.sched.com/event/DJXG/detect-pitfalls-of-osp-deployments-with-citellus>
 
 </small>
