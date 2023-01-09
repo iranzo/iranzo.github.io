@@ -10,7 +10,7 @@ tags:
   - Advanced Cluster Management
 categories:
   - tech
-modified: 2022-12-23T14:24:15.990Z
+modified: 2023-01-09T14:18:59.291Z
 ---
 
 [Kcli](https://github.com/karmab/Kcli) allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of `plans` it allows to automate most of the setup required to have an environment ready.
@@ -109,7 +109,7 @@ hub:
   type: cluster
   kubetype: openshift
   domain: {{ domain }}
-  masters: 1
+  ctlplanes: 1
   api_ip: {{ api_ip }}
   numcpus: 16
   memory: 32768
@@ -147,7 +147,7 @@ cluster{{ num }}:
   type: cluster
   kubetype: openshift
   domain: {{ domain }}
-  masters: 1
+  ctlplanes: 1
   api_ip: {{ api_ip }}
   numcpus: 16
   memory: 32768
@@ -211,7 +211,7 @@ done
 And the pending Certificate Signing Requests (CSRs):
 
 ```sh
-# Check pending CSR 
+# Check pending CSR
 export KUBECONFIG=/root/.kcli/clusters/hub/auth/kubeconfig
 kubectl get csr
 ```
