@@ -12,7 +12,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2022-05-04T12:58:50.659Z
+modified: 2022-12-26T22:28:33.421Z
 ---
 
 ## Biberones
@@ -30,7 +30,7 @@ Sea cual sea el motivo del uso del biberón, bien por decisión propia o por pro
     - Las de agujero más grande (Y o cruz) son para cuando toman cereales con la leche)
   - Las de latex son más blandas y parecidas a pecho.
   - Los de silicona (vs caucho), se agrietan cuando tienen dientes, pero no tienen olor, cambiarlas con más frecuencia.
-  - Las tetinas 'naturales', como las [Medela Calma](https://www.amazon.es/dp/B004EWFCEE?tag=redken-21) obligan al bebé a realizar 'esfuerzo' de succión para obtener la leche, siendo las que mejor facilitan el paso de pecho a biberón y viceversa.
+  - Las tetinas 'naturales', como las [Medela Calma](https://www.amazon.es/dp/B004EWFCEE?tag=redken-21) o [Philips Avent Natural]({{< ref "2023/2023-01-12-biberon-natural-3.0-philips-avent-set/index.es.md" >}}) que obligan al bebé a realizar 'esfuerzo' de succión para obtener la leche, siendo las que mejor facilitan el paso de pecho a biberón y viceversa.
 
 [^fasecrecimiento]: Al igual que en cada toma, cambia la consistencia de la leche (de más líquida para saciar sed a más espesa para aportar más calorías, la leche también cambia durante el crecimiento del bebé en composición, etc)
 
