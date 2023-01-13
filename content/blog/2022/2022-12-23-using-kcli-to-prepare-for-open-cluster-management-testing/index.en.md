@@ -10,7 +10,7 @@ tags:
   - Advanced Cluster Management
 categories:
   - tech
-modified: 2023-01-13T10:28:10.984Z
+modified: 2023-01-13T10:38:07.941Z
 ---
 
 [Kcli](https://github.com/karmab/Kcli) allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of `plans` it allows to automate most of the setup required to have an environment ready.
@@ -20,6 +20,10 @@ In our case, let's setup an environment to practice with [Open Cluster Managemen
 {{<note>}}
 We'll require to setup an `openshift_pull.json` file for Kcli to consume when accessing the required resources for this to work. That file, contains the credentials for accessing several container registries used for the deployment.
 {{</note>}}
+
+{{<tip>}}
+The script described below can be downloaded from [kcli.sh](kcli.sh).
+{{</tip>}}
 
 Let's first cover the prerequisites for the different pieces we're going to use:
 
@@ -183,7 +187,10 @@ Here, Kcli will have created the different VM's, `kubeconfig` files, etc to get 
 # Prepare clusteradm on HUB
 export KUBECONFIG=/root/.kcli/clusters/hub/auth/kubeconfig
 clusteradm init --wait
-kubectl -n open-cluster-management get pod
+kubectl -n open-cluster-management get
+
+# Add the Policy framework
+clusteradm install hub-addon --names governance-policy-framework
 
 # Get values we'll need for adding spokes
 apiserver=$(clusteradm get token | grep -v token= | tr " " "\n" | grep apiserver -A1 | tail -1)
