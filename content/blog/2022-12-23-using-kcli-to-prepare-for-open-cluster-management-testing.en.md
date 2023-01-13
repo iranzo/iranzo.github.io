@@ -10,12 +10,16 @@ tags:
   - Advanced Cluster Management
 categories:
   - tech
-modified: 2023-01-09T14:18:59.291Z
+modified: 2023-01-13T10:28:10.984Z
 ---
 
 [Kcli](https://github.com/karmab/Kcli) allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of `plans` it allows to automate most of the setup required to have an environment ready.
 
 In our case, let's setup an environment to practice with [Open Cluster Management](https://open-cluster-management.io/getting-started/quick-start/) but instead of using kind clusters, let's use VM's.
+
+{{<note>}}
+We'll require to setup an `openshift_pull.json` file for Kcli to consume when accessing the required resources for this to work. That file, contains the credentials for accessing several container registries used for the deployment.
+{{</note>}}
 
 Let's first cover the prerequisites for the different pieces we're going to use:
 
@@ -82,9 +86,6 @@ For doing so, we'll use the following plan, defined with `Jinja` templating.
 As you can see, we first define some parameters for the whole cluster, specially the number of machines to create, the Kcli network to use, addressing, etc.
 
 ```jinja
-
-# Create plan definition
-cat <<EOF >kcli-plan-hub-spoke.yml
 parameters:
   cluster: cluster
   domain: karmalabs.corp
@@ -104,7 +105,7 @@ Then, we define the network and define the first stanza for the hub cluster.
 {% set num = 0 %}
 
 {% set api_ip = cidr|network_ip(200 + num ) %}
-
+{% set cluster = 'hub' %}
 hub:
   type: cluster
   kubetype: openshift
@@ -134,7 +135,6 @@ apps-hub:
  - canary-openshift-ingress-canary.apps.{{ cluster }}.{{ domain }}
  - multicloud-console.apps.{{ cluster }}.{{ domain }}
 {% endif %}
-
 ```
 
 And now, we'll iterate to generate the stanzas for the spoke clusters:
@@ -142,6 +142,7 @@ And now, we'll iterate to generate the stanzas for the spoke clusters:
 ```jinja
 {% for num in range(1, number) %}
 {% set api_ip = cidr|network_ip(200 + num ) %}
+{% set cluster = "cluster" %}
 
 cluster{{ num }}:
   type: cluster
@@ -157,20 +158,20 @@ api-cluster{{ num}}:
  net: {{ network }}
  ip: {{ api_ip }}
  alias:
- - api.{{ cluster }}.{{ domain }}
- - api-int.{{ cluster }}.{{ domain }}
+ - api.{{ cluster }}{{ num }}.{{ domain }}
+ - api-int.{{ cluster }}{{ num }}.{{ domain }}
 
 {% endfor %}
-
-EOF
 ```
 
 This definition uses a new feature provided by Kcli which allows to start the deployment in parallel, so let's get ready for it:
 
 ```sh
 # Download openshift-install to avoid bug when downloading in parallel during plan creation
-kcli download openshift-install
-mv openshift-install /usr/bin/
+for command in oc openshift-install; do
+  kcli download ${command}
+  mv ${command} /usr/bin/
+done
 
 # Create the plan
 kcli create plan -f kcli-plan-hub-spoke.yml
