@@ -46,7 +46,7 @@ keyboard:usb:v046DpC52D
   KEYBOARD_KEY_7004E=right
 ```
 
-This file is mapping the two events in the left button to be 'up' and the one on the right to be 'down'... I did this because in the past I used to do [some presentations]({{< ref "/tags/reveal" >}}) using reveal.js and it was interesting to have those kind of several-level presentations, so that you could go in deep on a topic or move to next one depending on the time available
+This file is mapping the two events in the left button to be 'up' and the one on the right to be 'down'... I did this because in the past I used to do [some presentations]({{< relref "/tags/reveal" >}}) using reveal.js and it was interesting to have those kind of several-level presentations, so that you could go in deep on a topic or move to next one depending on the time available
 
 and `/etc/udev/rules.d/99-logitech-r400.rules`:
 
