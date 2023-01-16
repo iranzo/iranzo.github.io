@@ -1,5 +1,5 @@
 ---
-modified: 2022-05-06T22:05:07.867Z
+modified: 2023-01-16T23:59:07.819Z
 title: Projects
 layout: post
 date: 2020-01-17
@@ -11,7 +11,6 @@ translationKey: projects
 I've been involved with a number of projects, some of which are listed below.
 
 - [@Redken_bot]({{<relref "redken-en.md" >}}) in Telegram
-- [Linux System Administration Book]({{< ref "2021-09-11-rhel8-administration.en.md" >}})
+- [Linux System Administration 9]({{< relref path="blog/2022/2022-10-12-rhel9-administration" lang="en" >}}) and [Linux System Administration 8]({{<relref path="2021-09-11-rhel8-administration.en.md" lang="en" >}})
 - [RISU](https://risuorg.github.io) Issue identification on systems/sosreports
-- [Blog-o-Matic](https://github.com/iranzo/blog-o-matic) Automatic github blogging without hassle
 - [Other pets at Github](https://github.com/iranzo)
