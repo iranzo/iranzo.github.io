@@ -2,7 +2,7 @@
 title: Using Kcli to prepare for Open Cluster Management testing
 date: 2022-12-23T14:04:45.111Z
 tags:
-  - kcli
+  - Kcli
   - Kubernetes
   - OpenShift
   - Open Cluster Management
@@ -10,7 +10,7 @@ tags:
   - Advanced Cluster Management
 categories:
   - tech
-modified: 2023-01-19T09:58:39.829Z
+modified: 2023-01-19T10:27:43.548Z
 ---
 
 [Kcli](https://github.com/karmab/Kcli) allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of `plans` it allows to automate most of the setup required to have an environment ready.
@@ -52,7 +52,7 @@ echo 'PATH=$PATH:~/go/bin' >~/.bashrc
 
 At this point we've our system ready to use go, and some other utilities available.
 
-Let's now continue with cluster adm and some other utilities like kubectl:
+Let's now continue with `clusteradm` and some other utilities like kubectl:
 
 ```sh
 # Install clusteradm
@@ -85,7 +85,7 @@ sudo dnf -y install kcli
 
 At this step, we should make sure that our host, has the default `virt-pool` configured so that we can continue with the creation of the cluster.
 
-For doing so, we'll use the following plan, defined with `Jinja` templating.
+For doing so, we'll use the following plan, defined with a `Jinja` template.
 
 As you can see, we first define some parameters for the whole cluster, specially the number of machines to create, the Kcli network to use, addressing, etc.
 
@@ -206,7 +206,7 @@ for spoke in $(seq 1 ${MAXSPOKE}); do
 done
 ```
 
-Each host (spoke) will connect to the hub and reach it to request a signed certificate and being accepted as spoke, we can perform some diagnosis when checking the klusterlet status:
+Each host (spoke) will connect to the hub and reach it to request a signed certificate and being accepted as spoke, we can perform some diagnosis when checking the `klusterlet` status:
 
 ```sh
 # Check clusterlet status
@@ -216,7 +216,7 @@ for spoke in $(seq 1 ${MAXSPOKE}); do
 done
 ```
 
-And the pending Certificate Signing Requests (CSRs):
+And the pending Certificate Signing Requests (`CSR`):
 
 ```sh
 # Check pending CSR
