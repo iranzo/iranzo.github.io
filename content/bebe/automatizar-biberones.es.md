@@ -10,7 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2022-11-12T00:18:48.886Z
+modified: 2023-01-23T17:41:54.832Z
 ---
 
 Hace tiempo en el articulo [Biberones]({{<relref "biberones.es.md">}}) se hablaba del proceso de uso, preparación, etc...
@@ -25,6 +25,12 @@ Recientemente y dadas las nuevas necesidades, nos dio por hacer una búsqueda, y
 De los modelos anteriores finalmente nos decantamos por el primero, que permite regular el tamaño del biberón, y permite soltar un chorro inicial a mayor temperatura para esterilizar algo la leche de fórmula.
 
 [![](https://m.media-amazon.com/images/I/61iGu7pRAtL._AC_SL800_.jpg)](https://www.amazon.es/dp/B08QK93Z77?tag=redken-21)
+
+
+Puedes verlo en acción aquí:
+{{< youtube ZDnnrUgQBQc >}}
+
+
 
 En el mismo rango de precios nos gustaba el [Babymoov](https://www.amazon.es/dp/B08C5SLMX8?tag=redken-21), algo más compacto, pero sólo permitía dispensar de 60ml o bien, pulsando más rato, regular manualmente y no hacía lo de poner el chorro caliente inicial para esterilizar algo.
 
