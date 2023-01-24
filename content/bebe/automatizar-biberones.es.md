@@ -26,11 +26,8 @@ De los modelos anteriores finalmente nos decantamos por el primero, que permite 
 
 [![](https://m.media-amazon.com/images/I/61iGu7pRAtL._AC_SL800_.jpg)](https://www.amazon.es/dp/B08QK93Z77?tag=redken-21)
 
-
 Puedes verlo en acción aquí:
 {{< youtube ZDnnrUgQBQc >}}
-
-
 
 En el mismo rango de precios nos gustaba el [Babymoov](https://www.amazon.es/dp/B08C5SLMX8?tag=redken-21), algo más compacto, pero sólo permitía dispensar de 60ml o bien, pulsando más rato, regular manualmente y no hacía lo de poner el chorro caliente inicial para esterilizar algo.
 
