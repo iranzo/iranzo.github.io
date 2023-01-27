@@ -15,7 +15,8 @@ categories:
   - presentations
 outputs:
   - Reveal
-modified: 2022-12-14T14:52:45.400Z
+reveal_hugo.theme: solarized
+modified: 2023-01-27T09:58:36.399Z
 ---
 
 ## Project hosting and automation

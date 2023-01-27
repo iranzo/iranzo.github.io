@@ -13,7 +13,8 @@ categories:
   - FOSS
 outputs:
   - Reveal
-modified: 2022-12-14T14:52:45.349Z
+reveal_hugo.theme: solarized
+modified: 2023-01-27T09:58:33.778Z
 ---
 
 # Introducción al Software Libre

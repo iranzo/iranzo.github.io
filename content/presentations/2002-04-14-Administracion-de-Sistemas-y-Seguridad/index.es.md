@@ -13,7 +13,8 @@ categories:
   - presentations
 outputs:
   - Reveal
-modified: 2022-05-04T13:58:37.375Z
+reveal_hugo.theme: solarized
+modified: 2023-01-27T09:58:35.406Z
 ---
 
 # Introducción

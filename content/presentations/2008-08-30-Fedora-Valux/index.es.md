@@ -15,8 +15,8 @@ categories:
   - Fedora
 outputs:
   - Reveal
-
-modified: 2022-05-04T13:58:50.914Z
+reveal_hugo.theme: solarized
+modified: 2023-01-27T09:46:38.206Z
 ---
 
 ## ¿Qué es Fedora?

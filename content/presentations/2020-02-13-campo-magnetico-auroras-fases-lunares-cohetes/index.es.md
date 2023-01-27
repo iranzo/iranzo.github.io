@@ -20,10 +20,10 @@ slug: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 translationKey: campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes
 outputs:
   - Reveal
-
+reveal_hugo.theme: solarized
 cover:
   image: aurora.jpg
-modified: 2022-12-14T14:56:16.491Z
+modified: 2023-01-27T09:46:44.334Z
 ---
 
 ## Disclaimer

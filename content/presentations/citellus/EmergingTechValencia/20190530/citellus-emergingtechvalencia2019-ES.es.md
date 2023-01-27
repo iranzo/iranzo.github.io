@@ -22,10 +22,10 @@ categories:
   - risu
 outputs:
   - Reveal
-
+reveal_hugo.theme: solarized
 cover:
   image: www.png
-modified: 2022-12-14T15:02:23.616Z
+modified: 2023-01-27T09:47:02.912Z
 ---
 
 ## [Citellus](https://risuorg.github.io):
