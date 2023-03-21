@@ -9,7 +9,7 @@ tags:
 date: 2023-03-21 00:00:00 +0200
 categories:
   - tech
-modified: 2023-03-20T22:45:16.983Z
+modified: 2023-03-21T07:05:51.471Z
 cover:
   image: agendadiaria.png
 ---
@@ -29,7 +29,7 @@ A continuación, mostraré unas capturas del proceso para que veas lo sencillo q
 
 ## Creación de un calendario para publicar
 
-Primero, crearemos un calendario en Google Ccalendar (o bien usaremos alguno existente en cualquier servicio que nos proporcione una URL que no necesite autentificación):
+Primero, crearemos un calendario en Google Calendar (o bien usaremos alguno existente en cualquier servicio que nos proporcione una URL que no necesite autentificación):
 
 - Crear un calendario:
   ![](createcalendar.png)
