@@ -4,9 +4,11 @@ title: Error según número de pitidos en la BIOS
 date: 2004-04-12T09:54:00.000Z
 tags:
   - hardware
+  - BIOS
+  - error
 lang: es
 slug: Error-segun-numero-de-pitidos-en-es
-modified: 2022-05-04T14:42:46.614Z
+modified: 2023-03-23T10:55:06.256Z
 categories:
   - blog
 ---
@@ -20,7 +22,7 @@ Código de errores emitido por la BIOS para indicar los problemas que surgen dur
 | Número de Pitidos | Significado                         |
 | ----------------- | ----------------------------------- |
 | 1                 | Error de refresco DRAM              |
-| 2                 | Fallo de los 640Kb Ram base         |
+| 2                 | Fallo de los 640Kb RAM base         |
 | 4                 | Error del timer de sistema          |
 | 5                 | Fallo del procesador                |
 | 6                 | Error de la puerta de teclado A20   |
