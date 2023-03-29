@@ -9,7 +9,7 @@ tags:
 date: 2023-03-21 00:00:00 +0200
 categories:
   - tech
-modified: 2023-03-20T23:04:02.423Z
+modified: 2023-03-29T12:17:38.858Z
 cover:
   image: agendadiaria.png
 ---
@@ -66,7 +66,7 @@ In the chat, write the command `/ical add <name> <URL>` :
 
 ![](addingnewical.png)
 
-From that day, every morning[@Redken_bot](https://t.me/redken_bot) will send a reminder of the events for the day with location, name and how long does it last:
+From that day, every morning [@Redken_bot](https://t.me/redken_bot) will send a reminder of the events for the day with location, name and how long does it last:
 
 ![](agendadiaria.png)
 
