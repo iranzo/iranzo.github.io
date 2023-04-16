@@ -1,0 +1,100 @@
+baseURL: "https://www.merak.run"
+title: Merak.run
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    mainSections: "blog"
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: Merak.run
+    description: "Various projects"
+    keywords: [Blog]
+    author: Merak
+    # author: ["Me", "You"] # multiple authors
+    images: ["/merak.svg"]
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: true
+    ShowShareButtons: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: false
+    searchHidden: false
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: false
+    hidemeta: false
+    hideSummary: false
+    showtoc: false
+    tocopen: false
+
+
+    label:
+        text: "Home"
+        icon: /apple-touch-icon.png
+        iconHeight: 35
+
+
+    # home-info mode
+    # homeInfoParams:
+    #     Title: "Hi!"
+    #     Content: Welcome Merak
+
+    analytics:
+        google:
+            SiteVerificationTag: "G-1BKKRPRJ18"
+        yandex:
+            SiteVerificationTag: "c18f9bd7c16058ed"
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+menu:
+    main:
+        - identifier: blog
+          name: blog
+          url: /blog/
+          weight: 20
+        - identifier: terms
+          name: terms
+          url: /terms/
+          weight: 20
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 30
+        - identifier: search
+          name: search
+          url: /search
+          weight: 40
+
+outputs:
+    home: ["HTML", "RSS", "JSON"]
+    page: ["HTML", "RSS"]
+
+
+sitemap:
+  changefreq: "monthly"
+  filename: "sitemap.xml"
+  priority: 0.5
