@@ -11,11 +11,9 @@ tags:
   - cartilla
   - maleta
   - bolsa
-
 categories:
   - bebe
-
-modified: 2022-05-04T12:58:50.643Z
+modified: 2023-04-17T22:29:00.734Z
 ---
 
 ## Preparativos para el hospital
@@ -63,3 +61,4 @@ Recuerda, que el día de salida, además de la ropa de calle, 'primera puesta', 
 Al nosotros dar a luz en un hospital público, durante la estancia nos proporcionaron las toallas, compresas gigantes, pañales, etc.
 
 Como salió algo 'pequeño', llegó a llevar la talla '00' antes de pasar a la talla '0', ¡tenlo en cuenta!
+{{<disfruta>}}

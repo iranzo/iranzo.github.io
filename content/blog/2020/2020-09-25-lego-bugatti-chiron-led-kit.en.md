@@ -14,7 +14,7 @@ date: 2020-09-25 19:30:24 +0200
 categories:
   - LEGO
 lang: en
-modified: 2022-05-06T22:05:07.994Z
+modified: 2023-04-17T21:38:05.999Z
 cover:
   image: https://i.imgur.com/YUmxxRW.jpg.jpg
 ---
@@ -51,4 +51,4 @@ Check the results:
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

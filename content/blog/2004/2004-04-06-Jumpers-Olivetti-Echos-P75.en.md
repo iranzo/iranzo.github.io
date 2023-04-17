@@ -5,7 +5,7 @@ date: 2004-04-06 10:01:00 +0200
 tags:
   - hardware
   - general
-modified: 2022-05-04T14:44:05.864Z
+modified: 2023-04-17T21:52:50.136Z
 categories:
   - blog
 ---
@@ -74,3 +74,4 @@ Olivetti Echos P75 system:
 - Power adapter
 
 THIRD UPDATE: 17th November 2007: At [How to create a digital frame](http://www.dkomputer.com/cadrephoto/index_us.html) says that the problem with the blinking cursor is related with battery being exhausted (as a visitor pointed too). Will try :)
+{{<enjoy>}}

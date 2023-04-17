@@ -7,7 +7,7 @@ tags:
   - Fedora
   - backup
   - FOSS
-modified: 2022-05-04T13:19:38.452Z
+modified: 2023-04-17T21:48:09.264Z
 categories:
   - FOSS
   - Fedora
@@ -26,3 +26,4 @@ As a command line interface tool, it can run pretty well on cron jobs, and eases
 Duplicity can also take care of tiding backup store removing older backups and automatically perform a full backup if older than x time, so you can automate the full backup management.
 
 Best of all is the backend support, as you can do backups over `rsync`, `scp`, `ftp`, `file`, `imap`, `ssh`, `amazon`, `webdav`, etc , so you can use that old NAS to store your backups without any special support except pretty standard protocols even on low-end models.
+{{<enjoy>}}

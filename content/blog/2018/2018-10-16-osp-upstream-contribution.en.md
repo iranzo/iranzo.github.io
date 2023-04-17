@@ -15,7 +15,7 @@ tags:
 categories:
   - tech
   - OpenStack
-modified: 2022-05-06T22:05:08.040Z
+modified: 2023-04-17T21:44:48.218Z
 ---
 
 ## Introduction
@@ -132,7 +132,4 @@ The `py*` tests are just to validate the code can run on both base python versio
 For local test, you can run `tox` and it will go trough the different tests defined and report status... if everything is ok, it should be possible that your new code review passes also CI.
 
 Jenkins will do the +1 on verified and 'core' reviewers will give +2 and 'merge' the change once validated.
-
-Hope you enjoy!
-
-Pablo
+{{<enjoy>}}

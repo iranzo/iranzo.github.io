@@ -8,7 +8,7 @@ tags:
   - Telegram
   - FOSS
   - redken
-modified: 2022-05-04T13:44:53.872Z
+modified: 2023-04-17T21:35:51.612Z
 categories:
   - redken_bot
 ---
@@ -26,7 +26,7 @@ At the moment it just uses the polling interface to check the new messages recei
 
 Also, some other commands are missing like the ones on `redken` that we use on IRC, but at least, basic functionality is there and is usable.
 
-Enjoy!
+{{<enjoy>}}
 
 Pablo
 

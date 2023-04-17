@@ -16,7 +16,7 @@ tags:
   - foss
 categories:
   - tech
-modified: 2022-05-04T13:03:13.691Z
+modified: 2023-04-17T21:45:46.136Z
 ---
 
 ## Why?
@@ -175,4 +175,4 @@ Now, Jenkins will build, and post messages on the review, stating that the build
 
 ![Gerrithub commens by Jenkins](gitreview.png)
 
-Enjoy having automated validation of new reviews before accepting them into your code!
+{{<enjoy>}}

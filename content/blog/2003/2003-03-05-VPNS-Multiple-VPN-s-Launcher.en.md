@@ -7,7 +7,7 @@ tags:
   - network
   - VPN
   - FOSS
-modified: 2022-05-04T14:44:05.869Z
+modified: 2023-04-17T21:53:45.921Z
 categories:
   - blog
   - FOSS
@@ -278,3 +278,4 @@ This document has been created using the LyX Editor and compiled with under
 Debian GNU/Linux, and then converted to the format you're viewing.
 
 File translated from TeX by [`T~T~H`](http://hutchinson.belmont.ma.us/tth/), version 3.67. On 9 Mar 2007, 21:50.
+{{<enjoy>}}

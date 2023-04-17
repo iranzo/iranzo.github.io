@@ -13,10 +13,8 @@ tags:
 categories:
   - tech
   - risu
-description:
-  Learn about Citellus, a framework that will help you detect known issues, and
-  more insightful information about your system
-modified: 2022-05-04T13:32:56.853Z
+description: Learn about Citellus, a framework that will help you detect known issues, and more insightful information about your system
+modified: 2023-04-17T21:45:29.122Z
 ---
 
 ## Background
@@ -125,7 +123,6 @@ That debug information comes from the python wrapper, if you need more detail in
 
 Keep always in mind that all functionality is based on return codes and the `stderr` message to keep it simple.
 
-Hope it's helpful for you!
-Pablo
+{{<enjoy>}}
 
 Post Datum: We've proposed this to be a talk in upcoming OSP Summit 2017 in Sydney, so if you want to see us there, don't forget to vote on <https://www.openstack.org/summit/sydney-2017/vote-for-speakers#/19095>

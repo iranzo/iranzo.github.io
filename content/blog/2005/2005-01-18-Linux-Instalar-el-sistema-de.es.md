@@ -8,7 +8,7 @@ tags:
   - mdadm
   - foss
 lang: es
-modified: 2022-05-04T13:03:54.960Z
+modified: 2023-04-17T21:52:08.250Z
 categories:
   - FOSS
 ---
@@ -166,4 +166,4 @@ En estos casos conviene ser precavido, ya que el orden en el que lo hemos defini
 
 De hecho, mediante este sistema, es posible también usar raids 0+1 o 1+0, sin más que definir previamente los md1, md2 y luego unirlos sobre md0 o al revés (y también migrar sistemas sobre discos normales a discos Serial ATA, etc).
 
-Espero que te sea útil
+{{<disfruta>}}

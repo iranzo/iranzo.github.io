@@ -6,7 +6,7 @@ date: 2015-03-16 21:45:00 +0200
 tags:
   - Fedora
   - FOSS
-modified: 2022-05-04T13:19:38.436Z
+modified: 2023-04-17T21:46:08.496Z
 categories:
   - FOSS
   - Fedora
@@ -31,3 +31,4 @@ tasks:
 ```
 
 At each invocation of `flexget execute` it will access the RSS feed, search for new files and store the relevant `.torrent` files on the folder `/media/watch` from where transmission will pick up the new files and add them to your downloading queue for automatic download.
+{{<enjoy>}}

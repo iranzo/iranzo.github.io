@@ -10,14 +10,14 @@ categories: blog
 lang: es
 slug: paella-howto
 translationKey: paella-howto
-modified: 2022-11-12T00:18:48.927Z
+modified: 2023-04-17T21:47:17.768Z
 cover:
   image: 20120708134340.jpg
 ---
 
 Este documento está basado en la receta original y fotos que le pasé a mi compañero [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) que a su vez, documentó y tradujo internamente para su difusión.
 
-# Ingredientes:
+# Ingredientes
 
 - Bolsa de verdura para paella (garrofón, ferraura, etc)
 - [Arroz bomba 🛒](https://www.amazon.es/dp/B00986HSH0?tag=redken-21) (equivalente a 7 puñados)
@@ -31,7 +31,7 @@ Este documento está basado en la receta original y fotos que le pasé a mi comp
 - Ajo
 - [Romero 🛒](https://www.amazon.es/dp/B01HN23N3S?tag=redken-21)
 
-# Preparación:
+# Preparación
 
 Se pone junto al tomate un ajo para rallar y se deja junto hasta la hora de sofreirlo.
 
@@ -47,12 +47,12 @@ Ahora, en paralelo, se pone la olla el agua a hervir con la verdura y empezamos 
 
 ![Primeras imagenes de aceite al freir](20120708124816.jpg)
 
-# Olla:
+# Olla
 
 Verdura, se puede o bien hervir con el agua (congelada) o bien echar directamente a la paella.
 Se pone agua abundante con algo de sal y se le puede poner algo de romero para que de sabor luego
 
-# Paella:
+# Paella
 
 Se sofríe el pollo en trozo pequeños hasta que esté muy bien hecho.
 
@@ -95,3 +95,4 @@ Al acabar, se prueba que esté bien, y se apaga el fuego, dejando la paella a re
 En caso de querer presentarla de forma 'diferente' se puede hacer la versión 'deconstruida'
 
 ![Sugerencia de presentación: Paella por capas e ingredientes](20120617142649.jpg)
+{{<disfruta >}}

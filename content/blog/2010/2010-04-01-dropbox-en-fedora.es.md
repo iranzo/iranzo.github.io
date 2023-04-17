@@ -8,7 +8,7 @@ tags:
   - dropbox
   - foss
 lang: es
-modified: 2022-05-04T13:15:43.500Z
+modified: 2023-04-17T21:48:48.165Z
 categories:
   - Fedora
 ---
@@ -39,3 +39,4 @@ Para instalar dropbox en Fedora, no es necesario realizar excesivos pasos:
 
 1. LANSync
    - Abre en tu cortafuegos los puertos 17500 por TCP y por UDP para que la funcionalidad de sincronización en la LAN funcione (permitiendo que los equipos con dropbox en la misma red sincronicen mucho más rápido entre ellos)
+     {{<disfruta>}}

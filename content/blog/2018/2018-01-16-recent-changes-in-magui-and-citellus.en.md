@@ -11,7 +11,7 @@ tags:
 categories:
   - tech
   - risu
-modified: 2022-05-06T22:05:08.124Z
+modified: 2023-04-17T21:45:01.317Z
 ---
 
 ## What's new?
@@ -81,3 +81,4 @@ As you can see we've been busy trying to improve plugins, Citellus framework and
 We've been also busy demonstrating to others it's value and raising lot of new issues and closing them with our commits (294 requests closed so far).
 
 So, come and [tell us](https://github.com/citellusorg/citellus/issues/new) what else are you missing or how can we improve it to suit your needs (or code them yourself and submit a review!)
+{{<enjoy>}}

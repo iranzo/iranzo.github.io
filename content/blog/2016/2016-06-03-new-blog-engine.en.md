@@ -9,7 +9,7 @@ tags:
   - foss
 categories:
   - CMS
-modified: 2022-05-04T13:36:57.560Z
+modified: 2023-04-17T21:45:55.255Z
 ---
 
 As always, I don't usually find myself keen to write about things I do, until I later realize they might be helpful for others, and that's why in the past I decided to switch the place I was putting the information about why did to Github and also, take benefit of practicing markdown for writing the entries.
@@ -20,3 +20,4 @@ Since some time ago, I was checking other platforms, following the same approach
 repositories (python-pelican). Pelican offers a similar behavior, having also a server for allowing you to quickly test the new settings (plugins, themes, etc) and to publish the resulting website to a hosting provider.
 
 As I did with Jekyll+OctoPress, I'm still using github.io for it, and I'm in the process of adapting some changes like additional plugins, theme tweaks and consider to develop one of my own.
+{{<enjoy>}}

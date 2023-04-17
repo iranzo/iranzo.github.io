@@ -16,7 +16,7 @@ categories:
 description: RHEL9 System Administration book now available!
 lang: en
 slug: rhel9-administration
-modified: 2022-05-04T13:41:02.622Z
+modified: 2023-04-17T21:38:06.120Z
 cover:
   image: rhel9-cover.png
 ---
@@ -33,4 +33,4 @@ It has been updated to cover the differences that came with RHEL9, new additions
 
 Available at Amazon: [Red Hat Enterprise Linux 9 Administration](https://s.admins.guru/buy-on-amazon-rhel9)
 
-Hope you like it!
+{{<enjoy>}}

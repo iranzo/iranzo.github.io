@@ -1,8 +1,6 @@
 ---
 author: Pablo Iranzo Gómez
-title:
-  Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with
-  little setup steps.
+title: Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with little setup steps.
 tags:
   - Pelican
   - FOSS
@@ -21,7 +19,7 @@ date: 2019-01-09 22:00:47 +0100
 categories:
   - tech
   - CMS
-modified: 2022-12-14T14:52:45.408Z
+modified: 2023-04-17T21:44:18.204Z
 ---
 
 # Introduction
@@ -48,3 +46,4 @@ The setup process is outlined at its [`README.md`](https://github.com/iranzo/blo
 You can also check the 'generated' website after installation via <https://iranzo.io/blog-o-matic>
 
 Do not forget to update your `pelican.conf` file for fine-tuning and customization.
+{{<enjoy>}}

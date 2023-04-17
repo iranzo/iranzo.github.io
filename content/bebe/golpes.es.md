@@ -10,11 +10,9 @@ tags:
   - arañar
   - morder
   - bebe
-
 categories:
   - bebe
-
-modified: 2022-05-04T12:56:27.694Z
+modified: 2023-04-17T22:28:50.182Z
 ---
 
 A veces los niños reaccionan de forma violenta, a veces, de casualidad y otras porque es lo que han visto.
@@ -30,3 +28,4 @@ Pasado un rato, cuando oímos que se ha calmado, volvemos y le preguntamos si ya
 Es una fase, que para variar es 'dura' y tiene refuerzos negativos en guarderias/colegios donde quizás otros padres no tienen esta actitud que causa que otros niños vean como solución a los problemas los golpes, o bien, que por su fase de desarrollo, no han aprendido que no es la forma correcta de expresarse.
 
 Al final, tras insistir y reforzar esta conducta, vamos viendo pasos que junto con el tiempo van alejándose de esta dura fase.
+{{<disfruta>}}

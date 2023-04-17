@@ -5,11 +5,10 @@ tags:
   - Risu
   - ChatGPT
   - Troubleshooting
-
 date: 2023-03-02 17:00:00 +0100
 categories:
   - tech
-modified: 2023-03-02T17:30:57.831Z
+modified: 2023-04-17T21:36:20.418Z
 ---
 
 Lately, there's a lot of interest on [ChatGPT](https://chat.openai.com/chat), and yes, it's really impressive the way it processes the context to provide answers to the questions.
@@ -50,4 +49,4 @@ It has improved a lot, but doesn't work fine on the `sosreport` part, but to be 
 
 If we analyze it, it includes the logic for checking if running against a live environment or not, stores the output in a var, and based on the value it processes several ranges and gets the output printed and different error codes used, which is not that different of what a manually written plugin does.
 
-Enjoy!
+{{<enjoy>}}

@@ -9,10 +9,9 @@ layout: post
 date: 2023-01-06T20:32:50.391Z
 categories:
   - bebe
-
 description: Evaluación del set de biberones Philips Avent
 lang: es
-modified: 2023-01-09T22:19:47.876Z
+modified: 2023-04-17T22:28:19.823Z
 ---
 
 {{< warning title="Advertencia" >}}
@@ -77,3 +76,4 @@ A pesar de haber estado usando desde el primer biberón los de otro fabricante t
 Por otro lado, hemos notado algo dura la tapa a la hora de abrirlo, sobretodo si la parte de la botella está quitada, por lo que a la hora de limpiarla cuesta algo más.
 
 También relacionado con la limpieza, a pesar de agitar bien antes de poner el adaptador Airvent, hemos notado que se queda algo de grumo tanto en el propio Airvent como en la zona de la rosca.
+{{<disfruta>}}

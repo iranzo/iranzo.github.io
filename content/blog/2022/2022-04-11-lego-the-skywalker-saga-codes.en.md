@@ -7,7 +7,7 @@ tags:
   - PlayStation
   - Switch
   - Nintendo
-modified: 2022-05-04T13:32:56.650Z
+modified: 2023-04-17T21:42:33.931Z
 categories:
   - LEGO
 cover:
@@ -39,4 +39,4 @@ Inside the game The Sky Walker Saga [PS4](https://www.amazon.es/dp/B08VTB4X2J?ta
 | `XV4WND9` | Holdo                       |
 | `Z55T8CQ` | Poggle                      |
 
-Hope you enjoy them!
+{{<enjoy>}}

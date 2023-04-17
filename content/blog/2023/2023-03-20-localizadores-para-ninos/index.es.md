@@ -8,11 +8,10 @@ tags:
   - Bluetooth
   - Airtag
   - Smartthings
-
 date: 2023-03-20 12:00:00 +0100
 categories:
   - tech
-modified: 2023-03-20T12:27:45.146Z
+modified: 2023-04-17T21:40:08.992Z
 cover:
   image: samsung.png
 ---
@@ -50,4 +49,4 @@ Respecto al tamaño, no son demasiado grandes, unos 3x3 centímetros, y no demas
 
 ![](samsung.png)
 
-Espero que te haya resultado útil!
+{{<disfruta>}}

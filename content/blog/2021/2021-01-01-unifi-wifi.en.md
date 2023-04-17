@@ -17,7 +17,7 @@ date: 2021-01-01 00:00:00 +0200
 categories:
   - tech
 lang: en
-modified: 2022-11-12T00:18:48.905Z
+modified: 2023-04-17T21:38:06.205Z
 ---
 
 ## Introduction
@@ -118,4 +118,4 @@ Some of the features I like:
 - devices can get an alias (instead of mac or given name) from the User Interface, reserve IP address, etc.
 - Devices are running Linux and you can connect to them via SSH
 
-Hope you like it!
+{{<enjoy>}}

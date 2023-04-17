@@ -9,7 +9,7 @@ tags:
   - desktop
   - foss
 lang: es
-modified: 2022-05-04T13:15:43.544Z
+modified: 2023-04-17T21:50:12.003Z
 categories:
   - FOSS
 ---
@@ -64,3 +64,4 @@ A día de hoy estoy utilizando Fedora 12 con LVM cifrado, Gnome como entorno, Fi
 En los servidores tengo una mezcla de Debian, CentOS y RHEL, moviendo los basados en Debian a CentOS por la mayor experiencia que tengo en la creación y gestión de paquetes RPM y la automatización de instalaciones([Kickstart: instalaciones automatizadas para anaconda]({{< ref "2008-05-11-Kickstart-instalaciones.es.md">}})).
 
 En el blog de [Pere Benavent](http://www.benavent.org/diario/2008/06/fedora-9-just-installed.html) tienes información para terminar de afinar la instalación de Fedora 9 siguiendo sus instrucciones.
+{{<disfruta>}}

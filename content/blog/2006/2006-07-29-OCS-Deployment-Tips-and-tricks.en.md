@@ -6,7 +6,7 @@ tags:
   - OCS
   - Linux
   - FOSS
-modified: 2022-05-04T13:15:43.573Z
+modified: 2023-04-17T21:51:37.799Z
 categories:
   - FOSS
 ---
@@ -62,3 +62,4 @@ After some time, affected and with working software deployment (Read [OCS Invent
 Please, feel free to contribute with your Registry Keys or command line commands to improve this guide.
 
 Using win-get (an apt-get clone for Win32), you can use [this big list](http://windows-get.sourceforge.net/listapps.php) of supported applications for installation doing `win-get sinstall APPNAME`
+{{<enjoy>}}

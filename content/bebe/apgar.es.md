@@ -8,10 +8,9 @@ tags:
   - apgar
   - nacimiento
   - bebe
-
 categories:
   - bebe
-modified: 2022-05-04T12:58:50.661Z
+modified: 2023-04-17T22:28:27.872Z
 ---
 
 ## El test de APGAR
@@ -42,3 +41,4 @@ Generalmente, la segunda puntuación suele ser más alta, pero también hay niñ
 
 Puedes encontrar más información en libros como [Qué esperar cuando estás
 esperando](https://www.amazon.es/dp/8408122975?tag=redken-21&smid=A1PT7S6F0FISH).
+{{<disfruta>}}

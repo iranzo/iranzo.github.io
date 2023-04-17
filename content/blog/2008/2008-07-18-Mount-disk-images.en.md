@@ -7,7 +7,7 @@ tags:
   - Linux
   - Xen
   - foss
-modified: 2022-05-04T13:15:43.537Z
+modified: 2023-04-17T21:50:19.409Z
 categories:
   - FOSS
 ---
@@ -65,3 +65,4 @@ rsync -avur —perms —progress —delete remoteserver:/ /mnt/DISKIMAGE
 ```
 
 And get a 'working' copy of the remote machine but just copying changed elements.
+{{<enjoy>}}

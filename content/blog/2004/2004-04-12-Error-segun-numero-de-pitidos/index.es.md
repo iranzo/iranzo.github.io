@@ -8,7 +8,7 @@ tags:
   - error
 lang: es
 slug: Error-segun-numero-de-pitidos-en-es
-modified: 2023-03-23T10:55:06.256Z
+modified: 2023-04-17T21:53:50.150Z
 categories:
   - blog
 ---
@@ -35,3 +35,5 @@ Código de errores emitido por la BIOS para indicar los problemas que surgen dur
 | ----------------- | --------------------------------------------------------- |
 | 3                 | Fallo de comprobación de memoria convencional y extendida |
 | 8                 | Fallo de monitor y fallo de trazado vertical y horizontal |
+
+{{<disfruta>}}

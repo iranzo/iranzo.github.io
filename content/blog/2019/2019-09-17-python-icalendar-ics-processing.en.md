@@ -15,11 +15,9 @@ categories:
   - tech
   - python
   - redken_bot
-description:
-  This article covers  how to do Internet Calendar processing of events in
-  python and how those are leveraged in @redken_bot
+description: This article covers  how to do Internet Calendar processing of events in python and how those are leveraged in @redken_bot
 lang: en
-modified: 2022-05-04T13:44:47.596Z
+modified: 2023-04-17T21:39:22.562Z
 ---
 
 ## Introduction
@@ -320,3 +318,4 @@ for calendar in calendars:
 This code is still not complete, as it for sure, lists 'single' events happening today, or 'recurring' events happening also today, but it doesn't take into consideration 'Excludes' to those rules, like for example, when a recurring event is cancelled for a specific date, etc.
 
 However, for a first iteration, code works and now the [@redken_bot](https://t.me/redken_bot) can also remind you on your day events on multiple calendars :)
+{{<enjoy>}}

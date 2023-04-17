@@ -14,11 +14,9 @@ layout: post
 date: 2021-10-19 22:34:34 +0200
 categories:
   - Python
-description:
-  This article describes how to use python to bind against an LDAP server and
-  perform queries
+description: This article describes how to use python to bind against an LDAP server and perform queries
 lang: en
-modified: 2022-05-04T13:39:27.972Z
+modified: 2023-04-17T21:36:11.788Z
 ---
 
 Recently, some colleagues commented about validating if users in a Telegram group were or not employees anymore, so that the process could be automated without having to chase down the users that left the company.
@@ -65,4 +63,4 @@ At this point, the variable `result_set` will contain the values we want to filt
 
 This, can be then acted accordingly and kick users that are no longer (or haven't configured Telegram username) in the LDAP directory.
 
-Enjoy!
+{{<enjoy>}}

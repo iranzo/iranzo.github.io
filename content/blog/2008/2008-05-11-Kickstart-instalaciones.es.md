@@ -9,7 +9,7 @@ tags:
   - unattended
   - foss
 lang: es
-modified: 2022-05-04T13:15:43.548Z
+modified: 2023-04-17T21:50:09.554Z
 categories:
   - FOSS
 ---
@@ -163,3 +163,4 @@ Hasta que nos familiaricemos con la sintaxis, es conveniente recordar que en los
 - [Opciones soportadas en RHEL5](http://www.redhat.com/docs/manuals/enterprise/RHEL-5-manual/Installation_Guide-en-US/s1-kickstart2-options.html)
 - [Opciones soportadas en Fedora](http://fedoraproject.org/wiki/Anaconda/Kickstart)
 - [Configurador kickstart web](http://www.linux.kaybee.org:8080/demo/hosts/index.html)
+  {{<disfruta>}}

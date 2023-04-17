@@ -7,7 +7,7 @@ tags:
   - BIOS
   - error
 lang: en
-modified: 2023-03-23T10:54:59.533Z
+modified: 2023-04-17T21:53:14.481Z
 categories:
   - blog
 ---
@@ -34,3 +34,5 @@ Error code reported by BIOS during POST (Power On Self Test):
 | ---------- | -------------------------------------------------- |
 | 3          | Memory test failure conventional and extended      |
 | 8          | Monitor error with tracing vertical and horizontal |
+
+{{<enjoy>}}

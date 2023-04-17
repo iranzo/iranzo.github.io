@@ -8,7 +8,7 @@ tags:
   - redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
-modified: 2022-05-04T13:45:08.764Z
+modified: 2023-04-17T22:30:07.240Z
 categories:
   - tech
   - redken_bot
@@ -188,3 +188,4 @@ Bot allows to setup team aliases, so it can ping several users in a chat
 ### quote
 
 - `/quote del id` to remove a specific quote id from database
+  {{<enjoy>}}

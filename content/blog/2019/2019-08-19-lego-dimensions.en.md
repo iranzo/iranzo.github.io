@@ -18,7 +18,7 @@ categories:
 lang: en
 slug: lego-dimensions
 translationKey: lego-dimensions
-modified: 2022-11-12T00:18:48.916Z
+modified: 2023-04-17T21:39:12.628Z
 cover:
   image: https://www.lego.com/cdn/cs/set/assets/blt866dc839f8c741cf/dimensions-logo.png
 ---
@@ -173,3 +173,4 @@ also combined with `special abilities` like some objects being only
 If a character is required but not owned, it's possible to `rent` by using
 some of the earned pieces that character for some time interval, allowing us
 to complete certain tasks and keep progressing in the stories.
+{{<enjoy>}}

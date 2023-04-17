@@ -15,7 +15,7 @@ categories:
   - tech
   - Kubernetes
 lang: en
-modified: 2022-05-04T13:32:56.830Z
+modified: 2023-04-17T21:44:21.141Z
 ---
 
 # Postgres across clusters
@@ -256,4 +256,6 @@ So next steps are:
 - Setup Quay to use that psql DNS name
 - Automate the setup, including Quay `ENV` variable for storage 'closer' to each cluster.
 
-[^1]: [Thread on psql-hackers](https://www.postgresql.org/message-id/CAPPwrB_tsOw8MtVaA_DFyOFRY2ohNdvMnLoA_JRr3yB67Rggmg%40mail.gmail.com) and [pinged by us](https://www.postgresql.org/message-id/20181211145240.GL20222%40redhat.com)
+[^1]:
+    [Thread on psql-hackers](https://www.postgresql.org/message-id/CAPPwrB_tsOw8MtVaA_DFyOFRY2ohNdvMnLoA_JRr3yB67Rggmg%40mail.gmail.com) and [pinged by us](https://www.postgresql.org/message-id/20181211145240.GL20222%40redhat.com)
+    {{<enjoy>}}

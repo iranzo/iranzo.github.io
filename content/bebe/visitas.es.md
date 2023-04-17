@@ -11,11 +11,9 @@ tags:
   - visitas
   - paseo
   - depresión postparto
-
 categories:
   - bebe
-
-modified: 2022-05-04T12:57:31.411Z
+modified: 2023-04-17T22:29:19.869Z
 ---
 
 ## Introducción
@@ -67,3 +65,4 @@ La alimentación debe cuidarse en especial, ya que por un lado la madre se está
 Considera combinar por ejemplo un paseo con una visita, si la haces 'cerca' de casa, además de pasear y que te puedan ayudar con algo, en cuanto se haga el momento de comer del bebé o te encuentres cansada, puedes irte a casa y dar por acabada la visita (más fácil que cuando tienes la visita en casa y no hacen amago de marcharse).
 
 Ánimo en esta nueva etapa!
+{{<disfruta>}}

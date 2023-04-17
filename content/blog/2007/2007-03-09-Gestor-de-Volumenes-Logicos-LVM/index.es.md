@@ -13,7 +13,7 @@ lang: es
 save_as: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/index.html
 url: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/
 translationKey: LVM
-modified: 2022-05-04T13:01:52.468Z
+modified: 2023-04-17T21:50:43.352Z
 cover:
   image: lvm8.jpg
 ---
@@ -209,4 +209,6 @@ Quiero destacar mi agradecimiento a [Carlos Hergueta](mailto:chergueta@gmail.com
 
 [^1]: Physical Extents
 [^2]: Multiple Devices: Es una tecnología que mediante software permite la creación de distintos niveles de agrupación de discos: linear, raid0, raid1, raid5. Los dispositivos se identifican en un sistema linux por la existencia de unidades /dev/md*0,1,2,3,etc* y un fichero de estado /proc/mdstat que indica el estado actual de los md's definidos y su estado de sincronía en caso de estar agrupados como RAID
-[^3]: El que hemos anotado en el paso previo a desmontarlo
+[^3]:
+    El que hemos anotado en el paso previo a desmontarlo
+    {{<disfruta>}}

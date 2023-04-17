@@ -11,7 +11,7 @@ url: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/
 save_as: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/index.html
 slug: Creating-Jigsaw-Download-Jigdo
 translationKey: Creating-Jigsaw-Download-JigDo
-modified: 2022-05-04T13:15:43.557Z
+modified: 2023-04-17T21:49:58.745Z
 categories:
   - FOSS
 ---
@@ -64,4 +64,5 @@ Puedes ver una plantilla de ejemplo (.jigdo y .template) que cree para este art√
 
 Puedes probarlo utilizando: jigdo-lite [http://alufis35.uv.es/deploy/Centos5-DVD.jigdo](http://alufis35.uv.es/deploy/Centos5-DVD.jigdo)
 
-Or: jigdo-lite [http://alufis35.uv.es/deploy/CentOS51-DVD.jigdo](http://alufis35.uv.es/deploy/CentOS51-DVD.jigdo)
+O: jigdo-lite [http://alufis35.uv.es/deploy/CentOS51-DVD.jigdo](http://alufis35.uv.es/deploy/CentOS51-DVD.jigdo)
+{{<disfruta>}}

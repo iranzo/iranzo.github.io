@@ -5,7 +5,7 @@ date: 2004-04-06T20:01:00.000Z
 tags:
   - general
 lang: es
-modified: 2022-05-04T14:43:57.966Z
+modified: 2023-04-17T21:53:50.174Z
 categories:
   - blog
 ---
@@ -41,3 +41,5 @@ A continuación vienen algunas las que nos han inspirado algunos profesores y el
 | si fuese así de fácil ya estaría hecho                                      | Es muy buena idea, pero no podemos admitirlo porque no es nuestra.                                                                             |
 | es de una dificultad extrema                                                | No tengo ni idea de cómo se podría hacer, pero no me voy a molestar en mirarlo                                                                 |
 | os ayudaremos con vuestras peticiones si tenéis a algún profesor como tutor | No pensamos ayudaros a menos que el que se juegue el culo sea alguien más tonto (y por lo tanto, más volcado con los estudiantes que nosotros) |
+
+{{<disfruta>}}

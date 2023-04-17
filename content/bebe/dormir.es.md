@@ -12,11 +12,9 @@ tags:
   - antivuelco
   - cuña
   - colecho
-
 categories:
   - bebe
-
-modified: 2022-11-12T00:18:48.892Z
+modified: 2023-04-17T22:28:44.295Z
 ---
 
 Tema complicado donde los haya... aquí podrás escuchar de todo:
@@ -44,3 +42,4 @@ Como no, otros temas 'ambientales': No tener cerca calefacción ni aire acondici
 Luego, dependiendo del pediatra, la recomendación suele ser que el niño duerma sobre su espalda, pero con la cabeza ladeada (las recomendaciones varían con el pediatra), especialmente tras haber 'comido'.
 
 A partir de aquí, 'suerte' con el sueño!
+{{<disfruta>}}

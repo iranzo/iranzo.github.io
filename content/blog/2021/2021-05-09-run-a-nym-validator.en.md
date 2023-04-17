@@ -15,7 +15,7 @@ date: 2021-05-09 12:40:34 +0200
 categories:
   - tech
 lang: en
-modified: 2022-05-06T22:05:07.935Z
+modified: 2023-04-17T21:36:05.683Z
 ---
 
 As said in the article about [mixnodes]({{<relref "2021-05-09-run-a-nym-mixnode.en.md">}}), NYM is a technology aiming for providing privacy for the communications.
@@ -131,4 +131,4 @@ nymd tx staking edit-validator   --chain-id=testnet-finney   --moniker=<mymonike
 
 With above command you can specify the `gpg` key last numbers (as used in `keybase`) as well as validator details and your email for security contact
 
-Enjoy!
+{{<enjoy>}}

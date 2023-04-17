@@ -8,7 +8,7 @@ tags:
   - astronomía
   - ciencia
 lang: es
-modified: 2022-05-04T14:44:05.881Z
+modified: 2023-04-17T21:52:29.025Z
 categories:
   - blog
 ---
@@ -81,3 +81,4 @@ La cola es un lugar temporal de estancia en el anillo. Cuando te apuntas, pasas 
 Los controles, son unas líneas de códigodo JavasScript (o código HTML) que insertan unos "controles de navegado" en tu web así, desde cualquier página se puede acceder al listado completo de webs, saltar a otra web al azar, etc.
 
 Estos controles, se incluyen una sola vez si se utiliza el código JavaScript, o bien, una vez por anillo subscrito si utilizamos el código HTML.
+{{<disfruta>}}

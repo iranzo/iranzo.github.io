@@ -10,7 +10,7 @@ tags:
   - foss
 categories:
   - Ansible
-modified: 2022-05-04T13:19:38.408Z
+modified: 2023-04-17T21:45:37.744Z
 ---
 
 ## Introduction
@@ -185,4 +185,4 @@ At this point, the system should have ansible available from within the virtuale
 ansible-playbook -i hosts ansible.yaml
 ```
 
-Have fun!
+{{<enjoy>}}

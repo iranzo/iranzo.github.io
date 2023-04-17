@@ -12,7 +12,7 @@ layout: post
 date: 2019-07-31 07:39:14 +0200
 categories:
   - tech
-modified: 2023-01-17T10:44:02.507Z
+modified: 2023-04-17T21:35:59.943Z
 ---
 
 After my post about [killercoda]({{<relref "2019-06-11-killercoda-scenario.en.md">}}), I did split my initial scenarios into 'organizations'.
@@ -48,4 +48,4 @@ The point here, is that old visitors from my prior post, going to either:
 
 will get instead to the updated URL for both scenarios, losing no visitors and ensuring that no 'old' copies are around.
 
-Enjoy!
+{{<enjoy>}}

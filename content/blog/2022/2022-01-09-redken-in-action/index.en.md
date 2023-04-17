@@ -15,7 +15,7 @@ categories:
   - redken_bot
 description: See how to use @redken_bot in Telegram or discord with some examples!
 lang: en
-modified: 2022-05-06T22:05:08.163Z
+modified: 2023-04-17T21:36:16.527Z
 cover:
   image: karma.png
 ---
@@ -88,4 +88,4 @@ If you've a very active group, the amount of karma messages might be too high, i
 
 For example `/lconfig set modulo=5` will only show karma for 0,5,10, etc karma points.
 
-Enjoy!
+{{<enjoy>}}

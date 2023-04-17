@@ -7,7 +7,7 @@ tags:
   - fedora
   - foss
 lang: es
-modified: 2022-05-04T14:44:16.790Z
+modified: 2023-04-17T21:48:50.918Z
 categories:
   - blog
 ---
@@ -47,3 +47,4 @@ Los pasos 'críticos' son :
 - a la hora de la combinación , escoger si es un email, el asunto y el campo que contiene la dirección de email del destinatario.
 
 Una vez finalizado, en ese último paso del asistente podemos lanzar el envío de los correos.
+{{<disfruta>}}

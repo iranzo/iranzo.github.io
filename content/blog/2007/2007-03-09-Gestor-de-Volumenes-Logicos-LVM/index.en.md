@@ -11,7 +11,7 @@ tags:
 lang: en
 categories:
   - FOSS
-modified: 2022-05-04T13:03:24.481Z
+modified: 2023-04-17T21:50:40.697Z
 translationKey: LVM
 cover:
   image: lvm8.jpg
@@ -202,4 +202,6 @@ When we select the free space of the logical volume, the following is shown: num
 
 [^1]: Physical Extents
 [^2]: Multiple Devices: is a software technology that allows creation of several disk grouping levels: `linear`, `raid0`, `raid1`, `raid5`. Devices will identify themselves to the system as `/dev/md*0,1,2,3,etc*`, and it's status (defined `md's`, sync status, etc) in the file `/proc/mdstat`
-[^3]: The one that we wrote down in the first step, before it was unmounted.
+[^3]:
+    The one that we wrote down in the first step, before it was unmounted.
+    {{<enjoy>}}

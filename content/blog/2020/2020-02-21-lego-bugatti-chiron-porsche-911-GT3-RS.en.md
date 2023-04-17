@@ -16,7 +16,7 @@ date: 2020-02-21 20:30:24 +0100
 categories:
   - LEGO
 lang: en
-modified: 2022-05-04T13:32:56.760Z
+modified: 2023-04-17T21:38:05.961Z
 cover:
   image: https://i.imgur.com/bIQfCLi.jpg.jpg
 ---
@@ -49,4 +49,4 @@ Both models have nice details, include a suitcase under the hood, sequential shi
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

@@ -8,11 +8,9 @@ tags:
   - contracciones
   - parto
   - bebe
-
 categories:
   - bebe
-
-modified: 2022-05-06T22:05:07.918Z
+modified: 2023-04-17T22:28:38.321Z
 ---
 
 Las contracciones son movimientos del útero (recordemos que es un músculo) que duran entre 30 y 60 segundos y son intermitentes.
@@ -34,3 +32,4 @@ Para relajarse el procedimiento a seguir es:
 El objetivo de las contracciones es dilatar el útero para preparar la salida del bebé, aunque antes de la fecha del parto, es posible que notemos alguna porque el útero se va `preparando` para el gran día.
 
 Es importante recordar contar los intervalos, porque lo mismo te toca pasar a leer [El día de ir 2 y volver 3]({{<relref "el-dia-de-ir-2-y-volver-3.es.md">}})
+{{<disfruta>}}

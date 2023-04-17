@@ -9,11 +9,9 @@ tags:
   - postparto
   - cine
   - depresión
-
 categories:
   - bebe
-
-modified: 2022-05-04T12:57:27.389Z
+modified: 2023-04-17T22:29:17.170Z
 cover:
   image: https://m.media-amazon.com/images/I/71oKg5DUa4L.jpg
 ---
@@ -25,3 +23,4 @@ La película cuenta la historia de Marlo, madre de tres hijos incluyendo un reci
 A Marlo, su hermano le regala una 'niñera nocturna' como regalo por el nacimiento, con el objetivo de que le ayude a descansar y sobrellevar la maternidad. Esta niñera, 'Tully' con la que hace buenas migas, le ayuda con las tareas de casa, llevándole al bebé a la cama cuando es la hora de lactar, la saca de 'fiesta', etc...
 
 Muy recomendable!
+{{<disfruta>}}

@@ -8,7 +8,7 @@ tags:
   - RHEV
   - oVirt
   - FOSS
-modified: 2022-05-04T13:19:38.442Z
+modified: 2023-04-17T21:46:28.574Z
 categories:
   - python
 ---
@@ -72,3 +72,4 @@ vm.migrate()
 It's expected for RHEV 3.1 to have a developer guide (now in Beta) at <https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Virtualization/3.1-Beta/html-single/Developer_Guide/index.html>
 
 Check it for more examples of use and put the Virtualization to work for you!
+{{<enjoy>}}

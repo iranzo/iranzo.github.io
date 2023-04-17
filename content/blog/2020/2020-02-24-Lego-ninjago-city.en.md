@@ -11,7 +11,7 @@ date: 2020-02-24 21:30:24 +0100
 categories:
   - LEGO
 lang: en
-modified: 2022-05-04T13:32:56.747Z
+modified: 2023-04-17T21:38:06.061Z
 cover:
   image: https://i.imgur.com/v5ulbTA.jpg.jpg
 ---
@@ -43,4 +43,4 @@ Overall: one of the best sets I built.
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

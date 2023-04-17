@@ -13,7 +13,7 @@ date: 2020-02-20 19:30:24 +0100
 categories:
   - LEGO
 lang: en
-modified: 2022-05-04T13:32:56.763Z
+modified: 2023-04-17T21:38:06.069Z
 cover:
   image: https://i.imgur.com/69ePXLB.jpg.jpg
 ---
@@ -38,4 +38,4 @@ In this case, the spacecraft is an `adapted` version of the typical spaceship at
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

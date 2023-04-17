@@ -7,7 +7,7 @@ tags:
   - spip
   - foss
 lang: es
-modified: 2022-05-04T13:15:43.525Z
+modified: 2023-04-17T21:50:32.278Z
 categories:
   - FOSS
 ---
@@ -34,4 +34,4 @@ Por supuesto, tienes la posibilidad de descargar plugins desde la propia interfa
 
 Por ahora no he encontrado problemas con las plantillas de `mollio` que utilizo, excepto con el plugin de PDF's que he actualizado en el repositorio para esta versión.
 
-A disfrutarla!
+{{<disfruta>}}

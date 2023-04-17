@@ -16,7 +16,7 @@ categories:
   - tech
 description: This article describes how to stake your token against a NYM cosmos validator
 lang: en
-modified: 2022-05-06T22:05:07.967Z
+modified: 2023-04-17T21:36:10.891Z
 slug: stake-nym-validator
 ---
 
@@ -101,4 +101,4 @@ If everything went fine, and we got the tokens there for a while, we should see 
 Each transaction requires to pay a fee, so do not try to hurry too much until you make an estimation on how is the staking rewards going on.
 {{</warning>}}
 
-Enjoy!
+{{<enjoy>}}

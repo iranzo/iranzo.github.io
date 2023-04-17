@@ -14,7 +14,7 @@ categories:
   - tech
   - OpenStack
 lang: en
-modified: 2022-05-04T13:32:56.833Z
+modified: 2023-04-17T21:44:25.141Z
 ---
 
 ## OSP Director
@@ -144,3 +144,4 @@ Bear in mind that proper MAC address of the interface connected to the 'provisio
 If everything went thru, a `nova list` will show the instance as `spawning` and after some more time, the server will be ready and accessible via `ssh core@$SERVERIP`.
 
 If it doesn't, ensure to setup nova in 'debug' mode for Undercloud, restart the services and try again, usually, the 'no valid hosts found' error is the most generic one but will give you some 'tips' on which filter ruled servers out.
+{{<enjoy>}}

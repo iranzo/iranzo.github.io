@@ -8,7 +8,7 @@ tags:
   - markdown
   - html
   - foss
-modified: 2022-05-04T13:19:38.425Z
+modified: 2023-04-17T21:46:14.963Z
 categories:
   - CMS
   - python
@@ -55,3 +55,4 @@ for item in feed["items"]:
 After each iteration, a new file was created using the old http link to the article (which already had stripped problematic characters).
 
 Just moving those files to `source/_posts` allows me to re-publish them on a different site, and later work the conversion to markdown by using `pandoc` and some manual tuning.
+{{<enjoy>}}

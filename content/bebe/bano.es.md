@@ -10,7 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2022-11-12T00:18:48.897Z
+modified: 2023-04-17T22:28:33.212Z
 ---
 
 ## Baño
@@ -61,3 +61,4 @@ En nuestro caso, salvo contadas ocasiones y como poníamos al principio, el bañ
 Ten en cuenta:
 
 - La capa blanquecina en la cabeza es la costra láctea. Se limpia con una gasa humedecida en aceite de oliva y con un peine se va despegando muy suavemente poco a poco.
+  {{<disfruta>}}

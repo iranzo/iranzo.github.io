@@ -10,7 +10,7 @@ tags:
   - Advanced Cluster Management
 categories:
   - tech
-modified: 2023-01-19T10:27:43.548Z
+modified: 2023-04-17T21:36:18.526Z
 ---
 
 [Kcli](https://github.com/karmab/Kcli) allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of `plans` it allows to automate most of the setup required to have an environment ready.
@@ -236,6 +236,6 @@ done
 
 With this, we've an environment with several spoke clusters and one hub, that we can use to test the scenarios described at <https://open-cluster-management.io/scenarios/>.
 
-Enjoy!
+{{<enjoy>}}
 
 Pablo

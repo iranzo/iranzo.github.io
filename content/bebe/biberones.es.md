@@ -12,7 +12,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2022-12-26T22:28:33.421Z
+modified: 2023-04-17T22:28:36.032Z
 ---
 
 ## Biberones
@@ -43,3 +43,4 @@ Esterilizadores, hay de varios tipos y siempre hay que mirar tamaños por los bi
 El de vapor se considera el más seguro, aunque existen variantes para usar en microondas o bien esterilizadores por pastillas con sus ventajas e inconvenientes.
 
 Para cuando el niño comience con alimentos que no sean la leche y vayamos a introducir fruta, existen [chupetes con rejilla](https://www.amazon.es/dp/B076H1ZQ5M?tag=redken-21) que pueden tener fruta picada o en trozos para que coja sabor sin el riesgo de que el niño ingiera trozos que todavía no sabe masticar (teniendo en cuenta que generalmente no tiene dientes todavía)
+{{<disfruta>}}

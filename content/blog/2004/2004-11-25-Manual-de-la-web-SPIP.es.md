@@ -7,7 +7,7 @@ tags:
   - spip
   - foss
 lang: es
-modified: 2022-05-04T14:42:04.819Z
+modified: 2023-04-17T21:52:24.972Z
 categories:
   - CMS
 ---
@@ -181,3 +181,4 @@ Si el artículo va a tener documentos adjuntos, sería interesante, que por ejem
 Si el artículo va a tener adjuntadas muchas fotografías, por ejemplo en el caso de fotografías de una install party, un evento, etc, es recomendable crear dos artículos, uno con todo el texto del artículo, detallando por ejemplo, el motivo del evento, del programa del mismo, y por otro lado, en la parte de "post Scriptum", ponga el enlace a otro artículo publicado en la sección de "Galería fotográfica", donde se pondrían todas las imágenes relacionadas, permitiendo que la gente que sólo esté interesada en el texto, lo descargue rápidamente y por otro lado pueda consultar las fotografías con más calma.
 
 Una de las cosas a tener en cuenta para la publicación: cuanto más completo sea el artículo con textos claros, bien estructurados, enlaces a los lugares de dónde se ha sacado la información, o dónde se puede ampliar o contrastar la misma, enlaces a la Wikipedia para las palabras más "complejas" o que son importantes, pero no tienen lugar para una explicación dentro del artículo, etc, harán por un lado que los buscadores encuentren y valoren mejor la página y la información, favoreciendo que se la visite, y por otro lado, harán que los visitantes se lleven una buena impresión del trabajo realizado y vuelvan a ella convirtiéndola en un lugar de consulta frecuente, ampliando así su utilidad.
+{{<disfruta>}}

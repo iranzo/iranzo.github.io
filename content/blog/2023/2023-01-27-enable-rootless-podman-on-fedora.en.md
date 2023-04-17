@@ -10,7 +10,7 @@ tags:
 date: 2023-01-27 9:00:00 +0100
 categories:
   - tech
-modified: 2023-01-27T10:26:25.806Z
+modified: 2023-04-17T21:36:19.380Z
 ---
 
 With podman we can setup containers for being used for non root users by performing some simple steps:
@@ -85,4 +85,4 @@ The output should be something like:
 42
 ```
 
-Enjoy!
+{{<enjoy>}}

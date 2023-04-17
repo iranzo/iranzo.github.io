@@ -16,7 +16,7 @@ date: 2019-06-11 21:16:14 +0200
 categories:
   - tech
   - RISU
-modified: 2023-01-17T10:46:38.245Z
+modified: 2023-04-17T21:35:58.382Z
 ---
 
 After some time checking the scenarios at <https://learn.openshift.com>, I decided to give it a try.
@@ -28,4 +28,4 @@ With the help of [Mario Vázquez](https://linuxera.org), author of [Getting Star
 
 You can check how them can be created by looking at their code at: [killercoda Scenarios](https://github.com/iranzo/katacoda-scenarios) or the 'playable' version at <https://killercoda.com/iranzo/>.
 
-Enjoy!
+{{<enjoy>}}

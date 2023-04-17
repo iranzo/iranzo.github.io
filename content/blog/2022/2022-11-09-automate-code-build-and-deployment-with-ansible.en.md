@@ -9,7 +9,7 @@ title: Automate code build and deployment with ansible
 categories:
   - tech
 date: 2022-11-09T07:00:46.350Z
-modified: 2022-11-09T09:01:35.445Z
+modified: 2023-04-17T21:36:15.150Z
 ---
 
 Let's say that we want to keep our system updated with some code which is not distributed as a regular package, but as a code in a repository (which unfortunately, it's a pretty common situation).
@@ -85,4 +85,4 @@ With this definition in the host inventory, we can then in our playbook to perfo
 
 By defining several repo stanzas, we can automate the process... and this is just the first step, as we can also define the `checkout` tag by first querying the repo latest release (if we want to live on the bleeding edge), so this whole process keeps your system using latest tools available, and built from source.
 
-Enjoy!
+{{<enjoy>}}

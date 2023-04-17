@@ -6,7 +6,7 @@ tags:
   - Linux
   - network
   - FOSS
-modified: 2022-05-04T13:15:43.566Z
+modified: 2023-04-17T21:51:35.031Z
 categories:
   - FOSS
 ---
@@ -116,3 +116,4 @@ killall -9 ssh`
 Now, we can run at our command line `lanzar` and automatically all tunnels will be created for accessing IMAPS, SMTP and our business internal Proxy all by just using 10993, 1025 & 2225 of our local machine (all within a only-web internet access network ;) )
 
 Special thanks to a colleague, JMP for original script for using SSH tunnels that I adapted for this manual.
+{{<enjoy>}}

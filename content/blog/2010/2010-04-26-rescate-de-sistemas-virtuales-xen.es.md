@@ -11,7 +11,7 @@ lang: es
 categories:
   - FOSS
   - Fedora
-modified: 2022-05-04T13:19:38.458Z
+modified: 2023-04-17T21:48:56.688Z
 ---
 
 A raíz de un problema debido a reiterados apagones, me vi en la necesidad de levantar una máquina virtual que ya no arrancaba.
@@ -27,3 +27,4 @@ Una vez arrancado, ya podemos seguir el procedimiento estándar de recuperación
 En el caso de tener que reconstruir el initrd, podemos tener un problema añadido, pero por otro lado, al ser todo máquinas virtuales 'con el mismo hardware', es muy sencillo crear otra máquina virtual e instalarla indicando los mismos nombres para los vg's, particiones de arranque, etc y luego copiar el initrd.img y el kernel de la máquina nueva a la antigua y arrancarla, para llegados a este punto, reinstalar la última versión del kernel disponible con nuestro sistema ya arrancado.
 
 La copia la podemos hacer bien desde el medio de rescate o montando mediante loopback el fichero de la máquina virtual (con LVM's es trivial) (puedes encontrar mucha información al respecto buscando por xen image y loopback offset).
+{{<disfruta>}}

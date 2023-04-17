@@ -7,12 +7,11 @@ tags:
   - RHEL
   - FOSS
   - Linux
-
 categories:
   - FOSS
-
 cover:
   image: https://admins.guru/rhel8-cover.png
+modified: 2023-04-17T21:42:40.512Z
 ---
 
 I did the RHCE exam some time ago, and still there are some tricks and
@@ -26,3 +25,4 @@ advices I tell the people to bear in mind some of the things I used and that wer
   - For example, if you're told to configure `resolv.conf` you can either use `nmcli` to modify the settings or you can pipe the results to it via `echo nameserver 1.1.1.1 > /etc/resolv.conf`, in the end, both will have the same effect, and of course, using `nmcli` will be smarter when you're keeping multiple systems and using automation... but for the exam, the goal is to focus on the fastest path to master at it.
 
 You can find more tricks at [Red Hat Enterprise 8 Administration](https://s.admins.guru/buyonamazon)
+{{<enjoy>}}

@@ -9,7 +9,7 @@ tags:
 lang: en
 slug: Creating-Jigsaw-Download-JigDo
 translationKey: Creating-Jigsaw-Download-JigDo
-modified: 2022-05-04T13:15:43.562Z
+modified: 2023-04-17T21:51:26.975Z
 categories:
   - FOSS
 ---
@@ -61,7 +61,7 @@ Easy:
 
 JigDo will download the descriptor, search it for the template file, download it and begin creation of ISO by downloading packages not found on optional local folder (to avoid re-download of packages).
 
-I hope you find this useful :)
+{{<enjoy>}}
 
 [^1]: [From Dag's Repo](http://dag.wieers.com/rpm/packages/jigdo/)
 [^2]: It can also be used to deliver other kind of files

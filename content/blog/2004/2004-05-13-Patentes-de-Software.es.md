@@ -7,7 +7,7 @@ tags:
   - linux
   - foss
 lang: es
-modified: 2022-05-06T22:09:05.529Z
+modified: 2023-04-17T21:53:50.180Z
 categories:
   - blog
 ---
@@ -89,3 +89,4 @@ De lo que se trata aquí es de presionar para que no sea ignorado nuestro desacu
 ### Créditos
 
 Extraído de: <http://hacklab.causaencantada.org/wiki/PatentesDeSoftware>
+{{<disfruta>}}

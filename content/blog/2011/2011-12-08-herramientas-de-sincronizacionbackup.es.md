@@ -8,7 +8,7 @@ tags:
   - fedora
   - dropbox
   - foss
-modified: 2022-05-06T22:09:05.505Z
+modified: 2023-04-17T21:48:05.222Z
 categories:
   - FOSS
   - Fedora
@@ -40,3 +40,4 @@ AeroFS: una recién llegada, que sigue en versión alpha, basada en Java, multip
 Actualmente AeroFS es la que más promete por no limitar el espacio excepto al que dispongas en tus equipos, pero con mi colección de documentos y 4 equipos a la vez he tenido problemas de ficheros renombrados "terminados con números entre paréntesis", sincronizaciones lentas (utilizar un interfaz vía hamachi en lugar del interfaz de red local), no sincronización de enlaces simbólicos y destrucción de ficheros con enlaces duros (deja sólo una copia), pero es la única que cubre por ahora mis necesidades con respecto a lo que hacía wuala (a excepción de no tener aplicaciones para móvil y claro está, no funcionar si ningún equipo con los datos está conectado).
 
 De como evolucionen syncany y aerofs de aquí a octubre, decidirá si escojo una de estas dos o sigo evaluando alternativas para los backups... por ahora sigo con Dropbox para cosas rápidas que no necesito excesiva privacidad y para el resto Wuala y he añadido duplicity para hacer backup a un NAS en mi red local a la espera de ir probando mejor AeroFS y ver cómo respira syncany...
+{{<disfruta>}}

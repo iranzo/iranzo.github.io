@@ -18,7 +18,7 @@ categories:
   - tech
   - CMS
 lang: en
-modified: 2022-05-06T22:08:31.886Z
+modified: 2023-04-17T21:36:02.514Z
 ---
 
 ## Introduction
@@ -72,4 +72,4 @@ from the JSON.
 Finally with the help from Talha, we got it also working with Instagram
 [Gallery Embed Instagram Post](https://next.elegant.oncrashreboot.com/gallery-embed-instagram-post)
 
-Enjoy!
+{{<enjoy>}}

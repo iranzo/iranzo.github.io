@@ -11,14 +11,14 @@ categories: blog
 lang: en
 slug: paella-howto
 translationKey: paella-howto
-modified: 2022-11-12T00:18:48.919Z
+modified: 2023-04-17T21:53:50.200Z
 cover:
   image: 20120708134340.jpg
 ---
 
 This document is based on the original recipe and pictures that I gave to my colleague [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) which he assembled in an internal company document and that he kindly translated for increased reach.
 
-# Ingredients:
+# Ingredients
 
 - A bag of vegetables for paella (`garrofón`, Valencian white bean; `ferraura` y `bajoqueta`,
   Valencian green beans with pod)
@@ -32,7 +32,7 @@ This document is based on the original recipe and pictures that I gave to my col
 - Salt
 - Water (from Valencia)
 
-# Preparation:
+# Preparation
 
 A garlic clove, to be grated, must be peeled and put together with tomato. They must be kept together until they are stir-fried.
 
@@ -48,13 +48,13 @@ In parallel, prepare the pot with water to get it boiling and we start to prepar
 
 ![More newspapers](20120708124816.jpg)
 
-# Pot:
+# Pot
 
 The vegetables must be boiled with water (if they are frozen) or added directly to Paella.
 
 The pot must be filled with abundant water, a bit of salt and , if possible some Rosemary, so it enhances the taste later on.
 
-# Paella:
+# Paella
 
 Chicken must be stir-fried until it is well done.
 
@@ -97,3 +97,4 @@ Once finished, rice must be tasted, fire must be switched off, and the paella mu
 You can also become creative with the presentation once served:
 
 ![Creative serving of Paella using a barrel and separating ingredients in layers](20120617142649.jpg)
+{{<enjoy>}}

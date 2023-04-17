@@ -12,7 +12,7 @@ date: 2020-04-08 20:48:24 +0100
 categories:
   - LEGO
 lang: en
-modified: 2022-05-04T13:32:56.736Z
+modified: 2023-04-17T21:38:06.035Z
 cover:
   image: https://i.imgur.com/gsSeZZz.jpg.jpg
 ---
@@ -45,4 +45,4 @@ Also, the module has two opening closets, one for the camera used to record the 
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

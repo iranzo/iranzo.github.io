@@ -6,7 +6,7 @@ tags:
   - general
   - bookcrossing
 lang: es
-modified: 2022-05-04T14:43:31.980Z
+modified: 2023-04-17T21:53:22.192Z
 categories:
   - blog
 ---
@@ -21,3 +21,4 @@ Su web tiene un 'espejo' en España: [http://www.bookcrossing-spain.com](http://
 Cada persona que lo encuentre encontrará la nota con el número del libro y al acceder a la web podrá comprobar quién lo puso en circulación, por qué lugares han pasado y lo que la gente ha escrito de ellos... Por lo visto aquí en Valencia hay 9 en circulación, uno en Blasco Ibáñez, otro en la cafetería de la FNAC, otro cerca de "yampua" (o como se escriba), etc...
 
 ¿Ya te has encontrado alguno? ¿Has puesto alguno en circulación? ¿te parece buena idea la iniciativa?
+{{<disfruta>}}

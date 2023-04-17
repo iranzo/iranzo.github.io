@@ -12,7 +12,7 @@ layout: post
 date: 2019-06-28 20:00:14 +0200
 categories:
   - LEGO
-modified: 2022-05-04T13:32:56.804Z
+modified: 2023-04-17T21:39:07.682Z
 cover:
   image: https://i.imgur.com/xIIP1ER.jpg.jpg
 ---
@@ -48,3 +48,4 @@ Model is [80101 Chinese New's Year Eve Dinner 🛒](https://www.amazon.es/dp/B07
 {{</gallery>}}
 
 {{< load-photoswipe >}}
+{{<enjoy>}}

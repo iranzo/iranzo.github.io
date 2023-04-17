@@ -7,7 +7,7 @@ tags:
   - cms
   - foss
 lang: es
-modified: 2022-05-04T13:04:15.383Z
+modified: 2023-04-17T21:52:00.498Z
 categories:
   - FOSS
 ---
@@ -226,8 +226,7 @@ Para utilizar la agenda, deberás publicar artículos en su sección y asignarle
 
 En caso de que tengas alguna duda relacionada o considerases que alguna parte de este documento o de las plantillas se puede mejorar, no dudes en colgar un mensaje al respecto.
 
-PD:
-
-Puedes consultar el funcionamiento a nivel de usuario de las plantillas consultando el artículo Manual de usuario de los esqueletos modificados de spip-contrib, pues es análogo al de estas plantillas.
+PD: Puedes consultar el funcionamiento a nivel de usuario de las plantillas consultando el artículo Manual de usuario de los esqueletos modificados de spip-contrib, pues es análogo al de estas plantillas.
 
 Puedes también consultar los [últimos cambios](https://github.com/iranzo/mollio-spip) en el código
+{{<disfruta>}}

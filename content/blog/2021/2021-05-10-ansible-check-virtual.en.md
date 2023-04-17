@@ -16,7 +16,7 @@ categories:
   - FOSS
   - Ansible
 lang: en
-modified: 2022-05-04T13:32:56.691Z
+modified: 2023-04-17T21:36:06.740Z
 ---
 
 I was improving a playbook in Ansible and wanted to find a way to find if a system was virtual or not to decide about some tunning like setting `tuned-adm profile virtual-guest` or disable the power off when the lid is closed.
@@ -108,4 +108,4 @@ With the first example, we use it in `check_mode` and use it to setup `virtual` 
 
 Of course, this could also be extended to check if system is really a laptop or different kind of system to enable some other specific tunning, but for some initial tasks, it will do the trick.
 
-Enjoy!
+{{<enjoy>}}

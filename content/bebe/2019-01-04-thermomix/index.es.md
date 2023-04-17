@@ -41,3 +41,4 @@ La principal ventaja fue que por un lado, podíamos seguir haciendo comida sana,
 Ciertamente, nos ha ayudado mucho también en menús navideños donde con poco esfuerzo preparábamos sopas, platos principales y postres como en el día a día con platos al vapor (con el accesorio Varoma), al papillón, etc como numerosos purés y cremas (que seguimos haciendo).
 
 La verdad, es que la tenemos más que amortizada con el uso y a diferencia de las ['babycook'](https://www.amazon.es/dp/B07T98TWS8?tag=redken-21), nos ha servido para nosotros y para el bebé, desde recién nacido, donde nos permitía recuperar horas de sueño mientras la comida se hacía sola, a preparar sus platos y papillas de frutas antes de que pasara a los alimentos sólidos (no triturados).
+{{<disfruta>}}

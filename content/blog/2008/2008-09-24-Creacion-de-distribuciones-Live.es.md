@@ -8,7 +8,7 @@ tags:
   - fedora
   - foss
 lang: es
-modified: 2022-05-06T22:05:08.066Z
+modified: 2023-04-17T21:50:22.937Z
 categories:
   - FOSS
 ---
@@ -163,3 +163,4 @@ Aprovechando los conocimientos que ya teníamos acerca de kickstart y anaconda, 
 Ahora sólo nos queda pasar a disfrutar y seguir afinando nuestro medio vivo hasta que se adapte perfectamente a nuestras necesidades, sabiendo que cualquier 'scripting' que necesitáramos hacer para adaptar el sistema, podemos codificarlo en las secciones 'post' de nuestro kickstart.
 
 Este método es también operativo con Red Hat Enterprise Linux 5, CentOS 5 utilizando las livecd-tools de los repositorios de EPEL.
+{{<disfruta>}}

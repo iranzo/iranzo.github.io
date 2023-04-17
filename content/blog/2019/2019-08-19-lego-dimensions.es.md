@@ -18,7 +18,7 @@ categories:
 lang: es
 slug: lego-dimensions
 translationKey: lego-dimensions
-modified: 2022-11-12T00:18:48.911Z
+modified: 2023-04-17T21:39:18.239Z
 cover:
   image: https://www.lego.com/cdn/cs/set/assets/blt866dc839f8c741cf/dimensions-logo.png
 ---
@@ -151,3 +151,4 @@ Los `Fun Pack` añaden personaje y un gadget o vehículo:
 El juego comparte parte de la metodología de los juegos lego: recoger 'monedas' y romper objetos para conseguir más monedas y descubrir objetos que 'montar', pero combinado con diversas habilidades de cada personaje o vehículo.
 
 En caso de no disponer de los personajes, usando un número de piezas, se pueden 'alquilar' por un intervalo de tiempo y así poder completar tareas pendientes para poder seguir avanzando en las historias.
+{{<disfruta>}}

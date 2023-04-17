@@ -18,7 +18,7 @@ categories:
   - LEGO
 lang: en
 slug: lego-dimensions-cloning
-modified: 2022-05-06T22:05:08.048Z
+modified: 2023-04-17T21:36:01.629Z
 cover:
   image: ntag213.png
 ---
@@ -64,4 +64,4 @@ Doing this, you'll be able to clone or write the tags that were damaged and put 
 
 There was also a 'ready-to-print' set of pics for the tags in one of the forum posts at [http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip](https://web.archive.org/web/20210113032332/http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip/file) which contains the images for each tag and possible vehicle.
 
-Enjoy!
+{{<enjoy>}}

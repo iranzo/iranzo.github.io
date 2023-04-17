@@ -6,7 +6,7 @@ tags:
   - software
   - privacy
 lang: es
-modified: 2022-05-04T14:42:37.563Z
+modified: 2023-04-17T21:53:50.189Z
 categories:
   - blog
 ---
@@ -193,4 +193,6 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 [^17]: Peer to Peer: Programas utilizados para el intercambio de archivos de igual a igual
 [^18]: DRM:Digital Rights Management
 [^19]: Trusted Computing Platform Alliance
-[^20]: Nombre en Clave del sistema operativo de MS que permitiría un control absoluto bajo las políticas de "seguridad" de TCPA
+[^20]:
+    Nombre en Clave del sistema operativo de MS que permitiría un control absoluto bajo las políticas de "seguridad" de TCPA
+    {{<disfruta>}}

@@ -6,7 +6,7 @@ author: Pablo Iranzo Gómez
 tags:
   - fedora
   - foss
-modified: 2022-05-04T13:19:38.455Z
+modified: 2023-04-17T21:48:16.162Z
 categories:
   - FOSS
   - Fedora
@@ -47,4 +47,4 @@ Update Wed 16/Mar/2011
 - Evolution has a good integration with Google services (Contacts/Calendar/Gmail) so you can use it as an offline client
 - Some bugs opened on bugzilla, but still more than 15 days for 'Beta', and a very good ratio of fixes :)
 
-Will keep updating this post with newer information!
+{{<enjoy>}}

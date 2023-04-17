@@ -18,7 +18,7 @@ categories:
   - LEGO
 lang: es
 slug: lego-dimensions-cloning
-modified: 2022-05-06T22:05:08.055Z
+modified: 2023-04-17T21:37:08.287Z
 cover:
   image: ntag213.png
 ---
@@ -64,4 +64,4 @@ Haciéndolo, serás capaz de clonar o escribir las etiquetas que estaban dañada
 
 Existe también un conjunto de imágenes 'listas-para-imprimir' en uno de los posts en [http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip](https://web.archive.org/web/20210113032332/http://www.mediafire.com/file/b2d5a9dwj7ksry9/LD1inchimages.zip/file) que contiene las imágenes para cada etiqueta de personaje posible y sus vehículso con sus mejoras.
 
-Disfruta!
+{{<disfruta>}}

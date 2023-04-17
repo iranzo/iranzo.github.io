@@ -8,7 +8,7 @@ tags:
   - desktop
   - foss
 lang: es
-modified: 2022-05-04T13:03:26.699Z
+modified: 2023-04-17T21:49:37.953Z
 cover:
   image: firefox-reducido.jpg
 categories:
@@ -80,3 +80,4 @@ Personalmente he utilizado "[keyconfig](https://addons.mozilla.org/es-ES/firefox
 Una muy interesante es "[publicfox](https://addons.mozilla.org/es-ES/firefox/addon/3911)", que permite proteger las opciones de about:config para que el usuario no pueda cambiar configuración de proxy, programas externos, etc
 
 ![Firefox limitado](firefox-reducido.jpg)
+{{<disfruta>}}

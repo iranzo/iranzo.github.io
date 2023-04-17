@@ -10,10 +10,11 @@ tags:
   - nutricionistas
   - bebe
 categories: bebe
-modified: 2022-05-07T11:59:21.972Z
+modified: 2023-04-17T22:29:13.236Z
 ---
 
 - [Lucia mi pediatra](https://www.luciamipediatra.com/)
 - [Julio Basulto](https://juliobasulto.com/)
 - [Armando enfermero de pediatria](https://www.armandobastida.com/)
 - [E-Lactancia](https://www.e-lactancia.org/), para consultar la compatibilidad con lactancia y embarazo de muchos medicamentos, etc. Consulta siempre con tu médico antes!
+  {{<disfruta>}}

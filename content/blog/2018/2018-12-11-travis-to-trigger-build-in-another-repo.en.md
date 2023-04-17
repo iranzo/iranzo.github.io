@@ -13,7 +13,7 @@ layout: post
 date: 2018-12-11 21:49:47 +0100
 categories:
   - tech
-modified: 2022-05-06T22:05:08.091Z
+modified: 2023-04-17T21:44:52.864Z
 ---
 
 # Introduction
@@ -118,5 +118,4 @@ This is similar to [what we did]({{<relref "2018-12-07-elegant-website-ci.en.md"
 
 With this solution in place, when a new commit is merged on 'master' branch on the 'theme' repo [(`elegant`)](https://github.com/Pelican-Elegant/elegant), Travis does get invoked to schedule a build on the [`documentation`](https://github.com/Pelican-Elegant/documentation) repo, thus, rendering the live website with latest templates.
 
-Enjoy!
-Pablo
+{{<enjoy>}}

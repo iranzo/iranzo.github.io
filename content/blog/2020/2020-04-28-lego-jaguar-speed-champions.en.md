@@ -12,7 +12,7 @@ date: 2020-04-28 22:30:24 +0200
 categories:
   - LEGO
 lang: en
-modified: 2022-05-04T13:32:56.730Z
+modified: 2023-04-17T21:38:05.981Z
 cover:
   image: https://i.imgur.com/fYx5Jtr.jpg.jpg
 ---
@@ -31,4 +31,4 @@ I also bought a [Light box](https://s.click.aliexpress.com/e/_bmC0MP) to take pi
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

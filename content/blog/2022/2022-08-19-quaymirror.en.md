@@ -11,11 +11,9 @@ tags:
   - Registry
 categories:
   - FOSS
-modified: 2022-01-19T11:00:33.338Z
+modified: 2023-04-17T21:36:14.315Z
 slug: setup-quay-mirror-disconnected-installations-mirror-registry
-description:
-  Learn on how to use mirror-registry to create a local copy that can be used to
-  install OpenShift without external Internet connectivity.
+description: Learn on how to use mirror-registry to create a local copy that can be used to install OpenShift without external Internet connectivity.
 ---
 
 In order to setup disconnected registry for installation, follow this blog post by Daniel at [Introducing Mirror Registry for Red Hat OpenShift](https://cloud.redhat.com/blog/introducing-mirror-registry-for-red-hat-openshift).
@@ -93,4 +91,4 @@ spec:
     source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
 ```
 
-Enjoy!
+{{<enjoy>}}

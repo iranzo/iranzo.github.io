@@ -14,7 +14,7 @@ tags:
 categories:
   - tech
   - risu
-modified: 2022-05-06T22:05:08.143Z
+modified: 2023-04-17T21:45:22.998Z
 ---
 
 ## Background
@@ -51,7 +51,6 @@ The goal, once this has been discussed and determined, is to write plugins that 
 - NTP synchronization across nodes
 - etc
 
-Hope it's helpful for you!
-Pablo
+{{<enjoy>}}
 
 PD: We've proposed this to be a talk in upcoming OSP Summit 2017 in Sydney, so if you want to see us there, don't forget to vote on <https://www.openstack.org/summit/sydney-2017/vote-for-speakers#/19095>

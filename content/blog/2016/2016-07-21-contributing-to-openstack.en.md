@@ -9,8 +9,7 @@ tags:
 categories:
   - tech
   - OpenStack
-
-modified: 2022-05-06T22:09:05.518Z
+modified: 2023-04-17T21:45:58.344Z
 ---
 
 Contributing to an OpenSource project might take some time at the beginning, the good thing with OpenStack is that there are lot of guides on how to start and collaborate.
@@ -103,3 +102,4 @@ git-review
 Also, keep in mind that apart from submitting the code change is important to submit automated validation tests, which can be executed with `tox -e py27` to view that the functions return the values we expect even if the input data is out of what it should be, or like coverage, to validate that the code is covered (check on `tox.ini` what is defined).
 
 And last but not least, expect to have lot of comments on more serious changes like changes to stable libs, as lot of reviewers will come to ensure that everything looks good and might even discuss it on the regular meetings to ensure, that a change is a good fit for the product in the proposed approach.
+{{<enjoy>}}

@@ -19,7 +19,7 @@ date: 2019-05-16 22:29:14 +0200
 categories:
   - tech
   - CMS
-modified: 2022-05-06T22:05:08.029Z
+modified: 2023-04-17T21:43:01.495Z
 ---
 
 As a recipe, if you want to enable a custom domain name on [blog-o-matic]({{<relref "2019-01-09-blog-o-matic.en.md">}}) a special file needs to be created on the 'GitHub Pages' served 'master' branch.
@@ -64,3 +64,4 @@ yourcustomdomain.es.	1	IN	A	185.199.111.153
 ```
 
 Please, do review if the serving servers have been updated on github pages!
+{{<enjoy>}}

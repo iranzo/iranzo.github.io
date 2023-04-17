@@ -7,7 +7,7 @@ layout: post
 date: 2007-10-03 17:55:54 +0100
 categories: blog
 lang: es
-modified: 2022-05-04T12:50:57.146Z
+modified: 2023-04-17T21:50:46.898Z
 ---
 
 # Las leyes de Murphy
@@ -3210,3 +3210,4 @@ Si la escribe, recibirá sus artículos antes de que la carta llegue a su destin
 ### Teorema de CHAPPAQUIDICK DE WHITE
 
 - Cuanto antes se anuncien las malas noticias y cuantos más detalles se den, mejor
+  {{<disfruta>}}

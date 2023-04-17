@@ -10,7 +10,7 @@ tags:
 lang: es
 categories:
   - FOSS
-modified: 2022-05-06T22:05:07.946Z
+modified: 2023-04-17T21:49:45.432Z
 cover:
   image: Pantallazo-00.png
 ---
@@ -170,6 +170,6 @@ Recomiendo instalar yum-presto y yum-fastestmirror para que yum utilice rpm's di
 
 Y ya tendremos el sistema listo y preparado para funcionar...
 
-¡¡A disfrutarlo!!
+{{<disfruta>}}
 
 PD: Si puedes y estás de acuerdo, instala el paquete "smolt", permite enviar un informe de tu hardware a [http://smolt.fedoraproject.org](http://smolt.fedoraproject.org/) que facilita saber qué tipo de hardware hay y se está utilizando y en caso de que algo no te funcioen puedes notificarlo. Siempre es más fácil que se desarrolle para mejorar el soporte sobre el hardware que se está utilizando ¿no?

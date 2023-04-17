@@ -9,7 +9,7 @@ tags:
   - Markdown
   - SPIP
   - Blogger
-modified: 2022-05-04T13:37:04.457Z
+modified: 2023-04-17T21:46:05.426Z
 categories:
   - CMS
 ---
@@ -35,3 +35,4 @@ JavaScript library).
 Well, let's see how this goes and will try to implement some template to website not to use the standard one soon.
 
 Post Datum: This was being written while offline at the airport on a trip to Helsinki ;-)
+{{<enjoy>}}

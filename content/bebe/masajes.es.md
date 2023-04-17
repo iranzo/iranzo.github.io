@@ -9,11 +9,9 @@ tags:
   - cuidados
   - bebe
   - madre
-
 categories:
   - bebe
-
-modified: 2022-11-12T00:18:48.901Z
+modified: 2023-04-17T22:29:03.139Z
 ---
 
 Los masajes forman parte del cuidado tanto de la madre como del niño, desde los primeros momentos del embarazo para una a los primeros momentos del bebé.
@@ -47,3 +45,4 @@ Se deben comenzar a darlos al mes de haber nacido, convirtiéndolos en un moment
 | Para la espalda        | poniendo la cabeza de lado, y de arriba a abajo haciendo círculos a ambos lados de la columna hasta las nalgas y subiendo en sentido contrario. Se continúa con otro subiendo en línea y abriendo en hombros y otro con las manos en diagonal alejándose de la espalda. |
 
 Recuerda siempre que el momento de masaje es para relajaros, así que la iluminación debe ser reducida, que la habitación esté a temperatura adecuada para que el niño esté destapado y no tenga frío mientras se le da el masaje, etc... es un momento para estar a gusto y relajaros.
+{{<disfruta>}}

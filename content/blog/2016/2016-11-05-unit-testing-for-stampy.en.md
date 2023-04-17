@@ -10,7 +10,7 @@ tags:
   - redken
 categories:
   - redken_bot
-modified: 2022-05-06T22:05:07.976Z
+modified: 2023-04-17T21:35:53.164Z
 ---
 
 Since my prior post on [Contributing to OpenStack]({{<relref "2016-07-21-contributing-to-openstack.en.md">}}), I liked the idea of using some automated tests to validate functionality and specifically, the corner cases that could arise when playing with the code.
@@ -236,4 +236,4 @@ script:
   - nosetests
 ```
 
-Enjoy!
+{{<enjoy>}}

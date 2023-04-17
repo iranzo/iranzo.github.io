@@ -8,11 +8,9 @@ tags:
   - parto
   - hospital
   - bebe
-
 categories:
   - bebe
-
-modified: 2022-05-04T12:58:50.629Z
+modified: 2023-04-17T22:29:08.291Z
 ---
 
 El plan de parto es una parte de la `cartilla del embarazo` donde la futura madre indica cuales son sus intenciones sobre diversos aspectos del mismo, por ejemplo:
@@ -32,3 +30,4 @@ El plan de parto, no deja de ser una lista de 'deseos' que pueden verse alterado
 Es interesante, eso si, que deje de ser algo 'impuesto' y que se pueda influir en el entorno que nos rodeará en un momento tan importante e íntimo para la nueva familia.
 
 ¿Tuviste algún problema con poder cumplir tu plan con tu bebé?
+{{<disfruta>}}

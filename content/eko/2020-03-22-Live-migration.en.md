@@ -1,9 +1,6 @@
 ---
 author: Pablo Iranzo Gómez
-description:
-  KubeVirt leverages Live Migration to support workloads to keep running while
-  nodes can be moved to maintenance, etc Check what is needed to get it working
-  and how it works.
+description: KubeVirt leverages Live Migration to support workloads to keep running while nodes can be moved to maintenance, etc Check what is needed to get it working and how it works.
 categories:
   - tech
   - Kubernetes
@@ -16,7 +13,7 @@ tags:
   - Live Migration
   - node drain
 date: 2020-03-22 00:00:00 +0200
-modified: 2022-05-04T13:32:56.642Z
+modified: 2023-04-17T21:40:18.047Z
 ---
 
 This article was published originally at <https://kubevirt.io/2020/Live-migration.html>
@@ -231,3 +228,4 @@ As a briefing on the above data:
 - [Live Migration](https://kubevirt.io/user-guide/operations/live_migration/)
 - [Node Drain/Eviction](https://kubevirt.io/user-guide/operations/node_maintenance/#evict-all-vms-from-a-node)
 - [Rook](https://rook.io/)
+  {{<enjoy>}}

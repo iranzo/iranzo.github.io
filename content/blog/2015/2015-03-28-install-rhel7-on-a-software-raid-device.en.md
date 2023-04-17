@@ -8,7 +8,7 @@ tags:
   - Fedora
   - RHEL
   - FOSS
-modified: 2022-05-04T13:19:38.428Z
+modified: 2023-04-17T21:35:50.414Z
 categories:
   - FOSS
   - Fedora
@@ -113,4 +113,4 @@ What I did, after this point, is to reboot the install media, so I could use `an
 
 Select the `manual partitioning` during the installation to define above devices as their intended usage, and once it has been installed, create the additional Physical volume on `/dev/md2` and define the intended mount points, etc.
 
-Enjoy!
+{{<enjoy>}}

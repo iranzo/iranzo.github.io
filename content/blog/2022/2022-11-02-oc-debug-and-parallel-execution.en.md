@@ -12,7 +12,7 @@ title: OpenShift's oc debug and parallel execution
 categories:
   - tech
 date: 2022-11-03T14:13:32.418Z
-modified: 2022-11-04T12:18:46.350Z
+modified: 2023-04-17T21:42:55.683Z
 ---
 
 A colleague reported some issues in the OpenShift troubleshooting and diagnosis scripts at [OpenShift-checks](https://github.com/RHsyseng/openshift-checks/).
@@ -42,3 +42,4 @@ ocdebugorwait() {
 When invoked in the scripts with `ocdebugorwait` the code enters this loop before attempting the `oc debug` command.
 
 With this patch, the reported output is obtained, and of course, properly shown in the HTML interface while doing troubleshooting with Risu.
+{{<enjoy>}}

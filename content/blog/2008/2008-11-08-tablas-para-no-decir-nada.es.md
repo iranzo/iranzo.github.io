@@ -8,7 +8,7 @@ date: 2008-11-08 23:16:14 +0200
 categories:
   - blog
 lang: es
-modified: 2022-05-04T13:14:07.830Z
+modified: 2023-04-17T21:50:26.099Z
 ---
 
 {{<hint title="Método de uso">}}
@@ -35,3 +35,5 @@ Avance por columna eligiendo cualquier casilla.
 |                           Pero pecaríamos de insinceros si soslayásemos que,                           |       una aplicación indiscriminada de los factores confluyentes       |          asegura, en todo caso, un proceso muy sensible de inversión           |                                        de los elementos generadores.                                        |
 | Y además, quedaríamos inmersos en la más abyecta de las estulticias si no fuéramos conscientes de que, |             la condición sine qua non rectora del proceso              | radica en una elaboración cuidadosa y sistemática de las estrategias adecuadas |             para configurar una interface amigable y coadyuvante a la reingeniería del sistema.             |
 |                 Por último, y como definitivo elemento esclarecedor, cabe añadir que,                  |    el proceso consensuado de unas y otras aplicaciones concurrentes    |                 deriva de una indirecta incidencia superadora                  | de toda una serie de criterios ideológicamente sistematizados en un frente común de actuación regeneradora. |
+
+{{<disfruta>}}

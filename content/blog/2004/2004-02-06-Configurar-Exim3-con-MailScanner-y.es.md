@@ -7,7 +7,7 @@ tags:
   - exim
   - foss
 lang: es
-modified: 2022-05-04T14:43:39.161Z
+modified: 2023-04-17T21:53:50.161Z
 categories:
   - blog
   - FOSS
@@ -163,6 +163,4 @@ Este esquema al utilizar directamente el sistema de correo, permite que si por e
 
 Claro, ahora tendremos que iniciar MailScanner: /etc/init.d/mailscanner start y tras un momento, habrá iniciado el proceso y podremos hacer las pruebas...
 
-Espero que os haya resultado útil
-
-Saludos
+{{<disfruta>}}

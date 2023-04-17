@@ -13,7 +13,7 @@ categories:
   - FOSS
   - Fedora
 description: Learn on how to use imapfilter against Gmail for classifying the messages
-modified: 2022-05-04T13:32:56.682Z
+modified: 2023-04-17T21:36:08.668Z
 ---
 
 Until two weeks ago I was using an IMAP server (based on Zimbra) for my work email, but the date for migration to Gmail arrived with no choice to postpone...
@@ -301,4 +301,4 @@ In this case, it also keeps messages in which I was directly involved (removing,
 
 During the next days I'll try to get back email in mutt, but this at least makes the usage in the meantime more bearable...
 
-Enjoy!
+{{<enjoy>}}

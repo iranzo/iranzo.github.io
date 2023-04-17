@@ -15,7 +15,7 @@ date: 2020-09-17 19:00:24 +0200
 categories:
   - LEGO
 lang: en
-modified: 2022-05-04T13:32:56.720Z
+modified: 2023-04-17T21:38:06.015Z
 cover:
   image: https://i.imgur.com/RwERShO.jpg.jpg
 ---
@@ -53,4 +53,4 @@ I didn't have more pieces, but the sliding roof has a whole, so that I could rep
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

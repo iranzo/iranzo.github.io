@@ -8,7 +8,7 @@ tags:
   - Foss
 categories:
   - FOSS
-modified: 2022-05-04T13:15:43.552Z
+modified: 2023-04-17T21:50:05.823Z
 ---
 
 ### Introduction
@@ -222,3 +222,4 @@ We can switch a value using `togglesebool` value but this will not set it as def
 I hope this can help you as a small introduction to SELinux and it's features :)
 
 PD: News and updates about SELinux at [SELinux News](http://www.selinuxnews.org/wp/)
+{{<enjoy>}}

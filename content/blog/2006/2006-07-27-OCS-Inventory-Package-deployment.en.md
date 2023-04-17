@@ -8,7 +8,7 @@ tags:
   - software
   - OCS
   - FOSS
-modified: 2022-05-04T13:15:43.577Z
+modified: 2023-04-17T21:51:40.987Z
 categories:
   - FOSS
 ---
@@ -235,3 +235,4 @@ Thanks (again) to the OCS Developing team (specially to Pascal Danek) for creati
 Thanks to Pablo Chamorro for reviewing this article too ;)
 
 Have a look at [OCS Deployment Tips and tricks]({{< ref "2006-07-29-OCS-Deployment-Tips-and-tricks.en.md" >}}) to get ideas on how to use package deployment
+{{<enjoy>}}

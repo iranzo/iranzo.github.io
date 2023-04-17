@@ -1,15 +1,13 @@
 ---
 layout: post
-title:
-  Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible
-  (Linux/Windows)
+title: Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible (Linux/Windows)
 date: 2010-04-15 14:18:00 +0200
 author: Pablo Iranzo Gómez
 lang: es
 tags:
   - fedora
   - foss
-modified: 2022-05-04T13:15:19.447Z
+modified: 2023-04-17T21:48:53.760Z
 categories:
   - FOSS
   - Fedora
@@ -66,3 +64,4 @@ cat 7zS.sfx config.txt todo7z > autoejecutable.exe
 Cuando enviemos el fichero `autoejecutable.exe` a un usuario, al ejecutarlo, se descomprimirá el fichero `todo.7z` contenido dentro del ejecutable y se lanzará la línea de comando del `config.txt`, lanzando unetbootin para la creación....
 
 Podemos utilizar este método (sin hacer el autoejecutable), para crear un pendrive de arranque de forma manual y poder actualizar nuestra bios, etc.
+{{<disfruta>}}

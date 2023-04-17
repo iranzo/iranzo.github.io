@@ -7,7 +7,7 @@ lang: es
 tags:
   - fedora
   - foss
-modified: 2022-05-04T13:19:38.444Z
+modified: 2023-04-17T22:30:46.679Z
 categories:
   - FOSS
   - Fedora
@@ -35,3 +35,4 @@ Empeora:
 - A veces el alt-f2 abre el diálogo de ejecutar por detrás de la ventana activa y toca usar alt-tab para ponerlo en primer plano.
 
 Por ahora voy a seguir con LXDE en dos equipos y ver si finalmente lo pongo en todos o busco alguna alternativa más.
+{{<disfruta>}}

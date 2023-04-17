@@ -7,7 +7,7 @@ tags:
   - cms
   - foss
 lang: es
-modified: 2022-05-04T13:15:43.581Z
+modified: 2023-04-17T21:51:48.273Z
 categories:
   - FOSS
 ---
@@ -92,3 +92,4 @@ Así mismo, a partir de esta versión podemos indicar la ruta hasta el directori
 Otro punto importante, es la posibilidad de crear ficheros `local_LANG.php`, donde LANG es el código ISO para el idioma, por ejemplo, es fr uk it ca, etc que permiten crear textos propios que serán traducidos a los idiomas en los que lo hayamos configurado, permitiendo así poder internacionalizar con mayor facilidad los esqueletos, y a diferencia de otras versiones, podemos incluirlos en la carpeta del esqueleto para poder mantenerlos sin mezclar nuestro código con el estándar de SPIP.
 
 PD: Puedes ver otras mejoras a SPIP en el siguiente artículo: [http://www.spip.net/fr_article3368.html](http://www.spip.net/fr_article3368.html), de momento, en Francés
+{{<disfruta>}}

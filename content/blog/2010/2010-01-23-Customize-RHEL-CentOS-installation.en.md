@@ -9,7 +9,7 @@ tags:
   - Linux
   - installation
   - FOSS
-modified: 2022-05-06T22:05:08.071Z
+modified: 2023-04-17T21:48:28.302Z
 categories:
   - FOSS
 ---
@@ -149,3 +149,5 @@ mkisofs -v -r -N -L -d -D -J -V NAME -b isolinux/isolinux.bin -c isolinux/boot.c
 Now, it's time to burn MyCustomISO.iso and give it a try ;-)
 
 Post Datum: While testing is just better to keep using rewritable media until you want to get a 'release'
+
+{{<enjoy>}}

@@ -16,7 +16,7 @@ date: 2019-01-22 20:51:27 +0100
 categories:
   - tech
   - CMS
-modified: 2022-05-06T22:05:08.062Z
+modified: 2023-04-17T21:44:14.466Z
 ---
 
 # Introduction
@@ -80,3 +80,4 @@ Other manual steps involved
 - And a lot more :-)
 
 The good thing, in the end, is that with some additional work, I was able to bring back 'online' my older presentations, now listed in the [presentations category]({category}presentations).
+{{<enjoy>}}

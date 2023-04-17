@@ -9,7 +9,7 @@ tags:
   - rpm
   - spec
   - foss
-modified: 2022-05-06T22:09:05.475Z
+modified: 2023-04-17T21:49:16.961Z
 categories:
   - FOSS
 ---
@@ -117,6 +117,4 @@ chkconfig --del minidlna
 - Initial version
 ```
 
-Enjoy it!
-
-Pablo
+{{<enjoy>}}

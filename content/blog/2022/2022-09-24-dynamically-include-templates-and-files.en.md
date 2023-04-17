@@ -9,6 +9,7 @@ tags:
   - Tips
   - ansible
 date: 2022-09-24T11:13:32.418Z
+modified: 2023-04-17T21:42:47.250Z
 ---
 
 For my ansible playbooks, I wanted to be able to add several new templates to be copied to target system, and additionally be able to perform some commands for them without having to specify each individual file/template to copy.
@@ -114,3 +115,4 @@ With this approach, putting files in a tree structure like:
 This will make first part of the task to copy the templates (ending in `.jinja`) to the target location, but removing the `.jinja` suffix.
 
 For the second part, it will include the relevant `.yaml` files, and load the tasks defined within and execute as part of the playbook.
+{{<enjoy>}}

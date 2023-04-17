@@ -11,7 +11,7 @@ date: 2020-08-10 07:44:24 +0200
 categories:
   - tech
 lang: en
-modified: 2022-05-06T22:05:07.961Z
+modified: 2023-04-17T21:36:04.291Z
 ---
 
 When I started with [blog-o-matic]({{<relref "2019-01-09-blog-o-matic.en.md">}}) I had to involve external 'Travis-CI', generating a token on GitHub, setting environment variables on Travis, etc
@@ -43,4 +43,4 @@ As a side benefit, as actions work with 'releases', when a new release is done b
 
 I'm working on getting something similar done with Pelican and then, move the `blog-o-matic` to use that approach to reduce the adoption curve.
 
-Enjoy!
+{{<enjoy>}}

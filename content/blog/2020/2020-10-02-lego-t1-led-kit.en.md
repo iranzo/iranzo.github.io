@@ -14,7 +14,7 @@ date: 2020-10-02 19:45:24 +0200
 categories:
   - LEGO
 lang: en
-modified: 2022-05-06T22:05:07.982Z
+modified: 2023-04-17T21:38:05.989Z
 cover:
   image: https://i.imgur.com/AI136I0.jpg.jpg
 ---
@@ -44,4 +44,4 @@ Check the results:
 
 </div>
 
-Hope you like it!
+{{<enjoy>}}

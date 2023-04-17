@@ -13,7 +13,7 @@ date: 2020-10-12 20:32:34 +0200
 categories:
   - LEGO
 lang: en
-modified: 2022-05-06T22:05:08.099Z
+modified: 2023-04-17T21:38:06.007Z
 cover:
   image: https://i.imgur.com/AieeM54.jpg.jpg
 ---
@@ -42,4 +42,4 @@ Check the results:
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

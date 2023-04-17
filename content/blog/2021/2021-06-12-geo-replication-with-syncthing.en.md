@@ -16,7 +16,7 @@ categories:
   - FOSS
   - Fedora
 lang: en
-modified: 2022-05-04T13:32:56.689Z
+modified: 2023-04-17T21:38:06.141Z
 ---
 
 Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc
@@ -63,4 +63,4 @@ However, this issue was fixed when updating all the systems to `v1.17.0` which i
 
 The web interface is not bad, even if, for what I was used to, it's not showing as much detail about the hosts status at glance, having to open each individual folder to see how it is going, as in the general view, it shows the percentage of completion and the amount of data still missing to be synced.
 
-Hope you like it!
+{{<enjoy>}}

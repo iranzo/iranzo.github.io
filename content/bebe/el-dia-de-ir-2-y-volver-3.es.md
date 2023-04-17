@@ -11,11 +11,9 @@ tags:
   - bebe
   - contracciones
   - tapon
-
 categories:
   - bebe
-
-modified: 2022-05-07T11:49:22.771Z
+modified: 2023-04-17T22:28:47.505Z
 ---
 
 ## Romper aguas
@@ -79,3 +77,4 @@ El proceso de vuelta a casa, precedido o no por pasos como:
 - inscripción en el libro de familia (opcional, pero recomendable)
 
 Ahora viene la parte complicada... ir a casa y encontrarse 'solos ante el peligro'.
+{{<disfruta>}}

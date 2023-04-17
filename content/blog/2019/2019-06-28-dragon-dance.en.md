@@ -13,7 +13,7 @@ date: 2019-06-28 20:32:14 +0200
 categories:
   - LEGO
 description: Lego Chinese Dragon Dance review
-modified: 2022-05-04T13:32:56.801Z
+modified: 2023-04-17T21:38:35.952Z
 cover:
   image: https://i.imgur.com/8j1Drm8.jpg.jpg
 ---
@@ -39,3 +39,5 @@ Model is [80102 Dragon Dance 🛒](https://www.amazon.es/dp/B07KRJJFY8?tag=redke
 {{</gallery>}}
 
 {{< load-photoswipe >}}
+
+{{<enjoy>}}

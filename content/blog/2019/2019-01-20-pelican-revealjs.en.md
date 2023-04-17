@@ -15,7 +15,7 @@ date: 2019-01-20 23:12:17 +0100
 categories:
   - tech
   - CMS
-modified: 2022-05-06T22:05:08.155Z
+modified: 2023-04-17T21:35:57.643Z
 ---
 
 ## Introduction
@@ -63,4 +63,4 @@ This of course, has brought some outcomes:
 - I've learned a bit on how Pelican plugins work
 - Blog-o-Matic has been updated to include that support too, out of the box
 
-Enjoy!
+{{<enjoy>}}

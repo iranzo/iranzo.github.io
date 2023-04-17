@@ -16,7 +16,7 @@ categories:
   - python
   - redken_bot
 lang: en
-modified: 2022-05-04T13:44:11.327Z
+modified: 2023-04-17T21:36:00.804Z
 ---
 
 ## Introduction
@@ -248,4 +248,4 @@ There's of course room for optimization, like just updating events if it's chang
 If you wonder about why using environment variables for the credential files used... this jobs runs inside Jenkins instance that has the defined secrets exported in the Jenkinsfile as environment variables, allowing to 'secure' a bit more the access to the credentials itself (even if those have been scope-limited to only allow not harmful usage.)
 {{</note>}}
 
-Enjoy!
+{{<enjoy>}}

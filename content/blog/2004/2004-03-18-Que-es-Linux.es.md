@@ -7,7 +7,7 @@ tags:
   - general
   - foss
 lang: es
-modified: 2022-05-04T14:43:45.989Z
+modified: 2023-04-17T21:53:50.167Z
 categories:
   - blog
   - FOSS
@@ -267,3 +267,4 @@ Además de los enlaces que ya se han ido indicando en el documento, recomiendo e
 - [¿Intenciones fiables detrás de la Trusted Computing?](http://www.kriptopolis.com/more.php?id=A118_0_1_0_M)
 - [La Eurocámara reconoce que Echelon espía a Europa](http://www.ciberpais.elpais.es/d/20010913/cibersoc/soc1.htm)
 - [Presentación del Supercomputador de la UV en las 3ª Jornadas del Software Libre en la Universidad de Valencia](http://linuv.uv.es/jornadas/horarios)
+  {{<disfruta>}}

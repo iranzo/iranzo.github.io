@@ -7,7 +7,7 @@ tags:
   - fencing
   - management
   - foss
-modified: 2022-05-04T13:18:03.806Z
+modified: 2023-04-17T21:35:50.951Z
 categories:
   - tech
   - FOSS
@@ -96,6 +96,6 @@ IMPORTANT: note that some power state changes can only be performed based on pre
 
 As a bonus, there's a RFE[^1] for requesting this tool to be incorporated as power fencing mechanism in fence-agents once 'amtterm' is included in RHEL, in the meantime it's already available in Fedora, and when it comes to RHEL, **hopefully** could also be used as fence agent for Clusters and RHEV.
 
-Enjoy!
+{{<enjoy>}}
 
 [^1]: Request for Enhancement: a bugzilla request oriented not to fix a bug, but to incorporate new functionality/software into a product.

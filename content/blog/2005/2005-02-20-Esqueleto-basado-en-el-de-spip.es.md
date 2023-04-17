@@ -7,7 +7,7 @@ tags:
   - cms
   - foss
 lang: es
-modified: 2022-05-04T13:15:43.584Z
+modified: 2023-04-17T21:52:16.270Z
 categories:
   - FOSS
 ---
@@ -149,4 +149,4 @@ Para utilizar la agenda, deberás publicar artículos en su sección y asignarle
 
 En caso de que tengas alguna duda relacionada o considerases que alguna parte de este documento o de las plantillas se puede mejorar, no dudes en colgar un mensaje al respecto.
 
-Saludos
+{{<disfruta>}}

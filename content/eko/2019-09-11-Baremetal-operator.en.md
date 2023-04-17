@@ -10,7 +10,7 @@ categories:
   - tech
   - Kubernetes
 author: Pablo Iranzo Gómez
-modified: 2022-05-04T13:32:56.647Z
+modified: 2023-04-17T21:53:50.208Z
 ---
 
 This article was published originally at <https://metal3.io/blog/2019/09/11/Baremetal-operator.html>
@@ -184,3 +184,4 @@ And also, check it via the `ironic` command:
 ## Wrap-up
 
 We've seen how via a CRD we've defined credentials for a baremetal host to make it available to get provisioned and how we've also defined a machine that was provisioned on top of that baremetal host.
+{{<enjoy>}}

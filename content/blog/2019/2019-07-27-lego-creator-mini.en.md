@@ -10,7 +10,7 @@ layout: post
 date: 2019-07-27 14:39:14 +0200
 categories:
   - LEGO
-modified: 2022-05-04T13:32:56.798Z
+modified: 2023-04-17T21:38:05.946Z
 cover:
   image: https://i.imgur.com/ewbaE5b.jpg.jpg
 ---
@@ -42,4 +42,4 @@ and the pics are for the standard instructions build.
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

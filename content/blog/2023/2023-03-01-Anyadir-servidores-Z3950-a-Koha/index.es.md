@@ -6,10 +6,9 @@ tags:
   - KOHA
   - Bibliotecas
   - Z39.50
-
 categories:
   - tech
-modified: 2023-01-19T10:46:24.929Z
+modified: 2023-04-17T21:39:37.375Z
 ---
 
 ## Presentación del protocolo Z39.50, y casos prácticos
@@ -87,3 +86,4 @@ Recordemos, que en cualquier caso podemos contactar con los proveedores del serv
 ## Conclusión
 
 Como hemos podido ver, configurar fuentes de datos externas basadas en el protocolo Z39.50 es una tarea muy sencilla y que nos permitirá reutilizar registros ajenos en las nuevas incorporaciones a nuestro catálogo, ahorrando tiempo y mejorar la calidad de los registros.
+{{<disfruta>}}

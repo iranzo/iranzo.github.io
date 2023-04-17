@@ -9,7 +9,7 @@ layout: post
 date: 2021-07-01 22:00:00 +0200
 categories:
   - tech
-modified: 2022-05-04T13:03:13.564Z
+modified: 2023-04-17T21:36:07.697Z
 ---
 
 Hi,
@@ -59,4 +59,4 @@ efibootmgr -o 0001,0000,0010,0011
 
 But, choosing the right order you want for your system.
 
-Enjoy!
+{{<enjoy>}}

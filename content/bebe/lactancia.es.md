@@ -10,10 +10,9 @@ tags:
   - doula
   - biberon
   - bebe
-
 categories:
   - bebe
-modified: 2022-05-06T22:05:07.778Z
+modified: 2023-04-17T22:28:53.016Z
 ---
 
 ## Introducción
@@ -83,3 +82,4 @@ Al final, con mayor o menor perseverancia, la lactancia es una buena opción, un
 ## Biberones
 
 [Encuentra más información sobre biberones en este artículo]({{<relref "biberones.es.md">}})
+{{<disfruta>}}

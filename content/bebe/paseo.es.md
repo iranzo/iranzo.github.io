@@ -9,8 +9,7 @@ tags:
   - bebe
 categories:
   - bebe
-
-modified: 2022-05-04T12:58:50.632Z
+modified: 2023-04-17T22:29:05.903Z
 ---
 
 Pasear con un niño no es algo complicado, pero recuerda que aparte del equipamiento estándar de carro o la silla del coche adaptada para su edad, debes tener en cuenta otras cosas:
@@ -22,3 +21,4 @@ Pasear con un niño no es algo complicado, pero recuerda que aparte del equipami
 - Los bebés no deben exponerse a la luz solar directa, a ser posible debe ser reflejada, y ya cuando sean más mayores, utilizar una [crema solar mineral](https://www.amazon.es/dp/B01E0PUYGK?tag=redken-21).
 
 Para evitar el viento, puedes apañar con una mantita o sombrilla, pero lo que a nosotros nso resultó más práctico fue una [Dooky](https://www.amazon.es/dp/B00J56YF9W?tag=redken-21), que no deja de ser una tela con unas argollas y velcro, que permite regular cómo de bajada o subida debe estar para cubrir más o menos el sol directo y permitir el flujo de aire... con la ventaja de que como va enganchada a la capota del capazo, no hay que ir cambiando orientación como con las sombrillas.
+{{<disfruta>}}

@@ -9,7 +9,7 @@ tags:
   - imapfilter
   - Fedora
   - FOSS
-modified: 2022-05-04T13:19:38.420Z
+modified: 2023-04-17T21:46:19.775Z
 categories:
   - FOSS
   - Fedora
@@ -282,4 +282,4 @@ shuffle some of your emails while it runs.
 
 The point of adding the already filtered set to be filtered again (CPG, cases, etc) is that if a new customer is considered to be filter on a folder of its own, the messages will be picked up and moved accordingly automatically ;-)
 
-Hope it helps, and happy filtering!
+{{<enjoy>}}

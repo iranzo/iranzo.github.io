@@ -8,7 +8,7 @@ tags:
   - camper
   - caravan
   - 10279
-modified: 2022-05-026T22:32:56.650Z
+modified: 2023-04-17T21:38:06.087Z
 lang: en
 categories:
   - LEGO
@@ -44,4 +44,4 @@ Feelings:
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

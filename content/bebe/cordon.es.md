@@ -10,8 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
-
-modified: 2022-05-06T22:05:07.789Z
+modified: 2023-04-17T22:28:41.067Z
 ---
 
 En caso de todavía tener el cordón umbilical, vuestro pediatra os informará el procedimiento preferido, algunos recomiendan usar cristalmina[^1] o alcohol de 70º empapando un papel y sólo tocando el cordón, nunca la piel, y tan sólo, una vez evaporado, proceder a poner el pañal.
@@ -22,4 +21,6 @@ Es importante controlar siempre el 'olor' del cordón, en caso de desprender mal
 
 Cuando el cordón esté seco, caerá y se deberá seguir controlando el secado de la zona, en especial durante [el baño]({{<relref "baño.es.md">}}).
 
-[^1]: Nunca se debe utilizar productos que 'tinten' ya que en caso de inflamación, etc el tintado lo ocultaría.
+[^1]:
+    Nunca se debe utilizar productos que 'tinten' ya que en caso de inflamación, etc el tintado lo ocultaría.
+    {{<disfruta>}}

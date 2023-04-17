@@ -5,11 +5,10 @@ tags:
   - redken
   - Telegram
   - calendar
-
 date: 2023-03-21 00:00:00 +0200
 categories:
   - tech
-modified: 2023-03-29T12:17:38.858Z
+modified: 2023-04-17T21:29:55.010Z
 cover:
   image: agendadiaria.png
 ---
@@ -72,4 +71,4 @@ From that day, every morning [@Redken_bot](https://t.me/redken_bot) will send a 
 
 This calendar can be managed by several members (in Google Calendar case), so it's an ideal way for a team to work on adding events or reminders of the events that will get published every day.
 
-Enjoy!
+{{<enjoy>}}

@@ -6,7 +6,7 @@ tags:
   - nntp
   - general
 lang: es
-modified: 2022-05-04T14:44:04.381Z
+modified: 2023-04-17T21:52:55.897Z
 categories:
   - blog
 ---
@@ -69,3 +69,4 @@ Las RFC's actuales incluyen las siguientes:
 Algunos grupos están orientados a los nuevos usuarios y al uso de USENET: news.announce.newusers, news.answers y news.newsusers.questions.
 
 Muchos de los artículos que aparecen periódicamente están disponibles desde rtfm.mit.edu mediante ftp anónimo o mediante mail a [mail-server@rtfm.mit.edu](mailto:mail-server@rtfm.mit.edu)
+{{<disfruta>}}

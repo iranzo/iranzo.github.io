@@ -14,7 +14,7 @@ categories:
   - python
   - redken_bot
 lang: en
-modified: 2022-05-04T13:44:24.598Z
+modified: 2023-04-17T21:36:03.329Z
 ---
 
 ## Introduction
@@ -179,4 +179,4 @@ This approach, of using the 'moving %', just requires prior value for language a
 
 In the future, when I'm adding back strings for languages, I can automate how redken reacts per channel (unless overridden) so that it provides messages in a more natural way for users.
 
-Enjoy!
+{{<enjoy>}}

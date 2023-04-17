@@ -8,7 +8,7 @@ tags:
   - astronomía
   - astronomy
 lang: es
-modified: 2022-05-04T14:42:50.270Z
+modified: 2023-04-17T21:53:50.195Z
 categories:
   - blog
 ---
@@ -76,4 +76,6 @@ Tienen gran relevancia en mucho ámbitos de la Física tales como la fusión, el
 
 Apuntes de la conferencia que inspiró este artículo: Auroras: Magia en el Cielo
 
-[^1]: Al ser éste un artículo de difusión general, sólo trataremos de forma poco profunda el campo magnético terrestre y el viento solar
+[^1]:
+    Al ser éste un artículo de difusión general, sólo trataremos de forma poco profunda el campo magnético terrestre y el viento solar
+    {{<disfruta>}}

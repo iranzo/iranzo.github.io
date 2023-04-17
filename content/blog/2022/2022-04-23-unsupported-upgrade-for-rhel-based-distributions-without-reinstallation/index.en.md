@@ -14,7 +14,7 @@ tags:
   - AlmaLinux
   - Oracle Linux
   - Rocky Linux
-modified: 2022-05-04T13:03:13.591Z
+modified: 2023-04-17T21:36:17.758Z
 ---
 
 Most systems, based on RHEL, were not able to upgrade without
@@ -566,4 +566,4 @@ Check for the next steps in the official documentation:
 
 <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/upgrading_from_rhel_6_to_rhel_7/index>
 
-Enjoy!
+{{<enjoy>}}

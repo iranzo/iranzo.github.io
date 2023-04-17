@@ -12,7 +12,7 @@ tags:
   - nestedvt
   - FOSS
   - nested virtualization
-modified: 2022-05-04T13:19:38.423Z
+modified: 2023-04-17T21:35:52.493Z
 categories:
   - FOSS
 ---
@@ -86,4 +86,4 @@ As a side note, `macspoof` plugin is available in official repositories for RHEL
 
 Now when we create a new VM, for example to use with OpenStack, we can go to custom properties for this vm, select `macspoof` and set a value of 'true' and once the VM is started will be able to see the processor extensions for virtualization and at the same time, the VM's created within, will be able to communicate with the outside world.
 
-Enjoy!
+{{<enjoy>}}

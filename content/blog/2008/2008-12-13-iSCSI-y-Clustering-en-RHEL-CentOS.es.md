@@ -8,7 +8,7 @@ tags:
   - rhel
   - centos
   - foss
-modified: 2022-05-06T22:05:08.002Z
+modified: 2023-04-17T21:50:28.728Z
 categories:
   - FOSS
 ---
@@ -149,3 +149,4 @@ Tenemos a nuestro alcance muchas herramientas para hacer sencilla la utilizació
 Sinceramente vale la pena perder un rato y probar estas cosas y maravillarnos de las posibilidades que abre de cara a la gestión de los equipos, la información y su acceso y lo mejor de todo, siempre con Software Libre.
 
 Espero que esta introducción os despierte el gusanillo para explorar las diversas funcionalidades que estas tecnologías nos ofrecen!
+{{<disfruta>}}

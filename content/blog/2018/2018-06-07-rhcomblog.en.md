@@ -10,7 +10,7 @@ tags:
 categories:
   - tech
   - risu
-modified: 2022-05-04T13:32:56.841Z
+modified: 2023-04-17T21:35:55.346Z
 ---
 
 ## New blog post!
@@ -19,6 +19,6 @@ After some great help and collaboration from all the colleagues reviewing, sugge
 
 Check it out at [Citellus: System configuration validation tool](https://www.redhat.com/en/blog/citellus-system-configuration-validation-tool?scid=701f2000000tnTlAAI)
 
-Enjoy!
+{{<enjoy>}}
 
 Pablo

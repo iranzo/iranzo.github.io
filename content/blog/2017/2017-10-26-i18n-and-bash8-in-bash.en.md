@@ -12,7 +12,7 @@ tags:
 categories:
   - tech
   - risu
-modified: 2022-05-06T22:05:08.007Z
+modified: 2023-04-17T21:35:53.760Z
 ---
 
 ## Introduction
@@ -96,4 +96,4 @@ cat citellus/locale/citellus-new.pot > citellus/locale/citellus.pot
 
 In this way, we're ready to use on editor to translate all the strings for the whole citellus + plugins.
 
-Enjoy!
+{{<enjoy>}}

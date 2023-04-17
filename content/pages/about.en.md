@@ -1,5 +1,5 @@
 ---
-modified: 2022-05-06T22:05:07.845Z
+modified: 2023-04-17T22:29:54.812Z
 title: About
 layout: post
 date: 2016-06-02 17:27:47 +0200
@@ -29,6 +29,7 @@ Since September 1st 2018, I moved to the Solutions Engineering team, working on 
 
 In April 1st 2022, I got promoted to Principal Software Engineer while working the Management Integration Team.
 
-I'm also contributing on regular basis to [Citellus project](https://risuorg.github.io) to help automating diagnosis on known issues at system configuration, package sets, etc.
+I'm also contributing on regular basis to [Citellus/Risu project](https://risuorg.github.io) to help automating diagnosis on known issues at system configuration, package sets, etc.
 
 You can check my updated profile at [LinkedIn](http://linkedin.com/in/iranzo) and my current [RH Certifications](https://www.redhat.com/rhtapps/certification/verify/?certId=110-215-852)
+{{<enjoy>}}

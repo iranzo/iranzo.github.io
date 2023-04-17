@@ -11,7 +11,7 @@ date: 2020-02-23 23:30:24 +0100
 categories:
   - LEGO
 lang: en
-modified: 2022-05-04T13:32:56.750Z
+modified: 2023-04-17T21:38:06.076Z
 cover:
   image: https://i.imgur.com/Y2sqxOq.jpg.jpg
 ---
@@ -27,4 +27,4 @@ Some pics about the 'almost' modular [Fisherman Store 🛒](https://www.amazon.e
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

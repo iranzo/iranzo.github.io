@@ -1,8 +1,6 @@
 ---
 author: Pablo Iranzo Gómez
-title:
-  Lego Speed Champions 76899 Lamborghini Urus ST-X & Lamborghini Huracán Super
-  Trofeo EVO
+title: Lego Speed Champions 76899 Lamborghini Urus ST-X & Lamborghini Huracán Super Trofeo EVO
 tags:
   - lego
   - review
@@ -14,7 +12,7 @@ date: 2020-04-30 22:30:24 +0200
 categories:
   - LEGO
 lang: en
-modified: 2022-05-04T13:32:56.727Z
+modified: 2023-04-17T21:38:06.024Z
 cover:
   image: https://i.imgur.com/mCbBcsD.jpg.jpg
 ---
@@ -36,4 +34,4 @@ I liked especially the Huracán and the Urus was also very well done, a lot of d
 
 {{< load-photoswipe >}}
 
-Hope you like it!
+{{<enjoy>}}

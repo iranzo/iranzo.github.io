@@ -15,7 +15,7 @@ date: 2021-05-09 12:30:34 +0200
 categories:
   - tech
 lang: en
-modified: 2022-05-04T13:03:13.546Z
+modified: 2023-04-17T21:36:04.940Z
 ---
 
 Some time ago I've started running a NYM mixnode. `NYM` is a project that targets improving privacy by decomposing network packages from different hosts, so that origin and target cannot be traced.
@@ -58,4 +58,4 @@ If you want to see this guide in Asciinema check this:
 
 [![asciicast](https://asciinema.org/a/412916.svg)](https://asciinema.org/a/412916)
 
-Enjoy!
+{{<enjoy>}}

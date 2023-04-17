@@ -16,7 +16,7 @@ date: 2018-12-07 16:00:47 +0100
 categories:
   - tech
   - CMS
-modified: 2022-05-04T13:32:56.837Z
+modified: 2023-04-17T21:44:43.219Z
 ---
 
 # Background
@@ -147,7 +147,4 @@ So, right now we've accomplished several things:
   - We do also have as a consequence, a ['live' demo](https://pelican-elegant.github.io) of latest master branch showcasing features
 - We did automate publishing of webpage as soon as contributors send new articles and are approved for merge
 - All requires no extra change to regular workflow as <Travis-ci.org> is the glue here putting together all the pieces.
-
-Hope you enjoy it!
-
-Pablo
+  {{<enjoy>}}

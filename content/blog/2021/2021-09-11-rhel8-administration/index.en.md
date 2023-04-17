@@ -15,7 +15,7 @@ categories:
 description: RHEL8 System Administration book now available!
 lang: en
 slug: rhel8-administration
-modified: 2022-05-04T13:41:02.622Z
+modified: 2023-04-17T21:38:06.212Z
 cover:
   image: rhel8-cover.png
 ---
@@ -30,4 +30,4 @@ It also features two chapters dedicated to exercises to check your knowledge acq
 
 Available at Amazon: [Red Hat Enterprise Linux 8 Administration](https://s.iranzo.io/rhel8)
 
-Hope you like it!
+{{<enjoy>}}

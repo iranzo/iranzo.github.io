@@ -12,7 +12,7 @@ categories:
   - tech
 lang: es
 slug: AndroidTV-and-Netflix-tvq-pm-100
-modified: 2022-05-04T13:03:13.686Z
+modified: 2023-04-17T21:45:07.828Z
 translationKey: AndroidTV-and-Netflix-tvq-pm-100
 cover:
   image: netflix-tvq-pm-100.png
@@ -60,3 +60,4 @@ Tras una búsqueda algo más detallada, un artículo sugería usar:
 - Habilitar [Netflix Addon](https://forum.kodi.tv/showthread.php?tid=329767)
 
 Una vez configurado (email y password), pude utilizar Kodi para acceder a netflix usando Kodi, como 'parche' hasta que el problema sea resuelto.
+{{<disfruta>}}

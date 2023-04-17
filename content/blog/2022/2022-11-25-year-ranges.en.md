@@ -9,7 +9,7 @@ title: "[python] Generate ranges from items"
 categories:
   - tech
 date: 2022-11-25T07:00:46.350Z
-modified: 2022-11-25T13:32:31.498Z
+modified: 2023-04-17T21:36:15.940Z
 ---
 
 Some years ago, I added a script for updating headers for `(C)` in the python files I was developing for [Risu]({{< relref "/tags/risu" >}}).
@@ -88,4 +88,4 @@ Now appear as:
 # Copyright (C) 2018-2022 Pablo Iranzo Gómez <Pablo.Iranzo@gmail.com>
 ```
 
-Enjoy!
+{{<enjoy>}}

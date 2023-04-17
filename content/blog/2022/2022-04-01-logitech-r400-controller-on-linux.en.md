@@ -12,7 +12,7 @@ date: 2022-04-01T07:31:42.603Z
 categories:
   - tech
   - FOSS
-modified: 2022-08-19T11:25:21.501Z
+modified: 2023-04-17T21:36:13.363Z
 cover:
   image: https://m.media-amazon.com/images/I/51-7XfmB4ZL.jpg
 ---
@@ -56,4 +56,4 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c52d", IMPORT{bui
 
 The first file, defines the key mappings, so that the actual 4 buttons, work as I wanted, and the second one, ensures that when the device is plugged, the mappings will be loaded... after this, just unplug and replug, and voilà, the presenter was working perfectly... so nice finding, nice recycling via 'reuse' and new toy!.
 
-Enjoy!
+{{<enjoy>}}

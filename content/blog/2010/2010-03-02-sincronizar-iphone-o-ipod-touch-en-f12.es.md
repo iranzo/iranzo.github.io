@@ -9,7 +9,7 @@ tags:
   - iPod
   - iPhone
 lang: es
-modified: 2022-05-04T13:15:43.504Z
+modified: 2023-04-17T21:48:45.536Z
 categories:
   - FOSS
   - Fedora
@@ -39,3 +39,4 @@ ifuse /mnt/ipod
 ```
 
 A partir de ahí podrás, si todo ha ido bien, utilizar `gtkpod` para gestionar la biblioteca de tu dispositivo.
+{{<disfruta>}}
