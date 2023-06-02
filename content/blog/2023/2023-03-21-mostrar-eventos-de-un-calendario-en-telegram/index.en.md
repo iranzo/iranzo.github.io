@@ -8,7 +8,7 @@ tags:
 date: 2023-03-21 00:00:00 +0200
 categories:
   - tech
-modified: 2023-04-17T21:29:55.010Z
+modified: 2023-06-02T00:08:59.333Z
 cover:
   image: agendadiaria.png
 ---
@@ -40,7 +40,7 @@ The part we're interested in, once created, is this: the private URL that appear
 
 ![](icalurl.png)
 
-If we click on copy, we'll get the URL to the clipboard. This URL gives access to all events, both private and public, so if you want to create a calendar for a group, it's recommendable to start from a new one instead of sharing by mistake your personal one.
+If we click on copy, we'll get the URL to the clipboard. This URL gives access to all events, both private and public, so if you want to create a calendar for a group, it's recommended to start from a new one instead of sharing by mistake your personal one.
 
 ## Add @redken_bot to the Telegram group
 
@@ -54,7 +54,7 @@ Sometimes, it might ask if we can also forward old messages:
 After a while, we'll get the welcome message:
 ![](botwelcome.png)
 
-Don't worry about language, the bot will autodetect the language used in the group and, if unconfigured, after 24 hours will set it automatically to the most used one.
+Don't worry about language, the bot will automatically detect the language used in the group and, if unconfigured, after 24 hours will set it automatically to the most used one.
 
 ## Add the calendar to @redken_bot
 
