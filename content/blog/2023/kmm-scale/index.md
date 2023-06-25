@@ -1,4 +1,5 @@
 ---
+layout: redirect
 author:
   - Pablo Iranzo Gómez
   - Enrique Belarte
@@ -11,7 +12,7 @@ date: 2023-06-21 00:00:00 +0200
 categories:
   - tech
   - OpenShift
-modified: 2023-06-25T20:51:36.736Z
+modified: 2023-06-25T21:03:26.696Z
 slug: kmm-1-1-scale-testing
 redirect: https://cloud.redhat.com/blog/scale-testing-kernel-module-management
 ---
