@@ -149,3 +149,24 @@ taxonomies:
   categories: categories
   series: series
   tag: tags
+
+
+caches:
+  assets:
+    dir: :resourceDir/_gen
+    maxAge: 3600s
+  getcsv:
+    dir: :cacheDir/:project
+    maxAge: 3600s
+  getjson:
+    dir: :cacheDir/:project
+    maxAge: 3600s
+  getresource:
+    dir: :cacheDir/:project
+    maxAge: 3600s
+  images:
+    dir: :resourceDir/_gen
+    maxAge: 3600s
+  modules:
+    dir: :cacheDir/modules
+    maxAge: 3600s
