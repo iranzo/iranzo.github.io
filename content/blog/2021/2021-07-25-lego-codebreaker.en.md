@@ -14,6 +14,10 @@ tags:
   - Porsche
   - Sian
   - exclusive
+  - Ferrari
+  - Daytona
+  - SP3
+  - 42143
 layout: post
 date: 2021-07-25 22:30:24 +0200
 categories:
@@ -21,6 +25,7 @@ categories:
 description: Lego promotional material for Technic Owners using your own's car license plate
 lang: en
 modified: 2023-04-17T21:36:09.588Z
+lastmod: 2023-08-08T08:17:47.824Z
 ---
 
 If you're the owner of one of the following sets:
@@ -28,6 +33,7 @@ If you're the owner of one of the following sets:
 - [Porsche 911 GT3 RS 🛒](https://www.amazon.es/dp/B01CCT2ZHC?tag=redken-21)
 - [Lego Bugatti Chiron 🛒](https://www.amazon.es/dp/B0792RB3B6?tag=redken-21)
 - [Lego Lamborghini Sian FKP47 🛒](https://www.amazon.es/dp/B0813RJRYC?tag=redken-21)
+- [Lego Ferrari Daytona SP3 🛒](https://www.amazon.es/dp/B09QFSCWD9?tag=rdkn-21)
 
 You might have noticed that each car has a chassis piece with a code, that code, apart of the 'exclusive' set, means that you can redeem it on Lego website to get access to additional content like:
 
