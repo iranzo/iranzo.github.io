@@ -159,9 +159,9 @@ CATALOG_IMG=quay.io/${MYUSER}/kernel-module-management-catalog:latest make catal
 MAXSPOKE=4
 
 for spoke in $(seq 1 ${MAXSPOKE}); do
-    export KUBECONFIG=/root/.kcli/clusters/cluster${spoke}/auth/kubeconfig
+	export KUBECONFIG=/root/.kcli/clusters/cluster${spoke}/auth/kubeconfig
 
-    cat <<EOF | oc apply -f -
+	cat <<EOF | oc apply -f -
 apiVersion: operators.coreos.com/v1alpha1
 kind: CatalogSource
 metadata:
@@ -176,7 +176,7 @@ spec:
     registryPoll:
       interval: 5m
 EOF
-    cat <<EOF | oc apply -f -
+	cat <<EOF | oc apply -f -
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
@@ -193,7 +193,7 @@ spec:
   source: kmm-catalog
   sourceNamespace: openshift-marketplace
 EOF
-    oc create ns kmm-tests
+	oc create ns kmm-tests
 
 done
 
