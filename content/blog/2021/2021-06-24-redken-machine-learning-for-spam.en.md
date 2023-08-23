@@ -66,9 +66,9 @@ ignore = "Ignore"
 isthisspammsg = "Is this spam?"
 
 extra = (
-        'reply_markup={"inline_keyboard":[[{"text":"%s","callback_data":"SPAM"},{"text":"%s","callback_data":"HAM"},{"text":"%s","callback_data":"IGNORE"}]]}'
-        % (yes, no, ignore)
-    )
+    'reply_markup={"inline_keyboard":[[{"text":"%s","callback_data":"SPAM"},{"text":"%s","callback_data":"HAM"},{"text":"%s","callback_data":"IGNORE"}]]}'
+    % (yes, no, ignore)
+)
 ```
 
 With above approach, the bot could reply to messages and attach an inline-keyboard with configurable buttons, returning as part of the callback data the message I wanted (`HAM`,`SPAM` or `IGNORE`).
@@ -110,12 +110,11 @@ logger = logging.getLogger(__name__)
 logger.debug("Downloading updated stopwords")
 nltk.download("stopwords")
 
-    job
 
 logger.debug("Starting training with on-disk databases")
 message = pd.read_csv(
-        "spam/spam.%s.csv" % language, sep=",", names=["Category", "Message"]
-    )
+    "spam/spam.%s.csv" % language, sep=",", names=["Category", "Message"]
+)
 
 # Drop duplicate messages
 message.drop_duplicates(inplace=True)
@@ -132,9 +131,7 @@ pipeline = Pipeline(
         (
             "bow",
             CountVectorizer(
-                analyzer=lambda text: process_text(
-                    text, language=languages[language]
-                )
+                analyzer=lambda text: process_text(text, language=languages[language])
             ),
         ),
         ("tfidf", TfidfTransformer()),

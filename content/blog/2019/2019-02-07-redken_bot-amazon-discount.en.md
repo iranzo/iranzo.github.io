@@ -38,26 +38,26 @@ Using python we can come to approach this in several steps:
 
 ```py
 def expandurl(url):
-"""
-Expands short URL to long one
-:param url: url to expand
-:return: expanded url
-"""
+    """
+    Expands short URL to long one
+    :param url: url to expand
+    :return: expanded url
+    """
 
-logger = logging.getLogger(__name__)
+    logger = logging.getLogger(__name__)
 
-try:
-    session = requests.Session()  # so connections are recycled
-    resp = session.head(url, allow_redirects=True, timeout=10)
-    newurl = resp.url
-    logger.debug(msg="URL Expanded to: %s" % newurl)
-except:
-    # Fake as we couldn't expand url
-    newurl = url
+    try:
+        session = requests.Session()  # so connections are recycled
+        resp = session.head(url, allow_redirects=True, timeout=10)
+        newurl = resp.url
+        logger.debug(msg="URL Expanded to: %s" % newurl)
+    except:
+        # Fake as we couldn't expand url
+        newurl = url
 
-logger.debug(msg="Expanding url: %s to %s" % (url, newurl))
+    logger.debug(msg="Expanding url: %s to %s" % (url, newurl))
 
-return newurl
+    return newurl
 ```
 
 - Second, restrict the links we process to the ones in amazon, as it's 'easy' to catch the product ID and perform a search. This leaves out lot of offers, but makes it easier to locate them as there's an API to use.
@@ -96,7 +96,8 @@ Additionally, python packages like [python-amazon-simple-product-api](https://gi
 
 ```py
 from amazon.api import AmazonAPI
-amazon = AmazonAPI(amazon_access, amazon_key, tag, region=regdomain
+
+amazon = AmazonAPI(amazon_access, amazon_key, tag, region=regdomain)
 product = amazon.lookup(ItemId=productid)
 ```
 

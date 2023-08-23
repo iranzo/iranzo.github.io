@@ -16,7 +16,7 @@ categories:
   - python
   - redken_bot
 lang: en
-modified: 2023-04-17T21:36:00.804Z
+modified: 2023-08-23T14:16:31.621Z
 ---
 
 ## Introduction
@@ -43,7 +43,9 @@ scope = [
     "https://spreadsheets.google.com/feeds",
     "https://www.googleapis.com/auth/drive",
 ]
-creds = ServiceAccountCredentials.from_json_keyfile_name(os.environ['GACREDENTIALS'], scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name(
+    os.environ["GACREDENTIALS"], scope
+)
 client = gspread.authorize(creds)
 
 # Find a workbook by name and open the first sheet
@@ -55,6 +57,7 @@ records = sheet.get_all_records()
 
 for record in records:
     if record["name"] != "":
+        dosomething()
 ```
 
 In this case, we access the file via the file pointed in `GACREDENTIALS` environment variable and use the scope for defining the access level we need for this file.
@@ -128,7 +131,6 @@ def get_calendar_service():
 We also wrote a function for writing new events to the calendar:
 
 ```py
-
 def writeevent(service, summary, location, start, end, description):
     """
     Writes event to Gcal
@@ -142,7 +144,7 @@ def writeevent(service, summary, location, start, end, description):
 
     event_result = (
         service.events()
-            .insert(
+        .insert(
             calendarId=mycalendarid,
             body={
                 "summary": summary,
@@ -158,7 +160,7 @@ def writeevent(service, summary, location, start, end, description):
                 "description": description,
             },
         )
-            .execute()
+        .execute()
     )
     print("Event: %s written" % summary)
 ```
@@ -181,7 +183,7 @@ def main():
     # Delete all the events
     for event in events:
         try:
-            print("Deleting event: %s" % event['summary'])
+            print("Deleting event: %s" % event["summary"])
             service.events().delete(
                 calendarId=mycalendarid, eventId=event["id"]
             ).execute()
@@ -232,6 +234,7 @@ def main():
                     end=enddate,
                     description=record["Event URL"],
                 )
+
 
 if __name__ == "__main__":
     main()
