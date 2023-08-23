@@ -45,7 +45,32 @@ The approach then was to use it to calculate averages based on prior count and n
 In this way, the language moved from being just a string to become a dictionary, storing `count` and `lang: %` values, for example:
 
 ```py
-{"count": 272, "en": 2.2, "es": 75.36, "it": 3.74, "ca": 3.48, "fi": 2.3, "fr": 1.64, "pt": 1.73, "et": 0.97, "ro": 0.68, "de": 1.11, "hr": 0.68, "sw": 1.09, "tl": 0.96, "lt": 0.68, "sk": 1.22, "so": 1.16, "da": 1.18, "sv": 0.67, "tr": 0.58, "hu": 0.46, "vi": 0.43, "sl": 0.41, "no": 0.37}
+{
+    "count": 272,
+    "en": 2.2,
+    "es": 75.36,
+    "it": 3.74,
+    "ca": 3.48,
+    "fi": 2.3,
+    "fr": 1.64,
+    "pt": 1.73,
+    "et": 0.97,
+    "ro": 0.68,
+    "de": 1.11,
+    "hr": 0.68,
+    "sw": 1.09,
+    "tl": 0.96,
+    "lt": 0.68,
+    "sk": 1.22,
+    "so": 1.16,
+    "da": 1.18,
+    "sv": 0.67,
+    "tr": 0.58,
+    "hu": 0.46,
+    "vi": 0.43,
+    "sl": 0.41,
+    "no": 0.37,
+}
 ```
 
 This is my status, from 272 messages, the library has detected Spanish 75% of times, plus some other messages. As you might infer, there are lot of languages listed there that I never used, so it's really important to keep this values refreshing with higher message counts.
@@ -55,13 +80,48 @@ For groups, this becomes even more interesting, as the message languages get upd
 English group:
 
 ```py
-{"count": 56, "tr": 1.79, "en": 80.36, "da": 1.79, "af": 1.79, "sl": 1.79, "ca": 1.79, "es": 1.79, "fi": 1.79, "nl": 1.79, "it": 1.79, "sq": 1.79, "so": 1.79}
+{
+    "count": 56,
+    "tr": 1.79,
+    "en": 80.36,
+    "da": 1.79,
+    "af": 1.79,
+    "sl": 1.79,
+    "ca": 1.79,
+    "es": 1.79,
+    "fi": 1.79,
+    "nl": 1.79,
+    "it": 1.79,
+    "sq": 1.79,
+    "so": 1.79,
+}
 ```
 
 Spanish group:
 
 ```py
-{"count": 140, "es": 61.42, "fi": 0.68, "ca": 1.46, "it": 5.72, "tr": 0.68, "sw": 1.46, "pt": 5.74, "so": 2.12, "en": 8.58, "pl": 0.68, "sv": 1.48, "hr": 0.68, "sk": 0.67, "cy": 3.58, "tl": 1.43, "sl": 0.68, "no": 1.44, "de": 0.69, "da": 0.7}
+{
+    "count": 140,
+    "es": 61.42,
+    "fi": 0.68,
+    "ca": 1.46,
+    "it": 5.72,
+    "tr": 0.68,
+    "sw": 1.46,
+    "pt": 5.74,
+    "so": 2.12,
+    "en": 8.58,
+    "pl": 0.68,
+    "sv": 1.48,
+    "hr": 0.68,
+    "sk": 0.67,
+    "cy": 3.58,
+    "tl": 1.43,
+    "sl": 0.68,
+    "no": 1.44,
+    "de": 0.69,
+    "da": 0.7,
+}
 ```
 
 Of course, before integrating this code into [@redken_bot](https://t.me/redken_bot), I did a small program to validate it:
@@ -72,14 +132,28 @@ import json
 
 # Add some sentences to an array to test
 text = []
-text.append("It could be that your new system is not getting as much throughput to your hard disks as it should be")
-text.append("Il mio machina e piu veloce",)
-text.append("Je suis tres desolè",)
-text.append("El caballo blando de santiago era blanco",)
-text.append("My tailor is rich",)
-text.append("En un lugar de la Mancha de cuyo nombre no quiero acordarme",)
+text.append(
+    "It could be that your new system is not getting as much throughput to your hard disks as it should be"
+)
+text.append(
+    "Il mio machina e piu veloce",
+)
+text.append(
+    "Je suis tres desolè",
+)
+text.append(
+    "El caballo blando de santiago era blanco",
+)
+text.append(
+    "My tailor is rich",
+)
+text.append(
+    "En un lugar de la Mancha de cuyo nombre no quiero acordarme",
+)
 text.append("Good morning, hello, good morning hello")
-text.append("No es cierto angel de amor que en esta apartada orilla no luce el sol sino brilla")
+text.append(
+    "No es cierto angel de amor que en esta apartada orilla no luce el sol sino brilla"
+)
 text.append("Tears will be falling under the heavy rain")
 text.append("Que'l heure est il?")
 text.append("Caracol, col col, saca los cuernos al sol")
@@ -114,13 +188,16 @@ for line in text:
         if key == language_code:
             value = 100
         else:
-            value =0
+            value = 0
 
         # As we store message count in the same dictionary, we just skip it
-        if key != "count" :
-
+        if key != "count":
             print("Processing key %s in language for average updates" % key)
-            updates[key] = float("{0:.2f}".format(language[key] + ((value - language[key]) / updates["count"])))
+            updates[key] = float(
+                "{0:.2f}".format(
+                    language[key] + ((value - language[key]) / updates["count"])
+                )
+            )
             print("New average: %s for language %s" % (updates[key], key))
 
     print("Updates: %s" % updates)
@@ -131,7 +208,7 @@ for line in text:
     # Validate that final sum of % is close to 100% (consider rounding problems)
     accum = 0
     for key in language:
-        if key != 'count':
+        if key != "count":
             accum = accum + language[key]
 
     print(float("{0:.2f}".format(accum)))

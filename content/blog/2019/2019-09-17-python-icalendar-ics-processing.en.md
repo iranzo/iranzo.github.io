@@ -160,31 +160,31 @@ import requests
 from icalendar import Calendar, Event, vDatetime
 from pytz import timezone
 
-tz = timezone('Europe/Madrid')
+tz = timezone("Europe/Madrid")
 
-calendar = 'http://www.webcal.fi/cal.php?id=191&format=ics&wrn=1&wp=4&wf=53&color=%23FF3100&cntr=es&lang=es&rid=wc'
+calendar = "http://www.webcal.fi/cal.php?id=191&format=ics&wrn=1&wp=4&wf=53&color=%23FF3100&cntr=es&lang=es&rid=wc"
 
 # Just in case we want to get calendar for another day
-date = (datetime.now() + timedelta(days=0))
-datefor = "%s" % date.strftime('%Y-%m-%d')
+date = datetime.now() + timedelta(days=0)
+datefor = "%s" % date.strftime("%Y-%m-%d")
 
 r = requests.get(calendar)
 # We use the library to 'read' the url contents (text output)
 gcal = Calendar.from_ical(r.text)
 
 # walk the 'VEVENTS'
-for event in gcal.walk('VEVENT'):
+for event in gcal.walk("VEVENT"):
     # Get 'start' date
-    if 'DTSTART' in event:
+    if "DTSTART" in event:
         try:
-            dtstart = event['DTSTART'].dt.astimezone(timezone('Europe/Madrid'))
+            dtstart = event["DTSTART"].dt.astimezone(timezone("Europe/Madrid"))
         except:
             dtstart = False
 
     # Get 'stop' date
-    if 'DTEND' in event:
+    if "DTEND" in event:
         try:
-            dtend = event['DTEND'].dt.astimezone(timezone('Europe/Madrid'))
+            dtend = event["DTEND"].dt.astimezone(timezone("Europe/Madrid"))
         except:
             dtend = False
 
@@ -192,10 +192,10 @@ for event in gcal.walk('VEVENT'):
     if dtstart or dtend:
         # This find current date (year-month-day) in the dtstart or dtend in the event for printing it
         if datefor in "%s" % dtstart or datefor in "%s" % dtend:
-            print("\n📅", event['summary'])
+            print("\n📅", event["summary"])
 
             if dtstart and dtend:
-                lenght = (dtend - dtstart).total_seconds()/60
+                lenght = (dtend - dtstart).total_seconds() / 60
             else:
                 lenght = False
 
@@ -236,15 +236,15 @@ This event, starts and ends on 3rd September, so in the above code it was not sh
 
 import dateutil.rrule as rrule
 
-if 'RRULE' in event:
+if "RRULE" in event:
     # This gets the rule as 'string' so that it can be processed
-    ruletext = event['RRULE'].to_ical().decode()
+    ruletext = event["RRULE"].to_ical().decode()
 
     # This defines the rule object, with the rule text and using the initial date for the event
-    rule = rrule.rrulestr(ruletext, dtstart=event['DTSTART'].dt)
+    rule = rrule.rrulestr(ruletext, dtstart=event["DTSTART"].dt)
 
     # This is the interesting part, where, based on actual date and rule for repetition, calculates 'next' occurrence for the event
-    nextrule=rule.after(datetime.now().astimezone(timezone('Europe/Madrid')))
+    nextrule = rule.after(datetime.now().astimezone(timezone("Europe/Madrid")))
 # <snip>
 ```
 
@@ -264,47 +264,52 @@ import dateutil.rrule as rrule
 
 format = "%Y-%m-%d %H:%M:%S %Z%z"
 
-tz = timezone('Europe/Madrid')
+tz = timezone("Europe/Madrid")
 
 calendars = []
 calendars.append(
-    'http://www.webcal.fi/cal.php?id=191&format=ics&wrn=1&wp=4&wf=53&color=%23FF3100&cntr=es&lang=es&rid=wc')
+    "http://www.webcal.fi/cal.php?id=191&format=ics&wrn=1&wp=4&wf=53&color=%23FF3100&cntr=es&lang=es&rid=wc"
+)
 
 
-date = (datetime.now() + timedelta(days=0))
-datefor = "%s" % date.strftime('%Y-%m-%d')
+date = datetime.now() + timedelta(days=0)
+datefor = "%s" % date.strftime("%Y-%m-%d")
 
 for calendar in calendars:
     r = requests.get(calendar)
     gcal = Calendar.from_ical(r.text)
 
-    for event in gcal.walk('VEVENT'):
-        if 'DTSTART' in event:
+    for event in gcal.walk("VEVENT"):
+        if "DTSTART" in event:
             try:
-                dtstart = event['DTSTART'].dt.astimezone(timezone('Europe/Madrid'))
+                dtstart = event["DTSTART"].dt.astimezone(timezone("Europe/Madrid"))
             except:
                 dtstart = False
-        if 'DTEND' in event:
+        if "DTEND" in event:
             try:
-                dtend = event['DTEND'].dt.astimezone(timezone('Europe/Madrid'))
+                dtend = event["DTEND"].dt.astimezone(timezone("Europe/Madrid"))
             except:
                 dtend = False
-        if 'RRULE' in event:
+        if "RRULE" in event:
             try:
-                ruletext = event['RRULE'].to_ical().decode()
-                rule = rrule.rrulestr(ruletext, dtstart=event['DTSTART'].dt)
-                nextrule=rule.after(date.astimezone(timezone('Europe/Madrid')))
+                ruletext = event["RRULE"].to_ical().decode()
+                rule = rrule.rrulestr(ruletext, dtstart=event["DTSTART"].dt)
+                nextrule = rule.after(date.astimezone(timezone("Europe/Madrid")))
             except:
                 nextrule = False
         else:
             nextrule = False
 
         if dtstart or dtend or nextrule:
-            if datefor in "%s" % dtstart or datefor in "%s" % dtend or datefor in "%s" % nextrule:
-                print("\n📅", event['summary'])
+            if (
+                datefor in "%s" % dtstart
+                or datefor in "%s" % dtend
+                or datefor in "%s" % nextrule
+            ):
+                print("\n📅", event["summary"])
 
                 if dtstart and dtend:
-                    lenght = (dtend - dtstart).total_seconds()/60
+                    lenght = (dtend - dtstart).total_seconds() / 60
                 else:
                     lenght = False
 
