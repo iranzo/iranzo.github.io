@@ -57,8 +57,8 @@ virsh pool-autostart default
 
 # Download openshift-install to avoid bug when downloading in parallel during plan creation
 for command in oc openshift-install; do
-	kcli download ${command}
-	mv ${command} /usr/bin/
+    kcli download ${command}
+    mv ${command} /usr/bin/
 done
 
 # Create plan definition
@@ -155,16 +155,16 @@ MAXSPOKE=2
 
 # Join the spokes to the cluster
 for spoke in $(seq 1 ${MAXSPOKE}); do
-	export KUBECONFIG=/root/.kcli/clusters/hub/auth/kubeconfig
-	token=$(clusteradm get token } | grep token= | cut -d "=" -f 2-)
-	export KUBECONFIG=/root/.kcli/clusters/cluster${spoke}/auth/kubeconfig
-	clusteradm join --hub-token ${token} --hub-apiserver ${apiserver} --wait --cluster-name "cluster${spoke}" # --force-internal-endpoint-lookup
+    export KUBECONFIG=/root/.kcli/clusters/hub/auth/kubeconfig
+    token=$(clusteradm get token } | grep token= | cut -d "=" -f 2-)
+    export KUBECONFIG=/root/.kcli/clusters/cluster${spoke}/auth/kubeconfig
+    clusteradm join --hub-token ${token} --hub-apiserver ${apiserver} --wait --cluster-name "cluster${spoke}" # --force-internal-endpoint-lookup
 done
 
 # Check clusterlet status
 for spoke in $(seq 1 ${MAXSPOKE}); do
-	export KUBECONFIG=/root/.kcli/clusters/cluster${spoke}/auth/kubeconfig
-	kubectl get klusterlet
+    export KUBECONFIG=/root/.kcli/clusters/cluster${spoke}/auth/kubeconfig
+    kubectl get klusterlet
 done
 
 # Check CSR pending
@@ -173,8 +173,8 @@ kubectl get csr
 
 # Accept joins from HUB
 for spoke in $(seq 1 ${MAXSPOKE}); do
-	export KUBECONFIG=/root/.kcli/clusters/hub/auth/kubeconfig
-	clusteradm accept --clusters cluster${spoke}
+    export KUBECONFIG=/root/.kcli/clusters/hub/auth/kubeconfig
+    clusteradm accept --clusters cluster${spoke}
 done
 
 # Watch progress

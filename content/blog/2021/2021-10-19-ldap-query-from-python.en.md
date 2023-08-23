@@ -42,7 +42,9 @@ searchScope = ldap.SCOPE_SUBTREE
 
 # Bind to the server
 myldap.protocol_version = ldap.VERSION3
-myldap.simple_bind_s(binddn, pw)  # myldap.simple_bind_s() if anonymous binding is desired
+myldap.simple_bind_s(
+    binddn, pw
+)  # myldap.simple_bind_s() if anonymous binding is desired
 
 # Perform the search
 ldap_result_id = myldap.search(basedn, searchScope, searchFilter, searchAttribute)
