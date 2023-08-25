@@ -15,7 +15,7 @@ tags:
   - Oracle Linux
   - Rocky Linux
 modified: 2023-04-17T21:36:17.758Z
-lastmod: 2023-08-25T09:37:46.678Z
+lastmod: 2023-08-25T09:38:33.518Z
 ---
 
 Most systems, based on RHEL, were not able to upgrade without
@@ -125,7 +125,7 @@ Host 192.168.2.82
 	User root
 ```
 
-or alternatively on the commandline:
+or alternatively on the command line:
 
 ```sh
 ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=+ssh-rsa root@192.168.2.8
