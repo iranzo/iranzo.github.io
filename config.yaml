@@ -17,7 +17,7 @@ minify:
   minifyOutput: true
 
 params:
-  mainSections: [eko, bebe, blog, presentations, redkendoc]
+  mainSections: [tips, eko, bebe, blog, presentations, redkendoc]
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Pablo Iranzo Gómez blog
   description: "A bunch of unrelated data"
