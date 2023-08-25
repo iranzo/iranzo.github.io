@@ -15,6 +15,7 @@ tags:
   - Oracle Linux
   - Rocky Linux
 modified: 2023-04-17T21:36:17.758Z
+lastmod: 2023-08-25T09:37:46.678Z
 ---
 
 Most systems, based on RHEL, were not able to upgrade without
@@ -118,9 +119,16 @@ Create an entry like this in your `.ssh/config` file, so that insecure methods c
 
 ```console
 Host 192.168.2.82
-	HostKeyAlgorithms=+ssh-dss
+	HostKeyAlgorithms=+ssh-rsa
 	KexAlgorithms=+diffie-hellman-group1-sha1
+  PubkeyAcceptedKeyTypes=+ssh-rsa
 	User root
+```
+
+or alternatively on the commandline:
+
+```sh
+ssh -oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=+ssh-rsa root@192.168.2.8
 ```
 
 {{</note>}}
