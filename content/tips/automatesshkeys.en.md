@@ -9,7 +9,7 @@ tags:
   - ssh
   - ansible
 date: 2023-03-02T16:40:32.418Z
-modified: 2023-03-02T16:52:50.766Z
+lastmod: 2023-08-25T09:48:46.664Z
 ---
 
 For using Ansible it's required to have a working set of ssh-keys already deployed.

@@ -7,9 +7,9 @@ tags:
   - cms
   - foss
 lang: es
-modified: 2023-04-17T21:52:00.498Z
 categories:
   - FOSS
+lastmod: 2023-08-25T09:45:44.617Z
 ---
 
 ### Introducción

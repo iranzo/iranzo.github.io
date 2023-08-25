@@ -12,9 +12,9 @@ date: 2020-04-08 20:48:24 +0100
 categories:
   - LEGO
 lang: en
-modified: 2023-04-17T21:38:06.035Z
 cover:
   image: https://i.imgur.com/gsSeZZz.jpg.jpg
+lastmod: 2023-08-25T09:48:46.781Z
 ---
 
 Today, as part of my confinement Lego catchup I was building the [Lego NASA Lunar Lander Apollo 11

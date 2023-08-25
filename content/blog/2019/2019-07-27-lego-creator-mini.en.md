@@ -10,9 +10,9 @@ layout: post
 date: 2019-07-27 14:39:14 +0200
 categories:
   - LEGO
-modified: 2023-04-17T21:38:05.946Z
 cover:
   image: https://i.imgur.com/ewbaE5b.jpg.jpg
+lastmod: 2023-08-25T09:48:47.247Z
 ---
 
 I've uploaded those pics from the model, as it seems that people likes it.

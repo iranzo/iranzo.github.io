@@ -7,10 +7,10 @@ tags:
   - Fedora
   - backup
   - FOSS
-modified: 2023-04-17T21:48:09.264Z
 categories:
   - FOSS
   - Fedora
+lastmod: 2023-08-25T09:48:46.853Z
 ---
 
 A few days ago, I was checking a friend's system for backing up.

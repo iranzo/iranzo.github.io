@@ -10,7 +10,7 @@ tags:
 categories:
   - tech
   - risu
-modified: 2023-04-17T21:35:55.346Z
+lastmod: 2023-08-25T09:48:47.142Z
 ---
 
 ## New blog post!

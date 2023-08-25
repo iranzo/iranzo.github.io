@@ -13,9 +13,9 @@ date: 2020-02-20 19:30:24 +0100
 categories:
   - LEGO
 lang: en
-modified: 2023-04-17T21:38:06.069Z
 cover:
   image: https://i.imgur.com/69ePXLB.jpg.jpg
+lastmod: 2023-08-25T09:46:05.133Z
 ---
 
 I bought [Lego 70821 Emmet Garage and Benny Spaceship 🛒](https://www.amazon.es/dp/B07FP2KS4F?tag=redken-21) because I loved the astronaut minifigures from my childhood, and I even loved the `broken` helmet (as I used to have them broken in the same way).

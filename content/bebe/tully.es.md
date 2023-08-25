@@ -11,9 +11,9 @@ tags:
   - depresión
 categories:
   - bebe
-modified: 2023-04-17T22:29:17.170Z
 cover:
   image: https://m.media-amazon.com/images/I/71oKg5DUa4L.jpg
+lastmod: 2023-08-25T09:48:47.514Z
 ---
 
 [Tully](https://www.amazon.es/dp/B07F14BMR2?tag=redken-21) es una película interesante, si no la has visto, te animo a verla, no buscando una comedia pues en el fondo no lo es, sino porque retrata bastante bien lo duro que puede llegar a ser la crianza y el postparto.

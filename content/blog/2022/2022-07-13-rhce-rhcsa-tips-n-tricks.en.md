@@ -11,7 +11,7 @@ categories:
   - FOSS
 cover:
   image: https://admins.guru/rhel8-cover.png
-modified: 2023-04-17T21:42:40.512Z
+lastmod: 2023-08-25T09:48:46.646Z
 ---
 
 I did the RHCE exam some time ago, and still there are some tricks and

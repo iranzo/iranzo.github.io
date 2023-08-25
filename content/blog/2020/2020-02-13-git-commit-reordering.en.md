@@ -10,7 +10,7 @@ date: 2020-02-13 20:30:24 +0100
 categories:
   - tech
 lang: en
-modified: 2022-05-06T22:05:08.109Z
+lastmod: 2023-08-25T09:48:46.773Z
 ---
 
 While I was working for a presentation for kid's school at [Magnetic field, Aurora, Lunar Phases and Rockets]("campo-magnetico-auroras-fases-lunares-cohetes.md"), I added 4 big videos to the presentation (as I was going to use them offline while presenting).

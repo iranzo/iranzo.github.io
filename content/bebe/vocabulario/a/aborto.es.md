@@ -8,7 +8,7 @@ tags:
   - Vocabulario
 categories:
   - bebe
-modified: 2022-05-07T11:41:48.756Z
+lastmod: 2023-08-25T09:48:47.719Z
 ---
 
 Un aborto es el resultado de una gestación incorrecta, puede deberse a muchas causas, desde problemas genéticos del embrión, mala implantación, etc.

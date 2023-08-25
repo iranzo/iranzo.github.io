@@ -7,10 +7,10 @@ tags:
   - network
   - VPN
   - FOSS
-modified: 2023-04-17T21:53:45.921Z
 categories:
   - blog
   - FOSS
+lastmod: 2023-08-25T09:45:44.569Z
 ---
 
 ## General Purpose

@@ -14,7 +14,7 @@ categories:
   - tech
   - risu
 description: Learn about Citellus, a framework that will help you detect known issues, and more insightful information about your system
-modified: 2023-04-17T21:45:29.122Z
+lastmod: 2023-08-25T09:48:46.877Z
 ---
 
 ## Background

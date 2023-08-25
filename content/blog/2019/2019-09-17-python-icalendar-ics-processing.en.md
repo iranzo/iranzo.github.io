@@ -17,7 +17,7 @@ categories:
   - redken_bot
 description: This article covers  how to do Internet Calendar processing of events in python and how those are leveraged in @redken_bot
 lang: en
-modified: 2023-04-17T21:39:22.562Z
+lastmod: 2023-08-25T09:48:47.209Z
 ---
 
 ## Introduction

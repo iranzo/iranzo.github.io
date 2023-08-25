@@ -5,7 +5,7 @@ tags:
   - vocabulario
 categories:
   - bebe
-modified: 2022-05-07T11:42:52.854Z
+lastmod: 2023-08-25T09:48:47.367Z
 ---
 
 El calostro es una secreción amarillenta formada principalmente por inmunoglobulina que sale del pecho en los dias alrededor del parto y proporciona `defensas` al bebé.

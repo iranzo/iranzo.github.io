@@ -7,7 +7,7 @@ title: Upgrade Debian from buster to bullseye
 tags:
   - Debian
 date: 2023-07-22T13:22:08.502Z
-lastmod: 2023-07-22T17:02:34.435Z
+lastmod: 2023-08-25T09:51:52.510Z
 ---
 
 I had two Raspberry Pi systems running Raspbian and they were failing to find updates for newer packages.

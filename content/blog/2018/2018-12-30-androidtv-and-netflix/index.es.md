@@ -12,10 +12,10 @@ categories:
   - tech
 lang: es
 slug: AndroidTV-and-Netflix-tvq-pm-100
-modified: 2023-04-17T21:45:07.828Z
 translationKey: AndroidTV-and-Netflix-tvq-pm-100
 cover:
   image: netflix-tvq-pm-100.png
+lastmod: 2023-08-25T09:48:47.152Z
 ---
 
 # Android TV versus Android TV-Box

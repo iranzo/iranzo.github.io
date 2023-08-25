@@ -10,7 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2023-04-17T22:28:58.296Z
+lastmod: 2023-08-25T09:48:47.668Z
 ---
 
 Una de las reacciones más habitual del recién nacido es llorar.

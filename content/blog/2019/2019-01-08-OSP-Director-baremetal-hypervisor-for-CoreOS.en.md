@@ -14,7 +14,7 @@ categories:
   - tech
   - OpenStack
 lang: en
-modified: 2023-04-17T21:44:25.141Z
+lastmod: 2023-08-25T09:48:47.205Z
 ---
 
 ## OSP Director

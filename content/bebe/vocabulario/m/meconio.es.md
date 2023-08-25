@@ -5,7 +5,7 @@ categories:
   - bebe
 tags:
   - vocabulario
-modified: 2022-05-07T11:42:52.831Z
+lastmod: 2023-08-25T09:48:47.550Z
 ---
 
 El meconio es una secreción oscura, casi negra, que defecan los bebés durante los primeros días de vida conforme su intestino comienza a funcionar por primera vez en su vida.

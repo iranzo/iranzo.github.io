@@ -10,9 +10,9 @@ categories: blog
 lang: es
 slug: paella-howto
 translationKey: paella-howto
-modified: 2023-04-17T21:47:17.768Z
 cover:
   image: 20120708134340.jpg
+lastmod: 2023-08-25T09:48:46.840Z
 ---
 
 Este documento está basado en la receta original y fotos que le pasé a mi compañero [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) que a su vez, documentó y tradujo internamente para su difusión.

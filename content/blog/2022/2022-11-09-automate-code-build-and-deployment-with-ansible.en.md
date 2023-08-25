@@ -9,7 +9,7 @@ title: Automate code build and deployment with ansible
 categories:
   - tech
 date: 2022-11-09T07:00:46.350Z
-modified: 2023-04-17T21:36:15.150Z
+lastmod: 2023-08-25T09:45:44.522Z
 ---
 
 Let's say that we want to keep our system updated with some code which is not distributed as a regular package, but as a code in a repository (which unfortunately, it's a pretty common situation).

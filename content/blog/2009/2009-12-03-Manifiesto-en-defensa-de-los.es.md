@@ -7,9 +7,9 @@ tags:
   - general
   - foss
 lang: es
-modified: 2022-05-04T13:15:43.516Z
 categories:
   - blog
+lastmod: 2023-08-25T09:48:46.935Z
 ---
 
 Ante la inclusión en el Anteproyecto de Ley de Economía sostenible de modificaciones legislativas que afectan al libre ejercicio de las libertades de expresión, información y el derecho de acceso a la cultura a través de Internet, los periodistas, bloggers, usuarios, profesionales y creadores de internet manifestamos nuestra firme oposición al proyecto, y declaramos que:

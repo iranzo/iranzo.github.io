@@ -8,7 +8,6 @@ tags:
   - redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
-modified: 2022-05-06T22:05:07.834Z
 categories:
   - tech
 description: Learn about Redken Telegram Bot usage and configuration settings.
@@ -18,6 +17,7 @@ translationKey: redken_bot
 draft: false
 redirect: /redken_bot
 url: /es/redken_bot
+lastmod: 2023-08-25T09:48:47.281Z
 ---
 
 Versión [disponible sólo en inglés]({{<relref path="redken-en.md" lang="en">}})

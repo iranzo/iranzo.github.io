@@ -7,10 +7,10 @@ lang: es
 tags:
   - fedora
   - foss
-modified: 2023-04-17T22:30:46.679Z
 categories:
   - FOSS
   - Fedora
+lastmod: 2023-08-25T09:48:46.866Z
 ---
 
 Hace ya años que pasé de KDE con la llegada de KDE 3 a utilizar GNOME, más 'espartano', pero con mejor rendimiento.

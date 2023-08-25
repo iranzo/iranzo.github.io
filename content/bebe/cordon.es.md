@@ -10,7 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2023-04-17T22:28:41.067Z
+lastmod: 2023-08-25T09:48:47.652Z
 ---
 
 En caso de todavía tener el cordón umbilical, vuestro pediatra os informará el procedimiento preferido, algunos recomiendan usar cristalmina[^1] o alcohol de 70º empapando un papel y sólo tocando el cordón, nunca la piel, y tan sólo, una vez evaporado, proceder a poner el pañal.

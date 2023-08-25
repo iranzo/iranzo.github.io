@@ -5,7 +5,7 @@ categories:
   - bebe
 tags:
   - vocabulario
-modified: 2022-05-07T11:42:52.845Z
+lastmod: 2023-08-25T09:48:47.356Z
 ---
 
 Las [contracciones]({{<relref "../../contracciones.es.md">}}) son movimientos del útero (recordemos que es un músculo) que duran entre 30 y 60 segundos y son intermitentes.

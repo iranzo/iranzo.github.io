@@ -11,7 +11,7 @@ lang: es
 categories:
   - FOSS
   - Fedora
-modified: 2023-04-17T21:48:56.688Z
+lastmod: 2023-08-25T09:48:46.826Z
 ---
 
 A raíz de un problema debido a reiterados apagones, me vi en la necesidad de levantar una máquina virtual que ya no arrancaba.

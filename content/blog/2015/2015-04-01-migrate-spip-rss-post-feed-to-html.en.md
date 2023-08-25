@@ -8,10 +8,10 @@ tags:
   - markdown
   - html
   - foss
-modified: 2023-04-17T21:46:14.963Z
 categories:
   - CMS
   - python
+lastmod: 2023-08-25T09:48:46.965Z
 ---
 
 I had my old blog based on [SPIP](http://www.spip.net), and I wanted to keep all the posts together, to make it easier to migrate in the future.

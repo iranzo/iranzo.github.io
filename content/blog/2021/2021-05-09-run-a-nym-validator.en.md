@@ -15,7 +15,7 @@ date: 2021-05-09 12:40:34 +0200
 categories:
   - tech
 lang: en
-modified: 2023-04-17T21:36:05.683Z
+lastmod: 2023-08-25T09:46:05.175Z
 ---
 
 As said in the article about [mixnodes]({{<relref "2021-05-09-run-a-nym-mixnode.en.md">}}), NYM is a technology aiming for providing privacy for the communications.

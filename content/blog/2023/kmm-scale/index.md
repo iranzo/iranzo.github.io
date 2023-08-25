@@ -12,9 +12,9 @@ date: 2023-06-21 00:00:00 +0200
 categories:
   - tech
   - OpenShift
-modified: 2023-06-25T21:03:26.696Z
 slug: kmm-1-1-scale-testing
 redirect: https://cloud.redhat.com/blog/scale-testing-kernel-module-management
+lastmod: 2023-08-25T09:48:47.468Z
 ---
 
 First published at <https://cloud.redhat.com/blog/scale-testing-kernel-module-management>

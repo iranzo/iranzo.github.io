@@ -5,8 +5,8 @@ categories:
   - bebe
 tags:
   - vocabulario
-modified: 2022-05-07T11:42:52.820Z
 lang: es
+lastmod: 2023-08-25T09:48:47.691Z
 ---
 
 El tapón mucoso es una masa gelatinosa que cierra el paso de la vagina al útero protegiendo así al bebé durante la gestación de entradas de virus o bacterias.

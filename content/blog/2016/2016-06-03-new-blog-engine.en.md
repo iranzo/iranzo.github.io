@@ -9,7 +9,7 @@ tags:
   - foss
 categories:
   - CMS
-modified: 2023-04-17T21:45:55.255Z
+lastmod: 2023-08-25T09:48:46.946Z
 ---
 
 As always, I don't usually find myself keen to write about things I do, until I later realize they might be helpful for others, and that's why in the past I decided to switch the place I was putting the information about why did to Github and also, take benefit of practicing markdown for writing the entries.

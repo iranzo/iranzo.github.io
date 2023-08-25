@@ -12,9 +12,9 @@ date: 2020-04-28 22:30:24 +0200
 categories:
   - LEGO
 lang: en
-modified: 2023-04-17T21:38:05.981Z
 cover:
   image: https://i.imgur.com/fYx5Jtr.jpg.jpg
+lastmod: 2023-08-25T09:48:46.678Z
 ---
 
 Today I built the [Jaguar Racing GEN2 car & Jaguar I-PACE eTROPHY 🛒](https://www.amazon.es/dp/B07W5PXDYZ?tag=redken-21).

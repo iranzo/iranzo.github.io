@@ -11,9 +11,9 @@ date: 2020-02-23 23:30:24 +0100
 categories:
   - LEGO
 lang: en
-modified: 2023-04-17T21:38:06.076Z
 cover:
   image: https://i.imgur.com/Y2sqxOq.jpg.jpg
+lastmod: 2023-08-25T09:48:46.767Z
 ---
 
 Some pics about the 'almost' modular [Fisherman Store 🛒](https://www.amazon.es/dp/B06X9QM15K?tag=redken-21)

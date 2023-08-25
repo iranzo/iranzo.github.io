@@ -9,9 +9,9 @@ tags:
   - Markdown
   - SPIP
   - Blogger
-modified: 2023-04-17T21:46:05.426Z
 categories:
   - CMS
+lastmod: 2023-08-25T09:48:47.005Z
 ---
 
 For my work I've been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the formatting.

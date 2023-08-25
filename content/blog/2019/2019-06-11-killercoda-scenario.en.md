@@ -16,7 +16,7 @@ date: 2019-06-11 21:16:14 +0200
 categories:
   - tech
   - RISU
-modified: 2023-04-17T21:35:58.382Z
+lastmod: 2023-08-25T09:48:47.172Z
 ---
 
 After some time checking the scenarios at <https://learn.openshift.com>, I decided to give it a try.

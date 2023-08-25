@@ -13,7 +13,7 @@ tags:
   - Live Migration
   - node drain
 date: 2020-03-22 00:00:00 +0200
-modified: 2023-04-17T21:40:18.047Z
+lastmod: 2023-08-25T09:48:47.749Z
 ---
 
 This article was published originally at <https://kubevirt.io/2020/Live-migration.html>

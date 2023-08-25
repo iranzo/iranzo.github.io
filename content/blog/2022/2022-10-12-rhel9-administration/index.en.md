@@ -16,9 +16,9 @@ categories:
 description: RHEL9 System Administration book now available!
 lang: en
 slug: rhel9-administration
-modified: 2023-04-17T21:38:06.120Z
 cover:
   image: rhel9-cover.png
+lastmod: 2023-08-25T09:45:44.559Z
 ---
 
 Last year, together with my colleagues Miguel and Scott, we released with the help of Packt team the [RHEL8 Administration]({{< relref "2021-09-11-rhel8-administration" >}}).

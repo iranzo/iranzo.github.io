@@ -14,8 +14,7 @@ tags:
   - AlmaLinux
   - Oracle Linux
   - Rocky Linux
-modified: 2023-04-17T21:36:17.758Z
-lastmod: 2023-08-25T09:38:33.518Z
+lastmod: 2023-08-25T09:45:44.541Z
 ---
 
 Most systems, based on RHEL, were not able to upgrade without

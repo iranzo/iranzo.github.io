@@ -13,7 +13,7 @@ categories:
   - Ansible
 description: Learn on how to setup a VPN using WireGuard using Ansible
 lang: en
-modified: 2023-04-17T21:42:26.889Z
+lastmod: 2023-08-25T09:45:44.498Z
 ---
 
 Setting up WireGuard is not a difficult process but I wanted to automate it among hosts by using a simple playbook that can be executed against the hosts and get it configured and deployed in a simple way.

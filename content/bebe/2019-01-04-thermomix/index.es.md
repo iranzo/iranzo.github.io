@@ -12,11 +12,9 @@ tags:
   - mycook
   - robot de cocina
   - potitos
-
 categories:
   - bebe
-
-modified: 2022-05-04T21:00:50.005Z
+lastmod: 2023-08-25T09:50:19.851Z
 ---
 
 Unos años antes de 'estar embarazados', tuvimos una demostración de funcionalidad de la Thermomix por parte de una amiga que había empezado a dedicarse al tema.

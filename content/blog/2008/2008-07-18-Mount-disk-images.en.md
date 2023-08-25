@@ -7,9 +7,9 @@ tags:
   - Linux
   - Xen
   - foss
-modified: 2023-04-17T21:50:19.409Z
 categories:
   - FOSS
+lastmod: 2023-08-25T09:48:47.072Z
 ---
 
 I've been using a Xen guest under RHEL 5.2 to hold this Webserver, and because of failures, I choose to keep a copy of the full disk image on another machine.

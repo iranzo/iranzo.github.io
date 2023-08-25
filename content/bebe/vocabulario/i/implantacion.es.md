@@ -7,8 +7,7 @@ categories:
   - bebe
 tags:
   - Vocabulario
-
-modified: 2022-05-07T11:42:52.836Z
+lastmod: 2023-08-25T09:48:47.600Z
 ---
 
 Proceso en el que el óvulo fecundado se coloca en el útero y anida, comenzando el proceso de embarazo y crecimiento del embrión.

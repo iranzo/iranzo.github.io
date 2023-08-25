@@ -14,9 +14,9 @@ date: 2020-09-25 19:30:24 +0200
 categories:
   - LEGO
 lang: en
-modified: 2023-04-17T21:38:05.999Z
 cover:
   image: https://i.imgur.com/YUmxxRW.jpg.jpg
+lastmod: 2023-08-25T09:48:46.704Z
 ---
 
 I've the [Lego Bugatti Chiron 🛒](https://www.amazon.es/dp/B0792RB3B6?tag=redken-21) (more pics at its [review]({{<relref "2020-02-21-lego-bugatti-chiron-porsche-911-GT3-RS.en.md">}}) and just recently via a credit coupon I got a [LED Lightning Kit from `Lightailing` 🛒](https://www.amazon.es/dp/B07KG3LV8F?tag=redken-21) (or [AliExpress 🛒](https://s.click.aliexpress.com/e/_bWTEpe2)).

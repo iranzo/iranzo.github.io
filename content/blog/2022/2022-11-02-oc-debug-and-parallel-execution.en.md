@@ -12,7 +12,7 @@ title: OpenShift's oc debug and parallel execution
 categories:
   - tech
 date: 2022-11-03T14:13:32.418Z
-modified: 2023-04-17T21:42:55.683Z
+lastmod: 2023-08-25T09:45:44.488Z
 ---
 
 A colleague reported some issues in the OpenShift troubleshooting and diagnosis scripts at [OpenShift-checks](https://github.com/RHsyseng/openshift-checks/).

@@ -14,7 +14,7 @@ categories:
   - tech
 lang: en
 slug: yaspeller-hook-for-pre-commit
-modified: 2023-04-17T21:38:06.052Z
+lastmod: 2023-08-25T09:48:46.746Z
 ---
 
 I've made a PR that got merged into Yaspeller repository which adds support for `pre-commit` to spell check your files.

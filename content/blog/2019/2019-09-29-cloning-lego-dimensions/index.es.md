@@ -18,9 +18,9 @@ categories:
   - LEGO
 lang: es
 slug: lego-dimensions-cloning
-modified: 2023-04-17T21:37:08.287Z
 cover:
   image: ntag213.png
+lastmod: 2023-08-25T09:48:47.339Z
 ---
 
 ## Introducción

@@ -8,7 +8,7 @@ tags:
 date: 2023-03-02 17:00:00 +0100
 categories:
   - tech
-modified: 2023-04-17T21:36:20.418Z
+lastmod: 2023-08-25T09:48:47.451Z
 ---
 
 Lately, there's a lot of interest on [ChatGPT](https://chat.openai.com/chat), and yes, it's really impressive the way it processes the context to provide answers to the questions.

@@ -10,9 +10,9 @@ tags:
 lang: es
 categories:
   - FOSS
-modified: 2023-04-17T21:49:45.432Z
 cover:
   image: Pantallazo-00.png
+lastmod: 2023-08-25T09:48:47.096Z
 ---
 
 ### Introducción

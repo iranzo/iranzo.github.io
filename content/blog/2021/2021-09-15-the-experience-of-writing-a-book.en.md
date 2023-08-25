@@ -15,7 +15,7 @@ date: 2021-09-15 00:00:00 +0100
 categories:
   - Book
 lang: en
-modified: 2022-05-06T22:05:07.988Z
+lastmod: 2023-08-25T09:45:44.652Z
 ---
 
 I wanted to write about my experience (before I forget about it), and as some colleagues asked about it... here we go...

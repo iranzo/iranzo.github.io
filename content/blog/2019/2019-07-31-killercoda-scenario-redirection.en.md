@@ -12,7 +12,7 @@ layout: post
 date: 2019-07-31 07:39:14 +0200
 categories:
   - tech
-modified: 2023-04-17T21:35:59.943Z
+lastmod: 2023-08-25T09:48:47.199Z
 ---
 
 After my post about [killercoda]({{<relref "2019-06-11-killercoda-scenario.en.md">}}), I did split my initial scenarios into 'organizations'.

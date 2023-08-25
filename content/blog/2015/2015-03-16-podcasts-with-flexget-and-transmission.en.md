@@ -6,10 +6,10 @@ date: 2015-03-16 21:45:00 +0200
 tags:
   - Fedora
   - FOSS
-modified: 2023-04-17T21:46:08.496Z
 categories:
   - FOSS
   - Fedora
+lastmod: 2023-08-25T09:48:46.956Z
 ---
 
 Some podcasts are available via RSS feeds, so you can get notified of new episodes, so the best way I've found so far to automate this procedure is to use the utility `flexget`.

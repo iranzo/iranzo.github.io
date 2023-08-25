@@ -16,7 +16,7 @@ categories:
 outputs:
   - Reveal
 reveal_hugo.theme: solarized
-modified: 2023-01-27T09:58:36.399Z
+lastmod: 2023-08-25T09:54:40.587Z
 ---
 
 ## Project hosting and automation

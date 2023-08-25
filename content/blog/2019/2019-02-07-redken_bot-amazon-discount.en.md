@@ -14,8 +14,8 @@ categories:
   - tech
   - python
   - redken_bot
-modified: 2023-04-17T21:43:51.741Z
 draft: true
+lastmod: 2023-08-25T09:48:47.184Z
 ---
 
 # Introduction

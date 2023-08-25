@@ -8,7 +8,7 @@ tags:
   - Z39.50
 categories:
   - tech
-modified: 2023-04-17T21:39:37.375Z
+lastmod: 2023-08-25T09:48:47.455Z
 ---
 
 ## Presentación del protocolo Z39.50, y casos prácticos

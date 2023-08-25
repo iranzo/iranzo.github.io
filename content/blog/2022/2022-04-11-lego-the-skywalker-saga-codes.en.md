@@ -7,11 +7,11 @@ tags:
   - PlayStation
   - Switch
   - Nintendo
-modified: 2023-04-17T21:42:33.931Z
 categories:
   - LEGO
 cover:
   image: https://m.media-amazon.com/images/I/71y+jn1bMPL.jpg
+lastmod: 2023-08-25T09:48:46.654Z
 ---
 
 Inside the game The Sky Walker Saga [PS4](https://www.amazon.es/dp/B08VTB4X2J?tag=redken-21), [PS5](https://www.amazon.es/dp/B08VTC518G?tag=redken-21), [Xbox](https://www.amazon.es/dp/B08VTBT8TY?tag=redken-21), [Nintendo Switch](https://www.amazon.es/dp/B08VTDBTDB?tag=redken-21), you can introduce some codes to unlock additional characters to use, so far this is the list I've found:

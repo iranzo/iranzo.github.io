@@ -5,9 +5,9 @@ date: 2004-04-06T20:01:00.000Z
 tags:
   - general
 lang: es
-modified: 2023-04-17T21:53:50.174Z
 categories:
   - blog
+lastmod: 2023-08-25T09:48:47.414Z
 ---
 
 Extraído de un artículo publicado por el periódico El País:

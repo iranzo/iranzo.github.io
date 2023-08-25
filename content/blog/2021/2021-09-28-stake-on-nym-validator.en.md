@@ -16,8 +16,8 @@ categories:
   - tech
 description: This article describes how to stake your token against a NYM cosmos validator
 lang: en
-modified: 2023-04-17T21:36:10.891Z
 slug: stake-nym-validator
+lastmod: 2023-08-25T09:46:05.179Z
 ---
 
 As said in the article about [mixnodes]({{<relref "2021-05-09-run-a-nym-mixnode.en.md">}}) and [validators]({{<relref "2021-05-09-run-a-nym-validator.en.md">}}), NYM is a technology aiming for providing privacy for the communications.

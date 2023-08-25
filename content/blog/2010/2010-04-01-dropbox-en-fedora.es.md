@@ -8,9 +8,9 @@ tags:
   - dropbox
   - foss
 lang: es
-modified: 2023-04-17T21:48:48.165Z
 categories:
   - Fedora
+lastmod: 2023-08-25T09:48:46.792Z
 ---
 
 Para instalar dropbox en Fedora, no es necesario realizar excesivos pasos:

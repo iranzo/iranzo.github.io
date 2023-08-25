@@ -17,7 +17,7 @@ date: 2021-01-01 00:00:00 +0200
 categories:
   - tech
 lang: en
-modified: 2023-04-17T21:38:06.205Z
+lastmod: 2023-08-25T09:46:05.156Z
 ---
 
 ## Introduction

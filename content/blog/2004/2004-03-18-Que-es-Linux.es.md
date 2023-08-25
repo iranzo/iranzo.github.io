@@ -7,10 +7,10 @@ tags:
   - general
   - foss
 lang: es
-modified: 2023-04-17T21:53:50.167Z
 categories:
   - blog
   - FOSS
+lastmod: 2023-08-25T09:48:47.398Z
 ---
 
 ### Introducción

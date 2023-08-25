@@ -1,6 +1,5 @@
 ---
 title: Emerging Tech VLC'19 - Citellus - Automatización de comprobaciones
-
 author: Pablo Iranzo Gómez
 tags:
   - citellus
@@ -25,7 +24,7 @@ outputs:
 reveal_hugo.theme: solarized
 cover:
   image: www.png
-modified: 2023-01-27T09:47:02.912Z
+lastmod: 2023-08-25T09:52:25.505Z
 ---
 
 ## [Citellus](https://risuorg.github.io):

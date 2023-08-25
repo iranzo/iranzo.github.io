@@ -9,7 +9,7 @@ tags:
 categories:
   - tech
   - OpenStack
-modified: 2023-04-17T21:45:58.344Z
+lastmod: 2023-08-25T09:48:46.940Z
 ---
 
 Contributing to an OpenSource project might take some time at the beginning, the good thing with OpenStack is that there are lot of guides on how to start and collaborate.

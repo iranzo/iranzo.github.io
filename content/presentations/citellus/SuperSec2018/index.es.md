@@ -1,7 +1,5 @@
 ---
-title: "SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de
-  configuración, logs etc mediante scripts en bash, python, ruby, etc"
-
+title: "SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de configuración, logs etc mediante scripts en bash, python, ruby, etc"
 author: Pablo Iranzo Gómez
 tags:
   - citellus
@@ -22,8 +20,8 @@ categories:
   - risu
 outputs:
   - Reveal
-modified: 2023-01-27T09:47:06.777Z
 reveal_hugo.theme: solarized
+lastmod: 2023-08-25T09:52:15.964Z
 ---
 
 ## [Citellus](https://risuorg.github.io):

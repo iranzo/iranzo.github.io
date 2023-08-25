@@ -8,7 +8,7 @@ date: 2008-11-08 23:16:14 +0200
 categories:
   - blog
 lang: es
-modified: 2023-04-17T21:50:26.099Z
+lastmod: 2023-08-25T09:48:47.090Z
 ---
 
 {{<hint title="Método de uso">}}

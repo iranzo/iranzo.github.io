@@ -12,9 +12,9 @@ date: 2022-04-01T07:31:42.603Z
 categories:
   - tech
   - FOSS
-modified: 2023-04-17T21:36:13.363Z
 cover:
   image: https://m.media-amazon.com/images/I/51-7XfmB4ZL.jpg
+lastmod: 2023-08-25T09:45:44.512Z
 ---
 
 Since long ago I had it in my mind getting one remote presenter, but most presenters just had two buttons, and the ones that looked to be valid for my use case, required four and seems that only `Rii` had similar devices, but I didn't went for it as it was not a huge need, so I ended up with a mini keyboard I had for Raspberry Pi and some debugging in case I had that need.

@@ -12,7 +12,7 @@ tags:
 categories:
   - tech
 date: 2023-01-19T08:55:11.435Z
-modified: 2023-04-17T21:39:29.153Z
+lastmod: 2023-08-25T09:48:47.472Z
 ---
 
 Following on the [Using Kcli to prepare for OCM testing]({{% relref "2022-12-23-using-kcli-to-prepare-for-open-cluster-management-testing.en.md" %}}), we're going to prepare KMM testing in Hub-Spoke approach.

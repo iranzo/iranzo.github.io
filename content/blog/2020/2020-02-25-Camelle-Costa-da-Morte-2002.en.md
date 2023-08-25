@@ -9,9 +9,9 @@ layout: post
 date: 2002-02-25 21:30:24 +0100
 categories: blog
 lang: en
-modified: 2022-05-04T12:50:56.842Z
 cover:
   image: https://i.imgur.com/GkwY1be.jpg.jpg
+lastmod: 2023-08-25T09:46:05.113Z
 ---
 
 Those are some pics I took during December in 2002 around Camelle and Costa da Morte area in North of Spain after the Prestige oil spill.

@@ -9,9 +9,9 @@ tags:
   - Linux
   - installation
   - FOSS
-modified: 2023-04-17T21:48:28.302Z
 categories:
   - FOSS
+lastmod: 2023-08-25T09:48:46.797Z
 ---
 
 ## Introduction

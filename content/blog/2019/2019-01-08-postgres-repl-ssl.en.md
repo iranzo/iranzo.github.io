@@ -15,7 +15,7 @@ categories:
   - tech
   - Kubernetes
 lang: en
-modified: 2023-04-17T21:44:21.141Z
+lastmod: 2023-08-25T09:48:47.162Z
 ---
 
 # Postgres across clusters

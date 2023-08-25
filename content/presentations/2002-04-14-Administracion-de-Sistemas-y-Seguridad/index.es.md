@@ -14,7 +14,7 @@ categories:
 outputs:
   - Reveal
 reveal_hugo.theme: solarized
-modified: 2023-01-27T09:58:35.406Z
+lastmod: 2023-08-25T09:50:19.865Z
 ---
 
 # Introducción

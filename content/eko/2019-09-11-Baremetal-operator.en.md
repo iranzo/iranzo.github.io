@@ -10,7 +10,7 @@ categories:
   - tech
   - Kubernetes
 author: Pablo Iranzo Gómez
-modified: 2023-04-17T21:53:50.208Z
+lastmod: 2023-08-25T09:48:47.739Z
 ---
 
 This article was published originally at <https://metal3.io/blog/2019/09/11/Baremetal-operator.html>

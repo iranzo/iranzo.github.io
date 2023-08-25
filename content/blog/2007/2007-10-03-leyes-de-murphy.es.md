@@ -7,7 +7,7 @@ layout: post
 date: 2007-10-03 17:55:54 +0100
 categories: blog
 lang: es
-modified: 2023-04-17T21:50:46.898Z
+lastmod: 2023-08-25T09:48:47.016Z
 ---
 
 # Las leyes de Murphy

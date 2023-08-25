@@ -16,7 +16,7 @@ categories:
 outputs:
   - Reveal
 reveal_hugo.theme: solarized
-modified: 2023-01-27T09:46:38.206Z
+lastmod: 2023-08-25T09:48:47.781Z
 ---
 
 ## ¿Qué es Fedora?

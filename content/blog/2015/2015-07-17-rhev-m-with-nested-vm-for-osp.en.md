@@ -12,9 +12,9 @@ tags:
   - nestedvt
   - FOSS
   - nested virtualization
-modified: 2023-04-17T21:35:52.493Z
 categories:
   - FOSS
+lastmod: 2023-08-25T09:48:46.987Z
 ---
 
 Since some time ago, I've been mostly dealing with OpenStack, requiring different releases to test for different tests, etc.

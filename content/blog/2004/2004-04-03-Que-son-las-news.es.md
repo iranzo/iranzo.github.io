@@ -6,9 +6,9 @@ tags:
   - nntp
   - general
 lang: es
-modified: 2023-04-17T21:52:55.897Z
 categories:
   - blog
+lastmod: 2023-08-25T09:48:47.406Z
 ---
 
 Este artículo es una traducción de un documento en inglés de EARN de hace bastantes años, en los que se explicaban muchos de los servicios de la antigua Internet, hoy en día desaparecidos.

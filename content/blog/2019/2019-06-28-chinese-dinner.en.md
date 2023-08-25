@@ -12,9 +12,9 @@ layout: post
 date: 2019-06-28 20:00:14 +0200
 categories:
   - LEGO
-modified: 2023-04-17T21:39:07.682Z
 cover:
   image: https://i.imgur.com/xIIP1ER.jpg.jpg
+lastmod: 2023-08-25T09:48:47.178Z
 ---
 
 This is the pictures of the set that my colleague Raúl brought back from his trip to APAC, hope you enjoy it!

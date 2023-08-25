@@ -13,7 +13,7 @@ categories:
   - tech
   - OpenStack
   - Ansible
-modified: 2023-04-17T21:45:33.658Z
+lastmod: 2023-08-25T09:48:46.894Z
 ---
 
 [InfraRed](https://github.com/redhat-openstack/infrared/) is tool that allows to install/provision OpenStack. You can find the documentation for the project at <http://infrared.readthedocs.io>.

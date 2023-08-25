@@ -10,7 +10,7 @@ tags:
 date: 2023-01-27 9:00:00 +0100
 categories:
   - tech
-modified: 2023-04-17T21:36:19.380Z
+lastmod: 2023-08-25T09:48:47.438Z
 ---
 
 With podman we can setup containers for being used for non root users by performing some simple steps:

@@ -1,6 +1,5 @@
 ---
 title: "DevConf.cz 2018: Citellus - Detecting common pitfalls of deployments"
-
 author: Pablo Iranzo Gómez
 tags:
   - citellus
@@ -16,7 +15,6 @@ tags:
   - reveal
 layout: list
 date: 2018-01-27 16:00:00 +0100
-
 categories:
   - presentations
   - risu
@@ -25,7 +23,7 @@ outputs:
 reveal_hugo.theme: solarized
 cover:
   image: www.png
-modified: 2023-01-27T09:46:58.736Z
+lastmod: 2023-08-25T09:50:19.873Z
 ---
 
 ## [Citellus](https://github.com/citellusorg/citellus):

@@ -1,11 +1,11 @@
 ---
-modified: 2023-01-16T23:59:07.819Z
 title: Projects
 layout: post
 date: 2020-01-17
 description: Projects I've been involved with
 url: /projects
 translationKey: projects
+lastmod: 2023-08-25T09:48:47.487Z
 ---
 
 I've been involved with a number of projects, some of which are listed below.

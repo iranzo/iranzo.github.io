@@ -10,7 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2023-04-17T22:28:38.321Z
+lastmod: 2023-08-25T09:48:47.629Z
 ---
 
 Las contracciones son movimientos del útero (recordemos que es un músculo) que duran entre 30 y 60 segundos y son intermitentes.

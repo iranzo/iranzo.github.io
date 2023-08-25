@@ -9,10 +9,10 @@ tags:
   - firewall
   - foss
 lang: es
-modified: 2023-04-17T21:53:19.856Z
 categories:
   - FOSS
   - tech
+lastmod: 2023-08-25T09:45:44.576Z
 ---
 
 ### Introducción

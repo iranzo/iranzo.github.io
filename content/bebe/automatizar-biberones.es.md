@@ -10,7 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2023-04-17T22:28:30.343Z
+lastmod: 2023-08-25T09:48:47.647Z
 ---
 
 Hace tiempo en el articulo [Biberones]({{<relref "biberones.es.md">}}) se hablaba del proceso de uso, preparación, etc...

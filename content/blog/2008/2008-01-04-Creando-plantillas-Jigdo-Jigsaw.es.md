@@ -11,9 +11,9 @@ url: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/
 save_as: blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/index.html
 slug: Creating-Jigsaw-Download-Jigdo
 translationKey: Creating-Jigsaw-Download-JigDo
-modified: 2023-04-17T21:49:58.745Z
 categories:
   - FOSS
+lastmod: 2023-08-25T09:48:47.042Z
 ---
 
 ### Introducción

@@ -8,7 +8,7 @@ tags:
   - Vocabulario
 categories:
   - bebe
-modified: 2022-06-01T22:31:45.379Z
+lastmod: 2023-08-25T09:48:47.708Z
 ---
 
 El `nesting` o síndrome del nido es algo que ocurre durante el embarazo, generalmente cuando está avanzado y que consiste en querer tener todo listo.

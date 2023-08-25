@@ -5,8 +5,8 @@ categories:
   - bebe
 tags:
   - vocabulario
-modified: 2022-05-07T11:42:52.828Z
 lang: es
+lastmod: 2023-08-25T09:48:47.538Z
 ---
 
 Las [rabietas]({{<relref "las-rabietas.es.md">}}) son arrebatos generalmente bruscos y descontrolados de niño ante la frustración, enfado, etc.

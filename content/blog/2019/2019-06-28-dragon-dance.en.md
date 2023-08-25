@@ -13,9 +13,9 @@ date: 2019-06-28 20:32:14 +0200
 categories:
   - LEGO
 description: Lego Chinese Dragon Dance review
-modified: 2023-04-17T21:38:35.952Z
 cover:
   image: https://i.imgur.com/8j1Drm8.jpg.jpg
+lastmod: 2023-08-25T09:48:47.215Z
 ---
 
 This is the pictures of the set that my colleague Raúl brought back from his trip to APAC.

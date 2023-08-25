@@ -7,9 +7,9 @@ tags:
   - fedora
   - foss
 lang: es
-modified: 2023-04-17T21:48:50.918Z
 categories:
   - blog
+lastmod: 2023-08-25T09:48:46.821Z
 ---
 
 Hacía un tiempo que no usaba la función de combinar correspondencia y en el equipo de sobremesa con Fedora 13 x86_64 no conseguía hacerla funcionar.

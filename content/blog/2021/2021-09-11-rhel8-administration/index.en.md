@@ -15,9 +15,9 @@ categories:
 description: RHEL8 System Administration book now available!
 lang: en
 slug: rhel8-administration
-modified: 2023-04-17T21:38:06.212Z
 cover:
   image: rhel8-cover.png
+lastmod: 2023-08-25T09:46:05.150Z
 ---
 
 After some time working on it (about 6 months for the main work and some more time for the reviews) with my colleagues Miguel and Scott, we've finally made it thanks to the support from our families and Packt, as well as several members of RH teams that gave the clearance to get it out!

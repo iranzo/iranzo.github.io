@@ -9,7 +9,7 @@ layout: post
 date: 2021-07-01 22:00:00 +0200
 categories:
   - tech
-modified: 2023-04-17T21:36:07.697Z
+lastmod: 2023-08-25T09:46:05.194Z
 ---
 
 Hi,

@@ -15,9 +15,9 @@ date: 2020-09-17 19:00:24 +0200
 categories:
   - LEGO
 lang: en
-modified: 2023-04-17T21:38:06.015Z
 cover:
   image: https://i.imgur.com/RwERShO.jpg.jpg
+lastmod: 2023-08-25T09:48:46.733Z
 ---
 
 I got some pieces that were part of a [Lego Volkswagen T1 🛒](https://www.amazon.es/dp/B00PGZP8HE?tag=redken-21) but couldn't make for the complete set (which I already owned), so I was checking what mods I could build based on it, and best one, based on the amount of pieces was this one found on [Rebrickable](https://rebrickable.com/mocs/MOC-46121/tobowski/caravan-camping-trailer-for-10220-t1-bus/).

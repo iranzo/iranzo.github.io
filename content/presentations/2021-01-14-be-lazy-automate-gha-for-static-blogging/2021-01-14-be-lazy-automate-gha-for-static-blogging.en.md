@@ -14,8 +14,8 @@ categories:
   - CMS
 outputs:
   - Reveal
-modified: 2023-01-27T09:46:54.912Z
 reveal_hugo.theme: solarized
+lastmod: 2023-08-25T09:48:47.768Z
 ---
 
 ## Be lazy, automate: GitHub Actions for static blogging

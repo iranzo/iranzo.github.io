@@ -7,9 +7,9 @@ tags:
   - spip
   - foss
 lang: es
-modified: 2023-04-17T21:50:32.278Z
 categories:
   - FOSS
+lastmod: 2023-08-25T09:48:47.053Z
 ---
 
 Con la reciente salida de SPIP 2.0, llega el momento de considerar migrar.

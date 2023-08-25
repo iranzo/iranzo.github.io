@@ -18,9 +18,9 @@ categories:
 lang: en
 slug: lego-dimensions
 translationKey: lego-dimensions
-modified: 2023-04-17T21:39:12.628Z
 cover:
   image: https://www.lego.com/cdn/cs/set/assets/blt866dc839f8c741cf/dimensions-logo.png
+lastmod: 2023-08-25T09:48:47.241Z
 ---
 
 ## Introduction

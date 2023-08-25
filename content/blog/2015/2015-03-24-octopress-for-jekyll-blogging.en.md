@@ -10,7 +10,7 @@ tags:
 categories:
   - CMS
   - FOSS
-modified: 2023-04-17T21:46:11.531Z
+lastmod: 2023-08-25T09:48:46.970Z
 ---
 
 After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.

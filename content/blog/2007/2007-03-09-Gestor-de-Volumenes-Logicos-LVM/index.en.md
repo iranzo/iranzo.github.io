@@ -11,10 +11,10 @@ tags:
 lang: en
 categories:
   - FOSS
-modified: 2023-04-17T21:50:40.697Z
 translationKey: LVM
 cover:
   image: lvm8.jpg
+lastmod: 2023-08-25T09:48:47.023Z
 ---
 
 ### Introduction

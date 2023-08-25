@@ -8,7 +8,6 @@ tags:
   - redken
 layout: post
 date: 2019-03-04 18:34:14 +0100
-modified: 2023-04-17T22:30:07.240Z
 categories:
   - tech
   - redken_bot
@@ -18,6 +17,7 @@ slug: redken_bot
 translationKey: redken_bot
 draft: false
 url: /redken_bot
+lastmod: 2023-08-25T09:48:47.499Z
 ---
 
 # Redken Manual

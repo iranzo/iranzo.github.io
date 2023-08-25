@@ -12,7 +12,7 @@ categories:
   - FOSS
 cover:
   image: https://admins.guru/rhel8-cover.png
-modified: 2023-04-17T21:42:51.507Z
+lastmod: 2023-08-25T09:45:44.535Z
 ---
 
 Aunque hice el examen de RHCE algún tiempo, sigue habiendo trucos y consejos que siempre transmito a los interesados y que vienen indicatos en el libro que escribimos: [Red Hat Enterprise 8 Administration](https://s.admins.guru/buyonamazon):

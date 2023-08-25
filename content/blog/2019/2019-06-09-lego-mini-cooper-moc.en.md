@@ -12,9 +12,9 @@ layout: post
 date: 2019-06-09 01:16:14 +0200
 categories:
   - LEGO
-modified: 2023-04-17T21:38:05.935Z
 cover:
   image: https://i.imgur.com/RI1kBQt.jpg.jpg
+lastmod: 2023-08-25T09:48:47.252Z
 ---
 
 After seeing this MOC [75894-mini-transporter](https://rebrickable.com/mocs/MOC-24636/Keep%20On%20Bricking/75894-mini-transporter/), I decided to:

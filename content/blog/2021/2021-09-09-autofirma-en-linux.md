@@ -15,7 +15,7 @@ categories:
 description: Instalando Autofirma en Fedora 34
 lang: es
 slug: autofirma-en-linux
-modified: 2022-05-04T13:32:56.672Z
+lastmod: 2023-08-25T09:46:05.186Z
 ---
 
 Recientemente, estuve usando un ordenador que no utilizo con frecuencia, pero necesitaba poner una firma en un PDF (y la persona receptora no sólo quería ver la firma 'digital', sino tener una imagen 'firmada').

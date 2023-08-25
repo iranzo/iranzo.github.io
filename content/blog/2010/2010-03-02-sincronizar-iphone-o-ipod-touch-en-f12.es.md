@@ -9,10 +9,10 @@ tags:
   - iPod
   - iPhone
 lang: es
-modified: 2023-04-17T21:48:45.536Z
 categories:
   - FOSS
   - Fedora
+lastmod: 2023-08-25T09:48:46.809Z
 ---
 
 Las nuevas versiones no están todavía soportadas en Fedora 12, así que tendremos que utilizar las de rawhide.

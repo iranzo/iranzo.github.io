@@ -15,7 +15,7 @@ categories:
   - tech
   - CMS
 lang: en
-modified: 2022-05-04T14:03:30.778Z
+lastmod: 2023-08-25T09:48:46.686Z
 ---
 
 During last year I've worked with the <https://github.com/openshift-kni/baremetal-deploy/> repository after being working in the KNI Community team that was in charge of <KubeVirt.io> and <Metal3.io> where some of the below things were applied.

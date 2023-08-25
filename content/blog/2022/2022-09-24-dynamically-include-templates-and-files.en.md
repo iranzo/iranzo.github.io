@@ -9,7 +9,7 @@ tags:
   - Tips
   - ansible
 date: 2022-09-24T11:13:32.418Z
-modified: 2023-04-17T21:42:47.250Z
+lastmod: 2023-08-25T09:45:44.507Z
 ---
 
 For my ansible playbooks, I wanted to be able to add several new templates to be copied to target system, and additionally be able to perform some commands for them without having to specify each individual file/template to copy.

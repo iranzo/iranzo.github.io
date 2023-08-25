@@ -15,7 +15,7 @@ categories:
   - tech
   - Kubernetes
 lang: en
-modified: 2022-05-04T13:52:37.064Z
+lastmod: 2023-08-25T09:46:05.108Z
 ---
 
 ## Introduction

@@ -7,9 +7,9 @@ tags:
   - cms
   - foss
 lang: es
-modified: 2023-04-17T21:51:48.273Z
 categories:
   - FOSS
+lastmod: 2023-08-25T09:45:44.611Z
 ---
 
 ### Introducción a SPIP 1.9

@@ -9,7 +9,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2023-04-17T22:29:05.903Z
+lastmod: 2023-08-25T09:48:47.520Z
 ---
 
 Pasear con un niño no es algo complicado, pero recuerda que aparte del equipamiento estándar de carro o la silla del coche adaptada para su edad, debes tener en cuenta otras cosas:

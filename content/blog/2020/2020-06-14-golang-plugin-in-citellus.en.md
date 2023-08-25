@@ -12,7 +12,7 @@ categories:
   - tech
   - risu
 lang: en
-modified: 2022-11-25T13:19:53.861Z
+lastmod: 2023-08-25T09:48:46.698Z
 ---
 
 I wanted to practice a bit Go programing, so I divided that task in two parts, one, adding a golang extension for Citellus and a sample, but working plugin using it.

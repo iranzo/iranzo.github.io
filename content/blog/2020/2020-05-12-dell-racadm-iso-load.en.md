@@ -14,7 +14,7 @@ date: 2020-05-12 13:30:24 +0200
 categories:
   - tech
 lang: en
-modified: 2022-05-04T13:03:13.535Z
+lastmod: 2023-08-25T09:48:46.723Z
 ---
 
 In order to test IPv6 deployment on Dell hardware I was in need to patch the servers to ensure that UEFI boot mode is in use.

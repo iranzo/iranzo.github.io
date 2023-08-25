@@ -7,9 +7,9 @@ tags:
   - BIOS
   - error
 lang: en
-modified: 2023-04-17T21:53:14.481Z
 categories:
   - blog
+lastmod: 2023-08-25T09:48:47.432Z
 ---
 
 BIOS (Basic Input Output System) from PC's report errors in the hardware at boot with a code of beeps, that can help diagnose the issue in case there's no image being displayed.

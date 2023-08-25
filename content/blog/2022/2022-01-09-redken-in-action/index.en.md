@@ -15,9 +15,9 @@ categories:
   - redken_bot
 description: See how to use @redken_bot in Telegram or discord with some examples!
 lang: en
-modified: 2023-04-17T21:36:16.527Z
 cover:
   image: karma.png
+lastmod: 2023-08-25T09:45:44.546Z
 ---
 
 # Redken in action with some examples

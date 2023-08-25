@@ -16,9 +16,9 @@ date: 2020-02-22 20:30:24 +0100
 categories:
   - LEGO
 lang: en
-modified: 2023-04-17T21:38:05.972Z
 cover:
   image: https://i.imgur.com/CeV61xr.jpg.jpg
+lastmod: 2023-08-25T09:48:46.759Z
 ---
 
 Just some pics I made during some sorting of minifigs from my childhood.

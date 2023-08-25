@@ -11,7 +11,7 @@ date: 2020-08-10 07:44:24 +0200
 categories:
   - tech
 lang: en
-modified: 2023-04-17T21:36:04.291Z
+lastmod: 2023-08-25T09:48:46.718Z
 ---
 
 When I started with [blog-o-matic]({{<relref "2019-01-09-blog-o-matic.en.md">}}) I had to involve external 'Travis-CI', generating a token on GitHub, setting environment variables on Travis, etc

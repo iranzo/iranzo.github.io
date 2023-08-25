@@ -5,15 +5,13 @@ categories:
   - RHEL9
   - libvirt
   - virtualization
-
 title: Enable Libvirt rw socket on RHEL9
 tags:
   - RHEL9
   - virtualization
   - FOSS
-
 date: 2023-01-12T14:32:50.658Z
-modified: 2023-01-12T14:34:23.288Z
+lastmod: 2023-08-25T09:48:46.671Z
 ---
 
 RHEL9 by default uses read-only socket which is not usable by some tools like [Kcli]({{< relref "/tags/kcli" >}})... to enable it use:

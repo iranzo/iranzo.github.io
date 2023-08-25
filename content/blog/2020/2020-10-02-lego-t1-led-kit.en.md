@@ -14,9 +14,9 @@ date: 2020-10-02 19:45:24 +0200
 categories:
   - LEGO
 lang: en
-modified: 2023-04-17T21:38:05.989Z
 cover:
   image: https://i.imgur.com/AI136I0.jpg.jpg
+lastmod: 2023-08-25T09:46:05.105Z
 ---
 
 I've the [Lego Volkswagen T1 Camper van 🛒](https://www.amazon.es/dp/B00PGZP8HE?tag=redken-21) (which I made a MOC for at [Lego T1 Trailer MOC]({{<relref "2020-09-17-lego-t1-volskwagen-trailer.en.md">}})) and just received my [LED Lightning Kit 🛒](https://www.amazon.es/dp/B079LHQFYM?tag=redken-21) (or [AliExpress 🛒](https://s.click.aliexpress.com/e/_dY2hmRx)) after my experience with the [Bugatti Chiron]({{<relref "2020-09-25-lego-bugatti-chiron-led-kit.en.md">}}) one

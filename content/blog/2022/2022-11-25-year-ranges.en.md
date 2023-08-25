@@ -9,7 +9,7 @@ title: "[python] Generate ranges from items"
 categories:
   - tech
 date: 2022-11-25T07:00:46.350Z
-modified: 2023-04-17T21:36:15.940Z
+lastmod: 2023-08-25T09:46:05.335Z
 ---
 
 Some years ago, I added a script for updating headers for `(C)` in the python files I was developing for [Risu]({{< relref "/tags/risu" >}}).

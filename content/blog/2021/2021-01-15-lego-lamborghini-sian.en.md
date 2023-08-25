@@ -12,9 +12,9 @@ date: 2021-01-15 20:32:34 +0200
 categories:
   - LEGO
 lang: en
-modified: 2023-04-17T21:38:06.187Z
 cover:
   image: https://i.imgur.com/R7qkoY6.jpg.jpg
+lastmod: 2023-08-25T09:45:44.629Z
 ---
 
 Xmas came with a good gift that I was able to finish mounting today, the [Lego Lamborghini Sian FKP47 🛒](https://www.amazon.es/dp/B0813RJRYC?tag=redken-21).

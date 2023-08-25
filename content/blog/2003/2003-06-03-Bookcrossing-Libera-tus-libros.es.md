@@ -6,9 +6,9 @@ tags:
   - general
   - bookcrossing
 lang: es
-modified: 2023-04-17T21:53:22.192Z
 categories:
   - blog
+lastmod: 2023-08-25T09:45:44.564Z
 ---
 
 Ha salido en las noticias de este medio día un proyecto de intercambio de libros a nivel mundial. La idea es que en lugar de tener los libros almacenando polvo en casa, los registremos en una web: [http://www.bookcrossing.com](http://www.bookcrossing.com/) y en base a los datos de registro, le pongamos una pegatina o una nota manuscrita (en la web hay modelos listos para imprimir de la pegatina) que lo identifiquen.

@@ -7,9 +7,9 @@ tags:
   - spip
   - foss
 lang: es
-modified: 2023-04-17T21:52:24.972Z
 categories:
   - CMS
+lastmod: 2023-08-25T09:48:47.376Z
 ---
 
 ### Manual de instrucciones de la web

@@ -10,7 +10,7 @@ tags:
   - bebe
 categories:
   - bebe
-modified: 2023-04-17T22:29:08.291Z
+lastmod: 2023-08-25T09:48:47.663Z
 ---
 
 El plan de parto es una parte de la `cartilla del embarazo` donde la futura madre indica cuales son sus intenciones sobre diversos aspectos del mismo, por ejemplo:

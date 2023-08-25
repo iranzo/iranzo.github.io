@@ -8,10 +8,10 @@ tags:
   - fedora
   - dropbox
   - foss
-modified: 2023-04-17T21:48:05.222Z
 categories:
   - FOSS
   - Fedora
+lastmod: 2023-08-25T09:48:46.871Z
 ---
 
 Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de 'backup' en caso de fallo hardware de algún equipo.
