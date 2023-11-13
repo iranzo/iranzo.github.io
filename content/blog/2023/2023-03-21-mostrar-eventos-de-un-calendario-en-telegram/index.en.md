@@ -10,7 +10,7 @@ categories:
   - tech
 cover:
   image: agendadiaria.png
-lastmod: 2023-08-25T09:48:47.442Z
+lastmod: 2023-11-13T07:09:11.174Z
 ---
 
 If you've a Telegram group, it might be interesting the ability of <https://t.me/redken_bot> for adding a calendar `ical` that automates publishing each day the events in the agenda for the day.

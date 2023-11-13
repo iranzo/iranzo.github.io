@@ -9,7 +9,7 @@ tags:
 date: 2023-11-05 00:00:00 +0200
 categories:
   - tech
-lastmod: 2023-11-05T08:38:56.277Z
+lastmod: 2023-11-13T07:09:43.480Z
 ---
 
 Hi had the chance to buy a Dlink camera, waterproof, with magnetic base and rated for exteriors for a really great price a while ago.
@@ -38,4 +38,4 @@ With this, every time I visit mydlink website... the extension uses the user age
 
 Yes, not only seeing camera names, but also being able to watch the feeds, etc from any browser... no need to use your mobile device for everything when you've bigger screens at you.
 
-Enjoy!
+{{<enjoy>}}
