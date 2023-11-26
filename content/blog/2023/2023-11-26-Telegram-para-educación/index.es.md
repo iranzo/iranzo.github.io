@@ -11,7 +11,7 @@ tags:
 date: 2023-11-26 00:00:00 +0100
 categories:
   - education
-lastmod: 2023-11-26T14:33:41.424Z
+lastmod: 2023-11-26T19:34:54.934Z
 ---
 
 Telegram viene siendo utilizado con bastante frecuencia en colegios para permitir una comunicación sencilla mediante los 'canales', donde los profesores pueden enviar información a las familias de forma general sin que se pueda contactar con ellos directamente, facilitando llegar esta información pero sin el riesgo de que sean acosados por las familias con preguntas, etc fuera de los canales oficiales de comunicación.
@@ -151,3 +151,12 @@ Esta funcionalidad nos permite que sea cuando sea el momento en el que lo hagamo
 ## Usa texto en lugar de imágenes
 
 Si pones texto cuando subas imágenes, podrás usar la búsqueda para localizarla, si sólo pones imágenes... te tocará ir una a una para buscar la información. Si quieres, siempre puedes combinar ambas y poner una foto con el texto asociado para poder tener las ventajas de ambas opciones.
+
+## Usa las encuestas
+
+Telegram permite crear encuestas para consultar cosas y obtener información mediante los votos de lo propuesto, sácales partido!
+
+## Usa un calendario para publicar eventos
+
+Si has leido [Mostaar eventos de un calendario en telegram]({{< relref path="2023-03-21-mostrar-eventos-de-un-calendario-en-telegram" lang="es" >}})
+sabrás que puedes usar bots para publicar por ti eventos en los canales o grupos... sácales provecho para que a la vez que gestionas tu agenda, planificas eventos que puedan interesar a las familias.
