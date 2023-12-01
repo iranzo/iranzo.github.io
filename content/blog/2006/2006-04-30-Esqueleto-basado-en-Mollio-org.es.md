@@ -154,7 +154,7 @@ Palabras clave "BASE", dentro de Design, como todas las especiales
 | \_has_email                    | Habilita mostrar la página para ver el correo                                                                                                                     | \_is_site |
 | \_has_jabber                   | Habilita mostrar la página para el cliente jabber                                                                                                                 | \_is_site |
 | \_has_customhead               | Incluye el archivo custom_head.html con los códigos de urchin, etc que quiera crear cada usuario                                                                  | \_is_site |
-| \_shows_license                | Muestra el icono y texto del tipo de lidencia o sólo incluye las cabeceras para los buscadores en caso de que \_has_license esté activado pero no \_shows_license | \_is_site |
+| \_shows_license                | Muestra el icono y texto del tipo de licencia o sólo incluye las cabeceras para los buscadores en caso de que \_has_license esté activado pero no \_shows_license | \_is_site |
 | \_has_plan                     | Habilita mostrar la pestaña de mapa del sitio                                                                                                                     | \_is_site |
 | \_has_persistent_recherche     | Muestra siempre el cuadro de búsqueda haya o no banner                                                                                                            | \_is_site |
 | \_has_forums                   | Muestra la pestaña para acceder a los foros                                                                                                                       | \_is_site |
