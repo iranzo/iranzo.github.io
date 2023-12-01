@@ -87,7 +87,7 @@ front lights as the ones depicted here)
 ## Wrap up
 
 I liked the new models (except for the wheels and the price increase), and
-will probably consider the Jaguar and Lamborghini (I specially like the
+will probably consider the Jaguar and Lamborghini (I especially like the
 Lamborghini Huracán Super Trofeo).
 
 Regards and enjoy your builds!

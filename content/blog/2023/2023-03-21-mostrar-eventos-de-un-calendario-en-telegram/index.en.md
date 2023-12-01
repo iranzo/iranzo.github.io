@@ -24,7 +24,7 @@ For configuring, only a few simple steps are required:
 - Add `@redken_bot` to the group
 - Specify the URL del calendar and the name
 
-Let's see some screenshoots of the process for you to check how easily it can be achieved.
+Lets see some screenshots of the process for you to check how easily it can be achieved.
 
 ## Creation of a calendar for publishing
 
