@@ -48,11 +48,11 @@ En realidad, esta aproximación sólo es válida muy cerca de la superficie de l
 
 El viento solar, como decíamos, son partículas cargadas procedentes del sol, que son una extensión de la atmósfera de la corona solar. Estas partículas se desplazan a velocidades supersónicas, creando una onda de choque al entrar en contacto con el campo terrestre. A esas velocidades, estos iones, pueden llegar a penetrar varios milímetros en el metal, que generalmente provocan la muerte prematura de muchos satélites, seres vivos no protegidos, etc.
 
-El campo magnético de nuestro planeta, nos sirve de escudo contra esos proyectiles, los cuales, aproximando, son atrapados por el campo magnético almacenándose en varios cinturones toroidales que roden la Tierra. Estos cinturones son denominados cinturones de Van Allen.
+El campo magnético de nuestro planeta, nos sirve de escudo contra esos proyectiles, los cuales, aproximando, son atrapados por el campo magnético almacenándose en varios cinturones toroidales que rodean la Tierra. Estos cinturones son denominados cinturones de Van Allen.
 
 El más interno de ellos se halla a 1 radio de la Tierra y en él, están las partículas más energéticas (hasta 100MeV), que afectadas por las líneas de campo van de Norte a Sur (tardan de 0.1 a 3 segundos) hasta que penetran por los polos, interaccionando con la atmósfera.
 
-Es en esta interacción cuando esos iones, excitan átomos de oxígeno y nitrógeno, los cuales al desescitarse dan lugar a los maravillosos colores que observamos.
+Es en esta interacción cuando esos iones, excitan átomos de oxígeno y nitrógeno, los cuales al desexcitarse dan lugar a los maravillosos colores que observamos.
 
 ### ¿Ocurren siempre?
 
@@ -66,11 +66,11 @@ Otra consecuencia es que en estas épocas, el fenómeno es observable a latitude
 
 Las auroras no es un fenómeno exclusivo de la Tierra, puede darse en cualquier planeta que tenga un campo magnético, Son de relevancia y han sido confirmadas en Júpiter, Saturno, y se sabe, que podrían darse en Urano, Neptuno y Mercurio.
 
-El campo magético de Jupiter es de un orden 10 veces superior al de la Tierra. Siendo su cola tan larga que llega hasta la órbita de Saturno.
+El campo magnético de Jupiter es de un orden 10 veces superior al de la Tierra. Siendo su cola tan larga que llega hasta la órbita de Saturno.
 
 ### Comentario
 
-Las auroras son mucho más que una simple cosa curiosa y son demasiado importantes y cubren demasiados aspectos como para limitarlas a tan breve explicación, que no es mas que una pobre aproximacion de todo lo que cubre y es este fenomeno.
+Las auroras son mucho más que una simple cosa curiosa y son demasiado importantes y cubren demasiados aspectos como para limitarlas a tan breve explicación, que no es mas que una pobre aproximación de todo lo que cubre y es este fenómeno.
 
 Tienen gran relevancia en mucho ámbitos de la Física tales como la fusión, el confinamiento magnético, interferencias, campos magnéticos, dinámica de plasmas, dinámica de la ionosfera.
 

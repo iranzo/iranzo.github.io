@@ -13,7 +13,7 @@ categories:
 lastmod: 2023-08-25T09:48:47.427Z
 ---
 
-Las BIOS (Basic Input Output System) de los pc's informan de los errores del hardware del pc en el arranque mediante un código de pitidos en el caso en el que no puede aparece nada por pantalla... aqui los podrás ver..
+Las BIOS (Basic Input Output System) de los pc's informan de los errores del hardware del pc en el arranque mediante un código de pitidos en el caso en el que no puede aparece nada por pantalla... aquí los podrás ver..
 
 Código de errores emitido por la BIOS para indicar los problemas que surgen durante el POST (Power On Self Test (Autocomprobación tras el encendido)) del arranque:
 

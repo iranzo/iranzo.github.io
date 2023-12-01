@@ -28,11 +28,11 @@ Uno de los métodos más utilizados era la permutación de letras, si en un mens
 
 Siguiendo el abecedario: abcdefghijklmnñopqrstuvwxyz y una semilla de permutación, el mensaje:
 
-- Hola, este es un mensaje de saludo
+- `Hola, este es un mensaje de saludo`
 
 ...quedaría con una clave de permutación 13 (rot13)[^1]:
 
-- Ubyn, rfgr rf ha zrafnwr qr fnyhqb
+- `Ubyn, rfgr rf ha zrafnwr qr fnyhqb`
 
 Que a simple vista parece algo ininteligible.
 
@@ -71,7 +71,7 @@ Se rumorea también que operadores de telefonía escuchan aleatoriamente convers
 
 Para las páginas web, el estándar adoptado son las SSL [^3] que cifran la comunicación entre el cliente y un servidor web autentificado con un certificado digital firmado por ciertas compañías consideradas de confianza y utiliza un cifrado de 56 ó 128 bits. Este cifrado es el más conocido, ya que es el que utilizan bancos, comercios, etc
 
-Como medida adicional de seguridad, los bancos utilizan tarjetas de claves, solicitar carácteres al azar de una clave definida por el usuario, etc.
+Como medida adicional de seguridad, los bancos utilizan tarjetas de claves, solicitar caracteres al azar de una clave definida por el usuario, etc.
 
 El uso de esta medida de seguridad viene indicado en los navegadores por el prefijo "**https**" en la barra de direcciones de la página que estamos visitando, así como un símbolo de un candadito en la barra de estado.
 
@@ -79,7 +79,7 @@ Este sistema tiene un inconveniente y es que las empresas que firman los certifi
 
 Como alternativa libre surgió [CACERT](http://www.cacert.org/) que ofrece un servicio gratuito de firma de certificados, de forma que el día en que CACERT sea añadida a todos los navegadores[^4], automáticamente sus certificados sean validados sin molestias para el visitante (teniendo que aceptar manualmente el certificado).
 
-Estos certificados se basan en cadenas de confianza: tu navegador confía en unas empresas de certificado (CA [^5] y todos los certificados "firmados" por esas empesas son válidos ante el navegador.... algo así como la frase "los amigos de mis amigos son mis amigos"
+Estos certificados se basan en cadenas de confianza: tu navegador confía en unas empresas de certificado (CA [^5] y todos los certificados "firmados" por esas empresas son válidos ante el navegador.... algo así como la frase "los amigos de mis amigos son mis amigos"
 
 #### Redes
 
@@ -95,10 +95,10 @@ GPG se basa en el sistema de llave pública/llave privada. En dicho sistema, cad
 
 Mediante este sistema, para enviar un mensaje cifrado, hacen falta cuatro claves para llevar a cabo la transferencia completa del mensaje:
 
-|---|---|
-|_Usuario 1_| _Usuario 2_|
-|Clave privada 1 |Clave privada 2|
-|Clave pública 1 |Clave pública 2|
+| _Usuario 1_     | _Usuario 2_     |
+| --------------- | --------------- |
+| Clave privada 1 | Clave privada 2 |
+| Clave pública 1 | Clave pública 2 |
 
 El usuario 1, cuando quiere enviar un mensaje cifrado al usuario 2 debe, por un lado cifrar el mensaje con su clave privada y con la clave pública de la otra persona.
 
@@ -122,7 +122,7 @@ WEP[^10] Es un sistema de cifrado equivalente a las SSL pero para redes inalámb
 
 En muchos casos se refuerza el WEP con túneles VPN cifrados con [FreeSWAN](http://www.freeswan.org/) además del uso de aplicaciones seguras (SSH, etc)
 
-Actualmente poca gente protege sus redes inalámbricas y son numerosos los informes, incluso de empresas como Hewlett-Packard avisando sobre cómo haciendo wardriving[^11] es posible ntrar a las redes internas de muchas empresas.
+Actualmente poca gente protege sus redes inalámbricas y son numerosos los informes, incluso de empresas como Hewlett-Packard avisando sobre cómo haciendo wardriving[^11] es posible entrar a las redes internas de muchas empresas.
 
 Incluso utilizando WEP, una red inalámbrica no es segura, ya que debido a fallos de diseño, es posible acceder a ella saltándose la clave de cifrado.
 
@@ -186,13 +186,13 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 [^10]: Wired Equivalent Privacy
 [^11]: Técnica consistente en viajar con un vehículo y un equipo con posibilidad de conexión inalámbrica detectando las redes accesibles y marcándolas para su posterior acceso
 [^12]: Leyes que actualmente impiden a científicos de países "no buenos" publicar en revistas americanas, congresos, etc...
-[^13]: Los pongo aqui porque es el argumento recientemente utilizado desde los atentados del 11 de Septiembre para cualquier cosa que se aleje del pensamiento único: Antipatriotismo, terrorista, etc (un poco al igual que antes los "malos" eran los "comunistas")
+[^13]: Los pongo aquí porque es el argumento recientemente utilizado desde los atentados del 11 de Septiembre para cualquier cosa que se aleje del pensamiento único: Antipatriotismo, terrorista, etc (un poco al igual que antes los "malos" eran los "comunistas")
 [^14]: Por eso el Software Libre aventaja al Privativo, en que al haber libre disponibilidad del código, se puede analizar en busca de puertas traseras
 [^15]: Le acusan con cargos de Terrorismo
-[^16]: Seguridad por ocultación: aunque muchas empresas basan el modelo de seguridad en este sitema, se corre el riesgo de que el día que alguien de "dentro" difunda la información, se vean todos los fallos y alguien lo aproveche malintencionadamente ya que los fallos existen, sólo se han "tapado"
+[^16]: Seguridad por ocultación: aunque muchas empresas basan el modelo de seguridad en este sistema, se corre el riesgo de que el día que alguien de "dentro" difunda la información, se vean todos los fallos y alguien lo aproveche de forma malintencionada ya que los fallos existen, sólo se han "tapado"
 [^17]: Peer to Peer: Programas utilizados para el intercambio de archivos de igual a igual
 [^18]: DRM:Digital Rights Management
 [^19]: Trusted Computing Platform Alliance
-[^20]:
-    Nombre en Clave del sistema operativo de MS que permitiría un control absoluto bajo las políticas de "seguridad" de TCPA
-    {{<disfruta>}}
+[^20]: Nombre en Clave del sistema operativo de MS que permitiría un control absoluto bajo las políticas de "seguridad" de TCPA
+
+{{<disfruta>}}

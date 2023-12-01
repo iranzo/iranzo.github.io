@@ -15,7 +15,7 @@ cover:
 lastmod: 2023-08-25T09:45:44.535Z
 ---
 
-Aunque hice el examen de RHCE algún tiempo, sigue habiendo trucos y consejos que siempre transmito a los interesados y que vienen indicatos en el libro que escribimos: [Red Hat Enterprise 8 Administration](https://s.admins.guru/buyonamazon):
+Aunque hice el examen de RHCE algún tiempo, sigue habiendo trucos y consejos que siempre transmito a los interesados y que vienen indicados en el libro que escribimos: [Red Hat Enterprise 8 Administration](https://s.admins.guru/buyonamazon):
 
 - No recuerdes cada paso, por ejemplo, nunca recuerdo la configuración de BIND, asi que recuerdo el paquete con el fichero que tiene ejemplos, lo instalo y lo consulto.
 - Instala `mlocate` y ejecuta `updatedb` tan pronto como empieces, así podrás usar `locate <fichero>` para encontrar archivos rápidamente en tu sistema.

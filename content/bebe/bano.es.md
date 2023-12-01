@@ -15,7 +15,7 @@ lastmod: 2023-08-25T09:48:47.623Z
 
 ## Baño
 
-El primer baño del bebé suele ser unos dias tras el parto, para darle tiempo a que absorba el `vermix` que es esa capa que protege al bebé y le ayuda a regular la temperatura durante los primeros días.
+El primer baño del bebé suele ser unos días tras el parto, para darle tiempo a que absorba el `vermix` que es esa capa que protege al bebé y le ayuda a regular la temperatura durante los primeros días.
 
 El baño debe ser un momento de relax:
 

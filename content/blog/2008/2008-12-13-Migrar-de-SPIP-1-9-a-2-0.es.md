@@ -28,7 +28,7 @@ Puedes ver la lista de novedades (en francés) en <http://www.spip.net/fr_articl
 
 Yo he habilitado la compresión gzip de las páginas web para consumir menos ancho de banda, así como la gestión del tipo de url's desde dentro de la intranet.
 
-Como mejoras he notado que algunos feeds que me daban fallo vuelven a funcionar con las mejoras del nuevo spip y un aspecto de mayor velocidad, así como formularios más 'vistosos' en la parte interna de edición
+Como mejoras he notado que algunos feeds que me daban fallo vuelven a funcionar con las mejoras del nuevo SPIP y un aspecto de mayor velocidad, así como formularios más 'vistosos' en la parte interna de edición
 
 Por supuesto, tienes la posibilidad de descargar plugins desde la propia interfaz interna de SPIP que se instalarán automáticamente para su uso...
 

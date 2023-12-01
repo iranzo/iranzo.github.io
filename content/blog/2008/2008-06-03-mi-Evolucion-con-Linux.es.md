@@ -20,7 +20,7 @@ Llevo gastando Linux desde hace bastantes años...
 
 Primero empecé con una copia de [Slackware](http://www.slackware.com/) 1.x que venía con la revista Sólo programadores cuya instalación consistía en descomprimir un fichero "zip" sobre un disco FAT16 (en aquella época tenía un disco duro de 80 Mb (sí, Megabytes) en un 386DX a 40 Mhz y la instalación venía a ocupar unos 15 Mb descomprimida.
 
-Dicha instalación hacía uso de un sistema llamado UMSDOS que permitía, una vez cargado linux (mediante loadlin) hacer uso de las características de un filesystem de Linux cuando en realidad había por debajo un sistema FAT.
+Dicha instalación hacía uso de un sistema llamado UMSDOS que permitía, una vez cargado Linux (mediante `loadlin`) hacer uso de las características de un filesystem de Linux cuando en realidad había por debajo un sistema FAT.
 
 No recuerdo en aquella época cómo había oído hablar de Linux pero algo ya me sonaba pues me decidí a comprar dicha revista por el contenido del cd-rom (no había internet con tanta facilidad de acceso como hay ahora ;-) )
 

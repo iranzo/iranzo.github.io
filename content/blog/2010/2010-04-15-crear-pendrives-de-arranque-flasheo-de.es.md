@@ -13,16 +13,16 @@ categories:
 lastmod: 2023-08-25T09:48:46.816Z
 ---
 
-Usando unetbootin (<http://unetbootin.sourceforge.net/>) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.
+Usando `unetbootin` (<http://unetbootin.sourceforge.net/>) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.
 
 Si queremos además, crear un fichero ejecutable autodescomprimible, para que el usuario final sólo deba ejecutarlo e introducir un pendrive y que se cree 'solo', deberemos tener además:
 
 - 7zip <http://sourceforge.net/projects/sevenzip/files/> (para crear un fichero comprimido con los ficheros a incluir)
 - 7zip SFX (7zS.sfx) dentro del fichero 'Extra' de <http://sourceforge.net/projects/sevenzip/files/>
 
-En una carpeta, copiaremos el ejecutable de unetbootin al que llamaremos `unetbootin.exe`, añadiremos el fichero `7z.sfx` y la imagen de flasheo BIOS a la que llamaremos `flash.img`.
+En una carpeta, copiaremos el ejecutable de `unetbootin` al que llamaremos `unetbootin.exe`, añadiremos el fichero `7z.sfx` y la imagen de flasheo BIOS a la que llamaremos `flash.img`.
 
-Yo añado también un fichero `syslinux.cfg` que desactiva la linea `vesamenu.c32` que pone por defecto unedbootin, quedando:
+Yo añado también un fichero `syslinux.cfg` que desactiva la linea `vesamenu.c32` que pone por defecto `unedbootin`, quedando:
 
 ```cfg
 ---------- syslinux.cfg --------------

@@ -19,7 +19,7 @@ lastmod: 2023-08-25T09:48:47.096Z
 
 [Fedora](http://fedoraproject.org/) es una distribución [Linux]({{<relref "2004-03-18-Que-es-Linux.es.md">}}) fruto del desarrollo de la extinta Red Hat Linux.
 
-Red Hat Linux se readaptó al entorno empresarial proporcionado las opciones de soporte que las empresas buscaban en el software libre y del código de Red Linux, nacieron dos versiones, Red Hat Enterprise Linux, disponible para clientes con subscripciones (Red Hat no vende "licencias de uso", vende servicios de soporte, actualización en forma de subscripciones, puede verse como una especie de tarifa plana para acceder a todas las versiones de los productos subscritos, soporte, etc) válidas y Fedora Core, sucesor directo de Red Hat Linux.
+Red Hat Linux se readaptó al entorno empresarial proporcionado las opciones de soporte que las empresas buscaban en el software libre y del código de Red Linux, nacieron dos versiones, Red Hat Enterprise Linux, disponible para clientes con suscripciones (Red Hat no vende "licencias de uso", vende servicios de soporte, actualización en forma de suscripciones, puede verse como una especie de tarifa plana para acceder a todas las versiones de los productos subscritos, soporte, etc) válidas y Fedora Core, sucesor directo de Red Hat Linux.
 
 Así pues el panorama quedaba del siguiente modo:
 
@@ -34,7 +34,7 @@ Puedes consultar más información del proyecto en [http://fedoraproject.org/wik
 
 Fedora, como decíamos, aporta una distribución equivalente a la antigua Red Hat Linux (misma estabilidad, etc que hace que mucha gente la utilice en los servidores en entornos de producción donde antes utilizaba Red Hat Linux), pero que a diferencia de Red Hat Enterprise Linux, se enfoca a introducir más rápidamente las novedades tecnológicas disponibles.
 
-Todo el software incluído en Fedora es Software Libre.
+Todo el software incluido en Fedora es Software Libre.
 
 #### Anaconda
 
@@ -56,7 +56,7 @@ SELinux fue desarrollado en colaboración con la Agencia de Seguridad Nacional N
 
 #### LVM
 
-[Gestor de Volúmenes Lógicos (LVM)]({{<relref "2007-03-09-Gestor-de-Volumenes-Logicos-LVM.es.md">}}) viene incorporado de serie y habilitado por defecto en Fedora desde hace ya muchas versiones, como novedad en la versión 9 es la inclusión de la posibilidad de utilizar volúmenes cifrados para todos los datos (hasta el momento se podía hacer con volúmenes que no fueran el de sistema, por ejemplo con /home), aumentando así la seguridad de los datos confidenciales que se llevan en dispositivos portátileso PC's de cara a posibles [pérdidas o robos](http://news.google.es/news?hl=es&ned=es&q=datos++port%C3%A1til+robado&btnG=Buscar).
+[Gestor de Volúmenes Lógicos (LVM)]({{<relref "2007-03-09-Gestor-de-Volumenes-Logicos-LVM.es.md">}}) viene incorporado de serie y habilitado por defecto en Fedora desde hace ya muchas versiones, como novedad en la versión 9 es la inclusión de la posibilidad de utilizar volúmenes cifrados para todos los datos (hasta el momento se podía hacer con volúmenes que no fueran el de sistema, por ejemplo con /home), aumentando así la seguridad de los datos confidenciales que se llevan en dispositivos portátiles o PC's de cara a posibles [pérdidas o robos](http://news.google.es/news?hl=es&ned=es&q=datos++port%C3%A1til+robado&btnG=Buscar).
 
 #### PackageKit
 
@@ -71,12 +71,12 @@ La secuencia de imágenes muestra los pasos seguidos desde que metemos y arranca
 
 ![Arranque DVD](Pantallazo-00.png)
 ![Arranque kernel](Pantallazo-01.png)
-![Verificacion disco](Pantallazo-02.png)
+![Verificación disco](Pantallazo-02.png)
 ![Inicio instalador](Pantallazo-03.png)
-![Seleccion idioma](Pantallazo-04.png)
+![Selección idioma](Pantallazo-04.png)
 ![Selección teclado](Pantallazo-05.png)
-![Inicializacion disco](Pantallazo-06.png)
-![Configuracion red](Pantallazo-07.png)
+![Inicialización disco](Pantallazo-06.png)
+![Configuración red](Pantallazo-07.png)
 ![Zona horaria](Pantallazo-08.png)
 ![Password de root](Pantallazo-09.png)
 ![Clave sencilla](Pantallazo-10.png)
@@ -84,24 +84,24 @@ La secuencia de imágenes muestra los pasos seguidos desde que metemos y arranca
 ![Cifrado de discos](Pantallazo-12.png)
 ![Aplicar cambios en disco](Pantallazo-13.png)
 ![Formateo](Pantallazo-14.png)
-![Preparacion instalador](Pantallazo-15.png)
+![Preparación instalador](Pantallazo-15.png)
 ![Preparando paquetes](Pantallazo-16.png)
 ![Repositorios de software](Pantallazo-17.png)
 ![Verificando dependencias](Pantallazo-18.png)
-![Empezando instalacion](Pantallazo-19.png)
-![Progreso instalacion](Pantallazo-20.png)
-![Acabando instalacion](Pantallazo-21.png)
-![Fin de instalacion y reinicio](Pantallazo-22.png)
+![Empezando instalación](Pantallazo-19.png)
+![Progreso instalación](Pantallazo-20.png)
+![Acabando instalación](Pantallazo-21.png)
+![Fin de instalación y reinicio](Pantallazo-22.png)
 ![Clave de cifrado de disco en arranque](Pantallazo-23.png)
 
 Tras el primer arranque mostrará unas últimas páginas de configuración y creación de un usuario que nos dejarán en la pantalla que vemos a continuación para iniciar sesión en el equipo.
 
-![Login al entorno grafico](Pantallazo-24.png)
-![Informe y envio de errores](Pantallazo-25.png)
+![Login al entorno gráfico](Pantallazo-24.png)
+![Informe y envío de errores](Pantallazo-25.png)
 ![Actualizaciones pendientes](Pantallazo-26.png)
 ![Acceso como root para actualizar](Pantallazo-27.png)
-![PackageKit realizando las tareas de actualizacion](Pantallazo-28.png)
-![Actualizacion completada](Pantallazo-29.png)
+![PackageKit realizando las tareas de actualización](Pantallazo-28.png)
+![Actualización completada](Pantallazo-29.png)
 ![Password del protector de pantalla con posibilidad de dejar notas](Pantallazo-30.png)
 
 ### ¿Y ahora qué?
@@ -115,7 +115,7 @@ Para los casos donde la legislación lo permite, y siguiendo la información de 
 Procederemos a:
 
 - Instalar el repositorio de Livna en nuestra máquina visitando <http://rpm.livna.org> y presionando sobre el texto Fedora 9 repository RPM e instalándolo con nuestra clave de administrador.
-- Instalar el repositorio de Adobe en nuestro equipo instalando desde la web de [Adobe](http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash) la selección del desplegable "YUM para linux"
+- Instalar el repositorio de Adobe en nuestro equipo instalando desde la web de [Adobe](http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash) la selección del desplegable "YUM para Linux"
 
 Ahora ya podremos instalar las librerías necesarias:
 
@@ -144,7 +144,7 @@ ln -s /opt/Adobe/Reader8/Browser/intellinux/nppdf.so .
 - Desinstalaremos los paquetes de icedtea y openjdk instalados en el equipo
 - Descargaremos de <http://www.java.com> el fichero RPM que proporcionan y lo instalaremos desde una consola lanzando el instalador con: `chmod +x jre-* ./jre-(VERSION)`
 
-Se nos pedirá aceptar la licencia y al cabo de un rato lo tendremos instalado para activar el plugin en firefox haremos:
+Se nos pedirá aceptar la licencia y al cabo de un rato lo tendremos instalado para activar el plugin en Firefox haremos:
 
 ```bash
 #!bash
@@ -166,10 +166,10 @@ ModulePath "/usr/lib/xorg/modules"
 
 #### Extras
 
-Recomiendo instalar yum-presto y yum-fastestmirror para que yum utilice rpm's diferenciales y por otro lado utilice el mirror más rápido para la descarga, todas las funciones se harán de forma transparente y además, disfrutaremos de mayor velocidad :-)
+Recomiendo instalar `yum-presto` y `yum-fastestmirror` para que yum utilice rpm's diferenciales y por otro lado utilice el mirror más rápido para la descarga, todas las funciones se harán de forma transparente y además, disfrutaremos de mayor velocidad :-)
 
 Y ya tendremos el sistema listo y preparado para funcionar...
 
-{{<disfruta>}}
+PD: Si puedes y estás de acuerdo, instala el paquete "smolt", permite enviar un informe de tu hardware a [http://smolt.fedoraproject.org](http://smolt.fedoraproject.org/) que facilita saber qué tipo de hardware hay y se está utilizando y en caso de que algo no te funcione puedes notificarlo. Siempre es más fácil que se desarrolle para mejorar el soporte sobre el hardware que se está utilizando ¿no?
 
-PD: Si puedes y estás de acuerdo, instala el paquete "smolt", permite enviar un informe de tu hardware a [http://smolt.fedoraproject.org](http://smolt.fedoraproject.org/) que facilita saber qué tipo de hardware hay y se está utilizando y en caso de que algo no te funcioen puedes notificarlo. Siempre es más fácil que se desarrolle para mejorar el soporte sobre el hardware que se está utilizando ¿no?
+{{<disfruta>}}

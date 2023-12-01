@@ -36,7 +36,7 @@ Las tarjetas a la venta en el mercado tienen tres modos de operación:
 En redes con Windows sólo es posible trabajar en los dos primeros modos, el Ad-Hoc y el Managed, para ello, como se ve, es necesario un AP por hardware que trabaje como Master al que las tarjetas que trabajan en Managed se puedan conectar. Y este es el punto en el que Linux marca la diferencia... con Linux, existe un controlador (hostap) para las tarjetas basadas en Prism2 (p.ej. las Conceptronic). Con Linux y con esos controladores, es posible poner en modo Master las tarjetas de red
 (generalmente PCMCIA con un adaptador PCI para equipos de sobremesa) y de ese modo, hacer un AP por software.
 
-Quisiera expresar mi agradecimiento a Ghfjdksl de #wireless, a Jorti de #guadawireless y a Hilario y a Hawkmoon de #valenciawireless por la ayuda prestada para montar este nodo. Saludos también al resto de gente de #valenciawireless por sus larguísimas tertulias ;P
+Quisiera expresar mi agradecimiento a `Ghfjdksl` de #wireless, a Jorti de `#guadawireless` y a Hilario y a Hawkmoon de `#valenciawireless` por la ayuda prestada para montar este nodo. Saludos también al resto de gente de `#valenciawireless` por sus larguísimas tertulias ;P
 
 Hardware
 
@@ -69,8 +69,8 @@ Lo de las tarjetas de red puede asustar al principio... pero bueno, tiene una cl
 Así que el montaje de la falla es el siguiente:
 
 - Intel Pro ISA 10/10+: eth0 conectada a mi conexión a Internet
-- Realtek 8139 (10/100): eth1 conectada a mi equipo principal (también con otra tarjeta 10/100, así que red local a 100 mbps ;) )
-- Realtek 8029: eth2 conectada al otro pc que tengo en casa (también con una ethernet a 10 mbps)
+- Realtek 8139 (10/100): eth1 conectada a mi equipo principal (también con otra tarjeta 10/100, así que red local a 100 MBps ;) )
+- Realtek 8029: eth2 conectada al otro pc que tengo en casa (también con una ethernet a 10 MBps)
 - Isa P'n'P NE2000: eth3 hace las labores de wireless hasta que tenga una de verdad (la utilizo para conectar otro equipo y hacer las pruebas como si estuviese conectado por wireless), en su momento será utilizada para conexiones "temporales" por cable, siendo entonces eth4 la wireless "real".
 
 Realmente con un HUB podría quitar dos tarjetas de red del ordenador (ya que el ordenador principal y el secundario irían conectados al hub y no serían necesarias las tarjetas correspondientes y sólo utilizaría la otra que quedase para Internet y la otra para conectar al HUB (si mi conexión me permitiese hacerlo, hasta podría conectar mi módem al HUB y ahorrarme otra tarjeta.. pero bueno, el caso es que no se puede...)
@@ -110,16 +110,15 @@ Si la placa es ATX, dile que tras un corte de luz, que se encienda sola... así 
 
 Salva todos los cambios y reiniciará el ordenador... En mi caso, como no tenía en un primer momento ni disquetera ni cd-rom, aproveché que el disco duro contenía un Windows 95 y bajé la imagen de CD-ROM de instalación de Internet de Debian Potato, la convertí del .ISO a carpetas y directorios normales y la guardé por la red en el segundo HD del ordenador.
 
-La imagen iso son unos 30 Mb y la descargué de la página de debian. (woody_netinst-20020626-i386.iso)
+La imagen iso son unos 30 Mb y la descargué de la página de Debian. (`woody_netinst-20020626-i386.iso`)
 
 La decisión de tomar "Debian" como sistema a instalar fue sencilla (lo de que tenía que ser Linux estaba cantado por lo explicado en la introducción):
 
-- **Red Hat Linux**: Está muy bien, de hecho es con la que más experiencia tengo, la tengo funcionando desde el año 96 en un servidor y me va genial, poquitos problemas excepto actualizaciones, etc (aunque con las nuevas herramientas es muy fácil). Las actualizaciones, en el momento de lanzarlas, si hay muchos clientes de pago, pues a los que no pagamos, pues ajo y agua y a esperarse a que no esté tan saturado... el formato de redhat, el RPM es el estándar más extendido. (Se puede bajar de internet en versión libre, llamada Fedora Core, o bien en clónicas basadas en RHEL).
-- **SuSE Linux**: Está muy bien, si compras la distribución, tienes muchos cd's con programas, manuales, etc Bastante bien adaptada al Español (je, je), etc... Pero no se puede bajar la versión completa de internet porque tiene programas con licencias de distribución que no lo permiten, sólo si se compra. Utiliza el RPM que es un punto a favor, pero en contra es que no es compatible al 100% con las estructuras de directorios y funcionamientos de Red Hat, así que no hay forma de distinguir si ese
-  RPM funcionará bien o no con SuSE. El peor inconveniente es la gran cantidad de recursos que necesita, tanto de RAM para la instalación como para el almacenamiento en disco (la mínima son unos 500 mb (pero mínima mínima mínima...)). La ventaja es que la configuración es toda en modo gráfico, con una autodetección genial, etc. Tenía experiencia con ella tanto de gastarla en casa como distribución linux, en la uni en un servidor como de haber colaborado en su traducción de manuales y de software de configuración.
+- **Red Hat Linux**: Está muy bien, de hecho es con la que más experiencia tengo, la tengo funcionando desde el año 96 en un servidor y me va genial, poquitos problemas excepto actualizaciones, etc (aunque con las nuevas herramientas es muy fácil). Las actualizaciones, en el momento de lanzarlas, si hay muchos clientes de pago, pues a los que no pagamos, pues ajo y agua y a esperarse a que no esté tan saturado... el formato de Red Hat, el RPM es el estándar más extendido. (Se puede bajar de internet en versión libre, llamada Fedora Core, o bien en clónicas basadas en RHEL).
+- **SuSE Linux**: Está muy bien, si compras la distribución, tienes muchos cd's con programas, manuales, etc Bastante bien adaptada al Español (je, je), etc... Pero no se puede bajar la versión completa de internet porque tiene programas con licencias de distribución que no lo permiten, sólo si se compra. Utiliza el RPM que es un punto a favor, pero en contra es que no es compatible al 100% con las estructuras de directorios y funcionamientos de Red Hat, así que no hay forma de distinguir si ese RPM funcionará bien o no con SuSE. El peor inconveniente es la gran cantidad de recursos que necesita, tanto de RAM para la instalación como para el almacenamiento en disco (la mínima son unos 500 mb (pero mínima mínima mínima...)). La ventaja es que la configuración es toda en modo gráfico, con una autodetección genial, etc. Tenía experiencia con ella tanto de gastarla en casa como distribución Linux, en la uni en un servidor como de haber colaborado en su traducción de manuales y de software de configuración.
 - **Debian**: No tenia ni puta idea de ella, una vez que la intenté instalar casi me da algo con el programa de selección de paquetes a instalar (dselect de la Potato). La instalación es en modo texto. Tiene un sistema de actualización/instalación bastante bueno en modo texto. la decisión fue usar Debian... de paso que aprendía a gastarla, al ser en modo texto, tenía el aliciente de que facilita su administración remota (recordemos que el ordenador una vez instalado mínimamente no iba a tener ni teclado ni ratón ni monitor ni naa de na... excepto el cable de la luz y cuatro cables RJ45 para las tarjetas de red :))
 
-Vale, como ya he comentado, en el nodo, en el momento de su creación no tenía ni disquetera ni CD-ROM, así que se copiaron los archivos a una instalación de Windows 95, se reinicia en modo-msdos y una vez en el, se cambia al directorio donde se extrajo la imagen de cd y se ejecuta el programa de instalación...
+Vale, como ya he comentado, en el nodo, en el momento de su creación no tenía ni disquetera ni CD-ROM, así que se copiaron los archivos a una instalación de Windows 95, se reinicia en modo-MS-DOS y una vez en el, se cambia al directorio donde se extrajo la imagen de cd y se ejecuta el programa de instalación...
 
 Si tienes grabadora y cd-rom en el nodo pues lo más sencillo es bajar la iso, grabarla a un CD y arrancar desde el CD-ROM (en la bios se puede configurar esa opción).
 
@@ -137,7 +136,7 @@ Vale, llegados a este punto, tenemos ya el Linux instalado y tenemos delante la 
 
 Como lo que estoy haciendo es explicar la configuración de lo que yo hice con mi ordenador, pues allá vamos:
 
-Para la wireless hace falta el wavemon que es un monitor de estado de la tarjeta y el zebra para enrutar dinámicamente.
+Para la wireless hace falta el `wavemon` que es un monitor de estado de la tarjeta y el zebra para enrutar dinámicamente.
 
 En mi caso, ya que ese ordenador iba a hacer de medio "servidor" en mi casa, pues me interesó ponerle:
 
@@ -164,9 +163,9 @@ Vale, se supone que ahora ya tenemos el sistema funcionando y bueno... algo es a
 
 Lo primero es tener un Kernel modernito (a mi con el estándar no me iba, pero como veréis en la lista de paquetes con el 2.4 funciona bastante bien el P'N'P)
 
-Tenemos que por un lado configurar las tarjetas de red: Para eso, entramos en /etc/modutils como root y tendremos varios archivos de configuración, para ser representativo pondré el de una tarjeta ISA que son los más difíciles:
+Tenemos que por un lado configurar las tarjetas de red: Para eso, entramos en `/etc/modutils` como root y tendremos varios archivos de configuración, para ser representativo pondré el de una tarjeta ISA que son los más difíciles:
 
-Contenido de : /etc/modutils/eepro
+Contenido de : `/etc/modutils/eepro`
 
 ```config
 options eepro io=0x210

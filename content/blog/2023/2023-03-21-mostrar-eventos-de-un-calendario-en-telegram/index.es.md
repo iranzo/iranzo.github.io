@@ -15,7 +15,7 @@ lastmod: 2023-08-25T09:48:47.447Z
 
 Si tienes un grupo de Telegram puede resultarte interesante la característica de <https://t.me/redken_bot> que permite añadir un calendario `ical` y que automatiza mostrar cada día las entradas de la agenda para el día.
 
-Si leíste la entrada [Python and iCalendar ICS processing]({{< relref path="2019-09-17-python-icalendar-ics-processing.en.md" lang="en" >}}), parte de las bases ahí indicadas están integradas en el bot y son facilmente utilizables:
+Si leíste la entrada [Python and iCalendar ICS processing]({{< relref path="2019-09-17-python-icalendar-ics-processing.en.md" lang="en" >}}), parte de las bases ahí indicadas están integradas en el bot y son fácilmente utilizables:
 
 Para configurarlo sólo se necesitan unos simples pasos:
 

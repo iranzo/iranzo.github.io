@@ -27,7 +27,7 @@ Todos los que hemos creado alguna web, para hacerla conocida y por tanto útil p
 
 Un buscador es una buena herramienta a la hora de localizar recursos, pero hay que insertar la URL y el problema es en cual. Lycos, Altavista, Yahoo, Olé, Ozú, Biwe, Magallanes, HotBot, Google, MSN, etc. La lista es interminable y aunque cada vez hay más servicios gratuitos que permiten una rápida inserción en multitud de ellos, el método que mejor funciona es el "boca a boca", si tu le recomiendas a alguien una web, la verá y a su vez la recomendará, a nivel de asociación pasa lo mismo, si en tu web tienes un enlace a Fulanito, Fulanito será más visitado. El problema es cuando alguien nuevo, se intenta introducir, son muchos los buscadores, muchas las asociaciones y es muy difícil aparecer en los listados de todas (os estoy hablando de todo esto por propia experiencia).
 
-El anillo, no es para olvidar los buscadores, sino para facilitar la tarea a los nuevos aficionados que exponen su informaciín, a ser encontrados. Siempre hay que informar a los buscadores, ellos son los responsables de muchas visitas, pero si entre todos construimos un lugar en el que todos estemos listados, se beneficia desde el que quiere ofrecer información, porque estando en un sitio, evita una larga faena, el que quiere consultar información y no sabe donde, hasta el administrador de una asociación, etc. que tiene que actualizar una cada vez más larga e incompleta lista de enlaces. Al ser el anillo, público y gratuito, los administradores, puede utilizarlo como parte de su web simplemente apuntándose, saliendo de este modo todos beneficiados.
+El anillo, no es para olvidar los buscadores, sino para facilitar la tarea a los nuevos aficionados que exponen su información, a ser encontrados. Siempre hay que informar a los buscadores, ellos son los responsables de muchas visitas, pero si entre todos construimos un lugar en el que todos estemos listados, se beneficia desde el que quiere ofrecer información, porque estando en un sitio, evita una larga faena, el que quiere consultar información y no sabe donde, hasta el administrador de una asociación, etc. que tiene que actualizar una cada vez más larga e incompleta lista de enlaces. Al ser el anillo, público y gratuito, los administradores, puede utilizarlo como parte de su web simplemente apuntándose, saliendo de este modo todos beneficiados.
 
 Sólo hay una parte del anillo privada: El anillo, al apuntarse, mantiene un listado de e-mails, y ese es privado. Por propia experiencia, el tener una página en Internet provoca que se reciba publicidad (y casi nunca sobre el tema de tu página). Si alguien quiere escribir a toda la comunidad, me escribe a mí y tras comentarlo con esa persona y algún miembro del anillo, se mandaría sin que apareciese ninguna dirección al resto de personas.
 
@@ -50,7 +50,7 @@ NOTA: ** Para poder resultar beneficiado por el anillo, es NECESARIO que se pong
 
 Rellena los datos del siguiente enlace [Unirse](http://p.webring.com/wrman?ring=astron&addsite) y ya estarás apuntado. Recibirás una confirmación por e-mail de que has sido añadido a la cola de entrada junto a la dirección a la que debes dirigirte para obtener el código HTML que debes poner en tu web. Más adelante, recibirás otro correo informándote de que ya estás en el anillo.
 
-Para saber cuales son las líneas que debes poner en tu web para enlazar al anillo, debes consultar [modificar](http://d.webring.com/mbr?p=ms). En esta dirección rellena tu ID y tu contraseá. Además de poder editar los datos relativos a tu página, tendrás el código HTML (GetNavBar) necesario para tu página, simplemente deberás copiarlo y colocarlo en tu web.
+Para saber cuales son las líneas que debes poner en tu web para enlazar al anillo, debes consultar [modificar](http://d.webring.com/mbr?p=ms). En esta dirección rellena tu ID y tu contraseña. Además de poder editar los datos relativos a tu página, tendrás el código HTML (GetNavBar) necesario para tu página, simplemente deberás copiarlo y colocarlo en tu web.
 
 Podrás comprobar que apareces utilizando la opción [Lista Completa](http://p.webring.com/hub?ring=astron) de los controles que hayas insertado en tu página web.
 
@@ -78,7 +78,8 @@ La cola es un lugar temporal de estancia en el anillo. Cuando te apuntas, pasas 
 
 #### Controles
 
-Los controles, son unas líneas de códigodo JavasScript (o código HTML) que insertan unos "controles de navegado" en tu web así, desde cualquier página se puede acceder al listado completo de webs, saltar a otra web al azar, etc.
+Los controles, son unas líneas de código JavasScript (o código HTML) que insertan unos "controles de navegado" en tu web así, desde cualquier página se puede acceder al listado completo de webs, saltar a otra web al azar, etc.
 
 Estos controles, se incluyen una sola vez si se utiliza el código JavaScript, o bien, una vez por anillo subscrito si utilizamos el código HTML.
+
 {{<disfruta>}}

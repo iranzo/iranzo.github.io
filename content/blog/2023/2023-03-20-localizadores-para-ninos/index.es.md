@@ -35,7 +35,7 @@ La batería, en cambio dura mucho más, alrededor de un año, por lo que es idea
 
 ¿Cómo puede informar de la ubicación y durar tanto la batería?
 
-Pues, a diferencia del GPS como el anterior, estos dispositivos se comunican por bluetooth y su potencia radica en que los teléfonos cercanos al detectarlos (de forma transparente para los usuarios), informan de dónde lo han visto por última vez.
+Pues, a diferencia del GPS como el anterior, estos dispositivos se comunican por Bluetooth y su potencia radica en que los teléfonos cercanos al detectarlos (de forma transparente para los usuarios), informan de dónde lo han visto por última vez.
 
 Es, gracias a la cantidad de dispositivos de Apple o de Samsung, que, al pasar cerca del radio de detección, que su usuarios, de forma inadvertida informan de los dispositivos encontrados y la ubicación, permitiendo localizar con bastante exactitud la posición. Este funcionamiento permite que se gaste menos batería y que el tag funcione mejor en lugares donde pase mucha gente (al ser más probable que lleven un teléfono compatible).
 

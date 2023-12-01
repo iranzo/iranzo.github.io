@@ -25,7 +25,7 @@ Este documento está basado en la receta original y fotos que le pasé a mi comp
 - Tomate rallado (equivalente a 5 cucharadas)
 - [Pimentón Rojo 🛒](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21)
 - [Colorante 🛒](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) / [Azafrán](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21) (una cucharadita rasa / 300mg hebra)
-- [Aceite de oliva 🛒](https://www.amazon.es/dp/B0781Z7TD4?tag=redken-21) para sofreir (poca cantidad para que no quede aceitosa)
+- [Aceite de oliva 🛒](https://www.amazon.es/dp/B0781Z7TD4?tag=redken-21) para sofreír (poca cantidad para que no quede aceitosa)
 - Sal
 - Agua (preferiblemente de Valencia)
 - Ajo
@@ -33,7 +33,7 @@ Este documento está basado en la receta original y fotos que le pasé a mi comp
 
 # Preparación
 
-Se pone junto al tomate un ajo para rallar y se deja junto hasta la hora de sofreirlo.
+Se pone junto al tomate un ajo para rallar y se deja junto hasta la hora de sofreírlo.
 
 Se corta el pollo en trozos pequeños
 
@@ -41,11 +41,11 @@ Se corta el pollo en trozos pequeños
 
 Se cubre el suelo con papel de periódico, revistas, etc para evitar las salpicaduras
 
-![Suelo forrado con periodicos](20120708123605.jpg)
+![Suelo forrado con periódicos](20120708123605.jpg)
 
-Ahora, en paralelo, se pone la olla el agua a hervir con la verdura y empezamos a sofreir el pollo. Al agua, de hervir, le podemos añadir algo de romero para que le de algo de sabor.
+Ahora, en paralelo, se pone la olla el agua a hervir con la verdura y empezamos a sofreír el pollo. Al agua, de hervir, le podemos añadir algo de romero para que le de algo de sabor.
 
-![Primeras imagenes de aceite al freir](20120708124816.jpg)
+![Primeras imágenes de aceite al freír](20120708124816.jpg)
 
 # Olla
 
@@ -56,7 +56,7 @@ Se pone agua abundante con algo de sal y se le puede poner algo de romero para q
 
 Se sofríe el pollo en trozo pequeños hasta que esté muy bien hecho.
 
-![Sofreir el pollo](20120708124821.jpg)
+![Sofreír el pollo](20120708124821.jpg)
 
 ![Verduras hirviendo](20120708125401.jpg)
 
@@ -64,7 +64,7 @@ Se hace un hueco en el centro para poner el tomate con cuidado porque salta.
 
 ![Se sofríe el tomate](20120708125657.jpg)
 
-![Manchas de aceite tras sofreir](20120708125835.jpg)
+![Manchas de aceite tras sofreír](20120708125835.jpg)
 
 En otro hueco se pone el pimentón con cuidado de que no se queme y se rehoga con el tomate.
 

@@ -66,9 +66,9 @@ Los comandos relacionados con LVM utilizan una nomenclatura parecida entre sí, 
 
 ### Particionamiento de discos
 
-Antes de poder utilizar LVM, debemos designar una serie de dispositivos (completos), o bien particiones (tipo 8e en fdisk)
+Antes de poder utilizar LVM, debemos designar una serie de dispositivos (completos), o bien particiones (tipo `8e` en `fdisk`)
 
-Tras modificar el esquema de particiones en un sistema en ejecución, recuerde ejecutar el comando "partprobe" para actualizar la tabla de particiones en el kernel según el nuevo esquema definido.
+Tras modificar el esquema de particiones en un sistema en ejecución, recuerde ejecutar el comando "`partprobe`" para actualizar la tabla de particiones en el kernel según el nuevo esquema definido.
 
 En nuestro caso de ejemplo, contamos con dos discos duros hda y sda.
 
@@ -90,7 +90,7 @@ pvcreate /dev/sda1
 
 Si a continuación ejecutamos `pvscan`, podremos consultar un listado de los volúmenes físicos definidos en el sistema, así como el tipo de metadatos (lvm o lvm2) y su capacidad y un resumen de la capacidad total, la utilizada y la disponible.
 
-Para ver el estado detallado, podremos ejecutar pvdisplay, que nos mostrará más información como el tamaño, los PE'_s_ disponibles, etc
+Para ver el estado detallado, podremos ejecutar `pvdisplay`, que nos mostrará más información como el tamaño, los PE'_s_ disponibles, etc
 
 ### Creación de grupos de volúmenes (VG)
 
@@ -105,7 +105,7 @@ vgcreate Prueba /dev/sda1
 
 Este comando creará un grupo de volúmenes llamado `Prueba` sobre el volumen físico en `/dev/sda1`
 
-Para comprobar que la acción ha sido realizada correctamente, podremos ejecutar vgscan para ver un listado de los grupos de volumen definidos.
+Para comprobar que la acción ha sido realizada correctamente, podremos ejecutar `vgscan` para ver un listado de los grupos de volumen definidos.
 
 ### Creación de volúmenes lógicos (LV)
 
@@ -208,7 +208,7 @@ Vemos, al tener marcado el espacio libre del volumen lógico, dónde está ubica
 Quiero destacar mi agradecimiento a [Carlos Hergueta](mailto:chergueta@gmail.com) por su colaboración en la realización de este documento
 
 [^1]: Physical Extents
-[^2]: Multiple Devices: Es una tecnología que mediante software permite la creación de distintos niveles de agrupación de discos: linear, raid0, raid1, raid5. Los dispositivos se identifican en un sistema linux por la existencia de unidades /dev/md*0,1,2,3,etc* y un fichero de estado /proc/mdstat que indica el estado actual de los md's definidos y su estado de sincronía en caso de estar agrupados como RAID
+[^2]: Multiple Devices: Es una tecnología que mediante software permite la creación de distintos niveles de agrupación de discos: linear, raid0, raid1, raid5. Los dispositivos se identifican en un sistema Linux por la existencia de unidades /dev/md*0,1,2,3,etc* y un fichero de estado `/proc/mdstat` que indica el estado actual de los md's definidos y su estado de sincronía en caso de estar agrupados como RAID
 [^3]:
     El que hemos anotado en el paso previo a desmontarlo
     {{<disfruta>}}

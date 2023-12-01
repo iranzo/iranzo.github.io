@@ -37,14 +37,14 @@ Durante el día un grupo de 'palmeros' en el parque, pero poco más.
 
 El gobierno anuncia a las 20:30 el estado de alarma con limitación de
 movimiento (1 miembro de la familia), 1 metro de distancia entre personas.
-Comercios excepto esenciales cerrados (sólo quedan peluquerias, tintorerías,
+Comercios excepto esenciales cerrados (sólo quedan peluquerías, tintorerías,
 farmacia, alimentación, estancos, etc). Bares, restaurantes, museos, etc
 cerrados. La fecha oficial de comienzo es el lunes, aunque se considera ya
 efectivo (con la publicación en el
 [BOE](https://www.boe.es/boe/dias/2020/03/14/pdfs/BOE-A-2020-3692.pdf).
 
 Por la tele se ve gente que se lo toma en broma y que han ido a la 'sierra'
-o a la 'playa'. Algunas localidades están rodeadas por la policia para
+o a la 'playa'. Algunas localidades están rodeadas por la policía para
 impedir entrada/salida excepto servicios de emergencia.
 
 {{<gallery>}}
@@ -99,7 +99,7 @@ Aprovechamos para ir a comprar a un centro comercial cercano para volver a inten
 
 La cosa más curiosa es que para entrar en Carrefour, se entraba poco a poco,
 pero una vez dentro no se vigilaba que se mantuvieran las distancias y la
-gente, tosiendo o palpando el pan para ver cúal coger, etc.
+gente, tosiendo o palpando el pan para ver cuál coger, etc.
 
 Parece que está mejor organizado en otros sitios tipo Consum donde al
 parecer se controla más.
@@ -141,7 +141,7 @@ Del colegio han ido llegando más mensajes para desde 'mañana' acceder via
 Web Familia a las instrucciones de los profesores.
 
 Por otro lado, se ha alargado 15 días más el estado de alarma (sobre los 7
-que nos quedaban todavía), así que todo sigue apuntando a que como minimo
+que nos quedaban todavía), así que todo sigue apuntando a que como mínimo
 hasta finales de pascuas (20 de abril), estaremos así.
 
 Hemos ido adaptando un poco la distribución para tener más espacio para
@@ -190,7 +190,7 @@ Creo que debería potenciarse el canal online para evitar aglomeraciones y dejar
 
 Día relativamente tranquilo, hoy vino un paquete y el chico lo subió hasta arriba, pero dejó a 3 metros o así de la puerta por 'seguridad'. Las webs de GVA de maestros (blogs) estaban caídas y se reactivaron luego por la tarde. Algunos profesores están organizando reuniones ya vía videoconferencia y se han podido ir preparando otras cosas.
 
-La falta de ejercicio, hace que los crios 'no se cansen' y estén luego más revoltosos a la hora de dormir...
+La falta de ejercicio, hace que los críos 'no se cansen' y estén luego más revoltosos a la hora de dormir...
 
 Hoy hace una semana desde la última salida de casa a comprar. Para celebrarlo tocará bajar la basura cuando no haya nadie.
 
@@ -306,7 +306,7 @@ Jugando algo con Duplos
 
 ## 2020/04/18
 
-Día traquilo jugando a hacer un modelo de lego de [Tensegridad](https://es.wikipedia.org/wiki/Tensegridad)
+Día tranquilo jugando a hacer un modelo de lego de [Tensegridad](https://es.wikipedia.org/wiki/Tensegridad)
 
 <https://imgur.com/a/eusA7cx>
 

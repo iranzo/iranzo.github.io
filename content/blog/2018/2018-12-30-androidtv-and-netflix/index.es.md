@@ -48,7 +48,7 @@ Lamentablemente, recientemente empecé a recibir este mensaje de error en el Xia
 
 ![Netflix tvq-pm-100 error](netflix-tvq-pm-100.png)
 
-Tras buscar por el mensaje recibido `tvq pm 5.2 5`, llegué a este PUF de netflix: <https://help.netflix.com/es/node/59709>
+Tras buscar por el mensaje recibido `tvq pm 5.2 5`, llegué a este PUF de Netflix: <https://help.netflix.com/es/node/59709>
 
 Que muy a mi pesar, no resolvió nada, incluso el soporte técnico de Netflix dijo que su plataforma soportada son los dispositivos [Fire TV](https://www.amazon.es/dp/B01ETRGE7M?tag=redken-21), que no era la respuesta que quería oir.
 
@@ -59,5 +59,5 @@ Tras una búsqueda algo más detallada, un artículo sugería usar:
 - Kodi v18 ([nightly](https://mirrors.kodi.tv/nightlies/android/arm/master/) si no ha salido oficialmente cuando lo leas)
 - Habilitar [Netflix Addon](https://forum.kodi.tv/showthread.php?tid=329767)
 
-Una vez configurado (email y password), pude utilizar Kodi para acceder a netflix usando Kodi, como 'parche' hasta que el problema sea resuelto.
+Una vez configurado (email y password), pude utilizar Kodi para acceder a Netflix usando Kodi, como 'parche' hasta que el problema sea resuelto.
 {{<disfruta>}}

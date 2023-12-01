@@ -170,7 +170,7 @@ total : 862
 - plugins en su lenguaje preferido
 - Permite sacar la salida a un fichero json para ser procesada por otras herramientas.
   - Permite visualizar via html el json generado
-- Soporte de playbooks ansible (en vivo y también contra un sosreport si se adaptan)
+- Soporte de playbooks Ansible (en vivo y también contra un sosreport si se adaptan)
   - Las extensiones (core, ansible), permiten extender el tipo de plugins soportado fácilmente.
 - Salvar/restaurar la configuración
 - Instalar desde pip/pipsi si no quieres usar el git clone del repositorio o ejecutar desde un contenedor.

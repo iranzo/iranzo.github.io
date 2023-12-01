@@ -45,7 +45,7 @@ Los comienzos: Red Hat Linux 1994 -> 2003
 - Estabilidad y rápida innovación
 - Red Hat Enterprise Linux
 - Soporte durante 7+ años
-- Modelo de subscripciones
+- Modelo de suscripciones
 - Libre
 - Fedora
 - Versiones nuevas cada 6 meses
@@ -89,7 +89,7 @@ Los comienzos: Red Hat Linux 1994 -> 2003
 
 - Acceso ssh a las máquinas
 - Acceso CVS
-- Acceso a los diversos tracs (tickets,wiki,etc)
+- Acceso a los diversos `tracs` (tickets,wiki,etc)
 - Página personal
 - Alias email:<cuenta@fedoraproject.org>
 - Planet
@@ -125,7 +125,7 @@ Los comienzos: Red Hat Linux 1994 -> 2003
 - Fedora está formada por miles de proyectos de Software Libre
 - Fedora inicia multitud de proyectos de software libre (subproyectos)
 - Fedora es el proyecto base en el que se basa RHEL
-- Red Hat proporciona subscripciones de soporte, actualización (RHN), así como servicios de formación, consultoría, etc
+- Red Hat proporciona suscripciones de soporte, actualización (RHN), así como servicios de formación, consultoría, etc
 
 ---
 
@@ -194,7 +194,7 @@ Emerging Technologies Group
     - Ofrece enlaces a empresas que desarrollan codecs, etc para comprar una licencia de uso y mensajes 'informativos' de los problemas de lo privativo.
 - Software privativo
   - Existen repositorios 'alternativos' no oficiales que proporcionan software privativo
-    - Flash, Adobe, Códecs multimedia, Controladores (ati, nvidia, wifi, etc)
+    - Flash, Adobe, Códecs multimedia, Controladores (ATI, NVIDIA, wifi, etc.)
 
 ---
 

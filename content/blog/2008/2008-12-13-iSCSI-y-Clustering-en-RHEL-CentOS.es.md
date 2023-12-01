@@ -17,7 +17,7 @@ lastmod: 2023-08-25T09:48:47.077Z
 
 Durante la última semana estuve jugando de nuevo con iSCSI en el curso de [RH436 Enterprise Clustering and Storage Management](http://www.redhat.es/training/course/RH436). Hace tiempo había seguido dos artículos [Instalando un target iSCSI](http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/) y su continuación [Montando un iniciador iSCSI](http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/).
 
-iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel 'barato', podemos utilizar el espacio de un sevidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.
+iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel 'barato', podemos utilizar el espacio de un servidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.
 
 Con la entrada en juego de las ofertas de virtualización integradas con el SO, como por ejemplo Xen, podemos tener un servidor 'grande' y potente que albergue distintas máquinas virtuales que sirvan las páginas de dicho volumen en red, actualizarlo centralmente y tener muchos servidores actualizados....
 
@@ -96,7 +96,7 @@ Luci es un interfaz web que permite la gestión y creación de clusters y para e
 
 Si tenemos las máquinas configuradas con los repositorios necesarios, `ricci` se hará cargo de la instalación de los paquetes necesarios para configurar todo.
 
-Desde el interfaz web de luci podemos ir añadiendo cada uno de los nodos a utilizar, indicando sus claves de 'root' y se encargará de contactarlos y a través de ricci, instalar el software necesario y reiniciarlos para integrarlos en el cluster.
+Desde el interfaz web de Luci podemos ir añadiendo cada uno de los nodos a utilizar, indicando sus claves de 'root' y se encargará de contactarlos y a través de ricci, instalar el software necesario y reiniciarlos para integrarlos en el cluster.
 
 Los nodos, una vez en el cluster pueden utilizarse para albergar servicios, que estén de forma exclusiva (por ejemplo una bbdd porque necesite prioridad absoluta), o bien en failover para que no se deje de dar el servicio.
 
@@ -104,7 +104,7 @@ Por defecto tenemos una serie de servicios preconfigurados que podemos dar, como
 
 La forma de hacerlo es sencilla, se definen recursos (IP, NFS Exports, NFS Clients, http, mount points) que luego se agrupan por cadenas de dependencia en servicios y se les asignan grupos de failover, para que en caso de fallo, podamos definir prioridades.
 
-Imagina el caso de una empresa con dos servidores, uno con la bbdd y otro con la web. En caso de fallo de uno de ellos, podemos hacer 'saltar' los servicios a la máquina que está operativa hasta que arreglemos la dañada y luego, cada servicio, volvería a su máquina 'preferida' o en el orden necesario.
+Imagina el caso de una empresa con dos servidores, uno con la BBDD y otro con la web. En caso de fallo de uno de ellos, podemos hacer 'saltar' los servicios a la máquina que está operativa hasta que arreglemos la dañada y luego, cada servicio, volvería a su máquina 'preferida' o en el orden necesario.
 
 En el caso de máquinas virtuales, en caso de que dejen de responder, CMAN realizará un reinicio (siempre que hayamos distribuido las claves de xen que podemos crear en la interfaz tanto a los guests como al anfitrión que estará escuchando con el demonio de fencing para XVM activado).
 
@@ -140,7 +140,7 @@ Este tipo de enlaces se denominan CDPN: Context-dependent pathnames y nos permit
 
 Como siempre podemos tener problemas con la red, la forma de solucionarlos consiste en tener varios interfaces de red en los equipos a través de distintos switches, etc y en las máquinas, una vez descubiertos los targets, configurar el fichero `/etc/multipathd.conf` y habilitar el demonio.
 
-Nos creará las rutas necesarias y una serie de dipositivos `/dev/mpath/*` para acceder de forma tolerante a fallos a nuestros recursos, si configuramos las tarjetas de red en modo bonding, ya tenemos el acceso más o menos asegurado ante las catástrofes más comunes y nuestros datos disponibles
+Nos creará las rutas necesarias y una serie de dispositivos `/dev/mpath/*` para acceder de forma tolerante a fallos a nuestros recursos, si configuramos las tarjetas de red en modo bonding, ya tenemos el acceso más o menos asegurado ante las catástrofes más comunes y nuestros datos disponibles
 
 ### Conclusión
 

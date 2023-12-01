@@ -33,7 +33,7 @@ En el mismo rango de precios nos gustaba el [Babymoov](https://www.amazon.es/dp/
 
 El último, el [Baby Brezza](https://www.amazon.es/dp/B00CWXW9RK?tag=redken-21), 3 veces superior en precio cuando lo evaluamos, permite hasta poner la leche y dispensar la leche y el agua automáticamente. Pero nos daba algo de inseguridad el dejar la leche en polvo en otro recipiente y el precio exagerado.
 
-Una gran ventaja respecto al calienta biberones es que no hay que ir mirando a ojo la temperatura, ni estar pendiente de que caliente, etc... se pone el biberón, se siguen los pasos y listo en un par de minutos. La única pega, que a cada paso requiere confirmación y que podrian permitir simplificar (muchos pasos de confirmación de pon la formula, pon el biberón en la zona de llenado, retiralo, agitalo, vuelvelo a poner, etc.)
+Una gran ventaja respecto al calienta biberones es que no hay que ir mirando a ojo la temperatura, ni estar pendiente de que caliente, etc... se pone el biberón, se siguen los pasos y listo en un par de minutos. La única pega, que a cada paso requiere confirmación y que podrían permitir simplificar (muchos pasos de confirmación de pon la formula, pon el biberón en la zona de llenado, retíralo, agítalo, vuélvelo a poner, etc.)
 
-Quitado de eso, una gran ayuda sobretodo para las noches... poner el biberon con la leche de fórmula y en casi nada, biberón listo para tomar.
+Quitado de eso, una gran ayuda sobretodo para las noches... poner el biberón con la leche de fórmula y en casi nada, biberón listo para tomar.
 {{<disfruta>}}

@@ -82,7 +82,7 @@ Empecé a 'vivir' del software libre en 2004 y a trabajar en Red Hat en 2006 com
 
 - Ejecutarlo contra un sistema en vivo o un sosreport.
 - Resolver problemas antes gracias a la información que proporciona.
-- Utilizar los plugins para detecatr problemas actuales o futuros.
+- Utilizar los plugins para detectar problemas actuales o futuros.
 - Programar nuevos plugins en tu lenguaje de programación preferido (bash, python, ruby, etc.) para extender la funcionalidad.
   - Contribuir al proyecto esos nuevos plugins para beneficio de otros.
 - Utilizar dicha información como parte de acciones proactivas en sus sistemas.
@@ -100,7 +100,7 @@ Empecé a 'vivir' del software libre en 2004 y a trabajar en Red Hat en 2006 com
   - Parámetros faltantes para expirar y purgar datos de ceilometer que pueden llevar a llenar el disco duro.
   - NTP no sincronizado
   - paquetes obsoletos que están afectados por fallos críticos o de seguridad.
-  - otros! (200+) complentos en este momento, con más de una comprobación por plugin en muchos de ellos
+  - otros! (200+) complementos en este momento, con más de una comprobación por plugin en muchos de ellos
 - Cualquier otra cosa que puedas imaginar o programar 😉
 
 </small>
@@ -168,7 +168,7 @@ total : 215
 - plugins en su lenguaje preferido
 - Permite sacar la salida a un fichero json para ser procesada por otras herramientas.
   - Permite visualizar via html el json generado
-- Soporte de playbooks ansible (en vivo y también contra un sosreport si se adaptan)
+- Soporte de playbooks Ansible (en vivo y también contra un sosreport si se adaptan)
   - Las extensiones (core, ansible), permiten extender el tipo de plugins soportado fácilmente.
 - Salvar/restaurar la configuración
 - Instalar desde pip/pipsi si no quieres usar el git clone del repositorio o ejecutar desde un contenedor.
@@ -402,7 +402,7 @@ mode: fs snapshot sosreport-20170724-175510/crta02
 
 - Citellus trabaja a nivel de sosreport individual, pero algunos problemas se manifiestan entre conjuntos de equipos (clústeres, virtualización, granjas, etc)
 
-<small>Por ejemplo, Galera debe comprobar el seqno entre los diversos miembros para ver cúal es el que contiene los datos más actualizados.</small>
+<small>Por ejemplo, Galera debe comprobar el seqno entre los diversos miembros para ver cuál es el que contiene los datos más actualizados.</small>
 
 ---
 

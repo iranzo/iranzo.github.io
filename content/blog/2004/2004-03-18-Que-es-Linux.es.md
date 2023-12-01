@@ -52,7 +52,7 @@ Por así decirlo, el software libre utiliza la misma filosofía que la ciencia, 
 
 En EEUU hicieron hace tiempo un anuncio que tuvo gran repercusión, tanto entre la comunidad Linux como entre otras, debido a que el anuncio, además de ser patrocinado por IBM y hablando únicamente sobre Linux, duraba el doble de lo normal para los anuncios estadounidenses, además de utilizar a grandes personalidades.
 
-Ya no está en IBM, en youtube:
+Ya no está en IBM, en YouTube:
 [http://youtube.com/watch?v=4Gf6hq8J_DQ](http://youtube.com/watch?v=4Gf6hq8J_DQ)
 
 Su transcripción es la siguiente:
@@ -66,7 +66,7 @@ Su transcripción es la siguiente:
   - Rockero Este es el acorde G (y toca la guitarra)
   - Hombre Está aprendiendo. Absorbiendo. Se hace más inteligente cada día.
 - Imagen Antropólogo sentado delante del niño
-  - Antropólogo El Homo Habilis fue el primero en utilizar herramientas
+  - Antropólogo El `Homo Habilis` fue el primero en utilizar herramientas
 - Imagen Entrenador John R. Wooden hablando al niño
   - Entrenador Un jugador que hace grande un equipo es más valioso que un gran jugador. Mezclarte con el grupo para el bien del grupo, eso es el trabajo en equipo.
 - Imagen primer plano del niño
@@ -89,7 +89,7 @@ Su transcripción es la siguiente:
 - Imagen Piloto hablando al niño
   - Piloto Así que quieres volar ¿eh?. Viento, velocidad, empuje, es física
 - Imagen Profesor de latín hablando
-  - Profesor Res Plublica non dominetur (Lo público no debe ser privado)
+  - Profesor `Res Plublica non dominetur` (Lo público no debe ser privado)
 - Imagen Fontanero hablando al niño
   - Fontanero Fontanería: Todo gracias a las herramientas.
 - Imagen Muhammad Ali
@@ -168,11 +168,11 @@ Una de las mayores lacras de la sociedad actual en el ámbito electrónico es la
 
 Existen webs como GnuWIN o cdlibre que recopilan diverso software libre que funciona tanto sobre Linux como sobre otros sistemas como Windows.
 
-Tenemos grandes programas como OpenOffice que ofrecen una completa suite informática con procesador de textos, hoja de cálculo, programa de presentaciones, editor web, etc que además de ser completamente libres, son multiplafatorma, facilitando que usuarios con cualquier tipo de equipo pueda ejecutarlo en sus máquinas, independientemente del sistema operativo y plataforma , facilitando a los usuarios una misma herramienta con la que están familiarizados y poder trabajar sin perder más tiempo en habituación, aprendizaje, etc.
+Tenemos grandes programas como OpenOffice que ofrecen una completa suite informática con procesador de textos, hoja de cálculo, programa de presentaciones, editor web, etc que además de ser completamente libres, son multiplafatorma, facilitando que usuarios con cualquier tipo de equipo pueda ejecutarlo en sus máquinas, independientemente del sistema operativo y plataforma , facilitando a los usuarios una misma herramienta con la que están familiarizados y poder trabajar sin perder más tiempo en habituarse, aprendizaje, etc.
 
 Cada vez que publicamos un documento, etc en un formato no estándar o no abierto, estamos obligando a otras personas a tener problemas para leer nuestra información o peor aún, obligándoles a realizar un desembolso económico para poder acceder a la información.
 
-En documentos que publiquemos que nadie deba modificar, disponemos del formato PDF que se puede generar con software libre desde Linux y puede ser leido en cualquier otra plataforma, bien con programas cerrados como Acrobat Reader o bien con sus equivalentes libres.
+En documentos que publiquemos que nadie deba modificar, disponemos del formato PDF que se puede generar con software libre desde Linux y puede ser leído en cualquier otra plataforma, bien con programas cerrados como Acrobat Reader o bien con sus equivalentes libres.
 
 Cuando debamos publicar cosas que se puedan/deban modificar podremos utilizar OpenOffice
 
@@ -190,7 +190,7 @@ En las cercanías del año 2000 hubo un gran revuelo porque muchas empresas util
 
 La mayor parte del problema residía en que muchas empresas no habían adaptado su parque informático a programas más modernos porque los antiguos funcionaban bien, llegado el momento, el problema fue que mucho de ese software había sido desarrollado por empresas que habían desaparecido hace años, habían abandonado el desarrollo de ese software etc, de forma que esos programas se estaban convirtiendo en una cuenta atrás hacia el desastre.
 
-Con el modelo de desarrollo de programas del software libre, las empresas "usuarias" dispondrían del código fuente de ese software y podrían haber contrado a cualquier persona capacitada para modificar el programa para solventar dicho problema y no habría sido tan traumático...
+Con el modelo de desarrollo de programas del software libre, las empresas "usuarias" dispondrían del código fuente de ese software y podrían haber contratado a cualquier persona capacitada para modificar el programa para solventar dicho problema y no habría sido tan traumático...
 
 Pensemos en el futuro, ahora mucha documentación de organismos públicos, etc se genera en formato de Microsoft Word, el famoso ".doc". ..
 

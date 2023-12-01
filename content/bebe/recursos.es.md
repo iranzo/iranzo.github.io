@@ -15,6 +15,6 @@ lastmod: 2023-08-25T09:48:47.525Z
 
 - [Lucia mi pediatra](https://www.luciamipediatra.com/)
 - [Julio Basulto](https://juliobasulto.com/)
-- [Armando enfermero de pediatria](https://www.armandobastida.com/)
+- [Armando enfermero de pediatría](https://www.armandobastida.com/)
 - [E-Lactancia](https://www.e-lactancia.org/), para consultar la compatibilidad con lactancia y embarazo de muchos medicamentos, etc. Consulta siempre con tu médico antes!
   {{<disfruta>}}

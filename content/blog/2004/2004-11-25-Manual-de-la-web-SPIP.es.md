@@ -45,7 +45,7 @@ Las breves están orientadas a pequeñas notas, no muy desarrolladas, por ejempl
 
 El aspecto actual se basa en una modificación de las plantillas estándar de SPIP, con plantillas especiales para mostrar galerías fotográficas, etc, así como iconos personalizados según la sección.
 
-La potencia de SPIP se basa precisamente en tener un mismo sistema para edición de artículos, gestión, etc que a su vez permite aplicando unas plantillas bastante sencillas de crear, personalizar completamente el aspecto de la web, llegando a ejemplos como los mostrados en la web de spip.
+La potencia de SPIP se basa precisamente en tener un mismo sistema para edición de artículos, gestión, etc que a su vez permite aplicando unas plantillas bastante sencillas de crear, personalizar completamente el aspecto de la web, llegando a ejemplos como los mostrados en la web de SPIP.
 
 Llegando a hacer que parezca mentira que por debajo esté funcionando el mismo sistema de gestión.
 
@@ -134,7 +134,7 @@ Hipervínculos:
 - aut# Autor",
 - como por ejemplo art# que nos permite insertar el enlace a otro artículo de la web, y si dejamos el texto en blanco, nos indica el título que le asignamos.
 
-Hipervínculos a diccionarios externos, por defecto WikiPedia `[?palabra]`
+Hipervínculos a diccionarios externos, por defecto Wikipedia `[?palabra]`
 
 Notas al pie de página, texto entre dobles corchetes "`[[` y "`]]`", por defecto son notas numeradas, si pones entre "<" y ">" (dentro de los corchetes), puedes forzar a un número o a una nota con por ejemplo asterisco.
 

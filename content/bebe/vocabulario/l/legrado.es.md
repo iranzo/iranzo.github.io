@@ -9,4 +9,4 @@ tags:
 lastmod: 2023-08-25T09:48:47.301Z
 ---
 
-Proceso quirúrgico por el cual se procede a elminar restos de un embarazo del útero. El proceso puede incluir un raspado de las paredes que puede provocar lesiones en el útero.
+Proceso quirúrgico por el cual se procede a eliminar restos de un embarazo del útero. El proceso puede incluir un raspado de las paredes que puede provocar lesiones en el útero.

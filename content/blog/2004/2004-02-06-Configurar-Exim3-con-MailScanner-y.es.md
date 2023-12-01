@@ -32,7 +32,7 @@ El correo que recibamos será almacenado por exim en sus carpetas, cada cierto t
 
 - mailscanner: es un programa que vengo usando desde hace mucho, su archivo de configuración está bien documentado y permite configurarlo para que los mensajes de email enviados al administrador, al usuario o a la persona que mandó el archivo que estaba infectado lleguen en castellano. Soporta muchos antivirus, reglas de configuración, listas de emails a no comprobar, listas de email a prohibir, etc
 - exim: Sólo puedo decir que todo el mundo se mete con el ;) Es pequeñito, rápido y por defecto, se ejecuta a cada correo recibido en lugar de estar como demonio... (pero para lo que quiero me vale).
-- clamav: antes gastaba el fprot (los scripts que venían con el mailscanner servían para actualizarlo, etc. Clamav además de libre, se actualiza el solito ;) (por eso lo del freshclam y que os pregunte que cúal es la interfaz que se conecta a internet, para saber cuando estáis conectados y en base a eso hacer las actualizaciones).
+- clamav: antes gastaba el fprot (los scripts que venían con el mailscanner servían para actualizarlo, etc. Clamav además de libre, se actualiza el solito ;) (por eso lo del freshclam y que os pregunte que cuál es la interfaz que se conecta a internet, para saber cuando estáis conectados y en base a eso hacer las actualizaciones).
 - razor: es una red colaborativa de detección/notificación de spam. Si yo recibo un tipo de spam nuevo, informo a esa red de ese mensaje (`cat mensaje.spam |razor-report`) y a partir de ese momento, gente que reciba ese mismo mensaje y utilice razor, lo detectará también como spam sin tener que configurar nada...
 
 ### Configuración:
@@ -92,7 +92,7 @@ defer_router:
     route_list = "* 127.0.0.1 byname"
 ```
 
-Acabado con el exim_incoming.conf, ahora vamos a retocar el exim_outgoing.conf y lo habeis adivinado... no hay que tocar nada ;)
+Acabado con el exim_incoming.conf, ahora vamos a retocar el exim_outgoing.conf y lo habéis adivinado... no hay que tocar nada ;)
 
 Hemos de crear el /etc/cron.d/exim con el siguiente contenido:
 

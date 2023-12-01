@@ -25,7 +25,7 @@ Es complicado porque a veces te sacan de quicio, pero el niño lo que busca es a
 
 Pasado un rato, cuando oímos que se ha calmado, volvemos y le preguntamos si ya está tranquilo... a veces la respuesta es algún grito y aspaviento de rabia, y otras que 'sí'.
 
-Es una fase, que para variar es 'dura' y tiene refuerzos negativos en guarderias/colegios donde quizás otros padres no tienen esta actitud que causa que otros niños vean como solución a los problemas los golpes, o bien, que por su fase de desarrollo, no han aprendido que no es la forma correcta de expresarse.
+Es una fase, que para variar es 'dura' y tiene refuerzos negativos en guarderías/colegios donde quizás otros padres no tienen esta actitud que causa que otros niños vean como solución a los problemas los golpes, o bien, que por su fase de desarrollo, no han aprendido que no es la forma correcta de expresarse.
 
 Al final, tras insistir y reforzar esta conducta, vamos viendo pasos que junto con el tiempo van alejándose de esta dura fase.
 {{<disfruta>}}

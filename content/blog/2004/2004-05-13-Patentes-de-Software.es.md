@@ -29,7 +29,7 @@ Por otro lado, patentar cualquier cosa, supone un costoso proceso burocrático q
 
 ### ¿Qué riesgos conlleva el uso de las patentes en general?
 
-Los de cualquier monopolio: concentración injustificable y abusiba de la gestión de recursos fundamentales, reducción del desarrollo, parálisis social, desigualdad económica....
+Los de cualquier monopolio: concentración injustificable y abusiva de la gestión de recursos fundamentales, reducción del desarrollo, parálisis social, desigualdad económica....
 
 En un caso similar o más grave si cabe, las patentes sobre el código genético, un ejemplo clarificador que representan una amenaza directa y sin precedentes sobre la biodiversidad global del planeta, postuladas sobre una más que discutible legitimidad "propietaria" basada en el elitista conocimiento de las estructuras bioquímicas constituyentes de los organismos vivos. Lo que están en juego son variedades agroalimentarias, procesos metabólicos del cuerpo humano, procedimientos de extracción
 textil, etc.
@@ -38,11 +38,11 @@ En el caso del software, las patentes se establecen sobre la difusa ética de po
 
 En ambos casos, de lo que se trata es controlar recursos y bienes que por si, son y deben seguir siendo públicos y de libre uso. Tal como y como se están desarrollando los hechos que se debatirán el próximo 17 de mayo, no existen garantía alguna de que estos bienes comunes vayan a a quedar razonablemente protegidos de la rapiña industrial
 
-### ¿Cúales son las motivaciones subyacentes?
+### ¿Cuáles son las motivaciones subyacentes?
 
-La necesidad de imponernos forzosamente en el contexto económico y jurídico actualmente vijente en EEUU de forma que se pueda controlar la libertad de acceso a la información y de paso, acabar con cualquier posibilidad de autogestión comunitaria de los medios de producción y distribución comunicativa para asegurar de esa manera la pervivencia exclusiva del mercado capitalista en un clima de arancelismo informativo, y por lo tanto, impedir cualquier compromiso social que mantenga la necesidad de compartir el conocimiento.
+La necesidad de imponernos forzosamente en el contexto económico y jurídico actualmente vigente en EEUU de forma que se pueda controlar la libertad de acceso a la información y de paso, acabar con cualquier posibilidad de autogestión comunitaria de los medios de producción y distribución comunicativa para asegurar de esa manera la pervivencia exclusiva del mercado capitalista en un clima de arancelismo informativo, y por lo tanto, impedir cualquier compromiso social que mantenga la necesidad de compartir el conocimiento.
 
-### ¿Cúal es la situación actual en Europa?
+### ¿Cuál es la situación actual en Europa?
 
 En Europa estas medidas inquisitoriales quieren materializarse en la Directiva del Parlamento Europeo y del Consejo sobre Patentabilidad de invenciones implementadas en un ordenador.
 
@@ -50,7 +50,7 @@ El proceso burocrático que debe seguir esta directiva para su aprobación es mu
 
 El siguiente paso tendrá lugar el próximo 17 de mayo en el Consejo Ministerial de la Competitividad que fue convocado expresamente para tratar de conseguir un posicionamiento común de los 25 estados miembros sobre una nueva redacción de la Directiva, claramente modificada por los grupos pro-patentes aprovechando la actual presidencia irlandesa y que ignora las enmiendas aprobadas por el Parlamento, permitiendo así de nuevo la patentabilidad ilimitada de software. Éste es un paso muy importante porque si se lograse un acuerdo, ese sería el texto final que se presentaría para aprobación final del europarlamento.
 
-Las directivas europeas son acuerdos legales supracomunitarios de corge general que posteriormente deben ser adaptados a cada una de las legislaciones existentes en cada uno de los estados miembros. Si esta directiva fuera aprobada de tal forma qu permitiera la patentabilidad de software, sólo habría lugar para la impugnación:
+Las directivas europeas son acuerdos legales supracomunitarios de corte general que posteriormente deben ser adaptados a cada una de las legislaciones existentes en cada uno de los estados miembros. Si esta directiva fuera aprobada de tal forma qu permitiera la patentabilidad de software, sólo habría lugar para la impugnación:
 
 1. El primer nivel sería a través del Tribunal de Justicia de las Comunidades Europeas (Luxemburgo)
 1. El segundo nivel sería a través del Tribunal Supremo del Estado Español (Madrid)
@@ -64,7 +64,7 @@ De lo que se trata aquí es de presionar para que no sea ignorado nuestro desacu
 1. Al mismo tiempo es muy importante sensibilizar a nuestros representantes parlamentarios de las graves repercusiones de estas legislaciones y animarlos a votar en contra: queramos o no, son nuestros únicos portavoces válidos
 1. Podemos firmar esta [Petición por una Europa Libre de Patentes](http://petition.eurolinux.org/index_html?LANG=es)
 1. Puedes enviar tu propuesta al jefe del Consejo Europeo, el Irlandés Bertie Ahem, su email es info@jef-europe.net
-1. Seguir potenciando el uso de Software Libre como gesto de independencia tecnológica grente a los modelos de software propietario, principales interesados en imponer las patentes de software en Europa
+1. Seguir potenciando el uso de Software Libre como gesto de independencia tecnológica frente a los modelos de software propietario, principales interesados en imponer las patentes de software en Europa
 1. Mira lo que hicieron los demás
 1. En fin, actúa, no esperes a que sea demasiado tarde, échale algo de imaginación que no vamos a decidirlo todo nosotros ¿no?
 1. Patentar nosotros la patentabilidad.

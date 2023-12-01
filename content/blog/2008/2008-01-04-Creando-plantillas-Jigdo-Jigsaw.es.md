@@ -20,7 +20,7 @@ lastmod: 2023-08-25T09:48:47.042Z
 
 Jigdo (JIGsaw DOwnload) es una pequeña utilidad que permite ensamblar imágenes de CD/DVD a partir de los ficheros que las forman.
 
-Por ejemplo, [Debian](http://www.debian.org/) ha estado utilizándolo durante algún tiempo para distribuir sus imágenes: se descarga un fichero jigdo y utilizando la orden jigdo-lite (paquete jigdo-lite en Debian y en las basadas en RPM[^1]. De este modo, sólo de descargan ficheros pequeños de incluso varios servidores, repartiendo la carga, y haciendo uso de posibles proxyes, etc.
+Por ejemplo, [Debian](http://www.debian.org/) ha estado utilizándolo durante algún tiempo para distribuir sus imágenes: se descarga un fichero jigdo y utilizando la orden jigdo-lite (paquete jigdo-lite en Debian y en las basadas en RPM[^1]. De este modo, sólo de descargan ficheros pequeños de incluso varios servidores, repartiendo la carga, y haciendo uso de posibles proxys, etc.
 
 Además, si ya disponíamos de ficheros descargados (por ejemplo si iniciamos con la versión X y hemos ido descargando y conservando los ficheros hasta la X.Y, jigdo puede utilizar dichos ficheros, comparándolos con los existentes en la plantilla y así, evitarnos descargar ficheros que ya tuviéramos...
 
@@ -34,7 +34,7 @@ Al ejecutar jigdo-lite "archivo.jigdo", se nos preguntará por posibles ubicacio
 
 Por ejemplo, si descargamos la imagen ISO de CentOS [mirror.centos.org](http://alufis35.uv.es/mirror.centos.org), podemos montarla usando loopback y colocarla en una carpeta (por ejemplo para proporcionar nuestro propio servidor espejo o árbol de instalación), podremos hacer:
 
-(Supongamos que la iso está en /var/www/CentOS/isos/ y que la carpeta con el contenido de la iso en /var/www/CentOS/tree/, haremos:
+(Supongamos que la iso está en `/var/www/CentOS/isos/` y que la carpeta con el contenido de la iso en /var/www/CentOS/tree/, haremos:
 
 ```bash
 #!bash

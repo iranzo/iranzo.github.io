@@ -95,7 +95,7 @@ Como requisitos adicionales, una vez instaladas las plantillas, es necesario:
 
 - Crear enlaces simbólicos (o copias) de los archivos .php3 de la carpeta de los esqueletos a la principal de SPIP
 - Crear enlaces simbólicos (o copias) de los archivos .css de la carpeta de los esqueletos a la principal de SPIP
-- Crear enlaces simbólicos (o copias) de las plantillas: article-album.html, rubrique-album.html, rubrique-agenda.html y rubrique-synd.html a los correspondientes -(NUM#) según cúal sea el ID de nuestra sección para agenda, galería fotográfica y para titulares de otras webs.
+- Crear enlaces simbólicos (o copias) de las plantillas: article-album.html, rubrique-album.html, rubrique-agenda.html y rubrique-synd.html a los correspondientes -(NUM#) según cuál sea el ID de nuestra sección para agenda, galería fotográfica y para titulares de otras webs.
 - Crear un grupo de palabras llamado "Design" con al menos estas palabras clave: "Notadeldia", "Agenda", "Frase", "Banner_cabecera"
 - Crear un artículo y asociarle la palabra "Frase", para que las plantillas tomen del título y del logotipo del artículo el logotipo y frase para la web.
 - Crear un artículo y asociarle la palabra "Notadeldia" para que se muestre el mensaje del día en la sección central de la portada.
@@ -108,37 +108,34 @@ Además de los esqueletos normales de SPIP, estos tienen los siguientes módulos
 
 Actualmente está formado por los siguientes módulos laterales:
 
-```text
-  ------------------------ ------------------------------------------------------------------------------------------------
-  Módulo                   Cometido
-  mod_agenda.html         Muestra la mini agenda con los eventos del mes en curso
-  mod_artsautalbum.html   Muestra los artículos del mismo autor cuando estamos en un album (en función del id_document)
-  mod_artsaut.html        Muestra los artículos del mismo autor
-  mod_artssec.html        Muestra los artículos en la misma sección
-  mod_breves.html         Muestra las noticias breves del sitio
-  mod_popul.html          Muestra los 5 artículos más populares del sitio
-  mod_salida.html         Muestra las opciones de salida del documento (Impreso o PDF)
-  mod_secciones.html      Muestra las secciones que cuelgan de la raíz del sitio
-  mod_tira.html           Muestra la tira cómica [E.C.O.L.](http://tira.escomposlinux.org/)
-  mod_traduc.html         Muestra otras traducciones del artículo en curso
-  mod_exif.html           Muestra las cabeceras EXIF de las imágenes (si existen datos)
-  mod_inscrip.html        Permite inscribirse al sitio web
-  mod_jerarquia.html      Muestra la jerarquía en secciones para llegar al artículo
-  mod_jerarquiasec.html   Muestra la jerarquía en secciones para llegar a la sección
-  mod_keywordbrev.html    Muestra las palabras clave de la breve
-  mod_keyword.html        Muestra las palabras clave del artículo
-  mod_nextprev.html       Muestra los botones adelante y/o atrás en las galerías
-  mod_nota.html           Muestra el mensaje del sitio web en la portada
-  mod_opbl1.html          Abre el estilo de bloque 1
-  mod_opbl2.html          Abre el estilo de bloque 2
-  mod_opbl3.html          Abre el estilo de bloque 3
-  mod_clobl1.html         Cierra el estilo de bloque 1
-  mod_clobl2.html         Cierra el estilo de bloque 2
-  mod_clobl3.html         Cierra el estilo de bloque 3
-  ------------------------ ------------------------------------------------------------------------------------------------
-```
+| Módulo                | Cometido                                                                                      |
+| --------------------- | --------------------------------------------------------------------------------------------- |
+| mod_agenda.html       | Muestra la mini agenda con los eventos del mes en curso                                       |
+| mod_artsautalbum.html | Muestra los artículos del mismo autor cuando estamos en un album (en función del id_document) |
+| mod_artsaut.html      | Muestra los artículos del mismo autor                                                         |
+| mod_artssec.html      | Muestra los artículos en la misma sección                                                     |
+| mod_breves.html       | Muestra las noticias breves del sitio                                                         |
+| mod_popul.html        | Muestra los 5 artículos más populares del sitio                                               |
+| mod_salida.html       | Muestra las opciones de salida del documento (Impreso o PDF)                                  |
+| mod_secciones.html    | Muestra las secciones que cuelgan de la raíz del sitio                                        |
+| mod_tira.html         | Muestra la tira cómica [E.C.O.L.](http://tira.escomposlinux.org/)                             |
+| mod_traduc.html       | Muestra otras traducciones del artículo en curso                                              |
+| mod_exif.html         | Muestra las cabeceras EXIF de las imágenes (si existen datos)                                 |
+| mod_inscrip.html      | Permite inscribirse al sitio web                                                              |
+| mod_jerarquia.html    | Muestra la jerarquía en secciones para llegar al artículo                                     |
+| mod_jerarquiasec.html | Muestra la jerarquía en secciones para llegar a la sección                                    |
+| mod_keywordbrev.html  | Muestra las palabras clave de la breve                                                        |
+| mod_keyword.html      | Muestra las palabras clave del artículo                                                       |
+| mod_nextprev.html     | Muestra los botones adelante y/o atrás en las galerías                                        |
+| mod_nota.html         | Muestra el mensaje del sitio web en la portada                                                |
+| mod_opbl1.html        | Abre el estilo de bloque 1                                                                    |
+| mod_opbl2.html        | Abre el estilo de bloque 2                                                                    |
+| mod_opbl3.html        | Abre el estilo de bloque 3                                                                    |
+| mod_clobl1.html       | Cierra el estilo de bloque 1                                                                  |
+| mod_clobl2.html       | Cierra el estilo de bloque 2                                                                  |
+| mod_clobl3.html       | Cierra el estilo de bloque 3                                                                  |
 
-Las plantillas generales (rubrique, -album, -synd, article, etc) llevan un div que se llama lefter y otro que se llama righter, esos son los paneles laterales, podremos incluir, activar o desactivar los módulos que queramos haciendo INCLURES.
+Las plantillas generales| (rubrique, -album, -synd, article, etc) |llevan un div que se llama lefter y otro que se llama righter, esos son los paneles laterales, podremos incluir, activar o desactivar los módulos que queramos haciendo INCLURES.
 
 Los módulos, en caso de no tener datos que mostrar, no aparecen, por ejemplo el de traducciones, el de palabras clave o el de datos EXIF, de forma que sólo aparecerán en caso de que los hayamos inclido (y de que sean necesarios claro).
 

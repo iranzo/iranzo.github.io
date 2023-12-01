@@ -21,8 +21,8 @@ SPIP 1.9 va a traer bastantes mejoras respecto a versiones anteriores, entre ell
 - Nuevo sistema para llamar a los esqueletos (dejando de lado también el .php3)
 - Nuevas balizas y filtros
 - Sistema de complementos
-- Nuevos criterios para bucles (incluído uno para paginación)
-- Introducción de algunos elementos de programación AJAX(Desplazan parte de la carga de trabajo del servidor al cliente que visita la página, haciendo que la navegación sea más fluída y el servidor no se sobrecargue)
+- Nuevos criterios para bucles (incluido uno para paginación)
+- Introducción de algunos elementos de programación AJAX(Desplazan parte de la carga de trabajo del servidor al cliente que visita la página, haciendo que la navegación sea más fluida y el servidor no se sobrecargue)
 - Soporte UTF-8
 
 ### Proceso de actualización a SPIP 1.9 (de forma limpia)
@@ -33,18 +33,18 @@ La forma más recomendablem a mi parecer es la siguiente, ya que limpiamos lo qu
 
 Una vez preparadas las plantillas para la nueva versión (Ver cambios necesarios más adelante), seguiremos los siguientes pasos:
 
-- Antes de nada, hacer una copia de seguridad de la base de datos y descargar todos los archivos de la web (esqueletos), spip, etc (por si acaso) y la base de datos que hemos copiado entre ellos.
+- Antes de nada, hacer una copia de seguridad de la base de datos y descargar todos los archivos de la web (esqueletos), SPIP, etc (por si acaso) y la base de datos que hemos copiado entre ellos.
 - Si hemos personalizado los esqueletos por nosotros mismos, habremos tenido que adaptarlos a la nueva versión (aunque en la mayoría de los casos los antiguos son prácticamente compatibles exceptuando pequeños cambios), si son los estándar, podremos eliminarlos del servidor.
-- De la web, eliminaremos todos los archivos excepto el ecrire/inc-connect.php3, el ecrire/mes_options.php3 y el /mes_fonctions.php3 y estos tres archivos, los renombraremos a ".php", igualmente, mantendremos la carpeta IMG ya que no se modificará y nos ahorrará mucho tiempo de volver a subirlas a la web.
-- Subimos la nueva versión de SPIP descargada de spip.net.
+- De la web, eliminaremos todos los archivos excepto el `ecrire/inc-connect.php3`, el `ecrire/mes_options.php3` y el `ecrire/mes_fonctions.php3` y estos tres archivos, los renombraremos a ".php", igualmente, mantendremos la carpeta IMG ya que no se modificará y nos ahorrará mucho tiempo de volver a subirlas a la web.
+- Subimos la nueva versión de SPIP descargada de <spip.net>.
 
 Hasta aquí, tenemos actualizados los ficheros, ahora viene la base de datos, por lo que:
 
-- Entraremos a [http://www.nuestrositio.com/ecrire/](http://www.nuestrositio.com/ecrire/) e introduciremos un nombre de usuario y contraseña de un administrador, de este modo al acceder a la parte privada nos pedirá actualizar la versión de la base de datos, crearemos el fichero que nos indique en ecrire/data/ y concluirá la actualización.
+- Entraremos a [http://www.nuestrositio.com/ecrire/](http://www.nuestrositio.com/ecrire/) e introduciremos un nombre de usuario y contraseña de un administrador, de este modo al acceder a la parte privada nos pedirá actualizar la versión de la base de datos, crearemos el fichero que nos indique en `ecrire/data/` y concluirá la actualización.
 - Lo siguiente es evidentemente... crear una copia de la base de datos ahora ya con la versión 1.9 y salvarla a nuestro equipo por si acaso.
 - Sólo nos queda copiar nuestras plantillas modificadas al servidor tal cual las teníamos con 1.8 y así mantendremos el aspecto original de la web.
 
-- Si nuestro proveedor soporta el htpasswd, sería recomendable copiar el que viene con spip htpasswd.txt al nombre que nos haya indicado nuestro proveedor (habitualmente ".htpasswd"), así como habilitar las url_propres en ecrire/mes_options.php
+- Si nuestro proveedor soporta el `htpasswd`, sería recomendable copiar el que viene con spip `htpasswd.txt` al nombre que nos haya indicado nuestro proveedor (habitualmente "`.htpasswd`"), así como habilitar las `url_propres` en `ecrire/mes_options.php`
 
 ### Adaptar los esqueletos
 
