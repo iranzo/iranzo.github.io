@@ -49,7 +49,7 @@ Automation: Be lazy, have someone else doing it for you.
 
 ---
 
-## Git Hub / Gitlab
+## GitHub / Gitlab
 
 - Lot of source code is hosted at Github, Gitlab or other services, but it's a code repository.
 - We want a website!!
@@ -58,8 +58,8 @@ Automation: Be lazy, have someone else doing it for you.
 
 ## Pages come to play
 
-- Git Hub provides a service called [GitHub Pages](https://pages.github.com/)
-- Git lab provides [Gitlab pages](https://about.gitlab.com/product/pages/)
+- GitHub provides a service called [GitHub Pages](https://pages.github.com/)
+- Gitlab provides [Gitlab pages](https://about.gitlab.com/product/pages/)
 
 Both provide a 'static' Webserver to be used for your projects **for free**.
 
