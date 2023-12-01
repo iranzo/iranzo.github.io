@@ -79,7 +79,7 @@ Y luego otros que se pueden poner cuando sea necesario llevar material, una auto
 
 ## Da a los grupos/canales un tiempo de vida definido
 
-Si el grupo lo utilizas para un curso escolar, al acabar, puede tener sentido mantenerlo durante un tiempo para que la gente descargue las fotografías como recuerdo o al comienzo del curso siguiente indicar el enlace de invitación del grupo del curso siguiente... pero pasado un tiempo prudencial (por ejemplo otro año más), borrar el grupo/canal... tener para siempre los grupos creados no va a servir de mucho a no ser que quieras reutilizar material, y en dicho caso, mejor reenviártelo a otro grupo de 'archivo' personal del que obtenerlo.
+Si el grupo lo utilizas para un curso escolar, al acabar, puede tener sentido mantenerlo durante un tiempo para que la gente descargue las fotografías como recuerdo o al comienzo del curso siguiente indicar el enlace de invitación del grupo del curso siguiente... pero pasado un tiempo prudencial (por ejemplo otro año más), borrar el grupo/canal... tener para siempre los grupos creados no va a servir de mucho a no ser que quieras reutilizar material, y en dicho caso, mejor reenviarlo a otro grupo de 'archivo' personal del que obtenerlo.
 
 Manda un recordatorio (o mejor lo pones en el pineado diciendo cuando se borrará) y un mes antes, mandas otro aviso para luego borrarlo.
 
@@ -158,5 +158,5 @@ Telegram permite crear encuestas para consultar cosas y obtener información med
 
 ## Usa un calendario para publicar eventos
 
-Si has leido [Mostrar eventos de un calendario en telegram]({{< relref path="2023-03-21-mostrar-eventos-de-un-calendario-en-telegram" lang="es" >}})
+Si has leído [Mostrar eventos de un calendario en telegram]({{< relref path="2023-03-21-mostrar-eventos-de-un-calendario-en-telegram" lang="es" >}})
 sabrás que puedes usar bots para publicar por ti eventos en los canales o grupos... sácales provecho para que a la vez que gestionas tu agenda, planificas eventos que puedan interesar a las familias.
