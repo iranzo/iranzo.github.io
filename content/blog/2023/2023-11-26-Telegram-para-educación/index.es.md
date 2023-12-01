@@ -22,7 +22,7 @@ Por facilidad para que los padres se unan al 'telegram' de la clase, se han gene
 
 ![](gruposenbusqueda.png)
 
-Estos grupos, aparte de información general de la clase pueden contener fotos o vídeos del aula que no deberían estar disponibles de forma pública.
+Estos grupos, aparte de información general de la clase, pueden contener fotos o vídeos del aula que no deberían estar disponibles de forma pública.
 
 # Consejos
 
@@ -42,7 +42,7 @@ Cuando un canal o grupo es público, sin ser miembro, se pueden ver los mensajes
 
 ## No reenvíes mensajes
 
-Si reenvias mensajes, según la configuración de la persona que envió el mensaje inicial, puede verse su nombre y hasta poder pinchar en el nombre e iniciar una conversación con ella... por ejemplo, tu pareja te graba un video que envias al grupo y te lo reenvía a tu cuenta... y tu directamente lo reenvías al grupo... y eso puede acabar en que la gente del grupo, pinchando `mensaje reenviado de`, pueda acabar enviando mensajes a tu pareja, otro docente, etc.
+Si reenvías mensajes, según la configuración de la persona que envió el mensaje inicial, puede verse su nombre y hasta poder pinchar en el nombre e iniciar una conversación con ella... por ejemplo, tu pareja te graba un video que envías al grupo y te lo reenvía a tu cuenta... y tu directamente lo reenvías al grupo... y eso puede acabar en que la gente del grupo, pinchando `mensaje reenviado de`, pueda acabar enviando mensajes a tu pareja, otro docente, etc.
 
 En su lugar, descarga el contenido a tu dispositivo y lo vuelves a subir directamente al grupo.
 
@@ -68,7 +68,7 @@ En el colegio, tienes el teléfono de los padres en las fichas que se rellenan, 
 
 Es muy fácil mandar mucha información a los grupos, mezclada con fotos, con material a llevar para unas manualidades, etc... es bueno que tengas un mensaje pineado (o varios) con información general, por ejemplo:
 
-- Dias de tutoría y horarios
+- Días de tutoría y horarios
 - Horarios
 - Canal oficial del centro / AMPA
 - Calendario oficial escolar (festivos, vacaciones, etc.)
@@ -143,7 +143,7 @@ Una vez seleccionado, podemos escoger el momento:
 
 ![](fechaenvio.png)
 
-Esta funcionalidad nos permite que sea cuando sea el momento en el que lo hagamos, podamos dejar programada una serie de mensajes con recordatorios (material a llevar, actividades especiales,etc. ) sin depender de escribirlos en ese mismo momento, que nos da mucha más libertad para la planificación de la información y cúando va a ser mejor recibida:
+Esta funcionalidad nos permite que sea cuando sea el momento en el que lo hagamos, podamos dejar programada una serie de mensajes con recordatorios (material a llevar, actividades especiales,etc. ) sin depender de escribirlos en ese mismo momento, que nos da mucha más libertad para la planificación de la información y cuándo va a ser mejor recibida:
 
 - Tener un 'rato' y mandar 20 mensajes en el momento, sólo va a hacer que alguno se pierda por el camino entre tanto mensaje.
 - Usar ese 'rato' para programar mensajes en momentos más adecuados para cada uno, va a hacer que no se saturen los receptores y que la información no se pierda.
@@ -158,5 +158,5 @@ Telegram permite crear encuestas para consultar cosas y obtener información med
 
 ## Usa un calendario para publicar eventos
 
-Si has leido [Mostaar eventos de un calendario en telegram]({{< relref path="2023-03-21-mostrar-eventos-de-un-calendario-en-telegram" lang="es" >}})
+Si has leido [Mostrar eventos de un calendario en telegram]({{< relref path="2023-03-21-mostrar-eventos-de-un-calendario-en-telegram" lang="es" >}})
 sabrás que puedes usar bots para publicar por ti eventos en los canales o grupos... sácales provecho para que a la vez que gestionas tu agenda, planificas eventos que puedan interesar a las familias.
