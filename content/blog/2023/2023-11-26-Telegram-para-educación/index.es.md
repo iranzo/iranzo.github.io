@@ -11,10 +11,10 @@ tags:
 date: 2023-11-26 00:00:00 +0100
 categories:
   - education
-lastmod: 2023-11-26T19:34:54.934Z
+lastmod: 2024-01-05T11:12:12.996Z
 ---
 
-Telegram viene siendo utilizado con bastante frecuencia en colegios para permitir una comunicación sencilla mediante los 'canales', donde los profesores pueden enviar información a las familias de forma general sin que se pueda contactar con ellos directamente, facilitando llegar esta información pero sin el riesgo de que sean acosados por las familias con preguntas, etc fuera de los canales oficiales de comunicación.
+Telegram viene siendo utilizado con bastante frecuencia en colegios para permitir una comunicación sencilla mediante los 'canales', donde los profesores pueden enviar información a las familias de forma general sin que se pueda contactar con ellos directamente, facilitando llegar esta información pero sin el riesgo de que sean acosados por las familias con preguntas, etc. fuera de los canales oficiales de comunicación.
 
 Esta comodidad, ha venido, posiblemente por desconocimiento con una serie de problemas/peligros que no se han tenido en cuenta.
 
@@ -28,17 +28,18 @@ Estos grupos, aparte de información general de la clase, pueden contener fotos 
 
 ## Usa Telegram en lugar de Whatsapp
 
-- Mayor control en la creación de grupos, canales, opciones, permisos, etc
+- Mayor control en la creación de grupos, canales, opciones, permisos, etc.
 - No hace falta compartir tu teléfono
-- Posibilidad de tener canales que permiten difundir información sin que tu número sea público, si se borra un dispositivo, al reconfigurar la cuenta se vuelven a descargar los archivos de los grupos, etc.
+- Posibilidad de tener canales que permiten difundir información sin que tu número sea público
+- Si se formatea o cambia eln dispositivo, al reconfigurar la cuenta se vuelven a descargar los archivos de los grupos, etc.
 
 ## No hagas canales o grupos públicos
 
-Se complica el pasar el enlace, pero es fácil generar un QR o pasar a algunos padres el enlace de otra forma, pero a cambio, ni personas ajenas, ni buscadores de internet, etc podrán encontrarlo (ni se podrá ver el contenido sin unirse al grupo/canal).
+Se complica el pasar el enlace, pero es fácil generar un QR o pasar a algunos padres el enlace de otra forma, pero a cambio, ni personas ajenas, ni buscadores de internet, etc. podrán encontrarlo (ni se podrá ver el contenido sin unirse al grupo/canal).
 
 ![](grupoprivado.png)
 
-Cuando un canal o grupo es público, sin ser miembro, se pueden ver los mensajes, miembros del grupo, etc
+Cuando un canal o grupo es público, sin ser miembro, se pueden ver los mensajes, miembros del grupo, etc.
 
 ## No reenvíes mensajes
 
@@ -58,7 +59,7 @@ Pincha en `Crear un nuevo enlace` y aprovecha para aplicar límites:
 
 Por ejemplo, para un grupo del colegio, puede tener sentido limitarlo a que sea válido para unirse durante 1 ó 2 meses y que lo usen máximo 50 personas (a 2 tutores por niño), de esta forma, evitamos que si el enlace se publicara en internet, pudiera llenarse de personas que no deberían estar en el...
 
-Si crees que un enlace se ha filtrado, puedes en el menú de los 3 puntitos, cancelarlo, eliminarlo, etc por lo que nadie más podrá utilizarlo hasta que reciba un nuevo enlace.
+Si crees que un enlace se ha filtrado, puedes en el menú de los 3 puntitos, cancelarlo, eliminarlo, etc. por lo que nadie más podrá utilizarlo hasta que reciba un nuevo enlace.
 
 ## Valida los miembros del grupo
 
@@ -121,11 +122,13 @@ Aunque tu si que veas a todos:
 
 ![](listadomiembros.png)
 
-De esta forma, puedes participar en el chat, aclarar información, etc, pero sin que te puedan contactar a tu teléfono privado.
+De esta forma, puedes participar en el chat, aclarar información, etc., pero sin que te puedan contactar a tu teléfono privado.
 
 ## Considera ocultar la lista de miembros en los grupos
 
 Si cualquiera puede ver los miembros en los grupos, es posible que los usuarios reciban spam, una forma de evitarlo es restringirlo para que sólo los administradores lo puedan ver. (Creo que sólo está activa para grupos muy grandes)
+
+![](hidemembers.png)
 
 ## Fotos en baja y alta resolución
 
