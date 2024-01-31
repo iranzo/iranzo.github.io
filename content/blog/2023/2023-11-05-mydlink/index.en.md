@@ -9,10 +9,10 @@ tags:
 date: 2023-11-05 00:00:00 +0200
 categories:
   - tech
-lastmod: 2023-11-13T07:09:43.480Z
+lastmod: 2024-01-31T09:38:06.697Z
 ---
 
-Hi had the chance to buy a Dlink camera, waterproof, with magnetic base and rated for exteriors for a really great price a while ago.
+Hi had the chance to buy a Dlink camera, waterproof, with magnetic base and rated for exteriors for a really great price a while ago [D-Link DCS 8600LH 🛒#ad](https://www.amazon.es/dp/B07KTT14BH?tag=redken-21) and later a camera with pan and tilt from Dlink too [D-Link DCS-6500LH 🛒#ad](https://www.amazon.es/dp/B08VNL3NHL?tag=redken-21)
 
 The camera, of course has an application for configuration, viewing the image, etc named 'mydlink' which has a web counterpart at <https://mydlink.com/>, but unfortunately, when you try to access the website, there's little you can do:
 
