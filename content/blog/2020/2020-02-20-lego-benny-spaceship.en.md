@@ -15,10 +15,10 @@ categories:
 lang: en
 cover:
   image: https://i.imgur.com/69ePXLB.jpg.jpg
-lastmod: 2023-08-25T09:46:05.133Z
+lastmod: 2024-01-31T09:22:53.659Z
 ---
 
-I bought [Lego 70821 Emmet Garage and Benny Spaceship 🛒](https://www.amazon.es/dp/B07FP2KS4F?tag=redken-21) because I loved the astronaut minifigures from my childhood, and I even loved the `broken` helmet (as I used to have them broken in the same way).
+I bought [Lego 70821 Emmet Garage and Benny Spaceship 🛒#ad](https://www.amazon.es/dp/B07FP2KS4F?tag=redken-21) because I loved the astronaut minifigures from my childhood, and I even loved the `broken` helmet (as I used to have them broken in the same way).
 
 In this case, the spacecraft is an `adapted` version of the typical spaceship at that time, the `497-Galaxy Explorer`.
 

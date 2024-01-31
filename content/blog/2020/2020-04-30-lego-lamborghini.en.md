@@ -14,10 +14,10 @@ categories:
 lang: en
 cover:
   image: https://i.imgur.com/mCbBcsD.jpg.jpg
-lastmod: 2023-08-25T09:46:05.124Z
+lastmod: 2024-01-31T09:22:53.702Z
 ---
 
-Today I built the [Lamborghini Urus ST-X & Lamborghini Huracán Super Trofeo EVO 🛒](https://www.amazon.es/dp/B07W6Q9G1Y?tag=redken-21).
+Today I built the [Lamborghini Urus ST-X & Lamborghini Huracán Super Trofeo EVO 🛒#ad](https://www.amazon.es/dp/B07W6Q9G1Y?tag=redken-21).
 
 I liked especially the Huracán and the Urus was also very well done, a lot of details!
 

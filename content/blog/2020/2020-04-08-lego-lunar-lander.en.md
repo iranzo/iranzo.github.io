@@ -14,11 +14,11 @@ categories:
 lang: en
 cover:
   image: https://i.imgur.com/gsSeZZz.jpg.jpg
-lastmod: 2023-08-25T09:48:46.781Z
+lastmod: 2024-01-31T09:22:53.706Z
 ---
 
 Today, as part of my confinement Lego catchup I was building the [Lego NASA Lunar Lander Apollo 11
-🛒](https://www.amazon.es/dp/B07G3WS3KV?tag=redken-21).
+🛒#ad](https://www.amazon.es/dp/B07G3WS3KV?tag=redken-21).
 
 It covered the evening after work, and have some nice details. First bags are for the lunar surface and the remainder are for the module starting with the parts which are closer to the moon surface.
 

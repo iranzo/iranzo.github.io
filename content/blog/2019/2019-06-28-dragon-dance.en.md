@@ -15,14 +15,14 @@ categories:
 description: Lego Chinese Dragon Dance review
 cover:
   image: https://i.imgur.com/8j1Drm8.jpg.jpg
-lastmod: 2023-08-25T09:48:47.215Z
+lastmod: 2024-01-31T09:22:53.595Z
 ---
 
 This is the pictures of the set that my colleague Raúl brought back from his trip to APAC.
 
 The set, includes a mechanism that makes the dancers to move up and down and the lantern hold by the pig to rotate.
 
-Model is [80102 Dragon Dance 🛒](https://www.amazon.es/dp/B07KRJJFY8?tag=redken-21)
+Model is [80102 Dragon Dance 🛒#ad](https://www.amazon.es/dp/B07KRJJFY8?tag=redken-21)
 
 {{< gallery >}}
 

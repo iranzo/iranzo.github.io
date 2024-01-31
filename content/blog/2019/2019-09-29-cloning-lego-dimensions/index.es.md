@@ -20,7 +20,7 @@ lang: es
 slug: lego-dimensions-cloning
 cover:
   image: ntag213.png
-lastmod: 2023-08-25T09:48:47.339Z
+lastmod: 2024-01-31T09:22:53.638Z
 ---
 
 ## Introducción
@@ -47,7 +47,7 @@ Para poder 'crear' tus etiquetas, la siguiente lista de materiales es útil:
 
 ## Más información
 
-Cada etiqueta puede leerse/escribirse desde tu teléfono (Probado con un [Nexus 5 🛒](https://www.amazon.es/dp/B016B7INC2?tag=redken-21), [Sony Xperia Z5 🛒](https://www.amazon.es/dp/B013WSM36A?tag=redken-21), [Samsung Galaxy S8 🛒](https://www.amazon.es/dp/B06XXFHG6J?tag=redken-21) y [Samsung Galaxy Note 9 🛒](https://www.amazon.es/dp/B07FT169LZ?tag=redken-21)), el 'truco', es siempre primero 'leer' la etiqueta y luego escribirla con los parámetros modificados.
+Cada etiqueta puede leerse/escribirse desde tu teléfono (Probado con un [Nexus 5 🛒#ad](https://www.amazon.es/dp/B016B7INC2?tag=redken-21), [Sony Xperia Z5 🛒#ad](https://www.amazon.es/dp/B013WSM36A?tag=redken-21), [Samsung Galaxy S8 🛒#ad](https://www.amazon.es/dp/B06XXFHG6J?tag=redken-21) y [Samsung Galaxy Note 9 🛒#ad](https://www.amazon.es/dp/B07FT169LZ?tag=redken-21)), el 'truco', es siempre primero 'leer' la etiqueta y luego escribirla con los parámetros modificados.
 
 Cada etiqueta dispone de un campo al principio con el número de serie, que no puede ser modificado, y una contraseña que se utiliza para validarla.
 

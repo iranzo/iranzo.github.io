@@ -13,7 +13,7 @@ slug: paella-howto
 translationKey: paella-howto
 cover:
   image: 20120708134340.jpg
-lastmod: 2023-08-25T09:48:46.847Z
+lastmod: 2024-01-31T09:22:53.575Z
 ---
 
 This document is based on the original recipe and pictures that I gave to my colleague [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) which he assembled in an internal company document and that he kindly translated for increased reach.
@@ -22,13 +22,13 @@ This document is based on the original recipe and pictures that I gave to my col
 
 - A bag of vegetables for paella (`garrofón`, Valencian white bean; `ferraura` y `bajoqueta`,
   Valencian green beans with pod)
-- [Rice `bomba` 🛒](https://www.amazon.es/dp/B00986HSH0?tag=redken-21) (7 handfuls)
+- [Rice `bomba` 🛒#ad](https://www.amazon.es/dp/B00986HSH0?tag=redken-21) (7 handfuls)
 - Chicken and Rabbit (700 and 400 grams)
 - Grated tomato (The equivalent to 5 spoons)
-- Sweet Red Paprika Powder ([`Pimentón Rojo` 🛒](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21))
-- [Spanish Saffron 🛒](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21) (300mg in threads) or [E102 dye](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) (small spoon just to the border)
-- [Olive oil 🛒](https://www.amazon.es/dp/B0781Z7TD4?tag=redken-21) to stir-fry (not much, so it doesn't get oily)
-- [Rosemary 🛒](https://www.amazon.es/dp/B01HN23N3S?tag=redken-21)
+- Sweet Red Paprika Powder ([`Pimentón Rojo` 🛒#ad](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21))
+- [Spanish Saffron 🛒#ad](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21) (300mg in threads) or [E102 dye](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) (small spoon just to the border)
+- [Olive oil 🛒#ad](https://www.amazon.es/dp/B0781Z7TD4?tag=redken-21) to stir-fry (not much, so it doesn't get oily)
+- [Rosemary 🛒#ad](https://www.amazon.es/dp/B01HN23N3S?tag=redken-21)
 - Salt
 - Water (from Valencia)
 

@@ -15,7 +15,7 @@ slug: AndroidTV-and-Netflix-tvq-pm-100
 translationKey: AndroidTV-and-Netflix-tvq-pm-100
 cover:
   image: netflix-tvq-pm-100.png
-lastmod: 2023-08-25T09:48:47.152Z
+lastmod: 2024-01-31T09:22:53.552Z
 ---
 
 # Android TV versus Android TV-Box
@@ -34,9 +34,9 @@ Android TV también tiene soporte de Chromecast, por lo que no sólo puedes repl
 
 Entre los sistemas Android TV que he probado están:
 
-- [Nvidia Shield TV 🛒](https://www.amazon.es/dp/B01NBJ6KZY?tag=redken-21) que actúa como consola de juegos y como dispositivo Android TV
-- [Xiaomi Mi Box 🛒](https://www.amazon.es/dp/B07K3KC5CP?tag=redken-21) que permite 'actualizar' cualquier televisor a disponer de un sistema Android TV via el puerto HDMI
-- [Sony Bravia Android TV 🛒](https://www.amazon.es/dp/B01IW656UC?tag=redken-21) que directamente incorporan AndroidTV como sistema operativo del televisor.
+- [Nvidia Shield TV 🛒#ad](https://www.amazon.es/dp/B01NBJ6KZY?tag=redken-21) que actúa como consola de juegos y como dispositivo Android TV
+- [Xiaomi Mi Box 🛒#ad](https://www.amazon.es/dp/B07K3KC5CP?tag=redken-21) que permite 'actualizar' cualquier televisor a disponer de un sistema Android TV via el puerto HDMI
+- [Sony Bravia Android TV 🛒#ad](https://www.amazon.es/dp/B01IW656UC?tag=redken-21) que directamente incorporan AndroidTV como sistema operativo del televisor.
 
 Tanto Nvidia como Xiaomi TV Box permiten convertir o 'actualizar' cualquier televisor y a su vez, permiten, que en un futuro, en caso de querer actualizar el dispositivo, el coste es claramente inferior que reemplazar un televisor entero.
 

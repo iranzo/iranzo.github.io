@@ -20,7 +20,7 @@ date: 2020-02-08 16:30:24 +0100
 categories:
   - LEGO
 lang: en
-lastmod: 2023-08-25T09:46:05.120Z
+lastmod: 2024-01-31T09:22:53.687Z
 ---
 
 ## Introduction on the new models
@@ -52,7 +52,7 @@ the older models.
 
 ## Ferrari F8 Tributo
 
-The [Ferrari F8 Tributo 🛒](https://www.amazon.es/dp/B07W5PWLN3?tag=redken-21)
+The [Ferrari F8 Tributo 🛒#ad](https://www.amazon.es/dp/B07W5PWLN3?tag=redken-21)
 is for me, the 'nicest' one, very nice on the building, low amount of
 stickers which is always good... If you're going to buy it, one thing to be
 careful of is the 1x1 stud pieces that contain the Ferrari logo and must be
@@ -68,7 +68,7 @@ helmet must be put in place.
 
 ## Nissan Nismo GT-R
 
-This [Nissan Nismo GT-R 🛒](https://www.amazon.es/dp/B07W7TKVVP?tag=redken-21)
+This [Nissan Nismo GT-R 🛒#ad](https://www.amazon.es/dp/B07W7TKVVP?tag=redken-21)
 was at the beginning the car I liked the less and was not initially
 considering to buy it, but to be honest, I liked a lot building and the
 details (like rear brake lights) and it's my kid's preferred one.
@@ -77,7 +77,7 @@ details (like rear brake lights) and it's my kid's preferred one.
 
 ## Audi Quattro S1
 
-The third model, [Audi Quattro S1 🛒](https://www.amazon.es/dp/B07W6Q9G1R?tag=redken-21)
+The third model, [Audi Quattro S1 🛒#ad](https://www.amazon.es/dp/B07W6Q9G1R?tag=redken-21)
 is also a very iconical car from the rallies, nice details and... lot of
 stickers and you get a very detailed car (with alternative build with extra
 front lights as the ones depicted here)

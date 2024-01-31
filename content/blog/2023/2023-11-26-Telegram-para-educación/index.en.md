@@ -11,7 +11,7 @@ tags:
 date: 2024-01-05 00:00:00 +0100
 categories:
   - education
-lastmod: 2024-01-05T11:24:30.232Z
+lastmod: 2024-01-31T09:02:22.743Z
 ---
 
 Telegram is being used frequently at schools for allowing an easy communication flow using the 'channels', where teachers can send information to families without sharing their personal contact details so that they can't be contacted outside of the official tools.
@@ -26,7 +26,7 @@ Those groups, apart from general information, can also contain pictures or video
 
 # Advices
 
-## Use Telegram instead of Whatsapp
+## Use Telegram instead of  Whatsapp
 
 - Bigger control in group, channel creation with options, permissions, etc.
 - No need to share your phone number
@@ -48,7 +48,6 @@ When you forward a message, depending on the configuration from the person who s
 Instead, download the content, then re-upload it to the group.
 
 ## Use invitation links with limit of users or expiration date
-
 When you create an invitation link to a group or channel, by default, the link is valid forever:
 
 ![](invitacion.png)
@@ -62,11 +61,13 @@ If you think that a link has been exposed, using the '3 dots' menu, you can canc
 
 ## Validate group members
 
+
 As you've the phones of the parents from the data they filled, add them to your agenda, add the name of the parent, the kid, so that when you check the list of members you can find out names that shouldn't be there.
 
 ## Use pinned messages
 
 It's very easy to send loads of information, together with pictures, material to bring for arts&crafts, etc... it's good to make use of pineed messages (one or more) with general information or relevant for a period like:
+
 
 - Meeting days and schedule
 - Time table
@@ -74,6 +75,7 @@ It's very easy to send loads of information, together with pictures, material to
 - Official calendar (bank holidays, etc.)
 - Library or other services information.
 - Rules for behaviour
+
 
 And others, that can be pinned when it's needed to bring materials, an authorization for a trip, etc... in this way, it's easy to 'browse' between important ones, while other stuff stays in between in the message flow.
 
@@ -84,6 +86,7 @@ If a group is used during one school year, once it finishes, it makes sense to k
 Send a reminder (and set it as pinned) explaining when the group will be removed and once again in one month before that day.
 
 ### Autoremoval
+
 
 In the same line, you can establish in the channels that messages are deleted automatically, allowing this cleanup to happen by itself:
 
@@ -97,10 +100,9 @@ Once it's enabled, it appears indicated in the lower part when sending new messa
 
 ![](statuseliminacion.png)
 
-In this case, it's set for `1d` (1 day).
+In this case, it's set for  `1d` (1 day).
 
 ## Chats or groups instead of channels
-
 If for whatever reason (I wouldn't recommend), you want to create a chat where users could participate, consider seriously to enable the 'anonymous' permission:
 ![](anonimo.png)
 In this way, even if you're in the group with everyone else, whenever you write, the group name will appear instead of yours, blocking in that way that people could contact you directly via private messages but still interact via the group.
@@ -116,6 +118,7 @@ When you write, they'll see:
 ![](mensajeanonimo.png)
 
 But you'll still be able to see everyone:
+
 
 ![](listadomiembros.png)
 
@@ -157,6 +160,5 @@ If you add text when you're adding an image, you can use later the search functi
 Telegram allows you to create polls to ask about information/feedback based on the vote responses... take an advantage out of it!
 
 ## Use a calendar for publishing events
-
-If you've read [Showing calendar events in Telegram
-]({{< relref path="2023-03-21-mostrar-eventos-de-un-calendario-en-telegram" lang="en" >}}) you'll know that you can use bots that will take care of publishing events in channels or groups... take an advantage so that in the same moment you manage your agenda, you can plan events that could be interesting for families.
+If you've read  [Showing calendar events in Telegram
+]({{< relref path="2023-03-21-mostrar-eventos-de-un-calendario-en-telegram" lang="en" >}}) you'll know that you can use bots that will take care of publishing events in channels or groups... take an advantage so that in the same moment you manage your agenda, you can plan events that could be interesting for families. 

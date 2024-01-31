@@ -14,10 +14,10 @@ categories:
 lang: en
 cover:
   image: https://i.imgur.com/R7qkoY6.jpg.jpg
-lastmod: 2023-08-25T09:45:44.629Z
+lastmod: 2024-01-31T09:22:53.529Z
 ---
 
-Xmas came with a good gift that I was able to finish mounting today, the [Lego Lamborghini Sian FKP47 🛒](https://www.amazon.es/dp/B0813RJRYC?tag=redken-21).
+Xmas came with a good gift that I was able to finish mounting today, the [Lego Lamborghini Sian FKP47 🛒#ad](https://www.amazon.es/dp/B0813RJRYC?tag=redken-21).
 
 The build experience was good, except for some issues related with not building in the best conditions of light, but more or less fixable...
 

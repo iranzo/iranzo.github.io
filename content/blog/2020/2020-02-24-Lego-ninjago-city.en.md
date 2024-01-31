@@ -13,10 +13,10 @@ categories:
 lang: en
 cover:
   image: https://i.imgur.com/v5ulbTA.jpg.jpg
-lastmod: 2023-08-25T09:45:44.760Z
+lastmod: 2024-01-31T09:22:53.683Z
 ---
 
-Some pics about the 'almost' modular [Lego Ninjago City 🛒](https://www.amazon.es/dp/B074XCNQSY?tag=redken-21).
+Some pics about the 'almost' modular [Lego Ninjago City 🛒#ad](https://www.amazon.es/dp/B074XCNQSY?tag=redken-21).
 
 Note that it's HUGE compared to other buildings and has lot of details. The water on the lower floor is defined by a set of bricks plus another set of transparent ones on top.
 

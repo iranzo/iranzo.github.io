@@ -18,10 +18,10 @@ categories:
 lang: en
 cover:
   image: https://i.imgur.com/bIQfCLi.jpg.jpg
-lastmod: 2023-08-25T09:46:05.127Z
+lastmod: 2024-01-31T09:22:53.710Z
 ---
 
-Here you can see a photo comparison between [Porsche 911 GT3 RS 🛒](https://www.amazon.es/dp/B01CCT2ZHC?tag=redken-21) and [Bugatti Chiron 🛒](https://www.amazon.es/dp/B0792RB3B6?tag=redken-21).
+Here you can see a photo comparison between [Porsche 911 GT3 RS 🛒#ad](https://www.amazon.es/dp/B01CCT2ZHC?tag=redken-21) and [Bugatti Chiron 🛒#ad](https://www.amazon.es/dp/B0792RB3B6?tag=redken-21).
 
 Both models have nice details, include a suitcase under the hood, sequential shift, 4x4 traction, etc. have a look at them!
 

@@ -14,14 +14,14 @@ categories:
   - LEGO
 cover:
   image: https://i.imgur.com/xIIP1ER.jpg.jpg
-lastmod: 2023-08-25T09:48:47.178Z
+lastmod: 2024-01-31T09:22:53.601Z
 ---
 
 This is the pictures of the set that my colleague Raúl brought back from his trip to APAC, hope you enjoy it!
 
 There are lot of printed pieces that look very nice, even the faces have been suited for the region.
 
-Model is [80101 Chinese New's Year Eve Dinner 🛒](https://www.amazon.es/dp/B07KRFLDLN?tag=redken-21).
+Model is [80101 Chinese New's Year Eve Dinner 🛒#ad](https://www.amazon.es/dp/B07KRFLDLN?tag=redken-21).
 
 {{< gallery >}}
 

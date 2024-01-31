@@ -14,12 +14,12 @@ categories:
   - LEGO
 cover:
   image: https://i.imgur.com/RI1kBQt.jpg.jpg
-lastmod: 2023-08-25T09:48:47.252Z
+lastmod: 2024-01-31T09:22:53.607Z
 ---
 
 After seeing this MOC [75894-mini-transporter](https://rebrickable.com/mocs/MOC-24636/Keep%20On%20Bricking/75894-mini-transporter/), I decided to:
 
-- Buy the model [Lego 75894 - 1967 Mini Cooper S Rally and 2018 Mini John Cooper Works Buggy 🛒](https://www.amazon.es/dp/B07FNTMWMT?tag=redken-21)
+- Buy the model [Lego 75894 - 1967 Mini Cooper S Rally and 2018 Mini John Cooper Works Buggy 🛒#ad](https://www.amazon.es/dp/B07FNTMWMT?tag=redken-21)
 - Buy the instructions at the MOC URL
 
 After several times trying to pay for the instructions (which I was unable to get because

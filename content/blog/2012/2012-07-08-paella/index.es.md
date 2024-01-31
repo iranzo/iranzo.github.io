@@ -12,7 +12,7 @@ slug: paella-howto
 translationKey: paella-howto
 cover:
   image: 20120708134340.jpg
-lastmod: 2023-08-25T09:48:46.840Z
+lastmod: 2024-01-31T09:22:53.585Z
 ---
 
 Este documento está basado en la receta original y fotos que le pasé a mi compañero [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) que a su vez, documentó y tradujo internamente para su difusión.
@@ -20,16 +20,16 @@ Este documento está basado en la receta original y fotos que le pasé a mi comp
 # Ingredientes
 
 - Bolsa de verdura para paella (garrofón, ferraura, etc)
-- [Arroz bomba 🛒](https://www.amazon.es/dp/B00986HSH0?tag=redken-21) (equivalente a 7 puñados)
+- [Arroz bomba 🛒#ad](https://www.amazon.es/dp/B00986HSH0?tag=redken-21) (equivalente a 7 puñados)
 - Pollo y conejo (700 y 400 gr)
 - Tomate rallado (equivalente a 5 cucharadas)
-- [Pimentón Rojo 🛒](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21)
-- [Colorante 🛒](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) / [Azafrán](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21) (una cucharadita rasa / 300mg hebra)
-- [Aceite de oliva 🛒](https://www.amazon.es/dp/B0781Z7TD4?tag=redken-21) para sofreír (poca cantidad para que no quede aceitosa)
+- [Pimentón Rojo 🛒#ad](https://www.amazon.es/dp/B07FZLMP8N?tag=redken-21)
+- [Colorante 🛒#ad](https://www.amazon.es/dp/B01HIVII4I?tag=redken-21) / [Azafrán](https://www.amazon.es/dp/B01N6OVPYQ?tag=redken-21) (una cucharadita rasa / 300mg hebra)
+- [Aceite de oliva 🛒#ad](https://www.amazon.es/dp/B0781Z7TD4?tag=redken-21) para sofreír (poca cantidad para que no quede aceitosa)
 - Sal
 - Agua (preferiblemente de Valencia)
 - Ajo
-- [Romero 🛒](https://www.amazon.es/dp/B01HN23N3S?tag=redken-21)
+- [Romero 🛒#ad](https://www.amazon.es/dp/B01HN23N3S?tag=redken-21)
 
 # Preparación
 

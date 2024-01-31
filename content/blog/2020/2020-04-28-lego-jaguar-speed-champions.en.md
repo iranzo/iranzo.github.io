@@ -14,10 +14,10 @@ categories:
 lang: en
 cover:
   image: https://i.imgur.com/fYx5Jtr.jpg.jpg
-lastmod: 2023-08-25T09:48:46.678Z
+lastmod: 2024-01-31T09:22:53.698Z
 ---
 
-Today I built the [Jaguar Racing GEN2 car & Jaguar I-PACE eTROPHY 🛒](https://www.amazon.es/dp/B07W5PXDYZ?tag=redken-21).
+Today I built the [Jaguar Racing GEN2 car & Jaguar I-PACE eTROPHY 🛒#ad](https://www.amazon.es/dp/B07W5PXDYZ?tag=redken-21).
 
 I also bought a [Light box](https://s.click.aliexpress.com/e/_bmC0MP) to take pictures, so here are my first attempts.
 

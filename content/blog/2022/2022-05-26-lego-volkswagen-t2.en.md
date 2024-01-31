@@ -13,10 +13,10 @@ categories:
   - LEGO
 cover:
   image: https://m.media-amazon.com/images/I/81S9ngz3eaL._AC_SL400_.jpg
-lastmod: 2023-08-25T09:45:44.530Z
+lastmod: 2024-01-31T09:22:53.569Z
 ---
 
-I've been building the [Lego Volkswagen T2 🛒](https://www.amazon.es/dp/B09BLSYTRR?tag=redken-21) and took some pics about the final result and the comparison with the [T1]({{<relref "2020-10-02-lego-t1-led-kit.en.md" >}}).
+I've been building the [Lego Volkswagen T2 🛒#ad](https://www.amazon.es/dp/B09BLSYTRR?tag=redken-21) and took some pics about the final result and the comparison with the [T1]({{<relref "2020-10-02-lego-t1-led-kit.en.md" >}}).
 
 Feelings:
 

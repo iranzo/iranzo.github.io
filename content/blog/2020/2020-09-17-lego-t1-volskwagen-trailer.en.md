@@ -17,10 +17,10 @@ categories:
 lang: en
 cover:
   image: https://i.imgur.com/RwERShO.jpg.jpg
-lastmod: 2023-08-25T09:48:46.733Z
+lastmod: 2024-01-31T09:22:53.666Z
 ---
 
-I got some pieces that were part of a [Lego Volkswagen T1 🛒](https://www.amazon.es/dp/B00PGZP8HE?tag=redken-21) but couldn't make for the complete set (which I already owned), so I was checking what mods I could build based on it, and best one, based on the amount of pieces was this one found on [Rebrickable](https://rebrickable.com/mocs/MOC-46121/tobowski/caravan-camping-trailer-for-10220-t1-bus/).
+I got some pieces that were part of a [Lego Volkswagen T1 🛒#ad](https://www.amazon.es/dp/B00PGZP8HE?tag=redken-21) but couldn't make for the complete set (which I already owned), so I was checking what mods I could build based on it, and best one, based on the amount of pieces was this one found on [Rebrickable](https://rebrickable.com/mocs/MOC-46121/tobowski/caravan-camping-trailer-for-10220-t1-bus/).
 
 As I found it to be a bit sad to leave the wheel, and some other elements outside I did some minor changes:
 

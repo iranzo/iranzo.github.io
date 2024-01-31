@@ -13,10 +13,10 @@ categories:
 lang: en
 cover:
   image: https://i.imgur.com/Y2sqxOq.jpg.jpg
-lastmod: 2023-08-25T09:48:46.767Z
+lastmod: 2024-01-31T09:22:53.676Z
 ---
 
-Some pics about the 'almost' modular [Fisherman Store 🛒](https://www.amazon.es/dp/B06X9QM15K?tag=redken-21)
+Some pics about the 'almost' modular [Fisherman Store 🛒#ad](https://www.amazon.es/dp/B06X9QM15K?tag=redken-21)
 {{<gallery>}}
 {{<figure src="https://i.imgur.com/Y2sqxOqt.jpg" link="https://i.imgur.com/Y2sqxOq.jpg.jpg" alt="Front view" >}}
 {{<figure src="https://i.imgur.com/JTF5Zaxt.jpg" link="https://i.imgur.com/JTF5Zax.jpg.jpg" alt="Minifigure closeup" >}}
