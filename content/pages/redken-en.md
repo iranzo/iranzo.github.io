@@ -103,6 +103,7 @@ The available list of configuration options that can be used depending on privat
   forwarded and the config is set, redken will remove original message and
   resend text to the chat so that the original sender is removed but
   forwarder is credited. If value is set to `silent` it will just clean the message forwarder.
+- `quiet`: Enables sending of messages without enabling notification: message arrives, but makes no noise.
 
 ### chat
 
