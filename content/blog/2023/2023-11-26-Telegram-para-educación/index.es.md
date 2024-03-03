@@ -11,7 +11,7 @@ tags:
 date: 2023-11-26 00:00:00 +0100
 categories:
   - education
-lastmod: 2024-01-05T11:12:12.996Z
+lastmod: 2024-03-03T15:28:23.848Z
 ---
 
 Telegram viene siendo utilizado con bastante frecuencia en centros educativos para permitir una comunicación sencilla mediante los 'canales', donde los docentes pueden enviar información a las familias de forma general sin que se pueda contactar con ellos directamente. Esto tiene la ventaja de facilitar la comunicación de información pero sin el riesgo de que sean acosados por las familias con preguntas, etc. fuera de los canales oficiales de comunicación. Pero es importante tener en cuenta una serie de aspectos que, posiblemente por desconocimiento, pueden arrastrar una serie de problemas/peligros.
@@ -119,6 +119,12 @@ Aunque tu si que veas a todos:
 
 De esta forma, puedes participar en el chat, aclarar información, etc., pero sin que te puedan contactar a tu teléfono privado.
 
+## Mensajes 1 a 1
+
+Desde Telegram, también puedes escribir a los miembros del grupo y pueden contestarte en privado sin que sepan tu número, ya que Telegram, de forma predeterminada, no utiliza el número para la comunicación. Usando este método, también pueden realizarse llamadas a través de la aplicación.
+
+Sólo si añades contacto y seleccionas la opción de "compartir mi número", podrán verlo y llamarte a tu número por fuera de Telegram.
+
 ## Considera ocultar la lista de miembros en los grupos
 
 Si cualquiera puede ver los miembros en los grupos, es posible que los usuarios reciban spam. Una forma de evitarlo es restringirlo para que sólo los administradores lo puedan ver. (Creo que sólo está activa para grupos muy grandes)
@@ -127,7 +133,7 @@ Si cualquiera puede ver los miembros en los grupos, es posible que los usuarios 
 
 ## Fotos en baja y alta resolución
 
-Las fotos ‘comprimidas’ están bien para verlas rápidas, pero si se quieren conservar los recuerdos, es mejor enviarlas a tamaño completo como ‘ficheros’. A veces es una pena no tener recuerdos a mayor resolución porque por defecto, se mandan reducidas, y seguro que las familias o tutores legales lo agradecerán. Una vez subidas en alta resolución puedes borrarlas de tu teléfono ya que estarán disponibles en el canal y se pueden volver a descargar si te hacen falta.
+Las fotos ‘comprimidas’ están bien para verlas de forma rápida, pero si se quieren conservar los recuerdos, es mejor enviarlas a tamaño completo como ‘ficheros’. A veces es una pena no tener recuerdos a mayor resolución porque por defecto, se mandan reducidas, y seguro que las familias o tutores legales lo agradecerán. Una vez subidas en alta resolución puedes borrarlas de tu teléfono ya que estarán disponibles en el canal y se pueden volver a descargar si te hacen falta.
 
 ## Usa mensajes programados
 
