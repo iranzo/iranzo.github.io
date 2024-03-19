@@ -17,7 +17,7 @@ slug: redken_bot
 translationKey: redken_bot
 draft: false
 url: /redken_bot
-lastmod: 2023-08-25T09:48:47.499Z
+lastmod: 2024-03-19T09:25:03.398Z
 ---
 
 # Redken Manual
@@ -44,7 +44,6 @@ General usage and features:
 - `/ical <add|delete|list> name url` Adds/deletes/lists a new ical url to print events happening during the day
 - `/cn <word>` To get a random Chuck Norris fact related with the provided word (or random)
 - `/excuse` To get a random excuse
-- Spam check for the messages based on the availability of database to train the bot, and only if certainty level is over or equal to `85%`.
 
 Also, while nothing is set against, you could use `/gconfig` to configure several aspects of it like:
 
@@ -92,53 +91,40 @@ The available list of configuration options that can be used depending on privat
 
 ### common
 
-- `currency`: EUR
-- `modulo`: 1 (to just show karma every X/modulo points, 0 to disable)
-- `stock`: stock tickers to check
-- `cleanlink`: True if we want links to be expanded and removed
 - `cleankey`: Regexp to replace, for example tag=
-- `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
+- `cleanlink`: True if we want links to be expanded and removed
+- `currency`: EUR
+- `futureevents`: Enables sending a reminder the specified number of days in advance
 - `lang`: set to language of choice to get some strings translated into supported languages <https://crowdin.com/project/stampython> and override autodetected language.
-- `privacy`: Enables privacy for forwarded messages, if a message is
-  forwarded and the config is set, redken will remove original message and
-  resend text to the chat so that the original sender is removed but
-  forwarder is credited. If value is set to `silent` it will just clean the message forwarder.
+- `modulo`: 1 (to just show karma every X/modulo points, 0 to disable)
+- `privacy`: Enables privacy for forwarded messages, if a message is forwarded and the config is set, redken will remove original message and resend text to the chat so that the original sender is removed but forwarder is credited. If value is set to `silent` it will just clean the message forwarder.
 - `quiet`: Enables sending of messages without enabling notification: message arrives, but makes no noise.
+- `splitkarmaword`: Set to 'False' to make that `johndoe.linux.expert++` stops reporting karma to the word and to `johndoe`
+- `stock`: stock tickers to check
 
 ### chat
 
+- `admin`: List of admins of channels, default empty: everyone
+- `alladmins`: Set this to True to make all users in chat being able to use administrative commands, by default (`False`) means that only chat admins can run the commands.
+- `enableall`: Set this to `admin` or `karma` or `false` to allow being used only by admins, allow regular users to just give karma but no pinging or to disable it in your chat.
+- `grace`: Set this to the initial grace period in days for user to say something when added to a channel before being kicked out of `inactivity` (fakes the join date as `grace` days before being kicked out of max `inactivity`)
+- `hiordie`: Set this to the initial number of minutes that a user has to say something on the chat, similar to grace but for shorter periods
+- `inactivity`: Set this to the number of days without user activity before kicking it out.
 - `isolated`: False, if true, allow link, all karma, etc is tied to GID
 - `link`: empty, if defined, channel is slave to a mater
-- `admin`: List of admins of channels, default empty: everyone
 - `maxage`: chats older than this will be removed
-- `silent`: makes stampy not to output messages to that chat
-- `welcome`: outputs the text when a new user joins the chat, replacing "\$username" by user name
-- `usernamereminder`: Set this `False` to stop reminding new users to get a username to get the most out of karma commands.
-- `inactivity`: Set this to the number of days without user activity before kicking it out.
-- `hiordie`: Set this to the initial number of minutes that a user has to say something on the chat, similar to grace but for shorter periods
-- `grace`: Set this to the initial grace period in days for user to say something when added to a channel before being kicked out of `inactivity` (fakes the join date as `grace` days before being kicked out of max `inactivity`)
 - `removejoinparts`: Set this to automatically remove 'User XXX has joined' or 'User XXX has left' messages from the groups.
-- `enableall`: Set this to `admin` or `karma` or `false` to allow being used only by admins, allow regular users to just give karma but no pinging or to disable it in your chat.
-- `spamcheck`: Set this to `false`, `True` or `auto` to process the text messages with Machine Learning predictions about spam. This only works in English right now and only while the model is `85%` accurate or more. Leaving the default (`True`), will show two buttons for the messages when it is considered SPAM, if confirmed, spam actions will happen. In `auto` mode, spam actions will trigger automatically if the message is considered spam.
-- `alladmins`: Set this to True to make all users in chat being able to use administrative commands, by default (`False`) means that only chat admins can run the commands.
-
-{{<important title="SPAM actions means">}}
-
-- Delete spam message
-- Submit spam message to database of spam
-- Add spammer userid to database
-- Kick user from the group
-
-{{</important>}}
+- `silent`: makes stampy not to output messages to that chat
+- `usernamereminder`: Set this `False` to stop reminding new users to get a username to get the most out of karma commands.
+- `welcome`: outputs the text when a new user joins the chat, replacing "\$username" by user name
 
 ## Extra commands
 
 Only for admin user in groups or for individuals against the bot
 
 - `/reload_admins`: Uses telegram API to find admins and populate the `admin` variable for commands that require admin access.
-- `/spam`: reports a message as SPAM to redken
-- `/thanks [add|list|delete]`: Manage the list of words that, when replied, give karma to original sender
 - `/spoiler`: Reploy to a message with this to delete it and send it back with hidden text
+- `/thanks [add|list|delete]`: Manage the list of words that, when replied, give karma to original sender
 
 ### Karma
 
