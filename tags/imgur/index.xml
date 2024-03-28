@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Imgur on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/imgur/</link>
+    <description>Recent content in Imgur on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Feb 2020 21:55:24 +0100</lastBuildDate><atom:link href="https://iranzo.io/tags/imgur/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript for imgur gallery generation for PhotoSwipe and Pelican-Elegant</title>
+      <link>https://iranzo.io/blog/2020/02/19/javascript-for-imgur-gallery-generation-for-photoswipe-and-pelican-elegant/</link>
+      <pubDate>Wed, 19 Feb 2020 21:55:24 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2020/02/19/javascript-for-imgur-gallery-generation-for-photoswipe-and-pelican-elegant/</guid>
+      <description>Hi,
+Using the following code from the Browser console:
+console.log(&amp;#34;&amp;#34;); var images = $$(&amp;#34;img&amp;#34;); for (each in images) { console.log(` &amp;lt;a href=&amp;#34;${images[each].src}&amp;#34; data-size=&amp;#34;4032x3024&amp;#34;&amp;gt; &amp;lt;img src=&amp;#34;${images[each].src}&amp;#34; width=&amp;#34;403&amp;#34; height=&amp;#34;302&amp;#34; alt=&amp;#34;Image description&amp;#34; /&amp;gt; &amp;lt;/a&amp;gt; `); } console.log(&amp;#34;&amp;lt;/div&amp;gt;&amp;#34;); It will output a copy-paste ready code for integrating in your blog post and leverage the picture gallery.
+Warning
+Review the data-size to make it match the image size as PhotoSwipe requires it to match image and adjust the figcaption entry.</description>
+    </item>
+    
+  </channel>
+</rss>

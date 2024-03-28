@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tech on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/tech/</link>
+    <description>Recent content in Tech on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Nov 2022 07:00:46 +0000</lastBuildDate><atom:link href="https://iranzo.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[python] Generate ranges from items</title>
+      <link>https://iranzo.io/blog/2022/11/25/python-generate-ranges-from-items/</link>
+      <pubDate>Fri, 25 Nov 2022 07:00:46 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/11/25/python-generate-ranges-from-items/</guid>
+      <description>Some years ago, I added a script for updating headers for (C) in the python files I was developing for Risu.
+In this way, the header got the list of authors and years working on the files updated automatically.
+With the pass of the years, the list started to became a bit too long, so I worked on creating code for getting ranges instead.
+This is the code I used:</description>
+    </item>
+    
+    <item>
+      <title>Automate code build and deployment with ansible</title>
+      <link>https://iranzo.io/blog/2022/11/09/automate-code-build-and-deployment-with-ansible/</link>
+      <pubDate>Wed, 09 Nov 2022 07:00:46 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/11/09/automate-code-build-and-deployment-with-ansible/</guid>
+      <description>Let&amp;rsquo;s say that we want to keep our system updated with some code which is not distributed as a regular package, but as a code in a repository (which unfortunately, it&amp;rsquo;s a pretty common situation).
+As a part of the ansible playbooks used for the hosts, I can add a snippet like this:
+gitrepos: - { url: &amp;#34;https://github.com/myrepo/repo.git&amp;#34;, tag: &amp;#34;tagtocheckout&amp;#34;, folder: &amp;#34;/root/path-for-check-out&amp;#34;, chdir: &amp;#34;subdir to enter&amp;#34;, build: &amp;#34;make build&amp;#34;, exec: &amp;#34;build/mybuiltbinary&amp;#34;, } With this definition in the host inventory, we can then in our playbook to perform several steps:</description>
+    </item>
+    
+    <item>
+      <title>OpenShift&#39;s oc debug and parallel execution</title>
+      <link>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</link>
+      <pubDate>Thu, 03 Nov 2022 14:13:32 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</guid>
+      <description>A colleague reported some issues in the OpenShift troubleshooting and diagnosis scripts at OpenShift-checks.
+Some time ago I did contribute some changes to use functions and allow using the RISU wrapper to the scripts, helping consuming the results via RISU&amp;rsquo;s HTML interface.
+As my colleague reported, for some plugins, the output of the command was not shown in the HTML Interface.
+After some investigation, it was found that parallel execution for the plugins was causing no output to be shown, but when filtering to individual ones via risu -i XXXXXXX/plugin -l it was working fine&amp;hellip; the problem was not the check itself, as both of them worked fine when executed individually but failed when executing them together.</description>
+    </item>
+    
+  </channel>
+</rss>

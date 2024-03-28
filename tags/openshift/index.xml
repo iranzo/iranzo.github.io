@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>OpenShift on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/openshift/</link>
+    <description>Recent content in OpenShift on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 08 Nov 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://iranzo.io/tags/openshift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenShift Layered Images for patching</title>
+      <link>https://iranzo.io/blog/2023/11/08/openshift-layered-images-for-patching/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2023/11/08/openshift-layered-images-for-patching/</guid>
+      <description>With recent releases of OpenShift like 4.13 you can use CoreOS Layering to apply custom images to the nodes.
+The feature allows to build, via a Dockerfile a custom image that can later be applied to our nodes.
+Let&amp;rsquo;s review the steps:
+First we need to find the base image being used in our environment with oc adm release info quay.io/openshift-release-dev/ocp-release:4.13.5-aarch64 --image-for=rhel-coreos Then we use the returned value in the FROM line in our Dockerfile If we want to add custom packages, we should have a server which is reachable and run createrepo on the folder containing the rpm&amp;rsquo;s so that rpm-ostree can download them for installation.</description>
+    </item>
+    
+    <item>
+      <title>Kernel Module Management testing</title>
+      <link>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</guid>
+      <description>Following on the Using Kcli to prepare for OCM testing, we&amp;rsquo;re going to prepare KMM testing in Hub-Spoke approach.
+First we need to prepare our .docker/config.json with the contents of our OpenShift pull secret used with Kcli.
+mkdir -p ~/.docker/ cp openshift_pull.json ~/.docker/config.json Warning advisories Note
+Semi-scripted version available at automate.sh
+Warning
+We&amp;rsquo;re using pre-release bits of the software, that&amp;rsquo;s why we need to define a custom catalog for both the Hub and the Spokes.</description>
+    </item>
+    
+    <item>
+      <title>Using Kcli to prepare for Open Cluster Management testing</title>
+      <link>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</link>
+      <pubDate>Fri, 23 Dec 2022 14:04:45 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</guid>
+      <description>Kcli allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of plans it allows to automate most of the setup required to have an environment ready.
+In our case, let&amp;rsquo;s setup an environment to practice with Open Cluster Management but instead of using kind clusters, let&amp;rsquo;s use VM&amp;rsquo;s.
+Note
+We&amp;rsquo;ll require to setup an openshift_pull.json file for Kcli to consume when accessing the required resources for this to work.</description>
+    </item>
+    
+    <item>
+      <title>OpenShift&#39;s oc debug and parallel execution</title>
+      <link>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</link>
+      <pubDate>Thu, 03 Nov 2022 14:13:32 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</guid>
+      <description>A colleague reported some issues in the OpenShift troubleshooting and diagnosis scripts at OpenShift-checks.
+Some time ago I did contribute some changes to use functions and allow using the RISU wrapper to the scripts, helping consuming the results via RISU&amp;rsquo;s HTML interface.
+As my colleague reported, for some plugins, the output of the command was not shown in the HTML Interface.
+After some investigation, it was found that parallel execution for the plugins was causing no output to be shown, but when filtering to individual ones via risu -i XXXXXXX/plugin -l it was working fine&amp;hellip; the problem was not the check itself, as both of them worked fine when executed individually but failed when executing them together.</description>
+    </item>
+    
+    <item>
+      <title>Setup a Quay mirror for offline installations with mirror-registry</title>
+      <link>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</link>
+      <pubDate>Fri, 19 Aug 2022 10:00:35 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</guid>
+      <description>Learn on how to use mirror-registry to create a local copy that can be used to install OpenShift without external Internet connectivity.</description>
+    </item>
+    
+    <item>
+      <title>Check Agent status per state</title>
+      <link>https://iranzo.io/tips/acm-host-status/</link>
+      <pubDate>Wed, 10 Aug 2022 14:01:32 +0000</pubDate>
+      
+      <guid>https://iranzo.io/tips/acm-host-status/</guid>
+      <description>Check agent status per state
+watch -d &amp;#34;oc get agent -A -o jsonpath=&amp;#39;{range .items[*]}{@.status.debugInfo.state}{\&amp;#34;\n\&amp;#34;}{end}&amp;#39; |sort | uniq --count&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title>Zero Touch Provisioning OpenShift for Edge computing</title>
+      <link>https://iranzo.io/blog/2022/03/12/zero-touch-provisioning-openshift-for-edge-computing/</link>
+      <pubDate>Sat, 12 Mar 2022 09:34:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/03/12/zero-touch-provisioning-openshift-for-edge-computing/</guid>
+      <description>This article describes how to use python to bind against an LDAP server and  perform queries</description>
+    </item>
+    
+    <item>
+      <title>Configuring OpenShift with self-contained NTP</title>
+      <link>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</link>
+      <pubDate>Mon, 07 Dec 2020 14:10:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</guid>
+      <description>Introduction In a regular OpenShift environment, NTP server is more less like this: Diagram In a self-contained cluster with no connection to external networks NTP server is not reachable, but a reachable NTP server is required for proper cluster synchronization. Cluster does use SSL certificates that require validation and might fail if the dates between the systems are not in sync or at least pretty close in time.
+Diagram We&amp;rsquo;ve several components already available in our OpenShift cluster that are very useful:</description>
+    </item>
+    
+    <item>
+      <title>Baremetal Operator</title>
+      <link>https://iranzo.io/eko/2019-09-11-baremetal-operator/</link>
+      <pubDate>Wed, 11 Sep 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/eko/2019-09-11-baremetal-operator/</guid>
+      <description>This article was published originally at https://metal3.io/blog/2019/09/11/Baremetal-operator.html
+Introduction The baremetal operator, documented at https://github.com/metal3-io/baremetal-operator/blob/master/docs/api.md, it&amp;rsquo;s the Operator in charge of definitions of physical hosts, containing information about how to reach the Out of Band management controller, URL with the desired image to provision, plus other properties related with hosts being used for provisioning instances.
+Quoting from the project:
+The Bare Metal Operator implements a Kubernetes API for managing bare metal hosts.</description>
+    </item>
+    
+    <item>
+      <title>Postgres repl SSL replication</title>
+      <link>https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/</guid>
+      <description>Postgres across clusters For Postgres to work across clusters we do need to have the data being synchronized.
+With some other databases we do have some master-master approach, but usually have very strict requirements on latency, bandwidth, etc that we cannot solve with On-Premise + external cloud providers.
+If the replication is based on the storage level instead, then you face that database servers don’t deal well if the data changes underneath it, so it leads to data corruption, on top of the storage-level issues/requirements as well on bandwidth, latency, etc.</description>
+    </item>
+    
+    <item>
+      <title>Quay for Federation</title>
+      <link>https://iranzo.io/blog/2019/01/08/quay-for-federation/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2019/01/08/quay-for-federation/</guid>
+      <description>Why this article? For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment.
+Colleagues in the Solutions Engineering team have been working on demonstrating an application running on different clusters over a Federated Control Plane, allowing it to &amp;lsquo;roam&amp;rsquo; between clusters with shared data access as a way to demonstrate how an application can &amp;lsquo;scale&amp;rsquo; from on-premise deployment to external clouds in order to satisfy business requirements for peak demands.</description>
+    </item>
+    
+  </channel>
+</rss>

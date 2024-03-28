@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CentOS on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/centos/</link>
+    <description>Recent content in CentOS on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:42:48 +0000</lastBuildDate><atom:link href="https://iranzo.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No matching key found</title>
+      <link>https://iranzo.io/tips/no-matching-key-found/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      
+      <guid>https://iranzo.io/tips/no-matching-key-found/</guid>
+      <description>As you might have experienced&amp;hellip; using a recent system to connect to a legacy one could be complicated as some insecure protocols have been disabled, with a message like:
+Unable to negotiate with 192.168.2.82 port 22: no matching host key type found. Their offer: ssh-rsa,ssh-dss Create an entry like this in your .ssh/config file, so that insecure methods can be used to connect to a specific host:
+Host 192.168.2.82 HostKeyAlgorithms=+ssh-rsa KexAlgorithms=+diffie-hellman-group1-sha1 PubkeyAcceptedKeyTypes=+ssh-rsa User root or alternatively on the command line:</description>
+    </item>
+    
+    <item>
+      <title>Unsupported upgrade for RHEL-based distributions without reinstallation</title>
+      <link>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</link>
+      <pubDate>Sat, 23 Apr 2022 21:23:48 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</guid>
+      <description>Most systems, based on RHEL, were not able to upgrade without reinstallation, or best said, not supported. The new version, that was released at around 18 months later contained so many changes that it was hard to test the upgrades themselves until leapp was introduced.
+Check the lifecycle here: https://access.redhat.com/support/policy/updates/errata
+However, the biggest problem could be the incompatibility of packages or package formats&amp;hellip; but as usually there were some middle layers it was possible to upgrade without reinstallation by performing some manual steps.</description>
+    </item>
+    
+    <item>
+      <title>LDAP query from Python</title>
+      <link>https://iranzo.io/blog/2021/10/19/ldap-query-from-python/</link>
+      <pubDate>Tue, 19 Oct 2021 22:34:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/10/19/ldap-query-from-python/</guid>
+      <description>This article describes how to use python to bind against an LDAP server and perform queries</description>
+    </item>
+    
+    <item>
+      <title>How to stake on NYM Validator 🐳🐳🐳</title>
+      <link>https://iranzo.io/blog/2021/09/28/how-to-stake-on-nym-validator/</link>
+      <pubDate>Tue, 28 Sep 2021 17:20:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/09/28/how-to-stake-on-nym-validator/</guid>
+      <description>This article describes how to stake your token against a NYM cosmos validator</description>
+    </item>
+    
+    <item>
+      <title>Geo replication with syncthing</title>
+      <link>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</link>
+      <pubDate>Sat, 12 Jun 2021 21:40:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</guid>
+      <description>Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc
+After being using BitTorrent sync and later resilio sync (even if I didn&amp;rsquo;t fully liked the idea of it being not open source), I gave up. My NAS with 16 GB of ram, even if a bit older (HP N54L), seemed not to have enough memory to run it, and was constantly swapping.</description>
+    </item>
+    
+    <item>
+      <title>How to check if a system is virtual</title>
+      <link>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</link>
+      <pubDate>Mon, 10 May 2021 14:30:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</guid>
+      <description>I was improving a playbook in Ansible and wanted to find a way to find if a system was virtual or not to decide about some tunning like setting tuned-adm profile virtual-guest or disable the power off when the lid is closed.
+After some research and try-except situations I got to this one that seemed to work (I had to tune it as one desktop machine was missing the /sys entry I was using before):</description>
+    </item>
+    
+    <item>
+      <title>How to run a NYM Validator</title>
+      <link>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-validator/</link>
+      <pubDate>Sun, 09 May 2021 12:40:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-validator/</guid>
+      <description>As said in the article about mixnodes, NYM is a technology aiming for providing privacy for the communications.
+Apart of the mixnodes, other key piece in the infrastructure are the validators.
+As said, the project uses Open Source technology to run, and they have a nice docs with details on how to run a node at https://nymtech.net/docs/, and the one relevant for mixnodes at https://nymtech.net/docs/run-nym-nodes/validators/.
+In this case, we can follow the instructions for compiling, but I faced some issues (compiling went fine, but initial sync failed), so in this case, we will use the pre-compiled version provided with the 0.</description>
+    </item>
+    
+    <item>
+      <title>How to run a NYM mixnode</title>
+      <link>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</link>
+      <pubDate>Sun, 09 May 2021 12:30:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</guid>
+      <description>Some time ago I&amp;rsquo;ve started running a NYM mixnode. NYM is a project that targets improving privacy by decomposing network packages from different hosts, so that origin and target cannot be traced.
+You can check more about the NYM project at their site at https://nymtech.net/.
+The project uses Open Source technology to run, and they have a nice docs with details on how to run a node at https://nymtech.net/docs/, and the one relevant for mixnodes at https://nymtech.</description>
+    </item>
+    
+    <item>
+      <title>Install RHEL7/Centos/Fedora on a software raid device</title>
+      <link>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</link>
+      <pubDate>Sat, 28 Mar 2015 18:46:42 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</guid>
+      <description>Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.
+There are several RAID level definitions and may have different uses depending on our needs and hardware availability.
+For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data).</description>
+    </item>
+    
+    <item>
+      <title>Customize RHEL/CentOS installation media (EL4/EL5&#43;)</title>
+      <link>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</link>
+      <pubDate>Sat, 23 Jan 2010 08:25:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</guid>
+      <description>Introduction A standard install media, (let&amp;rsquo;s talk about a DVD for easier start) has several files/folders at his root, but most important are:
+isolinux (where the loader lives) images (for extra files for installer to load) Packages for installation (RedHat/ for EL4, Server/Client for EL5) Usually, a distribution has, for its main binaries, more than 2 gigabytes of data, that enables one target to act as a multifunction server/workstation, but that you will not usually load on the same system.</description>
+    </item>
+    
+  </channel>
+</rss>

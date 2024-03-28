@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/github/</link>
+    <description>Recent content in Github on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Jan 2021 22:24:00 +0100</lastBuildDate><atom:link href="https://iranzo.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be lazy, automate: GitHub actions for static blogging</title>
+      <link>https://iranzo.io/presentations/2021-01-14-be-lazy-automate-gha-for-static-blogging/2021-01-14-be-lazy-automate-gha-for-static-blogging/</link>
+      <pubDate>Thu, 14 Jan 2021 22:24:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/presentations/2021-01-14-be-lazy-automate-gha-for-static-blogging/2021-01-14-be-lazy-automate-gha-for-static-blogging/</guid>
+      <description>Be lazy, automate: GitHub Actions for static blogging /me: Pablo Iranzo Gómez ( https://iranzo.io )
+What is a blog? A place to share knowledge, interests, tips, etc.
+Usually features:
+images comments from visitors, related articles, etc. What are the costs for a blog? Web costs money:
+Hosting Domain Maintenance etc. What is static blogging? Generate a static webpage
+Think of it as rendering templates into HTML Has no requirements on the web server, any simple Webserver is enough: Look ma!</description>
+    </item>
+    
+    <item>
+      <title>GitHub Actions for publishing</title>
+      <link>https://iranzo.io/blog/2020/08/10/github-actions-for-publishing/</link>
+      <pubDate>Mon, 10 Aug 2020 07:44:24 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2020/08/10/github-actions-for-publishing/</guid>
+      <description>When I started with blog-o-matic I had to involve external &amp;lsquo;Travis-CI&amp;rsquo;, generating a token on GitHub, setting environment variables on Travis, etc
+GitHub started enabling actions which allows to automate workflows in a similar way than Travis or other external providers allowed, but with one extra feature: configuration is defined inside .github/ folder of your repository, which makes incredibly easy to copy the setup for one tool to another (except of optional required tokens that are configured per repo).</description>
+    </item>
+    
+    <item>
+      <title>Use custom domain name with Blog-O-Matic</title>
+      <link>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</guid>
+      <description>As a recipe, if you want to enable a custom domain name on blog-o-matic a special file needs to be created on the &amp;lsquo;GitHub Pages&amp;rsquo; served &amp;lsquo;master&amp;rsquo; branch.
+In order to do so, edit pelicanconf.py and add the following differences:
+diff --git a/pelicanconf.py b/pelicanconf.py index 680abcb..fc3dd8f 100644 --- a/pelicanconf.py +++ b/pelicanconf.py @@ -46,13 +46,16 @@ AMAZON_ONELINK = &amp;#34;b63a2115-85f7-43a9-b169-5f4c8c275655&amp;#34; # Extra files customization -EXTRA_PATH_METADATA = {} +EXTRA_PATH_METADATA = { + &amp;#39;extra/CNAME&amp;#39;: {&amp;#39;path&amp;#39;: &amp;#39;CNAME&amp;#39;}, +} + EXTRA_TEMPLATES_PATHS = [ &amp;#34;plugins/revealmd/templates&amp;#34;, # eg: &amp;#34;plugins/revealmd/templates&amp;#34; ] -STATIC_PATHS = [ &amp;#39;images&amp;#39; ] +STATIC_PATHS = [ &amp;#39;images&amp;#39; , &amp;#39;extra&amp;#39;] ## ONLY TOUCH IF YOU KNOW WHAT YOU&amp;#39;RE DOING!</description>
+    </item>
+    
+    <item>
+      <title>Fixing pelican revealjs plugin</title>
+      <link>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</link>
+      <pubDate>Sun, 20 Jan 2019 23:12:17 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</guid>
+      <description>Introduction After my recent talk about blog-o-matic, I was trying to upload somewhere the slides I used.
+Since some time ago I started using Reveal-MD, so I could use Markdown to create and show slides, but wanted also a way to upload them for consumption.
+Pelican-revealmd plugin seemed to be the answer.
+It does use pypandoc library and &amp;lsquo;pandoc&amp;rsquo; for doing the conversion.
+The problems found After some test, it had 3 issues:</description>
+    </item>
+    
+    <item>
+      <title>Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with little setup steps.</title>
+      <link>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</link>
+      <pubDate>Wed, 09 Jan 2019 22:00:47 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</guid>
+      <description>Introduction I&amp;rsquo;ve already covered some articles about automation with Travis-CI, GitHub, and one step that seems a show-stopper for many users when trying to build a website is on one side, the investment (domain, hosting, etc), the backend being used (WordPress, static generators, etc)&amp;hellip;
+While preparing a talk for a group of co-workers covering several of those aspects, I came with the idea to create Blog-o-Matic, implementing many of those &amp;rsquo;learnings&amp;rsquo; in a &amp;lsquo;canned&amp;rsquo; way that can be easy to consume by users.</description>
+    </item>
+    
+  </channel>
+</rss>

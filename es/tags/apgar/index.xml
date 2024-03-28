@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Apgar on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/apgar/</link>
+    <description>Recent content in Apgar on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 21 Dec 2018 22:31:47 +0200</lastBuildDate><atom:link href="https://iranzo.io/es/tags/apgar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>El test de APGAR</title>
+      <link>https://iranzo.io/es/bebe/apgar/</link>
+      <pubDate>Fri, 21 Dec 2018 22:31:47 +0200</pubDate>
+      
+      <guid>https://iranzo.io/es/bebe/apgar/</guid>
+      <description>El test de APGAR El test de APGAR consiste en una valoración dada en base a 5 parámetros y que se realiza al minuto de nacer y una segunda vez a los 5 minutos.
+Este test valora diversos aspectos:
+Aspecto (color de la piel) Pulso (frecuencia cardíaca) Irritabilidad (reflejos) Actividad (tono muscular) Respiración (ritmo y esfuerzo) Para cada uno de estos parámetros se le asigna una puntuación entre 0 y 2, en resumen la guía, como indica la Wikipedia es:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Troubleshooting on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/troubleshooting/</link>
+    <description>Recent content in Troubleshooting on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Mar 2023 17:00:00 +0100</lastBuildDate><atom:link href="https://iranzo.io/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using ChatGPT for writing Risu Plugins</title>
+      <link>https://iranzo.io/blog/2023/03/02/using-chatgpt-for-writing-risu-plugins/</link>
+      <pubDate>Thu, 02 Mar 2023 17:00:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2023/03/02/using-chatgpt-for-writing-risu-plugins/</guid>
+      <description>Lately, there&amp;rsquo;s a lot of interest on ChatGPT, and yes, it&amp;rsquo;s really impressive the way it processes the context to provide answers to the questions.
+To give it a try, and put into play the requirements for writing a Risu plugin, I wrote some of the requirements in a paragraph:
+I want to create a bash script for checking system status.
+The script should use return codes to indicate success, failure, information, error or skipped via the values stored in the variables $RC_OKAY, $RC_SKIPPED, $RC_ERROR, $RC_FAILED and $RC_INFO.</description>
+    </item>
+    
+    <item>
+      <title>OpenShift&#39;s oc debug and parallel execution</title>
+      <link>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</link>
+      <pubDate>Thu, 03 Nov 2022 14:13:32 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</guid>
+      <description>A colleague reported some issues in the OpenShift troubleshooting and diagnosis scripts at OpenShift-checks.
+Some time ago I did contribute some changes to use functions and allow using the RISU wrapper to the scripts, helping consuming the results via RISU&amp;rsquo;s HTML interface.
+As my colleague reported, for some plugins, the output of the command was not shown in the HTML Interface.
+After some investigation, it was found that parallel execution for the plugins was causing no output to be shown, but when filtering to individual ones via risu -i XXXXXXX/plugin -l it was working fine&amp;hellip; the problem was not the check itself, as both of them worked fine when executed individually but failed when executing them together.</description>
+    </item>
+    
+    <item>
+      <title>DevConf.cz 2018: Citellus - Detecting common pitfalls of deployments</title>
+      <link>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</link>
+      <pubDate>Sat, 27 Jan 2018 16:00:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</guid>
+      <description>Citellus: Detecting common pitfalls of deployments https://github.com/citellusorg/citellus
+Recording at https://www.youtube.com/watch?v=SDzzqrUdn5A
+What is Citellus? Citellus is a framework populated by community-contributed scripts that automate detecting problems, including configuration issues, conflicts with package versions, and more. History: how did was it started? The tool, started by Robin Černín after a long weekend shift checking one and over again several sosreports for the same data on different hosts.
+It started with some tests + shell wrapper, and was added a python wrapper by Pablo Iranzo to bring in more powerful features.</description>
+    </item>
+    
+  </channel>
+</rss>

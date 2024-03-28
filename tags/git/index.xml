@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Git on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/git/</link>
+    <description>Recent content in Git on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Mar 2020 14:38:00 +0100</lastBuildDate><atom:link href="https://iranzo.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yaspeller hook for pre-commit</title>
+      <link>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</link>
+      <pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</guid>
+      <description>I&amp;rsquo;ve made a PR that got merged into Yaspeller repository which adds support for pre-commit to spell check your files.
+It requires simple configuration, just add this snippet to your .pre-commit-config.yaml:
+- repo: https://github.com/hcodes/yaspeller.git rev: master hooks: - id: yaspeller files: &amp;#34;\\.en\\.md&amp;#34; The plugin will then initialize and spell check your files via yaspeller. It will use the standard .yaspeller.json file for dictionary and settings and automate it for each new commit you work on.</description>
+    </item>
+    
+    <item>
+      <title>Git commit reordering</title>
+      <link>https://iranzo.io/blog/2020/02/13/git-commit-reordering/</link>
+      <pubDate>Thu, 13 Feb 2020 20:30:24 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2020/02/13/git-commit-reordering/</guid>
+      <description>While I was working for a presentation for kid&amp;rsquo;s school at Magnetic field, Aurora, Lunar Phases and Rockets, I added 4 big videos to the presentation (as I was going to use them offline while presenting).
+I know what git is not the place for big binary files, and even Github proposed to use the LFS backend for that, but as it was just temporary, I went ahead.
+After that commit, I also wrote two more articles, the one on Lego Speed Champions and the one on Galleria.</description>
+    </item>
+    
+    <item>
+      <title>Contributing to OSP upstream a.k.a. Peer Review</title>
+      <link>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</link>
+      <pubDate>Tue, 16 Oct 2018 07:32:47 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</guid>
+      <description>Introduction In the article &amp;ldquo;Contributing to OpenStack&amp;rdquo; we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find low hanging fruits to start contributing).
+Here, we&amp;rsquo;ll cover what happens behind the scene to get change published.
+Upstream workflow Peer review Upstream contributions to OSP and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.</description>
+    </item>
+    
+  </channel>
+</rss>

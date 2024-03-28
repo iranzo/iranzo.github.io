@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dropbox on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/dropbox/</link>
+    <description>Recent content in Dropbox on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Thu, 08 Dec 2011 11:52:00 +0100</lastBuildDate><atom:link href="https://iranzo.io/es/tags/dropbox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Herramientas de sincronización/backup</title>
+      <link>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</link>
+      <pubDate>Thu, 08 Dec 2011 11:52:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</guid>
+      <description>Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de &amp;lsquo;backup&amp;rsquo; en caso de fallo hardware de algún equipo.
+Estuve probando y evaluando diversas herramientas multiplataforma y junto a algunas más, las que más probé fueron estas:
+AeroFS Dropbox Syncany Sparkleshare Wuala SpiderOak Actualmente necesito &amp;lsquo;salvar/sincronizar&amp;rsquo; unos 35Gb de datos (fotos la gran mayoría y no precisamente en RAW), lo que provocó estas comparativas, preferiblemente de servicios que ofrecieran espacio gratuito.</description>
+    </item>
+    
+    <item>
+      <title>Dropbox en Fedora</title>
+      <link>https://iranzo.io/es/blog/2010/04/01/dropbox-en-fedora/</link>
+      <pubDate>Thu, 01 Apr 2010 11:54:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2010/04/01/dropbox-en-fedora/</guid>
+      <description>Para instalar dropbox en Fedora, no es necesario realizar excesivos pasos:
+Abrir una cuenta en
+Dropbox (o si prefieres, en una empresa alternativa como SpiderOak (O Wuala que ofrece espacio adicional por compartir espacio en tu propio disco) Instalar en nuestra fedora el paquete correspondiente para Nautilus (aunque ponga que es para Fedora 10, funciona perfectamente en superiores (probado en 12 y 13))
+Al volver a iniciar sesión (o la lanzar el programa), aparecerá un icono en la bandeja de sistema y comenzará el proceso de configuración en el que se asocia el &amp;rsquo;escritorio&amp;rsquo; a la cuenta de Dropbox que creamos anteriormente.</description>
+    </item>
+    
+  </channel>
+</rss>

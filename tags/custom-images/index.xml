@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Custom Images on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/custom-images/</link>
+    <description>Recent content in Custom Images on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 08 Nov 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://iranzo.io/tags/custom-images/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenShift Layered Images for patching</title>
+      <link>https://iranzo.io/blog/2023/11/08/openshift-layered-images-for-patching/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2023/11/08/openshift-layered-images-for-patching/</guid>
+      <description>With recent releases of OpenShift like 4.13 you can use CoreOS Layering to apply custom images to the nodes.
+The feature allows to build, via a Dockerfile a custom image that can later be applied to our nodes.
+Let&amp;rsquo;s review the steps:
+First we need to find the base image being used in our environment with oc adm release info quay.io/openshift-release-dev/ocp-release:4.13.5-aarch64 --image-for=rhel-coreos Then we use the returned value in the FROM line in our Dockerfile If we want to add custom packages, we should have a server which is reachable and run createrepo on the folder containing the rpm&amp;rsquo;s so that rpm-ostree can download them for installation.</description>
+    </item>
+    
+  </channel>
+</rss>

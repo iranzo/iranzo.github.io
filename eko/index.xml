@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ekoes on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/eko/</link>
+    <description>Recent content in Ekoes on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0200</lastBuildDate><atom:link href="https://iranzo.io/eko/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Live Migration in KubeVirt</title>
+      <link>https://iranzo.io/eko/2020-03-22-live-migration/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/eko/2020-03-22-live-migration/</guid>
+      <description>KubeVirt leverages Live Migration to support workloads to keep running while nodes can be moved to maintenance, etc Check what is needed to get it working and how it works.</description>
+    </item>
+    
+    <item>
+      <title>Baremetal Operator</title>
+      <link>https://iranzo.io/eko/2019-09-11-baremetal-operator/</link>
+      <pubDate>Wed, 11 Sep 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/eko/2019-09-11-baremetal-operator/</guid>
+      <description>This article was published originally at https://metal3.io/blog/2019/09/11/Baremetal-operator.html
+Introduction The baremetal operator, documented at https://github.com/metal3-io/baremetal-operator/blob/master/docs/api.md, it&amp;rsquo;s the Operator in charge of definitions of physical hosts, containing information about how to reach the Out of Band management controller, URL with the desired image to provision, plus other properties related with hosts being used for provisioning instances.
+Quoting from the project:
+The Bare Metal Operator implements a Kubernetes API for managing bare metal hosts.</description>
+    </item>
+    
+  </channel>
+</rss>

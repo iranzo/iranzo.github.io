@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pandoc on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/pandoc/</link>
+    <description>Recent content in Pandoc on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 22 Jan 2019 20:51:27 +0100</lastBuildDate><atom:link href="https://iranzo.io/tags/pandoc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AwesomeSlides for converting LibreOffice ODP into revealjs</title>
+      <link>https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/</link>
+      <pubDate>Tue, 22 Jan 2019 20:51:27 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/</guid>
+      <description>Introduction For some time now, I wanted to put the presentations I did in the past to be available, and since I&amp;rsquo;ve added support to my blog to render revealjs slides, I wanted to also put other presentations that I did in the past, probably (or for sure) outdated, but that were sitting in my computer drive.
+The presentations already got several transformations, but in the actual status they are stored as LibreOffice ODP files, that made it a bit difficult.</description>
+    </item>
+    
+    <item>
+      <title>Fixing pelican revealjs plugin</title>
+      <link>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</link>
+      <pubDate>Sun, 20 Jan 2019 23:12:17 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</guid>
+      <description>Introduction After my recent talk about blog-o-matic, I was trying to upload somewhere the slides I used.
+Since some time ago I started using Reveal-MD, so I could use Markdown to create and show slides, but wanted also a way to upload them for consumption.
+Pelican-revealmd plugin seemed to be the answer.
+It does use pypandoc library and &amp;lsquo;pandoc&amp;rsquo; for doing the conversion.
+The problems found After some test, it had 3 issues:</description>
+    </item>
+    
+  </channel>
+</rss>

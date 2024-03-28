@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blogs on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/blogs/</link>
+    <description>Recent content in Blogs on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 21 Dec 2018 19:22:47 +0200</lastBuildDate><atom:link href="https://iranzo.io/es/tags/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recursos adicionales (blogs, pediatras, etc)</title>
+      <link>https://iranzo.io/es/bebe/recursos/</link>
+      <pubDate>Fri, 21 Dec 2018 19:22:47 +0200</pubDate>
+      
+      <guid>https://iranzo.io/es/bebe/recursos/</guid>
+      <description> Lucia mi pediatra Julio Basulto Armando enfermero de pediatría E-Lactancia, para consultar la compatibilidad con lactancia y embarazo de muchos medicamentos, etc. Consulta siempre con tu médico antes! Disfruta! (y si lo haces, puedes Invitarme a un café ) </description>
+    </item>
+    
+  </channel>
+</rss>

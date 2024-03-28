@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Open Cluster Management on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/open-cluster-management/</link>
+    <description>Recent content in Open Cluster Management on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 19 Jan 2023 08:55:11 +0000</lastBuildDate><atom:link href="https://iranzo.io/tags/open-cluster-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kernel Module Management testing</title>
+      <link>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</guid>
+      <description>Following on the Using Kcli to prepare for OCM testing, we&amp;rsquo;re going to prepare KMM testing in Hub-Spoke approach.
+First we need to prepare our .docker/config.json with the contents of our OpenShift pull secret used with Kcli.
+mkdir -p ~/.docker/ cp openshift_pull.json ~/.docker/config.json Warning advisories Note
+Semi-scripted version available at automate.sh
+Warning
+We&amp;rsquo;re using pre-release bits of the software, that&amp;rsquo;s why we need to define a custom catalog for both the Hub and the Spokes.</description>
+    </item>
+    
+    <item>
+      <title>Using Kcli to prepare for Open Cluster Management testing</title>
+      <link>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</link>
+      <pubDate>Fri, 23 Dec 2022 14:04:45 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</guid>
+      <description>Kcli allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of plans it allows to automate most of the setup required to have an environment ready.
+In our case, let&amp;rsquo;s setup an environment to practice with Open Cluster Management but instead of using kind clusters, let&amp;rsquo;s use VM&amp;rsquo;s.
+Note
+We&amp;rsquo;ll require to setup an openshift_pull.json file for Kcli to consume when accessing the required resources for this to work.</description>
+    </item>
+    
+  </channel>
+</rss>

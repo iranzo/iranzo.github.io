@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tech on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/categories/tech/</link>
+    <description>Recent content in Tech on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Tue, 21 Mar 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://iranzo.io/es/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mostrar eventos de un calendario en Telegram</title>
+      <link>https://iranzo.io/es/blog/2023/03/21/mostrar-eventos-de-un-calendario-en-telegram/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2023/03/21/mostrar-eventos-de-un-calendario-en-telegram/</guid>
+      <description>Si tienes un grupo de Telegram puede resultarte interesante la característica de https://t.me/redken_bot que permite añadir un calendario ical y que automatiza mostrar cada día las entradas de la agenda para el día.
+Si leíste la entrada Python and iCalendar ICS processing, parte de las bases ahí indicadas están integradas en el bot y son fácilmente utilizables:
+Para configurarlo sólo se necesitan unos simples pasos:
+Tener un calendario ICS/webcal accesible (por ejemplo un calendario público de Google Calendar) Tener un grupo de telegram donde queramos mostrarlo Añadir a @redken_bot al grupo Especificar la URL del calendario y el nombre A continuación, mostraré unas capturas del proceso para que veas lo sencillo que es.</description>
+    </item>
+    
+    <item>
+      <title>Localizadores para niños</title>
+      <link>https://iranzo.io/es/blog/2023/03/20/localizadores-para-ni%C3%B1os/</link>
+      <pubDate>Mon, 20 Mar 2023 12:00:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2023/03/20/localizadores-para-ni%C3%B1os/</guid>
+      <description>Si alguna vez has estado en algún sitio grande o con mucha gente, habrás tenido la necesidad de tener localizado a tu hijo/hija.
+Existen rastreadores GPS como este https://s.click.aliexpress.com/e/_EzNxPB3 que permiten hacer el seguimiento, pero necesitan una tarjeta SIM, con tarifa de datos y al igual que con los teléfonos, necesitas cargarlo cada cierto tiempo porque tanto GPS como el uso de los datos consume batería.
+En el caso de este dispositivo, se puede consultar la ubicación en la web http://www.</description>
+    </item>
+    
+    <item>
+      <title>Añadir servidores Z39.50 a Koha</title>
+      <link>https://iranzo.io/es/blog/2023/03/01/a%C3%B1adir-servidores-z39.50-a-koha/</link>
+      <pubDate>Wed, 01 Mar 2023 14:04:45 +0000</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2023/03/01/a%C3%B1adir-servidores-z39.50-a-koha/</guid>
+      <description>Presentación del protocolo Z39.50, y casos prácticos El protocolo Z39.50 es un protocolo cliente-servidor que está orientado a la recuperación de información a través de una misma interfaz y de amplia aplicación en el mundo de las bibliotecas y centros documentales, permitiendo acceder a diversas bases de datos desde un mismo punto de acceso. El protocolo en sí, está cubierto por la ISO 23950 estándar 27446, Z39.59.
+Este protocolo cumple uno de los fines principales de las bibliotecas, el acceso al conocimiento y la posibilidad de encontrar los recursos que lo contienen.</description>
+    </item>
+    
+    <item>
+      <title>Autofirma en Linux</title>
+      <link>https://iranzo.io/es/blog/2021/09/09/autofirma-en-linux/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2021/09/09/autofirma-en-linux/</guid>
+      <description>Instalando Autofirma en Fedora 34</description>
+    </item>
+    
+    <item>
+      <title>@redken_bot</title>
+      <link>https://iranzo.io/es/redken_bot/</link>
+      <pubDate>Mon, 04 Mar 2019 18:34:14 +0100</pubDate>
+      
+      <guid>https://iranzo.io/es/redken_bot/</guid>
+      <description>Learn about Redken Telegram Bot usage and configuration settings.</description>
+    </item>
+    
+    <item>
+      <title>Android TV y el error de Netflix&#39;s tvq-pm-100 (5.2.5)</title>
+      <link>https://iranzo.io/es/blog/2018/12/30/android-tv-y-el-error-de-netflixs-tvq-pm-100-5.2.5/</link>
+      <pubDate>Sun, 30 Dec 2018 19:26:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2018/12/30/android-tv-y-el-error-de-netflixs-tvq-pm-100-5.2.5/</guid>
+      <description>Android TV versus Android TV-Box Android, utilizado en múltiples dispositivos móviles es también parte de televisores y reproductores multimedia.
+La mayor diferencia entre ambas aproximaciones es el interfaz de usuario y las aplicaciones.
+Android TV-Box: es como un tablet o un teléfono conectado a una TV y generalmente necesita teclado externo, habitualmente integrado en el control remoto.
+Android TV: es una versión de Android que incorpora cambios para TV en el sistema operativo, de forma que es posible controlarlo con un mando de cruceta así como teclas adicionales para ir atrás, ir al inicio y micrófono.</description>
+    </item>
+    
+    <item>
+      <title>Montar un router con la idea de wireless</title>
+      <link>https://iranzo.io/es/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless/</link>
+      <pubDate>Wed, 18 Jun 2003 21:39:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless/</guid>
+      <description>Introducción Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red.
+En el caso de las redes inalámbricas, existen varias aproximaciones.
+Un nodo puede ser un aparato denominado Punto de Acceso o por sus siglas en inglés AP (Access Point) que contiene en su interior un interfaz wireless y una conexión Ethernet RJ45 para enlazarlo o bien con un equipo o con una red.</description>
+    </item>
+    
+  </channel>
+</rss>

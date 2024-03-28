@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fedora on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/fedora/</link>
+    <description>Recent content in Fedora on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 07 Jul 2021 22:00:00 +0200</lastBuildDate><atom:link href="https://iranzo.io/categories/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>imapfilter for Gmail</title>
+      <link>https://iranzo.io/blog/2021/07/07/imapfilter-for-gmail/</link>
+      <pubDate>Wed, 07 Jul 2021 22:00:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/07/07/imapfilter-for-gmail/</guid>
+      <description>Learn on how to use imapfilter against Gmail for classifying the messages</description>
+    </item>
+    
+    <item>
+      <title>Geo replication with syncthing</title>
+      <link>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</link>
+      <pubDate>Sat, 12 Jun 2021 21:40:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</guid>
+      <description>Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc
+After being using BitTorrent sync and later resilio sync (even if I didn&amp;rsquo;t fully liked the idea of it being not open source), I gave up. My NAS with 16 GB of ram, even if a bit older (HP N54L), seemed not to have enough memory to run it, and was constantly swapping.</description>
+    </item>
+    
+    <item>
+      <title>Argos extension writing for Gnome3</title>
+      <link>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</guid>
+      <description>I was using from time ago this extension for Gnome named Argos which allows to create useful data views using scripts written in whatever language of choice available, bash included.
+So far I had just a simple extension writing a UNICODE character, but with the suggestion of my colleague Javi Ramírez, I decided to use the motivational idea to write a simple script to calculate how much you&amp;rsquo;ve earned so far in the day and show that information at a glance on your menu bar.</description>
+    </item>
+    
+    <item>
+      <title>Filtering email with imapfilter</title>
+      <link>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</link>
+      <pubDate>Fri, 28 Aug 2015 15:27:47 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</guid>
+      <description>Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&amp;amp;drop reordering of rules, cloning, etc.
+As I was already using offlineimap to sync from the remote mail server to my system into a maildir folder, I had almost all the elements I needed.
+After searching for several options imapfilter seemed to be a perfect fit, so I started with a small set of rules and start integration with my email process.</description>
+    </item>
+    
+    <item>
+      <title>Install RHEL7/Centos/Fedora on a software raid device</title>
+      <link>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</link>
+      <pubDate>Sat, 28 Mar 2015 18:46:42 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</guid>
+      <description>Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.
+There are several RAID level definitions and may have different uses depending on our needs and hardware availability.
+For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data).</description>
+    </item>
+    
+    <item>
+      <title>Podcasts with flexget and transmission</title>
+      <link>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</link>
+      <pubDate>Mon, 16 Mar 2015 21:45:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</guid>
+      <description>Some podcasts are available via RSS feeds, so you can get notified of new episodes, so the best way I&amp;rsquo;ve found so far to automate this procedure is to use the utility flexget.
+Flexget can download a RSS feed and get the .torrent files associated to them and store locally, which makes a perfect fit for later using Transmission&amp;rsquo;s watch folder, to automatically add them to your download queue.
+In order to do so, install flexget either via pip (pip install flexget) or using a package for your distribution and create a configuration file similar to this:</description>
+    </item>
+    
+    <item>
+      <title>duplicity for managing backups</title>
+      <link>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</link>
+      <pubDate>Mon, 27 Jun 2011 16:35:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</guid>
+      <description>A few days ago, I was checking a friend&amp;rsquo;s system for backing up.
+It was based on rsync at the Linux side and rsync server on a windows machine he uses for storing information generated by other software.
+The solution with rsync worked pretty well for him until he started to put several strange characters in filenames which rendered the backup unusable to certain point.
+After being asked for alternative backup software that was available on several platforms, I&amp;rsquo;ve ended testing duplicity.</description>
+    </item>
+    
+    <item>
+      <title>Firsts steps with Fedora 15 pre-alpha</title>
+      <link>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</link>
+      <pubDate>Mon, 07 Mar 2011 17:26:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</guid>
+      <description>Today I&amp;rsquo;ve decided to give it a try to F15-prealpha (expected to release tomorrow).
+The upgrade performed in the unsupported way (getting and forcing install for newer fedora-release from a mirror then start issuing several yum upgrades) when reasonably good.
+Only some minor dependency problems et voilà, system started fine.
+Problems so far:
+Firefox 4 has a few approved extensions, I used the &amp;ldquo;nightly tester tools&amp;rdquo; to disable version check and enable most of the ones I had with 3.</description>
+    </item>
+    
+  </channel>
+</rss>

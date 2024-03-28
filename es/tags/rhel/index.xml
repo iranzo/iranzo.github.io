@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>RHEL on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/rhel/</link>
+    <description>Recent content in RHEL on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 13 Jul 2022 21:00:35 +0000</lastBuildDate><atom:link href="https://iranzo.io/es/tags/rhel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trucos y consejos para el RHCE y RHCSA</title>
+      <link>https://iranzo.io/es/blog/2022/07/13/trucos-y-consejos-para-el-rhce-y-rhcsa/</link>
+      <pubDate>Wed, 13 Jul 2022 21:00:35 +0000</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2022/07/13/trucos-y-consejos-para-el-rhce-y-rhcsa/</guid>
+      <description>Aunque hice el examen de RHCE algún tiempo, sigue habiendo trucos y consejos que siempre transmito a los interesados y que vienen indicados en el libro que escribimos: Red Hat Enterprise 8 Administration:
+No recuerdes cada paso, por ejemplo, nunca recuerdo la configuración de BIND, asi que recuerdo el paquete con el fichero que tiene ejemplos, lo instalo y lo consulto. Instala mlocate y ejecuta updatedb tan pronto como empieces, así podrás usar locate &amp;lt;fichero&amp;gt; para encontrar archivos rápidamente en tu sistema.</description>
+    </item>
+    
+    <item>
+      <title>iSCSI y Clustering en RHEL/CentOS</title>
+      <link>https://iranzo.io/es/blog/2008/12/13/iscsi-y-clustering-en-rhel/centos/</link>
+      <pubDate>Sat, 13 Dec 2008 17:59:41 +0000</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2008/12/13/iscsi-y-clustering-en-rhel/centos/</guid>
+      <description>Introducción Durante la última semana estuve jugando de nuevo con iSCSI en el curso de RH436 Enterprise Clustering and Storage Management. Hace tiempo había seguido dos artículos Instalando un target iSCSI y su continuación Montando un iniciador iSCSI.
+iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel &amp;lsquo;barato&amp;rsquo;, podemos utilizar el espacio de un servidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.</description>
+    </item>
+    
+  </channel>
+</rss>

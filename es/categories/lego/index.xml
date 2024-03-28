@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LEGO on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/categories/lego/</link>
+    <description>Recent content in LEGO on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Tue, 04 Feb 2020 00:30:24 +0100</lastBuildDate><atom:link href="https://iranzo.io/es/categories/lego/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clonando etiquetas Lego Dimensions</title>
+      <link>https://iranzo.io/es/blog/2020/02/04/clonando-etiquetas-lego-dimensions/</link>
+      <pubDate>Tue, 04 Feb 2020 00:30:24 +0100</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2020/02/04/clonando-etiquetas-lego-dimensions/</guid>
+      <description>Introducción En el artículo Lego Dimensions, hablaba de los packs disponibles para jugar con la consola.
+Desgraciadamente, no están todos disponibles para ser comprados excepto de colecionistas, &amp;lt;brickset.com&amp;gt; o algunos vendedores.
+Tras algo de búsqueda, diversas páginas proporcionan información acerca de los propios &amp;rsquo;tags&amp;rsquo; o etiquetas y de cómo arreglarlos o clonarlos.
+Lista de materiales Cada base de Lego Dimensions es una etiqueta NFC NTAG 213 que puede ser sólo lectura (las figuritas) o lectura-escritura (vehículos).</description>
+    </item>
+    
+    <item>
+      <title>Lego Dimensions Reseña</title>
+      <link>https://iranzo.io/es/blog/2019/08/19/lego-dimensions-rese%C3%B1a/</link>
+      <pubDate>Mon, 19 Aug 2019 22:00:36 +0200</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2019/08/19/lego-dimensions-rese%C3%B1a/</guid>
+      <description>Introducción Lego Dimensions es un juego para varias plataformas (XBox, Wii U, PlayStation) que consta de una plataforma con lectores NFC con varias zonas y leds de colores que permiten interactuar con el videojuego desde el mundo físico.
+El &amp;lsquo;starter pack&amp;rsquo; viene con las figuras de SuperCool, Batman y Gandalf, así como piezas adicionales para decorar la &amp;lsquo;base lectora&amp;rsquo; construyendo un portal.
+La historia principal se basa en cómo estos tres personajes (Gandalf, Batman y Supercool) se encuentran e intentan buscar juntos a sus amigos pasando por varios mundos.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rocky Linux on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/rocky-linux/</link>
+    <description>Recent content in Rocky Linux on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:42:48 +0000</lastBuildDate><atom:link href="https://iranzo.io/tags/rocky-linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No matching key found</title>
+      <link>https://iranzo.io/tips/no-matching-key-found/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      
+      <guid>https://iranzo.io/tips/no-matching-key-found/</guid>
+      <description>As you might have experienced&amp;hellip; using a recent system to connect to a legacy one could be complicated as some insecure protocols have been disabled, with a message like:
+Unable to negotiate with 192.168.2.82 port 22: no matching host key type found. Their offer: ssh-rsa,ssh-dss Create an entry like this in your .ssh/config file, so that insecure methods can be used to connect to a specific host:
+Host 192.168.2.82 HostKeyAlgorithms=+ssh-rsa KexAlgorithms=+diffie-hellman-group1-sha1 PubkeyAcceptedKeyTypes=+ssh-rsa User root or alternatively on the command line:</description>
+    </item>
+    
+    <item>
+      <title>Unsupported upgrade for RHEL-based distributions without reinstallation</title>
+      <link>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</link>
+      <pubDate>Sat, 23 Apr 2022 21:23:48 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</guid>
+      <description>Most systems, based on RHEL, were not able to upgrade without reinstallation, or best said, not supported. The new version, that was released at around 18 months later contained so many changes that it was hard to test the upgrades themselves until leapp was introduced.
+Check the lifecycle here: https://access.redhat.com/support/policy/updates/errata
+However, the biggest problem could be the incompatibility of packages or package formats&amp;hellip; but as usually there were some middle layers it was possible to upgrade without reinstallation by performing some manual steps.</description>
+    </item>
+    
+  </channel>
+</rss>

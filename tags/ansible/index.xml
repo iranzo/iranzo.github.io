@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ansible on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/ansible/</link>
+    <description>Recent content in Ansible on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 Mar 2023 16:40:32 +0000</lastBuildDate><atom:link href="https://iranzo.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automating SSH keys loading for Ansible usage</title>
+      <link>https://iranzo.io/tips/automatesshkeys/</link>
+      <pubDate>Thu, 02 Mar 2023 16:40:32 +0000</pubDate>
+      
+      <guid>https://iranzo.io/tips/automatesshkeys/</guid>
+      <description>For using Ansible it&amp;rsquo;s required to have a working set of ssh-keys already deployed.
+If you get a set of systems that have not been provisioned by you and are missing the SSH keys, having it fixed might take a while if doing it manually. Good news is that you can use a script in expect to cover this part:
+#!/usr/bin/expect -f # set Variables set password [lrange $argv 0 0] set ipaddr [lrange $argv 1 1] # now connect to remote system spawn ssh-copy-id root@$ipaddr match_max 100000 # Check for initial connection (add key of host) set timeout 5 expect &amp;#34;yes/no&amp;#34; { send -- &amp;#34;yes\r&amp;#34; } # Check for password prmpt set timeout 120 # Look for passwod prompt expect &amp;#34;password:&amp;#34; { send -- &amp;#34;$password\r&amp;#34; } # send blank line (\r) to come back send -- &amp;#34;\n&amp;#34; expect eof This script, when used like:</description>
+    </item>
+    
+    <item>
+      <title>Automate code build and deployment with ansible</title>
+      <link>https://iranzo.io/blog/2022/11/09/automate-code-build-and-deployment-with-ansible/</link>
+      <pubDate>Wed, 09 Nov 2022 07:00:46 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/11/09/automate-code-build-and-deployment-with-ansible/</guid>
+      <description>Let&amp;rsquo;s say that we want to keep our system updated with some code which is not distributed as a regular package, but as a code in a repository (which unfortunately, it&amp;rsquo;s a pretty common situation).
+As a part of the ansible playbooks used for the hosts, I can add a snippet like this:
+gitrepos: - { url: &amp;#34;https://github.com/myrepo/repo.git&amp;#34;, tag: &amp;#34;tagtocheckout&amp;#34;, folder: &amp;#34;/root/path-for-check-out&amp;#34;, chdir: &amp;#34;subdir to enter&amp;#34;, build: &amp;#34;make build&amp;#34;, exec: &amp;#34;build/mybuiltbinary&amp;#34;, } With this definition in the host inventory, we can then in our playbook to perform several steps:</description>
+    </item>
+    
+    <item>
+      <title>Ansible - dynamically include Jinja templates and tasks</title>
+      <link>https://iranzo.io/blog/2022/09/24/ansible-dynamically-include-jinja-templates-and-tasks/</link>
+      <pubDate>Sat, 24 Sep 2022 11:13:32 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/09/24/ansible-dynamically-include-jinja-templates-and-tasks/</guid>
+      <description>For my ansible playbooks, I wanted to be able to add several new templates to be copied to target system, and additionally be able to perform some commands for them without having to specify each individual file/template to copy.
+My approach:
+Define for the hosts I want to find templates/playbooks define a var named extras for the relevant hosts:
+extras: - ntp - certificates The names defined (in above example ntp and certificates) are just name of folders laying inside tasks/templates/${folder} that are searched and included or excluded based on extras values.</description>
+    </item>
+    
+    <item>
+      <title>Include Ansible playbooks sorted</title>
+      <link>https://iranzo.io/tips/include-sorted-playbooks/</link>
+      <pubDate>Fri, 23 Sep 2022 11:13:32 +0000</pubDate>
+      
+      <guid>https://iranzo.io/tips/include-sorted-playbooks/</guid>
+      <description>Use sorted list for included files vs random provided by with_fileglob.
+- name: Include tasks include_tasks: &amp;#34;{{item}}&amp;#34; loop: &amp;#34;{{ query(&amp;#39;fileglob&amp;#39;, &amp;#39;tasks/*.yaml&amp;#39;) | sort }}&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title>Ansible setup for VPN using WireGuard</title>
+      <link>https://iranzo.io/blog/2022/03/17/ansible-setup-for-vpn-using-wireguard/</link>
+      <pubDate>Thu, 17 Mar 2022 20:32:50 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2022/03/17/ansible-setup-for-vpn-using-wireguard/</guid>
+      <description>Learn on how to setup a VPN using WireGuard using Ansible</description>
+    </item>
+    
+    <item>
+      <title>The experience of writing a book</title>
+      <link>https://iranzo.io/blog/2021/09/15/the-experience-of-writing-a-book/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/09/15/the-experience-of-writing-a-book/</guid>
+      <description>I wanted to write about my experience (before I forget about it), and as some colleagues asked about it&amp;hellip; here we go&amp;hellip;
+As published in the blog entry RHEL8 Administration book, some colleagues and I wrote a book on RHEL8 administration, which can be bought here.
+Many years ago I started one about Linux, but every time a new paragraph was added, a lot of new &amp;lsquo;TO-DO&amp;rsquo; items were appended as the information growth&amp;hellip; and as it was a &amp;lsquo;solo&amp;rsquo; project, I had other stuff to work on and was parked.</description>
+    </item>
+    
+    <item>
+      <title>How to check if a system is virtual</title>
+      <link>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</link>
+      <pubDate>Mon, 10 May 2021 14:30:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</guid>
+      <description>I was improving a playbook in Ansible and wanted to find a way to find if a system was virtual or not to decide about some tunning like setting tuned-adm profile virtual-guest or disable the power off when the lid is closed.
+After some research and try-except situations I got to this one that seemed to work (I had to tune it as one desktop machine was missing the /sys entry I was using before):</description>
+    </item>
+    
+    <item>
+      <title>Upstream/Downstream documentation workflow</title>
+      <link>https://iranzo.io/blog/2020/12/01/upstream/downstream-documentation-workflow/</link>
+      <pubDate>Tue, 01 Dec 2020 14:10:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2020/12/01/upstream/downstream-documentation-workflow/</guid>
+      <description>During last year I&amp;rsquo;ve worked with the https://github.com/openshift-kni/baremetal-deploy/ repository after being working in the KNI Community team that was in charge of &amp;lt;KubeVirt.io&amp;gt; and &amp;lt;Metal3.io&amp;gt; where some of the below things were applied.
+One of the goals we had was to streamline the upstream &amp;lt;-&amp;gt; downstream process to keep changes done in the right way: get changes upstream and copy over downstream with minimal changes.
+We ended up using AsciiDoctor for building the documentation in the same way it&amp;rsquo;s done downstream so it&amp;rsquo;s just a matter of copying over the modules.</description>
+    </item>
+    
+    <item>
+      <title>Recent changes in Magui and Citellus</title>
+      <link>https://iranzo.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/</link>
+      <pubDate>Tue, 16 Jan 2018 21:17:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/</guid>
+      <description>What&amp;rsquo;s new? During recent weeks we&amp;rsquo;ve been coding and performing several changes to Citellus and Magui.
+Checking the latest logs or list of issues open and closed on github is probably not an easy task or the best way to get &amp;lsquo;up-to-date&amp;rsquo; with changes, so I&amp;rsquo;ll try to compile a few here.
+First of all, we&amp;rsquo;re going to present it at DevConf.cz 2018, so come stop-by if assisting :-)
+Some of the changes include&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>InfraRed for deploying OpenStack</title>
+      <link>https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/</link>
+      <pubDate>Thu, 23 Feb 2017 23:27:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/</guid>
+      <description>InfraRed is tool that allows to install/provision OpenStack. You can find the documentation for the project at http://infrared.readthedocs.io.
+Also, developers and users are online in FreeNode at #infrared channel.
+Why InfraRed? Deploying OSP with OSP-d (TripleO) requires several setup steps for preparation, deployment, etc. InfraRed simplifies them by automating with ansible most of those steps and configuration.
+It allows to deploy several OSP versions Allows to ease connection to installed vm roles (Ceph, Computes, Controllers, Undercloud) Allows to define working environments so one InfraRed-running host can be used to manage different environments and much more&amp;hellip; Setup of InfraRed-running host Setting InfraRed is quite easy, at the moment the version 2 (branch on github) is working pretty well.</description>
+    </item>
+    
+    <item>
+      <title>Getting started with Ansible</title>
+      <link>https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/</link>
+      <pubDate>Mon, 20 Feb 2017 23:10:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/</guid>
+      <description>Introduction I&amp;rsquo;ve started to get familiar with Ansible because, apart of getting more and more accepted for OSP-related tasks and installation, I wanted to automate some tasks we needed to setup some servers for the OpenStack group I work for.
+First of all, it&amp;rsquo;s recommended to get latest version of ansible (tested on RHEL7 and Fedora), but in order not to mess with the system python libraries, it&amp;rsquo;s convenient to use python&amp;rsquo;s virtual environments.</description>
+    </item>
+    
+  </channel>
+</rss>

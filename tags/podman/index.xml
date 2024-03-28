@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Podman on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/podman/</link>
+    <description>Recent content in Podman on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 27 Jan 2023 09:00:00 +0100</lastBuildDate><atom:link href="https://iranzo.io/tags/podman/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable rootless podman on Fedora</title>
+      <link>https://iranzo.io/blog/2023/01/27/enable-rootless-podman-on-fedora/</link>
+      <pubDate>Fri, 27 Jan 2023 09:00:00 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2023/01/27/enable-rootless-podman-on-fedora/</guid>
+      <description>With podman we can setup containers for being used for non root users by performing some simple steps:
+Install required packages dnf -y install slirp4netns fuse-overlayfs crun podman shadow-utils Force the number of user namespaces (might be required on some environments):
+echo &amp;#34;user.max_user_namespaces=28633&amp;#34; &amp;gt; /etc/sysctl.d/userns.conf sysctl -p /etc/sysctl.d/userns.conf Delegate Allows to define which resources are available1:
+mkdir -p /etc/systemd/system/user@.service.d cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/systemd/system/user@.service.d/delegate.conf [Service] Delegate=cpu cpuset io memory pids EOF To verify it has been done correctly, logout and login with the user and execute:</description>
+    </item>
+    
+  </channel>
+</rss>

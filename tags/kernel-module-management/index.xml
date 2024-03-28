@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kernel Module Management on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/kernel-module-management/</link>
+    <description>Recent content in Kernel Module Management on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 21 Jun 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://iranzo.io/tags/kernel-module-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KMM 1.1 Scale testing</title>
+      <link>https://iranzo.io/blog/2023/06/21/kmm-1.1-scale-testing/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2023/06/21/kmm-1.1-scale-testing/</guid>
+      <description>First published at https://cloud.redhat.com/blog/scale-testing-kernel-module-management
+Introduction Kernel Module Management (KMM) Operator manages, builds, signs and deploys out-of-tree kernel modules and device plugins on OpenShift Container Platform clusters.
+KMM adds, for the HUB/Spoke scenario, a new ManagedClusterModule which describes an out-of-tree kernel module and its associated device plugin. You can use ManagedClusterModule resources to configure how to load the module, define ModuleLoader images for kernel versions, and include instructions for building and signing modules for specific kernel versions.</description>
+    </item>
+    
+    <item>
+      <title>Kernel Module Management testing</title>
+      <link>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</guid>
+      <description>Following on the Using Kcli to prepare for OCM testing, we&amp;rsquo;re going to prepare KMM testing in Hub-Spoke approach.
+First we need to prepare our .docker/config.json with the contents of our OpenShift pull secret used with Kcli.
+mkdir -p ~/.docker/ cp openshift_pull.json ~/.docker/config.json Warning advisories Note
+Semi-scripted version available at automate.sh
+Warning
+We&amp;rsquo;re using pre-release bits of the software, that&amp;rsquo;s why we need to define a custom catalog for both the Hub and the Spokes.</description>
+    </item>
+    
+  </channel>
+</rss>

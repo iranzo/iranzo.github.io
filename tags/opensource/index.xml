@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>OpenSource on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/opensource/</link>
+    <description>Recent content in OpenSource on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2020 07:30:24 +0100</lastBuildDate><atom:link href="https://iranzo.io/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Galleria.io and PhotoSwipe</title>
+      <link>https://iranzo.io/blog/2020/02/12/galleria.io-and-photoswipe/</link>
+      <pubDate>Wed, 12 Feb 2020 07:30:24 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2020/02/12/galleria.io-and-photoswipe/</guid>
+      <description>Introduction I was looking for an alternative for my (this) blog and hold pictures. I&amp;rsquo;m a lego fan so I wanted to get some pictures uploaded but without bloating the site.
+In the article Lego Mini Cooper MOC I did add lot of pictures, same for Lego Chinese dinner and Lego Dragon Dance.
+I was checking and how telegram does handle some links and found that Instagram &amp;rsquo;links&amp;rsquo; get expanded to list the images inside directly to see if that could help in a task I was helping at Pelican-Elegant theme used at this site for creating a gallery.</description>
+    </item>
+    
+  </channel>
+</rss>

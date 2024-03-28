@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/blog/</link>
+    <description>Recent content in Blog on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 Mar 2020 09:30:24 +0100</lastBuildDate><atom:link href="https://iranzo.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>English Game - Baker Street</title>
+      <link>https://iranzo.io/blog/2020/03/24/english-game-baker-street/</link>
+      <pubDate>Tue, 24 Mar 2020 09:30:24 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2020/03/24/english-game-baker-street/</guid>
+      <description>Introduction Ian, our English teacher from Tailor-Made Communication has given to us this game.
+There are 5 buildings with consecutive numbers and some data to fill.
+A set of clues is given in order for the reader to deduct the data and to introduce some vocabulary.
+Fill-in table Category 12 14 16 18 20 Name Marital status Pet Book Drink Clues Miss Dudd owns a dog The woman at number 12 has two pets.</description>
+    </item>
+    
+    <item>
+      <title>Paella Howto</title>
+      <link>https://iranzo.io/blog/2012/07/08/paella-howto/</link>
+      <pubDate>Sun, 08 Jul 2012 11:35:14 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2012/07/08/paella-howto/</guid>
+      <description>This document is based on the original recipe and pictures that I gave to my colleague Miguel Pérez Colino which he assembled in an internal company document and that he kindly translated for increased reach.
+Ingredients A bag of vegetables for paella (garrofón, Valencian white bean; ferraura y bajoqueta, Valencian green beans with pod) Rice bomba 🛒#ad (7 handfuls) Chicken and Rabbit (700 and 400 grams) Grated tomato (The equivalent to 5 spoons) Sweet Red Paprika Powder (Pimentón Rojo 🛒#ad) Spanish Saffron 🛒#ad (300mg in threads) or E102 dye (small spoon just to the border) Olive oil 🛒#ad to stir-fry (not much, so it doesn&amp;rsquo;t get oily) Rosemary 🛒#ad Salt Water (from Valencia) Preparation A garlic clove, to be grated, must be peeled and put together with tomato.</description>
+    </item>
+    
+    <item>
+      <title>Error depending of number of beeps in BIOS</title>
+      <link>https://iranzo.io/blog/2004/04/12/error-depending-of-number-of-beeps-in-bios/</link>
+      <pubDate>Mon, 12 Apr 2004 09:54:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2004/04/12/error-depending-of-number-of-beeps-in-bios/</guid>
+      <description>BIOS (Basic Input Output System) from PC&amp;rsquo;s report errors in the hardware at boot with a code of beeps, that can help diagnose the issue in case there&amp;rsquo;s no image being displayed.
+Error code reported by BIOS during POST (Power On Self Test):
+Fatal errors # of beeps Meaning 1 DRAM refresh error 2 640Kb base RAM error 4 system timer error 5 CPU error 6 Keyboard Gate A20 error 7 Virtual mode exception error 9 BIOS-ROM checksum error Non-Fatal errors # of beeps Meaning 3 Memory test failure conventional and extended 8 Monitor error with tracing vertical and horizontal Enjoy!</description>
+    </item>
+    
+    <item>
+      <title>Jumpers Olivetti Echos P75</title>
+      <link>https://iranzo.io/blog/2004/04/06/jumpers-olivetti-echos-p75/</link>
+      <pubDate>Tue, 06 Apr 2004 10:01:00 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2004/04/06/jumpers-olivetti-echos-p75/</guid>
+      <description>Olivetti Echos Family (Tested on my P75, but obtained from the Internet) (Running now at 166 MHz)
+Jumper Settings Processor Speed 1100 75 MHz 0000 90 MHz 0100 100 MHz 1110 100 MHz 0010 120 MHz 1111 120 MHz 0110 133 MHz 0011 150 MHz 1101 150 MHz 0001 166 MHz 0111 166 MHz Switches 1,2:
+Switch 1 Switch 2 Bus OFF OFF 60 OFF ON 66.6 ON OFF 20 ON ON 50 Switch 3,4:</description>
+    </item>
+    
+    <item>
+      <title>VPNS - Multiple VPN&#39;s Launcher</title>
+      <link>https://iranzo.io/blog/2003/03/05/vpns-multiple-vpns-launcher/</link>
+      <pubDate>Wed, 05 Mar 2003 20:55:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2003/03/05/vpns-multiple-vpns-launcher/</guid>
+      <description>General Purpose The idea on writing VPNS and the structure it follows was the problem that we had into easily configure many VPN&amp;rsquo;s for use with the wireless project interconnection (Valencia Wireless http://www.valenciawireless.org).
+When having no chance to join networks using just wireless links, we needed to provide some kind of transparent link from one WiFi node to another. To do so, we decided to use the vpnd daemon to establish links between our networks for allowing transparent traffic flow.</description>
+    </item>
+    
+    <item>
+      <title>Camelle - Costa da Morte 2002</title>
+      <link>https://iranzo.io/blog/2002/02/25/camelle-costa-da-morte-2002/</link>
+      <pubDate>Mon, 25 Feb 2002 21:30:24 +0100</pubDate>
+      
+      <guid>https://iranzo.io/blog/2002/02/25/camelle-costa-da-morte-2002/</guid>
+      <description>Those are some pics I took during December in 2002 around Camelle and Costa da Morte area in North of Spain after the Prestige oil spill. </description>
+    </item>
+    
+  </channel>
+</rss>

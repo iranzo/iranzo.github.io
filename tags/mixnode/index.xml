@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mixnode on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/mixnode/</link>
+    <description>Recent content in Mixnode on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 May 2021 12:30:34 +0200</lastBuildDate><atom:link href="https://iranzo.io/tags/mixnode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to run a NYM mixnode</title>
+      <link>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</link>
+      <pubDate>Sun, 09 May 2021 12:30:34 +0200</pubDate>
+      
+      <guid>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</guid>
+      <description>Some time ago I&amp;rsquo;ve started running a NYM mixnode. NYM is a project that targets improving privacy by decomposing network packages from different hosts, so that origin and target cannot be traced.
+You can check more about the NYM project at their site at https://nymtech.net/.
+The project uses Open Source technology to run, and they have a nice docs with details on how to run a node at https://nymtech.net/docs/, and the one relevant for mixnodes at https://nymtech.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Software on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/software/</link>
+    <description>Recent content in Software on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Sun, 23 May 2004 20:40:00 +0000</lastBuildDate><atom:link href="https://iranzo.io/es/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacidad en las comunicaciones electrónicas</title>
+      <link>https://iranzo.io/es/blog/2004/05/23/privacidad-en-las-comunicaciones-electr%C3%B3nicas/</link>
+      <pubDate>Sun, 23 May 2004 20:40:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2004/05/23/privacidad-en-las-comunicaciones-electr%C3%B3nicas/</guid>
+      <description>Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto.
+Orígenes Desde tiempos inmemoriales, a la vez que se avanzaba en la comunicación, se avanzaba también en la necesidad de mantener la privacidad de las mismas&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Patentes de Software</title>
+      <link>https://iranzo.io/es/blog/2004/05/13/patentes-de-software/</link>
+      <pubDate>Thu, 13 May 2004 21:55:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2004/05/13/patentes-de-software/</guid>
+      <description>¿Qué es una patente? Una patente es la legitimación jurídica formal para la explotación de un recurso determinado.
+En realidad se trata de un modelo restringido de monopolio comercial. Como dato histórico cabe recordar las famosas &amp;ldquo;patentes de corso&amp;rdquo;, licencias de asesinato y expolio que los estados otorgaban a piratas (los corsarios) para que ejercieran impunemente sus actividades bajo determinadas condiciones beneficiosas para ambos. ¿No os suena de algo?
+¿Qué es lo que se patenta en este caso?</description>
+    </item>
+    
+  </channel>
+</rss>

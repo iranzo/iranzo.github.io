@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Desktop on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/desktop/</link>
+    <description>Recent content in Desktop on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Tue, 03 Jun 2008 22:32:07 +0000</lastBuildDate><atom:link href="https://iranzo.io/es/tags/desktop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(mi) Evolución con Linux</title>
+      <link>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</link>
+      <pubDate>Tue, 03 Jun 2008 22:32:07 +0000</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</guid>
+      <description>Antecedentes Llevo gastando Linux desde hace bastantes años&amp;hellip;
+Primero empecé con una copia de Slackware 1.x que venía con la revista Sólo programadores cuya instalación consistía en descomprimir un fichero &amp;ldquo;zip&amp;rdquo; sobre un disco FAT16 (en aquella época tenía un disco duro de 80 Mb (sí, Megabytes) en un 386DX a 40 Mhz y la instalación venía a ocupar unos 15 Mb descomprimida.
+Dicha instalación hacía uso de un sistema llamado UMSDOS que permitía, una vez cargado Linux (mediante loadlin) hacer uso de las características de un filesystem de Linux cuando en realidad había por debajo un sistema FAT.</description>
+    </item>
+    
+    <item>
+      <title>Preparar Firefox para un kiosco</title>
+      <link>https://iranzo.io/es/blog/2008/05/03/preparar-firefox-para-un-kiosco/</link>
+      <pubDate>Sat, 03 May 2008 23:13:33 +0000</pubDate>
+      
+      <guid>https://iranzo.io/es/blog/2008/05/03/preparar-firefox-para-un-kiosco/</guid>
+      <description>userChrome.css Firefox tiene en la carpeta del usuario, y dentro del perfil una subcarpeta llamada chrome y en ella el fichero userChrome.css
+Éste permite ajustar pequeños cambios en el diseño como mostrar u ocultar menús, botones, etc.
+Por ejemplo, podemos esconder el menú de ayuda con:
+#helpMenu display: none !important; Compactando el entorno Yo utilizo una visión más compacta reduciendo las barras, poniendo la barra de direcciones y búsqueda en la de menús:</description>
+    </item>
+    
+  </channel>
+</rss>

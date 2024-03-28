@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Error on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/error/</link>
+    <description>Recent content in Error on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 12 Apr 2004 09:54:00 +0000</lastBuildDate><atom:link href="https://iranzo.io/tags/error/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error depending of number of beeps in BIOS</title>
+      <link>https://iranzo.io/blog/2004/04/12/error-depending-of-number-of-beeps-in-bios/</link>
+      <pubDate>Mon, 12 Apr 2004 09:54:00 +0000</pubDate>
+      
+      <guid>https://iranzo.io/blog/2004/04/12/error-depending-of-number-of-beeps-in-bios/</guid>
+      <description>BIOS (Basic Input Output System) from PC&amp;rsquo;s report errors in the hardware at boot with a code of beeps, that can help diagnose the issue in case there&amp;rsquo;s no image being displayed.
+Error code reported by BIOS during POST (Power On Self Test):
+Fatal errors # of beeps Meaning 1 DRAM refresh error 2 640Kb base RAM error 4 system timer error 5 CPU error 6 Keyboard Gate A20 error 7 Virtual mode exception error 9 BIOS-ROM checksum error Non-Fatal errors # of beeps Meaning 3 Memory test failure conventional and extended 8 Monitor error with tracing vertical and horizontal Enjoy!</description>
+    </item>
+    
+  </channel>
+</rss>
