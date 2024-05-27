@@ -12,7 +12,7 @@ keywords:
   - Acceleration
   - AI
   - Artificial Intelligence
-lastmod: 2024-05-27T12:39:29.789Z
+lastmod: 2024-05-27T12:49:36.741Z
 redirect: https://developers.redhat.com/articles/2024/04/05/enable-gpu-acceleration-kernel-module-management-operator
 ---
 
@@ -937,7 +937,7 @@ Using the following command, we'll be forwarding a port from your computer to th
 $ oc port-forward kmm-demo-jupyter 8888:8888
 ```
 
-Once done, on your local computer browser open [http://localhost:8888](http://localhost:8888") to access the notebook.
+Once done, on your local computer browser open `http://localhost:8888` to access the notebook.
 
 In the example above, the hashed password is `paella`, and it's the one we'll be using to access the Jupyter notebook.
 
