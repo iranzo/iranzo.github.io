@@ -12,7 +12,7 @@ keywords:
   - Acceleration
   - AI
   - Artificial Intelligence
-lastmod: 2024-04-09T15:05:13.421Z
+lastmod: 2024-05-27T07:47:35.345Z
 redirect: https://developers.redhat.com/articles/2024/04/05/enable-gpu-acceleration-kernel-module-management-operator
 ---
 
@@ -195,6 +195,12 @@ With:
 
 ```sh
 oc apply -f kmm.yaml
+```
+
+Once it's done, we can switch to the openshift-kmm project:
+
+```sh
+oc project openshift-kmm
 ```
 
 ## Create a kernel module
