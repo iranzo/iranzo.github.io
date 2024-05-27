@@ -12,13 +12,15 @@ keywords:
   - Acceleration
   - AI
   - Artificial Intelligence
-lastmod: 2024-05-27T07:47:35.345Z
+lastmod: 2024-05-27T12:39:29.789Z
 redirect: https://developers.redhat.com/articles/2024/04/05/enable-gpu-acceleration-kernel-module-management-operator
 ---
 
 {{<attention>}}
 This post was originally published on Red Hat Developer, the community to learn, code, and share faster. To read the original post, [click here](https://developers.redhat.com/articles/2024/04/05/enable-gpu-acceleration-kernel-module-management-operator).
 {{</attention>}}
+
+[Check the video version for Red Hat TV](https://tv.redhat.com/detail/6352250333112/enable-gpu-acceleration-with-the-kernel-module-management-operator)
 
 In this article we cover the required steps to configure Kernel Module Management Operator (KMM) and use it to deploy an out-of-tree (OOT) kernel module, as well as leveraging other related technologies to build a toolset for hardware enablement. To illustrate that process, we'll leverage the [Intel Data Center GPU Flex 140](https://www.intel.com/content/www/us/en/products/sku/230020/intel-data-center-gpu-flex-140/specifications.html).
 
