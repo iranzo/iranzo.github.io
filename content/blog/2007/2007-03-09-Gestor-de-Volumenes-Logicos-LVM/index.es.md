@@ -208,7 +208,9 @@ Vemos, al tener marcado el espacio libre del volumen lógico, dónde está ubica
 Quiero destacar mi agradecimiento a [Carlos Hergueta](mailto:chergueta@gmail.com) por su colaboración en la realización de este documento
 
 [^1]: Physical Extents
+
 [^2]: Multiple Devices: Es una tecnología que mediante software permite la creación de distintos niveles de agrupación de discos: linear, raid0, raid1, raid5. Los dispositivos se identifican en un sistema Linux por la existencia de unidades /dev/md*0,1,2,3,etc* y un fichero de estado `/proc/mdstat` que indica el estado actual de los md's definidos y su estado de sincronía en caso de estar agrupados como RAID
+
 [^3]:
     El que hemos anotado en el paso previo a desmontarlo
     {{<disfruta>}}

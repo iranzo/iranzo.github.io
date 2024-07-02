@@ -48,6 +48,7 @@ En caso de problemas con la lactancia es conveniente buscar ayuda cuanto antes, 
 El primer punto al que acudir es a nuestra matrona y posiblemente, a algún grupo de lactancia que se organizan[^gruposlactancia] en los centros de salud o incluso a una Doula[^doula].
 
 [^doula]: Persona especializada en acompañar durante el proceso de la maternidad.
+
 [^gruposlactancia]: La principal prioridad es el bienestar de la madre. En nuestro caso, tuvimos problemas diversos: oxitocina sintética, tiempo hasta el piel con piel, falta de descanso, etc. Lo que no nos ayudó tampoco es el que al acudir al centro de salud, los grupos de lactancia estaban formados por gente que no tenía ningún problema con ella, que hasta podían extraer leche y conservarla o donarla y en los que el niño era capaz de extraerla con facilidad. Finalmente, acudimos a una `Doula` certificada y a la Unidad de Lactancia del Hospital Doctor Peset Aleixandre en Valencia, que contaba con profesionales que nos ayudaron.
 
 Esta persona de apoyo nos informará de formas convenientes de dar el pecho, revisará si el agarre es correcto (por ejemplo, revisando si el labio del bebé está `evertido`), etc
