@@ -81,17 +81,17 @@ Note: Use magnets and iron powder
 ### Origin
 
 - Earth has metal inside that moves and generates the magnetic field (pole)
-- Earht is also very big and generates gravity field.
+- Earth is also very big and generates gravity field.
 
 ![](tierra.jpg)
 
-Note: Vulcanos spit that inner melted materials to the surface of Earth
+Note: Volcanoes spit that inner melted materials to the surface of Earth
 
 ---
 
 ### Solar storms, solar wind and flares
 
-The Sun, sometines has storms and particles (debris) is launched towards earth and others with the `solar wind`.
+The Sun, sometimes has storms and particles (debris) is launched towards earth and others with the `solar wind`.
 
 ![](flare.jpg)
 
@@ -182,7 +182,7 @@ Note: Make a point on Moon round shape while it puts between Earth and Sun
 
 ## Rockets
 
-Rockets fight againsts the other Earth: 'gravity'
+Rockets fight against the other Earth: 'gravity'
 
 Moon's gravity causes tides on Earth
 
@@ -278,5 +278,5 @@ Note: Give away compass and stickers
 - Magnets + compass
 - Magnets + iron powder
 - Eclipse model
-- Ballons with wool for rocket
+- Balloons with wool for rocket
 - Plastic parachute
