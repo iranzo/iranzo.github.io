@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sysadmin on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/sysadmin/</link>
+    <description>Recent content in Sysadmin on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:50:19 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Administración de Sistemas y Seguridad</title>
+      <link>https://iranzo.io/es/presentations/2002-04-14-administracion-de-sistemas-y-seguridad/</link>
+      <pubDate>Mon, 15 Apr 2002 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2002-04-14-administracion-de-sistemas-y-seguridad/</guid>
+      <description>Introducción Historia (Antigüedad-1973) Siglo XI Astrolabio 1598 Compás Geométrico con su modificación posterior: Compás con Cuadrante 1882 Ingenio de diferencias de Charles Babbage (Computadora mecánica) (primera calculadora automática conocida) 1937-1942 Computador del Dr. Atanasoff (1º en utilizar la electrónica (válvulas termoiónicas), condensadores para hacer de memoria y lector de tarjetas perforadas) 1942-1973 ENIAC (Electronic Numerical Integrator and Computer) Ingenio de diferencias ABC ABC ABC ENIAC ENIAC Historia 1957-1969 1957 Besys (Utilizado por Bell Labs para controlar sus ordenadores para ejecutar varios procesos por lotes) 1965 Para su tercera generación de ordenadores (AT&amp;amp;T) y decidió unirse al MIT y a General Electric para crear Multics (Multiplexed Information and Computing Service) 1969 (Abril) AT&amp;amp;T Decide abandonar Multics y comenzar a utilizar GECOS.</description>
+    </item>
+  </channel>
+</rss>

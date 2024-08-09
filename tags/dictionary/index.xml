@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dictionary on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/dictionary/</link>
+    <description>Recent content in Dictionary on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 22 May 2021 13:29:12 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/dictionary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dictionary</title>
+      <link>https://iranzo.io/blog/2021/05/22/dictionary/</link>
+      <pubDate>Sat, 22 May 2021 13:29:12 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/22/dictionary/</guid>
+      <description>We&amp;rsquo;ve just started writing a dictionary of crypto terms and links to make your path into understanding cryptocurrencies a bit easier.
+Check it out at Terms</description>
+    </item>
+  </channel>
+</rss>

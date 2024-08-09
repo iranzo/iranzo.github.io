@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Terms on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/terms/</link>
+    <description>Recent content in Terms on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/terms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Airdrop</title>
+      <link>https://iranzo.io/terms/airdrop/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/airdrop/</guid>
+      <description>An airdrop is a campaign that usually requires several social media steps like:
+Telegram group or channel follow Twitter actions such as like and retweet plus tag friends submit a form with some data. etc. In exchange, your address is added to a list that later is validated to check if all the requirements are satisfied to receive some free tokens.
+Some airdrops have as prerequisites being owner of another cryptocurrency or to perform additional steps like community activity in the chats, etc.</description>
+    </item>
+    <item>
+      <title>Altcoin</title>
+      <link>https://iranzo.io/terms/altcoin/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/altcoin/</guid>
+      <description>Altcoin makes references to Alternative Coins, and refers to other cryptocurrencies that appeared under the umbrella of the successful Bitcoin trying to overcome some of the problems it has.</description>
+    </item>
+    <item>
+      <title>Binance</title>
+      <link>https://iranzo.io/terms/binance/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/binance/</guid>
+      <description>Binance is an exchange for quickly trading and converting between crypto currencies.
+Binance allows adding funds via wire transfer, credit card, etc and transfer the assets to other exchanges or wallets.</description>
+    </item>
+    <item>
+      <title>Block Explorer</title>
+      <link>https://iranzo.io/terms/blockexplorer/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/blockexplorer/</guid>
+      <description>A block explorer is a web tool that allows to examinate the blockchain, it&amp;rsquo;s useful to examine a transaction performed or the contracts we&amp;rsquo;re interacting to.
+A link to a specific transaction can be provided to another user for verification purposes as it shows the amount, sender and recipient wallets.
+Each chain or network has its own block explorer.</description>
+    </item>
+    <item>
+      <title>Blockchain</title>
+      <link>https://iranzo.io/terms/blockchain/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/blockchain/</guid>
+      <description>Blockchain is the term that describes the relationship between different blocks where data is stored.
+Each block has a correspondence with prior and next blocks, allowing data to be authenticated and not tampered by a network of hosts that keep a copy of the blockchain, keeping record of all the transactions happening at each block.</description>
+    </item>
+    <item>
+      <title>Coinbase</title>
+      <link>https://iranzo.io/terms/coinbase/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/coinbase/</guid>
+      <description>Coinbase is an exchange for quickly trading and converting between crypto currencies.
+Coinbase features a nice dashboard and mobile application to keep track of your portfolio.
+A good feature is Coinbase Earn, which allows to learn about some crypto currencies and get some in exchange for free!</description>
+    </item>
+    <item>
+      <title>Contract address</title>
+      <link>https://iranzo.io/terms/contract/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/contract/</guid>
+      <description>Contract address is the direction used for indicating in a specific network information about a crypto currency, for example:
+Currency Network Contract BTCST Binance Smart Chain 0x78650B139471520656B9E7AA7A5E9276814A38E9 TRX Binance Smart Chain 0xf230b790E05390FC8295F4d3F60332c93BEd42e2 DAI Ethereum 0x6b175474e89094c44da98b954eedeac495271d0f A given currency might have presence on different networks, so the contract on each one of them will be different.
+Always pay real attention to the contract address, specially when adding it to your wallet to make sure you&amp;rsquo;re not stolen by fake contracts.</description>
+    </item>
+    <item>
+      <title>Exchange</title>
+      <link>https://iranzo.io/terms/exchange/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/exchange/</guid>
+      <description>An exchange is a service that allows to buy with regular money or with cryptocurrencies to transform between them and operate, in a similar way to what a broker does for regular stock.
+Check a list of exchanges.</description>
+    </item>
+    <item>
+      <title>FOMO</title>
+      <link>https://iranzo.io/terms/fomo/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/fomo/</guid>
+      <description>F.O.M.O. : Fear Of Missing Out
+It makes reference to the fear that arises when lot of people buy one crypto currency that is gaining momentum and might drive you into buying something about to fall.</description>
+    </item>
+    <item>
+      <title>Gas</title>
+      <link>https://iranzo.io/terms/gas/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/gas/</guid>
+      <description>Each time a transaction happens on a network, there are some fees that are paid to the nodes validating the transaction, this is usually called gas, and it&amp;rsquo;s the commission that is paid.
+Each network has its own type of gas, for example on Binance Smart Chain, the gas is paid with BNB, on xDAI is paid with DAI tokens and on Ethereum with ETH.
+As transactions require gas to cover the expenses, it&amp;rsquo;s always good to keep some amount of gas on the networks we operate to pay and be able to perform them.</description>
+    </item>
+    <item>
+      <title>HODL</title>
+      <link>https://iranzo.io/terms/hodl/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/hodl/</guid>
+      <description>HODL
+The story comes out of a typo (willing to say HOLD) made on a blogpost, when a user said that being a bad investor and holding the positions for longer time could bet the traders that operate in short periods.</description>
+    </item>
+    <item>
+      <title>Metamask</title>
+      <link>https://iranzo.io/terms/metamask/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/metamask/</guid>
+      <description>Metamask is a web wallet that can be installed in your browser or mobile and allows it to interact with Dapps, that is applications that allow to operate with cryptocurrency and its contracts.</description>
+    </item>
+    <item>
+      <title>Revolut</title>
+      <link>https://iranzo.io/terms/revolut/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/revolut/</guid>
+      <description>Revolut is a service that provides credit cards, either physical or virtual with lot of advantages like reduced fees (or free) cash withdrawals abroad.
+Additionally, allows to fund the account via another credit card instantly without commision and also wire transfers, so it&amp;rsquo;s a good way to put money in and then wire it out to an exchange to quickly buy cryptocurrency.</description>
+    </item>
+    <item>
+      <title>Seed</title>
+      <link>https://iranzo.io/terms/seed/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/seed/</guid>
+      <description>A seed, or wallet seed is a secret phrase that should never be communicated to anyone, as it is used to restore a wallet into a new computer or application, taking absolute ownership of it and all of the assets there.</description>
+    </item>
+    <item>
+      <title>Staking</title>
+      <link>https://iranzo.io/terms/staking/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/staking/</guid>
+      <description>Staking makes reference to the action of depositing some tokens to contribute with the number of tokens as participants into some action, for example, for mining other crypto currencies.</description>
+    </item>
+    <item>
+      <title>Testnet</title>
+      <link>https://iranzo.io/terms/testnet/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/testnet/</guid>
+      <description>A testnet is a phase of a project where a set of software nodes can help on the network to validate the conceptual ideas and practical operations.
+By participating in a testnet via resources (VPS servers, etc), the participants might get some tokens or criptocurrencies in exchange, allowing them to become early investors without actually paying for the tokens.</description>
+    </item>
+    <item>
+      <title>Token</title>
+      <link>https://iranzo.io/terms/token/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/token/</guid>
+      <description>Token is the symbol for a cryptocurrency and it&amp;rsquo;s associated with a contract to be shown on a wallet like metamask</description>
+    </item>
+    <item>
+      <title>VPS</title>
+      <link>https://iranzo.io/terms/vps/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/vps/</guid>
+      <description>A VPS is a Virtual Private Server, that is a virtual machine that is running in a provider, but under total control of the user, allowing to install, upgrade and operate, making them ideal for running testnet nodes</description>
+    </item>
+    <item>
+      <title>Wallet</title>
+      <link>https://iranzo.io/terms/wallet/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/wallet/</guid>
+      <description>A wallet is a place to hold tokens, it might be online at an exchange, at your browser like metamask or a piece of software running on your computer or mobile phone.
+A wallet has an address and it&amp;rsquo;s protected by a seed phrase that is used to restore it on another device and usually by other methods like pin or passwords to protect it from misuse.
+Each wallet is used on a network and others, allow several networks, providing different addresses on each one to receive the funds or cryptocurrencies.</description>
+    </item>
+    <item>
+      <title>Wise</title>
+      <link>https://iranzo.io/terms/wise/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/terms/wise/</guid>
+      <description>Wise.com is a platform to make bank transfers (wire transfers) cheap across countries, which is ideal to bring money from accounts overseas into your own country.</description>
+    </item>
+  </channel>
+</rss>

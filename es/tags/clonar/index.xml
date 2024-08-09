@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Clonar on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/clonar/</link>
+    <description>Recent content in Clonar on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 31 Jan 2024 09:22:53 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/clonar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clonando etiquetas Lego Dimensions</title>
+      <link>https://iranzo.io/es/blog/2020/02/04/clonando-etiquetas-lego-dimensions/</link>
+      <pubDate>Tue, 04 Feb 2020 00:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2020/02/04/clonando-etiquetas-lego-dimensions/</guid>
+      <description>Introducción En el artículo Lego Dimensions, hablaba de los packs disponibles para jugar con la consola.
+Desgraciadamente, no están todos disponibles para ser comprados excepto de colecionistas, &amp;lt;brickset.com&amp;gt; o algunos vendedores.
+Tras algo de búsqueda, diversas páginas proporcionan información acerca de los propios &amp;rsquo;tags&amp;rsquo; o etiquetas y de cómo arreglarlos o clonarlos.
+Lista de materiales Cada base de Lego Dimensions es una etiqueta NFC NTAG 213 que puede ser sólo lectura (las figuritas) o lectura-escritura (vehículos).</description>
+    </item>
+  </channel>
+</rss>

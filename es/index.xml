@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/</link>
+    <description>Recent content on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Tue, 19 Mar 2024 09:34:39 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Consejos para el uso de Telegram en Educación</title>
+      <link>https://iranzo.io/es/blog/2023/11/26/consejos-para-el-uso-de-telegram-en-educaci%C3%B3n/</link>
+      <pubDate>Sun, 26 Nov 2023 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2023/11/26/consejos-para-el-uso-de-telegram-en-educaci%C3%B3n/</guid>
+      <description>Telegram viene siendo utilizado con bastante frecuencia en centros educativos para permitir una comunicación sencilla mediante los &amp;lsquo;canales&amp;rsquo;, donde los docentes pueden enviar información a las familias de forma general sin que se pueda contactar con ellos directamente. Esto tiene la ventaja de facilitar la comunicación de información pero sin el riesgo de que sean acosados por las familias con preguntas, etc. fuera de los canales oficiales de comunicación. Pero es importante tener en cuenta una serie de aspectos que, posiblemente por desconocimiento, pueden arrastrar una serie de problemas/peligros.</description>
+    </item>
+    <item>
+      <title>Mostrar eventos de un calendario en Telegram</title>
+      <link>https://iranzo.io/es/blog/2023/03/21/mostrar-eventos-de-un-calendario-en-telegram/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2023/03/21/mostrar-eventos-de-un-calendario-en-telegram/</guid>
+      <description>Si tienes un grupo de Telegram puede resultarte interesante la característica de https://t.me/redken_bot que permite añadir un calendario ical y que automatiza mostrar cada día las entradas de la agenda para el día.
+Si leíste la entrada Python and iCalendar ICS processing, parte de las bases ahí indicadas están integradas en el bot y son fácilmente utilizables:
+Para configurarlo sólo se necesitan unos simples pasos:
+Tener un calendario ICS/webcal accesible (por ejemplo un calendario público de Google Calendar) Tener un grupo de telegram donde queramos mostrarlo Añadir a @redken_bot al grupo Especificar la URL del calendario y el nombre A continuación, mostraré unas capturas del proceso para que veas lo sencillo que es.</description>
+    </item>
+    <item>
+      <title>Localizadores para niños</title>
+      <link>https://iranzo.io/es/blog/2023/03/20/localizadores-para-ni%C3%B1os/</link>
+      <pubDate>Mon, 20 Mar 2023 12:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2023/03/20/localizadores-para-ni%C3%B1os/</guid>
+      <description>Si alguna vez has estado en algún sitio grande o con mucha gente, habrás tenido la necesidad de tener localizado a tu hijo/hija.
+Existen rastreadores GPS como este https://s.click.aliexpress.com/e/_EzNxPB3 que permiten hacer el seguimiento, pero necesitan una tarjeta SIM, con tarifa de datos y al igual que con los teléfonos, necesitas cargarlo cada cierto tiempo porque tanto GPS como el uso de los datos consume batería.
+En el caso de este dispositivo, se puede consultar la ubicación en la web http://www.</description>
+    </item>
+    <item>
+      <title>Añadir servidores Z39.50 a Koha</title>
+      <link>https://iranzo.io/es/blog/2023/03/01/a%C3%B1adir-servidores-z39.50-a-koha/</link>
+      <pubDate>Wed, 01 Mar 2023 14:04:45 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2023/03/01/a%C3%B1adir-servidores-z39.50-a-koha/</guid>
+      <description>Presentación del protocolo Z39.50, y casos prácticos El protocolo Z39.50 es un protocolo cliente-servidor que está orientado a la recuperación de información a través de una misma interfaz y de amplia aplicación en el mundo de las bibliotecas y centros documentales, permitiendo acceder a diversas bases de datos desde un mismo punto de acceso. El protocolo en sí, está cubierto por la ISO 23950 estándar 27446, Z39.59.
+Este protocolo cumple uno de los fines principales de las bibliotecas, el acceso al conocimiento y la posibilidad de encontrar los recursos que lo contienen.</description>
+    </item>
+    <item>
+      <title>Biberón natural 3.0 Philips Avent set</title>
+      <link>https://iranzo.io/es/bebe/2023/2023-01-12-biberon-natural-3.0-philips-avent-set/</link>
+      <pubDate>Fri, 06 Jan 2023 20:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/2023/2023-01-12-biberon-natural-3.0-philips-avent-set/</guid>
+      <description>Evaluación del set de biberones Philips Avent</description>
+    </item>
+    <item>
+      <title>Automatizar los biberones...</title>
+      <link>https://iranzo.io/es/bebe/automatizar-biberones/</link>
+      <pubDate>Fri, 04 Nov 2022 00:00:47 +0100</pubDate>
+      <guid>https://iranzo.io/es/bebe/automatizar-biberones/</guid>
+      <description>Hace tiempo en el articulo Biberones se hablaba del proceso de uso, preparación, etc&amp;hellip;
+Recientemente y dadas las nuevas necesidades, nos dio por hacer una búsqueda, y al igual que las cafeteras automáticas se han popularizado, algo similar ha ocurrido con los biberones, por ejemplo:
+Tommee Tippee Perfect Prep Babymoov Milky Now Beaba Bib&amp;rsquo;expresso Baby Brezza Formula Pro Advanced De los modelos anteriores finalmente nos decantamos por el primero, que permite regular el tamaño del biberón, y permite soltar un chorro inicial a mayor temperatura para esterilizar algo la leche de fórmula.</description>
+    </item>
+    <item>
+      <title>Trucos y consejos para el RHCE y RHCSA</title>
+      <link>https://iranzo.io/es/blog/2022/07/13/trucos-y-consejos-para-el-rhce-y-rhcsa/</link>
+      <pubDate>Wed, 13 Jul 2022 21:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2022/07/13/trucos-y-consejos-para-el-rhce-y-rhcsa/</guid>
+      <description>Aunque hice el examen de RHCE algún tiempo, sigue habiendo trucos y consejos que siempre transmito a los interesados y que vienen indicados en el libro que escribimos: Red Hat Enterprise 8 Administration:
+No recuerdes cada paso, por ejemplo, nunca recuerdo la configuración de BIND, asi que recuerdo el paquete con el fichero que tiene ejemplos, lo instalo y lo consulto. Instala mlocate y ejecuta updatedb tan pronto como empieces, así podrás usar locate &amp;lt;fichero&amp;gt; para encontrar archivos rápidamente en tu sistema.</description>
+    </item>
+    <item>
+      <title>El bebé</title>
+      <link>https://iranzo.io/bebe/</link>
+      <pubDate>Fri, 06 May 2022 10:50:07 +0000</pubDate>
+      <guid>https://iranzo.io/bebe/</guid>
+      <description>Aquí hay más o menos un índice de los artículos para que sea más sencillo localizarlos.
+Ante la duda, consulta siempre con tu médico/pediatra.
+Previo La Maleta El Plan de parto Durante Las contracciones El dia de ir 2 y volver 3 El test de APGAR Posterior La lactancia
+Los biberones
+El llanto
+El baño
+El cordón umbilical
+Los masajes
+Las visitas
+El paseo
+Dormir
+Golpes
+Rabietas
+Otra información Depresión y estrés: Tully Robots de cocina Otros preparativos y datos Recursos Vocabulario Disfruta!</description>
+    </item>
+    <item>
+      <title>Aborto</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/a/aborto/</link>
+      <pubDate>Tue, 21 Dec 2021 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/a/aborto/</guid>
+      <description>Un aborto es el resultado de una gestación incorrecta, puede deberse a muchas causas, desde problemas genéticos del embrión, mala implantación, etc.
+Son más habituales de lo que se sospecha, porque en la mayoría de los casos, puede parecer como una regla que se ha retrasado con mayor del habitual.
+En algunos casos puede requerir de un legrado como en el caso de un huevo huero.</description>
+    </item>
+    <item>
+      <title>Fecundación in Vitro (FIV)</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/f/fiv/</link>
+      <pubDate>Tue, 21 Dec 2021 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/f/fiv/</guid>
+      <description>La fecundación in vitro es un proceso en el cual, la unión del espermatozoide y el óvulo se realiza en un laboratorio, y una vez el óvulo ha sido fecundado, se deposita en el útero con la intención de que anide y comience el proceso del embarazo con la implantación.</description>
+    </item>
+    <item>
+      <title>Huevo huero</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/h/huevohuero/</link>
+      <pubDate>Tue, 21 Dec 2021 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/h/huevohuero/</guid>
+      <description>Es un saco que contenía un embrión que ha sido reabsorbido por el cuerpo por no resultar viable.
+Según sea expulsado o no, puede necesitar de un legrado para eliminarlo.</description>
+    </item>
+    <item>
+      <title>Implantación</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/i/implantacion/</link>
+      <pubDate>Tue, 21 Dec 2021 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/i/implantacion/</guid>
+      <description>Proceso en el que el óvulo fecundado se coloca en el útero y anida, comenzando el proceso de embarazo y crecimiento del embrión.</description>
+    </item>
+    <item>
+      <title>Legrado</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/l/legrado/</link>
+      <pubDate>Tue, 21 Dec 2021 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/l/legrado/</guid>
+      <description>Proceso quirúrgico por el cual se procede a eliminar restos de un embarazo del útero. El proceso puede incluir un raspado de las paredes que puede provocar lesiones en el útero.</description>
+    </item>
+    <item>
+      <title>Nesting o síndrome del nido</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/n/nesting/</link>
+      <pubDate>Tue, 21 Dec 2021 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/n/nesting/</guid>
+      <description>El nesting o síndrome del nido es algo que ocurre durante el embarazo, generalmente cuando está avanzado y que consiste en querer tener todo listo.
+No necesariamente son cosas relacionadas directamente con el bebé (habitación, carro, etc), sino incluso temas de limpieza, otros preparativos, etc. que de repente, toman mayor importancia y no pueden dejar de ser el foco de atención, llevando a realizar grandes esfuerzos (limpieza de ventanas, armarios, etc.</description>
+    </item>
+    <item>
+      <title>Nudo verdadero</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/n/nudoverdadero/</link>
+      <pubDate>Tue, 21 Dec 2021 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/n/nudoverdadero/</guid>
+      <description>El nudo verdadero es una de esas palabras que no quieres conocer.Co
+Consiste en que el cordón umbilical, con los movimientos del niño ha hecho una lazada sobre si mismo.
+El riesgo que supone, es que en caso de estrangularse el cordón, se corta el flujo de nutrientes, etc. desde la placenta al bebé y, por desgracia, al ser el propio cordón umbilical tejido, no es posible diagnosticarlo mediante ecografías.</description>
+    </item>
+    <item>
+      <title>Autofirma en Linux</title>
+      <link>https://iranzo.io/es/blog/2021/09/09/autofirma-en-linux/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2021/09/09/autofirma-en-linux/</guid>
+      <description>Instalando Autofirma en Fedora 34</description>
+    </item>
+    <item>
+      <title>Diario del coronavirus</title>
+      <link>https://iranzo.io/es/blog/2020/03/14/diario-del-coronavirus/</link>
+      <pubDate>Sat, 14 Mar 2020 23:30:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2020/03/14/diario-del-coronavirus/</guid>
+      <description>2020/03/13 Se confirma el cierre de centros educativos a partir del lunes, a priori, de forma indeterminada..
+Pasamos por el colegio para recoger los deberes y hacer alguna compra.
+En el supermercado se ven algunas cosas sin o con poco stock y relativamente bastante gente para ser las 17:00. 2020/03/14 Primer dia de confinamiento.
+Aprovechamos para hacer limpieza por casa y se sale sólo a tirar la basura, bajando y subiendo por las escaleras, poca gente en la calle.</description>
+    </item>
+    <item>
+      <title>Campo magnético, auroras, fases lunares, eclipses y cohetes</title>
+      <link>https://iranzo.io/es/presentations/campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes/</link>
+      <pubDate>Thu, 06 Feb 2020 22:30:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes/</guid>
+      <description>Disclaimer Charla sencilla orientada para niños de 4 años Vídeos, etc recortados de los originales (Créditos en bibliografía) Campo Magnético, Auroras, Fases Lunares, Eclipses y Cohetes Pablo Iranzo Gómezhttps://iranzo.io
+Jueves 13 Febrero 2020
+Introducción Campo magnético Auroras Movimiento Sol-Tierra-Luna Fases Lunares Eclipses Cohetes Fin Campo magnético El campo magnético es algo que nos rodea, que es invisible pero que podemos detectar y medir.
+La forma más sencilla es con una brújula.</description>
+    </item>
+    <item>
+      <title>Clonando etiquetas Lego Dimensions</title>
+      <link>https://iranzo.io/es/blog/2020/02/04/clonando-etiquetas-lego-dimensions/</link>
+      <pubDate>Tue, 04 Feb 2020 00:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2020/02/04/clonando-etiquetas-lego-dimensions/</guid>
+      <description>Introducción En el artículo Lego Dimensions, hablaba de los packs disponibles para jugar con la consola.
+Desgraciadamente, no están todos disponibles para ser comprados excepto de colecionistas, &amp;lt;brickset.com&amp;gt; o algunos vendedores.
+Tras algo de búsqueda, diversas páginas proporcionan información acerca de los propios &amp;rsquo;tags&amp;rsquo; o etiquetas y de cómo arreglarlos o clonarlos.
+Lista de materiales Cada base de Lego Dimensions es una etiqueta NFC NTAG 213 que puede ser sólo lectura (las figuritas) o lectura-escritura (vehículos).</description>
+    </item>
+    <item>
+      <title>Proyectos</title>
+      <link>https://iranzo.io/es/projects/</link>
+      <pubDate>Fri, 17 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/projects/</guid>
+      <description>Proyectos en los que he estado involucrado</description>
+    </item>
+    <item>
+      <title>Calostro</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/c/calostro/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/c/calostro/</guid>
+      <description>El calostro es una secreción amarillenta formada principalmente por inmunoglobulina que sale del pecho en los días alrededor del parto y proporciona defensas al bebé.</description>
+    </item>
+    <item>
+      <title>Cólicos</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/c/colicos/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/c/colicos/</guid>
+      <description>Los cólicos son dolor del bebé, expresado en forma de llantos, que duran al menos 3 horas al día durante al menos 3 días por semana durante más de una semana.</description>
+    </item>
+    <item>
+      <title>Contracciones</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/c/contracciones/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/c/contracciones/</guid>
+      <description>Las contracciones son movimientos del útero (recordemos que es un músculo) que duran entre 30 y 60 segundos y son intermitentes.</description>
+    </item>
+    <item>
+      <title>Cordón umbilical</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/c/cordonumbilical/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/c/cordonumbilical/</guid>
+      <description>El cordón umbilical es el &amp;rsquo;tubo&amp;rsquo; que conecta al bebé con la placenta y del cual conserva un trozo al nacer hasta que se seca y se cae por sí mismo.</description>
+    </item>
+    <item>
+      <title>El tapón mucoso</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/t/taponmucoso/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/t/taponmucoso/</guid>
+      <description>El tapón mucoso es una masa gelatinosa que cierra el paso de la vagina al útero protegiendo así al bebé durante la gestación de entradas de virus o bacterias.
+Suele desprenderse algo antes del parto, y debe controlarse ya que en el momento que se ha desprendido, está abierta la entrada de bacterias al útero por lo que puede ser necesario utilizar antibióticos para prevenir infecciones.</description>
+    </item>
+    <item>
+      <title>Meconio</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/m/meconio/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/m/meconio/</guid>
+      <description>El meconio es una secreción oscura, casi negra, que defecan los bebés durante los primeros días de vida conforme su intestino comienza a funcionar por primera vez en su vida.</description>
+    </item>
+    <item>
+      <title>Rabietas</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/r/rabietas/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/r/rabietas/</guid>
+      <description>Las rabietas son arrebatos generalmente bruscos y descontrolados de niño ante la frustración, enfado, etc.</description>
+    </item>
+    <item>
+      <title>Sudamina</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/s/sudamina/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/s/sudamina/</guid>
+      <description>La sudamina son unos pequeños granitos que aparecen en la piel de los bebés que han pasado calor, ya que no tienen las glándulas sudoríparas bien desarrolladas&amp;hellip; si le pasa con frecuencia es que lo tapas demasiado.</description>
+    </item>
+    <item>
+      <title>Vermix</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/v/vermix/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/v/vermix/</guid>
+      <description>El vermix es una capa como de grasa que recubre al bebé al nacer y que le da protección y ayuda a regular la temperatura.</description>
+    </item>
+    <item>
+      <title>Lego Dimensions Reseña</title>
+      <link>https://iranzo.io/es/blog/2019/08/19/lego-dimensions-rese%C3%B1a/</link>
+      <pubDate>Mon, 19 Aug 2019 22:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2019/08/19/lego-dimensions-rese%C3%B1a/</guid>
+      <description>Introducción Lego Dimensions es un juego para varias plataformas (XBox, Wii U, PlayStation) que consta de una plataforma con lectores NFC con varias zonas y leds de colores que permiten interactuar con el videojuego desde el mundo físico.
+El &amp;lsquo;starter pack&amp;rsquo; viene con las figuras de SuperCool, Batman y Gandalf, así como piezas adicionales para decorar la &amp;lsquo;base lectora&amp;rsquo; construyendo un portal.
+La historia principal se basa en cómo estos tres personajes (Gandalf, Batman y Supercool) se encuentran e intentan buscar juntos a sus amigos pasando por varios mundos.</description>
+    </item>
+    <item>
+      <title>Emerging Tech VLC&#39;19 - Citellus - Automatización de comprobaciones</title>
+      <link>https://iranzo.io/es/presentations/citellus/emergingtechvalencia/20190530/citellus-emergingtechvalencia2019-es/</link>
+      <pubDate>Thu, 30 May 2019 18:30:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/citellus/emergingtechvalencia/20190530/citellus-emergingtechvalencia2019-es/</guid>
+      <description>Citellus: Citellus - Verifica tus sistemas!! https://risuorg.github.io
+Emerging Tech Valencia 2019: 30 Mayo
+¿Quién soy? Pablo Iranzo Gómez (Pablo.Iranzo AT gmail.com) Senior Software Engineer - Solutions Engineering - Red Hat RHCA Level V: #110-215-852 (RHC{A,SS,DS,VA,E,SA,SP,AOSP}, JBCAA) URLS blog: https://iranzo.io https://linkedin.com/in/iranzo/ https://github.com/iranzo https://twitter.com/iranzop Involucrado con Linux desde algo antes de comenzar los estudios universitarios y luego durante ellos, estando involucrado con las asociaciones LinUV y &amp;lt;Valux.org&amp;gt;.
+Empecé a &amp;lsquo;vivir&amp;rsquo; del software libre en 2004 y a trabajar en Red Hat en 2006 como Consultor, luego como Senior Technical Account Manager, posteriormente como Principal Software Maintenance Engineer y actualmente como Senior Software Engineer para el equipo de Solutions Engineering.</description>
+    </item>
+    <item>
+      <title>@redken_bot</title>
+      <link>https://iranzo.io/es/redken_bot/</link>
+      <pubDate>Mon, 04 Mar 2019 18:34:14 +0100</pubDate>
+      <guid>https://iranzo.io/es/redken_bot/</guid>
+      <description>Learn about Redken Telegram Bot usage and configuration settings.</description>
+    </item>
+    <item>
+      <title>Bebés y Thermomix (u otros robots de cocina)</title>
+      <link>https://iranzo.io/es/bebe/2019-01-04-thermomix/</link>
+      <pubDate>Fri, 04 Jan 2019 22:43:47 +0100</pubDate>
+      <guid>https://iranzo.io/es/bebe/2019-01-04-thermomix/</guid>
+      <description>Unos años antes de &amp;rsquo;estar embarazados&amp;rsquo;, tuvimos una demostración de funcionalidad de la Thermomix por parte de una amiga que había empezado a dedicarse al tema.
+Inicialmente nos echaba para atrás el desembolso, aunque veíamos ventajas en algunas de las cosas que nos ofrecía.
+Al poco tiempo de uso ya nos resultó muy útil, por un lado podíamos probar platos nuevos con la facilidad de que las recetas salían bien, como otros que nos facilitaba, por ejemplo hacer lentejas, donde prácticamente era meter todo dentro y poder aprovechar mientras para realizar otras tareas.</description>
+    </item>
+    <item>
+      <title>Android TV y el error de Netflix&#39;s tvq-pm-100 (5.2.5)</title>
+      <link>https://iranzo.io/es/blog/2018/12/30/android-tv-y-el-error-de-netflixs-tvq-pm-100-5.2.5/</link>
+      <pubDate>Sun, 30 Dec 2018 19:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2018/12/30/android-tv-y-el-error-de-netflixs-tvq-pm-100-5.2.5/</guid>
+      <description>Android TV versus Android TV-Box Android, utilizado en múltiples dispositivos móviles es también parte de televisores y reproductores multimedia.
+La mayor diferencia entre ambas aproximaciones es el interfaz de usuario y las aplicaciones.
+Android TV-Box: es como un tablet o un teléfono conectado a una TV y generalmente necesita teclado externo, habitualmente integrado en el control remoto.
+Android TV: es una versión de Android que incorpora cambios para TV en el sistema operativo, de forma que es posible controlarlo con un mando de cruceta así como teclas adicionales para ir atrás, ir al inicio y micrófono.</description>
+    </item>
+    <item>
+      <title>El test de APGAR</title>
+      <link>https://iranzo.io/es/bebe/apgar/</link>
+      <pubDate>Fri, 21 Dec 2018 22:31:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/apgar/</guid>
+      <description>El test de APGAR El test de APGAR consiste en una valoración dada en base a 5 parámetros y que se realiza al minuto de nacer y una segunda vez a los 5 minutos.
+Este test valora diversos aspectos:
+Aspecto (color de la piel) Pulso (frecuencia cardíaca) Irritabilidad (reflejos) Actividad (tono muscular) Respiración (ritmo y esfuerzo) Para cada uno de estos parámetros se le asigna una puntuación entre 0 y 2, en resumen la guía, como indica la Wikipedia es:</description>
+    </item>
+    <item>
+      <title>El paseo</title>
+      <link>https://iranzo.io/es/bebe/paseo/</link>
+      <pubDate>Fri, 21 Dec 2018 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/paseo/</guid>
+      <description>Pasear con un niño no es algo complicado, pero recuerda que aparte del equipamiento estándar de carro o la silla del coche adaptada para su edad, debes tener en cuenta otras cosas:
+La silla del coche (los maxicosi), son para trayectos cortos, la postura del cuerpo les dificulta respirar, por lo que no son el lugar apropiado para estar todo el dia fuera de casa, si puedes, ten un capazo plano donde el bebé pueda estar estirado y respirar.</description>
+    </item>
+    <item>
+      <title>Otros preparativos y datos</title>
+      <link>https://iranzo.io/es/bebe/preparativos/</link>
+      <pubDate>Fri, 21 Dec 2018 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/preparativos/</guid>
+      <description>Información El bebé puede ver aproximadamente a un máximo de 30 cm de distancia Manoplas menos de 3 meses para que no se haga daño y que vaya desarrollando el tacto Los Pañales llevan dibujo simétrico para ver si esta bien colocados y cerrados En la parte blanca del ojo puede tener piquitas de la fuerza del parto. Avisar al pediatra pero no pasa nada Si el contenido del pañal es naranja es porque toma poco líquido Mancha oscura en espalda se llama Mancha mongólica y es normal y se acaba igualando el tono de color Seguridad Protectores de seguridad armarios y enchufes Buscar cursos de seguridad en Cruz Roja, etc.</description>
+    </item>
+    <item>
+      <title>Recursos adicionales (blogs, pediatras, etc)</title>
+      <link>https://iranzo.io/es/bebe/recursos/</link>
+      <pubDate>Fri, 21 Dec 2018 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/recursos/</guid>
+      <description> Lucia mi pediatra Julio Basulto Armando enfermero de pediatría E-Lactancia, para consultar la compatibilidad con lactancia y embarazo de muchos medicamentos, etc. Consulta siempre con tu médico antes! Disfruta! (y si lo haces, puedes Invitarme a un café ) </description>
+    </item>
+    <item>
+      <title>Los biberones y esterilizadores</title>
+      <link>https://iranzo.io/es/bebe/biberones/</link>
+      <pubDate>Fri, 14 Dec 2018 17:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/biberones/</guid>
+      <description>Biberones Sea cual sea el motivo del uso del biberón, bien por decisión propia o por problemas con la lactancia , compaginar horarios, etc hay que tener en cuenta ciertas consideraciones:
+La leche debe estar a 37º para dársela al bebé La leche extraída, se puede guardar en nevera 48 horas o congelar hasta 1 año Siempre hay que etiquetarla para que le correspondan tomar antes las más antiguas (y adaptadas a su fase de crecimiento1 y posteriormente las más recientes) Si la leche es de fórmula, utilizar siempre agua baja en sales minerales para componerla.</description>
+    </item>
+    <item>
+      <title>La cuarentena, las visitas y esos primeros dias</title>
+      <link>https://iranzo.io/es/bebe/visitas/</link>
+      <pubDate>Thu, 13 Dec 2018 21:35:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/visitas/</guid>
+      <description>Introducción Tras el parto y la llegada a casa viene ese terrible momento de dudar a cada momento con ¿y esto cómo se hace?
+Es recomendable que esos momentos sean algo íntimo para la nueva familia, donde se formen lazos de vínculo y sobretodo, os adaptéis a la nueva realidad.
+Es muy común que tras el parto, ya en el propio hospital o en casa, acudan familiares y amigos a visitar a los padres y al recién nacido, pero estas visitas, con gente, olores, ruidos, todos ellos extraños para el bebé, unido a que, por atender a los invitados, se descuidan las rutinas del bebé, resultan momentos estresantes, para el niño y la madre.</description>
+    </item>
+    <item>
+      <title>Los masajes</title>
+      <link>https://iranzo.io/es/bebe/masajes/</link>
+      <pubDate>Wed, 12 Dec 2018 22:09:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/masajes/</guid>
+      <description>Los masajes forman parte del cuidado tanto de la madre como del niño, desde los primeros momentos del embarazo para una a los primeros momentos del bebé.
+A continuación, damos unas pautas que vuestra matrona y pediatra os concretarán.
+Masajes para la madre Para los masajes, utiliza preferiblemente aceite de almendras dulces, que además de ayudarte con el masaje, ayuda a prevenir estrías en la barriga conforme va creciendo el bebé en su interior.</description>
+    </item>
+    <item>
+      <title>Cómo reaccionar a la violencia de nuestro hijo</title>
+      <link>https://iranzo.io/es/bebe/golpes/</link>
+      <pubDate>Sat, 01 Dec 2018 21:15:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/golpes/</guid>
+      <description>A veces los niños reaccionan de forma violenta, a veces, de casualidad y otras porque es lo que han visto.
+Hay que tener en cuenta que los niños aprenden de lo que ven, si en &amp;lsquo;casa&amp;rsquo; se acostumbran a oir gracias y por favor, de nada, llegará el momento en que lo digan aunque no sepan muy bien por qué1.
+Es complicado porque a veces te sacan de quicio, pero el niño lo que busca es atención, si cuando nos pega o muerde o araña, le decimos que no nos gusta que se porte así con nosotros, y por ejemplo, si ha coincidido con momento de &amp;lsquo;cambiador&amp;rsquo;, se le deja en la alfombra del suelo y salimos del cuarto.</description>
+    </item>
+    <item>
+      <title>Lactancia</title>
+      <link>https://iranzo.io/es/bebe/lactancia/</link>
+      <pubDate>Sat, 01 Dec 2018 08:13:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/lactancia/</guid>
+      <description>Introducción La lactancia, que debería ser fácil por ser lo natural, no siempre es la opción más fácil, ya que influyen diversos factores.
+Lo más importante es tener en cuenta que si dar o no el pecho, debe ser una decisión de la madre, y lo conveniente es tomar una decisión informada y prepararse.
+El proceso de lactancia empieza antes de que el niño llegue, el pecho ha ido sufriendo cambios durante el embarazo y finalmente es posible que incluso &amp;lsquo;secrete&amp;rsquo; antes del nacimiento o la ´subida´ de la leche.</description>
+    </item>
+    <item>
+      <title>Los llantos del niño</title>
+      <link>https://iranzo.io/es/bebe/llanto/</link>
+      <pubDate>Sat, 01 Dec 2018 08:02:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/llanto/</guid>
+      <description>Una de las reacciones más habitual del recién nacido es llorar.
+Aunque resulte molesto (que están diseñados así, para conseguir llamar la atención y por otro lado, nosotros estamos también hechos para no poder permanecer impasibles ante los mismos), es la forma en la que los bebés tienen para comunicarse.
+Los llantos pueden ser por dos motivos:
+Físicos Psicológicos En esas categorías, entran los casos típicos, que a falta de otra forma mejor de comunicarse, sólo puedes ir &amp;lsquo;descartando&amp;rsquo; tras ir probando cada uno, hasta que con el tiempo vayas aprendiendo tanto tú como tu bebé a identificar mejor las diferencias.</description>
+    </item>
+    <item>
+      <title>El día de ir 2 y volver 3</title>
+      <link>https://iranzo.io/es/bebe/el-dia-de-ir-2-y-volver-3/</link>
+      <pubDate>Sat, 01 Dec 2018 07:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/el-dia-de-ir-2-y-volver-3/</guid>
+      <description>Romper aguas Llevas días con la maleta preparada, coche con gasolina, plan de parto listo, etc, pero hoy, estando en la cama vinieron ganas de ir al baño a orinar.
+Al acabar, sigue cayendo líquido&amp;hellip; has roto aguas!
+En este punto es importante fijarse si son de color claro u oscuro y recordar la hora. Si son de color oscuro no te demores y directos al hospital para que el bebé no corra peligro.</description>
+    </item>
+    <item>
+      <title>La maleta del hospital</title>
+      <link>https://iranzo.io/es/bebe/maleta/</link>
+      <pubDate>Sat, 01 Dec 2018 07:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/maleta/</guid>
+      <description>Preparativos para el hospital Uno de los pasos importantes previos a la fecha estimada del parto (conviene tenerlo todo listo antes por si se adelantara la fecha) es preparar la bolsa, tanto de la madre como del bebé.
+Según el parto sea en hospital público o privado, la matrona te habrá dado indicaciones acerca de qué elementos llevar y cuáles te dejarán ellos durante tu estancia.
+La bolsa de la madre Documentación del embarazo (cartilla) Bragas desechables: Tras el parto es normal seguir expulsando líquidos y no querrás estropear/lavar las que tengas.</description>
+    </item>
+    <item>
+      <title>El baño</title>
+      <link>https://iranzo.io/es/bebe/bano/</link>
+      <pubDate>Fri, 30 Nov 2018 23:07:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/bano/</guid>
+      <description>Baño El primer baño del bebé suele ser unos días tras el parto, para darle tiempo a que absorba el vermix que es esa capa que protege al bebé y le ayuda a regular la temperatura durante los primeros días.
+El baño debe ser un momento de relax:
+bajar la iluminación si es posible agua a 37ºC para que el niño no pase calor ni frío ambiente caldeado si es necesario (22ºC) tener todo preparado de antemano (jabón, agua en la bañera, toallas, etc) El proceso de baño debe asegurar que el bebé no esté mal ni corra peligro, es por ello que se recomienda siempre llenar la bañera con agua fría (evitando así que por un descuido se pusiera en agua caliente) y luego, ir añadiendo agua caliente hasta templarla.</description>
+    </item>
+    <item>
+      <title>El cordón umbilical</title>
+      <link>https://iranzo.io/es/bebe/cordon/</link>
+      <pubDate>Fri, 30 Nov 2018 23:07:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/cordon/</guid>
+      <description>En caso de todavía tener el cordón umbilical, vuestro pediatra os informará el procedimiento preferido, algunos recomiendan usar cristalmina1 o alcohol de 70º empapando un papel y sólo tocando el cordón, nunca la piel, y tan sólo, una vez evaporado, proceder a poner el pañal.
+Otros (como fue nuestro caso), recomendaban realizar el lavado normal asegurándonos de secar bien la zona y el cordón, repitiendo la operación varias veces al día.</description>
+    </item>
+    <item>
+      <title>Las contracciones</title>
+      <link>https://iranzo.io/es/bebe/contracciones/</link>
+      <pubDate>Fri, 30 Nov 2018 22:48:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/contracciones/</guid>
+      <description>Las contracciones son movimientos del útero (recordemos que es un músculo) que duran entre 30 y 60 segundos y son intermitentes.
+Durante las mismas, la barriga se pone dura, primero por zonas y luego completamente, pudiendo ser inicialmente en la zona de los riñones.
+Un masaje con aceite caliente o saco de semillas calientes puede ayudar con las molestias.
+Para relajarse el procedimiento a seguir es:
+Separar piernas Separar brazos Respirar &amp;ldquo;no poner cara de dolor&amp;rdquo; (Eutonía), ya que genera más tensión en suelo pélvico No cerrar labios Flexionar articulaciones, moviendo lateralmente las piernas separadas con la boca como diciendo ooooo.</description>
+    </item>
+    <item>
+      <title>Las rabietas</title>
+      <link>https://iranzo.io/es/bebe/las-rabietas/</link>
+      <pubDate>Fri, 30 Nov 2018 20:27:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/las-rabietas/</guid>
+      <description>¿Qué son? Las rabietas son por todos conocidas&amp;hellip; la típica imagen es un niño en el suelo llorando y gritando, haciendo aspavientos y dando patadas y golpes con sus extremidades a consecuencia de algo que no tenemos claro cómo ha ocurrido la mayoría de veces.
+Las rabietas son parte normal del desarrollo del niño, si no estuvieran es que algo no &amp;lsquo;marcha adecuadamente&amp;rsquo;, el niño, comienza el proceso de reafirmarse y con el, llegan las terribles rabietas.</description>
+    </item>
+    <item>
+      <title>SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de configuración, logs etc mediante scripts en bash, python, ruby, etc</title>
+      <link>https://iranzo.io/es/presentations/citellus/supersec2018/</link>
+      <pubDate>Sun, 13 May 2018 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/citellus/supersec2018/</guid>
+      <description>Citellus: Citellus - Verifica tus sistemas!! https://risuorg.github.io
+SuperSec 2018 Almería 12-13 Mayo
+¿Quién soy? Involucrado con Linux desde algo antes de comenzar los estudios universitarios y luego durante ellos, estando involucrado con las asociaciones LinUV y Valux.org.
+Empecé a &amp;lsquo;vivir&amp;rsquo; del software libre en 2004 y a trabajar en Red Hat en 2006 como Consultor, luego como Technical Account Manager y ahora como Software Maintenance Engineer.
+¿Qué es Citellus? Citellus proporciona un framework acompañado de scripts proporcionados por la comunidad, que automatizan la detección de problemas, incluyendo problemas de configuración, conflictos con paquetes de versiones instaladas, problemas de seguridad o configuraciones inseguras y mucho más.</description>
+    </item>
+    <item>
+      <title>El niño y dormir</title>
+      <link>https://iranzo.io/es/bebe/dormir/</link>
+      <pubDate>Sun, 21 Jan 2018 18:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/dormir/</guid>
+      <description>Tema complicado donde los haya&amp;hellip; aquí podrás escuchar de todo:
+Padres que prefieren colecho (en la propia cama) (Se pueden utilizar &amp;lsquo;delimitadores&amp;rsquo; para reservar un espacio) Padres que prefiere una cuna de &amp;lsquo;colecho&amp;rsquo;, con una cuna que se &amp;rsquo;engancha&amp;rsquo; a la cama de los padres, pudiendo abrir o cerrar un lateral para evitar que el niño se caiga. Padres que prefieren que el niño duerma en su propia cuna o minicuna Recuerda siempre que siempre puedes cambiar de opción, en nuestro caso, empezó durmiendo en minicuna en nuestra habitación, que luego pasamos a su propia habitación (contigua) y posteriormente a &amp;lsquo;cuna&amp;rsquo; (120x60) cuando ya era más grande.</description>
+    </item>
+    <item>
+      <title>Tully</title>
+      <link>https://iranzo.io/es/bebe/tully/</link>
+      <pubDate>Mon, 15 Jan 2018 21:27:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/tully/</guid>
+      <description>Tully es una película interesante, si no la has visto, te animo a verla, no buscando una comedia pues en el fondo no lo es, sino porque retrata bastante bien lo duro que puede llegar a ser la crianza y el postparto.
+La película cuenta la historia de Marlo, madre de tres hijos incluyendo un recién nacido.
+A Marlo, su hermano le regala una &amp;rsquo;niñera nocturna&amp;rsquo; como regalo por el nacimiento, con el objetivo de que le ayude a descansar y sobrellevar la maternidad.</description>
+    </item>
+    <item>
+      <title>El plan de parto</title>
+      <link>https://iranzo.io/es/bebe/plan-de-parto/</link>
+      <pubDate>Fri, 05 Jan 2018 22:37:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/plan-de-parto/</guid>
+      <description>El plan de parto es una parte de la cartilla del embarazo donde la futura madre indica cuales son sus intenciones sobre diversos aspectos del mismo, por ejemplo:
+uso de anestesia epidural facilitar piel con piel entorno con el menor número posible de profesionales para dar un entorno más íntimo no episotomía no rasurado usar o no lavativa etc. Dichas decisiones, que se pueden cambiar en cualquier momento, y siempre supeditadas a la salud de la madre y del bebé, van a venir también dependiendo de los profesionales que atienden, los medios disponibles, etc.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://iranzo.io/es/about/</link>
+      <pubDate>Thu, 02 Jun 2016 17:27:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/about/</guid>
+      <description>About page for the site</description>
+    </item>
+    <item>
+      <title>Cómo hacer una Paella</title>
+      <link>https://iranzo.io/es/blog/2012/07/08/c%C3%B3mo-hacer-una-paella/</link>
+      <pubDate>Sun, 08 Jul 2012 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2012/07/08/c%C3%B3mo-hacer-una-paella/</guid>
+      <description>Este documento está basado en la receta original y fotos que le pasé a mi compañero Miguel Pérez Colino que a su vez, documentó y tradujo internamente para su difusión.
+Ingredientes Bolsa de verdura para paella (garrofón, ferraura, etc) Arroz bomba 🛒#ad (equivalente a 7 puñados) Pollo y conejo (700 y 400 gr) Tomate rallado (equivalente a 5 cucharadas) Pimentón Rojo 🛒#ad Colorante 🛒#ad / Azafrán (una cucharadita rasa / 300mg hebra) Aceite de oliva 🛒#ad para sofreír (poca cantidad para que no quede aceitosa) Sal Agua (preferiblemente de Valencia) Ajo Romero 🛒#ad Preparación Se pone junto al tomate un ajo para rallar y se deja junto hasta la hora de sofreírlo.</description>
+    </item>
+    <item>
+      <title>Herramientas de sincronización/backup</title>
+      <link>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</link>
+      <pubDate>Thu, 08 Dec 2011 11:52:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</guid>
+      <description>Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de &amp;lsquo;backup&amp;rsquo; en caso de fallo hardware de algún equipo.
+Estuve probando y evaluando diversas herramientas multiplataforma y junto a algunas más, las que más probé fueron estas:
+AeroFS Dropbox Syncany Sparkleshare Wuala SpiderOak Actualmente necesito &amp;lsquo;salvar/sincronizar&amp;rsquo; unos 35Gb de datos (fotos la gran mayoría y no precisamente en RAW), lo que provocó estas comparativas, preferiblemente de servicios que ofrecieran espacio gratuito.</description>
+    </item>
+    <item>
+      <title>Probando nuevos escritorios</title>
+      <link>https://iranzo.io/es/blog/2011/12/08/probando-nuevos-escritorios/</link>
+      <pubDate>Thu, 08 Dec 2011 11:13:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2011/12/08/probando-nuevos-escritorios/</guid>
+      <description>Hace ya años que pasé de KDE con la llegada de KDE 3 a utilizar GNOME, más &amp;rsquo;espartano&amp;rsquo;, pero con mejor rendimiento.
+Con Fedora 15 pasé a utilizar GNOME 3, bastante &amp;lsquo;innovador&amp;rsquo;, algo extraño, pero me fui acostumbrando relativamente bien, pero con la llegada de Fedora 16 y la versión 3.2, noto el equipo (que sigue siendo el mismo) con frecuentes enganchones y lentitud.
+Una opción sería subir los 2Gb de memoria a 4Gb, pero me parece tirar dinero cuando el equipo necesitaría una renovación durante el próximo año (P4 dual 2.</description>
+    </item>
+    <item>
+      <title>Rescate de sistemas virtuales (Xen)</title>
+      <link>https://iranzo.io/es/blog/2010/04/23/rescate-de-sistemas-virtuales-xen/</link>
+      <pubDate>Fri, 23 Apr 2010 23:31:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/23/rescate-de-sistemas-virtuales-xen/</guid>
+      <description>A raíz de un problema debido a reiterados apagones, me vi en la necesidad de levantar una máquina virtual que ya no arrancaba.
+En un sistema físico, lo que haríamos, es que según en qué punto estemos, usar un disco de arranque de nuestra distribución y por un lado reparar el sistema de ficheros con fsck o rehacer un initrd.img.
+¿Cómo hacemos esto si la máquina en lugar de ser una real, es una virtual?</description>
+    </item>
+    <item>
+      <title>Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible (Linux/Windows)</title>
+      <link>https://iranzo.io/es/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de-bios-en-un-ejecutable-autoextraible-linux/windows/</link>
+      <pubDate>Thu, 15 Apr 2010 14:18:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de-bios-en-un-ejecutable-autoextraible-linux/windows/</guid>
+      <description>Usando unetbootin (http://unetbootin.sourceforge.net/) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.
+Si queremos además, crear un fichero ejecutable autodescomprimible, para que el usuario final sólo deba ejecutarlo e introducir un pendrive y que se cree &amp;lsquo;solo&amp;rsquo;, deberemos tener además:
+7zip http://sourceforge.net/projects/sevenzip/files/ (para crear un fichero comprimido con los ficheros a incluir) 7zip SFX (7zS.sfx) dentro del fichero &amp;lsquo;Extra&amp;rsquo; de http://sourceforge.</description>
+    </item>
+    <item>
+      <title>Combinar correspondencia con OpenOffice.org</title>
+      <link>https://iranzo.io/es/blog/2010/04/05/combinar-correspondencia-con-openoffice.org/</link>
+      <pubDate>Mon, 05 Apr 2010 21:50:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/05/combinar-correspondencia-con-openoffice.org/</guid>
+      <description>Hacía un tiempo que no usaba la función de combinar correspondencia y en el equipo de sobremesa con Fedora 13 x86_64 no conseguía hacerla funcionar.
+Antes de nada:
+Qué es combinar correspondencia Una de las ventajas de tener la información en formato digital es su tratamiento, y una de las opciones más habituales, es tener bases de datos con la información que necesitamos y acceder a ella.
+La función de &amp;lsquo;combinar correspondencia&amp;rsquo; permite utilizar los datos de una base de datos para rellenar campos en un documento y luego, escoger la salida (impresión, nuevos documentos, email, etc).</description>
+    </item>
+    <item>
+      <title>Dropbox en Fedora</title>
+      <link>https://iranzo.io/es/blog/2010/04/01/dropbox-en-fedora/</link>
+      <pubDate>Thu, 01 Apr 2010 11:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/01/dropbox-en-fedora/</guid>
+      <description>Para instalar dropbox en Fedora, no es necesario realizar excesivos pasos:
+Abrir una cuenta en
+Dropbox (o si prefieres, en una empresa alternativa como SpiderOak (O Wuala que ofrece espacio adicional por compartir espacio en tu propio disco) Instalar en nuestra fedora el paquete correspondiente para Nautilus (aunque ponga que es para Fedora 10, funciona perfectamente en superiores (probado en 12 y 13))
+Al volver a iniciar sesión (o la lanzar el programa), aparecerá un icono en la bandeja de sistema y comenzará el proceso de configuración en el que se asocia el &amp;rsquo;escritorio&amp;rsquo; a la cuenta de Dropbox que creamos anteriormente.</description>
+    </item>
+    <item>
+      <title>Introducción al Software Libre</title>
+      <link>https://iranzo.io/es/presentations/2010-03-08-valux-introducion-al-softwate-libre/</link>
+      <pubDate>Mon, 08 Mar 2010 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2010-03-08-valux-introducion-al-softwate-libre/</guid>
+      <description>Introducción al Software Libre Res publica non dominetur
+Pablo Iranzo Gómez (https://iranzo.io)
+Introducción Concepto de libertad en el software Definición Términos relacionados Motivaciones Consecuencias de la libertad del software sociedad, usuario final, desarrollador, integrador, administración, proveedor de mantenimiento o servicios Resumen Bibliografía Preguntas Free software En inglés, la palabra free tiene dos significados:
+&amp;ldquo;Free as in beer&amp;rdquo; o &amp;ldquo;Free as in freedom&amp;rdquo;
+En castellano sería &amp;lsquo;gratis&amp;rsquo; o &amp;rsquo;libre&amp;rsquo;, para evitar ambigüedades muchas veces en inglés se utiliza la palabra española &amp;rsquo;libre software&amp;rsquo; o &amp;lsquo;gratis software&amp;rsquo;</description>
+    </item>
+    <item>
+      <title>Sincronizar &#39;basicamente&#39; iPhone o iPod Touch en Fedora 12</title>
+      <link>https://iranzo.io/es/blog/2010/03/02/sincronizar-basicamente-iphone-o-ipod-touch-en-fedora-12/</link>
+      <pubDate>Tue, 02 Mar 2010 14:43:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/03/02/sincronizar-basicamente-iphone-o-ipod-touch-en-fedora-12/</guid>
+      <description>Las nuevas versiones no están todavía soportadas en Fedora 12, así que tendremos que utilizar las de rawhide.
+#!bash yum --enablerepo=rawhide upgrade ifuse gtkpod libgpod libimobiledevice usbmuxd Una vez instalados, podemos empezar a utilizarlo ejecutando como root:
+#!bash mkdir -p /mnt/ipod chmod 777 /mnt/ipod usbmuxd -v -f Y como nuestro usuario:
+#!bash ifuse /mnt/ipod A partir de ahí podrás, si todo ha ido bien, utilizar gtkpod para gestionar la biblioteca de tu dispositivo.</description>
+    </item>
+    <item>
+      <title>pyserial</title>
+      <link>https://iranzo.io/es/blog/2010/02/23/pyserial/</link>
+      <pubDate>Tue, 23 Feb 2010 22:50:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/02/23/pyserial/</guid>
+      <description>Pyserial Esta semana estuve jugando con python para interrogar mediante puerto serie dispositivos.
+La verdad es que resultó mucho más sencillo de lo que pensaba, algo de complicación a la hora de interpretar las constantes de ASCII para el group separator (GS).
+La interrogación es tan sencilla como hacer:
+import sys import serial try: ser = serial.Serial( port=&amp;#34;/dev/ttyS0&amp;#34;, baudrate=9600, bytesize=serial.EIGHTBITS, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, xonxoff=1, rtscts=0, ) except: print(&amp;#34;Fallo al abrir el dispositivo&amp;#34;) sys.</description>
+    </item>
+    <item>
+      <title>Manifiesto en defensa de los derechos fundamentales en Internet</title>
+      <link>https://iranzo.io/es/blog/2009/12/03/manifiesto-en-defensa-de-los-derechos-fundamentales-en-internet/</link>
+      <pubDate>Thu, 03 Dec 2009 20:48:43 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2009/12/03/manifiesto-en-defensa-de-los-derechos-fundamentales-en-internet/</guid>
+      <description>Ante la inclusión en el Anteproyecto de Ley de Economía sostenible de modificaciones legislativas que afectan al libre ejercicio de las libertades de expresión, información y el derecho de acceso a la cultura a través de Internet, los periodistas, bloggers, usuarios, profesionales y creadores de internet manifestamos nuestra firme oposición al proyecto, y declaramos que:
+Los derechos de autor no pueden situarse por encima de los derechos fundamentales de los ciudadanos, como el derecho a la privacidad, a la seguridad, a la presunción de inocencia, a la tutela judicial efectiva y a la libertad de expresión.</description>
+    </item>
+    <item>
+      <title>Migrar de SPIP 1.9 a 2.0</title>
+      <link>https://iranzo.io/es/blog/2008/12/13/migrar-de-spip-1.9-a-2.0/</link>
+      <pubDate>Sat, 13 Dec 2008 18:10:58 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/12/13/migrar-de-spip-1.9-a-2.0/</guid>
+      <description>Con la reciente salida de SPIP 2.0, llega el momento de considerar migrar.
+Como siempre es necesario que comprobemos si tenemos una copia de seguridad reciente, la compatibilidad de los plugins que utilizamos, etc
+Una vez nos hemos armado de valor, y en el caso de la web que ahora estás leyendo, el cambio se hizo bajando el fichero zip de la nueva versión de spip, descomprimiéndolo en /var/www/html/ para conservar los contextos SELinux del servidor para páginas web y sobretodo, desactivando durante la actualización las plantillas, urls personalizadas, etc.</description>
+    </item>
+    <item>
+      <title>iSCSI y Clustering en RHEL/CentOS</title>
+      <link>https://iranzo.io/es/blog/2008/12/13/iscsi-y-clustering-en-rhel/centos/</link>
+      <pubDate>Sat, 13 Dec 2008 17:59:41 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/12/13/iscsi-y-clustering-en-rhel/centos/</guid>
+      <description>Introducción Durante la última semana estuve jugando de nuevo con iSCSI en el curso de RH436 Enterprise Clustering and Storage Management. Hace tiempo había seguido dos artículos Instalando un target iSCSI y su continuación Montando un iniciador iSCSI.
+iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel &amp;lsquo;barato&amp;rsquo;, podemos utilizar el espacio de un servidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.</description>
+    </item>
+    <item>
+      <title>Tablas para no decir nada</title>
+      <link>https://iranzo.io/es/blog/2008/11/08/tablas-para-no-decir-nada/</link>
+      <pubDate>Sat, 08 Nov 2008 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/11/08/tablas-para-no-decir-nada/</guid>
+      <description>Método de uso
+Comience por la primera casilla de la primera columna, y a continuación lea cualquier casilla, en cualquier orden, de las sucesivas segunda, tercera y cuarta columna. Continúe ya sin miedo, pronunciando con tono grandilocuente y pausas de efecto.
+Avance por columna eligiendo cualquier casilla.
+I II III IV Queridos compañeros la realización de las premisas del programa nos obliga a un exhaustivo análisis de las condiciones financieras y administrativas existentes.</description>
+    </item>
+    <item>
+      <title>Creación de distribuciones Live con Fedora</title>
+      <link>https://iranzo.io/es/blog/2008/09/24/creaci%C3%B3n-de-distribuciones-live-con-fedora/</link>
+      <pubDate>Wed, 24 Sep 2008 20:34:16 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/09/24/creaci%C3%B3n-de-distribuciones-live-con-fedora/</guid>
+      <description>Introducción Según lo visto en el artículo Kickstart, podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
+Fedora proporciona unas utilidades &amp;rsquo;livecd-tools&amp;rsquo; que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
+Ejemplo Por ejemplo, podemos personalizar nuestro medio &amp;rsquo;live&amp;rsquo; cambiando el mensaje de login con un:</description>
+    </item>
+    <item>
+      <title>Valux - Fedora</title>
+      <link>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</link>
+      <pubDate>Sat, 30 Aug 2008 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</guid>
+      <description>¿Qué es Fedora? Fedora es un sistema operativo basado en Linux que integra las últimas novedades en software libre y abierto Fedora es y será siempre libre para su uso, modificación y distribución Está construida por gente de todo el mundo que trabaja conjuntamente como una comunidad: El Proyecto Fedora Orígenes Los comienzos: Red Hat Linux 1994 -&amp;gt; 2003
+Versiones cada 6 meses Versiones más estables (.2) cada 18 meses Dificultad de soportar a largo plazo Modelo de ventas complicado Part.</description>
+    </item>
+    <item>
+      <title>FUSE</title>
+      <link>https://iranzo.io/es/blog/2008/07/01/fuse/</link>
+      <pubDate>Tue, 01 Jul 2008 20:13:16 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/07/01/fuse/</guid>
+      <description>Introducción En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a &amp;ldquo;hibernar&amp;rdquo; la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en &amp;ldquo;pausa&amp;rdquo; y al volver al día siguiente a utilizar el PC y encenderlo, recuperarlo todo tal cual estaba, listo para trabajar. Cuando pasé a Fedora esta función junto con el LVM cifrado no iban a faltar en mi sistema :-)</description>
+    </item>
+    <item>
+      <title>Fedora</title>
+      <link>https://iranzo.io/es/blog/2008/06/14/fedora/</link>
+      <pubDate>Sat, 14 Jun 2008 05:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/06/14/fedora/</guid>
+      <description>Introducción Fedora es una distribución Linux fruto del desarrollo de la extinta Red Hat Linux.
+Red Hat Linux se readaptó al entorno empresarial proporcionado las opciones de soporte que las empresas buscaban en el software libre y del código de Red Linux, nacieron dos versiones, Red Hat Enterprise Linux, disponible para clientes con suscripciones (Red Hat no vende &amp;ldquo;licencias de uso&amp;rdquo;, vende servicios de soporte, actualización en forma de suscripciones, puede verse como una especie de tarifa plana para acceder a todas las versiones de los productos subscritos, soporte, etc) válidas y Fedora Core, sucesor directo de Red Hat Linux.</description>
+    </item>
+    <item>
+      <title>(mi) Evolución con Linux</title>
+      <link>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</link>
+      <pubDate>Tue, 03 Jun 2008 22:32:07 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</guid>
+      <description>Antecedentes Llevo gastando Linux desde hace bastantes años&amp;hellip;
+Primero empecé con una copia de Slackware 1.x que venía con la revista Sólo programadores cuya instalación consistía en descomprimir un fichero &amp;ldquo;zip&amp;rdquo; sobre un disco FAT16 (en aquella época tenía un disco duro de 80 Mb (sí, Megabytes) en un 386DX a 40 Mhz y la instalación venía a ocupar unos 15 Mb descomprimida.
+Dicha instalación hacía uso de un sistema llamado UMSDOS que permitía, una vez cargado Linux (mediante loadlin) hacer uso de las características de un filesystem de Linux cuando en realidad había por debajo un sistema FAT.</description>
+    </item>
+    <item>
+      <title>Kickstart - instalaciones automatizadas para anaconda</title>
+      <link>https://iranzo.io/es/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda/</link>
+      <pubDate>Sun, 11 May 2008 12:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda/</guid>
+      <description>Instalar linux Hoy en día todas las distribuciones suelen disponer de un instalador gráfico que mediante un sencillo asistente permiten particionar el sistema, seleccionar los paquetes, instalarlos y configurarlos.
+El problema viene cuando en lugar de instalar un PC en 40 minutos, tenemos que instalar 20, cada uno de esos pc&amp;rsquo;s, aunque podamos ir con varios discos a la vez, nos va a llevar más de 40 minutos hacer la instalación, por tener que ir siguiendo el asistente, escogiendo opciones, paquetes, configurando cosas, etc.</description>
+    </item>
+    <item>
+      <title>Preparar Firefox para un kiosco</title>
+      <link>https://iranzo.io/es/blog/2008/05/03/preparar-firefox-para-un-kiosco/</link>
+      <pubDate>Sat, 03 May 2008 23:13:33 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/05/03/preparar-firefox-para-un-kiosco/</guid>
+      <description>userChrome.css Firefox tiene en la carpeta del usuario, y dentro del perfil una subcarpeta llamada chrome y en ella el fichero userChrome.css
+Éste permite ajustar pequeños cambios en el diseño como mostrar u ocultar menús, botones, etc.
+Por ejemplo, podemos esconder el menú de ayuda con:
+#helpMenu display: none !important; Compactando el entorno Yo utilizo una visión más compacta reduciendo las barras, poniendo la barra de direcciones y búsqueda en la de menús:</description>
+    </item>
+    <item>
+      <title>Creando plantillas Jigdo (Jigsaw Download) para descargar ISO&#39;s</title>
+      <link>https://iranzo.io/es/blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/</link>
+      <pubDate>Fri, 04 Jan 2008 18:43:29 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/</guid>
+      <description>Introducción Jigdo (JIGsaw DOwnload) es una pequeña utilidad que permite ensamblar imágenes de CD/DVD a partir de los ficheros que las forman.
+Por ejemplo, Debian ha estado utilizándolo durante algún tiempo para distribuir sus imágenes: se descarga un fichero jigdo y utilizando la orden jigdo-lite (paquete jigdo-lite en Debian y en las basadas en RPM1. De este modo, sólo de descargan ficheros pequeños de incluso varios servidores, repartiendo la carga, y haciendo uso de posibles proxys, etc.</description>
+    </item>
+    <item>
+      <title>Las Leyes de Murphy</title>
+      <link>https://iranzo.io/es/blog/2007/10/03/las-leyes-de-murphy/</link>
+      <pubDate>Wed, 03 Oct 2007 17:55:54 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2007/10/03/las-leyes-de-murphy/</guid>
+      <description>Las leyes de Murphy Introducción ¿Nunca ha sonado el teléfono de su casa en el preciso instante en que usted se sentaba en el excusado? ¿Tampoco ha aparecido el autobús que llevaba horas esperando justo cuando se ha encendido un cigarrillo? ¿Nunca ha llovido a cántaros, precisamente el día que había llevado el coche a lavar, ni ha dejado de llover nada más comprar un paraguas? Es posible que usted se diera cuenta en ese momento de que se estaba tramando algo, que existía un principio universal más allá de su comprensión y que estaba muerto de rabia por que le pusieran un nombre.</description>
+    </item>
+    <item>
+      <title>Gestor de Volúmenes Lógicos (LVM)</title>
+      <link>https://iranzo.io/es/blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/</link>
+      <pubDate>Fri, 09 Mar 2007 16:39:35 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/</guid>
+      <description>Introducción LVM son las siglas de Logical Volume Manager, gestor de volúmenes lógicos, una potente herramienta presente en los actuales sistemas Linux, inspirada en la implementación de la que disponían otros sistemas como AIX y HP-UX.
+LVM introduce una separación entre la estructura típica de un sistema y los elementos discos, Particiones, Sistemas de ficheros a los que estamos habituados.
+LVM funciona a tres niveles, a saber:
+Volúmenes físicos Grupos de volumen Volúmenes lógicos Una de las principales ventajas del sistema LVM sobre el sistema tradicional, es que LVM nos abstrae de los discos físicos y de las limitaciones de un disco, permitiendo tener sistemas de ficheros sobre varios discos, redimensionarlos según las necesidades y por lo tanto, hacer un uso más eficiente del espacio del que disponemos, con independencia de su ubicación.</description>
+    </item>
+    <item>
+      <title>Migrar de SPIP 1.8 a 1.9</title>
+      <link>https://iranzo.io/es/blog/2006/07/01/migrar-de-spip-1.8-a-1.9/</link>
+      <pubDate>Sat, 01 Jul 2006 14:48:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2006/07/01/migrar-de-spip-1.8-a-1.9/</guid>
+      <description>Introducción a SPIP 1.9 SPIP 1.9 va a traer bastantes mejoras respecto a versiones anteriores, entre ellas:
+Abandono de la compatibilidad con PHP3 y con ella, las extensiones &amp;ldquo;.php3&amp;rdquo; en los ficheros Nueva organización de las carpetas Nuevo sistema para llamar a los esqueletos (dejando de lado también el .php3) Nuevas balizas y filtros Sistema de complementos Nuevos criterios para bucles (incluido uno para paginación) Introducción de algunos elementos de programación AJAX(Desplazan parte de la carga de trabajo del servidor al cliente que visita la página, haciendo que la navegación sea más fluida y el servidor no se sobrecargue) Soporte UTF-8 Proceso de actualización a SPIP 1.</description>
+    </item>
+    <item>
+      <title>Esqueleto basado en Mollio.org</title>
+      <link>https://iranzo.io/es/blog/2006/04/30/esqueleto-basado-en-mollio.org/</link>
+      <pubDate>Sun, 30 Apr 2006 05:06:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2006/04/30/esqueleto-basado-en-mollio.org/</guid>
+      <description>Introducción Estos esqueletos se basan en el modelo tipo C de la web de www.mollio.org, gracias a un mensaje que se envió a la lista de correo de SPIP en Español.
+Los esqueletos se ajustan al tamaño de pantalla y se visualizan adecuadamente tanto en Mozilla como otros navegadores, y al disponer de dos áreas de menús, se adaptaban más cómodamente al diseño modular que habíamos utilizado Laura Primo y Pablo Iranzo Gómez para las webs de http://Linuv.</description>
+    </item>
+    <item>
+      <title>Esqueleto basado en el de spip-contrib</title>
+      <link>https://iranzo.io/es/blog/2005/02/20/esqueleto-basado-en-el-de-spip-contrib/</link>
+      <pubDate>Sun, 20 Feb 2005 22:52:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2005/02/20/esqueleto-basado-en-el-de-spip-contrib/</guid>
+      <description>Introducción Antes de nada&amp;hellip; Estos esqueletos se basan en los aparecidos en http://www.spip-contrib.net, gracias a un mensaje que se envió a la lista de correo de SPIP en Español, hablando de otros modelos basados en esos mismos (los de nqnwebs para atén de Martín Gaitán)
+Lo que me llamó la atención de estos esqueletos era que se adaptaban bien al tamaño de pantalla y se veían adecuadamente tanto en Mozilla como otros navegadores, y que al disponer de dos áreas de menús, se adaptaban más cómodamente al diseño modular que habíamos utilizado Laura Primo y Pablo Iranzo Gómez para las webs de http://Linuv.</description>
+    </item>
+    <item>
+      <title>Linux - Instalar el sistema de ficheros raíz sobre RAID</title>
+      <link>https://iranzo.io/es/blog/2005/01/18/linux-instalar-el-sistema-de-ficheros-ra%C3%ADz-sobre-raid/</link>
+      <pubDate>Tue, 18 Jan 2005 20:12:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2005/01/18/linux-instalar-el-sistema-de-ficheros-ra%C3%ADz-sobre-raid/</guid>
+      <description>Introducción Si queremos implementar un disco espejo en el sistema raíz, nos encontramos con que muchas distribuciones no están preparadas, siendo un incordio tener que prepararlas para esta finalidad&amp;hellip; con este artículo veremos cómo conseguirlo.
+RAID, son las siglas de Redundant Array of Inexpensive Disks, es decir, Matriz redundante de discos baratos.
+Los raid tienen varios niveles, aunque los más extendidos son los linear, 0, 1, 0+1, 1+0 ó 5.</description>
+    </item>
+    <item>
+      <title>Manual de la web SPIP</title>
+      <link>https://iranzo.io/es/blog/2004/11/25/manual-de-la-web-spip/</link>
+      <pubDate>Thu, 25 Nov 2004 18:44:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/11/25/manual-de-la-web-spip/</guid>
+      <description>Manual de instrucciones de la web Introducción Para facilitar el uso de la web tanto por personas acostumbradas al trabajo con ordenadores, como personas que no lo están,hacía falta una de forma de agrupar a la vez un sistema sencillo de manejar como potente en su funcionamiento y posibilidades de adaptación.
+Se analizaron los diversos sistemas libres de gestión de contenidos (la opción de editar directamente las páginas quedó descartada por su complejidad y falta de uniformidad, etc), y entre los más habituales: PHP-Nuke, Post-Nuke, Drupal, etc se fueron descartando debido a los problemas de seguridad de los que adolecían los más extendidos como PHP-Nuke, o a la orientación a personas acostumbradas al manejo de estos sistemas.</description>
+    </item>
+    <item>
+      <title>Anillo Astronómico</title>
+      <link>https://iranzo.io/es/blog/2004/06/18/anillo-astron%C3%B3mico/</link>
+      <pubDate>Fri, 18 Jun 2004 15:33:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/06/18/anillo-astron%C3%B3mico/</guid>
+      <description>¿Qué es? El Anillo Astronómico es un lugar de reunión con enlaces a diferentes webs de astronomía enviadas por los usuarios. El anillo proporciona un sencillo y a la vez potente interfaz que permite que los usuarios accedan a una base de datos que ellos mismos van ampliando con sus propias direcciones de astronomía. La base se puede consultar de varias formas para ayudar al interesado en la astronomía a encontrar la página que desea, por ejemplo realizando búsquedas entre las webs apuntadas al Anillo.</description>
+    </item>
+    <item>
+      <title>Auroras - Magia en el Cielo</title>
+      <link>https://iranzo.io/es/blog/2004/05/24/auroras-magia-en-el-cielo/</link>
+      <pubDate>Mon, 24 May 2004 10:48:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/05/24/auroras-magia-en-el-cielo/</guid>
+      <description>Introducción La aurora es un fenómeno luminoso, que aparece en las latitudes altas del planeta, y raramente se observa en latitudes medias, aunque han llegado a verse hasta en Francia.
+El término aurora, comprende a dos tipos de auroras clasificadas por localización geográfica:
+Aurora Boreal en el hemisferio Norte (aurora borealis) Aurora austral en el hemisferio Sur (aurora australis) La aurora boreal o borealis también ha sido denominada en la literatura como &amp;ldquo;Las Luces del Norte&amp;rdquo;.</description>
+    </item>
+    <item>
+      <title>Privacidad en las comunicaciones electrónicas</title>
+      <link>https://iranzo.io/es/blog/2004/05/23/privacidad-en-las-comunicaciones-electr%C3%B3nicas/</link>
+      <pubDate>Sun, 23 May 2004 20:40:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/05/23/privacidad-en-las-comunicaciones-electr%C3%B3nicas/</guid>
+      <description>Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto.
+Orígenes Desde tiempos inmemoriales, a la vez que se avanzaba en la comunicación, se avanzaba también en la necesidad de mantener la privacidad de las mismas&amp;hellip;</description>
+    </item>
+    <item>
+      <title>Patentes de Software</title>
+      <link>https://iranzo.io/es/blog/2004/05/13/patentes-de-software/</link>
+      <pubDate>Thu, 13 May 2004 21:55:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/05/13/patentes-de-software/</guid>
+      <description>¿Qué es una patente? Una patente es la legitimación jurídica formal para la explotación de un recurso determinado.
+En realidad se trata de un modelo restringido de monopolio comercial. Como dato histórico cabe recordar las famosas &amp;ldquo;patentes de corso&amp;rdquo;, licencias de asesinato y expolio que los estados otorgaban a piratas (los corsarios) para que ejercieran impunemente sus actividades bajo determinadas condiciones beneficiosas para ambos. ¿No os suena de algo?
+¿Qué es lo que se patenta en este caso?</description>
+    </item>
+    <item>
+      <title>Error según número de pitidos en la BIOS</title>
+      <link>https://iranzo.io/es/blog/2004/04/12/error-seg%C3%BAn-n%C3%BAmero-de-pitidos-en-la-bios/</link>
+      <pubDate>Mon, 12 Apr 2004 09:54:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/04/12/error-seg%C3%BAn-n%C3%BAmero-de-pitidos-en-la-bios/</guid>
+      <description>Las BIOS (Basic Input Output System) de los pc&amp;rsquo;s informan de los errores del hardware del pc en el arranque mediante un código de pitidos en el caso en el que no puede aparece nada por pantalla&amp;hellip; aquí los podrás ver..
+Código de errores emitido por la BIOS para indicar los problemas que surgen durante el POST (Power On Self Test (Autocomprobación tras el encendido)) del arranque:
+Errores Fatales Número de Pitidos Significado 1 Error de refresco DRAM 2 Fallo de los 640Kb RAM base 4 Error del timer de sistema 5 Fallo del procesador 6 Error de la puerta de teclado A20 7 Error de excepción del modo virtual 9 Error de checksum de la ROM-BIOS Errores no fatales Número de Pitidos Significado 3 Fallo de comprobación de memoria convencional y extendida 8 Fallo de monitor y fallo de trazado vertical y horizontal Disfruta!</description>
+    </item>
+    <item>
+      <title>La jerga de los Paper</title>
+      <link>https://iranzo.io/es/blog/2004/04/06/la-jerga-de-los-paper/</link>
+      <pubDate>Tue, 06 Apr 2004 20:01:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/04/06/la-jerga-de-los-paper/</guid>
+      <description>Extraído de un artículo publicado por el periódico El País:
+Cuando los científicos dicen&amp;hellip; &amp;hellip;quieren decir&amp;hellip; Se sabe desde hace tiempo No me he molestado en mirar la referencia original &amp;hellip; de gran importancia tanto teórica como práctica &amp;hellip; a mí me interesa Aunque no ha sido posible dar una respuesta decisiva a estos interrogantes No es que yo haya entendido gran cosa, pero voy a ver si cuela una publicación de todas maneras El compuesto de tungsteno y plomo fue escogido por ser idóneo para demostrar el efecto predicho Al tío del laboratorio de al lado le sobraba una muestra Alta pureza, muy alta pureza, pureza extremadamente alta, superpuro, espectroscópicamente puro Composición desconocida excepto por las pretensiones exageradas del proveedor Tres casos fueron escogidos para posterior análisis detallado Los resultados en los demás casos no los entendía y los tiré a la basura &amp;hellip; fueron manejados con extremo cuidado durante los experimentos &amp;hellip; sólo se me despanzurró uno en el suelo Los resultados típicos se muestran&amp;hellip; Los mejores resultados se muestran Aunque algo de detalle se pierde en la reproducción fotográfica&amp;hellip; A partir del negativo es imposible decir&amp;hellip; Probablemente para periodos más largos&amp;hellip; No tuve la paciencia de comprobarlo&amp;hellip; Estos resultados serán anunciados más tarde A ver si tengo la paciencia de trabajar algo más Los valores más increíbles son los obtenidos por Fulanito Era uno de mis estudiantes Se sugiere&amp;hellip; Creo que Parece ser que&amp;hellip; Es posible que&amp;hellip; Está claro que se requiere una labor adicional&amp;hellip; Yo no lo entiendo Correcto dentro de un orden de magnitud&amp;hellip; Erróneo Cabe esperar que este trabajo de lugar a otros en el mismo campo Este artículo no es muy bueno, pero tampoco lo son los demás en este asunto sin interés Agradecemos a Fulano su asistencia en la realización de los experimentos y a Mengano sus interesantes comentarios.</description>
+    </item>
+    <item>
+      <title>¿Qué son las news?</title>
+      <link>https://iranzo.io/es/blog/2004/04/03/qu%C3%A9-son-las-news/</link>
+      <pubDate>Sat, 03 Apr 2004 20:04:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/04/03/qu%C3%A9-son-las-news/</guid>
+      <description>Este artículo es una traducción de un documento en inglés de EARN de hace bastantes años, en los que se explicaban muchos de los servicios de la antigua Internet, hoy en día desaparecidos.
+Este artículo fue publicado en el servidor de news de la Universidad de Valencia
+¿Qué es USENET? Netnews o Usenet como se le conoce de forma común es un sistema de intercambio de mensajes que intercambia mensajes electrónicamente por todo el mundo de forma estándar.</description>
+    </item>
+    <item>
+      <title>¿Qué es Linux?</title>
+      <link>https://iranzo.io/es/blog/2004/03/18/qu%C3%A9-es-linux/</link>
+      <pubDate>Thu, 18 Mar 2004 22:50:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/03/18/qu%C3%A9-es-linux/</guid>
+      <description>Introducción Linux técnicamente hablando es sólo el núcleo de un sistema operativo, formado por la unión de ese núcleo y una serie de utilidades llamadas GNU.
+Linux fue creado por un estudiante finlandés llamado Linus Torvalds debido a su interés por aprender sobre sistemas operativos y verse limitado por los disponibles en la época.
+La revolución de Linux fue precisamente que en sus primeros pasos fue publicado ante los ojos de todo el mundo presentándolo y solicitando que cualquiera que pudiera, lo mejorase y publicase las mejoras realizadas.</description>
+    </item>
+    <item>
+      <title>Configurar Exim3 con MailScanner y ClamAV</title>
+      <link>https://iranzo.io/es/blog/2004/02/06/configurar-exim3-con-mailscanner-y-clamav/</link>
+      <pubDate>Fri, 06 Feb 2004 21:31:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/02/06/configurar-exim3-con-mailscanner-y-clamav/</guid>
+      <description>Prerequisitos: Para hacerlo funcionar, vamos a tener que hacer unas cosillas&amp;hellip;
+Debemos tener:
+MailScanner Exim Clamav (con clamav-freshclam) Recomendables: razor, unrar, lha, unzoo, arj
+El funcionamiento es muy sencillo, a partir de la configuración, dispondremos de dos colas de correo, una para recibir y otra para enviar.
+El correo que recibamos será almacenado por exim en sus carpetas, cada cierto tiempo MailScanner comprobará que hay o no correo nuevo, y en ese caso, lo analizará mediante su sistema antispam (sí, el spamassassin) y junto con razor (red colaborativa para notificación de spam), con el antivirus, y al final de todo, si el mensaje supera todos los criterios, lo moverá a la cola de salida, y exim, lo enviará como toque (a la cuenta local del usuario, a un equipo remoto, etc).</description>
+    </item>
+    <item>
+      <title>Montar un router con la idea de wireless</title>
+      <link>https://iranzo.io/es/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless/</link>
+      <pubDate>Wed, 18 Jun 2003 21:39:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless/</guid>
+      <description>Introducción Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red.
+En el caso de las redes inalámbricas, existen varias aproximaciones.
+Un nodo puede ser un aparato denominado Punto de Acceso o por sus siglas en inglés AP (Access Point) que contiene en su interior un interfaz wireless y una conexión Ethernet RJ45 para enlazarlo o bien con un equipo o con una red.</description>
+    </item>
+    <item>
+      <title>Bookcrossing -  Libera tus libros</title>
+      <link>https://iranzo.io/es/blog/2003/06/03/bookcrossing-libera-tus-libros/</link>
+      <pubDate>Tue, 03 Jun 2003 20:13:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2003/06/03/bookcrossing-libera-tus-libros/</guid>
+      <description>Ha salido en las noticias de este medio día un proyecto de intercambio de libros a nivel mundial. La idea es que en lugar de tener los libros almacenando polvo en casa, los registremos en una web: http://www.bookcrossing.com y en base a los datos de registro, le pongamos una pegatina o una nota manuscrita (en la web hay modelos listos para imprimir de la pegatina) que lo identifiquen.
+Una vez identificado el libro, la cosa consiste en ponerlo en circulación: &amp;ldquo;olvidarlo&amp;rdquo; en una cafetería, una estatua, un baño, simplemente dárselo a alguien que vaya a otra ciudad, etc.</description>
+    </item>
+    <item>
+      <title>Administración de Sistemas y Seguridad</title>
+      <link>https://iranzo.io/es/presentations/2002-04-14-administracion-de-sistemas-y-seguridad/</link>
+      <pubDate>Mon, 15 Apr 2002 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2002-04-14-administracion-de-sistemas-y-seguridad/</guid>
+      <description>Introducción Historia (Antigüedad-1973) Siglo XI Astrolabio 1598 Compás Geométrico con su modificación posterior: Compás con Cuadrante 1882 Ingenio de diferencias de Charles Babbage (Computadora mecánica) (primera calculadora automática conocida) 1937-1942 Computador del Dr. Atanasoff (1º en utilizar la electrónica (válvulas termoiónicas), condensadores para hacer de memoria y lector de tarjetas perforadas) 1942-1973 ENIAC (Electronic Numerical Integrator and Computer) Ingenio de diferencias ABC ABC ABC ENIAC ENIAC Historia 1957-1969 1957 Besys (Utilizado por Bell Labs para controlar sus ordenadores para ejecutar varios procesos por lotes) 1965 Para su tercera generación de ordenadores (AT&amp;amp;T) y decidió unirse al MIT y a General Electric para crear Multics (Multiplexed Information and Computing Service) 1969 (Abril) AT&amp;amp;T Decide abandonar Multics y comenzar a utilizar GECOS.</description>
+    </item>
+  </channel>
+</rss>

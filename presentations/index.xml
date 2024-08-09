@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Presentations on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/presentations/</link>
+    <description>Recent content in Presentations on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:54:42 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/presentations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be lazy, automate: GitHub actions for static blogging</title>
+      <link>https://iranzo.io/presentations/2021-01-14-be-lazy-automate-gha-for-static-blogging/2021-01-14-be-lazy-automate-gha-for-static-blogging/</link>
+      <pubDate>Thu, 14 Jan 2021 22:24:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/2021-01-14-be-lazy-automate-gha-for-static-blogging/2021-01-14-be-lazy-automate-gha-for-static-blogging/</guid>
+      <description>Be lazy, automate: GitHub Actions for static blogging /me: Pablo Iranzo Gómez ( https://iranzo.io )
+What is a blog? A place to share knowledge, interests, tips, etc.
+Usually features:
+images comments from visitors, related articles, etc. What are the costs for a blog? Web costs money:
+Hosting Domain Maintenance etc. What is static blogging? Generate a static webpage
+Think of it as rendering templates into HTML Has no requirements on the web server, any simple Webserver is enough: Look ma!</description>
+    </item>
+    <item>
+      <title>Magnetic field, aurora, moon phases, eclipse and rockets</title>
+      <link>https://iranzo.io/presentations/campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes/</link>
+      <pubDate>Thu, 13 Feb 2020 22:15:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes/</guid>
+      <description>Disclaimer Simple talk oriented to 4 y-o children Vídeos, etc have been reduced from the originals (credits in bibliography) Magnetic Field, Aurora, Moon Phases and Rockets Pablo Iranzo Gómezhttps://iranzo.io
+Thursday 13th, February 2020
+Introduction Magnetic field Auroras Moon-Earth-Sun movement Moon phases Eclipses Rockets End Magnetic Field Magnetic field surrounds us, but it&amp;rsquo;s invisible although we can detect and measure.
+Easiest way to check it is to use a compass.
+Note: Use magnets and compass</description>
+    </item>
+    <item>
+      <title>Project automation with Travis, GitHub Pages and Quay</title>
+      <link>https://iranzo.io/presentations/2019-01-16-automation-travis-ghpages-containers/</link>
+      <pubDate>Wed, 16 Jan 2019 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/2019-01-16-automation-travis-ghpages-containers/</guid>
+      <description>Project hosting and automation /me: Pablo Iranzo Gómez ( https://iranzo.io )
+You got a shinny new project? What now? Code usually also requires a webpage
+Documentation, General Information, Developer information, etc Web costs money
+Hosting, Domain, Maintenance, etc Some Philosophy Empty your mind, be shapeless, formless, like water. Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle You put water in a teacup, it becomes the teapot Now water can flow or it can crash.</description>
+    </item>
+    <item>
+      <title>DevConf.cz 2018: Citellus - Detecting common pitfalls of deployments</title>
+      <link>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</link>
+      <pubDate>Sat, 27 Jan 2018 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</guid>
+      <description>Citellus: Detecting common pitfalls of deployments https://github.com/citellusorg/citellus
+Recording at https://www.youtube.com/watch?v=SDzzqrUdn5A
+What is Citellus? Citellus is a framework populated by community-contributed scripts that automate detecting problems, including configuration issues, conflicts with package versions, and more. History: how did was it started? The tool, started by Robin Černín after a long weekend shift checking one and over again several sosreports for the same data on different hosts.
+It started with some tests + shell wrapper, and was added a python wrapper by Pablo Iranzo to bring in more powerful features.</description>
+    </item>
+  </channel>
+</rss>

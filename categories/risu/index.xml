@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Risu on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/risu/</link>
+    <description>Recent content in Risu on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:50:19 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/risu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go (golang) plugin in Citellus</title>
+      <link>https://iranzo.io/blog/2020/06/14/go-golang-plugin-in-citellus/</link>
+      <pubDate>Sun, 14 Jun 2020 11:44:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/06/14/go-golang-plugin-in-citellus/</guid>
+      <description>I wanted to practice a bit Go programing, so I divided that task in two parts, one, adding a golang extension for Citellus and a sample, but working plugin using it.
+If interested in the code it&amp;rsquo;s available at the review at https://review.gerrithub.io/c/citellusorg/citellus/+/495622.
+The final sample code for it has been:
+// Author: Pablo Iranzo Gómez (Pablo.Iranzo@gmail.com) // Header for citellus metadata // long_name: Report detected number of CPU&amp;#39;s // description: List the processors detected in the system // priority: 200 package main import ( &amp;#34;bufio&amp;#34; &amp;#34;io&amp;#34; &amp;#34;os&amp;#34; &amp;#34;runtime&amp;#34; &amp;#34;strconv&amp;#34; &amp;#34;strings&amp;#34; ) func main() { var OKAY, _ = strconv.</description>
+    </item>
+    <item>
+      <title>Killercoda scenario creation</title>
+      <link>https://iranzo.io/blog/2019/06/11/killercoda-scenario-creation/</link>
+      <pubDate>Tue, 11 Jun 2019 21:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/11/killercoda-scenario-creation/</guid>
+      <description>After some time checking the scenarios at https://learn.openshift.com, I decided to give it a try.
+With the help of Mario Vázquez, author of Getting Started with Kubefed, I did create two scenarios:
+How to use Citellus on Citellus: Troubleshooting automation KubeVirt on a &amp;lsquo;browser-based&amp;rsquo; approach for MiniKube setup for validating KubeVirt: Kubernetes with VM Virtualization (versus the regular containers). You can check how them can be created by looking at their code at: killercoda Scenarios or the &amp;lsquo;playable&amp;rsquo; version at https://killercoda.</description>
+    </item>
+    <item>
+      <title>First post on Red Hat blog</title>
+      <link>https://iranzo.io/blog/2018/06/07/first-post-on-red-hat-blog/</link>
+      <pubDate>Thu, 07 Jun 2018 22:32:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/06/07/first-post-on-red-hat-blog/</guid>
+      <description>New blog post! After some great help and collaboration from all the colleagues reviewing, suggesting edits, we were able to prepare a blog post on Citellus, the tool we develop as part of our daily work solving cases.
+Check it out at Citellus: System configuration validation tool
+Enjoy! (and if you do, you can Buy Me a Coffee ) Pablo</description>
+    </item>
+    <item>
+      <title>DevConf.cz 2018: Citellus - Detecting common pitfalls of deployments</title>
+      <link>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</link>
+      <pubDate>Sat, 27 Jan 2018 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</guid>
+      <description>Citellus: Detecting common pitfalls of deployments https://github.com/citellusorg/citellus
+Recording at https://www.youtube.com/watch?v=SDzzqrUdn5A
+What is Citellus? Citellus is a framework populated by community-contributed scripts that automate detecting problems, including configuration issues, conflicts with package versions, and more. History: how did was it started? The tool, started by Robin Černín after a long weekend shift checking one and over again several sosreports for the same data on different hosts.
+It started with some tests + shell wrapper, and was added a python wrapper by Pablo Iranzo to bring in more powerful features.</description>
+    </item>
+    <item>
+      <title>DevConf.cz 2018!</title>
+      <link>https://iranzo.io/blog/2018/01/27/devconf.cz-2018/</link>
+      <pubDate>Sat, 27 Jan 2018 15:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/01/27/devconf.cz-2018/</guid>
+      <description>Presentation at DevConf.cz 2018! As highlighted in the prior edition of the &amp;lsquo;What&amp;rsquo;s new&amp;rsquo;, we got a slot for DevConf.cz 2018.
+During that slot, my colleagues Martin, Pablo and myself were presenting on the history and basics of Citellus and how it helps on debugging issues and providing faster analysis of already known ones.
+It is possible to watch the recording at https://www.youtube.com/watch?v=SDzzqrUdn5A and the slides used at: https://github.com/citellusorg/citellus/blob/master/doc/devconfcz2018-presentation-revealmd.md Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Recent changes in Magui and Citellus</title>
+      <link>https://iranzo.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/</link>
+      <pubDate>Tue, 16 Jan 2018 21:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/</guid>
+      <description>What&amp;rsquo;s new? During recent weeks we&amp;rsquo;ve been coding and performing several changes to Citellus and Magui.
+Checking the latest logs or list of issues open and closed on github is probably not an easy task or the best way to get &amp;lsquo;up-to-date&amp;rsquo; with changes, so I&amp;rsquo;ll try to compile a few here.
+First of all, we&amp;rsquo;re going to present it at DevConf.cz 2018, so come stop-by if assisting :-)
+Some of the changes include&amp;hellip;</description>
+    </item>
+    <item>
+      <title>i18n and &#39;bash8&#39; in bash</title>
+      <link>https://iranzo.io/blog/2017/10/26/i18n-and-bash8-in-bash/</link>
+      <pubDate>Thu, 26 Oct 2017 21:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/10/26/i18n-and-bash8-in-bash/</guid>
+      <description>Introduction In order to improve Citellus and Magui, we did implement some Unit testing to improve code quality.
+The tests written were made in python and with some changes it was also possible to validate the actual tests.
+Also, we did prepare the strings in python using gettext library so the actual messages can be translated to the language of choice (defaults to en, but can be changed via --lang modifier of citellus).</description>
+    </item>
+    <item>
+      <title>Magui for analysis of issues across several hosts.</title>
+      <link>https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts./</link>
+      <pubDate>Mon, 31 Jul 2017 12:45:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts./</guid>
+      <description>Background Citellus allows to check a sosreport against known problems identified on the provided tests.
+This approach is easy to implement and easy to test but has limitations when a problem can span across several hosts and only the problem reveals itself when a general analysis is performed.
+Magui tries to solve that by running the analysis functions inside citellus across a set of sosreports, unifying the data obtained per citellus plugin.</description>
+    </item>
+    <item>
+      <title>Citellus: framework for detecting known issues in systems.</title>
+      <link>https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems./</link>
+      <pubDate>Wed, 26 Jul 2017 22:26:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems./</guid>
+      <description>Learn about Citellus, a framework that will help you detect known issues, and more insightful information about your system</description>
+    </item>
+  </channel>
+</rss>

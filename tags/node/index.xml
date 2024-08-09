@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Node on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/node/</link>
+    <description>Recent content in Node on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yaspeller hook for pre-commit</title>
+      <link>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</link>
+      <pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</guid>
+      <description>I&amp;rsquo;ve made a PR that got merged into Yaspeller repository which adds support for pre-commit to spell check your files.
+It requires simple configuration, just add this snippet to your .pre-commit-config.yaml:
+- repo: https://github.com/hcodes/yaspeller.git rev: master hooks: - id: yaspeller files: &amp;#34;\\.en\\.md&amp;#34; The plugin will then initialize and spell check your files via yaspeller. It will use the standard .yaspeller.json file for dictionary and settings and automate it for each new commit you work on.</description>
+    </item>
+  </channel>
+</rss>

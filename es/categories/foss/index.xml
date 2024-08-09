@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>FOSS on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/categories/foss/</link>
+    <description>Recent content in FOSS on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/categories/foss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trucos y consejos para el RHCE y RHCSA</title>
+      <link>https://iranzo.io/es/blog/2022/07/13/trucos-y-consejos-para-el-rhce-y-rhcsa/</link>
+      <pubDate>Wed, 13 Jul 2022 21:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2022/07/13/trucos-y-consejos-para-el-rhce-y-rhcsa/</guid>
+      <description>Aunque hice el examen de RHCE algún tiempo, sigue habiendo trucos y consejos que siempre transmito a los interesados y que vienen indicados en el libro que escribimos: Red Hat Enterprise 8 Administration:
+No recuerdes cada paso, por ejemplo, nunca recuerdo la configuración de BIND, asi que recuerdo el paquete con el fichero que tiene ejemplos, lo instalo y lo consulto. Instala mlocate y ejecuta updatedb tan pronto como empieces, así podrás usar locate &amp;lt;fichero&amp;gt; para encontrar archivos rápidamente en tu sistema.</description>
+    </item>
+    <item>
+      <title>Autofirma en Linux</title>
+      <link>https://iranzo.io/es/blog/2021/09/09/autofirma-en-linux/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2021/09/09/autofirma-en-linux/</guid>
+      <description>Instalando Autofirma en Fedora 34</description>
+    </item>
+    <item>
+      <title>Herramientas de sincronización/backup</title>
+      <link>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</link>
+      <pubDate>Thu, 08 Dec 2011 11:52:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</guid>
+      <description>Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de &amp;lsquo;backup&amp;rsquo; en caso de fallo hardware de algún equipo.
+Estuve probando y evaluando diversas herramientas multiplataforma y junto a algunas más, las que más probé fueron estas:
+AeroFS Dropbox Syncany Sparkleshare Wuala SpiderOak Actualmente necesito &amp;lsquo;salvar/sincronizar&amp;rsquo; unos 35Gb de datos (fotos la gran mayoría y no precisamente en RAW), lo que provocó estas comparativas, preferiblemente de servicios que ofrecieran espacio gratuito.</description>
+    </item>
+    <item>
+      <title>Probando nuevos escritorios</title>
+      <link>https://iranzo.io/es/blog/2011/12/08/probando-nuevos-escritorios/</link>
+      <pubDate>Thu, 08 Dec 2011 11:13:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2011/12/08/probando-nuevos-escritorios/</guid>
+      <description>Hace ya años que pasé de KDE con la llegada de KDE 3 a utilizar GNOME, más &amp;rsquo;espartano&amp;rsquo;, pero con mejor rendimiento.
+Con Fedora 15 pasé a utilizar GNOME 3, bastante &amp;lsquo;innovador&amp;rsquo;, algo extraño, pero me fui acostumbrando relativamente bien, pero con la llegada de Fedora 16 y la versión 3.2, noto el equipo (que sigue siendo el mismo) con frecuentes enganchones y lentitud.
+Una opción sería subir los 2Gb de memoria a 4Gb, pero me parece tirar dinero cuando el equipo necesitaría una renovación durante el próximo año (P4 dual 2.</description>
+    </item>
+    <item>
+      <title>Rescate de sistemas virtuales (Xen)</title>
+      <link>https://iranzo.io/es/blog/2010/04/23/rescate-de-sistemas-virtuales-xen/</link>
+      <pubDate>Fri, 23 Apr 2010 23:31:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/23/rescate-de-sistemas-virtuales-xen/</guid>
+      <description>A raíz de un problema debido a reiterados apagones, me vi en la necesidad de levantar una máquina virtual que ya no arrancaba.
+En un sistema físico, lo que haríamos, es que según en qué punto estemos, usar un disco de arranque de nuestra distribución y por un lado reparar el sistema de ficheros con fsck o rehacer un initrd.img.
+¿Cómo hacemos esto si la máquina en lugar de ser una real, es una virtual?</description>
+    </item>
+    <item>
+      <title>Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible (Linux/Windows)</title>
+      <link>https://iranzo.io/es/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de-bios-en-un-ejecutable-autoextraible-linux/windows/</link>
+      <pubDate>Thu, 15 Apr 2010 14:18:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de-bios-en-un-ejecutable-autoextraible-linux/windows/</guid>
+      <description>Usando unetbootin (http://unetbootin.sourceforge.net/) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.
+Si queremos además, crear un fichero ejecutable autodescomprimible, para que el usuario final sólo deba ejecutarlo e introducir un pendrive y que se cree &amp;lsquo;solo&amp;rsquo;, deberemos tener además:
+7zip http://sourceforge.net/projects/sevenzip/files/ (para crear un fichero comprimido con los ficheros a incluir) 7zip SFX (7zS.sfx) dentro del fichero &amp;lsquo;Extra&amp;rsquo; de http://sourceforge.</description>
+    </item>
+    <item>
+      <title>Introducción al Software Libre</title>
+      <link>https://iranzo.io/es/presentations/2010-03-08-valux-introducion-al-softwate-libre/</link>
+      <pubDate>Mon, 08 Mar 2010 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2010-03-08-valux-introducion-al-softwate-libre/</guid>
+      <description>Introducción al Software Libre Res publica non dominetur
+Pablo Iranzo Gómez (https://iranzo.io)
+Introducción Concepto de libertad en el software Definición Términos relacionados Motivaciones Consecuencias de la libertad del software sociedad, usuario final, desarrollador, integrador, administración, proveedor de mantenimiento o servicios Resumen Bibliografía Preguntas Free software En inglés, la palabra free tiene dos significados:
+&amp;ldquo;Free as in beer&amp;rdquo; o &amp;ldquo;Free as in freedom&amp;rdquo;
+En castellano sería &amp;lsquo;gratis&amp;rsquo; o &amp;rsquo;libre&amp;rsquo;, para evitar ambigüedades muchas veces en inglés se utiliza la palabra española &amp;rsquo;libre software&amp;rsquo; o &amp;lsquo;gratis software&amp;rsquo;</description>
+    </item>
+    <item>
+      <title>Sincronizar &#39;basicamente&#39; iPhone o iPod Touch en Fedora 12</title>
+      <link>https://iranzo.io/es/blog/2010/03/02/sincronizar-basicamente-iphone-o-ipod-touch-en-fedora-12/</link>
+      <pubDate>Tue, 02 Mar 2010 14:43:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/03/02/sincronizar-basicamente-iphone-o-ipod-touch-en-fedora-12/</guid>
+      <description>Las nuevas versiones no están todavía soportadas en Fedora 12, así que tendremos que utilizar las de rawhide.
+#!bash yum --enablerepo=rawhide upgrade ifuse gtkpod libgpod libimobiledevice usbmuxd Una vez instalados, podemos empezar a utilizarlo ejecutando como root:
+#!bash mkdir -p /mnt/ipod chmod 777 /mnt/ipod usbmuxd -v -f Y como nuestro usuario:
+#!bash ifuse /mnt/ipod A partir de ahí podrás, si todo ha ido bien, utilizar gtkpod para gestionar la biblioteca de tu dispositivo.</description>
+    </item>
+    <item>
+      <title>pyserial</title>
+      <link>https://iranzo.io/es/blog/2010/02/23/pyserial/</link>
+      <pubDate>Tue, 23 Feb 2010 22:50:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/02/23/pyserial/</guid>
+      <description>Pyserial Esta semana estuve jugando con python para interrogar mediante puerto serie dispositivos.
+La verdad es que resultó mucho más sencillo de lo que pensaba, algo de complicación a la hora de interpretar las constantes de ASCII para el group separator (GS).
+La interrogación es tan sencilla como hacer:
+import sys import serial try: ser = serial.Serial( port=&amp;#34;/dev/ttyS0&amp;#34;, baudrate=9600, bytesize=serial.EIGHTBITS, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, xonxoff=1, rtscts=0, ) except: print(&amp;#34;Fallo al abrir el dispositivo&amp;#34;) sys.</description>
+    </item>
+    <item>
+      <title>Migrar de SPIP 1.9 a 2.0</title>
+      <link>https://iranzo.io/es/blog/2008/12/13/migrar-de-spip-1.9-a-2.0/</link>
+      <pubDate>Sat, 13 Dec 2008 18:10:58 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/12/13/migrar-de-spip-1.9-a-2.0/</guid>
+      <description>Con la reciente salida de SPIP 2.0, llega el momento de considerar migrar.
+Como siempre es necesario que comprobemos si tenemos una copia de seguridad reciente, la compatibilidad de los plugins que utilizamos, etc
+Una vez nos hemos armado de valor, y en el caso de la web que ahora estás leyendo, el cambio se hizo bajando el fichero zip de la nueva versión de spip, descomprimiéndolo en /var/www/html/ para conservar los contextos SELinux del servidor para páginas web y sobretodo, desactivando durante la actualización las plantillas, urls personalizadas, etc.</description>
+    </item>
+    <item>
+      <title>iSCSI y Clustering en RHEL/CentOS</title>
+      <link>https://iranzo.io/es/blog/2008/12/13/iscsi-y-clustering-en-rhel/centos/</link>
+      <pubDate>Sat, 13 Dec 2008 17:59:41 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/12/13/iscsi-y-clustering-en-rhel/centos/</guid>
+      <description>Introducción Durante la última semana estuve jugando de nuevo con iSCSI en el curso de RH436 Enterprise Clustering and Storage Management. Hace tiempo había seguido dos artículos Instalando un target iSCSI y su continuación Montando un iniciador iSCSI.
+iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel &amp;lsquo;barato&amp;rsquo;, podemos utilizar el espacio de un servidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.</description>
+    </item>
+    <item>
+      <title>Creación de distribuciones Live con Fedora</title>
+      <link>https://iranzo.io/es/blog/2008/09/24/creaci%C3%B3n-de-distribuciones-live-con-fedora/</link>
+      <pubDate>Wed, 24 Sep 2008 20:34:16 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/09/24/creaci%C3%B3n-de-distribuciones-live-con-fedora/</guid>
+      <description>Introducción Según lo visto en el artículo Kickstart, podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
+Fedora proporciona unas utilidades &amp;rsquo;livecd-tools&amp;rsquo; que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
+Ejemplo Por ejemplo, podemos personalizar nuestro medio &amp;rsquo;live&amp;rsquo; cambiando el mensaje de login con un:</description>
+    </item>
+    <item>
+      <title>Valux - Fedora</title>
+      <link>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</link>
+      <pubDate>Sat, 30 Aug 2008 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</guid>
+      <description>¿Qué es Fedora? Fedora es un sistema operativo basado en Linux que integra las últimas novedades en software libre y abierto Fedora es y será siempre libre para su uso, modificación y distribución Está construida por gente de todo el mundo que trabaja conjuntamente como una comunidad: El Proyecto Fedora Orígenes Los comienzos: Red Hat Linux 1994 -&amp;gt; 2003
+Versiones cada 6 meses Versiones más estables (.2) cada 18 meses Dificultad de soportar a largo plazo Modelo de ventas complicado Part.</description>
+    </item>
+    <item>
+      <title>FUSE</title>
+      <link>https://iranzo.io/es/blog/2008/07/01/fuse/</link>
+      <pubDate>Tue, 01 Jul 2008 20:13:16 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/07/01/fuse/</guid>
+      <description>Introducción En mi equipo de casa (sobremesa), desde que empecé con Debian 4.0 y debido a empezar a trabajar más con equipos portátiles me acostumbré a &amp;ldquo;hibernar&amp;rdquo; la máquina en lugar de suspenderla, era más cómodo dejar todos los programas en &amp;ldquo;pausa&amp;rdquo; y al volver al día siguiente a utilizar el PC y encenderlo, recuperarlo todo tal cual estaba, listo para trabajar. Cuando pasé a Fedora esta función junto con el LVM cifrado no iban a faltar en mi sistema :-)</description>
+    </item>
+    <item>
+      <title>Fedora</title>
+      <link>https://iranzo.io/es/blog/2008/06/14/fedora/</link>
+      <pubDate>Sat, 14 Jun 2008 05:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/06/14/fedora/</guid>
+      <description>Introducción Fedora es una distribución Linux fruto del desarrollo de la extinta Red Hat Linux.
+Red Hat Linux se readaptó al entorno empresarial proporcionado las opciones de soporte que las empresas buscaban en el software libre y del código de Red Linux, nacieron dos versiones, Red Hat Enterprise Linux, disponible para clientes con suscripciones (Red Hat no vende &amp;ldquo;licencias de uso&amp;rdquo;, vende servicios de soporte, actualización en forma de suscripciones, puede verse como una especie de tarifa plana para acceder a todas las versiones de los productos subscritos, soporte, etc) válidas y Fedora Core, sucesor directo de Red Hat Linux.</description>
+    </item>
+    <item>
+      <title>(mi) Evolución con Linux</title>
+      <link>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</link>
+      <pubDate>Tue, 03 Jun 2008 22:32:07 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</guid>
+      <description>Antecedentes Llevo gastando Linux desde hace bastantes años&amp;hellip;
+Primero empecé con una copia de Slackware 1.x que venía con la revista Sólo programadores cuya instalación consistía en descomprimir un fichero &amp;ldquo;zip&amp;rdquo; sobre un disco FAT16 (en aquella época tenía un disco duro de 80 Mb (sí, Megabytes) en un 386DX a 40 Mhz y la instalación venía a ocupar unos 15 Mb descomprimida.
+Dicha instalación hacía uso de un sistema llamado UMSDOS que permitía, una vez cargado Linux (mediante loadlin) hacer uso de las características de un filesystem de Linux cuando en realidad había por debajo un sistema FAT.</description>
+    </item>
+    <item>
+      <title>Kickstart - instalaciones automatizadas para anaconda</title>
+      <link>https://iranzo.io/es/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda/</link>
+      <pubDate>Sun, 11 May 2008 12:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda/</guid>
+      <description>Instalar linux Hoy en día todas las distribuciones suelen disponer de un instalador gráfico que mediante un sencillo asistente permiten particionar el sistema, seleccionar los paquetes, instalarlos y configurarlos.
+El problema viene cuando en lugar de instalar un PC en 40 minutos, tenemos que instalar 20, cada uno de esos pc&amp;rsquo;s, aunque podamos ir con varios discos a la vez, nos va a llevar más de 40 minutos hacer la instalación, por tener que ir siguiendo el asistente, escogiendo opciones, paquetes, configurando cosas, etc.</description>
+    </item>
+    <item>
+      <title>Preparar Firefox para un kiosco</title>
+      <link>https://iranzo.io/es/blog/2008/05/03/preparar-firefox-para-un-kiosco/</link>
+      <pubDate>Sat, 03 May 2008 23:13:33 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/05/03/preparar-firefox-para-un-kiosco/</guid>
+      <description>userChrome.css Firefox tiene en la carpeta del usuario, y dentro del perfil una subcarpeta llamada chrome y en ella el fichero userChrome.css
+Éste permite ajustar pequeños cambios en el diseño como mostrar u ocultar menús, botones, etc.
+Por ejemplo, podemos esconder el menú de ayuda con:
+#helpMenu display: none !important; Compactando el entorno Yo utilizo una visión más compacta reduciendo las barras, poniendo la barra de direcciones y búsqueda en la de menús:</description>
+    </item>
+    <item>
+      <title>Creando plantillas Jigdo (Jigsaw Download) para descargar ISO&#39;s</title>
+      <link>https://iranzo.io/es/blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/</link>
+      <pubDate>Fri, 04 Jan 2008 18:43:29 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/</guid>
+      <description>Introducción Jigdo (JIGsaw DOwnload) es una pequeña utilidad que permite ensamblar imágenes de CD/DVD a partir de los ficheros que las forman.
+Por ejemplo, Debian ha estado utilizándolo durante algún tiempo para distribuir sus imágenes: se descarga un fichero jigdo y utilizando la orden jigdo-lite (paquete jigdo-lite en Debian y en las basadas en RPM1. De este modo, sólo de descargan ficheros pequeños de incluso varios servidores, repartiendo la carga, y haciendo uso de posibles proxys, etc.</description>
+    </item>
+    <item>
+      <title>Gestor de Volúmenes Lógicos (LVM)</title>
+      <link>https://iranzo.io/es/blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/</link>
+      <pubDate>Fri, 09 Mar 2007 16:39:35 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/</guid>
+      <description>Introducción LVM son las siglas de Logical Volume Manager, gestor de volúmenes lógicos, una potente herramienta presente en los actuales sistemas Linux, inspirada en la implementación de la que disponían otros sistemas como AIX y HP-UX.
+LVM introduce una separación entre la estructura típica de un sistema y los elementos discos, Particiones, Sistemas de ficheros a los que estamos habituados.
+LVM funciona a tres niveles, a saber:
+Volúmenes físicos Grupos de volumen Volúmenes lógicos Una de las principales ventajas del sistema LVM sobre el sistema tradicional, es que LVM nos abstrae de los discos físicos y de las limitaciones de un disco, permitiendo tener sistemas de ficheros sobre varios discos, redimensionarlos según las necesidades y por lo tanto, hacer un uso más eficiente del espacio del que disponemos, con independencia de su ubicación.</description>
+    </item>
+    <item>
+      <title>Migrar de SPIP 1.8 a 1.9</title>
+      <link>https://iranzo.io/es/blog/2006/07/01/migrar-de-spip-1.8-a-1.9/</link>
+      <pubDate>Sat, 01 Jul 2006 14:48:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2006/07/01/migrar-de-spip-1.8-a-1.9/</guid>
+      <description>Introducción a SPIP 1.9 SPIP 1.9 va a traer bastantes mejoras respecto a versiones anteriores, entre ellas:
+Abandono de la compatibilidad con PHP3 y con ella, las extensiones &amp;ldquo;.php3&amp;rdquo; en los ficheros Nueva organización de las carpetas Nuevo sistema para llamar a los esqueletos (dejando de lado también el .php3) Nuevas balizas y filtros Sistema de complementos Nuevos criterios para bucles (incluido uno para paginación) Introducción de algunos elementos de programación AJAX(Desplazan parte de la carga de trabajo del servidor al cliente que visita la página, haciendo que la navegación sea más fluida y el servidor no se sobrecargue) Soporte UTF-8 Proceso de actualización a SPIP 1.</description>
+    </item>
+    <item>
+      <title>Esqueleto basado en Mollio.org</title>
+      <link>https://iranzo.io/es/blog/2006/04/30/esqueleto-basado-en-mollio.org/</link>
+      <pubDate>Sun, 30 Apr 2006 05:06:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2006/04/30/esqueleto-basado-en-mollio.org/</guid>
+      <description>Introducción Estos esqueletos se basan en el modelo tipo C de la web de www.mollio.org, gracias a un mensaje que se envió a la lista de correo de SPIP en Español.
+Los esqueletos se ajustan al tamaño de pantalla y se visualizan adecuadamente tanto en Mozilla como otros navegadores, y al disponer de dos áreas de menús, se adaptaban más cómodamente al diseño modular que habíamos utilizado Laura Primo y Pablo Iranzo Gómez para las webs de http://Linuv.</description>
+    </item>
+    <item>
+      <title>Esqueleto basado en el de spip-contrib</title>
+      <link>https://iranzo.io/es/blog/2005/02/20/esqueleto-basado-en-el-de-spip-contrib/</link>
+      <pubDate>Sun, 20 Feb 2005 22:52:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2005/02/20/esqueleto-basado-en-el-de-spip-contrib/</guid>
+      <description>Introducción Antes de nada&amp;hellip; Estos esqueletos se basan en los aparecidos en http://www.spip-contrib.net, gracias a un mensaje que se envió a la lista de correo de SPIP en Español, hablando de otros modelos basados en esos mismos (los de nqnwebs para atén de Martín Gaitán)
+Lo que me llamó la atención de estos esqueletos era que se adaptaban bien al tamaño de pantalla y se veían adecuadamente tanto en Mozilla como otros navegadores, y que al disponer de dos áreas de menús, se adaptaban más cómodamente al diseño modular que habíamos utilizado Laura Primo y Pablo Iranzo Gómez para las webs de http://Linuv.</description>
+    </item>
+    <item>
+      <title>Linux - Instalar el sistema de ficheros raíz sobre RAID</title>
+      <link>https://iranzo.io/es/blog/2005/01/18/linux-instalar-el-sistema-de-ficheros-ra%C3%ADz-sobre-raid/</link>
+      <pubDate>Tue, 18 Jan 2005 20:12:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2005/01/18/linux-instalar-el-sistema-de-ficheros-ra%C3%ADz-sobre-raid/</guid>
+      <description>Introducción Si queremos implementar un disco espejo en el sistema raíz, nos encontramos con que muchas distribuciones no están preparadas, siendo un incordio tener que prepararlas para esta finalidad&amp;hellip; con este artículo veremos cómo conseguirlo.
+RAID, son las siglas de Redundant Array of Inexpensive Disks, es decir, Matriz redundante de discos baratos.
+Los raid tienen varios niveles, aunque los más extendidos son los linear, 0, 1, 0+1, 1+0 ó 5.</description>
+    </item>
+    <item>
+      <title>¿Qué es Linux?</title>
+      <link>https://iranzo.io/es/blog/2004/03/18/qu%C3%A9-es-linux/</link>
+      <pubDate>Thu, 18 Mar 2004 22:50:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/03/18/qu%C3%A9-es-linux/</guid>
+      <description>Introducción Linux técnicamente hablando es sólo el núcleo de un sistema operativo, formado por la unión de ese núcleo y una serie de utilidades llamadas GNU.
+Linux fue creado por un estudiante finlandés llamado Linus Torvalds debido a su interés por aprender sobre sistemas operativos y verse limitado por los disponibles en la época.
+La revolución de Linux fue precisamente que en sus primeros pasos fue publicado ante los ojos de todo el mundo presentándolo y solicitando que cualquiera que pudiera, lo mejorase y publicase las mejoras realizadas.</description>
+    </item>
+    <item>
+      <title>Configurar Exim3 con MailScanner y ClamAV</title>
+      <link>https://iranzo.io/es/blog/2004/02/06/configurar-exim3-con-mailscanner-y-clamav/</link>
+      <pubDate>Fri, 06 Feb 2004 21:31:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/02/06/configurar-exim3-con-mailscanner-y-clamav/</guid>
+      <description>Prerequisitos: Para hacerlo funcionar, vamos a tener que hacer unas cosillas&amp;hellip;
+Debemos tener:
+MailScanner Exim Clamav (con clamav-freshclam) Recomendables: razor, unrar, lha, unzoo, arj
+El funcionamiento es muy sencillo, a partir de la configuración, dispondremos de dos colas de correo, una para recibir y otra para enviar.
+El correo que recibamos será almacenado por exim en sus carpetas, cada cierto tiempo MailScanner comprobará que hay o no correo nuevo, y en ese caso, lo analizará mediante su sistema antispam (sí, el spamassassin) y junto con razor (red colaborativa para notificación de spam), con el antivirus, y al final de todo, si el mensaje supera todos los criterios, lo moverá a la cola de salida, y exim, lo enviará como toque (a la cuenta local del usuario, a un equipo remoto, etc).</description>
+    </item>
+    <item>
+      <title>Montar un router con la idea de wireless</title>
+      <link>https://iranzo.io/es/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless/</link>
+      <pubDate>Wed, 18 Jun 2003 21:39:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless/</guid>
+      <description>Introducción Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red.
+En el caso de las redes inalámbricas, existen varias aproximaciones.
+Un nodo puede ser un aparato denominado Punto de Acceso o por sus siglas en inglés AP (Access Point) que contiene en su interior un interfaz wireless y una conexión Ethernet RJ45 para enlazarlo o bien con un equipo o con una red.</description>
+    </item>
+  </channel>
+</rss>

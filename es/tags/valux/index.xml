@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Valux on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/valux/</link>
+    <description>Recent content in Valux on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/valux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducción al Software Libre</title>
+      <link>https://iranzo.io/es/presentations/2010-03-08-valux-introducion-al-softwate-libre/</link>
+      <pubDate>Mon, 08 Mar 2010 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2010-03-08-valux-introducion-al-softwate-libre/</guid>
+      <description>Introducción al Software Libre Res publica non dominetur
+Pablo Iranzo Gómez (https://iranzo.io)
+Introducción Concepto de libertad en el software Definición Términos relacionados Motivaciones Consecuencias de la libertad del software sociedad, usuario final, desarrollador, integrador, administración, proveedor de mantenimiento o servicios Resumen Bibliografía Preguntas Free software En inglés, la palabra free tiene dos significados:
+&amp;ldquo;Free as in beer&amp;rdquo; o &amp;ldquo;Free as in freedom&amp;rdquo;
+En castellano sería &amp;lsquo;gratis&amp;rsquo; o &amp;rsquo;libre&amp;rsquo;, para evitar ambigüedades muchas veces en inglés se utiliza la palabra española &amp;rsquo;libre software&amp;rsquo; o &amp;lsquo;gratis software&amp;rsquo;</description>
+    </item>
+    <item>
+      <title>Valux - Fedora</title>
+      <link>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</link>
+      <pubDate>Sat, 30 Aug 2008 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</guid>
+      <description>¿Qué es Fedora? Fedora es un sistema operativo basado en Linux que integra las últimas novedades en software libre y abierto Fedora es y será siempre libre para su uso, modificación y distribución Está construida por gente de todo el mundo que trabaja conjuntamente como una comunidad: El Proyecto Fedora Orígenes Los comienzos: Red Hat Linux 1994 -&amp;gt; 2003
+Versiones cada 6 meses Versiones más estables (.2) cada 18 meses Dificultad de soportar a largo plazo Modelo de ventas complicado Part.</description>
+    </item>
+  </channel>
+</rss>
