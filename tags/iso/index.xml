@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ISO on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/iso/</link>
+    <description>Recent content in ISO on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/iso/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating Jigsaw Download (JigDo) files for downloading ISO&#39;s</title>
+      <link>https://iranzo.io/blog/2007/11/15/creating-jigsaw-download-jigdo-files-for-downloading-isos/</link>
+      <pubDate>Thu, 15 Nov 2007 21:50:25 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2007/11/15/creating-jigsaw-download-jigdo-files-for-downloading-isos/</guid>
+      <description>Introduction JigDo (JIGsaw DOwnload) is a small utility that can assemble a CD/DVD image from it&amp;rsquo;s internal files.
+For example, Debian has been using it for years for distributing the entire distribution: you downloaded a .jigdo file, and then, using the utility jigdo-lite (package jigdo-file on Debian like and RPM based1. This way, you only downloaded small files from servers, preventing line failures, spreading load between several servers, etc.
+Furthermore, if you already had some files (for example if you started at version X and have been downloading and keeping all files until X.</description>
+    </item>
+  </channel>
+</rss>

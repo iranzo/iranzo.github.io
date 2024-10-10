@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dit on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/dit/</link>
+    <description>Recent content in Dit on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/dit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configuring OpenShift with self-contained NTP</title>
+      <link>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</link>
+      <pubDate>Mon, 07 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</guid>
+      <description>Introduction In a regular OpenShift environment, NTP server is more less like this: Diagram In a self-contained cluster with no connection to external networks NTP server is not reachable, but a reachable NTP server is required for proper cluster synchronization. Cluster does use SSL certificates that require validation and might fail if the dates between the systems are not in sync or at least pretty close in time.
+Diagram We&amp;rsquo;ve several components already available in our OpenShift cluster that are very useful:</description>
+    </item>
+    <item>
+      <title>Upstream/Downstream documentation workflow</title>
+      <link>https://iranzo.io/blog/2020/12/01/upstream/downstream-documentation-workflow/</link>
+      <pubDate>Tue, 01 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/12/01/upstream/downstream-documentation-workflow/</guid>
+      <description>During last year I&amp;rsquo;ve worked with the https://github.com/openshift-kni/baremetal-deploy/ repository after being working in the KNI Community team that was in charge of &amp;lt;KubeVirt.io&amp;gt; and &amp;lt;Metal3.io&amp;gt; where some of the below things were applied.
+One of the goals we had was to streamline the upstream &amp;lt;-&amp;gt; downstream process to keep changes done in the right way: get changes upstream and copy over downstream with minimal changes.
+We ended up using AsciiDoctor for building the documentation in the same way it&amp;rsquo;s done downstream so it&amp;rsquo;s just a matter of copying over the modules.</description>
+    </item>
+    <item>
+      <title>Dell racadm remote ISO load</title>
+      <link>https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/</link>
+      <pubDate>Tue, 12 May 2020 13:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/</guid>
+      <description>In order to test IPv6 deployment on Dell hardware I was in need to patch the servers to ensure that UEFI boot mode is in use.
+Normally I would had use the DSU that runs from within Linux, but as the servers are part of an OpenShift installation (using baremetal-deploy) and using CoreOS as the underlying system I wanted to load ISO from HTTP server on the deployhost (running RHEL).</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Risu on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/risu/</link>
+    <description>Recent content in Risu on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/risu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using ChatGPT for writing Risu Plugins</title>
+      <link>https://iranzo.io/blog/2023/03/02/using-chatgpt-for-writing-risu-plugins/</link>
+      <pubDate>Thu, 02 Mar 2023 17:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2023/03/02/using-chatgpt-for-writing-risu-plugins/</guid>
+      <description>Lately, there&amp;rsquo;s a lot of interest on ChatGPT, and yes, it&amp;rsquo;s really impressive the way it processes the context to provide answers to the questions.
+To give it a try, and put into play the requirements for writing a Risu plugin, I wrote some of the requirements in a paragraph:
+I want to create a bash script for checking system status.
+The script should use return codes to indicate success, failure, information, error or skipped via the values stored in the variables $RC_OKAY, $RC_SKIPPED, $RC_ERROR, $RC_FAILED and $RC_INFO.</description>
+    </item>
+    <item>
+      <title>OpenShift&#39;s oc debug and parallel execution</title>
+      <link>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</link>
+      <pubDate>Thu, 03 Nov 2022 14:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</guid>
+      <description>A colleague reported some issues in the OpenShift troubleshooting and diagnosis scripts at OpenShift-checks.
+Some time ago I did contribute some changes to use functions and allow using the RISU wrapper to the scripts, helping consuming the results via RISU&amp;rsquo;s HTML interface.
+As my colleague reported, for some plugins, the output of the command was not shown in the HTML Interface.
+After some investigation, it was found that parallel execution for the plugins was causing no output to be shown, but when filtering to individual ones via risu -i XXXXXXX/plugin -l it was working fine&amp;hellip; the problem was not the check itself, as both of them worked fine when executed individually but failed when executing them together.</description>
+    </item>
+    <item>
+      <title>Go (golang) plugin in Citellus</title>
+      <link>https://iranzo.io/blog/2020/06/14/go-golang-plugin-in-citellus/</link>
+      <pubDate>Sun, 14 Jun 2020 11:44:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/06/14/go-golang-plugin-in-citellus/</guid>
+      <description>I wanted to practice a bit Go programing, so I divided that task in two parts, one, adding a golang extension for Citellus and a sample, but working plugin using it.
+If interested in the code it&amp;rsquo;s available at the review at https://review.gerrithub.io/c/citellusorg/citellus/+/495622.
+The final sample code for it has been:
+// Author: Pablo Iranzo Gómez (Pablo.Iranzo@gmail.com) // Header for citellus metadata // long_name: Report detected number of CPU&amp;#39;s // description: List the processors detected in the system // priority: 200 package main import ( &amp;#34;bufio&amp;#34; &amp;#34;io&amp;#34; &amp;#34;os&amp;#34; &amp;#34;runtime&amp;#34; &amp;#34;strconv&amp;#34; &amp;#34;strings&amp;#34; ) func main() { var OKAY, _ = strconv.</description>
+    </item>
+    <item>
+      <title>Killercoda scenario redirection</title>
+      <link>https://iranzo.io/blog/2019/07/31/killercoda-scenario-redirection/</link>
+      <pubDate>Wed, 31 Jul 2019 07:39:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/07/31/killercoda-scenario-redirection/</guid>
+      <description>After my post about killercoda, I did split my initial scenarios into &amp;lsquo;organizations&amp;rsquo;.
+One of them, is in progress to get contributed upstream to KubeVirt project killercoda (still getting some reviews to land on final repo), and the other is under Citellus organization.
+As the goal was not to lose visits using the prior links, I contacted the team behind killercoda Support (thanks a lot Ben!!) and the requirements to get a &amp;lsquo;redirect&amp;rsquo; in place is to:</description>
+    </item>
+    <item>
+      <title>Contributing to OSP upstream a.k.a. Peer Review</title>
+      <link>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</link>
+      <pubDate>Tue, 16 Oct 2018 07:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</guid>
+      <description>Introduction In the article &amp;ldquo;Contributing to OpenStack&amp;rdquo; we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find low hanging fruits to start contributing).
+Here, we&amp;rsquo;ll cover what happens behind the scene to get change published.
+Upstream workflow Peer review Upstream contributions to OSP and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.</description>
+    </item>
+    <item>
+      <title>Peru for syncing specific git repository files</title>
+      <link>https://iranzo.io/blog/2018/09/25/peru-for-syncing-specific-git-repository-files/</link>
+      <pubDate>Tue, 25 Sep 2018 22:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/09/25/peru-for-syncing-specific-git-repository-files/</guid>
+      <description>Peru a repository synchronizer Some projects upstream bind together lot of files which might not be of interest, but still the convenience of a git pull to get latest updates, makes you to download the whole repository for just a bunch of files or folders.
+For example, this website uses Pelican to generate the webpages out of markdown files. Pelican does have a rich set of plugins but all of them are in the same folder in the git checkout.</description>
+    </item>
+    <item>
+      <title>Recent changes in Magui and Citellus</title>
+      <link>https://iranzo.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/</link>
+      <pubDate>Tue, 16 Jan 2018 21:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/</guid>
+      <description>What&amp;rsquo;s new? During recent weeks we&amp;rsquo;ve been coding and performing several changes to Citellus and Magui.
+Checking the latest logs or list of issues open and closed on github is probably not an easy task or the best way to get &amp;lsquo;up-to-date&amp;rsquo; with changes, so I&amp;rsquo;ll try to compile a few here.
+First of all, we&amp;rsquo;re going to present it at DevConf.cz 2018, so come stop-by if assisting :-)
+Some of the changes include&amp;hellip;</description>
+    </item>
+  </channel>
+</rss>

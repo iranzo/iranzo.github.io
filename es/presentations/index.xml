@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Presentations on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/presentations/</link>
+    <description>Recent content in Presentations on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:52:25 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/presentations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Campo magnético, auroras, fases lunares, eclipses y cohetes</title>
+      <link>https://iranzo.io/es/presentations/campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes/</link>
+      <pubDate>Thu, 06 Feb 2020 22:30:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes/</guid>
+      <description>Disclaimer Charla sencilla orientada para niños de 4 años Vídeos, etc recortados de los originales (Créditos en bibliografía) Campo Magnético, Auroras, Fases Lunares, Eclipses y Cohetes Pablo Iranzo Gómezhttps://iranzo.io
+Jueves 13 Febrero 2020
+Introducción Campo magnético Auroras Movimiento Sol-Tierra-Luna Fases Lunares Eclipses Cohetes Fin Campo magnético El campo magnético es algo que nos rodea, que es invisible pero que podemos detectar y medir.
+La forma más sencilla es con una brújula.</description>
+    </item>
+    <item>
+      <title>Emerging Tech VLC&#39;19 - Citellus - Automatización de comprobaciones</title>
+      <link>https://iranzo.io/es/presentations/citellus/emergingtechvalencia/20190530/citellus-emergingtechvalencia2019-es/</link>
+      <pubDate>Thu, 30 May 2019 18:30:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/citellus/emergingtechvalencia/20190530/citellus-emergingtechvalencia2019-es/</guid>
+      <description>Citellus: Citellus - Verifica tus sistemas!! https://risuorg.github.io
+Emerging Tech Valencia 2019: 30 Mayo
+¿Quién soy? Pablo Iranzo Gómez (Pablo.Iranzo AT gmail.com) Senior Software Engineer - Solutions Engineering - Red Hat RHCA Level V: #110-215-852 (RHC{A,SS,DS,VA,E,SA,SP,AOSP}, JBCAA) URLS blog: https://iranzo.io https://linkedin.com/in/iranzo/ https://github.com/iranzo https://twitter.com/iranzop Involucrado con Linux desde algo antes de comenzar los estudios universitarios y luego durante ellos, estando involucrado con las asociaciones LinUV y &amp;lt;Valux.org&amp;gt;.
+Empecé a &amp;lsquo;vivir&amp;rsquo; del software libre en 2004 y a trabajar en Red Hat en 2006 como Consultor, luego como Senior Technical Account Manager, posteriormente como Principal Software Maintenance Engineer y actualmente como Senior Software Engineer para el equipo de Solutions Engineering.</description>
+    </item>
+    <item>
+      <title>SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de configuración, logs etc mediante scripts en bash, python, ruby, etc</title>
+      <link>https://iranzo.io/es/presentations/citellus/supersec2018/</link>
+      <pubDate>Sun, 13 May 2018 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/citellus/supersec2018/</guid>
+      <description>Citellus: Citellus - Verifica tus sistemas!! https://risuorg.github.io
+SuperSec 2018 Almería 12-13 Mayo
+¿Quién soy? Involucrado con Linux desde algo antes de comenzar los estudios universitarios y luego durante ellos, estando involucrado con las asociaciones LinUV y Valux.org.
+Empecé a &amp;lsquo;vivir&amp;rsquo; del software libre en 2004 y a trabajar en Red Hat en 2006 como Consultor, luego como Technical Account Manager y ahora como Software Maintenance Engineer.
+¿Qué es Citellus? Citellus proporciona un framework acompañado de scripts proporcionados por la comunidad, que automatizan la detección de problemas, incluyendo problemas de configuración, conflictos con paquetes de versiones instaladas, problemas de seguridad o configuraciones inseguras y mucho más.</description>
+    </item>
+    <item>
+      <title>Introducción al Software Libre</title>
+      <link>https://iranzo.io/es/presentations/2010-03-08-valux-introducion-al-softwate-libre/</link>
+      <pubDate>Mon, 08 Mar 2010 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2010-03-08-valux-introducion-al-softwate-libre/</guid>
+      <description>Introducción al Software Libre Res publica non dominetur
+Pablo Iranzo Gómez (https://iranzo.io)
+Introducción Concepto de libertad en el software Definición Términos relacionados Motivaciones Consecuencias de la libertad del software sociedad, usuario final, desarrollador, integrador, administración, proveedor de mantenimiento o servicios Resumen Bibliografía Preguntas Free software En inglés, la palabra free tiene dos significados:
+&amp;ldquo;Free as in beer&amp;rdquo; o &amp;ldquo;Free as in freedom&amp;rdquo;
+En castellano sería &amp;lsquo;gratis&amp;rsquo; o &amp;rsquo;libre&amp;rsquo;, para evitar ambigüedades muchas veces en inglés se utiliza la palabra española &amp;rsquo;libre software&amp;rsquo; o &amp;lsquo;gratis software&amp;rsquo;</description>
+    </item>
+    <item>
+      <title>Valux - Fedora</title>
+      <link>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</link>
+      <pubDate>Sat, 30 Aug 2008 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</guid>
+      <description>¿Qué es Fedora? Fedora es un sistema operativo basado en Linux que integra las últimas novedades en software libre y abierto Fedora es y será siempre libre para su uso, modificación y distribución Está construida por gente de todo el mundo que trabaja conjuntamente como una comunidad: El Proyecto Fedora Orígenes Los comienzos: Red Hat Linux 1994 -&amp;gt; 2003
+Versiones cada 6 meses Versiones más estables (.2) cada 18 meses Dificultad de soportar a largo plazo Modelo de ventas complicado Part.</description>
+    </item>
+    <item>
+      <title>Administración de Sistemas y Seguridad</title>
+      <link>https://iranzo.io/es/presentations/2002-04-14-administracion-de-sistemas-y-seguridad/</link>
+      <pubDate>Mon, 15 Apr 2002 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2002-04-14-administracion-de-sistemas-y-seguridad/</guid>
+      <description>Introducción Historia (Antigüedad-1973) Siglo XI Astrolabio 1598 Compás Geométrico con su modificación posterior: Compás con Cuadrante 1882 Ingenio de diferencias de Charles Babbage (Computadora mecánica) (primera calculadora automática conocida) 1937-1942 Computador del Dr. Atanasoff (1º en utilizar la electrónica (válvulas termoiónicas), condensadores para hacer de memoria y lector de tarjetas perforadas) 1942-1973 ENIAC (Electronic Numerical Integrator and Computer) Ingenio de diferencias ABC ABC ABC ENIAC ENIAC Historia 1957-1969 1957 Besys (Utilizado por Bell Labs para controlar sus ordenadores para ejecutar varios procesos por lotes) 1965 Para su tercera generación de ordenadores (AT&amp;amp;T) y decidió unirse al MIT y a General Electric para crear Multics (Multiplexed Information and Computing Service) 1969 (Abril) AT&amp;amp;T Decide abandonar Multics y comenzar a utilizar GECOS.</description>
+    </item>
+  </channel>
+</rss>

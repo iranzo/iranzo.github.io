@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ntag213 on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/ntag213/</link>
+    <description>Recent content in Ntag213 on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 31 Jan 2024 09:22:53 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/ntag213/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloning Lego Dimensions tags</title>
+      <link>https://iranzo.io/blog/2019/09/29/cloning-lego-dimensions-tags/</link>
+      <pubDate>Sun, 29 Sep 2019 16:24:36 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/09/29/cloning-lego-dimensions-tags/</guid>
+      <description>Introduction In the article Lego Dimensions, I covered all the available packs for playing with the console.
+Unfortunately, not all of them are available for purchase anymore except from collectors, &amp;lt;brickset.com&amp;gt; or some resellers.
+After some research, several pages provide instructions about the tags themselves and how to &amp;lsquo;fix&amp;rsquo; or &amp;lsquo;clone&amp;rsquo; them.
+Materials Each base is a NFC tag NTAG 213 which is either read only (characters) or rewritable (vehicles).</description>
+    </item>
+  </channel>
+</rss>

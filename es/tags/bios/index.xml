@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BIOS on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/bios/</link>
+    <description>Recent content in BIOS on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/bios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error según número de pitidos en la BIOS</title>
+      <link>https://iranzo.io/es/blog/2004/04/12/error-seg%C3%BAn-n%C3%BAmero-de-pitidos-en-la-bios/</link>
+      <pubDate>Mon, 12 Apr 2004 09:54:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/04/12/error-seg%C3%BAn-n%C3%BAmero-de-pitidos-en-la-bios/</guid>
+      <description>Las BIOS (Basic Input Output System) de los pc&amp;rsquo;s informan de los errores del hardware del pc en el arranque mediante un código de pitidos en el caso en el que no puede aparece nada por pantalla&amp;hellip; aquí los podrás ver..
+Código de errores emitido por la BIOS para indicar los problemas que surgen durante el POST (Power On Self Test (Autocomprobación tras el encendido)) del arranque:
+Errores Fatales Número de Pitidos Significado 1 Error de refresco DRAM 2 Fallo de los 640Kb RAM base 4 Error del timer de sistema 5 Fallo del procesador 6 Error de la puerta de teclado A20 7 Error de excepción del modo virtual 9 Error de checksum de la ROM-BIOS Errores no fatales Número de Pitidos Significado 3 Fallo de comprobación de memoria convencional y extendida 8 Fallo de monitor y fallo de trazado vertical y horizontal Disfruta!</description>
+    </item>
+  </channel>
+</rss>

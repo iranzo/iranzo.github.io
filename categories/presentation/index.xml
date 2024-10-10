@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Presentation on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/presentation/</link>
+    <description>Recent content in Presentation on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/presentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevConf.cz 2018!</title>
+      <link>https://iranzo.io/blog/2018/01/27/devconf.cz-2018/</link>
+      <pubDate>Sat, 27 Jan 2018 15:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/01/27/devconf.cz-2018/</guid>
+      <description>Presentation at DevConf.cz 2018! As highlighted in the prior edition of the &amp;lsquo;What&amp;rsquo;s new&amp;rsquo;, we got a slot for DevConf.cz 2018.
+During that slot, my colleagues Martin, Pablo and myself were presenting on the history and basics of Citellus and how it helps on debugging issues and providing faster analysis of already known ones.
+It is possible to watch the recording at https://www.youtube.com/watch?v=SDzzqrUdn5A and the slides used at: https://github.com/citellusorg/citellus/blob/master/doc/devconfcz2018-presentation-revealmd.md Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Calendar on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/calendar/</link>
+    <description>Recent content in Calendar on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/calendar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mostrar eventos de un calendario en Telegram</title>
+      <link>https://iranzo.io/es/blog/2023/03/21/mostrar-eventos-de-un-calendario-en-telegram/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2023/03/21/mostrar-eventos-de-un-calendario-en-telegram/</guid>
+      <description>Si tienes un grupo de Telegram puede resultarte interesante la característica de https://t.me/redken_bot que permite añadir un calendario ical y que automatiza mostrar cada día las entradas de la agenda para el día.
+Si leíste la entrada Python and iCalendar ICS processing, parte de las bases ahí indicadas están integradas en el bot y son fácilmente utilizables:
+Para configurarlo sólo se necesitan unos simples pasos:
+Tener un calendario ICS/webcal accesible (por ejemplo un calendario público de Google Calendar) Tener un grupo de telegram donde queramos mostrarlo Añadir a @redken_bot al grupo Especificar la URL del calendario y el nombre A continuación, mostraré unas capturas del proceso para que veas lo sencillo que es.</description>
+    </item>
+  </channel>
+</rss>

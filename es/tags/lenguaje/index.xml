@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lenguaje on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/lenguaje/</link>
+    <description>Recent content in Lenguaje on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/lenguaje/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tablas para no decir nada</title>
+      <link>https://iranzo.io/es/blog/2008/11/08/tablas-para-no-decir-nada/</link>
+      <pubDate>Sat, 08 Nov 2008 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/11/08/tablas-para-no-decir-nada/</guid>
+      <description>Método de uso
+Comience por la primera casilla de la primera columna, y a continuación lea cualquier casilla, en cualquier orden, de las sucesivas segunda, tercera y cuarta columna. Continúe ya sin miedo, pronunciando con tono grandilocuente y pausas de efecto.
+Avance por columna eligiendo cualquier casilla.
+I II III IV Queridos compañeros la realización de las premisas del programa nos obliga a un exhaustivo análisis de las condiciones financieras y administrativas existentes.</description>
+    </item>
+  </channel>
+</rss>

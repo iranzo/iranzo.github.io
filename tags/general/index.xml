@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>General on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/general/</link>
+    <description>Recent content in General on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jumpers Olivetti Echos P75</title>
+      <link>https://iranzo.io/blog/2004/04/06/jumpers-olivetti-echos-p75/</link>
+      <pubDate>Tue, 06 Apr 2004 10:01:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2004/04/06/jumpers-olivetti-echos-p75/</guid>
+      <description>Olivetti Echos Family (Tested on my P75, but obtained from the Internet) (Running now at 166 MHz)
+Jumper Settings Processor Speed 1100 75 MHz 0000 90 MHz 0100 100 MHz 1110 100 MHz 0010 120 MHz 1111 120 MHz 0110 133 MHz 0011 150 MHz 1101 150 MHz 0001 166 MHz 0111 166 MHz Switches 1,2:
+Switch 1 Switch 2 Bus OFF OFF 60 OFF ON 66.6 ON OFF 20 ON ON 50 Switch 3,4:</description>
+    </item>
+  </channel>
+</rss>

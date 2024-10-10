@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/categories/</link>
+    <description>Recent content in Categories on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Tue, 19 Mar 2024 09:34:39 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Education</title>
+      <link>https://iranzo.io/es/categories/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>https://iranzo.io/es/categories/tech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bebe</title>
+      <link>https://iranzo.io/es/categories/bebe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/bebe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FOSS</title>
+      <link>https://iranzo.io/es/categories/foss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/foss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>https://iranzo.io/es/categories/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Presentations</title>
+      <link>https://iranzo.io/es/categories/presentations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/presentations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LEGO</title>
+      <link>https://iranzo.io/es/categories/lego/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/lego/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Risu</title>
+      <link>https://iranzo.io/es/categories/risu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/risu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fedora</title>
+      <link>https://iranzo.io/es/categories/fedora/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/fedora/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://iranzo.io/es/categories/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CMS</title>
+      <link>https://iranzo.io/es/categories/cms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/categories/cms/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

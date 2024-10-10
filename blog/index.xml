@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/blog/</link>
+    <description>Recent content in Blog on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 09 Aug 2024 14:51:23 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RHEL bootable containers (BOOTC)</title>
+      <link>https://iranzo.io/blog/2024/08/09/rhel-bootable-containers-bootc/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2024/08/09/rhel-bootable-containers-bootc/</guid>
+      <description>Learn how to use a container for being the baseline for your computer, making it easier to operate the operating system installation and maintenance.</description>
+    </item>
+    <item>
+      <title>Enable GPU acceleration with the Kernel Module Management Operator</title>
+      <link>https://iranzo.io/blog/2024/04/26/enable-gpu-acceleration-with-the-kernel-module-management-operator/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2024/04/26/enable-gpu-acceleration-with-the-kernel-module-management-operator/</guid>
+      <description>Learn how to enable GPU acceleration with the Kernel Module Management (KMM) Operator so you can can run AI workloads on top of Intel Data Center GPU Flex 140.</description>
+    </item>
+    <item>
+      <title>Advice for Telegram usage in education</title>
+      <link>https://iranzo.io/blog/2024/01/05/advice-for-telegram-usage-in-education/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2024/01/05/advice-for-telegram-usage-in-education/</guid>
+      <description>Telegram is being used frequently at schools for allowing an easy communication flow using the &amp;lsquo;channels&amp;rsquo;, where teachers can send information to families without sharing their personal contact details so that they can&amp;rsquo;t be contacted outside of the official tools.
+This comfort, came, probably because of not knowing the problems/dangers that were not taken into consideration.
+For making it easier for parents to join the channel of the class, many times, public channels are created&amp;hellip; this allows to use a shorter &amp;lsquo;alias&amp;rsquo; but that everyone else can search and find&amp;hellip; and here is the problem&amp;hellip; &amp;rsquo;everyone&amp;rsquo; it&amp;rsquo;s not just parents or other teachers&amp;hellip; if you do the test by searching for clase de or classe dels you&amp;rsquo;ll find lot of groups:</description>
+    </item>
+    <item>
+      <title>Red Hat Co.Lab for the day of Science for Development &#34;Conversation Machine&#34;</title>
+      <link>https://iranzo.io/blog/2023/11/10/red-hat-co.lab-for-the-day-of-science-for-development-conversation-machine/</link>
+      <pubDate>Fri, 10 Nov 2023 13:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2023/11/10/red-hat-co.lab-for-the-day-of-science-for-development-conversation-machine/</guid>
+      <description>Red Hat has a program named Co.Lab which provides kits under request that employees can use to guide a STEM session on schools to perform different range of activities.
+We performed 2 sessions this year, one for the &amp;ldquo;We Are Red Hat Week&amp;rdquo; (WARHW), which happens every year around Halloween, when the first official release was launched back in 31st October 1994 (&amp;lsquo;Halloween Release&amp;rsquo;).
+For the one at the office in Valencia, the range of ages was a bit wider so we did different kits and the parents were in charge of directing the lab for the kids.</description>
+    </item>
+    <item>
+      <title>OpenShift Layered Images for patching</title>
+      <link>https://iranzo.io/blog/2023/11/08/openshift-layered-images-for-patching/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2023/11/08/openshift-layered-images-for-patching/</guid>
+      <description>With recent releases of OpenShift like 4.13 you can use CoreOS Layering to apply custom images to the nodes.
+The feature allows to build, via a Dockerfile a custom image that can later be applied to our nodes.
+Let&amp;rsquo;s review the steps:
+First we need to find the base image being used in our environment with oc adm release info quay.io/openshift-release-dev/ocp-release:4.13.5-aarch64 --image-for=rhel-coreos Then we use the returned value in the FROM line in our Dockerfile If we want to add custom packages, we should have a server which is reachable and run createrepo on the folder containing the rpm&amp;rsquo;s so that rpm-ostree can download them for installation.</description>
+    </item>
+    <item>
+      <title>mydlink Website from Linux</title>
+      <link>https://iranzo.io/blog/2023/11/05/mydlink-website-from-linux/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2023/11/05/mydlink-website-from-linux/</guid>
+      <description>Hi had the chance to buy a Dlink camera, waterproof, with magnetic base and rated for exteriors for a really great price a while ago D-Link DCS 8600LH 🛒#ad and later a camera with pan and tilt from Dlink too D-Link DCS-6500LH 🛒#ad
+The camera, of course has an application for configuration, viewing the image, etc named &amp;lsquo;mydlink&amp;rsquo; which has a web counterpart at https://mydlink.com/, but unfortunately, when you try to access the website, there&amp;rsquo;s little you can do:</description>
+    </item>
+    <item>
+      <title>KMM 1.1 Scale testing</title>
+      <link>https://iranzo.io/blog/2023/06/21/kmm-1.1-scale-testing/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2023/06/21/kmm-1.1-scale-testing/</guid>
+      <description>Attention
+First published at https://cloud.redhat.com/blog/scale-testing-kernel-module-management
+Introduction Kernel Module Management (KMM) Operator manages, builds, signs and deploys out-of-tree kernel modules and device plugins on OpenShift Container Platform clusters.
+KMM adds, for the HUB/Spoke scenario, a new ManagedClusterModule which describes an out-of-tree kernel module and its associated device plugin. You can use ManagedClusterModule resources to configure how to load the module, define ModuleLoader images for kernel versions, and include instructions for building and signing modules for specific kernel versions.</description>
+    </item>
+    <item>
+      <title>Showing calendar events in Telegram</title>
+      <link>https://iranzo.io/blog/2023/03/21/showing-calendar-events-in-telegram/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2023/03/21/showing-calendar-events-in-telegram/</guid>
+      <description>If you&amp;rsquo;ve a Telegram group, it might be interesting the ability of https://t.me/redken_bot for adding a calendar ical that automates publishing each day the events in the agenda for the day.
+If you did read Python and iCalendar ICS processing, part of the basis in that article are part of the bot and are easily used:
+For configuring, only a few simple steps are required:
+Have a calendar ICS/webcal accessible (for example a public Google Calendar one) Have a Telegram group where we do want to publish the events Add @redken_bot to the group Specify the URL del calendar and the name Lets see some screenshots of the process for you to check how easily it can be achieved.</description>
+    </item>
+    <item>
+      <title>Using ChatGPT for writing Risu Plugins</title>
+      <link>https://iranzo.io/blog/2023/03/02/using-chatgpt-for-writing-risu-plugins/</link>
+      <pubDate>Thu, 02 Mar 2023 17:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2023/03/02/using-chatgpt-for-writing-risu-plugins/</guid>
+      <description>Lately, there&amp;rsquo;s a lot of interest on ChatGPT, and yes, it&amp;rsquo;s really impressive the way it processes the context to provide answers to the questions.
+To give it a try, and put into play the requirements for writing a Risu plugin, I wrote some of the requirements in a paragraph:
+I want to create a bash script for checking system status.
+The script should use return codes to indicate success, failure, information, error or skipped via the values stored in the variables $RC_OKAY, $RC_SKIPPED, $RC_ERROR, $RC_FAILED and $RC_INFO.</description>
+    </item>
+    <item>
+      <title>Enable rootless podman on Fedora</title>
+      <link>https://iranzo.io/blog/2023/01/27/enable-rootless-podman-on-fedora/</link>
+      <pubDate>Fri, 27 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2023/01/27/enable-rootless-podman-on-fedora/</guid>
+      <description>With podman we can setup containers for being used for non root users by performing some simple steps:
+Install required packages dnf -y install slirp4netns fuse-overlayfs crun podman shadow-utils Force the number of user namespaces (might be required on some environments):
+echo &amp;#34;user.max_user_namespaces=28633&amp;#34; &amp;gt; /etc/sysctl.d/userns.conf sysctl -p /etc/sysctl.d/userns.conf Delegate Allows to define which resources are available1:
+mkdir -p /etc/systemd/system/user@.service.d cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/systemd/system/user@.service.d/delegate.conf [Service] Delegate=cpu cpuset io memory pids EOF To verify it has been done correctly, logout and login with the user and execute:</description>
+    </item>
+    <item>
+      <title>Kernel Module Management testing</title>
+      <link>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</guid>
+      <description>Following on the Using Kcli to prepare for OCM testing, we&amp;rsquo;re going to prepare KMM testing in Hub-Spoke approach.
+First we need to prepare our .docker/config.json with the contents of our OpenShift pull secret used with Kcli.
+mkdir -p ~/.docker/ cp openshift_pull.json ~/.docker/config.json Warning advisories Note
+Semi-scripted version available at automate.sh
+Warning
+We&amp;rsquo;re using pre-release bits of the software, that&amp;rsquo;s why we need to define a custom catalog for both the Hub and the Spokes.</description>
+    </item>
+    <item>
+      <title>Using Kcli to prepare for Open Cluster Management testing</title>
+      <link>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</link>
+      <pubDate>Fri, 23 Dec 2022 14:04:45 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</guid>
+      <description>Kcli allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of plans it allows to automate most of the setup required to have an environment ready.
+In our case, let&amp;rsquo;s setup an environment to practice with Open Cluster Management but instead of using kind clusters, let&amp;rsquo;s use VM&amp;rsquo;s.
+Note
+We&amp;rsquo;ll require to setup an openshift_pull.json file for Kcli to consume when accessing the required resources for this to work.</description>
+    </item>
+    <item>
+      <title>[python] Generate ranges from items</title>
+      <link>https://iranzo.io/blog/2022/11/25/python-generate-ranges-from-items/</link>
+      <pubDate>Fri, 25 Nov 2022 07:00:46 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/11/25/python-generate-ranges-from-items/</guid>
+      <description>Some years ago, I added a script for updating headers for (C) in the python files I was developing for Risu.
+In this way, the header got the list of authors and years working on the files updated automatically.
+With the pass of the years, the list started to became a bit too long, so I worked on creating code for getting ranges instead.
+This is the code I used:</description>
+    </item>
+    <item>
+      <title>Automate code build and deployment with ansible</title>
+      <link>https://iranzo.io/blog/2022/11/09/automate-code-build-and-deployment-with-ansible/</link>
+      <pubDate>Wed, 09 Nov 2022 07:00:46 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/11/09/automate-code-build-and-deployment-with-ansible/</guid>
+      <description>Let&amp;rsquo;s say that we want to keep our system updated with some code which is not distributed as a regular package, but as a code in a repository (which unfortunately, it&amp;rsquo;s a pretty common situation).
+As a part of the ansible playbooks used for the hosts, I can add a snippet like this:
+gitrepos: - { url: &amp;#34;https://github.com/myrepo/repo.git&amp;#34;, tag: &amp;#34;tagtocheckout&amp;#34;, folder: &amp;#34;/root/path-for-check-out&amp;#34;, chdir: &amp;#34;subdir to enter&amp;#34;, build: &amp;#34;make build&amp;#34;, exec: &amp;#34;build/mybuiltbinary&amp;#34;, } With this definition in the host inventory, we can then in our playbook to perform several steps:</description>
+    </item>
+    <item>
+      <title>OpenShift&#39;s oc debug and parallel execution</title>
+      <link>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</link>
+      <pubDate>Thu, 03 Nov 2022 14:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</guid>
+      <description>A colleague reported some issues in the OpenShift troubleshooting and diagnosis scripts at OpenShift-checks.
+Some time ago I did contribute some changes to use functions and allow using the RISU wrapper to the scripts, helping consuming the results via RISU&amp;rsquo;s HTML interface.
+As my colleague reported, for some plugins, the output of the command was not shown in the HTML Interface.
+After some investigation, it was found that parallel execution for the plugins was causing no output to be shown, but when filtering to individual ones via risu -i XXXXXXX/plugin -l it was working fine&amp;hellip; the problem was not the check itself, as both of them worked fine when executed individually but failed when executing them together.</description>
+    </item>
+    <item>
+      <title>[Book] Red Hat Enterprise Linux 9 Administration</title>
+      <link>https://iranzo.io/blog/2022/10/12/book-red-hat-enterprise-linux-9-administration/</link>
+      <pubDate>Wed, 12 Oct 2022 12:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2022/10/12/book-red-hat-enterprise-linux-9-administration/</guid>
+      <description>RHEL9 System Administration book now available!</description>
+    </item>
+    <item>
+      <title>Ansible - dynamically include Jinja templates and tasks</title>
+      <link>https://iranzo.io/blog/2022/09/24/ansible-dynamically-include-jinja-templates-and-tasks/</link>
+      <pubDate>Sat, 24 Sep 2022 11:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/09/24/ansible-dynamically-include-jinja-templates-and-tasks/</guid>
+      <description>For my ansible playbooks, I wanted to be able to add several new templates to be copied to target system, and additionally be able to perform some commands for them without having to specify each individual file/template to copy.
+My approach:
+Define for the hosts I want to find templates/playbooks define a var named extras for the relevant hosts:
+extras: - ntp - certificates The names defined (in above example ntp and certificates) are just name of folders laying inside tasks/templates/${folder} that are searched and included or excluded based on extras values.</description>
+    </item>
+    <item>
+      <title>Setup a Quay mirror for offline installations with mirror-registry</title>
+      <link>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</link>
+      <pubDate>Fri, 19 Aug 2022 10:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</guid>
+      <description>Learn on how to use mirror-registry to create a local copy that can be used to install OpenShift without external Internet connectivity.</description>
+    </item>
+    <item>
+      <title>RHCE and RHCSA tips and tricks</title>
+      <link>https://iranzo.io/blog/2022/07/13/rhce-and-rhcsa-tips-and-tricks/</link>
+      <pubDate>Wed, 13 Jul 2022 21:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/07/13/rhce-and-rhcsa-tips-and-tricks/</guid>
+      <description>I did the RHCE exam some time ago, and still there are some tricks and advices I tell the people to bear in mind some of the things I used and that were also provided in the Red Hat Enterprise 8 Administration book:
+Don&amp;rsquo;t remember every step, it&amp;rsquo;s not effective, for example as I don&amp;rsquo;t recall syntax for BIND, I do remember package that has some files with examples and I use that one to check what I need to do Install mlocate and run updatedb as soon as you start, then you can use locate &amp;lt;file&amp;gt; to find out files in your system Use your preferred editor&amp;hellip; it&amp;rsquo;s common to use vi or vim as it&amp;rsquo;s pretty standard, but if you&amp;rsquo;re used to another, make yourself comfortable in the system.</description>
+    </item>
+    <item>
+      <title>Lego 60335 Train station with bus</title>
+      <link>https://iranzo.io/blog/2022/06/18/lego-60335-train-station-with-bus/</link>
+      <pubDate>Sat, 18 Jun 2022 18:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/06/18/lego-60335-train-station-with-bus/</guid>
+      <description>I loved the Bus and I was behind it for my city setup, so I went for it and got the Lego 60335 Train station with bus.
+It contains three instruction manuals for the components:
+Cart for repairs that can run over the tracks or the road Bus Train station itself The train station.
+It features a cafeteria with a croissant, coffee machine and another desk for the tickets.
+Has ticket machine and a place to sit while waiting for the train</description>
+    </item>
+    <item>
+      <title>Lego Volkswagen T2</title>
+      <link>https://iranzo.io/blog/2022/05/26/lego-volkswagen-t2/</link>
+      <pubDate>Thu, 26 May 2022 22:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/05/26/lego-volkswagen-t2/</guid>
+      <description>I&amp;rsquo;ve been building the Lego Volkswagen T2 🛒#ad and took some pics about the final result and the comparison with the T1.
+Feelings:
+The rear door (above the motor) dismantles itself just by looking at it, the mechanism is interesting as it uses some sticks that get inserted inside the support, but the frame holding it, specially in the upper side is really weak&amp;hellip; The sliding door on the side is nice, and has a mechanism to &amp;lsquo;open it&amp;rsquo; by pushing a small button in the lower part of the van The bed opens a bit better than on T1, which also was easy to get dismantled, same as the table that can be folded which is a lot nicer.</description>
+    </item>
+    <item>
+      <title>Unsupported upgrade for RHEL-based distributions without reinstallation</title>
+      <link>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</link>
+      <pubDate>Sat, 23 Apr 2022 21:23:48 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</guid>
+      <description>Most systems, based on RHEL, were not able to upgrade without reinstallation, or best said, not supported. The new version, that was released at around 18 months later contained so many changes that it was hard to test the upgrades themselves until leapp was introduced.
+Check the lifecycle here: https://access.redhat.com/support/policy/updates/errata
+However, the biggest problem could be the incompatibility of packages or package formats&amp;hellip; but as usually there were some middle layers it was possible to upgrade without reinstallation by performing some manual steps.</description>
+    </item>
+    <item>
+      <title>Lego The SkyWalker Saga Codes</title>
+      <link>https://iranzo.io/blog/2022/04/10/lego-the-skywalker-saga-codes/</link>
+      <pubDate>Sun, 10 Apr 2022 23:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/04/10/lego-the-skywalker-saga-codes/</guid>
+      <description>Inside the game The Sky Walker Saga PS4, PS5, Xbox, Nintendo Switch, you can introduce some codes to unlock additional characters to use, so far this is the list I&amp;rsquo;ve found:
+Code Character/vehicle 3FCPPVX Tarkin ARVALA7 Razor Crest BAC1CKP Mister Bones C3PHOHO C-3P0 (Party special) GR2VBXF Ratts Tyerell KH7P320 Aayla Secura KORDOKU Poe Dameron (Party special) LIFEDAY GNK Droid (Party special) OKV7TLR Dengar SHUTTLE Resistance ITS SIDIOUS Palpatine SKYSAGA Temmin Wexley T9LM1QF Shmi TIPYIPS D-O (Party special) VT1LFNH Shaak Ti WBFE4GO Nute Gunray WOOKIEE Chewbacca (Party special) WROSHYR Darth Vader (Party special) XV4WND9 Holdo Z55T8CQ Poggle Enjoy!</description>
+    </item>
+    <item>
+      <title>Logitech R400 remote presentation controller on Linux</title>
+      <link>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</link>
+      <pubDate>Fri, 01 Apr 2022 07:31:42 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</guid>
+      <description>Since long ago I had it in my mind getting one remote presenter, but most presenters just had two buttons, and the ones that looked to be valid for my use case, required four and seems that only Rii had similar devices, but I didn&amp;rsquo;t went for it as it was not a huge need, so I ended up with a mini keyboard I had for Raspberry Pi and some debugging in case I had that need.</description>
+    </item>
+    <item>
+      <title>Ansible setup for VPN using WireGuard</title>
+      <link>https://iranzo.io/blog/2022/03/17/ansible-setup-for-vpn-using-wireguard/</link>
+      <pubDate>Thu, 17 Mar 2022 20:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/03/17/ansible-setup-for-vpn-using-wireguard/</guid>
+      <description>Learn on how to setup a VPN using WireGuard using Ansible</description>
+    </item>
+    <item>
+      <title>Zero Touch Provisioning OpenShift for Edge computing</title>
+      <link>https://iranzo.io/blog/2022/03/12/zero-touch-provisioning-openshift-for-edge-computing/</link>
+      <pubDate>Sat, 12 Mar 2022 09:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2022/03/12/zero-touch-provisioning-openshift-for-edge-computing/</guid>
+      <description>This article describes how to use python to bind against an LDAP server and  perform queries</description>
+    </item>
+    <item>
+      <title>In action...@redken_bot with examples</title>
+      <link>https://iranzo.io/blog/2022/01/20/in-action...@redken_bot-with-examples/</link>
+      <pubDate>Thu, 20 Jan 2022 17:20:14 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2022/01/20/in-action...@redken_bot-with-examples/</guid>
+      <description>See how to use @redken_bot in Telegram or discord with some examples!</description>
+    </item>
+    <item>
+      <title>LDAP query from Python</title>
+      <link>https://iranzo.io/blog/2021/10/19/ldap-query-from-python/</link>
+      <pubDate>Tue, 19 Oct 2021 22:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/10/19/ldap-query-from-python/</guid>
+      <description>This article describes how to use python to bind against an LDAP server and perform queries</description>
+    </item>
+    <item>
+      <title>How to stake on NYM Validator 🐳🐳🐳</title>
+      <link>https://iranzo.io/blog/2021/09/28/how-to-stake-on-nym-validator/</link>
+      <pubDate>Tue, 28 Sep 2021 17:20:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/09/28/how-to-stake-on-nym-validator/</guid>
+      <description>This article describes how to stake your token against a NYM cosmos validator</description>
+    </item>
+    <item>
+      <title>The experience of writing a book</title>
+      <link>https://iranzo.io/blog/2021/09/15/the-experience-of-writing-a-book/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2021/09/15/the-experience-of-writing-a-book/</guid>
+      <description>I wanted to write about my experience (before I forget about it), and as some colleagues asked about it&amp;hellip; here we go&amp;hellip;
+As published in the blog entry RHEL8 Administration book, some colleagues and I wrote a book on RHEL8 administration, which can be bought here.
+Many years ago I started one about Linux, but every time a new paragraph was added, a lot of new &amp;lsquo;TO-DO&amp;rsquo; items were appended as the information growth&amp;hellip; and as it was a &amp;lsquo;solo&amp;rsquo; project, I had other stuff to work on and was parked.</description>
+    </item>
+    <item>
+      <title>[Book] Red Hat Enterprise Linux 8 Administration</title>
+      <link>https://iranzo.io/blog/2021/09/11/book-red-hat-enterprise-linux-8-administration/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2021/09/11/book-red-hat-enterprise-linux-8-administration/</guid>
+      <description>RHEL8 System Administration book now available!</description>
+    </item>
+    <item>
+      <title>Lego exclusive materials for Technic Owners</title>
+      <link>https://iranzo.io/blog/2021/07/25/lego-exclusive-materials-for-technic-owners/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/07/25/lego-exclusive-materials-for-technic-owners/</guid>
+      <description>Lego promotional material for Technic Owners using your own&amp;#39;s car license plate</description>
+    </item>
+    <item>
+      <title>imapfilter for Gmail</title>
+      <link>https://iranzo.io/blog/2021/07/07/imapfilter-for-gmail/</link>
+      <pubDate>Wed, 07 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/07/07/imapfilter-for-gmail/</guid>
+      <description>Learn on how to use imapfilter against Gmail for classifying the messages</description>
+    </item>
+    <item>
+      <title>UEFI boot order change</title>
+      <link>https://iranzo.io/blog/2021/07/01/uefi-boot-order-change/</link>
+      <pubDate>Thu, 01 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/07/01/uefi-boot-order-change/</guid>
+      <description>Hi,
+In case you&amp;rsquo;ve a dual boot machine, sometimes it might happen that grub menu is no longer appearing.
+For systems using regular BIOS, a grub-install against the device it was installed might be required, but when using UEFI, it&amp;rsquo;s really easy to use a rescue media and execute efibootmgr to alter the boot order.
+When executing efibootmgr, it might output some information like this:
+BootCurrent: 0001 Timeout: 0 seconds BootOrder: 0001,0019,001D,001C,0017,0018,001A,001B,001E,001F,0020,0000 Boot0000* Windows Boot Manager Boot0001* Fedora Boot0010 Setup Boot0011 Boot Menu Boot0012 Diagnostic Splash Screen Boot0013 Lenovo Diagnostics Boot0014 Startup Interrupt Menu Boot0015 Rescue and Recovery Boot0016 MEBx Hot Key Boot0017* USB CD Boot0018* USB FDD Boot0019* NVMe0 Boot001A* NVMe1 Boot001B* ATA HDD2 Boot001C* ATA HDD3 Boot001D* ATA HDD0 Boot001E* ATA HDD1 Boot001F* USB HDD Boot0020* PCI LAN Boot0021* IDER BOOT CDROM Boot0022* IDER BOOT Floppy Boot0023* ATA HDD Boot0024* ATAPI CD Note there, the BootCurrent and the BootOrder, the numbers in the BootOrder correspond to the Boot#### that are listed below it.</description>
+    </item>
+    <item>
+      <title>Redken machine learning for spam detection</title>
+      <link>https://iranzo.io/blog/2021/06/24/redken-machine-learning-for-spam-detection/</link>
+      <pubDate>Thu, 24 Jun 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/06/24/redken-machine-learning-for-spam-detection/</guid>
+      <description>For some of the telegram groups I&amp;rsquo;m in, I&amp;rsquo;ve been detecting users that after some period of time, just publish spam messages of any topic.
+There are many bots for controlling when a user joins, by showing a CAPTCHA that user must resolve (either clicking a button, answering a mathematical operation, inputting a CAPTCHA image text, etc).
+Some time ago, a colleague was using Machine Learning and I wanted to have a look at it and it would make a good feature to implement.</description>
+    </item>
+    <item>
+      <title>Geo replication with syncthing</title>
+      <link>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</link>
+      <pubDate>Sat, 12 Jun 2021 21:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</guid>
+      <description>Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc
+After being using BitTorrent sync and later resilio sync (even if I didn&amp;rsquo;t fully liked the idea of it being not open source), I gave up. My NAS with 16 GB of ram, even if a bit older (HP N54L), seemed not to have enough memory to run it, and was constantly swapping.</description>
+    </item>
+    <item>
+      <title>Dictionary</title>
+      <link>https://iranzo.io/blog/2021/05/22/dictionary/</link>
+      <pubDate>Sat, 22 May 2021 13:29:12 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/22/dictionary/</guid>
+      <description>We&amp;rsquo;ve just started writing a dictionary of crypto terms and links to make your path into understanding cryptocurrencies a bit easier.
+Check it out at Terms</description>
+    </item>
+    <item>
+      <title>Nym validator</title>
+      <link>https://iranzo.io/blog/2021/05/11/nym-validator/</link>
+      <pubDate>Tue, 11 May 2021 13:29:12 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/11/nym-validator/</guid>
+      <description>Merak is a Nym validator powering the network.
+Check the network explorer for more information.</description>
+    </item>
+    <item>
+      <title>How to check if a system is virtual</title>
+      <link>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</link>
+      <pubDate>Mon, 10 May 2021 14:30:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</guid>
+      <description>I was improving a playbook in Ansible and wanted to find a way to find if a system was virtual or not to decide about some tunning like setting tuned-adm profile virtual-guest or disable the power off when the lid is closed.
+After some research and try-except situations I got to this one that seemed to work (I had to tune it as one desktop machine was missing the /sys entry I was using before):</description>
+    </item>
+    <item>
+      <title>How to run a NYM Validator</title>
+      <link>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-validator/</link>
+      <pubDate>Sun, 09 May 2021 12:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-validator/</guid>
+      <description>As said in the article about mixnodes, NYM is a technology aiming for providing privacy for the communications.
+Apart of the mixnodes, other key piece in the infrastructure are the validators.
+As said, the project uses Open Source technology to run, and they have a nice docs with details on how to run a node at https://nymtech.net/docs/, and the one relevant for mixnodes at https://nymtech.net/docs/run-nym-nodes/validators/.
+In this case, we can follow the instructions for compiling, but I faced some issues (compiling went fine, but initial sync failed), so in this case, we will use the pre-compiled version provided with the 0.</description>
+    </item>
+    <item>
+      <title>How to run a NYM mixnode</title>
+      <link>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</link>
+      <pubDate>Sun, 09 May 2021 12:30:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</guid>
+      <description>Some time ago I&amp;rsquo;ve started running a NYM mixnode. NYM is a project that targets improving privacy by decomposing network packages from different hosts, so that origin and target cannot be traced.
+You can check more about the NYM project at their site at https://nymtech.net/.
+The project uses Open Source technology to run, and they have a nice docs with details on how to run a node at https://nymtech.net/docs/, and the one relevant for mixnodes at https://nymtech.</description>
+    </item>
+    <item>
+      <title>Lego Technic 42115 Lamborghini Sian FKP47</title>
+      <link>https://iranzo.io/blog/2021/01/15/lego-technic-42115-lamborghini-sian-fkp47/</link>
+      <pubDate>Fri, 15 Jan 2021 20:32:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/01/15/lego-technic-42115-lamborghini-sian-fkp47/</guid>
+      <description>Xmas came with a good gift that I was able to finish mounting today, the Lego Lamborghini Sian FKP47 🛒#ad.
+The build experience was good, except for some issues related with not building in the best conditions of light, but more or less fixable&amp;hellip;
+I forgot to add a gear that required me to bend a bit the model to put it back Realized that the gear shift wasn&amp;rsquo;t working because I didn&amp;rsquo;t put the piece in the right direction, so it was being blocked between two options Pick the wrong piece at one step so later on it was missing for another The biggest issue was that for the 2nd issue, I got into the motor drive had to be resettled and included some more dismantling, but nothing impossible.</description>
+    </item>
+    <item>
+      <title>Ubiquiti UniFi for WiFi network</title>
+      <link>https://iranzo.io/blog/2021/01/01/ubiquiti-unifi-for-wifi-network/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/01/01/ubiquiti-unifi-for-wifi-network/</guid>
+      <description>Introduction During the pandemic I wanted to work a bit on the wireless system at home, the router provided by the ISP was having already issues that resulted in WiFi devices not connecting and only new devices were able to report &amp;lsquo;AP full&amp;rsquo; message when the connection failed.
+First I started testing the ASUS devices like the AX92U which had WiFi 6 support. My flat is not that big, but as I had some issues with 2.</description>
+    </item>
+    <item>
+      <title>Configuring OpenShift with self-contained NTP</title>
+      <link>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</link>
+      <pubDate>Mon, 07 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</guid>
+      <description>Introduction In a regular OpenShift environment, NTP server is more less like this: Diagram In a self-contained cluster with no connection to external networks NTP server is not reachable, but a reachable NTP server is required for proper cluster synchronization. Cluster does use SSL certificates that require validation and might fail if the dates between the systems are not in sync or at least pretty close in time.
+Diagram We&amp;rsquo;ve several components already available in our OpenShift cluster that are very useful:</description>
+    </item>
+    <item>
+      <title>Upstream/Downstream documentation workflow</title>
+      <link>https://iranzo.io/blog/2020/12/01/upstream/downstream-documentation-workflow/</link>
+      <pubDate>Tue, 01 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/12/01/upstream/downstream-documentation-workflow/</guid>
+      <description>During last year I&amp;rsquo;ve worked with the https://github.com/openshift-kni/baremetal-deploy/ repository after being working in the KNI Community team that was in charge of &amp;lt;KubeVirt.io&amp;gt; and &amp;lt;Metal3.io&amp;gt; where some of the below things were applied.
+One of the goals we had was to streamline the upstream &amp;lt;-&amp;gt; downstream process to keep changes done in the right way: get changes upstream and copy over downstream with minimal changes.
+We ended up using AsciiDoctor for building the documentation in the same way it&amp;rsquo;s done downstream so it&amp;rsquo;s just a matter of copying over the modules.</description>
+    </item>
+    <item>
+      <title>Lego Porsche 911 Led Kit</title>
+      <link>https://iranzo.io/blog/2020/10/12/lego-porsche-911-led-kit/</link>
+      <pubDate>Mon, 12 Oct 2020 20:32:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/10/12/lego-porsche-911-led-kit/</guid>
+      <description>As with other kits, I bought the Led kit for the Porsche 911 GT3 RS 🛒#ad (more pics at Porsche 911 GT3) and just received my LED Kit 🛒#ad (or AliExpress 🛒#ad) after my experience with the Bugatti Chiron one.
+Instructions were a photocopy which was hard to read, but seller provided electronic copy that was easier to understand.
+The kit contains:
+LED for front lights (main lights) LED for rear lights (brake) LED for the ceiling (driver area) USB connector Start installing them from the rear part, it will be easier to drive the wires trough the vehicle, it just comes with some bagged cables + pieces for each area listed above.</description>
+    </item>
+    <item>
+      <title>Lego Volkswagen T1 Camper Van Led Kit</title>
+      <link>https://iranzo.io/blog/2020/10/02/lego-volkswagen-t1-camper-van-led-kit/</link>
+      <pubDate>Fri, 02 Oct 2020 19:45:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/10/02/lego-volkswagen-t1-camper-van-led-kit/</guid>
+      <description>I&amp;rsquo;ve the Lego Volkswagen T1 Camper van 🛒#ad (which I made a MOC for at Lego T1 Trailer MOC) and just received my LED Lightning Kit 🛒#ad (or AliExpress 🛒#ad) after my experience with the Bugatti Chiron one
+It came with a very simple instruction manual (in comparison to the Chiron kit), and was able to have them installed within 10 minutes with minimal disruption to the pieces and powered via a power bank.</description>
+    </item>
+    <item>
+      <title>Lego Bugatti Chiron Led Kit</title>
+      <link>https://iranzo.io/blog/2020/09/25/lego-bugatti-chiron-led-kit/</link>
+      <pubDate>Fri, 25 Sep 2020 19:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/09/25/lego-bugatti-chiron-led-kit/</guid>
+      <description>I&amp;rsquo;ve the Lego Bugatti Chiron 🛒#ad (more pics at its review and just recently via a credit coupon I got a LED Lightning Kit from Lightailing 🛒#ad (or AliExpress 🛒#ad).
+It came with an instruction manual with 118 steps to get them installed and a plastic box with all the components required. Power was not included as I was planning to use a power-bank.
+To be honest, the installation is not hard, but neither easy, it requires being extremely careful to properly place the wires and replace the original pieces with the ones supplied (for brakes and front lights) and be careful about the laying of the wires to allow them to fit in the proper places and still have room to locate the battery box.</description>
+    </item>
+    <item>
+      <title>Lego Volkswagen T1 Trailer</title>
+      <link>https://iranzo.io/blog/2020/09/17/lego-volkswagen-t1-trailer/</link>
+      <pubDate>Thu, 17 Sep 2020 19:00:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/09/17/lego-volkswagen-t1-trailer/</guid>
+      <description>I got some pieces that were part of a Lego Volkswagen T1 🛒#ad but couldn&amp;rsquo;t make for the complete set (which I already owned), so I was checking what mods I could build based on it, and best one, based on the amount of pieces was this one found on Rebrickable.
+As I found it to be a bit sad to leave the wheel, and some other elements outside I did some minor changes:</description>
+    </item>
+    <item>
+      <title>GitHub Actions for publishing</title>
+      <link>https://iranzo.io/blog/2020/08/10/github-actions-for-publishing/</link>
+      <pubDate>Mon, 10 Aug 2020 07:44:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/08/10/github-actions-for-publishing/</guid>
+      <description>When I started with blog-o-matic I had to involve external &amp;lsquo;Travis-CI&amp;rsquo;, generating a token on GitHub, setting environment variables on Travis, etc
+GitHub started enabling actions which allows to automate workflows in a similar way than Travis or other external providers allowed, but with one extra feature: configuration is defined inside .github/ folder of your repository, which makes incredibly easy to copy the setup for one tool to another (except of optional required tokens that are configured per repo).</description>
+    </item>
+    <item>
+      <title>Go (golang) plugin in Citellus</title>
+      <link>https://iranzo.io/blog/2020/06/14/go-golang-plugin-in-citellus/</link>
+      <pubDate>Sun, 14 Jun 2020 11:44:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/06/14/go-golang-plugin-in-citellus/</guid>
+      <description>I wanted to practice a bit Go programing, so I divided that task in two parts, one, adding a golang extension for Citellus and a sample, but working plugin using it.
+If interested in the code it&amp;rsquo;s available at the review at https://review.gerrithub.io/c/citellusorg/citellus/+/495622.
+The final sample code for it has been:
+// Author: Pablo Iranzo Gómez (Pablo.Iranzo@gmail.com) // Header for citellus metadata // long_name: Report detected number of CPU&amp;#39;s // description: List the processors detected in the system // priority: 200 package main import ( &amp;#34;bufio&amp;#34; &amp;#34;io&amp;#34; &amp;#34;os&amp;#34; &amp;#34;runtime&amp;#34; &amp;#34;strconv&amp;#34; &amp;#34;strings&amp;#34; ) func main() { var OKAY, _ = strconv.</description>
+    </item>
+    <item>
+      <title>Dell racadm remote ISO load</title>
+      <link>https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/</link>
+      <pubDate>Tue, 12 May 2020 13:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/</guid>
+      <description>In order to test IPv6 deployment on Dell hardware I was in need to patch the servers to ensure that UEFI boot mode is in use.
+Normally I would had use the DSU that runs from within Linux, but as the servers are part of an OpenShift installation (using baremetal-deploy) and using CoreOS as the underlying system I wanted to load ISO from HTTP server on the deployhost (running RHEL).</description>
+    </item>
+    <item>
+      <title>Lego Speed Champions 76899 Lamborghini Urus ST-X &amp; Lamborghini Huracán Super Trofeo EVO</title>
+      <link>https://iranzo.io/blog/2020/04/30/lego-speed-champions-76899-lamborghini-urus-st-x-lamborghini-hurac%C3%A1n-super-trofeo-evo/</link>
+      <pubDate>Thu, 30 Apr 2020 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/04/30/lego-speed-champions-76899-lamborghini-urus-st-x-lamborghini-hurac%C3%A1n-super-trofeo-evo/</guid>
+      <description>Today I built the Lamborghini Urus ST-X &amp;amp; Lamborghini Huracán Super Trofeo EVO 🛒#ad.
+I liked especially the Huracán and the Urus was also very well done, a lot of details!
+Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Lego Speed Champions 76898 Jaguar Racing GEN2 car &amp; Jaguar I-PACE eTROPHY</title>
+      <link>https://iranzo.io/blog/2020/04/28/lego-speed-champions-76898-jaguar-racing-gen2-car-jaguar-i-pace-etrophy/</link>
+      <pubDate>Tue, 28 Apr 2020 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/04/28/lego-speed-champions-76898-jaguar-racing-gen2-car-jaguar-i-pace-etrophy/</guid>
+      <description>Today I built the Jaguar Racing GEN2 car &amp;amp; Jaguar I-PACE eTROPHY 🛒#ad.
+I also bought a Light box to take pictures, so here are my first attempts.
+Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Lego 10266 NASA Lunar Lander</title>
+      <link>https://iranzo.io/blog/2020/04/08/lego-10266-nasa-lunar-lander/</link>
+      <pubDate>Wed, 08 Apr 2020 20:48:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/04/08/lego-10266-nasa-lunar-lander/</guid>
+      <description>Today, as part of my confinement Lego catchup I was building the Lego NASA Lunar Lander Apollo 11 🛒#ad.
+It covered the evening after work, and have some nice details. First bags are for the lunar surface and the remainder are for the module starting with the parts which are closer to the moon surface.
+It includes lots of gold-colour plates and some stickers for the external side (flag, controls of the lunar module and some external surfaces).</description>
+    </item>
+    <item>
+      <title>Language detection in @redken_bot</title>
+      <link>https://iranzo.io/blog/2020/03/25/language-detection-in-@redken_bot/</link>
+      <pubDate>Wed, 25 Mar 2020 20:00:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/03/25/language-detection-in-@redken_bot/</guid>
+      <description>Introduction Before the move to Python3, redken had per-group language configuration by using i18n, with the upgrade/rewrite of Python3 code there were some issues and I had to remove the support, defaulting everything to English (most of the outputs where already in English so not a great loss).
+On another side, having to manually configure each channel could be problematic as most users just add the bot to their groups but don&amp;rsquo;t care about other settings that might be useful like welcome message, inactivity for kicking out inactive users, etc.</description>
+    </item>
+    <item>
+      <title>English Game - Baker Street</title>
+      <link>https://iranzo.io/blog/2020/03/24/english-game-baker-street/</link>
+      <pubDate>Tue, 24 Mar 2020 09:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/03/24/english-game-baker-street/</guid>
+      <description>Introduction Ian, our English teacher from Tailor-Made Communication has given to us this game.
+There are 5 buildings with consecutive numbers and some data to fill.
+A set of clues is given in order for the reader to deduct the data and to introduce some vocabulary.
+Fill-in table Category 12 14 16 18 20 Name Marital status Pet Book Drink Clues Miss Dudd owns a dog The woman at number 12 has two pets.</description>
+    </item>
+    <item>
+      <title>Lego Creator Fiat 500 10271</title>
+      <link>https://iranzo.io/blog/2020/03/22/lego-creator-fiat-500-10271/</link>
+      <pubDate>Sun, 22 Mar 2020 22:27:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/03/22/lego-creator-fiat-500-10271/</guid>
+      <description>Today, as part of my isolation I was building the Lego Fiat 500 🛒#ad.
+I was not sure about it, but I liked a lot the building experience and the final result.
+Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Yaspeller hook for pre-commit</title>
+      <link>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</link>
+      <pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</guid>
+      <description>I&amp;rsquo;ve made a PR that got merged into Yaspeller repository which adds support for pre-commit to spell check your files.
+It requires simple configuration, just add this snippet to your .pre-commit-config.yaml:
+- repo: https://github.com/hcodes/yaspeller.git rev: master hooks: - id: yaspeller files: &amp;#34;\\.en\\.md&amp;#34; The plugin will then initialize and spell check your files via yaspeller. It will use the standard .yaspeller.json file for dictionary and settings and automate it for each new commit you work on.</description>
+    </item>
+    <item>
+      <title>Lego Ninjago City 70620</title>
+      <link>https://iranzo.io/blog/2020/02/24/lego-ninjago-city-70620/</link>
+      <pubDate>Mon, 24 Feb 2020 21:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/24/lego-ninjago-city-70620/</guid>
+      <description>Some pics about the &amp;lsquo;almost&amp;rsquo; modular Lego Ninjago City 🛒#ad.
+Note that it&amp;rsquo;s HUGE compared to other buildings and has lot of details. The water on the lower floor is defined by a set of bricks plus another set of transparent ones on top.
+Some of the details:
+Has an elevator from the lower floor to the top restaurant hidden areas to store advertisements ATM for getting money hidden area for ninja suite etc.</description>
+    </item>
+    <item>
+      <title>Lego Fisherman Store 21310</title>
+      <link>https://iranzo.io/blog/2020/02/23/lego-fisherman-store-21310/</link>
+      <pubDate>Sun, 23 Feb 2020 23:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/23/lego-fisherman-store-21310/</guid>
+      <description>Some pics about the &amp;lsquo;almost&amp;rsquo; modular Fisherman Store 🛒#ad Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Lego Minifigures DC Comics series Flash, Joker, Wonder Woman</title>
+      <link>https://iranzo.io/blog/2020/02/22/lego-minifigures-dc-comics-series-flash-joker-wonder-woman/</link>
+      <pubDate>Sat, 22 Feb 2020 20:56:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/22/lego-minifigures-dc-comics-series-flash-joker-wonder-woman/</guid>
+      <description>Here are my findings from today&amp;rsquo;s &amp;lsquo;hunt&amp;rsquo; for Lego Minifigures DC Comics 🛒#ad:
+Love the three I got, was looking for superman and batman but no luck at this shop :/</description>
+    </item>
+    <item>
+      <title>Some Lego vintage minifigures</title>
+      <link>https://iranzo.io/blog/2020/02/22/some-lego-vintage-minifigures/</link>
+      <pubDate>Sat, 22 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/22/some-lego-vintage-minifigures/</guid>
+      <description>Just some pics I made during some sorting of minifigs from my childhood. Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Lego Bugatti Chiron and Porsche 911 GT3 RS</title>
+      <link>https://iranzo.io/blog/2020/02/21/lego-bugatti-chiron-and-porsche-911-gt3-rs/</link>
+      <pubDate>Fri, 21 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/21/lego-bugatti-chiron-and-porsche-911-gt3-rs/</guid>
+      <description>Here you can see a photo comparison between Porsche 911 GT3 RS 🛒#ad and Bugatti Chiron 🛒#ad.
+Both models have nice details, include a suitcase under the hood, sequential shift, 4x4 traction, etc. have a look at them!
+Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Lego Benny Spaceship 70821</title>
+      <link>https://iranzo.io/blog/2020/02/20/lego-benny-spaceship-70821/</link>
+      <pubDate>Thu, 20 Feb 2020 19:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/20/lego-benny-spaceship-70821/</guid>
+      <description>I bought Lego 70821 Emmet Garage and Benny Spaceship 🛒#ad because I loved the astronaut minifigures from my childhood, and I even loved the broken helmet (as I used to have them broken in the same way).
+In this case, the spacecraft is an adapted version of the typical spaceship at that time, the 497-Galaxy Explorer.
+Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>JavaScript for imgur gallery generation for PhotoSwipe and Pelican-Elegant</title>
+      <link>https://iranzo.io/blog/2020/02/19/javascript-for-imgur-gallery-generation-for-photoswipe-and-pelican-elegant/</link>
+      <pubDate>Wed, 19 Feb 2020 21:55:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/19/javascript-for-imgur-gallery-generation-for-photoswipe-and-pelican-elegant/</guid>
+      <description>Hi,
+Using the following code from the Browser console:
+console.log(&amp;#34;&amp;#34;); var images = $$(&amp;#34;img&amp;#34;); for (each in images) { console.log(` &amp;lt;a href=&amp;#34;${images[each].src}&amp;#34; data-size=&amp;#34;4032x3024&amp;#34;&amp;gt; &amp;lt;img src=&amp;#34;${images[each].src}&amp;#34; width=&amp;#34;403&amp;#34; height=&amp;#34;302&amp;#34; alt=&amp;#34;Image description&amp;#34; /&amp;gt; &amp;lt;/a&amp;gt; `); } console.log(&amp;#34;&amp;lt;/div&amp;gt;&amp;#34;); It will output a copy-paste ready code for integrating in your blog post and leverage the picture gallery.
+Warning
+Review the data-size to make it match the image size as PhotoSwipe requires it to match image and adjust the figcaption entry.</description>
+    </item>
+    <item>
+      <title>Git commit reordering</title>
+      <link>https://iranzo.io/blog/2020/02/13/git-commit-reordering/</link>
+      <pubDate>Thu, 13 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/13/git-commit-reordering/</guid>
+      <description>While I was working for a presentation for kid&amp;rsquo;s school at Magnetic field, Aurora, Lunar Phases and Rockets, I added 4 big videos to the presentation (as I was going to use them offline while presenting).
+I know what git is not the place for big binary files, and even Github proposed to use the LFS backend for that, but as it was just temporary, I went ahead.
+After that commit, I also wrote two more articles, the one on Lego Speed Champions and the one on Galleria.</description>
+    </item>
+    <item>
+      <title>Galleria.io and PhotoSwipe</title>
+      <link>https://iranzo.io/blog/2020/02/12/galleria.io-and-photoswipe/</link>
+      <pubDate>Wed, 12 Feb 2020 07:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/12/galleria.io-and-photoswipe/</guid>
+      <description>Introduction I was looking for an alternative for my (this) blog and hold pictures. I&amp;rsquo;m a lego fan so I wanted to get some pictures uploaded but without bloating the site.
+In the article Lego Mini Cooper MOC I did add lot of pictures, same for Lego Chinese dinner and Lego Dragon Dance.
+I was checking and how telegram does handle some links and found that Instagram &amp;rsquo;links&amp;rsquo; get expanded to list the images inside directly to see if that could help in a task I was helping at Pelican-Elegant theme used at this site for creating a gallery.</description>
+    </item>
+    <item>
+      <title>Lego Speed Champions 2020 review</title>
+      <link>https://iranzo.io/blog/2020/02/08/lego-speed-champions-2020-review/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/08/lego-speed-champions-2020-review/</guid>
+      <description>Introduction on the new models I recently got the new Lego 2020 sets for the Speed Champions collection, which feature the new &amp;lsquo;8 studs&amp;rsquo; wide.
+Overall impression is that it allows more details on the vehicles (and thus, it gets more pieces, now separated in the instructions in bags 1 and 2).
+The new baseplate allows enough space to hold two minifigs, but with a caveat, the side closer to the external place of the vehicle requires the minifig to have the arm lowered (not completely because it wouldn&amp;rsquo;t fit).</description>
+    </item>
+    <item>
+      <title>API access for Google Calendar and Google Sheet access</title>
+      <link>https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/</link>
+      <pubDate>Thu, 28 Nov 2019 17:11:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/</guid>
+      <description>Introduction During last days I&amp;rsquo;ve been playing around with python and API access to Google Sheets.
+Since some time ago, I already experimented with ICS parsing from python because added https://t.me/redken_bot access to calendar files (.ics) so that it can provide daily reminders on chats about the events happening for the specific date, and had the chance to propose it&amp;rsquo;s usage to cover a specific use case: Accessing a spreadsheet in Google Sheets and parse its contents and output an ICS file so that the events listed and the dates specific for each one are available in an easier-to-consume approach.</description>
+    </item>
+    <item>
+      <title>Cloning Lego Dimensions tags</title>
+      <link>https://iranzo.io/blog/2019/09/29/cloning-lego-dimensions-tags/</link>
+      <pubDate>Sun, 29 Sep 2019 16:24:36 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/09/29/cloning-lego-dimensions-tags/</guid>
+      <description>Introduction In the article Lego Dimensions, I covered all the available packs for playing with the console.
+Unfortunately, not all of them are available for purchase anymore except from collectors, &amp;lt;brickset.com&amp;gt; or some resellers.
+After some research, several pages provide instructions about the tags themselves and how to &amp;lsquo;fix&amp;rsquo; or &amp;lsquo;clone&amp;rsquo; them.
+Materials Each base is a NFC tag NTAG 213 which is either read only (characters) or rewritable (vehicles).</description>
+    </item>
+    <item>
+      <title>Python and iCalendar ICS processing</title>
+      <link>https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/</link>
+      <pubDate>Tue, 17 Sep 2019 07:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/</guid>
+      <description>This article covers  how to do Internet Calendar processing of events in python and how those are leveraged in @redken_bot</description>
+    </item>
+    <item>
+      <title>Lego Dimensions Review</title>
+      <link>https://iranzo.io/blog/2019/08/19/lego-dimensions-review/</link>
+      <pubDate>Mon, 19 Aug 2019 22:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/08/19/lego-dimensions-review/</guid>
+      <description>Introduction Lego Dimensions is a game for some platforms (Xbox, Wii U, PlayStation) which adds a base with NFC reader and colour LED that allows to interact with the video game from the real world.
+The starter pack &amp;lsquo;starter pack&amp;rsquo; has minifigs for Supercool, Batman and Gandalf plus additional blocks to &amp;lsquo;decorate&amp;rsquo; the base by building a portal.
+The main story is based on how those characters (Gandalf, Batman and Supercool) meet and attempt to find and rescue their friends while visiting several worlds.</description>
+    </item>
+    <item>
+      <title>Killercoda scenario redirection</title>
+      <link>https://iranzo.io/blog/2019/07/31/killercoda-scenario-redirection/</link>
+      <pubDate>Wed, 31 Jul 2019 07:39:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/07/31/killercoda-scenario-redirection/</guid>
+      <description>After my post about killercoda, I did split my initial scenarios into &amp;lsquo;organizations&amp;rsquo;.
+One of them, is in progress to get contributed upstream to KubeVirt project killercoda (still getting some reviews to land on final repo), and the other is under Citellus organization.
+As the goal was not to lose visits using the prior links, I contacted the team behind killercoda Support (thanks a lot Ben!!) and the requirements to get a &amp;lsquo;redirect&amp;rsquo; in place is to:</description>
+    </item>
+    <item>
+      <title>Lego 10242 - Mini Cooper Lego Creator</title>
+      <link>https://iranzo.io/blog/2019/07/27/lego-10242-mini-cooper-lego-creator/</link>
+      <pubDate>Sat, 27 Jul 2019 14:39:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/07/27/lego-10242-mini-cooper-lego-creator/</guid>
+      <description>I&amp;rsquo;ve uploaded those pics from the model, as it seems that people likes it.
+The model is Lego 10242 Mini Cooper 🛒#ad and the pics are for the standard instructions build.
+Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Lego 80102 - Dragon dance</title>
+      <link>https://iranzo.io/blog/2019/06/28/lego-80102-dragon-dance/</link>
+      <pubDate>Fri, 28 Jun 2019 20:32:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/28/lego-80102-dragon-dance/</guid>
+      <description>Lego Chinese Dragon Dance review</description>
+    </item>
+    <item>
+      <title>Lego 80101 - Chinese New Year&#39;s Eve</title>
+      <link>https://iranzo.io/blog/2019/06/28/lego-80101-chinese-new-years-eve/</link>
+      <pubDate>Fri, 28 Jun 2019 20:00:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/28/lego-80101-chinese-new-years-eve/</guid>
+      <description>This is the pictures of the set that my colleague Raúl brought back from his trip to APAC, hope you enjoy it!
+There are lot of printed pieces that look very nice, even the faces have been suited for the region.
+Model is 80101 Chinese New&amp;rsquo;s Year Eve Dinner 🛒#ad.
+Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Argos extension writing for Gnome3</title>
+      <link>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</guid>
+      <description>I was using from time ago this extension for Gnome named Argos which allows to create useful data views using scripts written in whatever language of choice available, bash included.
+So far I had just a simple extension writing a UNICODE character, but with the suggestion of my colleague Javi Ramírez, I decided to use the motivational idea to write a simple script to calculate how much you&amp;rsquo;ve earned so far in the day and show that information at a glance on your menu bar.</description>
+    </item>
+    <item>
+      <title>Killercoda scenario creation</title>
+      <link>https://iranzo.io/blog/2019/06/11/killercoda-scenario-creation/</link>
+      <pubDate>Tue, 11 Jun 2019 21:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/11/killercoda-scenario-creation/</guid>
+      <description>After some time checking the scenarios at https://learn.openshift.com, I decided to give it a try.
+With the help of Mario Vázquez, author of Getting Started with Kubefed, I did create two scenarios:
+How to use Citellus on Citellus: Troubleshooting automation KubeVirt on a &amp;lsquo;browser-based&amp;rsquo; approach for MiniKube setup for validating KubeVirt: Kubernetes with VM Virtualization (versus the regular containers). You can check how them can be created by looking at their code at: killercoda Scenarios or the &amp;lsquo;playable&amp;rsquo; version at https://killercoda.</description>
+    </item>
+    <item>
+      <title>Lego 75894 - 1967 Mini Cooper S Rally and Buggy MOC adaptation as Mini Transporter</title>
+      <link>https://iranzo.io/blog/2019/06/09/lego-75894-1967-mini-cooper-s-rally-and-buggy-moc-adaptation-as-mini-transporter/</link>
+      <pubDate>Sun, 09 Jun 2019 01:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/09/lego-75894-1967-mini-cooper-s-rally-and-buggy-moc-adaptation-as-mini-transporter/</guid>
+      <description>After seeing this MOC 75894-mini-transporter, I decided to:
+Buy the model Lego 75894 - 1967 Mini Cooper S Rally and 2018 Mini John Cooper Works Buggy 🛒#ad Buy the instructions at the MOC URL After several times trying to pay for the instructions (which I was unable to get because PayPal complained on the web site), I decided to make my own based on what I could see, and the result, are the images you can see, the initial model which had a small driving area and no minifig could sit there and the final one which added some more options like sizing cabin for allowing a minifigure to drive, plus some other alternatives for the front facing engine area and better holding of the rear wheels area.</description>
+    </item>
+    <item>
+      <title>Use custom domain name with Blog-O-Matic</title>
+      <link>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</guid>
+      <description>As a recipe, if you want to enable a custom domain name on blog-o-matic a special file needs to be created on the &amp;lsquo;GitHub Pages&amp;rsquo; served &amp;lsquo;master&amp;rsquo; branch.
+In order to do so, edit pelicanconf.py and add the following differences:
+diff --git a/pelicanconf.py b/pelicanconf.py index 680abcb..fc3dd8f 100644 --- a/pelicanconf.py +++ b/pelicanconf.py @@ -46,13 +46,16 @@ AMAZON_ONELINK = &amp;#34;b63a2115-85f7-43a9-b169-5f4c8c275655&amp;#34; # Extra files customization -EXTRA_PATH_METADATA = {} +EXTRA_PATH_METADATA = { + &amp;#39;extra/CNAME&amp;#39;: {&amp;#39;path&amp;#39;: &amp;#39;CNAME&amp;#39;}, +} + EXTRA_TEMPLATES_PATHS = [ &amp;#34;plugins/revealmd/templates&amp;#34;, # eg: &amp;#34;plugins/revealmd/templates&amp;#34; ] -STATIC_PATHS = [ &amp;#39;images&amp;#39; ] +STATIC_PATHS = [ &amp;#39;images&amp;#39; , &amp;#39;extra&amp;#39;] ## ONLY TOUCH IF YOU KNOW WHAT YOU&amp;#39;RE DOING!</description>
+    </item>
+    <item>
+      <title>AwesomeSlides for converting LibreOffice ODP into revealjs</title>
+      <link>https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/</link>
+      <pubDate>Tue, 22 Jan 2019 20:51:27 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/</guid>
+      <description>Introduction For some time now, I wanted to put the presentations I did in the past to be available, and since I&amp;rsquo;ve added support to my blog to render revealjs slides, I wanted to also put other presentations that I did in the past, probably (or for sure) outdated, but that were sitting in my computer drive.
+The presentations already got several transformations, but in the actual status they are stored as LibreOffice ODP files, that made it a bit difficult.</description>
+    </item>
+    <item>
+      <title>Fixing pelican revealjs plugin</title>
+      <link>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</link>
+      <pubDate>Sun, 20 Jan 2019 23:12:17 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</guid>
+      <description>Introduction After my recent talk about blog-o-matic, I was trying to upload somewhere the slides I used.
+Since some time ago I started using Reveal-MD, so I could use Markdown to create and show slides, but wanted also a way to upload them for consumption.
+Pelican-revealmd plugin seemed to be the answer.
+It does use pypandoc library and &amp;lsquo;pandoc&amp;rsquo; for doing the conversion.
+The problems found After some test, it had 3 issues:</description>
+    </item>
+    <item>
+      <title>Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with little setup steps.</title>
+      <link>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</link>
+      <pubDate>Wed, 09 Jan 2019 22:00:47 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</guid>
+      <description>Introduction I&amp;rsquo;ve already covered some articles about automation with Travis-CI, GitHub, and one step that seems a show-stopper for many users when trying to build a website is on one side, the investment (domain, hosting, etc), the backend being used (WordPress, static generators, etc)&amp;hellip;
+While preparing a talk for a group of co-workers covering several of those aspects, I came with the idea to create Blog-o-Matic, implementing many of those &amp;rsquo;learnings&amp;rsquo; in a &amp;lsquo;canned&amp;rsquo; way that can be easy to consume by users.</description>
+    </item>
+    <item>
+      <title>OSP Director baremetal hypervisor for CoreOS</title>
+      <link>https://iranzo.io/blog/2019/01/08/osp-director-baremetal-hypervisor-for-coreos/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/08/osp-director-baremetal-hypervisor-for-coreos/</guid>
+      <description>OSP Director OSP Director (or upstream TripleO) is a life-cycle manager for OpenStack based on the idea of using &amp;lsquo;OpenStack&amp;rsquo; to deploy &amp;lsquo;OpenStack&amp;rsquo;.
+To do so, it creates a management &amp;lsquo;Undercloud&amp;rsquo;, that is configured and prepared for later deploying an &amp;lsquo;overcloud&amp;rsquo; which is the one that will later run the workloads.
+TripleO/Director, also automates the inspection of hosts and tagging to the roles they will perform later in the &amp;lsquo;overcloud&amp;rsquo; setup, such as &amp;lsquo;controller&amp;rsquo;, &amp;lsquo;compute&amp;rsquo;, &amp;lsquo;storage&amp;rsquo;, or even mixed roles via composable-roles support.</description>
+    </item>
+    <item>
+      <title>Postgres repl SSL replication</title>
+      <link>https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/</guid>
+      <description>Postgres across clusters For Postgres to work across clusters we do need to have the data being synchronized.
+With some other databases we do have some master-master approach, but usually have very strict requirements on latency, bandwidth, etc that we cannot solve with On-Premise + external cloud providers.
+If the replication is based on the storage level instead, then you face that database servers don’t deal well if the data changes underneath it, so it leads to data corruption, on top of the storage-level issues/requirements as well on bandwidth, latency, etc.</description>
+    </item>
+    <item>
+      <title>Quay for Federation</title>
+      <link>https://iranzo.io/blog/2019/01/08/quay-for-federation/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/08/quay-for-federation/</guid>
+      <description>Why this article? For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment.
+Colleagues in the Solutions Engineering team have been working on demonstrating an application running on different clusters over a Federated Control Plane, allowing it to &amp;lsquo;roam&amp;rsquo; between clusters with shared data access as a way to demonstrate how an application can &amp;lsquo;scale&amp;rsquo; from on-premise deployment to external clouds in order to satisfy business requirements for peak demands.</description>
+    </item>
+    <item>
+      <title>Android TV and Netflix&#39;s tvq-pm-100 (5.2.5) error</title>
+      <link>https://iranzo.io/blog/2018/12/30/android-tv-and-netflixs-tvq-pm-100-5.2.5-error/</link>
+      <pubDate>Sun, 30 Dec 2018 19:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/12/30/android-tv-and-netflixs-tvq-pm-100-5.2.5-error/</guid>
+      <description>Android TV versus Android TV-Box Android, being used in lot of mobile devices is also part of TVs and set-top boxes.
+The main difference between both approaches is the user interface and applications.
+Android TV-Box: it&amp;rsquo;s like a tablet or mobile connected to a TV and usually requires external keyboard, often integrated in the remote.
+Android TV: it&amp;rsquo;s a version of Android that incorporates TV changes in the OS so that it can be controlled with an arrow cursor remote plus back, home and microphone key.</description>
+    </item>
+    <item>
+      <title>Triggering a Travis-CI build on another repo</title>
+      <link>https://iranzo.io/blog/2018/12/11/triggering-a-travis-ci-build-on-another-repo/</link>
+      <pubDate>Tue, 11 Dec 2018 21:49:47 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/12/11/triggering-a-travis-ci-build-on-another-repo/</guid>
+      <description>Introduction After setting up build automation we also wanted it not to happen only when updating the documentation repository.
+Besides hosting documentation, Elegant website also serves as a live demo of the current release. This meant, the website should be regenerated and updated every time when a documented is added or edited, and also when Elegant theme is updated.
+Github and Travis doesn&amp;rsquo;t offer dependent builds out of the box, so the trick goes to &amp;lsquo;signal&amp;rsquo; via a github token to trigger a Travis-CI build.</description>
+    </item>
+    <item>
+      <title>How to automate via Travis CI publishing of new pelican pages to GitHub pages</title>
+      <link>https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/</link>
+      <pubDate>Fri, 07 Dec 2018 16:00:47 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/</guid>
+      <description>Background Elegant theme for pelican has been undergoing a big change from individual-driven effort to community, as part of this, one of the tasks to accomplish, has been the decoupling from author blog to project site for documentation.
+As we wanted this process to be both automated and allowed us to demonstrate via eat-your-own-dog-food that the theme works and how it looks, the idea was to automate the rendering of Pelican website with new documents.</description>
+    </item>
+    <item>
+      <title>Contributing to OSP upstream a.k.a. Peer Review</title>
+      <link>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</link>
+      <pubDate>Tue, 16 Oct 2018 07:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</guid>
+      <description>Introduction In the article &amp;ldquo;Contributing to OpenStack&amp;rdquo; we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find low hanging fruits to start contributing).
+Here, we&amp;rsquo;ll cover what happens behind the scene to get change published.
+Upstream workflow Peer review Upstream contributions to OSP and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.</description>
+    </item>
+    <item>
+      <title>Peru for syncing specific git repository files</title>
+      <link>https://iranzo.io/blog/2018/09/25/peru-for-syncing-specific-git-repository-files/</link>
+      <pubDate>Tue, 25 Sep 2018 22:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/09/25/peru-for-syncing-specific-git-repository-files/</guid>
+      <description>Peru a repository synchronizer Some projects upstream bind together lot of files which might not be of interest, but still the convenience of a git pull to get latest updates, makes you to download the whole repository for just a bunch of files or folders.
+For example, this website uses Pelican to generate the webpages out of markdown files. Pelican does have a rich set of plugins but all of them are in the same folder in the git checkout.</description>
+    </item>
+    <item>
+      <title>First post on Red Hat blog</title>
+      <link>https://iranzo.io/blog/2018/06/07/first-post-on-red-hat-blog/</link>
+      <pubDate>Thu, 07 Jun 2018 22:32:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/06/07/first-post-on-red-hat-blog/</guid>
+      <description>New blog post! After some great help and collaboration from all the colleagues reviewing, suggesting edits, we were able to prepare a blog post on Citellus, the tool we develop as part of our daily work solving cases.
+Check it out at Citellus: System configuration validation tool
+Enjoy! (and if you do, you can Buy Me a Coffee ) Pablo</description>
+    </item>
+    <item>
+      <title>SuperSEC 2018!</title>
+      <link>https://iranzo.io/blog/2018/05/13/supersec-2018/</link>
+      <pubDate>Sun, 13 May 2018 10:50:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/05/13/supersec-2018/</guid>
+      <description>Presentation at SuperSEC 2018! I&amp;rsquo;ve got a slot at SuperSEC 2018 (https://supersec.es/): Congress on secure software development, happening in Almería, Spain on the weekend on 12-13 May.
+I&amp;rsquo;ll be presenting on 13th may at 10:50, and the slide deck and I&amp;rsquo;ll be updating this once I get the recording URL.
+Some data about the event:
+Conference program and further data can be found at https://supersec.es/programa/ Twitter feed: https://twitter.com/SuperSEC_ES Shared Pics from attendees Press coverage: https://www.</description>
+    </item>
+    <item>
+      <title>DevConf.cz 2018!</title>
+      <link>https://iranzo.io/blog/2018/01/27/devconf.cz-2018/</link>
+      <pubDate>Sat, 27 Jan 2018 15:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/01/27/devconf.cz-2018/</guid>
+      <description>Presentation at DevConf.cz 2018! As highlighted in the prior edition of the &amp;lsquo;What&amp;rsquo;s new&amp;rsquo;, we got a slot for DevConf.cz 2018.
+During that slot, my colleagues Martin, Pablo and myself were presenting on the history and basics of Citellus and how it helps on debugging issues and providing faster analysis of already known ones.
+It is possible to watch the recording at https://www.youtube.com/watch?v=SDzzqrUdn5A and the slides used at: https://github.com/citellusorg/citellus/blob/master/doc/devconfcz2018-presentation-revealmd.md Enjoy! (and if you do, you can Buy Me a Coffee ) </description>
+    </item>
+    <item>
+      <title>Recent changes in Magui and Citellus</title>
+      <link>https://iranzo.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/</link>
+      <pubDate>Tue, 16 Jan 2018 21:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/01/16/recent-changes-in-magui-and-citellus/</guid>
+      <description>What&amp;rsquo;s new? During recent weeks we&amp;rsquo;ve been coding and performing several changes to Citellus and Magui.
+Checking the latest logs or list of issues open and closed on github is probably not an easy task or the best way to get &amp;lsquo;up-to-date&amp;rsquo; with changes, so I&amp;rsquo;ll try to compile a few here.
+First of all, we&amp;rsquo;re going to present it at DevConf.cz 2018, so come stop-by if assisting :-)
+Some of the changes include&amp;hellip;</description>
+    </item>
+    <item>
+      <title>i18n and &#39;bash8&#39; in bash</title>
+      <link>https://iranzo.io/blog/2017/10/26/i18n-and-bash8-in-bash/</link>
+      <pubDate>Thu, 26 Oct 2017 21:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/10/26/i18n-and-bash8-in-bash/</guid>
+      <description>Introduction In order to improve Citellus and Magui, we did implement some Unit testing to improve code quality.
+The tests written were made in python and with some changes it was also possible to validate the actual tests.
+Also, we did prepare the strings in python using gettext library so the actual messages can be translated to the language of choice (defaults to en, but can be changed via --lang modifier of citellus).</description>
+    </item>
+    <item>
+      <title>Jenkins for running CI tests</title>
+      <link>https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/</link>
+      <pubDate>Thu, 17 Aug 2017 23:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/</guid>
+      <description>Why? While working on Citellus and Magui it soon became evident that Unit testing for validating the changes was a requirement.
+Initially, using a .travis.yml file contained in the repo and the free service provided by https://travis-ci.org we soon got https://github.com repo providing information about if the builds succeeded or not.
+When it was decided to move to https://gerrithub.io to work in a more similar way to what is being done in upstream, we improved on the code commenting (peer review), but we lost the ability to run the tests in an automated way until the change was merged into github.</description>
+    </item>
+    <item>
+      <title>Magui for analysis of issues across several hosts.</title>
+      <link>https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts./</link>
+      <pubDate>Mon, 31 Jul 2017 12:45:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts./</guid>
+      <description>Background Citellus allows to check a sosreport against known problems identified on the provided tests.
+This approach is easy to implement and easy to test but has limitations when a problem can span across several hosts and only the problem reveals itself when a general analysis is performed.
+Magui tries to solve that by running the analysis functions inside citellus across a set of sosreports, unifying the data obtained per citellus plugin.</description>
+    </item>
+    <item>
+      <title>Citellus: framework for detecting known issues in systems.</title>
+      <link>https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems./</link>
+      <pubDate>Wed, 26 Jul 2017 22:26:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems./</guid>
+      <description>Learn about Citellus, a framework that will help you detect known issues, and more insightful information about your system</description>
+    </item>
+    <item>
+      <title>InfraRed for deploying OpenStack</title>
+      <link>https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/</link>
+      <pubDate>Thu, 23 Feb 2017 23:27:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/</guid>
+      <description>InfraRed is tool that allows to install/provision OpenStack. You can find the documentation for the project at http://infrared.readthedocs.io.
+Also, developers and users are online in FreeNode at #infrared channel.
+Why InfraRed? Deploying OSP with OSP-d (TripleO) requires several setup steps for preparation, deployment, etc. InfraRed simplifies them by automating with ansible most of those steps and configuration.
+It allows to deploy several OSP versions Allows to ease connection to installed vm roles (Ceph, Computes, Controllers, Undercloud) Allows to define working environments so one InfraRed-running host can be used to manage different environments and much more&amp;hellip; Setup of InfraRed-running host Setting InfraRed is quite easy, at the moment the version 2 (branch on github) is working pretty well.</description>
+    </item>
+    <item>
+      <title>Getting started with Ansible</title>
+      <link>https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/</link>
+      <pubDate>Mon, 20 Feb 2017 23:10:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/</guid>
+      <description>Introduction I&amp;rsquo;ve started to get familiar with Ansible because, apart of getting more and more accepted for OSP-related tasks and installation, I wanted to automate some tasks we needed to setup some servers for the OpenStack group I work for.
+First of all, it&amp;rsquo;s recommended to get latest version of ansible (tested on RHEL7 and Fedora), but in order not to mess with the system python libraries, it&amp;rsquo;s convenient to use python&amp;rsquo;s virtual environments.</description>
+    </item>
+    <item>
+      <title>Unit testing for stampy</title>
+      <link>https://iranzo.io/blog/2016/11/05/unit-testing-for-stampy/</link>
+      <pubDate>Sat, 05 Nov 2016 19:39:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2016/11/05/unit-testing-for-stampy/</guid>
+      <description>Since my prior post on Contributing to OpenStack, I liked the idea of using some automated tests to validate functionality and specifically, the corner cases that could arise when playing with the code.
+Most of the errors fixed so far on stampy, were related with some pieces of the code not properly handling UTF or some information returned, etc and still it has improved, the idea of ensuring that prior errors were not put back into the code when some other changes were performed, started to arise to be a priority.</description>
+    </item>
+    <item>
+      <title>Contributing to OpenStack</title>
+      <link>https://iranzo.io/blog/2016/07/21/contributing-to-openstack/</link>
+      <pubDate>Thu, 21 Jul 2016 17:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2016/07/21/contributing-to-openstack/</guid>
+      <description>Contributing to an OpenSource project might take some time at the beginning, the good thing with OpenStack is that there are lot of guides on how to start and collaborate.
+What I did is to look for a bug in the project tagged as low-hanging-fruit, this allows to browse a large list of bugs that are classified as easy, so they are the best place for new starters to get familiar with the workflow.</description>
+    </item>
+    <item>
+      <title>New blog rendering engine: Pelican</title>
+      <link>https://iranzo.io/blog/2016/06/03/new-blog-rendering-engine-pelican/</link>
+      <pubDate>Fri, 03 Jun 2016 17:23:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2016/06/03/new-blog-rendering-engine-pelican/</guid>
+      <description>As always, I don&amp;rsquo;t usually find myself keen to write about things I do, until I later realize they might be helpful for others, and that&amp;rsquo;s why in the past I decided to switch the place I was putting the information about why did to Github and also, take benefit of practicing markdown for writing the entries.
+At that time, I moved my old blog posts to markdown to be used in conjunction with Jekyll and to use OctoPress as the engine rendering the contents into a static website.</description>
+    </item>
+    <item>
+      <title>Filtering email with imapfilter</title>
+      <link>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</link>
+      <pubDate>Fri, 28 Aug 2015 15:27:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</guid>
+      <description>Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&amp;amp;drop reordering of rules, cloning, etc.
+As I was already using offlineimap to sync from the remote mail server to my system into a maildir folder, I had almost all the elements I needed.
+After searching for several options imapfilter seemed to be a perfect fit, so I started with a small set of rules and start integration with my email process.</description>
+    </item>
+    <item>
+      <title>RHEV-M with nested VM for OSP</title>
+      <link>https://iranzo.io/blog/2015/07/17/rhev-m-with-nested-vm-for-osp/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/07/17/rhev-m-with-nested-vm-for-osp/</guid>
+      <description>Since some time ago, I&amp;rsquo;ve been mostly dealing with OpenStack, requiring different releases to test for different tests, etc.
+Virtualization, as provided by KVM requires some CPU flags to get accelerated operations, vmx and svm depending on your processor architecture, but, of course, this is only provided on bare-metal.
+In order to get more flexibility at the expense of performance, nestedvt allows to expose those flags to the VM&amp;rsquo;s running at the hypervisor so you can run another level of VM&amp;rsquo;s inside those VM&amp;rsquo;s (this starts to sound like the movie Inception).</description>
+    </item>
+    <item>
+      <title>Writing a Telegram.org bot in Python</title>
+      <link>https://iranzo.io/blog/2015/06/26/writing-a-telegram.org-bot-in-python/</link>
+      <pubDate>Fri, 26 Jun 2015 17:12:30 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/06/26/writing-a-telegram.org-bot-in-python/</guid>
+      <description>Hi,
+Telegram.org recently announced the support for writing bots for their platform, by providing details at https://core.telegram.org/bots.
+I was missing for a long time the ability to get a count on karma like we&amp;rsquo;ve on IRC servers, so I started with it.
+My first try is published at github repo in https://github.com/iranzo/stampython.
+At the moment it just uses the polling interface to check the new messages received on the channels the bot is in, and later processes them and send the relevant replies via messages.</description>
+    </item>
+    <item>
+      <title>Intel AMT on Linux for remote control/fencing</title>
+      <link>https://iranzo.io/blog/2015/05/01/intel-amt-on-linux-for-remote-control/fencing/</link>
+      <pubDate>Fri, 01 May 2015 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/05/01/intel-amt-on-linux-for-remote-control/fencing/</guid>
+      <description>Hi,
+Some time ago, and after discussing with a colleague, I had a look on Intel&amp;rsquo;s AMT, and this week I did a demo for another colleague as a cheap-replacement for having power fencing capabilities on commodity hardware.
+AMT provides a server-like Out of band management like iLO, iDRAC, RSB etc and it&amp;rsquo;s included in i3 with vPro processors/chipsets of some equipment.
+I did the test on a Lenovo X200/201 system I had as old laptop.</description>
+    </item>
+    <item>
+      <title>Migrate SPIP-RSS post feed to HTML</title>
+      <link>https://iranzo.io/blog/2015/04/01/migrate-spip-rss-post-feed-to-html/</link>
+      <pubDate>Wed, 01 Apr 2015 16:49:13 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/04/01/migrate-spip-rss-post-feed-to-html/</guid>
+      <description>I had my old blog based on SPIP, and I wanted to keep all the posts together, to make it easier to migrate in the future.
+Initially, I migrated my posts from blogger, where there&amp;rsquo;s an option to export the contents and some plugins to allow easier importing to markdown files (to be used by OctoPress), those were the recent posts, so part of the job was already done there.</description>
+    </item>
+    <item>
+      <title>Install RHEL7/Centos/Fedora on a software raid device</title>
+      <link>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</link>
+      <pubDate>Sat, 28 Mar 2015 18:46:42 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</guid>
+      <description>Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.
+There are several RAID level definitions and may have different uses depending on our needs and hardware availability.
+For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data).</description>
+    </item>
+    <item>
+      <title>OctoPress for Jekyll blogging</title>
+      <link>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</link>
+      <pubDate>Tue, 24 Mar 2015 13:23:15 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</guid>
+      <description>After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.
+OctoPress Makes this extra step so you can still focus on your contents and of course have a nice template as starting point with integrations for some social plugins, etc.
+Setup is well done if you follow the provided steps, without jumping anything, in my case, I moved my old pages (plain jekyll + poole) to OctoPress.</description>
+    </item>
+    <item>
+      <title>Podcasts with flexget and transmission</title>
+      <link>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</link>
+      <pubDate>Mon, 16 Mar 2015 21:45:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</guid>
+      <description>Some podcasts are available via RSS feeds, so you can get notified of new episodes, so the best way I&amp;rsquo;ve found so far to automate this procedure is to use the utility flexget.
+Flexget can download a RSS feed and get the .torrent files associated to them and store locally, which makes a perfect fit for later using Transmission&amp;rsquo;s watch folder, to automatically add them to your download queue.
+In order to do so, install flexget either via pip (pip install flexget) or using a package for your distribution and create a configuration file similar to this:</description>
+    </item>
+    <item>
+      <title>Jekyll and Markdown</title>
+      <link>https://iranzo.io/blog/2015/03/16/jekyll-and-markdown/</link>
+      <pubDate>Mon, 16 Mar 2015 09:06:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/16/jekyll-and-markdown/</guid>
+      <description>For my work I&amp;rsquo;ve been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the formatting.
+On the other side I was willing to improve the ability to make it easier to post new entries to blog without having to wait too much time, and of course, be able to prepare them offline and then push them live.</description>
+    </item>
+    <item>
+      <title>RHEV/oVirt API with Python</title>
+      <link>https://iranzo.io/blog/2012/10/24/rhev/ovirt-api-with-python/</link>
+      <pubDate>Wed, 24 Oct 2012 13:38:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2012/10/24/rhev/ovirt-api-with-python/</guid>
+      <description>RHEV/oVirt API allows faster and simple development of scripts and utilities ranging from gathering of information to VM/host, etc manipulation.
+For example, a simple script for connecting to API and list VM&amp;rsquo;s could be:
+import sys import getopt import optparse import os import time from ovirtsdk.api import API from ovirtsdk.xml import params from random import choice baseurl = &amp;#34;https://localhost:8443&amp;#34; api = API(url=baseurl, username=&amp;#34;admin@internal&amp;#34;, password=&amp;#34;redhat&amp;#34;, insecure=True) for vm in api.vms.list(): print(vm.name) The .</description>
+    </item>
+    <item>
+      <title>Paella Howto</title>
+      <link>https://iranzo.io/blog/2012/07/08/paella-howto/</link>
+      <pubDate>Sun, 08 Jul 2012 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2012/07/08/paella-howto/</guid>
+      <description>This document is based on the original recipe and pictures that I gave to my colleague Miguel Pérez Colino which he assembled in an internal company document and that he kindly translated for increased reach.
+Ingredients A bag of vegetables for paella (garrofón, Valencian white bean; ferraura y bajoqueta, Valencian green beans with pod) Rice bomba 🛒#ad (7 handfuls) Chicken and Rabbit (700 and 400 grams) Grated tomato (The equivalent to 5 spoons) Sweet Red Paprika Powder (Pimentón Rojo 🛒#ad) Spanish Saffron 🛒#ad (300mg in threads) or E102 dye (small spoon just to the border) Olive oil 🛒#ad to stir-fry (not much, so it doesn&amp;rsquo;t get oily) Rosemary 🛒#ad Salt Water (from Valencia) Preparation A garlic clove, to be grated, must be peeled and put together with tomato.</description>
+    </item>
+    <item>
+      <title>duplicity for managing backups</title>
+      <link>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</link>
+      <pubDate>Mon, 27 Jun 2011 16:35:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</guid>
+      <description>A few days ago, I was checking a friend&amp;rsquo;s system for backing up.
+It was based on rsync at the Linux side and rsync server on a windows machine he uses for storing information generated by other software.
+The solution with rsync worked pretty well for him until he started to put several strange characters in filenames which rendered the backup unusable to certain point.
+After being asked for alternative backup software that was available on several platforms, I&amp;rsquo;ve ended testing duplicity.</description>
+    </item>
+    <item>
+      <title>Firsts steps with Fedora 15 pre-alpha</title>
+      <link>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</link>
+      <pubDate>Mon, 07 Mar 2011 17:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</guid>
+      <description>Today I&amp;rsquo;ve decided to give it a try to F15-prealpha (expected to release tomorrow).
+The upgrade performed in the unsupported way (getting and forcing install for newer fedora-release from a mirror then start issuing several yum upgrades) when reasonably good.
+Only some minor dependency problems et voilà, system started fine.
+Problems so far:
+Firefox 4 has a few approved extensions, I used the &amp;ldquo;nightly tester tools&amp;rdquo; to disable version check and enable most of the ones I had with 3.</description>
+    </item>
+    <item>
+      <title>Customize RHEL/CentOS installation media (EL4/EL5&#43;)</title>
+      <link>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</link>
+      <pubDate>Sat, 23 Jan 2010 08:25:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</guid>
+      <description>Introduction A standard install media, (let&amp;rsquo;s talk about a DVD for easier start) has several files/folders at his root, but most important are:
+isolinux (where the loader lives) images (for extra files for installer to load) Packages for installation (RedHat/ for EL4, Server/Client for EL5) Usually, a distribution has, for its main binaries, more than 2 gigabytes of data, that enables one target to act as a multifunction server/workstation, but that you will not usually load on the same system.</description>
+    </item>
+    <item>
+      <title>MiniDLNA SPEC &amp; RPM</title>
+      <link>https://iranzo.io/blog/2009/07/10/minidlna-spec-rpm/</link>
+      <pubDate>Fri, 10 Jul 2009 08:54:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2009/07/10/minidlna-spec-rpm/</guid>
+      <description>MiniDLNA provides an OpenSource DLNA server software that can index and present specific folders on your computer to DLNA clients on your network.
+Project at sourceforge is distributed as CVS code that you need to checkout and compile for it to work on your computer.
+I&amp;rsquo;ve setup a spec file that will allow you to create an rpm that has been tested on Red Hat Enterprise Linux 5.3 machine x86 for easing adoption among users.</description>
+    </item>
+    <item>
+      <title>Mount disk images</title>
+      <link>https://iranzo.io/blog/2008/07/18/mount-disk-images/</link>
+      <pubDate>Fri, 18 Jul 2008 06:17:02 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/07/18/mount-disk-images/</guid>
+      <description>I&amp;rsquo;ve been using a Xen guest under RHEL 5.2 to hold this Webserver, and because of failures, I choose to keep a copy of the full disk image on another machine.
+Having to transfer the full disk in the network means stop the server (Xen guest), rsync the image on disk (wait 40 minutes), then start guest again.
+After doing the initial image transfer, it would be easier to just sync updated files, but&amp;hellip; how to loop mount a full disk?</description>
+    </item>
+    <item>
+      <title>Logical volume manager (LVM)</title>
+      <link>https://iranzo.io/blog/2008/04/20/logical-volume-manager-lvm/</link>
+      <pubDate>Sun, 20 Apr 2008 23:03:52 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/04/20/logical-volume-manager-lvm/</guid>
+      <description>Introduction LVM are the initials for Logical Volume Manager, a powerful tool present in actual Linux systems inspired in the implementation available in other systems like AIX and HP-UX.
+LVM introduces a separation between system structure and elements like disks, partitions, filesystems to which we are used to.
+LVM has three levels:
+Physical volumes Volume Groups Logical volumes One of the benefits of LVM over traditional systems is that LVM introduces an abstraction layer which improves the limitation of a disk, allowing us to have a filesystem to span over several disks, resizing thus making a more efficient usage of storage.</description>
+    </item>
+    <item>
+      <title>Security Enhanced Linux (SELinux)</title>
+      <link>https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/</link>
+      <pubDate>Fri, 04 Jan 2008 18:14:03 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/</guid>
+      <description>Introduction SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel.
+SELinux, originally developed by N.S.A. (National Security Agency) allows applications to be confined by the kernel.
+Inside that &amp;ldquo;confined area&amp;rdquo;, much more grained than a standard chroot (system where basic executables are copied to another folder in order to have a small subsystem isolated from real system. The drawback is that a small subsystem could have enough utilities to reveal private information from our internal network),in which we can allow only certain operations, for example: adding information to a file, read from a directory but not writing, even just for one file in a standard directory, etc&amp;hellip;</description>
+    </item>
+    <item>
+      <title>Creating Jigsaw Download (JigDo) files for downloading ISO&#39;s</title>
+      <link>https://iranzo.io/blog/2007/11/15/creating-jigsaw-download-jigdo-files-for-downloading-isos/</link>
+      <pubDate>Thu, 15 Nov 2007 21:50:25 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2007/11/15/creating-jigsaw-download-jigdo-files-for-downloading-isos/</guid>
+      <description>Introduction JigDo (JIGsaw DOwnload) is a small utility that can assemble a CD/DVD image from it&amp;rsquo;s internal files.
+For example, Debian has been using it for years for distributing the entire distribution: you downloaded a .jigdo file, and then, using the utility jigdo-lite (package jigdo-file on Debian like and RPM based1. This way, you only downloaded small files from servers, preventing line failures, spreading load between several servers, etc.
+Furthermore, if you already had some files (for example if you started at version X and have been downloading and keeping all files until X.</description>
+    </item>
+    <item>
+      <title>SSH, stunnel and a proxy - double stunnel bypass</title>
+      <link>https://iranzo.io/blog/2006/11/01/ssh-stunnel-and-a-proxy-double-stunnel-bypass/</link>
+      <pubDate>Wed, 01 Nov 2006 17:47:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2006/11/01/ssh-stunnel-and-a-proxy-double-stunnel-bypass/</guid>
+      <description>Introduction I&amp;rsquo;m working for a &amp;ldquo;very concerned about security&amp;rdquo; firm, that makes mandatory using VPN for accessing their network, and internal services:
+IMAPS SMTP Intranet Forums Online training, etc As it should, we provided services for a client, also very concerned about security, thus not allowing internet access despite of using two squid proxies with a network appliance filtering protocols, scripts, viruses and malware. They only allow FTP, HTTP and HTTPS.</description>
+    </item>
+    <item>
+      <title>OCS Deployment Tips and tricks</title>
+      <link>https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/</link>
+      <pubDate>Sat, 29 Jul 2006 20:13:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/</guid>
+      <description>Prior to using the following info for creating own-made packages, let&amp;rsquo;s test if everything is working fine.
+I&amp;rsquo;ve created a NSIS script that writes into registry in a key called HKLMSOFTWAREOCS and puts a key named &amp;ldquo;cert&amp;rdquo; with value creilla.
+If we create a package with action &amp;ldquo;LAUNCH&amp;rdquo;, and attach the regcert.zip with command to execute regcert.exe, all clients with functional package deployment, will add that key to registry, so we can check, using OCS registry query function for a key named &amp;ldquo;cert&amp;rdquo; into: HKLM SOFTWAREOCS.</description>
+    </item>
+    <item>
+      <title>OCS Inventory Package deployment</title>
+      <link>https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/</link>
+      <pubDate>Thu, 27 Jul 2006 20:29:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/</guid>
+      <description>Introduction OCS Inventory is an excellent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms).
+Since New Generation (OCS-NG), a new architecture was implemented: server were contacted using standard TCP/IP connection (Previous versions, used an MDB file to store information, and required a SMB share to inventory computers ), allowing remote computers to connect as well as providing a new web interface for computer administration, and inventory query.</description>
+    </item>
+    <item>
+      <title>Error depending of number of beeps in BIOS</title>
+      <link>https://iranzo.io/blog/2004/04/12/error-depending-of-number-of-beeps-in-bios/</link>
+      <pubDate>Mon, 12 Apr 2004 09:54:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2004/04/12/error-depending-of-number-of-beeps-in-bios/</guid>
+      <description>BIOS (Basic Input Output System) from PC&amp;rsquo;s report errors in the hardware at boot with a code of beeps, that can help diagnose the issue in case there&amp;rsquo;s no image being displayed.
+Error code reported by BIOS during POST (Power On Self Test):
+Fatal errors # of beeps Meaning 1 DRAM refresh error 2 640Kb base RAM error 4 system timer error 5 CPU error 6 Keyboard Gate A20 error 7 Virtual mode exception error 9 BIOS-ROM checksum error Non-Fatal errors # of beeps Meaning 3 Memory test failure conventional and extended 8 Monitor error with tracing vertical and horizontal Enjoy!</description>
+    </item>
+    <item>
+      <title>Jumpers Olivetti Echos P75</title>
+      <link>https://iranzo.io/blog/2004/04/06/jumpers-olivetti-echos-p75/</link>
+      <pubDate>Tue, 06 Apr 2004 10:01:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2004/04/06/jumpers-olivetti-echos-p75/</guid>
+      <description>Olivetti Echos Family (Tested on my P75, but obtained from the Internet) (Running now at 166 MHz)
+Jumper Settings Processor Speed 1100 75 MHz 0000 90 MHz 0100 100 MHz 1110 100 MHz 0010 120 MHz 1111 120 MHz 0110 133 MHz 0011 150 MHz 1101 150 MHz 0001 166 MHz 0111 166 MHz Switches 1,2:
+Switch 1 Switch 2 Bus OFF OFF 60 OFF ON 66.6 ON OFF 20 ON ON 50 Switch 3,4:</description>
+    </item>
+    <item>
+      <title>VPNS - Multiple VPN&#39;s Launcher</title>
+      <link>https://iranzo.io/blog/2003/03/05/vpns-multiple-vpns-launcher/</link>
+      <pubDate>Wed, 05 Mar 2003 20:55:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2003/03/05/vpns-multiple-vpns-launcher/</guid>
+      <description>General Purpose The idea on writing VPNS and the structure it follows was the problem that we had into easily configure many VPN&amp;rsquo;s for use with the wireless project interconnection (Valencia Wireless http://www.valenciawireless.org).
+When having no chance to join networks using just wireless links, we needed to provide some kind of transparent link from one WiFi node to another. To do so, we decided to use the vpnd daemon to establish links between our networks for allowing transparent traffic flow.</description>
+    </item>
+    <item>
+      <title>Camelle - Costa da Morte 2002</title>
+      <link>https://iranzo.io/blog/2002/02/25/camelle-costa-da-morte-2002/</link>
+      <pubDate>Mon, 25 Feb 2002 21:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2002/02/25/camelle-costa-da-morte-2002/</guid>
+      <description>Those are some pics I took during December in 2002 around Camelle and Costa da Morte area in North of Spain after the Prestige oil spill. </description>
+    </item>
+  </channel>
+</rss>
