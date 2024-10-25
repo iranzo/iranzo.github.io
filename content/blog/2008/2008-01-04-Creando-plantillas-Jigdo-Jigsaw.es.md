@@ -58,7 +58,6 @@ JigDo descargará la descripción, buscará el fichero de plantilla, lo descarga
 Espero que te sea útil :)
 
 [^1]: [del repositorio de Dag](http://dag.wieers.com/rpm/packages/jigdo/)
-
 [^2]: Puede utilizarse para distribuir otro tipo de ficheros
 
 Puedes ver una plantilla de ejemplo (.jigdo y .template) que cree para este artículo, y que actualmente, permite obtener un DVD de instalación de CentOS 5 a partir de sus RPM's individuales.
