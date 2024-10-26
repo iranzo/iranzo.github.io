@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fedora on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/fedora/</link>
+    <description>Recent content in Fedora on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Autofirma en Linux</title>
+      <link>https://iranzo.io/es/blog/2021/09/09/autofirma-en-linux/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2021/09/09/autofirma-en-linux/</guid>
+      <description>Instalando Autofirma en Fedora 34</description>
+    </item>
+    <item>
+      <title>Herramientas de sincronización/backup</title>
+      <link>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</link>
+      <pubDate>Thu, 08 Dec 2011 11:52:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</guid>
+      <description>Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de &amp;lsquo;backup&amp;rsquo; en caso de fallo hardware de algún equipo.
+Estuve probando y evaluando diversas herramientas multiplataforma y junto a algunas más, las que más probé fueron estas:
+AeroFS Dropbox Syncany Sparkleshare Wuala SpiderOak Actualmente necesito &amp;lsquo;salvar/sincronizar&amp;rsquo; unos 35Gb de datos (fotos la gran mayoría y no precisamente en RAW), lo que provocó estas comparativas, preferiblemente de servicios que ofrecieran espacio gratuito.</description>
+    </item>
+    <item>
+      <title>Probando nuevos escritorios</title>
+      <link>https://iranzo.io/es/blog/2011/12/08/probando-nuevos-escritorios/</link>
+      <pubDate>Thu, 08 Dec 2011 11:13:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2011/12/08/probando-nuevos-escritorios/</guid>
+      <description>Hace ya años que pasé de KDE con la llegada de KDE 3 a utilizar GNOME, más &amp;rsquo;espartano&amp;rsquo;, pero con mejor rendimiento.
+Con Fedora 15 pasé a utilizar GNOME 3, bastante &amp;lsquo;innovador&amp;rsquo;, algo extraño, pero me fui acostumbrando relativamente bien, pero con la llegada de Fedora 16 y la versión 3.2, noto el equipo (que sigue siendo el mismo) con frecuentes enganchones y lentitud.
+Una opción sería subir los 2Gb de memoria a 4Gb, pero me parece tirar dinero cuando el equipo necesitaría una renovación durante el próximo año (P4 dual 2.</description>
+    </item>
+    <item>
+      <title>Rescate de sistemas virtuales (Xen)</title>
+      <link>https://iranzo.io/es/blog/2010/04/23/rescate-de-sistemas-virtuales-xen/</link>
+      <pubDate>Fri, 23 Apr 2010 23:31:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/23/rescate-de-sistemas-virtuales-xen/</guid>
+      <description>A raíz de un problema debido a reiterados apagones, me vi en la necesidad de levantar una máquina virtual que ya no arrancaba.
+En un sistema físico, lo que haríamos, es que según en qué punto estemos, usar un disco de arranque de nuestra distribución y por un lado reparar el sistema de ficheros con fsck o rehacer un initrd.img.
+¿Cómo hacemos esto si la máquina en lugar de ser una real, es una virtual?</description>
+    </item>
+    <item>
+      <title>Crear pendrives de arranque (flasheo de bios) en un ejecutable autoextraible (Linux/Windows)</title>
+      <link>https://iranzo.io/es/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de-bios-en-un-ejecutable-autoextraible-linux/windows/</link>
+      <pubDate>Thu, 15 Apr 2010 14:18:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/15/crear-pendrives-de-arranque-flasheo-de-bios-en-un-ejecutable-autoextraible-linux/windows/</guid>
+      <description>Usando unetbootin (http://unetbootin.sourceforge.net/) podemos crear pendrives de arranque a partir de imágenes ISO o imágenes de disco, así como ficheros propios o bien predefinidos para varias distribuciones.
+Si queremos además, crear un fichero ejecutable autodescomprimible, para que el usuario final sólo deba ejecutarlo e introducir un pendrive y que se cree &amp;lsquo;solo&amp;rsquo;, deberemos tener además:
+7zip http://sourceforge.net/projects/sevenzip/files/ (para crear un fichero comprimido con los ficheros a incluir) 7zip SFX (7zS.sfx) dentro del fichero &amp;lsquo;Extra&amp;rsquo; de http://sourceforge.</description>
+    </item>
+    <item>
+      <title>Combinar correspondencia con OpenOffice.org</title>
+      <link>https://iranzo.io/es/blog/2010/04/05/combinar-correspondencia-con-openoffice.org/</link>
+      <pubDate>Mon, 05 Apr 2010 21:50:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/05/combinar-correspondencia-con-openoffice.org/</guid>
+      <description>Hacía un tiempo que no usaba la función de combinar correspondencia y en el equipo de sobremesa con Fedora 13 x86_64 no conseguía hacerla funcionar.
+Antes de nada:
+Qué es combinar correspondencia Una de las ventajas de tener la información en formato digital es su tratamiento, y una de las opciones más habituales, es tener bases de datos con la información que necesitamos y acceder a ella.
+La función de &amp;lsquo;combinar correspondencia&amp;rsquo; permite utilizar los datos de una base de datos para rellenar campos en un documento y luego, escoger la salida (impresión, nuevos documentos, email, etc).</description>
+    </item>
+    <item>
+      <title>Dropbox en Fedora</title>
+      <link>https://iranzo.io/es/blog/2010/04/01/dropbox-en-fedora/</link>
+      <pubDate>Thu, 01 Apr 2010 11:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/01/dropbox-en-fedora/</guid>
+      <description>Para instalar dropbox en Fedora, no es necesario realizar excesivos pasos:
+Abrir una cuenta en
+Dropbox (o si prefieres, en una empresa alternativa como SpiderOak (O Wuala que ofrece espacio adicional por compartir espacio en tu propio disco) Instalar en nuestra fedora el paquete correspondiente para Nautilus (aunque ponga que es para Fedora 10, funciona perfectamente en superiores (probado en 12 y 13))
+Al volver a iniciar sesión (o la lanzar el programa), aparecerá un icono en la bandeja de sistema y comenzará el proceso de configuración en el que se asocia el &amp;rsquo;escritorio&amp;rsquo; a la cuenta de Dropbox que creamos anteriormente.</description>
+    </item>
+    <item>
+      <title>Sincronizar &#39;basicamente&#39; iPhone o iPod Touch en Fedora 12</title>
+      <link>https://iranzo.io/es/blog/2010/03/02/sincronizar-basicamente-iphone-o-ipod-touch-en-fedora-12/</link>
+      <pubDate>Tue, 02 Mar 2010 14:43:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/03/02/sincronizar-basicamente-iphone-o-ipod-touch-en-fedora-12/</guid>
+      <description>Las nuevas versiones no están todavía soportadas en Fedora 12, así que tendremos que utilizar las de rawhide.
+#!bash yum --enablerepo=rawhide upgrade ifuse gtkpod libgpod libimobiledevice usbmuxd Una vez instalados, podemos empezar a utilizarlo ejecutando como root:
+#!bash mkdir -p /mnt/ipod chmod 777 /mnt/ipod usbmuxd -v -f Y como nuestro usuario:
+#!bash ifuse /mnt/ipod A partir de ahí podrás, si todo ha ido bien, utilizar gtkpod para gestionar la biblioteca de tu dispositivo.</description>
+    </item>
+    <item>
+      <title>Creación de distribuciones Live con Fedora</title>
+      <link>https://iranzo.io/es/blog/2008/09/24/creaci%C3%B3n-de-distribuciones-live-con-fedora/</link>
+      <pubDate>Wed, 24 Sep 2008 20:34:16 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/09/24/creaci%C3%B3n-de-distribuciones-live-con-fedora/</guid>
+      <description>Introducción Según lo visto en el artículo Kickstart, podemos crear un guión de instalación automatizada que por ejemplo podemos utilizar para crear un DVD autoinstalable, un servidor http, etc.
+Fedora proporciona unas utilidades &amp;rsquo;livecd-tools&amp;rsquo; que permiten, utilizando un fichero kickstart crear una imagen ISO con una instalacion del sistema que hayamos escogido que tiene la característica de poderse ejecutar desde un CD/DVD.
+Ejemplo Por ejemplo, podemos personalizar nuestro medio &amp;rsquo;live&amp;rsquo; cambiando el mensaje de login con un:</description>
+    </item>
+    <item>
+      <title>Valux - Fedora</title>
+      <link>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</link>
+      <pubDate>Sat, 30 Aug 2008 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/2008-08-30-fedora-valux/</guid>
+      <description>¿Qué es Fedora? Fedora es un sistema operativo basado en Linux que integra las últimas novedades en software libre y abierto Fedora es y será siempre libre para su uso, modificación y distribución Está construida por gente de todo el mundo que trabaja conjuntamente como una comunidad: El Proyecto Fedora Orígenes Los comienzos: Red Hat Linux 1994 -&amp;gt; 2003
+Versiones cada 6 meses Versiones más estables (.2) cada 18 meses Dificultad de soportar a largo plazo Modelo de ventas complicado Part.</description>
+    </item>
+    <item>
+      <title>Fedora</title>
+      <link>https://iranzo.io/es/blog/2008/06/14/fedora/</link>
+      <pubDate>Sat, 14 Jun 2008 05:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/06/14/fedora/</guid>
+      <description>Introducción Fedora es una distribución Linux fruto del desarrollo de la extinta Red Hat Linux.
+Red Hat Linux se readaptó al entorno empresarial proporcionado las opciones de soporte que las empresas buscaban en el software libre y del código de Red Linux, nacieron dos versiones, Red Hat Enterprise Linux, disponible para clientes con suscripciones (Red Hat no vende &amp;ldquo;licencias de uso&amp;rdquo;, vende servicios de soporte, actualización en forma de suscripciones, puede verse como una especie de tarifa plana para acceder a todas las versiones de los productos subscritos, soporte, etc) válidas y Fedora Core, sucesor directo de Red Hat Linux.</description>
+    </item>
+    <item>
+      <title>(mi) Evolución con Linux</title>
+      <link>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</link>
+      <pubDate>Tue, 03 Jun 2008 22:32:07 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</guid>
+      <description>Antecedentes Llevo gastando Linux desde hace bastantes años&amp;hellip;
+Primero empecé con una copia de Slackware 1.x que venía con la revista Sólo programadores cuya instalación consistía en descomprimir un fichero &amp;ldquo;zip&amp;rdquo; sobre un disco FAT16 (en aquella época tenía un disco duro de 80 Mb (sí, Megabytes) en un 386DX a 40 Mhz y la instalación venía a ocupar unos 15 Mb descomprimida.
+Dicha instalación hacía uso de un sistema llamado UMSDOS que permitía, una vez cargado Linux (mediante loadlin) hacer uso de las características de un filesystem de Linux cuando en realidad había por debajo un sistema FAT.</description>
+    </item>
+  </channel>
+</rss>

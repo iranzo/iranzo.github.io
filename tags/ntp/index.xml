@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>NTP on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/ntp/</link>
+    <description>Recent content in NTP on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:46:05 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/ntp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configuring OpenShift with self-contained NTP</title>
+      <link>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</link>
+      <pubDate>Mon, 07 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</guid>
+      <description>Introduction In a regular OpenShift environment, NTP server is more less like this: Diagram In a self-contained cluster with no connection to external networks NTP server is not reachable, but a reachable NTP server is required for proper cluster synchronization. Cluster does use SSL certificates that require validation and might fail if the dates between the systems are not in sync or at least pretty close in time.
+Diagram We&amp;rsquo;ve several components already available in our OpenShift cluster that are very useful:</description>
+    </item>
+  </channel>
+</rss>

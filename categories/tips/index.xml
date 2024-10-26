@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tips on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/tips/</link>
+    <description>Recent content in Tips on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Jan 2024 16:33:53 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install gems on local user folder instead of system wide</title>
+      <link>https://iranzo.io/tips/bundle-localuser/</link>
+      <pubDate>Tue, 16 Jan 2024 16:27:50 +0000</pubDate>
+      <guid>https://iranzo.io/tips/bundle-localuser/</guid>
+      <description>In order to test locally a Gemfile, define local path for the gems to avoid attempting to write to system-wide folders:
+bundle config set --local path &amp;#39;/home/username/.gem&amp;#39; bundle install </description>
+    </item>
+    <item>
+      <title>No matching key found</title>
+      <link>https://iranzo.io/tips/no-matching-key-found/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      <guid>https://iranzo.io/tips/no-matching-key-found/</guid>
+      <description>As you might have experienced&amp;hellip; using a recent system to connect to a legacy one could be complicated as some insecure protocols have been disabled, with a message like:
+Unable to negotiate with 192.168.2.82 port 22: no matching host key type found. Their offer: ssh-rsa,ssh-dss Create an entry like this in your .ssh/config file, so that insecure methods can be used to connect to a specific host:
+Host 192.168.2.82 HostKeyAlgorithms=+ssh-rsa KexAlgorithms=+diffie-hellman-group1-sha1 PubkeyAcceptedKeyTypes=+ssh-rsa User root or alternatively on the command line:</description>
+    </item>
+    <item>
+      <title>Upgrade Debian from buster to bullseye</title>
+      <link>https://iranzo.io/tips/raspbian-upgrade/</link>
+      <pubDate>Sat, 22 Jul 2023 13:22:08 +0000</pubDate>
+      <guid>https://iranzo.io/tips/raspbian-upgrade/</guid>
+      <description>I had two Raspberry Pi systems running Raspbian and they were failing to find updates for newer packages.
+As Debian stable was upgraded too, moving from buster to bullseye the packages failed to get the newer ones.
+Warning
+Beware as this procedure might upgrade the system but might no render a bootable Raspberry Pi
+A way to fix it is, to first, change references, if any, to the old codename version by running:</description>
+    </item>
+    <item>
+      <title>Automating SSH keys loading for Ansible usage</title>
+      <link>https://iranzo.io/tips/automatesshkeys/</link>
+      <pubDate>Thu, 02 Mar 2023 16:40:32 +0000</pubDate>
+      <guid>https://iranzo.io/tips/automatesshkeys/</guid>
+      <description>For using Ansible it&amp;rsquo;s required to have a working set of ssh-keys already deployed.
+If you get a set of systems that have not been provisioned by you and are missing the SSH keys, having it fixed might take a while if doing it manually. Good news is that you can use a script in expect to cover this part:
+#!/usr/bin/expect -f # set Variables set password [lrange $argv 0 0] set ipaddr [lrange $argv 1 1] # now connect to remote system spawn ssh-copy-id root@$ipaddr match_max 100000 # Check for initial connection (add key of host) set timeout 5 expect &amp;#34;yes/no&amp;#34; { send -- &amp;#34;yes\r&amp;#34; } # Check for password prmpt set timeout 120 # Look for passwod prompt expect &amp;#34;password:&amp;#34; { send -- &amp;#34;$password\r&amp;#34; } # send blank line (\r) to come back send -- &amp;#34;\n&amp;#34; expect eof This script, when used like:</description>
+    </item>
+    <item>
+      <title>Enable Libvirt rw socket on RHEL9</title>
+      <link>https://iranzo.io/tips/rhel9-libvirtd/</link>
+      <pubDate>Thu, 12 Jan 2023 14:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/tips/rhel9-libvirtd/</guid>
+      <description>RHEL9 by default uses read-only socket which is not usable by some tools like Kcli&amp;hellip; to enable it use:
+systemctl enable --now libvirtd.socket libvirtd-ro.socket systemctl stop libvirtd.service systemctl enable --now virtproxyd.socket virtproxyd-ro.socket systemctl stop virtproxyd.service </description>
+    </item>
+    <item>
+      <title>Ansible - dynamically include Jinja templates and tasks</title>
+      <link>https://iranzo.io/blog/2022/09/24/ansible-dynamically-include-jinja-templates-and-tasks/</link>
+      <pubDate>Sat, 24 Sep 2022 11:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/09/24/ansible-dynamically-include-jinja-templates-and-tasks/</guid>
+      <description>For my ansible playbooks, I wanted to be able to add several new templates to be copied to target system, and additionally be able to perform some commands for them without having to specify each individual file/template to copy.
+My approach:
+Define for the hosts I want to find templates/playbooks define a var named extras for the relevant hosts:
+extras: - ntp - certificates The names defined (in above example ntp and certificates) are just name of folders laying inside tasks/templates/${folder} that are searched and included or excluded based on extras values.</description>
+    </item>
+    <item>
+      <title>Include Ansible playbooks sorted</title>
+      <link>https://iranzo.io/tips/include-sorted-playbooks/</link>
+      <pubDate>Fri, 23 Sep 2022 11:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/tips/include-sorted-playbooks/</guid>
+      <description>Use sorted list for included files vs random provided by with_fileglob.
+- name: Include tasks include_tasks: &amp;#34;{{item}}&amp;#34; loop: &amp;#34;{{ query(&amp;#39;fileglob&amp;#39;, &amp;#39;tasks/*.yaml&amp;#39;) | sort }}&amp;#34; </description>
+    </item>
+    <item>
+      <title>Check Agent status per state</title>
+      <link>https://iranzo.io/tips/acm-host-status/</link>
+      <pubDate>Wed, 10 Aug 2022 14:01:32 +0000</pubDate>
+      <guid>https://iranzo.io/tips/acm-host-status/</guid>
+      <description>Check agent status per state
+watch -d &amp;#34;oc get agent -A -o jsonpath=&amp;#39;{range .items[*]}{@.status.debugInfo.state}{\&amp;#34;\n\&amp;#34;}{end}&amp;#39; |sort | uniq --count&amp;#34; </description>
+    </item>
+  </channel>
+</rss>

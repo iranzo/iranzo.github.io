@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Unit Testing on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/unit-testing/</link>
+    <description>Recent content in Unit Testing on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/unit-testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins for running CI tests</title>
+      <link>https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/</link>
+      <pubDate>Thu, 17 Aug 2017 23:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/</guid>
+      <description>Why? While working on Citellus and Magui it soon became evident that Unit testing for validating the changes was a requirement.
+Initially, using a .travis.yml file contained in the repo and the free service provided by https://travis-ci.org we soon got https://github.com repo providing information about if the builds succeeded or not.
+When it was decided to move to https://gerrithub.io to work in a more similar way to what is being done in upstream, we improved on the code commenting (peer review), but we lost the ability to run the tests in an automated way until the change was merged into github.</description>
+    </item>
+  </channel>
+</rss>

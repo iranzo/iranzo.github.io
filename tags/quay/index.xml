@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Quay on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/quay/</link>
+    <description>Recent content in Quay on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:54:40 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/quay/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup a Quay mirror for offline installations with mirror-registry</title>
+      <link>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</link>
+      <pubDate>Fri, 19 Aug 2022 10:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</guid>
+      <description>Learn on how to use mirror-registry to create a local copy that can be used to install OpenShift without external Internet connectivity.</description>
+    </item>
+    <item>
+      <title>Project automation with Travis, GitHub Pages and Quay</title>
+      <link>https://iranzo.io/presentations/2019-01-16-automation-travis-ghpages-containers/</link>
+      <pubDate>Wed, 16 Jan 2019 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/2019-01-16-automation-travis-ghpages-containers/</guid>
+      <description>Project hosting and automation /me: Pablo Iranzo Gómez ( https://iranzo.io )
+You got a shinny new project? What now? Code usually also requires a webpage
+Documentation, General Information, Developer information, etc Web costs money
+Hosting, Domain, Maintenance, etc Some Philosophy Empty your mind, be shapeless, formless, like water. Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle You put water in a teacup, it becomes the teapot Now water can flow or it can crash.</description>
+    </item>
+    <item>
+      <title>Quay for Federation</title>
+      <link>https://iranzo.io/blog/2019/01/08/quay-for-federation/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/08/quay-for-federation/</guid>
+      <description>Why this article? For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment.
+Colleagues in the Solutions Engineering team have been working on demonstrating an application running on different clusters over a Federated Control Plane, allowing it to &amp;lsquo;roam&amp;rsquo; between clusters with shared data access as a way to demonstrate how an application can &amp;lsquo;scale&amp;rsquo; from on-premise deployment to external clouds in order to satisfy business requirements for peak demands.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/python/</link>
+    <description>Recent content in Python on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:52:25 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emerging Tech VLC&#39;19 - Citellus - Automatización de comprobaciones</title>
+      <link>https://iranzo.io/es/presentations/citellus/emergingtechvalencia/20190530/citellus-emergingtechvalencia2019-es/</link>
+      <pubDate>Thu, 30 May 2019 18:30:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/citellus/emergingtechvalencia/20190530/citellus-emergingtechvalencia2019-es/</guid>
+      <description>Citellus: Citellus - Verifica tus sistemas!! https://risuorg.github.io
+Emerging Tech Valencia 2019: 30 Mayo
+¿Quién soy? Pablo Iranzo Gómez (Pablo.Iranzo AT gmail.com) Senior Software Engineer - Solutions Engineering - Red Hat RHCA Level V: #110-215-852 (RHC{A,SS,DS,VA,E,SA,SP,AOSP}, JBCAA) URLS blog: https://iranzo.io https://linkedin.com/in/iranzo/ https://github.com/iranzo https://twitter.com/iranzop Involucrado con Linux desde algo antes de comenzar los estudios universitarios y luego durante ellos, estando involucrado con las asociaciones LinUV y &amp;lt;Valux.org&amp;gt;.
+Empecé a &amp;lsquo;vivir&amp;rsquo; del software libre en 2004 y a trabajar en Red Hat en 2006 como Consultor, luego como Senior Technical Account Manager, posteriormente como Principal Software Maintenance Engineer y actualmente como Senior Software Engineer para el equipo de Solutions Engineering.</description>
+    </item>
+    <item>
+      <title>@redken_bot</title>
+      <link>https://iranzo.io/es/redken_bot/</link>
+      <pubDate>Mon, 04 Mar 2019 18:34:14 +0100</pubDate>
+      <guid>https://iranzo.io/es/redken_bot/</guid>
+      <description>Learn about Redken Telegram Bot usage and configuration settings.</description>
+    </item>
+    <item>
+      <title>SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de configuración, logs etc mediante scripts en bash, python, ruby, etc</title>
+      <link>https://iranzo.io/es/presentations/citellus/supersec2018/</link>
+      <pubDate>Sun, 13 May 2018 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/citellus/supersec2018/</guid>
+      <description>Citellus: Citellus - Verifica tus sistemas!! https://risuorg.github.io
+SuperSec 2018 Almería 12-13 Mayo
+¿Quién soy? Involucrado con Linux desde algo antes de comenzar los estudios universitarios y luego durante ellos, estando involucrado con las asociaciones LinUV y Valux.org.
+Empecé a &amp;lsquo;vivir&amp;rsquo; del software libre en 2004 y a trabajar en Red Hat en 2006 como Consultor, luego como Technical Account Manager y ahora como Software Maintenance Engineer.
+¿Qué es Citellus? Citellus proporciona un framework acompañado de scripts proporcionados por la comunidad, que automatizan la detección de problemas, incluyendo problemas de configuración, conflictos con paquetes de versiones instaladas, problemas de seguridad o configuraciones inseguras y mucho más.</description>
+    </item>
+    <item>
+      <title>pyserial</title>
+      <link>https://iranzo.io/es/blog/2010/02/23/pyserial/</link>
+      <pubDate>Tue, 23 Feb 2010 22:50:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/02/23/pyserial/</guid>
+      <description>Pyserial Esta semana estuve jugando con python para interrogar mediante puerto serie dispositivos.
+La verdad es que resultó mucho más sencillo de lo que pensaba, algo de complicación a la hora de interpretar las constantes de ASCII para el group separator (GS).
+La interrogación es tan sencilla como hacer:
+import sys import serial try: ser = serial.Serial( port=&amp;#34;/dev/ttyS0&amp;#34;, baudrate=9600, bytesize=serial.EIGHTBITS, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, xonxoff=1, rtscts=0, ) except: print(&amp;#34;Fallo al abrir el dispositivo&amp;#34;) sys.</description>
+    </item>
+  </channel>
+</rss>

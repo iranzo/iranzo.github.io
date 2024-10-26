@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/categories/python/</link>
+    <description>Recent content in Python on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pyserial</title>
+      <link>https://iranzo.io/es/blog/2010/02/23/pyserial/</link>
+      <pubDate>Tue, 23 Feb 2010 22:50:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/02/23/pyserial/</guid>
+      <description>Pyserial Esta semana estuve jugando con python para interrogar mediante puerto serie dispositivos.
+La verdad es que resultó mucho más sencillo de lo que pensaba, algo de complicación a la hora de interpretar las constantes de ASCII para el group separator (GS).
+La interrogación es tan sencilla como hacer:
+import sys import serial try: ser = serial.Serial( port=&amp;#34;/dev/ttyS0&amp;#34;, baudrate=9600, bytesize=serial.EIGHTBITS, timeout=1, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, xonxoff=1, rtscts=0, ) except: print(&amp;#34;Fallo al abrir el dispositivo&amp;#34;) sys.</description>
+    </item>
+  </channel>
+</rss>
