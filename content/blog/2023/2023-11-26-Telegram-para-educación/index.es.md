@@ -11,7 +11,9 @@ tags:
 date: 2023-11-26 00:00:00 +0100
 categories:
   - education
-lastmod: 2024-03-03T15:28:23.848Z
+lastmod: 2024-11-18T08:29:21.355Z
+cover:
+  image: cover.png
 ---
 
 Telegram viene siendo utilizado con bastante frecuencia en centros educativos para permitir una comunicación sencilla mediante los 'canales', donde los docentes pueden enviar información a las familias de forma general sin que se pueda contactar con ellos directamente. Esto tiene la ventaja de facilitar la comunicación de información pero sin el riesgo de que sean acosados por las familias con preguntas, etc. fuera de los canales oficiales de comunicación. Pero es importante tener en cuenta una serie de aspectos que, posiblemente por desconocimiento, pueden arrastrar una serie de problemas/peligros.

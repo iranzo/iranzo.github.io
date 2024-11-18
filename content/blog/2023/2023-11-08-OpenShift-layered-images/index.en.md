@@ -8,7 +8,9 @@ tags:
 date: 2023-11-08 00:00:00 +0200
 categories:
   - tech
-lastmod: 2023-11-13T07:09:45.909Z
+lastmod: 2024-11-18T08:29:21.412Z
+cover:
+  image: cover.png
 ---
 
 With recent releases of OpenShift like 4.13 you can use [CoreOS Layering](https://access.redhat.com/documentation/es-es/openshift_container_platform/4.13/html/post-installation_configuration/coreos-layering) to apply custom images to the nodes.

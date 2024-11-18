@@ -11,7 +11,9 @@ tags:
 date: 2023-11-10 13:00:00 +0200
 categories:
   - education
-lastmod: 2023-11-13T07:47:23.619Z
+lastmod: 2024-11-18T08:29:21.395Z
+cover:
+  image: cover.png
 ---
 
 Red Hat has a program named Co.Lab which [provides kits](https://www.sparkfun.com/search/results?term=co.lab) under request that employees can use to guide a STEM session on schools to perform different range of activities.

@@ -12,8 +12,10 @@ keywords:
   - Acceleration
   - AI
   - Artificial Intelligence
-lastmod: 2024-05-27T12:49:36.741Z
+lastmod: 2024-11-18T08:29:21.332Z
 redirect: https://developers.redhat.com/articles/2024/04/05/enable-gpu-acceleration-kernel-module-management-operator
+cover:
+  image: cover.png
 ---
 
 {{<attention>}}

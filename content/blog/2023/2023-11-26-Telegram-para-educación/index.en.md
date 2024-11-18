@@ -11,7 +11,9 @@ tags:
 date: 2024-01-05 00:00:00 +0100
 categories:
   - education
-lastmod: 2024-03-03T15:30:02.273Z
+lastmod: 2024-11-18T08:29:21.373Z
+cover:
+  image: cover.png
 ---
 
 Telegram is being used frequently at schools for allowing an easy communication flow using the 'channels', where teachers can send information to families without sharing their personal contact details so that they can't be contacted outside of the official tools.
