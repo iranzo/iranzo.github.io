@@ -22,7 +22,7 @@ jobs:
         with:
           version: latest
           extended: true
-          args: --minify --verbose
+          args: --minify --logLevel info
       - name: Deploy to GitHub Pages
         if: success() && github.event_name != 'pull_request'
         uses: crazy-max/ghaction-github-pages@v4.0.0

@@ -2,15 +2,16 @@ baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "A Hugo theme for creating Reveal.js presentations"
 disableKinds = ["sitemap", "RSS"]
-theme = "."
-themesDir = "../"
+theme = "github.com/joshed-io/reveal-hugo"
+# theme = "."
+# themesDir = "../"
 
 # uncomment for browsing at file:///
 # relativeURLs = true
 # uglyURLs = true
 
-[author]
-name = "Josh Dzielak"
+[params]
+author = "Josh Dzielak"
 
 # currently only the unsafe mode for goldmark is supported
 [markup.goldmark.renderer]
@@ -35,3 +36,8 @@ history = true
 [params.reveal_hugo.templates.grey]
 background = "#424242"
 transition = "convex"
+
+[module]
+  # needs hugo v0.109.0 or higher and go 1.18 or higher:
+  # uncomment line below for local development of module
+  # workspace = "hugo.work"
