@@ -25,7 +25,7 @@ jobs:
           args: --minify --logLevel info
       - name: Deploy to GitHub Pages
         if: success() && github.event_name != 'pull_request'
-        uses: crazy-max/ghaction-github-pages@v4.0.0
+        uses: crazy-max/ghaction-github-pages@v4.1.0
         with:
           target_branch: gh-pages
           build_dir: public
