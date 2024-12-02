@@ -175,24 +175,43 @@ Se puede conseguir "seguridad" sin sacrificar la privacidad, puede que no sea ta
 - [Preguntas frecuentes sobre informática fiable](http://linuca.org/body.phtml?nIdNoticia=207)
 
 [^1]: Web con un programa que cifra y descifra en [www.rot13.com](http://www.rot13.com/)
+
 [^2]: [Informe Echelon](http://altavoz.nod50.org/echelon2000.htm), [El Programa Echelon](http://www.ugt.es/globalizacion/echelon.htm)
+
 [^3]: Secure Socket Layers: Capas de sockets seguras
+
 [^4]: Existe una petición a Mozilla foundation para incluir estos certificados con su navegador
+
 [^5]: Certification Authority
+
 [^6]: Virtual Private Network
+
 [^7]: Por lo que son ampliamente utilizadas para interconectar organismos con diversas delegaciones
+
 [^8]: GNU Privacy Guard
+
 [^9]: Pretty Good Privacy: Privacidad bastante buena
+
 [^10]: Wired Equivalent Privacy
+
 [^11]: Técnica consistente en viajar con un vehículo y un equipo con posibilidad de conexión inalámbrica detectando las redes accesibles y marcándolas para su posterior acceso
+
 [^12]: Leyes que actualmente impiden a científicos de países "no buenos" publicar en revistas americanas, congresos, etc...
+
 [^13]: Los pongo aquí porque es el argumento recientemente utilizado desde los atentados del 11 de Septiembre para cualquier cosa que se aleje del pensamiento único: Antipatriotismo, terrorista, etc (un poco al igual que antes los "malos" eran los "comunistas")
+
 [^14]: Por eso el Software Libre aventaja al Privativo, en que al haber libre disponibilidad del código, se puede analizar en busca de puertas traseras
+
 [^15]: Le acusan con cargos de Terrorismo
+
 [^16]: Seguridad por ocultación: aunque muchas empresas basan el modelo de seguridad en este sistema, se corre el riesgo de que el día que alguien de "dentro" difunda la información, se vean todos los fallos y alguien lo aproveche de forma malintencionada ya que los fallos existen, sólo se han "tapado"
+
 [^17]: Peer to Peer: Programas utilizados para el intercambio de archivos de igual a igual
+
 [^18]: DRM:Digital Rights Management
+
 [^19]: Trusted Computing Platform Alliance
+
 [^20]: Nombre en Clave del sistema operativo de MS que permitiría un control absoluto bajo las políticas de "seguridad" de TCPA
 
 {{<disfruta>}}
