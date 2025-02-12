@@ -12,8 +12,9 @@ lang: en
 slug: paella-howto
 translationKey: paella-howto
 cover:
+  relative: true
   image: 20120708134340.jpg
-lastmod: 2024-01-31T09:22:53.575Z
+lastmod: 2025-02-12T09:35:00.547Z
 ---
 
 This document is based on the original recipe and pictures that I gave to my colleague [Miguel Pérez Colino](https://twitter.com/mmmmmmpc) which he assembled in an internal company document and that he kindly translated for increased reach.

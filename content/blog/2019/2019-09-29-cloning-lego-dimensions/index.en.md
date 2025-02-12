@@ -19,6 +19,7 @@ categories:
 lang: en
 slug: lego-dimensions-cloning
 cover:
+  relative: true
   image: ntag213.png
 lastmod: 2024-01-31T09:22:53.645Z
 ---

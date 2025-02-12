@@ -23,7 +23,8 @@ outputs:
 reveal_hugo.theme: solarized
 cover:
   image: www.png
-lastmod: 2023-08-25T09:50:19.873Z
+  relative: true
+lastmod: 2025-02-12T09:32:34.892Z
 ---
 
 ## [Citellus](https://github.com/citellusorg/citellus):

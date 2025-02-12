@@ -10,9 +10,10 @@ keywords:
   - podman
   - Docker
   - baremetal
-lastmod: 2024-11-18T08:29:21.310Z
+lastmod: 2025-02-12T09:31:28.171Z
 cover:
   image: cover.png
+  relative: true
 ---
 
 Containers have entered in the IT panorama since some time ago, and have helped streamline the process for many applications and its lifecycle management.

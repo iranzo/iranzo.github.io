@@ -23,8 +23,9 @@ outputs:
   - Reveal
 reveal_hugo.theme: solarized
 cover:
+  relative: true
   image: www.png
-lastmod: 2023-08-25T09:52:25.505Z
+lastmod: 2025-02-12T09:32:39.459Z
 ---
 
 ## [Citellus](https://risuorg.github.io):

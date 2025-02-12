@@ -10,6 +10,7 @@ tags:
 lang: es
 cover:
   image: firefox-reducido.jpg
+  relative: true
 categories:
   - FOSS
 lastmod: 2023-08-25T09:48:47.102Z

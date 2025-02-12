@@ -9,8 +9,9 @@ date: 2023-03-21 00:00:00 +0200
 categories:
   - tech
 cover:
+  relative: true
   image: agendadiaria.png
-lastmod: 2023-08-25T09:48:47.447Z
+lastmod: 2025-02-12T09:33:10.006Z
 ---
 
 Si tienes un grupo de Telegram puede resultarte interesante la característica de <https://t.me/redken_bot> que permite añadir un calendario `ical` y que automatiza mostrar cada día las entradas de la agenda para el día.

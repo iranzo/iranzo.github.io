@@ -12,8 +12,9 @@ date: 2023-03-20 12:00:00 +0100
 categories:
   - tech
 cover:
+  relative: true
   image: samsung.png
-lastmod: 2023-08-25T09:48:47.463Z
+lastmod: 2025-02-12T09:33:29.686Z
 ---
 
 Si alguna vez has estado en algún sitio grande o con mucha gente, habrás tenido la necesidad de tener localizado a tu hijo/hija.

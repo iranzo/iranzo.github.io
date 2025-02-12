@@ -23,7 +23,8 @@ outputs:
 reveal_hugo.theme: solarized
 cover:
   image: aurora.jpg
-lastmod: 2023-08-25T09:51:50.855Z
+  relative: true
+lastmod: 2025-02-12T09:32:43.303Z
 ---
 
 ## Disclaimer

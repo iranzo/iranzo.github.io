@@ -8,8 +8,9 @@ tags:
 date: 2023-11-08 00:00:00 +0200
 categories:
   - tech
-lastmod: 2024-11-18T08:29:21.412Z
+lastmod: 2025-02-12T09:33:05.939Z
 cover:
+  relative: true
   image: cover.png
 ---
 

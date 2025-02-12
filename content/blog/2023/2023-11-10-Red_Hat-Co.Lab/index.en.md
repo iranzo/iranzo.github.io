@@ -11,8 +11,9 @@ tags:
 date: 2023-11-10 13:00:00 +0200
 categories:
   - education
-lastmod: 2024-11-18T08:29:21.395Z
+lastmod: 2025-02-12T09:33:02.430Z
 cover:
+  relative: true
   image: cover.png
 ---
 

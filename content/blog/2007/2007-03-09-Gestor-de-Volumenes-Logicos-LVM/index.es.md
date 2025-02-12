@@ -14,8 +14,9 @@ save_as: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/index.html
 url: blog/2007/03/09/Gestor-de-Volumenes-Logicos-LVM/
 translationKey: LVM
 cover:
+  relative: true
   image: lvm8.jpg
-lastmod: 2023-08-25T09:48:47.031Z
+lastmod: 2025-02-12T09:35:29.042Z
 ---
 
 ### Introducción

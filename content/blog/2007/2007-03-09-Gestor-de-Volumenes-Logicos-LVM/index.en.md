@@ -14,7 +14,8 @@ categories:
 translationKey: LVM
 cover:
   image: lvm8.jpg
-lastmod: 2023-08-25T09:48:47.023Z
+  relative: true
+lastmod: 2025-02-12T09:35:31.457Z
 ---
 
 ### Introduction

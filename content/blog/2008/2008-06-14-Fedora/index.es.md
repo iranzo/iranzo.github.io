@@ -11,8 +11,9 @@ lang: es
 categories:
   - FOSS
 cover:
+  relative: true
   image: Pantallazo-00.png
-lastmod: 2023-08-25T09:48:47.096Z
+lastmod: 2025-02-12T09:34:18.229Z
 ---
 
 ### Introducción

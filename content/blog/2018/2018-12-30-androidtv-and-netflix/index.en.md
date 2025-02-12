@@ -14,8 +14,9 @@ lang: en
 slug: AndroidTV-and-Netflix-tvq-pm-100
 translationKey: AndroidTV-and-Netflix-tvq-pm-100
 cover:
+  relative: true
   image: netflix-tvq-pm-100.png
-lastmod: 2024-01-31T09:22:53.562Z
+lastmod: 2025-02-12T09:33:58.997Z
 ---
 
 # Android TV versus Android TV-Box
