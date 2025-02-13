@@ -64,6 +64,7 @@ JigDo will download the descriptor, search it for the template file, download it
 {{<enjoy>}}
 
 [^1]: [From Dag's Repo](http://dag.wieers.com/rpm/packages/jigdo/)
+
 [^2]: It can also be used to deliver other kind of files
 
 Attached are the sample `.jigdo` and .template that I created for this document, right now it allows you to get a Centos 5 DVD using individual RPM files.
