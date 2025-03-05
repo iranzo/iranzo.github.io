@@ -7,7 +7,7 @@ repos:
         stages:
           - commit-msg
     repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.0.0
+    rev: v4.4.1
   - hooks:
       - id: check-useless-excludes
     repo: meta
@@ -27,7 +27,7 @@ repos:
   - hooks:
       - id: black
     repo: https://github.com/python/black
-    rev: 24.10.0
+    rev: 25.1.0
   - hooks:
       - id: check-added-large-files
         args: [--maxkb=10000]
@@ -61,9 +61,9 @@ repos:
   - hooks:
       - id: flake8
     repo: https://github.com/pycqa/flake8
-    rev: 7.1.1
+    rev: 7.1.2
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.10.0-1
+    rev: v3.10.0-2
     hooks:
       # Choose one of:
       - id: shfmt # native (requires/installs Go to build)
