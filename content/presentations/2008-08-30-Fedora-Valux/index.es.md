@@ -201,12 +201,10 @@ Emerging Technologies Group
 # Preguntas
 
 - Fedora / Red Hat
-
   - <http://fedoraproject.org/>
   - <http://et.redhat.com>
 
 - VALUX
-
   - <http://www.valux.org>
   - <mailto:Valux-list@valux.org>
 
