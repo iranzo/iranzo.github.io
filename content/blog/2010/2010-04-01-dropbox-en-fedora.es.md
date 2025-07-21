@@ -23,7 +23,6 @@ Para instalar dropbox en Fedora, no es necesario realizar excesivos pasos:
 1. Durante el asistente, podremos escoger la ubicación de la carpeta que empezará a sincronizarse, utilizando los 'emblemas' de Gnome para indicar el estado de sincronización con 'la nube'. Adicionalmente, en los menús contextuales, podremos copiar un enlace público para compartir ese fichero con otros usuarios sin necesidad de compartir una carpeta, o bien compartir una carpeta entera y que se pueda colaborar en ella con un grupo de personas.
 1. Repitiendo los pasos 2 a 4 podremos ir enlazando otros pc's entre los que se replicarán automáticamente los ficheros que compartamos.
 1. SELinux: Si tienes problemas con SELinux, revisa la discusión en <http://forums.dropbox.com/topic.php?id=26808&replies=24> en la que se apunta a que realices los siguientes pasos:
-
    - Pasos a ejecutar:
 
      ```bash
