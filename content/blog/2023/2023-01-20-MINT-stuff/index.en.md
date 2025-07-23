@@ -12,19 +12,10 @@ categories:
 outputs:
   - Reveal
 reveal_hugo.theme: solarized
-lastmod: 2025-07-23T07:46:24.792Z
+lastmod: 2025-07-23T07:47:35.755Z
 ---
 
 ## Management Integration whereabouts
-
----
-
-### The Team
-
-- Manager (TBF) (Scott in the interim)
-  - Eran (TLV)
-  - Pablo (VLC)
-  - [Backfills](https://global-redhat.icims.com/jobs/96128/ecosystem-field-engineer--industrial-and-edge/job?hub=7): contact Scott if interested
 
 ---
 
