@@ -145,7 +145,6 @@ Think about endless possibilities!!!
 ## What are Github actions?
 
 - Github is a repository for code
-
   - Allows third-party integration: Travis, Jenkins, bots, etc
 
 - Github added GitHub Actions
