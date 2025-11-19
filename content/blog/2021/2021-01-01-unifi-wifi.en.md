@@ -61,6 +61,7 @@ In general my experience was really smooth:
   ```sh
   podman create   --name=UniFi-controller   -e PUID=1000   -e PGID=1000   -e MEM_LIMIT=1024M   -p 3478:3478/udp   -p 10001:10001/udp   -p 8080:8080   -p 8443:8443   -p 1900:1900/udp   -p 8843:8843    -p 8880:8880    -p 6789:6789    -p 5514:5514    -v /root/data/UniFi:/config:Z   --restart unless-stopped linuxserver/UniFi-controller
   ```
+
   - Upgrades for it are also easy: first remove the existing container, then pull a new image and create a new container pointing to the same data folders. All from my Fedora NAS
 
 # The final setup

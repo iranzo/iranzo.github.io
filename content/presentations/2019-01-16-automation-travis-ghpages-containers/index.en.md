@@ -28,7 +28,6 @@ lastmod: 2023-08-25T09:54:40.587Z
 ## You got a shinny new project? What now?
 
 - Code usually also requires a webpage
-
   - Documentation, General Information, Developer information, etc
 
 - Web costs money
