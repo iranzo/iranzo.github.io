@@ -58,6 +58,7 @@ In general my experience was really smooth:
 - [AC-LR](https://www.amazon.es/dp/B016K5A06C?tag=redken-21) solved my connectivity problems for all the WiFi devices (2.4 and 5Ghz)
 - Devices roamed from one AP to another transparently (only one was wired to my ISP router and the other was 'linking' via WiFi)
 - Container installation via `linuxserver/unifi-controller` container was great:
+
   ```sh
   podman create   --name=UniFi-controller   -e PUID=1000   -e PGID=1000   -e MEM_LIMIT=1024M   -p 3478:3478/udp   -p 10001:10001/udp   -p 8080:8080   -p 8443:8443   -p 1900:1900/udp   -p 8843:8843    -p 8880:8880    -p 6789:6789    -p 5514:5514    -v /root/data/UniFi:/config:Z   --restart unless-stopped linuxserver/UniFi-controller
   ```
