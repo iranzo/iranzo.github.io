@@ -55,7 +55,6 @@ Once done, we need to setup the requirements on the host we'll use to virtualize
 ## NOTES
 
 - OSP7 did not contain RPM packaged version of images, a repo with the images needs to be defined like:
-
   - `time infrared tripleo-undercloud --version $VERSION --images-task import --images-url $REPO_URL`
 
 {{<note title="Check the parameter values">}}
