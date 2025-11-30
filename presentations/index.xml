@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Presentations on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/presentations/</link>
+    <description>Recent content in Presentations on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:32:34 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/presentations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be lazy, automate: GitHub actions for static blogging</title>
+      <link>https://iranzo.io/presentations/2021-01-14-be-lazy-automate-gha-for-static-blogging/2021-01-14-be-lazy-automate-gha-for-static-blogging/</link>
+      <pubDate>Thu, 14 Jan 2021 22:24:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/2021-01-14-be-lazy-automate-gha-for-static-blogging/2021-01-14-be-lazy-automate-gha-for-static-blogging/</guid>
+      <description>&lt;h2 id=&#34;be-lazy-automate-github-actions-for-static-blogging&#34;&gt;Be lazy, automate: GitHub Actions for static blogging&lt;/h2&gt;
+&lt;p&gt;/me: Pablo Iranzo Gómez ( &lt;a href=&#34;https://iranzo.io&#34;&gt;https://iranzo.io&lt;/a&gt; )&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-a-blog&#34;&gt;What is a blog?&lt;/h2&gt;
+&lt;p&gt;A place to share knowledge, interests, tips, etc.&lt;/p&gt;
+&lt;p&gt;Usually features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;images&lt;/li&gt;
+&lt;li&gt;comments from visitors,&lt;/li&gt;
+&lt;li&gt;related articles,&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-are-the-costs-for-a-blog&#34;&gt;What are the costs for a blog?&lt;/h2&gt;
+&lt;p&gt;Web costs money:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hosting&lt;/li&gt;
+&lt;li&gt;Domain&lt;/li&gt;
+&lt;li&gt;Maintenance&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-static-blogging&#34;&gt;What is static blogging?&lt;/h2&gt;
+&lt;p&gt;Generate a static webpage&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Think of it as rendering templates into HTML&lt;/li&gt;
+&lt;li&gt;Has no requirements on the web server, any simple Webserver is enough:
+&lt;ul&gt;
+&lt;li&gt;Look ma!, no database!&lt;/li&gt;
+&lt;li&gt;Look ma!, no users!&lt;/li&gt;
+&lt;li&gt;Look ma!, no security issues!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-does-it-mean-to-us&#34;&gt;What does it mean to us?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We write an article&lt;/li&gt;
+&lt;li&gt;Command for generating html from templates is used&lt;/li&gt;
+&lt;li&gt;New files uploaded to Webserver&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;some-philosophy&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cJMwBwFj5nQ&#34;&gt;Some Philosophy&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Empty your mind, be shapeless, formless, like water.
+Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle
+You put water in a teacup, it becomes the teapot
+Now water can flow or it can crash.
+Be water my friend&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Magnetic field, aurora, moon phases, eclipse and rockets</title>
+      <link>https://iranzo.io/presentations/campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes/</link>
+      <pubDate>Thu, 13 Feb 2020 22:15:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/campo-magnetico-auroras-fases-lunares-eclipses-y-cohetes/</guid>
+      <description>&lt;h2 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple talk oriented to 4 y-o children&lt;/li&gt;
+&lt;li&gt;Vídeos, etc have been reduced from the originals (credits in bibliography)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;magnetic-field-aurora-moon-phases-and-rockets&#34;&gt;Magnetic Field, Aurora, Moon Phases and Rockets&lt;/h2&gt;
+&lt;p&gt;Pablo Iranzo Gómez&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://iranzo.io&#34;&gt;https://iranzo.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Thursday 13th, February 2020&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Magnetic field
+&lt;ul&gt;
+&lt;li&gt;Auroras&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Moon-Earth-Sun movement
+&lt;ul&gt;
+&lt;li&gt;Moon phases&lt;/li&gt;
+&lt;li&gt;Eclipses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Rockets&lt;/li&gt;
+&lt;li&gt;End&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;magnetic-field&#34;&gt;Magnetic Field&lt;/h2&gt;
+&lt;p&gt;Magnetic field surrounds us, but it&amp;rsquo;s invisible although we can detect and
+measure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project automation with Travis, GitHub Pages and Quay</title>
+      <link>https://iranzo.io/presentations/2019-01-16-automation-travis-ghpages-containers/</link>
+      <pubDate>Wed, 16 Jan 2019 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/2019-01-16-automation-travis-ghpages-containers/</guid>
+      <description>&lt;h2 id=&#34;project-hosting-and-automation&#34;&gt;Project hosting and automation&lt;/h2&gt;
+&lt;p&gt;/me: Pablo Iranzo Gómez ( &lt;a href=&#34;https://iranzo.io&#34;&gt;https://iranzo.io&lt;/a&gt; )&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;you-got-a-shinny-new-project-what-now&#34;&gt;You got a shinny new project? What now?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Code usually also requires a webpage&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Documentation, General Information, Developer information, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Web costs money&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hosting, Domain, Maintenance, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;some-philosophy&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cJMwBwFj5nQ&#34;&gt;Some Philosophy&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Empty your mind, be shapeless, formless, like water.
+Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle
+You put water in a teacup, it becomes the teapot
+Now water can flow or it can crash.
+Be water my friend&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DevConf.cz 2018: Citellus - Detecting common pitfalls of deployments</title>
+      <link>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</link>
+      <pubDate>Sat, 27 Jan 2018 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</guid>
+      <description>&lt;h2 id=&#34;citellus&#34;&gt;&lt;a href=&#34;https://github.com/citellusorg/citellus&#34;&gt;Citellus&lt;/a&gt;:&lt;/h2&gt;
+&lt;h3 id=&#34;detecting-common-pitfalls-of-deployments&#34;&gt;Detecting common pitfalls of deployments&lt;/h3&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;citellus.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/citellusorg/citellus&#34;&gt;https://github.com/citellusorg/citellus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Recording at &lt;a href=&#34;https://www.youtube.com/watch?v=SDzzqrUdn5A&#34;&gt;https://www.youtube.com/watch?v=SDzzqrUdn5A&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-citellus&#34;&gt;What is Citellus?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Citellus is a framework populated by community-contributed scripts that automate detecting problems, including configuration issues, conflicts with package versions, and more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;history-how-did-was-it-started&#34;&gt;History: how did was it started?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The tool, started by Robin Černín after a long weekend shift checking one and over again several sosreports for the same data on different hosts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It started with some tests + shell wrapper, and was added a python wrapper by Pablo Iranzo to bring in more powerful features.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

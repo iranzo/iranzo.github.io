@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>NFS on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/nfs/</link>
+    <description>Recent content in NFS on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 31 Jan 2024 09:22:53 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/nfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lego Dimensions Review</title>
+      <link>https://iranzo.io/blog/2019/08/19/lego-dimensions-review/</link>
+      <pubDate>Mon, 19 Aug 2019 22:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/08/19/lego-dimensions-review/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Lego Dimensions is a game for some platforms (Xbox, Wii U, PlayStation)
+which adds a base with NFC reader and colour LED that allows to interact
+with the video game from the real world.&lt;/p&gt;
+&lt;p&gt;The starter pack &amp;lsquo;starter pack&amp;rsquo; has minifigs for Supercool, Batman and
+Gandalf plus additional blocks to &amp;lsquo;decorate&amp;rsquo; the base by building a portal.&lt;/p&gt;
+&lt;p&gt;The main story is based on how those characters (Gandalf, Batman and
+Supercool) meet and attempt to find and rescue their friends while visiting
+several &lt;code&gt;worlds&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

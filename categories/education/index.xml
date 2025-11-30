@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Education on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/education/</link>
+    <description>Recent content in Education on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:33:02 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/education/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advice for Telegram usage in education</title>
+      <link>https://iranzo.io/blog/2024/01/05/advice-for-telegram-usage-in-education/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2024/01/05/advice-for-telegram-usage-in-education/</guid>
+      <description>&lt;p&gt;Telegram is being used frequently at schools for allowing an easy communication flow using the &amp;lsquo;channels&amp;rsquo;, where teachers can send information to families without sharing their personal contact details so that they can&amp;rsquo;t be contacted outside of the official tools.&lt;/p&gt;
+&lt;p&gt;This comfort, came, probably because of not knowing the problems/dangers that were not taken into consideration.&lt;/p&gt;
+&lt;p&gt;For making it easier for parents to join the channel of the class, many times, public channels are created&amp;hellip; this allows to use a shorter &amp;lsquo;alias&amp;rsquo; but that everyone else can search and find&amp;hellip; and here is the problem&amp;hellip; &amp;rsquo;everyone&amp;rsquo; it&amp;rsquo;s not just parents or other teachers&amp;hellip; if you do the test by searching for &lt;code&gt;clase de&lt;/code&gt; or &lt;code&gt;classe dels&lt;/code&gt; you&amp;rsquo;ll find lot of groups:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Red Hat Co.Lab for the day of Science for Development &#34;Conversation Machine&#34;</title>
+      <link>https://iranzo.io/blog/2023/11/10/red-hat-co.lab-for-the-day-of-science-for-development-conversation-machine/</link>
+      <pubDate>Fri, 10 Nov 2023 13:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2023/11/10/red-hat-co.lab-for-the-day-of-science-for-development-conversation-machine/</guid>
+      <description>&lt;p&gt;Red Hat has a program named Co.Lab which &lt;a href=&#34;https://www.sparkfun.com/search/results?term=co.lab&#34;&gt;provides kits&lt;/a&gt; under request that employees can use to guide a STEM session on schools to perform different range of activities.&lt;/p&gt;
+&lt;p&gt;We performed 2 sessions this year, one for the &amp;ldquo;We Are Red Hat Week&amp;rdquo; (&lt;code&gt;WARHW&lt;/code&gt;), which happens every year around Halloween, when the first official release was launched back in 31st October 1994 (&lt;a href=&#34;https://www.redhat.com/en/blog/spooktacular-tale-red-hats-halloween-release&#34;&gt;&amp;lsquo;Halloween Release&amp;rsquo;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;For the one at the office in Valencia, the range of ages was a bit wider so we did different kits and the parents were in charge of directing the lab for the kids.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

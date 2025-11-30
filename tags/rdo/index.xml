@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>RDO on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/rdo/</link>
+    <description>Recent content in RDO on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/rdo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contributing to OSP upstream a.k.a. Peer Review</title>
+      <link>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</link>
+      <pubDate>Tue, 16 Oct 2018 07:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the article &amp;ldquo;&lt;a href=&#34;../../blog/2016/07/21/contributing-to-openstack/&#34;&gt;Contributing to OpenStack&lt;/a&gt;&amp;rdquo; we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find &lt;code&gt;low hanging fruits&lt;/code&gt; to start contributing).&lt;/p&gt;
+&lt;p&gt;Here, we&amp;rsquo;ll cover what happens behind the scene to get change published.&lt;/p&gt;
+&lt;h2 id=&#34;upstream-workflow&#34;&gt;Upstream workflow&lt;/h2&gt;
+&lt;h3 id=&#34;peer-review&#34;&gt;Peer review&lt;/h3&gt;
+&lt;p&gt;Upstream contributions to OSP and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,2390 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/</link>
+    <description>Recent content in Tags on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Jul 2025 07:47:35 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FOSS</title>
+      <link>https://iranzo.io/tags/foss/</link>
+      <pubDate>Tue, 16 Jan 2024 16:27:50 +0000</pubDate>
+      <guid>https://iranzo.io/tags/foss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ruby</title>
+      <link>https://iranzo.io/tags/ruby/</link>
+      <pubDate>Tue, 16 Jan 2024 16:27:50 +0000</pubDate>
+      <guid>https://iranzo.io/tags/ruby/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Advice</title>
+      <link>https://iranzo.io/tags/advice/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/advice/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Education</title>
+      <link>https://iranzo.io/tags/education/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privacy</title>
+      <link>https://iranzo.io/tags/privacy/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>School</title>
+      <link>https://iranzo.io/tags/school/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/school/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Telegram</title>
+      <link>https://iranzo.io/tags/telegram/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/telegram/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Whatsapp</title>
+      <link>https://iranzo.io/tags/whatsapp/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/whatsapp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Co.Lab</title>
+      <link>https://iranzo.io/tags/co.lab/</link>
+      <pubDate>Fri, 10 Nov 2023 13:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/co.lab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Electronics</title>
+      <link>https://iranzo.io/tags/electronics/</link>
+      <pubDate>Fri, 10 Nov 2023 13:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/electronics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lab</title>
+      <link>https://iranzo.io/tags/lab/</link>
+      <pubDate>Fri, 10 Nov 2023 13:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/lab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Red Hat</title>
+      <link>https://iranzo.io/tags/red-hat/</link>
+      <pubDate>Fri, 10 Nov 2023 13:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/red-hat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Red Hat Cares</title>
+      <link>https://iranzo.io/tags/red-hat-cares/</link>
+      <pubDate>Fri, 10 Nov 2023 13:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/red-hat-cares/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sparkfun</title>
+      <link>https://iranzo.io/tags/sparkfun/</link>
+      <pubDate>Fri, 10 Nov 2023 13:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/sparkfun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CoreOS</title>
+      <link>https://iranzo.io/tags/coreos/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/coreos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Custom Images</title>
+      <link>https://iranzo.io/tags/custom-images/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/custom-images/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenShift</title>
+      <link>https://iranzo.io/tags/openshift/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/openshift/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chrome</title>
+      <link>https://iranzo.io/tags/chrome/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/chrome/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dlink</title>
+      <link>https://iranzo.io/tags/dlink/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/dlink/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://iranzo.io/tags/linux/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AlmaLinux</title>
+      <link>https://iranzo.io/tags/almalinux/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      <guid>https://iranzo.io/tags/almalinux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CentOS</title>
+      <link>https://iranzo.io/tags/centos/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      <guid>https://iranzo.io/tags/centos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oracle Linux</title>
+      <link>https://iranzo.io/tags/oracle-linux/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      <guid>https://iranzo.io/tags/oracle-linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Red Hat Enterprise Linux</title>
+      <link>https://iranzo.io/tags/red-hat-enterprise-linux/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      <guid>https://iranzo.io/tags/red-hat-enterprise-linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RHEL</title>
+      <link>https://iranzo.io/tags/rhel/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      <guid>https://iranzo.io/tags/rhel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rocky Linux</title>
+      <link>https://iranzo.io/tags/rocky-linux/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      <guid>https://iranzo.io/tags/rocky-linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debian</title>
+      <link>https://iranzo.io/tags/debian/</link>
+      <pubDate>Sat, 22 Jul 2023 13:22:08 +0000</pubDate>
+      <guid>https://iranzo.io/tags/debian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kernel Module Management</title>
+      <link>https://iranzo.io/tags/kernel-module-management/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/kernel-module-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>KMM</title>
+      <link>https://iranzo.io/tags/kmm/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/kmm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scale</title>
+      <link>https://iranzo.io/tags/scale/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/scale/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Calendar</title>
+      <link>https://iranzo.io/tags/calendar/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/calendar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redken</title>
+      <link>https://iranzo.io/tags/redken/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/redken/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ansible</title>
+      <link>https://iranzo.io/tags/ansible/</link>
+      <pubDate>Thu, 02 Mar 2023 16:40:32 +0000</pubDate>
+      <guid>https://iranzo.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>https://iranzo.io/tags/ssh/</link>
+      <pubDate>Thu, 02 Mar 2023 16:40:32 +0000</pubDate>
+      <guid>https://iranzo.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tips</title>
+      <link>https://iranzo.io/tags/tips/</link>
+      <pubDate>Thu, 02 Mar 2023 16:40:32 +0000</pubDate>
+      <guid>https://iranzo.io/tags/tips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ChatGPT</title>
+      <link>https://iranzo.io/tags/chatgpt/</link>
+      <pubDate>Thu, 02 Mar 2023 17:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/chatgpt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Risu</title>
+      <link>https://iranzo.io/tags/risu/</link>
+      <pubDate>Thu, 02 Mar 2023 17:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/risu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://iranzo.io/tags/troubleshooting/</link>
+      <pubDate>Thu, 02 Mar 2023 17:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/troubleshooting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Containers</title>
+      <link>https://iranzo.io/tags/containers/</link>
+      <pubDate>Fri, 27 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/containers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fedora</title>
+      <link>https://iranzo.io/tags/fedora/</link>
+      <pubDate>Fri, 27 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/fedora/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Podman</title>
+      <link>https://iranzo.io/tags/podman/</link>
+      <pubDate>Fri, 27 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/podman/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rootless</title>
+      <link>https://iranzo.io/tags/rootless/</link>
+      <pubDate>Fri, 27 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/rootless/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ACM</title>
+      <link>https://iranzo.io/tags/acm/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      <guid>https://iranzo.io/tags/acm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Advanced Cluster Management</title>
+      <link>https://iranzo.io/tags/advanced-cluster-management/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      <guid>https://iranzo.io/tags/advanced-cluster-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kcli</title>
+      <link>https://iranzo.io/tags/kcli/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      <guid>https://iranzo.io/tags/kcli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://iranzo.io/tags/kubernetes/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      <guid>https://iranzo.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open Cluster Management</title>
+      <link>https://iranzo.io/tags/open-cluster-management/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      <guid>https://iranzo.io/tags/open-cluster-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Management Integration</title>
+      <link>https://iranzo.io/tags/management-integration/</link>
+      <pubDate>Thu, 19 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/management-integration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Solutions Engineering</title>
+      <link>https://iranzo.io/tags/solutions-engineering/</link>
+      <pubDate>Thu, 19 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/solutions-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RHEL9</title>
+      <link>https://iranzo.io/tags/rhel9/</link>
+      <pubDate>Thu, 12 Jan 2023 14:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/tags/rhel9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualization</title>
+      <link>https://iranzo.io/tags/virtualization/</link>
+      <pubDate>Thu, 12 Jan 2023 14:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://iranzo.io/tags/python/</link>
+      <pubDate>Fri, 25 Nov 2022 07:00:46 +0000</pubDate>
+      <guid>https://iranzo.io/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>https://iranzo.io/tags/tech/</link>
+      <pubDate>Fri, 25 Nov 2022 07:00:46 +0000</pubDate>
+      <guid>https://iranzo.io/tags/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Citellus</title>
+      <link>https://iranzo.io/tags/citellus/</link>
+      <pubDate>Thu, 03 Nov 2022 14:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/tags/citellus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Book</title>
+      <link>https://iranzo.io/tags/book/</link>
+      <pubDate>Wed, 12 Oct 2022 12:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/book/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Packt Publishing</title>
+      <link>https://iranzo.io/tags/packt-publishing/</link>
+      <pubDate>Wed, 12 Oct 2022 12:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/packt-publishing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RHCSA</title>
+      <link>https://iranzo.io/tags/rhcsa/</link>
+      <pubDate>Wed, 12 Oct 2022 12:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/rhcsa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System Administration</title>
+      <link>https://iranzo.io/tags/system-administration/</link>
+      <pubDate>Wed, 12 Oct 2022 12:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/system-administration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Container</title>
+      <link>https://iranzo.io/tags/container/</link>
+      <pubDate>Fri, 19 Aug 2022 10:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/container/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quay</title>
+      <link>https://iranzo.io/tags/quay/</link>
+      <pubDate>Fri, 19 Aug 2022 10:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/quay/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Registry</title>
+      <link>https://iranzo.io/tags/registry/</link>
+      <pubDate>Fri, 19 Aug 2022 10:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/registry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent</title>
+      <link>https://iranzo.io/tags/agent/</link>
+      <pubDate>Wed, 10 Aug 2022 14:01:32 +0000</pubDate>
+      <guid>https://iranzo.io/tags/agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RHCE</title>
+      <link>https://iranzo.io/tags/rhce/</link>
+      <pubDate>Wed, 13 Jul 2022 21:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/rhce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>60336</title>
+      <link>https://iranzo.io/tags/60336/</link>
+      <pubDate>Sat, 18 Jun 2022 18:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/60336/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bus</title>
+      <link>https://iranzo.io/tags/bus/</link>
+      <pubDate>Sat, 18 Jun 2022 18:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/bus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LEGO</title>
+      <link>https://iranzo.io/tags/lego/</link>
+      <pubDate>Sat, 18 Jun 2022 18:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/lego/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shop</title>
+      <link>https://iranzo.io/tags/shop/</link>
+      <pubDate>Sat, 18 Jun 2022 18:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/shop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Train</title>
+      <link>https://iranzo.io/tags/train/</link>
+      <pubDate>Sat, 18 Jun 2022 18:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/train/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>10279</title>
+      <link>https://iranzo.io/tags/10279/</link>
+      <pubDate>Thu, 26 May 2022 22:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/10279/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Camper</title>
+      <link>https://iranzo.io/tags/camper/</link>
+      <pubDate>Thu, 26 May 2022 22:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/camper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Caravan</title>
+      <link>https://iranzo.io/tags/caravan/</link>
+      <pubDate>Thu, 26 May 2022 22:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/caravan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>T2</title>
+      <link>https://iranzo.io/tags/t2/</link>
+      <pubDate>Thu, 26 May 2022 22:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/t2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Volkswagen</title>
+      <link>https://iranzo.io/tags/volkswagen/</link>
+      <pubDate>Thu, 26 May 2022 22:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/volkswagen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nintendo</title>
+      <link>https://iranzo.io/tags/nintendo/</link>
+      <pubDate>Sun, 10 Apr 2022 23:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/nintendo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PlayStation</title>
+      <link>https://iranzo.io/tags/playstation/</link>
+      <pubDate>Sun, 10 Apr 2022 23:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/playstation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Switch</title>
+      <link>https://iranzo.io/tags/switch/</link>
+      <pubDate>Sun, 10 Apr 2022 23:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/switch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xbox</title>
+      <link>https://iranzo.io/tags/xbox/</link>
+      <pubDate>Sun, 10 Apr 2022 23:15:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/xbox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Custom Keyboard Mapping</title>
+      <link>https://iranzo.io/tags/custom-keyboard-mapping/</link>
+      <pubDate>Fri, 01 Apr 2022 07:31:42 +0000</pubDate>
+      <guid>https://iranzo.io/tags/custom-keyboard-mapping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logitech</title>
+      <link>https://iranzo.io/tags/logitech/</link>
+      <pubDate>Fri, 01 Apr 2022 07:31:42 +0000</pubDate>
+      <guid>https://iranzo.io/tags/logitech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R400</title>
+      <link>https://iranzo.io/tags/r400/</link>
+      <pubDate>Fri, 01 Apr 2022 07:31:42 +0000</pubDate>
+      <guid>https://iranzo.io/tags/r400/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>https://iranzo.io/tags/automation/</link>
+      <pubDate>Thu, 17 Mar 2022 20:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VPN</title>
+      <link>https://iranzo.io/tags/vpn/</link>
+      <pubDate>Thu, 17 Mar 2022 20:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/tags/vpn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WireGuard</title>
+      <link>https://iranzo.io/tags/wireguard/</link>
+      <pubDate>Thu, 17 Mar 2022 20:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/tags/wireguard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>5G</title>
+      <link>https://iranzo.io/tags/5g/</link>
+      <pubDate>Sat, 12 Mar 2022 09:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/5g/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Edge</title>
+      <link>https://iranzo.io/tags/edge/</link>
+      <pubDate>Sat, 12 Mar 2022 09:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/edge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Telco5G</title>
+      <link>https://iranzo.io/tags/telco5g/</link>
+      <pubDate>Sat, 12 Mar 2022 09:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/telco5g/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Telecommunications</title>
+      <link>https://iranzo.io/tags/telecommunications/</link>
+      <pubDate>Sat, 12 Mar 2022 09:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/telecommunications/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ZTP</title>
+      <link>https://iranzo.io/tags/ztp/</link>
+      <pubDate>Sat, 12 Mar 2022 09:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ztp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Discord</title>
+      <link>https://iranzo.io/tags/discord/</link>
+      <pubDate>Thu, 20 Jan 2022 17:20:14 +0100</pubDate>
+      <guid>https://iranzo.io/tags/discord/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://iranzo.io/tags/tutorial/</link>
+      <pubDate>Thu, 20 Jan 2022 17:20:14 +0100</pubDate>
+      <guid>https://iranzo.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LDAP</title>
+      <link>https://iranzo.io/tags/ldap/</link>
+      <pubDate>Tue, 19 Oct 2021 22:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ldap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cosmos</title>
+      <link>https://iranzo.io/tags/cosmos/</link>
+      <pubDate>Tue, 28 Sep 2021 17:20:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/cosmos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crypto</title>
+      <link>https://iranzo.io/tags/crypto/</link>
+      <pubDate>Tue, 28 Sep 2021 17:20:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/crypto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NYM</title>
+      <link>https://iranzo.io/tags/nym/</link>
+      <pubDate>Tue, 28 Sep 2021 17:20:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/nym/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writing a Book</title>
+      <link>https://iranzo.io/tags/writing-a-book/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/writing-a-book/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>42056</title>
+      <link>https://iranzo.io/tags/42056/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/42056/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>42083</title>
+      <link>https://iranzo.io/tags/42083/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/42083/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>42115</title>
+      <link>https://iranzo.io/tags/42115/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/42115/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>42143</title>
+      <link>https://iranzo.io/tags/42143/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/42143/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>911</title>
+      <link>https://iranzo.io/tags/911/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/911/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bugatti</title>
+      <link>https://iranzo.io/tags/bugatti/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/bugatti/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chiron</title>
+      <link>https://iranzo.io/tags/chiron/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/chiron/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Daytona</title>
+      <link>https://iranzo.io/tags/daytona/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/daytona/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exclusive</title>
+      <link>https://iranzo.io/tags/exclusive/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/exclusive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ferrari</title>
+      <link>https://iranzo.io/tags/ferrari/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ferrari/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FKP47</title>
+      <link>https://iranzo.io/tags/fkp47/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/fkp47/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lamborghini</title>
+      <link>https://iranzo.io/tags/lamborghini/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/lamborghini/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Porsche</title>
+      <link>https://iranzo.io/tags/porsche/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/porsche/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sian</title>
+      <link>https://iranzo.io/tags/sian/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/sian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SP3</title>
+      <link>https://iranzo.io/tags/sp3/</link>
+      <pubDate>Sun, 25 Jul 2021 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/sp3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Email Filtering</title>
+      <link>https://iranzo.io/tags/email-filtering/</link>
+      <pubDate>Wed, 07 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/email-filtering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gmail</title>
+      <link>https://iranzo.io/tags/gmail/</link>
+      <pubDate>Wed, 07 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/gmail/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Imapfilter</title>
+      <link>https://iranzo.io/tags/imapfilter/</link>
+      <pubDate>Wed, 07 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/imapfilter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Efibootmgr</title>
+      <link>https://iranzo.io/tags/efibootmgr/</link>
+      <pubDate>Thu, 01 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/efibootmgr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UEFI</title>
+      <link>https://iranzo.io/tags/uefi/</link>
+      <pubDate>Thu, 01 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/uefi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>https://iranzo.io/tags/machine-learning/</link>
+      <pubDate>Thu, 24 Jun 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ML</title>
+      <link>https://iranzo.io/tags/ml/</link>
+      <pubDate>Thu, 24 Jun 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://iranzo.io/tags/programming/</link>
+      <pubDate>Thu, 24 Jun 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scikit</title>
+      <link>https://iranzo.io/tags/scikit/</link>
+      <pubDate>Thu, 24 Jun 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/scikit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backup</title>
+      <link>https://iranzo.io/tags/backup/</link>
+      <pubDate>Sat, 12 Jun 2021 21:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/backup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Syncthing</title>
+      <link>https://iranzo.io/tags/syncthing/</link>
+      <pubDate>Sat, 12 Jun 2021 21:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/syncthing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Validator</title>
+      <link>https://iranzo.io/tags/validator/</link>
+      <pubDate>Sun, 09 May 2021 12:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/validator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mixnode</title>
+      <link>https://iranzo.io/tags/mixnode/</link>
+      <pubDate>Sun, 09 May 2021 12:30:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/mixnode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github</title>
+      <link>https://iranzo.io/tags/github/</link>
+      <pubDate>Thu, 14 Jan 2021 22:24:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github Actions</title>
+      <link>https://iranzo.io/tags/github-actions/</link>
+      <pubDate>Thu, 14 Jan 2021 22:24:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pelican</title>
+      <link>https://iranzo.io/tags/pelican/</link>
+      <pubDate>Thu, 14 Jan 2021 22:24:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/pelican/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reveal</title>
+      <link>https://iranzo.io/tags/reveal/</link>
+      <pubDate>Thu, 14 Jan 2021 22:24:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/reveal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AC-LR</title>
+      <link>https://iranzo.io/tags/ac-lr/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ac-lr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ASUS</title>
+      <link>https://iranzo.io/tags/asus/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/asus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AX92U</title>
+      <link>https://iranzo.io/tags/ax92u/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ax92u/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Controller</title>
+      <link>https://iranzo.io/tags/controller/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/controller/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NanoHD</title>
+      <link>https://iranzo.io/tags/nanohd/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/nanohd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubiquiti</title>
+      <link>https://iranzo.io/tags/ubiquiti/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ubiquiti/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UniFi</title>
+      <link>https://iranzo.io/tags/unifi/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/unifi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>US-8</title>
+      <link>https://iranzo.io/tags/us-8/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/us-8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>USG</title>
+      <link>https://iranzo.io/tags/usg/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/usg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chrony</title>
+      <link>https://iranzo.io/tags/chrony/</link>
+      <pubDate>Mon, 07 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/chrony/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dit</title>
+      <link>https://iranzo.io/tags/dit/</link>
+      <pubDate>Mon, 07 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/dit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NTP</title>
+      <link>https://iranzo.io/tags/ntp/</link>
+      <pubDate>Mon, 07 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ntp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AsciiDoctor</title>
+      <link>https://iranzo.io/tags/asciidoctor/</link>
+      <pubDate>Tue, 01 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/asciidoctor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Netlify</title>
+      <link>https://iranzo.io/tags/netlify/</link>
+      <pubDate>Tue, 01 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/netlify/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GT3 RS</title>
+      <link>https://iranzo.io/tags/gt3-rs/</link>
+      <pubDate>Mon, 12 Oct 2020 20:32:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/gt3-rs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LED Kit</title>
+      <link>https://iranzo.io/tags/led-kit/</link>
+      <pubDate>Mon, 12 Oct 2020 20:32:34 +0200</pubDate>
+      <guid>https://iranzo.io/tags/led-kit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>10220</title>
+      <link>https://iranzo.io/tags/10220/</link>
+      <pubDate>Fri, 02 Oct 2020 19:45:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/10220/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Camper Van</title>
+      <link>https://iranzo.io/tags/camper-van/</link>
+      <pubDate>Fri, 02 Oct 2020 19:45:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/camper-van/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lightailing</title>
+      <link>https://iranzo.io/tags/lightailing/</link>
+      <pubDate>Fri, 02 Oct 2020 19:45:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/lightailing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>T1</title>
+      <link>https://iranzo.io/tags/t1/</link>
+      <pubDate>Fri, 02 Oct 2020 19:45:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/t1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bugatti Chiron</title>
+      <link>https://iranzo.io/tags/bugatti-chiron/</link>
+      <pubDate>Fri, 25 Sep 2020 19:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/bugatti-chiron/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MOC</title>
+      <link>https://iranzo.io/tags/moc/</link>
+      <pubDate>Thu, 17 Sep 2020 19:00:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/moc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trailer</title>
+      <link>https://iranzo.io/tags/trailer/</link>
+      <pubDate>Thu, 17 Sep 2020 19:00:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/trailer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog-O-Matic</title>
+      <link>https://iranzo.io/tags/blog-o-matic/</link>
+      <pubDate>Mon, 10 Aug 2020 07:44:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/blog-o-matic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Publishing</title>
+      <link>https://iranzo.io/tags/publishing/</link>
+      <pubDate>Mon, 10 Aug 2020 07:44:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/publishing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://iranzo.io/tags/go/</link>
+      <pubDate>Sun, 14 Jun 2020 11:44:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Golang</title>
+      <link>https://iranzo.io/tags/golang/</link>
+      <pubDate>Sun, 14 Jun 2020 11:44:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dell</title>
+      <link>https://iranzo.io/tags/dell/</link>
+      <pubDate>Tue, 12 May 2020 13:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/dell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Firmware</title>
+      <link>https://iranzo.io/tags/firmware/</link>
+      <pubDate>Tue, 12 May 2020 13:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/firmware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Racadm</title>
+      <link>https://iranzo.io/tags/racadm/</link>
+      <pubDate>Tue, 12 May 2020 13:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/racadm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>76899</title>
+      <link>https://iranzo.io/tags/76899/</link>
+      <pubDate>Thu, 30 Apr 2020 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/76899/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Review</title>
+      <link>https://iranzo.io/tags/review/</link>
+      <pubDate>Thu, 30 Apr 2020 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Speed Champions</title>
+      <link>https://iranzo.io/tags/speed-champions/</link>
+      <pubDate>Thu, 30 Apr 2020 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/speed-champions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>76898</title>
+      <link>https://iranzo.io/tags/76898/</link>
+      <pubDate>Tue, 28 Apr 2020 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/76898/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jaguar</title>
+      <link>https://iranzo.io/tags/jaguar/</link>
+      <pubDate>Tue, 28 Apr 2020 22:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/tags/jaguar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>10266</title>
+      <link>https://iranzo.io/tags/10266/</link>
+      <pubDate>Wed, 08 Apr 2020 20:48:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/10266/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apollo 11</title>
+      <link>https://iranzo.io/tags/apollo-11/</link>
+      <pubDate>Wed, 08 Apr 2020 20:48:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/apollo-11/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NASA</title>
+      <link>https://iranzo.io/tags/nasa/</link>
+      <pubDate>Wed, 08 Apr 2020 20:48:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/nasa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>English</title>
+      <link>https://iranzo.io/tags/english/</link>
+      <pubDate>Wed, 25 Mar 2020 20:00:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/english/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Language</title>
+      <link>https://iranzo.io/tags/language/</link>
+      <pubDate>Wed, 25 Mar 2020 20:00:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/language/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>https://iranzo.io/tags/blog/</link>
+      <pubDate>Tue, 24 Mar 2020 09:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Game</title>
+      <link>https://iranzo.io/tags/game/</link>
+      <pubDate>Tue, 24 Mar 2020 09:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/game/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vocabulary</title>
+      <link>https://iranzo.io/tags/vocabulary/</link>
+      <pubDate>Tue, 24 Mar 2020 09:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/vocabulary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>10271</title>
+      <link>https://iranzo.io/tags/10271/</link>
+      <pubDate>Sun, 22 Mar 2020 22:27:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/10271/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fiat</title>
+      <link>https://iranzo.io/tags/fiat/</link>
+      <pubDate>Sun, 22 Mar 2020 22:27:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/fiat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fiat 500</title>
+      <link>https://iranzo.io/tags/fiat-500/</link>
+      <pubDate>Sun, 22 Mar 2020 22:27:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/fiat-500/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubevirt</title>
+      <link>https://iranzo.io/tags/kubevirt/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/kubevirt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Live Migration</title>
+      <link>https://iranzo.io/tags/live-migration/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/live-migration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Node Drain</title>
+      <link>https://iranzo.io/tags/node-drain/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/node-drain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtual Machine</title>
+      <link>https://iranzo.io/tags/virtual-machine/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/virtual-machine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VM</title>
+      <link>https://iranzo.io/tags/vm/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/vm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://iranzo.io/tags/git/</link>
+      <pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Node</title>
+      <link>https://iranzo.io/tags/node/</link>
+      <pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/node/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pre-Commit</title>
+      <link>https://iranzo.io/tags/pre-commit/</link>
+      <pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/pre-commit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yaspeller</title>
+      <link>https://iranzo.io/tags/yaspeller/</link>
+      <pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/yaspeller/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>70620</title>
+      <link>https://iranzo.io/tags/70620/</link>
+      <pubDate>Mon, 24 Feb 2020 21:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/70620/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ninjago</title>
+      <link>https://iranzo.io/tags/ninjago/</link>
+      <pubDate>Mon, 24 Feb 2020 21:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/ninjago/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>21310</title>
+      <link>https://iranzo.io/tags/21310/</link>
+      <pubDate>Sun, 23 Feb 2020 23:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/21310/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fisherman</title>
+      <link>https://iranzo.io/tags/fisherman/</link>
+      <pubDate>Sun, 23 Feb 2020 23:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/fisherman/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DC Comics</title>
+      <link>https://iranzo.io/tags/dc-comics/</link>
+      <pubDate>Sat, 22 Feb 2020 20:56:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/dc-comics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flash</title>
+      <link>https://iranzo.io/tags/flash/</link>
+      <pubDate>Sat, 22 Feb 2020 20:56:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/flash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Joker</title>
+      <link>https://iranzo.io/tags/joker/</link>
+      <pubDate>Sat, 22 Feb 2020 20:56:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/joker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mini Figures</title>
+      <link>https://iranzo.io/tags/mini-figures/</link>
+      <pubDate>Sat, 22 Feb 2020 20:56:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/mini-figures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wonder Woman</title>
+      <link>https://iranzo.io/tags/wonder-woman/</link>
+      <pubDate>Sat, 22 Feb 2020 20:56:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/wonder-woman/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Archer</title>
+      <link>https://iranzo.io/tags/archer/</link>
+      <pubDate>Sat, 22 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/archer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Doctor</title>
+      <link>https://iranzo.io/tags/doctor/</link>
+      <pubDate>Sat, 22 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/doctor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fireman</title>
+      <link>https://iranzo.io/tags/fireman/</link>
+      <pubDate>Sat, 22 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/fireman/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ghost</title>
+      <link>https://iranzo.io/tags/ghost/</link>
+      <pubDate>Sat, 22 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/ghost/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minifigure Vintage</title>
+      <link>https://iranzo.io/tags/minifigure-vintage/</link>
+      <pubDate>Sat, 22 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/minifigure-vintage/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pirates</title>
+      <link>https://iranzo.io/tags/pirates/</link>
+      <pubDate>Sat, 22 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/pirates/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Space</title>
+      <link>https://iranzo.io/tags/space/</link>
+      <pubDate>Sat, 22 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/space/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tribes</title>
+      <link>https://iranzo.io/tags/tribes/</link>
+      <pubDate>Sat, 22 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/tribes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Porsche 911</title>
+      <link>https://iranzo.io/tags/porsche-911/</link>
+      <pubDate>Fri, 21 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/porsche-911/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>70821</title>
+      <link>https://iranzo.io/tags/70821/</link>
+      <pubDate>Thu, 20 Feb 2020 19:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/70821/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Benny</title>
+      <link>https://iranzo.io/tags/benny/</link>
+      <pubDate>Thu, 20 Feb 2020 19:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/benny/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lego Movie</title>
+      <link>https://iranzo.io/tags/lego-movie/</link>
+      <pubDate>Thu, 20 Feb 2020 19:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/lego-movie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spaceship</title>
+      <link>https://iranzo.io/tags/spaceship/</link>
+      <pubDate>Thu, 20 Feb 2020 19:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/spaceship/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gallery</title>
+      <link>https://iranzo.io/tags/gallery/</link>
+      <pubDate>Wed, 19 Feb 2020 21:55:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/gallery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Imgur</title>
+      <link>https://iranzo.io/tags/imgur/</link>
+      <pubDate>Wed, 19 Feb 2020 21:55:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/imgur/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pelican-Elegant</title>
+      <link>https://iranzo.io/tags/pelican-elegant/</link>
+      <pubDate>Wed, 19 Feb 2020 21:55:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/pelican-elegant/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photography</title>
+      <link>https://iranzo.io/tags/photography/</link>
+      <pubDate>Wed, 19 Feb 2020 21:55:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/photography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PhotoSwipe</title>
+      <link>https://iranzo.io/tags/photoswipe/</link>
+      <pubDate>Wed, 19 Feb 2020 21:55:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/photoswipe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Astronomy</title>
+      <link>https://iranzo.io/tags/astronomy/</link>
+      <pubDate>Thu, 13 Feb 2020 22:15:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/astronomy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aurora</title>
+      <link>https://iranzo.io/tags/aurora/</link>
+      <pubDate>Thu, 13 Feb 2020 22:15:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/aurora/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Eclipse</title>
+      <link>https://iranzo.io/tags/eclipse/</link>
+      <pubDate>Thu, 13 Feb 2020 22:15:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/eclipse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Magnetic Field</title>
+      <link>https://iranzo.io/tags/magnetic-field/</link>
+      <pubDate>Thu, 13 Feb 2020 22:15:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/magnetic-field/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Moon Phase</title>
+      <link>https://iranzo.io/tags/moon-phase/</link>
+      <pubDate>Thu, 13 Feb 2020 22:15:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/moon-phase/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rocket</title>
+      <link>https://iranzo.io/tags/rocket/</link>
+      <pubDate>Thu, 13 Feb 2020 22:15:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/rocket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Galleria.io</title>
+      <link>https://iranzo.io/tags/galleria.io/</link>
+      <pubDate>Wed, 12 Feb 2020 07:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/galleria.io/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Instagram</title>
+      <link>https://iranzo.io/tags/instagram/</link>
+      <pubDate>Wed, 12 Feb 2020 07:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/instagram/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open Source</title>
+      <link>https://iranzo.io/tags/open-source/</link>
+      <pubDate>Wed, 12 Feb 2020 07:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenSource</title>
+      <link>https://iranzo.io/tags/opensource/</link>
+      <pubDate>Wed, 12 Feb 2020 07:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/opensource/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>76895</title>
+      <link>https://iranzo.io/tags/76895/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/76895/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>76896</title>
+      <link>https://iranzo.io/tags/76896/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/76896/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>76897</title>
+      <link>https://iranzo.io/tags/76897/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/76897/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Audi</title>
+      <link>https://iranzo.io/tags/audi/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/audi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Car</title>
+      <link>https://iranzo.io/tags/car/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/car/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nismo</title>
+      <link>https://iranzo.io/tags/nismo/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/nismo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nissan</title>
+      <link>https://iranzo.io/tags/nissan/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/nissan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quattro</title>
+      <link>https://iranzo.io/tags/quattro/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/quattro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tributo</title>
+      <link>https://iranzo.io/tags/tributo/</link>
+      <pubDate>Sat, 08 Feb 2020 16:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/tributo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Calendar</title>
+      <link>https://iranzo.io/tags/google-calendar/</link>
+      <pubDate>Thu, 28 Nov 2019 17:11:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/google-calendar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Sheets</title>
+      <link>https://iranzo.io/tags/google-sheets/</link>
+      <pubDate>Thu, 28 Nov 2019 17:11:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/google-sheets/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ics</title>
+      <link>https://iranzo.io/tags/ics/</link>
+      <pubDate>Thu, 28 Nov 2019 17:11:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/ics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spreadsheet</title>
+      <link>https://iranzo.io/tags/spreadsheet/</link>
+      <pubDate>Thu, 28 Nov 2019 17:11:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/spreadsheet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clone</title>
+      <link>https://iranzo.io/tags/clone/</link>
+      <pubDate>Sun, 29 Sep 2019 16:24:36 +0200</pubDate>
+      <guid>https://iranzo.io/tags/clone/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dimensions</title>
+      <link>https://iranzo.io/tags/dimensions/</link>
+      <pubDate>Sun, 29 Sep 2019 16:24:36 +0200</pubDate>
+      <guid>https://iranzo.io/tags/dimensions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NFC</title>
+      <link>https://iranzo.io/tags/nfc/</link>
+      <pubDate>Sun, 29 Sep 2019 16:24:36 +0200</pubDate>
+      <guid>https://iranzo.io/tags/nfc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ntag213</title>
+      <link>https://iranzo.io/tags/ntag213/</link>
+      <pubDate>Sun, 29 Sep 2019 16:24:36 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ntag213/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ps3</title>
+      <link>https://iranzo.io/tags/ps3/</link>
+      <pubDate>Sun, 29 Sep 2019 16:24:36 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ps3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ps4</title>
+      <link>https://iranzo.io/tags/ps4/</link>
+      <pubDate>Sun, 29 Sep 2019 16:24:36 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ps4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WII</title>
+      <link>https://iranzo.io/tags/wii/</link>
+      <pubDate>Sun, 29 Sep 2019 16:24:36 +0200</pubDate>
+      <guid>https://iranzo.io/tags/wii/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webcal</title>
+      <link>https://iranzo.io/tags/webcal/</link>
+      <pubDate>Tue, 17 Sep 2019 07:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/tags/webcal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Metal³</title>
+      <link>https://iranzo.io/tags/metal/</link>
+      <pubDate>Wed, 11 Sep 2019 11:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/tags/metal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Operator</title>
+      <link>https://iranzo.io/tags/operator/</link>
+      <pubDate>Wed, 11 Sep 2019 11:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/tags/operator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NFS</title>
+      <link>https://iranzo.io/tags/nfs/</link>
+      <pubDate>Mon, 19 Aug 2019 22:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/tags/nfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Katacoda</title>
+      <link>https://iranzo.io/tags/katacoda/</link>
+      <pubDate>Wed, 31 Jul 2019 07:39:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/katacoda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Killercoda</title>
+      <link>https://iranzo.io/tags/killercoda/</link>
+      <pubDate>Wed, 31 Jul 2019 07:39:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/killercoda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>10242</title>
+      <link>https://iranzo.io/tags/10242/</link>
+      <pubDate>Sat, 27 Jul 2019 14:39:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/10242/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mini</title>
+      <link>https://iranzo.io/tags/mini/</link>
+      <pubDate>Sat, 27 Jul 2019 14:39:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/mini/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>80102</title>
+      <link>https://iranzo.io/tags/80102/</link>
+      <pubDate>Fri, 28 Jun 2019 20:32:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/80102/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chinese</title>
+      <link>https://iranzo.io/tags/chinese/</link>
+      <pubDate>Fri, 28 Jun 2019 20:32:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/chinese/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dragon Dance</title>
+      <link>https://iranzo.io/tags/dragon-dance/</link>
+      <pubDate>Fri, 28 Jun 2019 20:32:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/dragon-dance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>New Year</title>
+      <link>https://iranzo.io/tags/new-year/</link>
+      <pubDate>Fri, 28 Jun 2019 20:32:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/new-year/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>80101</title>
+      <link>https://iranzo.io/tags/80101/</link>
+      <pubDate>Fri, 28 Jun 2019 20:00:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/80101/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Family</title>
+      <link>https://iranzo.io/tags/family/</link>
+      <pubDate>Fri, 28 Jun 2019 20:00:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/family/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>New Year&#39;&#39;s Eve</title>
+      <link>https://iranzo.io/tags/new-years-eve/</link>
+      <pubDate>Fri, 28 Jun 2019 20:00:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/new-years-eve/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Argos</title>
+      <link>https://iranzo.io/tags/argos/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/argos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bash</title>
+      <link>https://iranzo.io/tags/bash/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gnome</title>
+      <link>https://iranzo.io/tags/gnome/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/gnome/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>https://iranzo.io/tags/shell/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>K8s</title>
+      <link>https://iranzo.io/tags/k8s/</link>
+      <pubDate>Tue, 11 Jun 2019 21:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/k8s/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MiniKube</title>
+      <link>https://iranzo.io/tags/minikube/</link>
+      <pubDate>Tue, 11 Jun 2019 21:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/minikube/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>75894</title>
+      <link>https://iranzo.io/tags/75894/</link>
+      <pubDate>Sun, 09 Jun 2019 01:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/75894/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CI/CD</title>
+      <link>https://iranzo.io/tags/ci/cd/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Continuous Delivery</title>
+      <link>https://iranzo.io/tags/continuous-delivery/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/continuous-delivery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Continuous Integration</title>
+      <link>https://iranzo.io/tags/continuous-integration/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/continuous-integration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Elegant</title>
+      <link>https://iranzo.io/tags/elegant/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/elegant/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Travis</title>
+      <link>https://iranzo.io/tags/travis/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/travis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LibreOffice</title>
+      <link>https://iranzo.io/tags/libreoffice/</link>
+      <pubDate>Tue, 22 Jan 2019 20:51:27 +0100</pubDate>
+      <guid>https://iranzo.io/tags/libreoffice/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Odp</title>
+      <link>https://iranzo.io/tags/odp/</link>
+      <pubDate>Tue, 22 Jan 2019 20:51:27 +0100</pubDate>
+      <guid>https://iranzo.io/tags/odp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pandoc</title>
+      <link>https://iranzo.io/tags/pandoc/</link>
+      <pubDate>Tue, 22 Jan 2019 20:51:27 +0100</pubDate>
+      <guid>https://iranzo.io/tags/pandoc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ppt</title>
+      <link>https://iranzo.io/tags/ppt/</link>
+      <pubDate>Tue, 22 Jan 2019 20:51:27 +0100</pubDate>
+      <guid>https://iranzo.io/tags/ppt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Presentations</title>
+      <link>https://iranzo.io/tags/presentations/</link>
+      <pubDate>Tue, 22 Jan 2019 20:51:27 +0100</pubDate>
+      <guid>https://iranzo.io/tags/presentations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://iranzo.io/tags/docker/</link>
+      <pubDate>Wed, 16 Jan 2019 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DockerHub</title>
+      <link>https://iranzo.io/tags/dockerhub/</link>
+      <pubDate>Wed, 16 Jan 2019 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/dockerhub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Baremetal</title>
+      <link>https://iranzo.io/tags/baremetal/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/baremetal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Federation</title>
+      <link>https://iranzo.io/tags/federation/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/federation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenStack</title>
+      <link>https://iranzo.io/tags/openstack/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/openstack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Postgres</title>
+      <link>https://iranzo.io/tags/postgres/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/postgres/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Replication</title>
+      <link>https://iranzo.io/tags/replication/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/replication/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSL</title>
+      <link>https://iranzo.io/tags/ssl/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/ssl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TripleO</title>
+      <link>https://iranzo.io/tags/tripleo/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/tags/tripleo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Android</title>
+      <link>https://iranzo.io/tags/android/</link>
+      <pubDate>Sun, 30 Dec 2018 19:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/android/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kodi</title>
+      <link>https://iranzo.io/tags/kodi/</link>
+      <pubDate>Sun, 30 Dec 2018 19:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/kodi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Netflix</title>
+      <link>https://iranzo.io/tags/netflix/</link>
+      <pubDate>Sun, 30 Dec 2018 19:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/netflix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tvq-Pm-100</title>
+      <link>https://iranzo.io/tags/tvq-pm-100/</link>
+      <pubDate>Sun, 30 Dec 2018 19:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/tvq-pm-100/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Continuous Deployment</title>
+      <link>https://iranzo.io/tags/continuous-deployment/</link>
+      <pubDate>Fri, 07 Dec 2018 16:00:47 +0100</pubDate>
+      <guid>https://iranzo.io/tags/continuous-deployment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gerrit</title>
+      <link>https://iranzo.io/tags/gerrit/</link>
+      <pubDate>Tue, 16 Oct 2018 07:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/tags/gerrit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RDO</title>
+      <link>https://iranzo.io/tags/rdo/</link>
+      <pubDate>Tue, 16 Oct 2018 07:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/tags/rdo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Peru</title>
+      <link>https://iranzo.io/tags/peru/</link>
+      <pubDate>Tue, 25 Sep 2018 22:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/peru/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Magui</title>
+      <link>https://iranzo.io/tags/magui/</link>
+      <pubDate>Thu, 07 Jun 2018 22:32:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/magui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conference</title>
+      <link>https://iranzo.io/tags/conference/</link>
+      <pubDate>Sun, 13 May 2018 10:50:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/conference/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SuperSEC</title>
+      <link>https://iranzo.io/tags/supersec/</link>
+      <pubDate>Sun, 13 May 2018 10:50:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/supersec/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevConf</title>
+      <link>https://iranzo.io/tags/devconf/</link>
+      <pubDate>Sat, 27 Jan 2018 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/devconf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bashate</title>
+      <link>https://iranzo.io/tags/bashate/</link>
+      <pubDate>Thu, 26 Oct 2017 21:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/bashate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gettext</title>
+      <link>https://iranzo.io/tags/gettext/</link>
+      <pubDate>Thu, 26 Oct 2017 21:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/gettext/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>I18n</title>
+      <link>https://iranzo.io/tags/i18n/</link>
+      <pubDate>Thu, 26 Oct 2017 21:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/i18n/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jenkins</title>
+      <link>https://iranzo.io/tags/jenkins/</link>
+      <pubDate>Thu, 17 Aug 2017 23:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sosreport</title>
+      <link>https://iranzo.io/tags/sosreport/</link>
+      <pubDate>Thu, 17 Aug 2017 23:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/sosreport/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sysmgmt</title>
+      <link>https://iranzo.io/tags/sysmgmt/</link>
+      <pubDate>Thu, 17 Aug 2017 23:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/sysmgmt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unit Testing</title>
+      <link>https://iranzo.io/tags/unit-testing/</link>
+      <pubDate>Thu, 17 Aug 2017 23:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/unit-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>InfraRed</title>
+      <link>https://iranzo.io/tags/infrared/</link>
+      <pubDate>Thu, 23 Feb 2017 23:27:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/infrared/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://iranzo.io/tags/markdown/</link>
+      <pubDate>Fri, 03 Jun 2016 17:23:47 +0200</pubDate>
+      <guid>https://iranzo.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Email</title>
+      <link>https://iranzo.io/tags/email/</link>
+      <pubDate>Fri, 28 Aug 2015 15:27:47 +0200</pubDate>
+      <guid>https://iranzo.io/tags/email/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IMAP</title>
+      <link>https://iranzo.io/tags/imap/</link>
+      <pubDate>Fri, 28 Aug 2015 15:27:47 +0200</pubDate>
+      <guid>https://iranzo.io/tags/imap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hook</title>
+      <link>https://iranzo.io/tags/hook/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/tags/hook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nested Virtualization</title>
+      <link>https://iranzo.io/tags/nested-virtualization/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/tags/nested-virtualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nestedvt</title>
+      <link>https://iranzo.io/tags/nestedvt/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/tags/nestedvt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OVirt</title>
+      <link>https://iranzo.io/tags/ovirt/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/tags/ovirt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RHEV</title>
+      <link>https://iranzo.io/tags/rhev/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/tags/rhev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vdsm</title>
+      <link>https://iranzo.io/tags/vdsm/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/tags/vdsm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fencing</title>
+      <link>https://iranzo.io/tags/fencing/</link>
+      <pubDate>Fri, 01 May 2015 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/fencing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Management</title>
+      <link>https://iranzo.io/tags/management/</link>
+      <pubDate>Fri, 01 May 2015 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>https://iranzo.io/tags/html/</link>
+      <pubDate>Wed, 01 Apr 2015 16:49:13 +0200</pubDate>
+      <guid>https://iranzo.io/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SPIP</title>
+      <link>https://iranzo.io/tags/spip/</link>
+      <pubDate>Wed, 01 Apr 2015 16:49:13 +0200</pubDate>
+      <guid>https://iranzo.io/tags/spip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jekyll</title>
+      <link>https://iranzo.io/tags/jekyll/</link>
+      <pubDate>Tue, 24 Mar 2015 13:23:15 +0100</pubDate>
+      <guid>https://iranzo.io/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OctoPress</title>
+      <link>https://iranzo.io/tags/octopress/</link>
+      <pubDate>Tue, 24 Mar 2015 13:23:15 +0100</pubDate>
+      <guid>https://iranzo.io/tags/octopress/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogger</title>
+      <link>https://iranzo.io/tags/blogger/</link>
+      <pubDate>Mon, 16 Mar 2015 09:06:00 +0100</pubDate>
+      <guid>https://iranzo.io/tags/blogger/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cooking</title>
+      <link>https://iranzo.io/tags/cooking/</link>
+      <pubDate>Sun, 08 Jul 2012 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/cooking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HOWTO</title>
+      <link>https://iranzo.io/tags/howto/</link>
+      <pubDate>Sun, 08 Jul 2012 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/howto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paella</title>
+      <link>https://iranzo.io/tags/paella/</link>
+      <pubDate>Sun, 08 Jul 2012 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/paella/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recipe</title>
+      <link>https://iranzo.io/tags/recipe/</link>
+      <pubDate>Sun, 08 Jul 2012 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/tags/recipe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Installation</title>
+      <link>https://iranzo.io/tags/installation/</link>
+      <pubDate>Sat, 23 Jan 2010 08:25:00 +0000</pubDate>
+      <guid>https://iranzo.io/tags/installation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dlna</title>
+      <link>https://iranzo.io/tags/dlna/</link>
+      <pubDate>Fri, 10 Jul 2009 08:54:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/dlna/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rpm</title>
+      <link>https://iranzo.io/tags/rpm/</link>
+      <pubDate>Fri, 10 Jul 2009 08:54:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/rpm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spec</title>
+      <link>https://iranzo.io/tags/spec/</link>
+      <pubDate>Fri, 10 Jul 2009 08:54:35 +0000</pubDate>
+      <guid>https://iranzo.io/tags/spec/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xen</title>
+      <link>https://iranzo.io/tags/xen/</link>
+      <pubDate>Fri, 18 Jul 2008 06:17:02 +0000</pubDate>
+      <guid>https://iranzo.io/tags/xen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logical Volumes</title>
+      <link>https://iranzo.io/tags/logical-volumes/</link>
+      <pubDate>Sun, 20 Apr 2008 23:03:52 +0000</pubDate>
+      <guid>https://iranzo.io/tags/logical-volumes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LVM</title>
+      <link>https://iranzo.io/tags/lvm/</link>
+      <pubDate>Sun, 20 Apr 2008 23:03:52 +0000</pubDate>
+      <guid>https://iranzo.io/tags/lvm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SELinux</title>
+      <link>https://iranzo.io/tags/selinux/</link>
+      <pubDate>Fri, 04 Jan 2008 18:14:03 +0000</pubDate>
+      <guid>https://iranzo.io/tags/selinux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ISO</title>
+      <link>https://iranzo.io/tags/iso/</link>
+      <pubDate>Thu, 15 Nov 2007 21:50:25 +0000</pubDate>
+      <guid>https://iranzo.io/tags/iso/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>https://iranzo.io/tags/network/</link>
+      <pubDate>Wed, 01 Nov 2006 17:47:00 +0000</pubDate>
+      <guid>https://iranzo.io/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OCS</title>
+      <link>https://iranzo.io/tags/ocs/</link>
+      <pubDate>Sat, 29 Jul 2006 20:13:00 +0000</pubDate>
+      <guid>https://iranzo.io/tags/ocs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hardware</title>
+      <link>https://iranzo.io/tags/hardware/</link>
+      <pubDate>Thu, 27 Jul 2006 20:29:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>https://iranzo.io/tags/software/</link>
+      <pubDate>Thu, 27 Jul 2006 20:29:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BIOS</title>
+      <link>https://iranzo.io/tags/bios/</link>
+      <pubDate>Mon, 12 Apr 2004 09:54:00 +0000</pubDate>
+      <guid>https://iranzo.io/tags/bios/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Error</title>
+      <link>https://iranzo.io/tags/error/</link>
+      <pubDate>Mon, 12 Apr 2004 09:54:00 +0000</pubDate>
+      <guid>https://iranzo.io/tags/error/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>General</title>
+      <link>https://iranzo.io/tags/general/</link>
+      <pubDate>Tue, 06 Apr 2004 10:01:00 +0200</pubDate>
+      <guid>https://iranzo.io/tags/general/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Petrol</title>
+      <link>https://iranzo.io/tags/petrol/</link>
+      <pubDate>Mon, 25 Feb 2002 21:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/petrol/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prestige</title>
+      <link>https://iranzo.io/tags/prestige/</link>
+      <pubDate>Mon, 25 Feb 2002 21:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/prestige/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spill</title>
+      <link>https://iranzo.io/tags/spill/</link>
+      <pubDate>Mon, 25 Feb 2002 21:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/tags/spill/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

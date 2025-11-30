@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>OctoPress on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/octopress/</link>
+    <description>Recent content in OctoPress on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OctoPress for Jekyll blogging</title>
+      <link>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</link>
+      <pubDate>Tue, 24 Mar 2015 13:23:15 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</guid>
+      <description>&lt;p&gt;After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://octopress.org&#34;&gt;OctoPress&lt;/a&gt; Makes this extra step so you can still focus on your contents and of course have a nice template as starting point with integrations for some social plugins, etc.&lt;/p&gt;
+&lt;p&gt;Setup is well done if you follow the provided steps, without jumping anything, in my case, I moved my old pages (plain &lt;code&gt;jekyll + poole&lt;/code&gt;) to OctoPress.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

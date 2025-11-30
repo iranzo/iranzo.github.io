@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hardware on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/hardware/</link>
+    <description>Recent content in Hardware on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OCS Inventory Package deployment</title>
+      <link>https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/</link>
+      <pubDate>Thu, 27 Jul 2006 20:29:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;OCS Inventory is an excellent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms).&lt;/p&gt;
+&lt;p&gt;Since New Generation (&lt;code&gt;OCS-NG&lt;/code&gt;), a new architecture was implemented: server were contacted using standard TCP/IP connection (Previous versions, used an MDB file to store information, and required a SMB share to inventory computers ), allowing remote computers to connect as well as providing a new web interface for computer administration, and inventory query.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Error depending of number of beeps in BIOS</title>
+      <link>https://iranzo.io/blog/2004/04/12/error-depending-of-number-of-beeps-in-bios/</link>
+      <pubDate>Mon, 12 Apr 2004 09:54:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2004/04/12/error-depending-of-number-of-beeps-in-bios/</guid>
+      <description>&lt;p&gt;BIOS (Basic Input Output System) from PC&amp;rsquo;s report errors in the hardware at boot with a code of beeps, that can help diagnose the issue in case there&amp;rsquo;s no image being displayed.&lt;/p&gt;
+&lt;p&gt;Error code reported by BIOS during POST (Power On Self Test):&lt;/p&gt;
+&lt;h2 id=&#34;fatal-errors&#34;&gt;Fatal errors&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;# of beeps&lt;/th&gt;
+          &lt;th&gt;Meaning&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;DRAM refresh error&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;640Kb base RAM error&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;system timer error&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;CPU error&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;6&lt;/td&gt;
+          &lt;td&gt;Keyboard Gate A20 error&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;7&lt;/td&gt;
+          &lt;td&gt;Virtual mode exception error&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;BIOS-ROM checksum error&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;non-fatal-errors&#34;&gt;Non-Fatal errors&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;# of beeps&lt;/th&gt;
+          &lt;th&gt;Meaning&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;Memory test failure conventional and extended&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;Monitor error with tracing vertical and horizontal&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+Enjoy! (and if you do, you can
+&lt;a href=&#34;https://ko-fi.com/I2I4KDA0V&#34; target=&#34;_blank&#34;&gt;
+  &lt;img src=&#34;https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png&#34; height=&#39;36&#39; style=&#39;border:0px;height:36px;vertical-align:middle;display:inline-block;&#39; border=&#34;0&#34;&gt;
+&lt;/img&gt;
+Buy Me a Coffee
+&lt;/a&gt;
+)
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jumpers Olivetti Echos P75</title>
+      <link>https://iranzo.io/blog/2004/04/06/jumpers-olivetti-echos-p75/</link>
+      <pubDate>Tue, 06 Apr 2004 10:01:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2004/04/06/jumpers-olivetti-echos-p75/</guid>
+      <description>&lt;p&gt;Olivetti Echos Family (Tested on my P75, but obtained from the Internet)
+(Running now at 166 MHz)&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Jumper Settings&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Processor Speed&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1100&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;75 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0000&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;90 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0100&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;100 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1110&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;100 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0010&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;120 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1111&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;120 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0110&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;133 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0011&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;150 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1101&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;150 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0001&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;166 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;0111&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;166 MHz&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Switches 1,2:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Switch 1&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Switch 2&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Bus&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;OFF&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;OFF&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;60&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;OFF&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;ON&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;66.6&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;ON&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;OFF&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;20&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;ON&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;ON&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;50&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Switch 3,4:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

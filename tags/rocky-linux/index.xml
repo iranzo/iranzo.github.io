@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rocky Linux on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/rocky-linux/</link>
+    <description>Recent content in Rocky Linux on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:55:20 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/rocky-linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No matching key found</title>
+      <link>https://iranzo.io/tips/no-matching-key-found/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      <guid>https://iranzo.io/tips/no-matching-key-found/</guid>
+      <description>&lt;p&gt;As you might have experienced&amp;hellip; using a recent system to connect to a legacy one could be complicated as some insecure protocols have been disabled, with a message like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Unable to negotiate with 192.168.2.82 port 22: no matching host key type found. Their offer: ssh-rsa,ssh-dss
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Create an entry like this in your &lt;code&gt;.ssh/config&lt;/code&gt; file, so that insecure methods can be used to connect to a specific host:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Host 192.168.2.82
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	HostKeyAlgorithms=+ssh-rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	KexAlgorithms=+diffie-hellman-group1-sha1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  PubkeyAcceptedKeyTypes=+ssh-rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	User root
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or alternatively on the command line:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unsupported upgrade for RHEL-based distributions without reinstallation</title>
+      <link>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</link>
+      <pubDate>Sat, 23 Apr 2022 21:23:48 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</guid>
+      <description>&lt;p&gt;Most systems, based on RHEL, were not able to upgrade without
+reinstallation, or best said, not supported. The new version, that was
+released at around 18 months later contained so many changes that it was
+hard to test the upgrades themselves until &lt;code&gt;leapp&lt;/code&gt; was introduced.&lt;/p&gt;
+&lt;p&gt;Check the lifecycle here: &lt;a href=&#34;https://access.redhat.com/support/policy/updates/errata&#34;&gt;https://access.redhat.com/support/policy/updates/errata&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;However, the biggest problem could be the incompatibility of packages or
+package formats&amp;hellip; but as usually there were some middle layers it was
+possible to upgrade without reinstallation by performing some manual steps.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

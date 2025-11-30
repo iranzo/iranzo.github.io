@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ssh on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/ssh/</link>
+    <description>Recent content in Ssh on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automating SSH keys loading for Ansible usage</title>
+      <link>https://iranzo.io/tips/automatesshkeys/</link>
+      <pubDate>Thu, 02 Mar 2023 16:40:32 +0000</pubDate>
+      <guid>https://iranzo.io/tips/automatesshkeys/</guid>
+      <description>&lt;p&gt;For using Ansible it&amp;rsquo;s required to have a working set of ssh-keys already deployed.&lt;/p&gt;
+&lt;p&gt;If you get a set of systems that have not been provisioned by you and are missing the SSH keys, having it fixed might take a while if doing it manually. Good news is that you can use a script in &lt;code&gt;expect&lt;/code&gt; to cover this part:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-expect&#34; data-lang=&#34;expect&#34;&gt;#!/usr/bin/expect -f
+# set Variables
+set password [lrange $argv 0 0]
+set ipaddr [lrange $argv 1 1]
+
+# now connect to remote system
+spawn ssh-copy-id root@$ipaddr
+match_max 100000
+
+# Check for initial connection (add key of host)
+set timeout 5
+expect &amp;#34;yes/no&amp;#34; { send -- &amp;#34;yes\r&amp;#34; }
+
+# Check for password prmpt
+set timeout 120
+# Look for passwod prompt
+expect &amp;#34;password:&amp;#34; { send -- &amp;#34;$password\r&amp;#34; }
+# send blank line (\r) to come back
+send -- &amp;#34;\n&amp;#34;
+expect eof
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This script, when used like:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

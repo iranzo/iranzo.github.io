@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Solutions Engineering on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/solutions-engineering/</link>
+    <description>Recent content in Solutions Engineering on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Jul 2025 07:47:35 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/solutions-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Management Integration whereabouts</title>
+      <link>https://iranzo.io/blog/2023/01/19/management-integration-whereabouts/</link>
+      <pubDate>Thu, 19 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2023/01/19/management-integration-whereabouts/</guid>
+      <description>&lt;h2 id=&#34;management-integration-whereabouts&#34;&gt;Management Integration whereabouts&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;what-weve-done-so-far&#34;&gt;What we&amp;rsquo;ve done so far?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ZTP Factory Workflow&lt;/li&gt;
+&lt;li&gt;Kernel Module Management&lt;/li&gt;
+&lt;li&gt;NVIDIA Bluefield support&lt;/li&gt;
+&lt;li&gt;OpenShift Virtualization with vGPU&lt;/li&gt;
+&lt;li&gt;Other supporting tasks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h3 id=&#34;ztp-factory-workflow&#34;&gt;ZTP Factory Workflow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ZTP Stands for Zero Touch Provisioning: Automated OpenShift deployment that setup registry mirror, nodes,etc out of a configuration yaml.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The architecture was described as Openshift Container Agnostic TOPology Integrated Chassis. The architecture was based on a 3+1 chassis which had everything needed for the automation with nics for internal/external networks.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

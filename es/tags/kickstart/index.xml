@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kickstart on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/kickstart/</link>
+    <description>Recent content in Kickstart on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/kickstart/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kickstart - instalaciones automatizadas para anaconda</title>
+      <link>https://iranzo.io/es/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda/</link>
+      <pubDate>Sun, 11 May 2008 12:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/05/11/kickstart-instalaciones-automatizadas-para-anaconda/</guid>
+      <description>&lt;h3 id=&#34;instalar-linux&#34;&gt;Instalar linux&lt;/h3&gt;
+&lt;p&gt;Hoy en día todas las distribuciones suelen disponer de un instalador gráfico que mediante un sencillo asistente permiten particionar el sistema, seleccionar los paquetes, instalarlos y configurarlos.&lt;/p&gt;
+&lt;p&gt;El problema viene cuando en lugar de instalar un PC en 40 minutos, tenemos que instalar 20, cada uno de esos pc&amp;rsquo;s, aunque podamos ir con varios discos a la vez, nos va a llevar más de 40 minutos hacer la instalación, por tener que ir siguiendo el asistente, escogiendo opciones, paquetes, configurando cosas, etc.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

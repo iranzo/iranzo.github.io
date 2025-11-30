@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Markdown on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/markdown/</link>
+    <description>Recent content in Markdown on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New blog rendering engine: Pelican</title>
+      <link>https://iranzo.io/blog/2016/06/03/new-blog-rendering-engine-pelican/</link>
+      <pubDate>Fri, 03 Jun 2016 17:23:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2016/06/03/new-blog-rendering-engine-pelican/</guid>
+      <description>&lt;p&gt;As always, I don&amp;rsquo;t usually find myself keen to write about things I do, until I later realize they might be helpful for others, and that&amp;rsquo;s why in the past I decided to switch the place I was putting the information about why did to Github and also, take benefit of practicing markdown for writing the entries.&lt;/p&gt;
+&lt;p&gt;At that time, I moved my old blog posts to markdown to be used in conjunction with Jekyll and to use OctoPress as the engine rendering the contents into a static website. The setup and migration was not difficult, but still require to use some ruby, while I was more familiar with Python.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Migrate SPIP-RSS post feed to HTML</title>
+      <link>https://iranzo.io/blog/2015/04/01/migrate-spip-rss-post-feed-to-html/</link>
+      <pubDate>Wed, 01 Apr 2015 16:49:13 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/04/01/migrate-spip-rss-post-feed-to-html/</guid>
+      <description>&lt;p&gt;I had my old blog based on &lt;a href=&#34;http://www.spip.net&#34;&gt;SPIP&lt;/a&gt;, and I wanted to keep all the posts together, to make it easier to migrate in the future.&lt;/p&gt;
+&lt;p&gt;Initially, I migrated my posts from blogger, where there&amp;rsquo;s an option to export the contents and some plugins to allow easier importing to markdown files (to be used by OctoPress), those were the recent posts, so part of the job was already done there.&lt;/p&gt;
+&lt;p&gt;Next step, was to migrate old posts on my SPIP site.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OctoPress for Jekyll blogging</title>
+      <link>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</link>
+      <pubDate>Tue, 24 Mar 2015 13:23:15 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</guid>
+      <description>&lt;p&gt;After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://octopress.org&#34;&gt;OctoPress&lt;/a&gt; Makes this extra step so you can still focus on your contents and of course have a nice template as starting point with integrations for some social plugins, etc.&lt;/p&gt;
+&lt;p&gt;Setup is well done if you follow the provided steps, without jumping anything, in my case, I moved my old pages (plain &lt;code&gt;jekyll + poole&lt;/code&gt;) to OctoPress.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jekyll and Markdown</title>
+      <link>https://iranzo.io/blog/2015/03/16/jekyll-and-markdown/</link>
+      <pubDate>Mon, 16 Mar 2015 09:06:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/16/jekyll-and-markdown/</guid>
+      <description>&lt;p&gt;For my work I&amp;rsquo;ve been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the formatting.&lt;/p&gt;
+&lt;p&gt;On the other side I was willing to improve the ability to make it easier to post new entries to blog without having to wait too much time, and of course, be able to prepare them offline and then push them live.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

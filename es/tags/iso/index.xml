@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Iso on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/iso/</link>
+    <description>Recent content in Iso on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/iso/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creando plantillas Jigdo (Jigsaw Download) para descargar ISO&#39;s</title>
+      <link>https://iranzo.io/es/blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/</link>
+      <pubDate>Fri, 04 Jan 2008 18:43:29 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/01/04/Creando-plantillas-Jigdo-Jigsaw-es/</guid>
+      <description>&lt;h3 id=&#34;introducción&#34;&gt;Introducción&lt;/h3&gt;
+&lt;p&gt;Jigdo (JIGsaw DOwnload) es una pequeña utilidad que permite ensamblar imágenes de CD/DVD a partir de los ficheros que las forman.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, &lt;a href=&#34;http://www.debian.org/&#34;&gt;Debian&lt;/a&gt; ha estado utilizándolo durante algún tiempo para distribuir sus imágenes: se descarga un fichero jigdo y utilizando la orden jigdo-lite (paquete jigdo-lite en Debian y en las basadas en RPM&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. De este modo, sólo de descargan ficheros pequeños de incluso varios servidores, repartiendo la carga, y haciendo uso de posibles proxys, etc.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

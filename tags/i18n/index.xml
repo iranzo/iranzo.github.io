@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>I18n on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/i18n/</link>
+    <description>Recent content in I18n on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/i18n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>i18n and &#39;bash8&#39; in bash</title>
+      <link>https://iranzo.io/blog/2017/10/26/i18n-and-bash8-in-bash/</link>
+      <pubDate>Thu, 26 Oct 2017 21:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/10/26/i18n-and-bash8-in-bash/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In order to improve &lt;a href=&#34;../../blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems./&#34;&gt;Citellus&lt;/a&gt; and &lt;a href=&#34;https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts./&#34;&gt;Magui&lt;/a&gt;, we did implement some &lt;a href=&#34;../../blog/2017/08/17/jenkins-for-running-ci-tests/&#34;&gt;Unit testing&lt;/a&gt; to improve code quality.&lt;/p&gt;
+&lt;p&gt;The tests written were made in python and with some changes it was also possible to validate the actual tests.&lt;/p&gt;
+&lt;p&gt;Also, we did prepare the strings in python using gettext library so the actual messages can be translated to the language of choice (defaults to en, but can be changed via &lt;code&gt;--lang&lt;/code&gt; modifier of citellus).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

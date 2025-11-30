@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gems on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/gems/</link>
+    <description>Recent content in Gems on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Jan 2024 16:33:45 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/gems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install gems on local user folder instead of system wide</title>
+      <link>https://iranzo.io/tips/bundle-localuser/</link>
+      <pubDate>Tue, 16 Jan 2024 16:27:50 +0000</pubDate>
+      <guid>https://iranzo.io/tips/bundle-localuser/</guid>
+      <description>&lt;p&gt;In order to test locally a Gemfile, define local path for the gems to avoid attempting to write to system-wide folders:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bundle config set --local path &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/home/username/.gem&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bundle install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

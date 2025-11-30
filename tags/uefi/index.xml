@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>UEFI on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/uefi/</link>
+    <description>Recent content in UEFI on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:46:05 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/uefi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UEFI boot order change</title>
+      <link>https://iranzo.io/blog/2021/07/01/uefi-boot-order-change/</link>
+      <pubDate>Thu, 01 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/07/01/uefi-boot-order-change/</guid>
+      <description>&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;In case you&amp;rsquo;ve a dual boot machine, sometimes it might happen that &lt;code&gt;grub&lt;/code&gt; menu is no longer appearing.&lt;/p&gt;
+&lt;p&gt;For systems using regular BIOS, a &lt;code&gt;grub-install&lt;/code&gt; against the device it was installed might be required, but when using UEFI, it&amp;rsquo;s really easy to use a rescue media and execute &lt;code&gt;efibootmgr&lt;/code&gt; to alter the boot order.&lt;/p&gt;
+&lt;p&gt;When executing &lt;code&gt;efibootmgr&lt;/code&gt;, it might output some information like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;BootCurrent: &lt;span style=&#34;color:#ae81ff&#34;&gt;0001&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Timeout: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; seconds
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;BootOrder: 0001,0019,001D,001C,0017,0018,001A,001B,001E,001F,0020,0000
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0000* Windows Boot Manager
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0001* Fedora
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0010  Setup
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0011  Boot Menu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0012  Diagnostic Splash Screen
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0013  Lenovo Diagnostics
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0014  Startup Interrupt Menu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0015  Rescue and Recovery
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0016  MEBx Hot Key
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0017* USB CD
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0018* USB FDD
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0019* NVMe0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot001A* NVMe1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot001B* ATA HDD2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot001C* ATA HDD3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot001D* ATA HDD0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot001E* ATA HDD1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot001F* USB HDD
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0020* PCI LAN
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0021* IDER BOOT CDROM
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0022* IDER BOOT Floppy
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0023* ATA HDD
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Boot0024* ATAPI CD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note there, the &lt;code&gt;BootCurrent&lt;/code&gt; and the &lt;code&gt;BootOrder&lt;/code&gt;, the numbers in the &lt;code&gt;BootOrder&lt;/code&gt; correspond to the &lt;code&gt;Boot####&lt;/code&gt; that are listed below it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ansible on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/ansible/</link>
+    <description>Recent content in Ansible on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Jan 2024 16:29:02 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible - dynamically include Jinja templates and tasks</title>
+      <link>https://iranzo.io/blog/2022/09/24/ansible-dynamically-include-jinja-templates-and-tasks/</link>
+      <pubDate>Sat, 24 Sep 2022 11:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/09/24/ansible-dynamically-include-jinja-templates-and-tasks/</guid>
+      <description>&lt;p&gt;For my ansible playbooks, I wanted to be able to add several new templates to be copied to target system, and additionally be able to perform some commands for them without having to specify each individual file/template to copy.&lt;/p&gt;
+&lt;p&gt;My approach:&lt;/p&gt;
+&lt;p&gt;Define for the hosts I want to find templates/playbooks define a var named &lt;code&gt;extras&lt;/code&gt; for the relevant hosts:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;extras&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#ae81ff&#34;&gt;ntp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#ae81ff&#34;&gt;certificates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The names defined (in above example &lt;code&gt;ntp&lt;/code&gt; and &lt;code&gt;certificates&lt;/code&gt;) are just name of folders laying inside &lt;code&gt;tasks/templates/${folder}&lt;/code&gt; that are searched and included or excluded based on &lt;code&gt;extras&lt;/code&gt; values.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Include Ansible playbooks sorted</title>
+      <link>https://iranzo.io/tips/include-sorted-playbooks/</link>
+      <pubDate>Fri, 23 Sep 2022 11:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/tips/include-sorted-playbooks/</guid>
+      <description>&lt;p&gt;Use sorted list for included files vs random provided by &lt;code&gt;with_fileglob&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Include tasks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;include_tasks&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{item}}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;loop&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{ query(&amp;#39;fileglob&amp;#39;, &amp;#39;tasks/*.yaml&amp;#39;) | sort }}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Ansible setup for VPN using WireGuard</title>
+      <link>https://iranzo.io/blog/2022/03/17/ansible-setup-for-vpn-using-wireguard/</link>
+      <pubDate>Thu, 17 Mar 2022 20:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/03/17/ansible-setup-for-vpn-using-wireguard/</guid>
+      <description>Learn on how to setup a VPN using WireGuard using Ansible</description>
+    </item>
+    <item>
+      <title>How to check if a system is virtual</title>
+      <link>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</link>
+      <pubDate>Mon, 10 May 2021 14:30:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</guid>
+      <description>&lt;p&gt;I was improving a playbook in Ansible and wanted to find a way to find if a system was virtual or not to decide about some tunning like setting &lt;code&gt;tuned-adm profile virtual-guest&lt;/code&gt; or disable the power off when the lid is closed.&lt;/p&gt;
+&lt;p&gt;After some research and try-except situations I got to this one that seemed to work (I had to tune it as one desktop machine was missing the /sys entry I was using before):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>InfraRed for deploying OpenStack</title>
+      <link>https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/</link>
+      <pubDate>Thu, 23 Feb 2017 23:27:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/redhat-openstack/infrared/&#34;&gt;InfraRed&lt;/a&gt; is tool that allows to install/provision OpenStack. You can find the documentation for the project at &lt;a href=&#34;http://infrared.readthedocs.io&#34;&gt;http://infrared.readthedocs.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, developers and users are online in FreeNode at #infrared channel.&lt;/p&gt;
+&lt;h2 id=&#34;why-infrared&#34;&gt;Why InfraRed?&lt;/h2&gt;
+&lt;p&gt;Deploying OSP with OSP-d (TripleO) requires several setup steps for preparation, deployment, etc. InfraRed simplifies them by automating with ansible most of those steps and configuration.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It allows to deploy several OSP versions&lt;/li&gt;
+&lt;li&gt;Allows to ease connection to installed vm roles (Ceph, Computes, Controllers, Undercloud)&lt;/li&gt;
+&lt;li&gt;Allows to define working environments so one InfraRed-running host can be used to manage different environments&lt;/li&gt;
+&lt;li&gt;and much more&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setup-of-infrared-running-host&#34;&gt;Setup of InfraRed-running host&lt;/h2&gt;
+&lt;p&gt;Setting InfraRed is quite easy, at the moment the version 2 (branch on github) is working pretty well.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting started with Ansible</title>
+      <link>https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/</link>
+      <pubDate>Mon, 20 Feb 2017 23:10:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve started to get familiar with &lt;a href=&#34;http://www.ansible.com&#34;&gt;Ansible&lt;/a&gt; because,
+apart of getting more and more accepted for OSP-related tasks and
+installation, I wanted to automate some tasks we needed to setup some servers
+for the OpenStack group I work for.&lt;/p&gt;
+&lt;p&gt;First of all, it&amp;rsquo;s recommended to get latest version of ansible (tested on
+RHEL7 and Fedora), but in order not to mess with the system python libraries, it&amp;rsquo;s convenient to use python&amp;rsquo;s virtual environments.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

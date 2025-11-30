@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Git on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/git/</link>
+    <description>Recent content in Git on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yaspeller hook for pre-commit</title>
+      <link>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</link>
+      <pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve made a PR that got merged into Yaspeller repository which adds support for &lt;code&gt;pre-commit&lt;/code&gt; to spell check your files.&lt;/p&gt;
+&lt;p&gt;It requires simple configuration, just add this snippet to your &lt;code&gt;.pre-commit-config.yaml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- &lt;span style=&#34;color:#f92672&#34;&gt;repo&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;https://github.com/hcodes/yaspeller.git&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;rev&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;master&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;hooks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#f92672&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;yaspeller&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;files&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\\.en\\.md&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The plugin will then initialize and spell check your files via &lt;code&gt;yaspeller&lt;/code&gt;. It will use the standard &lt;code&gt;.yaspeller.json&lt;/code&gt; file for dictionary and settings and automate it for each new commit you work on.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Git commit reordering</title>
+      <link>https://iranzo.io/blog/2020/02/13/git-commit-reordering/</link>
+      <pubDate>Thu, 13 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/13/git-commit-reordering/</guid>
+      <description>&lt;p&gt;While I was working for a presentation for kid&amp;rsquo;s school at &lt;a href=&#34;%22campo-magnetico-auroras-fases-lunares-cohetes.md%22&#34;&gt;Magnetic field, Aurora, Lunar Phases and Rockets&lt;/a&gt;, I added 4 big videos to the presentation (as I was going to use them offline while presenting).&lt;/p&gt;
+&lt;p&gt;I know what git is not the place for big binary files, and even Github proposed to use the LFS backend for that, but as it was just temporary, I went ahead.&lt;/p&gt;
+&lt;p&gt;After that commit, I also wrote two more articles, the one on &lt;a href=&#34;../../blog/2020/02/08/lego-speed-champions-2020-review/&#34;&gt;Lego Speed Champions&lt;/a&gt; and the one on &lt;a href=&#34;../../blog/2020/02/12/galleria.io-and-photoswipe/&#34;&gt;Galleria.io and PhotoSwipe&lt;/a&gt;, so it became a problem to have big files in between, when my plan was to remove them in the end.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contributing to OSP upstream a.k.a. Peer Review</title>
+      <link>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</link>
+      <pubDate>Tue, 16 Oct 2018 07:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the article &amp;ldquo;&lt;a href=&#34;../../blog/2016/07/21/contributing-to-openstack/&#34;&gt;Contributing to OpenStack&lt;/a&gt;&amp;rdquo; we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find &lt;code&gt;low hanging fruits&lt;/code&gt; to start contributing).&lt;/p&gt;
+&lt;p&gt;Here, we&amp;rsquo;ll cover what happens behind the scene to get change published.&lt;/p&gt;
+&lt;h2 id=&#34;upstream-workflow&#34;&gt;Upstream workflow&lt;/h2&gt;
+&lt;h3 id=&#34;peer-review&#34;&gt;Peer review&lt;/h3&gt;
+&lt;p&gt;Upstream contributions to OSP and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

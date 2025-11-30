@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Presentation on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/presentation/</link>
+    <description>Recent content in Presentation on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/presentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevConf.cz 2018!</title>
+      <link>https://iranzo.io/blog/2018/01/27/devconf.cz-2018/</link>
+      <pubDate>Sat, 27 Jan 2018 15:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/01/27/devconf.cz-2018/</guid>
+      <description>&lt;h2 id=&#34;presentation-at-devconfcz-2018&#34;&gt;Presentation at DevConf.cz 2018!&lt;/h2&gt;
+&lt;p&gt;As highlighted in the prior edition of the &lt;a href=&#34;../../blog/2018/01/16/recent-changes-in-magui-and-citellus/&#34;&gt;&amp;lsquo;What&amp;rsquo;s new&amp;rsquo;&lt;/a&gt;, we got a slot for DevConf.cz 2018.&lt;/p&gt;
+&lt;p&gt;During that &lt;a href=&#34;https://devconfcz2018.sched.com/event/DJXG/detect-pitfalls-of-osp-deployments-with-citellus&#34;&gt;slot&lt;/a&gt;, my colleagues Martin, Pablo and myself were presenting on the history and basics of Citellus and how it helps on debugging issues and providing faster analysis of already known ones.&lt;/p&gt;
+&lt;p&gt;It is possible to watch the recording at &lt;a href=&#34;https://www.youtube.com/watch?v=SDzzqrUdn5A&#34;&gt;https://www.youtube.com/watch?v=SDzzqrUdn5A&lt;/a&gt; and the slides used at:
+&lt;a href=&#34;https://github.com/citellusorg/citellus/blob/master/doc/devconfcz2018-presentation-revealmd.md&#34;&gt;https://github.com/citellusorg/citellus/blob/master/doc/devconfcz2018-presentation-revealmd.md&lt;/a&gt;
+&lt;p&gt;
+Enjoy! (and if you do, you can
+&lt;a href=&#34;https://ko-fi.com/I2I4KDA0V&#34; target=&#34;_blank&#34;&gt;
+  &lt;img src=&#34;https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png&#34; height=&#39;36&#39; style=&#39;border:0px;height:36px;vertical-align:middle;display:inline-block;&#39; border=&#34;0&#34;&gt;
+&lt;/img&gt;
+Buy Me a Coffee
+&lt;/a&gt;
+)
+&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

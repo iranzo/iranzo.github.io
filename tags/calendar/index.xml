@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Calendar on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/calendar/</link>
+    <description>Recent content in Calendar on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:33:12 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/calendar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Showing calendar events in Telegram</title>
+      <link>https://iranzo.io/blog/2023/03/21/showing-calendar-events-in-telegram/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2023/03/21/showing-calendar-events-in-telegram/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve a Telegram group, it might be interesting the ability of &lt;a href=&#34;https://t.me/redken_bot&#34;&gt;https://t.me/redken_bot&lt;/a&gt; for adding a calendar &lt;code&gt;ical&lt;/code&gt; that automates publishing each day the events in the agenda for the day.&lt;/p&gt;
+&lt;p&gt;If you did read &lt;a href=&#34;../../blog/2019/09/17/python-and-icalendar-ics-processing/&#34;&gt;Python and iCalendar ICS processing&lt;/a&gt;, part of the basis in that article are part of the bot and are easily used:&lt;/p&gt;
+&lt;p&gt;For configuring, only a few simple steps are required:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Have a calendar ICS/webcal accessible (for example a public Google Calendar one)&lt;/li&gt;
+&lt;li&gt;Have a Telegram group where we do want to publish the events&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;@redken_bot&lt;/code&gt; to the group&lt;/li&gt;
+&lt;li&gt;Specify the URL del calendar and the name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lets see some screenshots of the process for you to check how easily it can be achieved.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>API access for Google Calendar and Google Sheet access</title>
+      <link>https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/</link>
+      <pubDate>Thu, 28 Nov 2019 17:11:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;During last days I&amp;rsquo;ve been playing around with python and API access to Google Sheets.&lt;/p&gt;
+&lt;p&gt;Since some time ago, I already experimented with ICS parsing from python because added &lt;a href=&#34;https://t.me/redken_bot&#34;&gt;https://t.me/redken_bot&lt;/a&gt; access to calendar files (&lt;code&gt;.ics&lt;/code&gt;) so that it can provide daily reminders on chats about the events happening for the specific date, and had the chance to propose it&amp;rsquo;s usage to cover a specific use case: Accessing a spreadsheet in Google Sheets and parse its contents and output an ICS file so that the events listed and the dates specific for each one are available in an easier-to-consume approach.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python and iCalendar ICS processing</title>
+      <link>https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/</link>
+      <pubDate>Tue, 17 Sep 2019 07:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/</guid>
+      <description>This article covers  how to do Internet Calendar processing of events in python and how those are leveraged in @redken_bot</description>
+    </item>
+  </channel>
+</rss>
