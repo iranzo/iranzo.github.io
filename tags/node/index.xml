@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Node on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/node/</link>
+    <description>Recent content in Node on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yaspeller hook for pre-commit</title>
+      <link>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</link>
+      <pubDate>Thu, 12 Mar 2020 14:38:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/03/12/yaspeller-hook-for-pre-commit/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve made a PR that got merged into Yaspeller repository which adds support for &lt;code&gt;pre-commit&lt;/code&gt; to spell check your files.&lt;/p&gt;
+&lt;p&gt;It requires simple configuration, just add this snippet to your &lt;code&gt;.pre-commit-config.yaml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- &lt;span style=&#34;color:#f92672&#34;&gt;repo&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;https://github.com/hcodes/yaspeller.git&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;rev&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;master&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;hooks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#f92672&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;yaspeller&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;files&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;\\.en\\.md&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The plugin will then initialize and spell check your files via &lt;code&gt;yaspeller&lt;/code&gt;. It will use the standard &lt;code&gt;.yaspeller.json&lt;/code&gt; file for dictionary and settings and automate it for each new commit you work on.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

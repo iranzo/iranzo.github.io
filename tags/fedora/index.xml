@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fedora on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/fedora/</link>
+    <description>Recent content in Fedora on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable rootless podman on Fedora</title>
+      <link>https://iranzo.io/blog/2023/01/27/enable-rootless-podman-on-fedora/</link>
+      <pubDate>Fri, 27 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2023/01/27/enable-rootless-podman-on-fedora/</guid>
+      <description>&lt;p&gt;With podman we can setup containers for being used for non root users by performing some simple steps:&lt;/p&gt;
+&lt;h2 id=&#34;install-required-packages&#34;&gt;Install required packages&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dnf -y install slirp4netns fuse-overlayfs crun podman shadow-utils
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Force the number of user namespaces (might be required on some environments):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user.max_user_namespaces=28633&amp;#34;&lt;/span&gt; &amp;gt; /etc/sysctl.d/userns.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysctl -p /etc/sysctl.d/userns.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;delegate&#34;&gt;Delegate&lt;/h2&gt;
+&lt;p&gt;Allows to define which resources are available&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir -p /etc/systemd/system/user@.service.d
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;&amp;lt; EOF &amp;gt; /etc/systemd/system/user@.service.d/delegate.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[Service]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Delegate=cpu cpuset io memory pids
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;EOF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To verify it has been done correctly, logout and login with the user and execute:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logitech R400 remote presentation controller on Linux</title>
+      <link>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</link>
+      <pubDate>Fri, 01 Apr 2022 07:31:42 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</guid>
+      <description>&lt;p&gt;Since long ago I had it in my mind getting one remote presenter, but most presenters just had two buttons, and the ones that looked to be valid for my use case, required four and seems that only &lt;code&gt;Rii&lt;/code&gt; had similar devices, but I didn&amp;rsquo;t went for it as it was not a huge need, so I ended up with a mini keyboard I had for Raspberry Pi and some debugging in case I had that need.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LDAP query from Python</title>
+      <link>https://iranzo.io/blog/2021/10/19/ldap-query-from-python/</link>
+      <pubDate>Tue, 19 Oct 2021 22:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/10/19/ldap-query-from-python/</guid>
+      <description>This article describes how to use python to bind against an LDAP server and perform queries</description>
+    </item>
+    <item>
+      <title>How to stake on NYM Validator 🐳🐳🐳</title>
+      <link>https://iranzo.io/blog/2021/09/28/how-to-stake-on-nym-validator/</link>
+      <pubDate>Tue, 28 Sep 2021 17:20:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/09/28/how-to-stake-on-nym-validator/</guid>
+      <description>This article describes how to stake your token against a NYM cosmos validator</description>
+    </item>
+    <item>
+      <title>Geo replication with syncthing</title>
+      <link>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</link>
+      <pubDate>Sat, 12 Jun 2021 21:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</guid>
+      <description>&lt;p&gt;Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc&lt;/p&gt;
+&lt;p&gt;After being using BitTorrent sync and later resilio sync (even if I didn&amp;rsquo;t fully liked the idea of it being not open source), I gave up. My NAS with 16 GB of ram, even if a bit older (HP N54L), seemed not to have enough memory to run it, and was constantly swapping.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to check if a system is virtual</title>
+      <link>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</link>
+      <pubDate>Mon, 10 May 2021 14:30:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</guid>
+      <description>&lt;p&gt;I was improving a playbook in Ansible and wanted to find a way to find if a system was virtual or not to decide about some tunning like setting &lt;code&gt;tuned-adm profile virtual-guest&lt;/code&gt; or disable the power off when the lid is closed.&lt;/p&gt;
+&lt;p&gt;After some research and try-except situations I got to this one that seemed to work (I had to tune it as one desktop machine was missing the /sys entry I was using before):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to run a NYM Validator</title>
+      <link>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-validator/</link>
+      <pubDate>Sun, 09 May 2021 12:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-validator/</guid>
+      <description>&lt;p&gt;As said in the article about &lt;a href=&#34;../../blog/2021/05/09/how-to-run-a-nym-mixnode/&#34;&gt;mixnodes&lt;/a&gt;, NYM is a technology aiming for providing privacy for the communications.&lt;/p&gt;
+&lt;p&gt;Apart of the mixnodes, other key piece in the infrastructure are the validators.&lt;/p&gt;
+&lt;p&gt;As said, the project uses Open Source technology to run, and they have a nice docs with details on how to run a node at &lt;a href=&#34;https://nymtech.net/docs/&#34;&gt;https://nymtech.net/docs/&lt;/a&gt;, and the one relevant for mixnodes at &lt;a href=&#34;https://nymtech.net/docs/run-nym-nodes/validators/&#34;&gt;https://nymtech.net/docs/run-nym-nodes/validators/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this case, we can follow the instructions for compiling, but I faced some issues (compiling went fine, but initial sync failed), so in this case, we will use the pre-compiled version provided with the &lt;code&gt;0.10.0&lt;/code&gt; release.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to run a NYM mixnode</title>
+      <link>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</link>
+      <pubDate>Sun, 09 May 2021 12:30:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</guid>
+      <description>&lt;p&gt;Some time ago I&amp;rsquo;ve started running a NYM mixnode. &lt;code&gt;NYM&lt;/code&gt; is a project that targets improving privacy by decomposing network packages from different hosts, so that origin and target cannot be traced.&lt;/p&gt;
+&lt;p&gt;You can check more about the NYM project at their site at &lt;a href=&#34;https://nymtech.net/&#34;&gt;https://nymtech.net/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The project uses Open Source technology to run, and they have a nice docs with details on how to run a node at &lt;a href=&#34;https://nymtech.net/docs/&#34;&gt;https://nymtech.net/docs/&lt;/a&gt;, and the one relevant for mixnodes at &lt;a href=&#34;https://nymtech.net/docs/run-nym-nodes/mixnodes/&#34;&gt;https://nymtech.net/docs/run-nym-nodes/mixnodes/&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Argos extension writing for Gnome3</title>
+      <link>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</guid>
+      <description>&lt;p&gt;I was using from time ago this extension for Gnome named &lt;a href=&#34;https://github.com/p-e-w/argos&#34;&gt;Argos&lt;/a&gt; which allows to create useful data views using scripts written in whatever language of choice available, bash included.&lt;/p&gt;
+&lt;p&gt;So far I had just a simple extension writing a UNICODE character, but with the suggestion of my colleague &lt;a href=&#34;http://www.sombrerorojo.com/&#34;&gt;Javi Ramírez&lt;/a&gt;, I decided to use the motivational idea to write a simple script to calculate how much you&amp;rsquo;ve earned so far in the day and show that information at a glance on your menu bar.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contributing to OSP upstream a.k.a. Peer Review</title>
+      <link>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</link>
+      <pubDate>Tue, 16 Oct 2018 07:32:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/10/16/contributing-to-osp-upstream-a.k.a.-peer-review/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the article &amp;ldquo;&lt;a href=&#34;../../blog/2016/07/21/contributing-to-openstack/&#34;&gt;Contributing to OpenStack&lt;/a&gt;&amp;rdquo; we did cover on how to prepare accounts and prepare your changes for submission upstream (and even how to find &lt;code&gt;low hanging fruits&lt;/code&gt; to start contributing).&lt;/p&gt;
+&lt;p&gt;Here, we&amp;rsquo;ll cover what happens behind the scene to get change published.&lt;/p&gt;
+&lt;h2 id=&#34;upstream-workflow&#34;&gt;Upstream workflow&lt;/h2&gt;
+&lt;h3 id=&#34;peer-review&#34;&gt;Peer review&lt;/h3&gt;
+&lt;p&gt;Upstream contributions to OSP and other projects are based on Peer Review, that means that once a new set of code has been submitted, several steps for validation are required/happen before having it implemented.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Filtering email with imapfilter</title>
+      <link>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</link>
+      <pubDate>Fri, 28 Aug 2015 15:27:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</guid>
+      <description>&lt;p&gt;Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&amp;amp;drop reordering of rules, cloning, etc.&lt;/p&gt;
+&lt;p&gt;As I was already using offlineimap to sync from the remote mail server to my system into a maildir folder, I had almost all the elements I needed.&lt;/p&gt;
+&lt;p&gt;After searching for several options &lt;a href=&#34;https://github.com/lefcha/imapfilter&#34;&gt;imapfilter&lt;/a&gt; seemed to be a perfect fit, so I started with a small set of rules and start integration with my email process.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install RHEL7/Centos/Fedora on a software raid device</title>
+      <link>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</link>
+      <pubDate>Sat, 28 Mar 2015 18:46:42 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</guid>
+      <description>&lt;p&gt;Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.&lt;/p&gt;
+&lt;p&gt;There are several &lt;a href=&#34;http://en.wikipedia.org/wiki/RAID&#34;&gt;RAID&lt;/a&gt; level definitions and may have different uses depending on our needs and hardware availability.&lt;/p&gt;
+&lt;p&gt;For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data)..&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Podcasts with flexget and transmission</title>
+      <link>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</link>
+      <pubDate>Mon, 16 Mar 2015 21:45:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</guid>
+      <description>&lt;p&gt;Some podcasts are available via RSS feeds, so you can get notified of new episodes, so the best way I&amp;rsquo;ve found so far to automate this procedure is to use the utility &lt;code&gt;flexget&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Flexget can download a RSS feed and get the &lt;code&gt;.torrent&lt;/code&gt; files associated to them and store locally, which makes a perfect fit for later using Transmission&amp;rsquo;s &lt;code&gt;watch&lt;/code&gt; folder, to automatically add them to your download queue.&lt;/p&gt;
+&lt;p&gt;In order to do so, install &lt;code&gt;flexget&lt;/code&gt; either via pip (&lt;code&gt;pip install flexget&lt;/code&gt;) or using a package for your distribution and create a configuration file similar to this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>duplicity for managing backups</title>
+      <link>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</link>
+      <pubDate>Mon, 27 Jun 2011 16:35:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</guid>
+      <description>&lt;p&gt;A few days ago, I was checking a friend&amp;rsquo;s system for backing up.&lt;/p&gt;
+&lt;p&gt;It was based on &lt;code&gt;rsync&lt;/code&gt; at the Linux side and &lt;code&gt;rsync&lt;/code&gt; server on a windows machine he uses for storing information generated by other software.&lt;/p&gt;
+&lt;p&gt;The solution with &lt;code&gt;rsync&lt;/code&gt; worked pretty well for him until he started to put several strange characters in filenames which rendered the backup unusable to certain point.&lt;/p&gt;
+&lt;p&gt;After being asked for alternative backup software that was available on several platforms, I&amp;rsquo;ve ended testing duplicity.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Firsts steps with Fedora 15 pre-alpha</title>
+      <link>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</link>
+      <pubDate>Mon, 07 Mar 2011 17:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</guid>
+      <description>&lt;p&gt;Today I&amp;rsquo;ve decided to give it a try to F15-prealpha (expected to release tomorrow).&lt;/p&gt;
+&lt;p&gt;The upgrade performed in the unsupported way (getting and forcing install for newer fedora-release from a mirror then start issuing several yum upgrades) when reasonably good.&lt;/p&gt;
+&lt;p&gt;Only some minor dependency problems &lt;code&gt;et voilà&lt;/code&gt;, system started fine.&lt;/p&gt;
+&lt;p&gt;Problems so far:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Firefox 4 has a few approved extensions, I used the &amp;ldquo;nightly tester tools&amp;rdquo; to disable version check and enable most of the ones I had with 3.6.x without problems.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t like gnome-shell at the moment&lt;/li&gt;
+&lt;li&gt;Desktop icons disappeared&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Menu bar is black and found no way to configure it yet&lt;/li&gt;
+&lt;li&gt;Gnome-applets have some dependency problems and can&amp;rsquo;t install or configure them, furthermore I lost my tray area on one of the computers but works fine on the other.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I hope that tomorrow&amp;rsquo;s release of Alpha will fix some of them in order to warm-up for final launch (&lt;a href=&#34;http://fedoraproject.org/wiki/Releases/15/Schedule&#34;&gt;http://fedoraproject.org/wiki/Releases/15/Schedule&lt;/a&gt;)&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

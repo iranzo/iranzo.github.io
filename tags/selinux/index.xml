@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SELinux on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/selinux/</link>
+    <description>Recent content in SELinux on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/selinux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Security Enhanced Linux (SELinux)</title>
+      <link>https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/</link>
+      <pubDate>Fri, 04 Jan 2008 18:14:03 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel.&lt;/p&gt;
+&lt;p&gt;SELinux, originally developed by N.S.A. (National Security Agency) allows applications to be confined by the kernel.&lt;/p&gt;
+&lt;p&gt;Inside that &amp;ldquo;confined area&amp;rdquo;, much more grained than a standard &lt;code&gt;chroot&lt;/code&gt; (system where basic executables are copied to another folder in order to have a small subsystem isolated from real system. The drawback is that a small subsystem could have enough utilities to reveal private information from our internal network),in which we can allow only certain operations, for example: adding information to a file, read from a directory but not writing, even just for one file in a standard directory,
+etc&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

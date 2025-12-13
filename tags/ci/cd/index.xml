@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CI/CD on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/ci/cd/</link>
+    <description>Recent content in CI/CD on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use custom domain name with Blog-O-Matic</title>
+      <link>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</guid>
+      <description>&lt;p&gt;As a recipe, if you want to enable a custom domain name on &lt;a href=&#34;../../../blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./&#34;&gt;blog-o-matic&lt;/a&gt; a special file needs to be created on the &amp;lsquo;GitHub Pages&amp;rsquo; served &amp;lsquo;master&amp;rsquo; branch.&lt;/p&gt;
+&lt;p&gt;In order to do so, edit &lt;code&gt;pelicanconf.py&lt;/code&gt; and add the following differences:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;diff --git a/pelicanconf.py b/pelicanconf.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;index 680abcb..fc3dd8f 100644
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;--- a/pelicanconf.py
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+++ b/pelicanconf.py
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@@ -46,13 +46,16 @@ AMAZON_ONELINK = &amp;#34;b63a2115-85f7-43a9-b169-5f4c8c275655&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; # Extra files customization
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-EXTRA_PATH_METADATA = {}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+EXTRA_PATH_METADATA = {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+    &amp;#39;extra/CNAME&amp;#39;: {&amp;#39;path&amp;#39;: &amp;#39;CNAME&amp;#39;},
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; EXTRA_TEMPLATES_PATHS = [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &amp;#34;plugins/revealmd/templates&amp;#34;,  # eg: &amp;#34;plugins/revealmd/templates&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-STATIC_PATHS = [ &amp;#39;images&amp;#39; ]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+STATIC_PATHS = [ &amp;#39;images&amp;#39; , &amp;#39;extra&amp;#39;]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ## ONLY TOUCH IF YOU KNOW WHAT YOU&amp;#39;RE DOING!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will copy the &lt;code&gt;CNAME&lt;/code&gt; file created in &lt;code&gt;content/extra/CNAME&lt;/code&gt; to the resulting &amp;lsquo;master&amp;rsquo; branch as &lt;code&gt;/CNAME&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with little setup steps.</title>
+      <link>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</link>
+      <pubDate>Wed, 09 Jan 2019 22:00:47 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve already covered some articles about automation with Travis-CI, GitHub,
+and one step that seems a show-stopper for many users when trying to build a
+website is on one side, the investment (domain, hosting, etc), the backend
+being used (WordPress, static generators, etc)&amp;hellip;&lt;/p&gt;
+&lt;p&gt;While preparing a talk for a group of co-workers covering several of those aspects, I came with the idea to create Blog-o-Matic, implementing many of those &amp;rsquo;learnings&amp;rsquo; in a &amp;lsquo;canned&amp;rsquo; way that can be easy to consume by users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Triggering a Travis-CI build on another repo</title>
+      <link>https://iranzo.io/blog/2018/12/11/triggering-a-travis-ci-build-on-another-repo/</link>
+      <pubDate>Tue, 11 Dec 2018 21:49:47 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/12/11/triggering-a-travis-ci-build-on-another-repo/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;After setting up &lt;a href=&#34;../../../blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/&#34;&gt;build automation&lt;/a&gt; we also wanted it not to happen only when updating the &lt;code&gt;documentation&lt;/code&gt; repository.&lt;/p&gt;
+&lt;p&gt;Besides hosting documentation, Elegant website also serves as a live demo of the current release. This meant, the website should be regenerated and updated every time when a documented is added or edited, and also when Elegant theme is updated.&lt;/p&gt;
+&lt;p&gt;Github and Travis doesn&amp;rsquo;t offer dependent builds out of the box, so the trick goes to &amp;lsquo;signal&amp;rsquo; via a github token to trigger a Travis-CI build.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to automate via Travis CI publishing of new pelican pages to GitHub pages</title>
+      <link>https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/</link>
+      <pubDate>Fri, 07 Dec 2018 16:00:47 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/</guid>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pelican-Elegant/elegant&#34;&gt;Elegant&lt;/a&gt; theme for pelican has been undergoing a big change from individual-driven effort to community, as part of this, one of the tasks to accomplish, has been the decoupling from author blog to project site for documentation.&lt;/p&gt;
+&lt;p&gt;As we wanted this process to be both automated and allowed us to demonstrate via eat-your-own-dog-food that the theme works and how it looks, the idea was to automate the rendering of Pelican website with new documents.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

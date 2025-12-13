@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Spip on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/spip/</link>
+    <description>Recent content in Spip on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/spip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Migrar de SPIP 1.9 a 2.0</title>
+      <link>https://iranzo.io/es/blog/2008/12/13/migrar-de-spip-1.9-a-2.0/</link>
+      <pubDate>Sat, 13 Dec 2008 18:10:58 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/12/13/migrar-de-spip-1.9-a-2.0/</guid>
+      <description>&lt;p&gt;Con la reciente salida de SPIP 2.0, llega el momento de considerar migrar.&lt;/p&gt;
+&lt;p&gt;Como siempre es necesario que comprobemos si tenemos una copia de seguridad reciente, la compatibilidad de los plugins que utilizamos, etc&lt;/p&gt;
+&lt;p&gt;Una vez nos hemos armado de valor, y en el caso de la web que ahora estás leyendo, el cambio se hizo bajando el fichero zip de la nueva versión de spip, descomprimiéndolo en /var/www/html/ para conservar los contextos SELinux del servidor para páginas web y sobretodo, desactivando durante la actualización las plantillas, urls personalizadas, etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Migrar de SPIP 1.8 a 1.9</title>
+      <link>https://iranzo.io/es/blog/2006/07/01/migrar-de-spip-1.8-a-1.9/</link>
+      <pubDate>Sat, 01 Jul 2006 14:48:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2006/07/01/migrar-de-spip-1.8-a-1.9/</guid>
+      <description>&lt;h3 id=&#34;introducción-a-spip-19&#34;&gt;Introducción a SPIP 1.9&lt;/h3&gt;
+&lt;p&gt;SPIP 1.9 va a traer bastantes mejoras respecto a versiones anteriores, entre ellas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Abandono de la compatibilidad con PHP3 y con ella, las extensiones &amp;ldquo;.php3&amp;rdquo; en los ficheros&lt;/li&gt;
+&lt;li&gt;Nueva organización de las carpetas&lt;/li&gt;
+&lt;li&gt;Nuevo sistema para llamar a los esqueletos (dejando de lado también el .php3)&lt;/li&gt;
+&lt;li&gt;Nuevas balizas y filtros&lt;/li&gt;
+&lt;li&gt;Sistema de complementos&lt;/li&gt;
+&lt;li&gt;Nuevos criterios para bucles (incluido uno para paginación)&lt;/li&gt;
+&lt;li&gt;Introducción de algunos elementos de programación AJAX(Desplazan parte de la carga de trabajo del servidor al cliente que visita la página, haciendo que la navegación sea más fluida y el servidor no se sobrecargue)&lt;/li&gt;
+&lt;li&gt;Soporte UTF-8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;proceso-de-actualización-a-spip-19-de-forma-limpia&#34;&gt;Proceso de actualización a SPIP 1.9 (de forma limpia)&lt;/h3&gt;
+&lt;p&gt;El proceso lo podemos llevar a cabo de varias formas, tanto por la parte del servidor como por las plantillas, pero teniendo en cuenta una serie de precauciones.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Esqueleto basado en Mollio.org</title>
+      <link>https://iranzo.io/es/blog/2006/04/30/esqueleto-basado-en-mollio.org/</link>
+      <pubDate>Sun, 30 Apr 2006 05:06:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2006/04/30/esqueleto-basado-en-mollio.org/</guid>
+      <description>&lt;h3 id=&#34;introducción&#34;&gt;Introducción&lt;/h3&gt;
+&lt;p&gt;Estos esqueletos se basan en el modelo tipo C de la web de &lt;a href=&#34;http://www.mollio.org/&#34;&gt;www.mollio.org&lt;/a&gt;, gracias a un mensaje que se
+envió a la lista de correo de SPIP en Español.&lt;/p&gt;
+&lt;p&gt;Los esqueletos se ajustan al tamaño de pantalla y se visualizan adecuadamente tanto en &lt;a href=&#34;http://www.mozilla.org/&#34;&gt;Mozilla&lt;/a&gt; como otros navegadores, y al disponer de dos áreas de menús, se adaptaban más cómodamente al diseño modular que habíamos utilizado Laura Primo y &lt;a href=&#34;http://alufis35.uv.es/~iranzo/&#34;&gt;Pablo Iranzo Gómez&lt;/a&gt; para las webs de &lt;a href=&#34;http://Linuv.uv.es/&#34;&gt;http://Linuv.uv.es&lt;/a&gt; y la versión anterior de &lt;a href=&#34;http://Alufis35.uv.es/&#34;&gt;http://Alufis35.uv.es&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Esqueleto basado en el de spip-contrib</title>
+      <link>https://iranzo.io/es/blog/2005/02/20/esqueleto-basado-en-el-de-spip-contrib/</link>
+      <pubDate>Sun, 20 Feb 2005 22:52:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2005/02/20/esqueleto-basado-en-el-de-spip-contrib/</guid>
+      <description>&lt;h3 id=&#34;introducción&#34;&gt;Introducción&lt;/h3&gt;
+&lt;p&gt;Antes de nada&amp;hellip; Estos esqueletos se basan en los aparecidos en &lt;a href=&#34;http://www.spip-contrib.net/&#34;&gt;http://www.spip-contrib.net&lt;/a&gt;, gracias a un mensaje que se envió a la lista de correo de SPIP en Español, hablando de otros modelos basados en esos mismos (los de &lt;a href=&#34;http://www.nqnwebs.com.ar/article.php3?id_article=39&#34;&gt;nqnwebs para atén&lt;/a&gt; de Martín Gaitán)&lt;/p&gt;
+&lt;p&gt;Lo que me llamó la atención de estos esqueletos era que se adaptaban bien al tamaño de pantalla y se veían adecuadamente tanto en &lt;a href=&#34;http://www.mozilla.org/&#34;&gt;Mozilla&lt;/a&gt; como otros navegadores, y que al disponer de dos áreas de menús, se adaptaban más cómodamente al diseño modular que habíamos utilizado Laura Primo y &lt;a href=&#34;http://alufis35.uv.es/~iranzo/&#34;&gt;Pablo Iranzo Gómez&lt;/a&gt; para las webs de &lt;a href=&#34;http://Linuv.uv.es/&#34;&gt;http://Linuv.uv.es&lt;/a&gt; y la versión anterior de &lt;a href=&#34;http://Alufis35.uv.es/&#34;&gt;http://Alufis35.uv.es&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manual de la web SPIP</title>
+      <link>https://iranzo.io/es/blog/2004/11/25/manual-de-la-web-spip/</link>
+      <pubDate>Thu, 25 Nov 2004 18:44:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/11/25/manual-de-la-web-spip/</guid>
+      <description>&lt;h3 id=&#34;manual-de-instrucciones-de-la-web&#34;&gt;Manual de instrucciones de la web&lt;/h3&gt;
+&lt;h3 id=&#34;introducción&#34;&gt;Introducción&lt;/h3&gt;
+&lt;p&gt;Para facilitar el uso de la web tanto por personas acostumbradas al trabajo con ordenadores, como personas que no lo están,hacía falta una de forma de agrupar a la vez un sistema sencillo de manejar como potente en su funcionamiento y posibilidades de adaptación.&lt;/p&gt;
+&lt;p&gt;Se analizaron los diversos sistemas libres de gestión de contenidos (la opción de editar directamente las páginas quedó descartada por su complejidad y falta de uniformidad, etc), y entre los más habituales: PHP-Nuke, Post-Nuke, Drupal, etc se fueron descartando debido a los problemas de seguridad de los que adolecían los más extendidos como PHP-Nuke, o a la orientación a personas acostumbradas al manejo de estos sistemas.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

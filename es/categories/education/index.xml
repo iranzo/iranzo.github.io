@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Education on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/categories/education/</link>
+    <description>Recent content in Education on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:32:59 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/categories/education/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Consejos para el uso de Telegram en Educación</title>
+      <link>https://iranzo.io/es/blog/2023/11/26/consejos-para-el-uso-de-telegram-en-educaci%C3%B3n/</link>
+      <pubDate>Sun, 26 Nov 2023 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2023/11/26/consejos-para-el-uso-de-telegram-en-educaci%C3%B3n/</guid>
+      <description>&lt;p&gt;Telegram viene siendo utilizado con bastante frecuencia en centros educativos para permitir una comunicación sencilla mediante los &amp;lsquo;canales&amp;rsquo;, donde los docentes pueden enviar información a las familias de forma general sin que se pueda contactar con ellos directamente. Esto tiene la ventaja de facilitar la comunicación de información pero sin el riesgo de que sean acosados por las familias con preguntas, etc. fuera de los canales oficiales de comunicación. Pero es importante tener en cuenta una serie de aspectos que, posiblemente por desconocimiento, pueden arrastrar una serie de problemas/peligros.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

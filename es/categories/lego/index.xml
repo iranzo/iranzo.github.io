@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LEGO on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/categories/lego/</link>
+    <description>Recent content in LEGO on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:34:54 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/categories/lego/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clonando etiquetas Lego Dimensions</title>
+      <link>https://iranzo.io/es/blog/2020/02/04/clonando-etiquetas-lego-dimensions/</link>
+      <pubDate>Tue, 04 Feb 2020 00:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2020/02/04/clonando-etiquetas-lego-dimensions/</guid>
+      <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+&lt;p&gt;En el artículo &lt;a href=&#34;../../../es/blog/2019/08/19/lego-dimensions-rese%C3%B1a/&#34;&gt;Lego Dimensions&lt;/a&gt;, hablaba de los packs disponibles para jugar con la consola.&lt;/p&gt;
+&lt;p&gt;Desgraciadamente, no están todos disponibles para ser comprados excepto de colecionistas, &amp;lt;brickset.com&amp;gt; o algunos vendedores.&lt;/p&gt;
+&lt;p&gt;Tras algo de búsqueda, diversas páginas proporcionan información acerca de los propios &amp;rsquo;tags&amp;rsquo; o etiquetas y de cómo arreglarlos o clonarlos.&lt;/p&gt;
+&lt;h2 id=&#34;lista-de-materiales&#34;&gt;Lista de materiales&lt;/h2&gt;
+&lt;p&gt;Cada base de Lego Dimensions es una etiqueta NFC &lt;code&gt;NTAG 213&lt;/code&gt; que puede ser sólo lectura (las figuritas) o lectura-escritura (vehículos).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lego Dimensions Reseña</title>
+      <link>https://iranzo.io/es/blog/2019/08/19/lego-dimensions-rese%C3%B1a/</link>
+      <pubDate>Mon, 19 Aug 2019 22:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2019/08/19/lego-dimensions-rese%C3%B1a/</guid>
+      <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+&lt;p&gt;Lego Dimensions es un juego para varias plataformas (XBox, Wii U, PlayStation) que consta de una plataforma con lectores NFC con varias zonas y leds de colores que permiten interactuar con el videojuego desde el mundo físico.&lt;/p&gt;
+&lt;p&gt;El &amp;lsquo;starter pack&amp;rsquo; viene con las figuras de SuperCool, Batman y Gandalf, así como piezas adicionales para decorar la &amp;lsquo;base lectora&amp;rsquo; construyendo un portal.&lt;/p&gt;
+&lt;p&gt;La historia principal se basa en cómo estos tres personajes (Gandalf, Batman y Supercool) se encuentran e intentan buscar juntos a sus amigos pasando por varios &lt;code&gt;mundos&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

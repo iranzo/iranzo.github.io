@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bookcrossing on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/bookcrossing/</link>
+    <description>Recent content in Bookcrossing on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:45:44 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/bookcrossing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bookcrossing -  Libera tus libros</title>
+      <link>https://iranzo.io/es/blog/2003/06/03/bookcrossing-libera-tus-libros/</link>
+      <pubDate>Tue, 03 Jun 2003 20:13:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2003/06/03/bookcrossing-libera-tus-libros/</guid>
+      <description>&lt;p&gt;Ha salido en las noticias de este medio día un proyecto de intercambio de libros a nivel mundial. La idea es que en lugar de tener los libros almacenando polvo en casa, los registremos en una web: &lt;a href=&#34;http://www.bookcrossing.com/&#34;&gt;http://www.bookcrossing.com&lt;/a&gt; y en base a los datos de registro, le pongamos una pegatina o una nota manuscrita (en la web hay modelos listos para imprimir de la pegatina) que lo identifiquen.&lt;/p&gt;
+&lt;p&gt;Una vez identificado el libro, la cosa consiste en ponerlo en circulación: &amp;ldquo;olvidarlo&amp;rdquo; en una cafetería, una estatua, un baño, simplemente dárselo a alguien que vaya a otra ciudad, etc.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

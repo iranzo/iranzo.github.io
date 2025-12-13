@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fiv on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/fiv/</link>
+    <description>Recent content in Fiv on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/fiv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fecundación in Vitro (FIV)</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/f/fiv/</link>
+      <pubDate>Tue, 21 Dec 2021 19:22:47 +0200</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/f/fiv/</guid>
+      <description>&lt;p&gt;La fecundación in vitro es un proceso en el cual, la unión del espermatozoide y el óvulo se realiza en un laboratorio, y una vez el óvulo ha sido fecundado, se deposita en el útero con la intención de que anide y comience el proceso del embarazo con la &lt;a href=&#34;../../../es/bebe/vocabulario/i/implantacion/&#34;&gt;implantación&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

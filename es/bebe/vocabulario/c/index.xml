@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>c on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/bebe/vocabulario/c/</link>
+    <description>Recent content in c on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/bebe/vocabulario/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calostro</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/c/calostro/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/c/calostro/</guid>
+      <description>&lt;p&gt;El calostro es una secreción amarillenta formada principalmente por inmunoglobulina que sale del pecho en los días alrededor del parto y proporciona &lt;code&gt;defensas&lt;/code&gt; al bebé.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cólicos</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/c/colicos/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/c/colicos/</guid>
+      <description>&lt;p&gt;Los cólicos son dolor del bebé, expresado en forma de &lt;a href=&#34;../../../../es/bebe/llanto/&#34;&gt;llantos&lt;/a&gt;, que duran al menos 3 horas al día durante al menos 3 días por semana durante más de una semana.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contracciones</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/c/contracciones/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/c/contracciones/</guid>
+      <description>&lt;p&gt;Las &lt;a href=&#34;../../../../es/bebe/contracciones/&#34;&gt;contracciones&lt;/a&gt; son movimientos del útero (recordemos que es un músculo) que duran entre 30 y 60 segundos y son intermitentes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cordón umbilical</title>
+      <link>https://iranzo.io/es/bebe/vocabulario/c/cordonumbilical/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/bebe/vocabulario/c/cordonumbilical/</guid>
+      <description>&lt;p&gt;El &lt;a href=&#34;../../../../es/bebe/cordon/&#34;&gt;cordón umbilical&lt;/a&gt; es el &amp;rsquo;tubo&amp;rsquo; que conecta al bebé con la placenta y del cual conserva un trozo al nacer hasta que se seca y se cae por sí mismo.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

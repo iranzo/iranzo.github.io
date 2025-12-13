@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Redken_bot on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/redken_bot/</link>
+    <description>Recent content in Redken_bot on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:34:12 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/redken_bot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>In action...@redken_bot with examples</title>
+      <link>https://iranzo.io/blog/2022/01/20/in-action...@redken_bot-with-examples/</link>
+      <pubDate>Thu, 20 Jan 2022 17:20:14 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2022/01/20/in-action...@redken_bot-with-examples/</guid>
+      <description>See how to use @redken_bot in Telegram or discord with some examples!</description>
+    </item>
+    <item>
+      <title>Redken machine learning for spam detection</title>
+      <link>https://iranzo.io/blog/2021/06/24/redken-machine-learning-for-spam-detection/</link>
+      <pubDate>Thu, 24 Jun 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/06/24/redken-machine-learning-for-spam-detection/</guid>
+      <description>&lt;p&gt;For some of the telegram groups I&amp;rsquo;m in, I&amp;rsquo;ve been detecting users that after some period of time, just publish spam messages of any topic.&lt;/p&gt;
+&lt;p&gt;There are many bots for controlling when a user joins, by showing a CAPTCHA that user must resolve (either clicking a button, answering a mathematical operation, inputting a CAPTCHA image text, etc).&lt;/p&gt;
+&lt;p&gt;Some time ago, a colleague was using Machine Learning and I wanted to have a look at it and it would make a good feature to implement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Language detection in @redken_bot</title>
+      <link>https://iranzo.io/blog/2020/03/25/language-detection-in-@redken_bot/</link>
+      <pubDate>Wed, 25 Mar 2020 20:00:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/03/25/language-detection-in-@redken_bot/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Before the move to Python3, &lt;a href=&#34;https://t.me/redken_bot&#34;&gt;redken&lt;/a&gt; had per-group language configuration by using i18n, with the upgrade/rewrite of Python3 code there were some issues and I had to remove the support, defaulting everything to English (most of the outputs where already in English so not a great loss).&lt;/p&gt;
+&lt;p&gt;On another side, having to manually configure each channel could be problematic as most users just add the bot to their groups but don&amp;rsquo;t care about other settings that might be useful like &lt;code&gt;welcome&lt;/code&gt; message, &lt;code&gt;inactivity&lt;/code&gt; for kicking out inactive users, etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>API access for Google Calendar and Google Sheet access</title>
+      <link>https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/</link>
+      <pubDate>Thu, 28 Nov 2019 17:11:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/11/28/api-access-for-google-calendar-and-google-sheet-access/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;During last days I&amp;rsquo;ve been playing around with python and API access to Google Sheets.&lt;/p&gt;
+&lt;p&gt;Since some time ago, I already experimented with ICS parsing from python because added &lt;a href=&#34;https://t.me/redken_bot&#34;&gt;https://t.me/redken_bot&lt;/a&gt; access to calendar files (&lt;code&gt;.ics&lt;/code&gt;) so that it can provide daily reminders on chats about the events happening for the specific date, and had the chance to propose it&amp;rsquo;s usage to cover a specific use case: Accessing a spreadsheet in Google Sheets and parse its contents and output an ICS file so that the events listed and the dates specific for each one are available in an easier-to-consume approach.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python and iCalendar ICS processing</title>
+      <link>https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/</link>
+      <pubDate>Tue, 17 Sep 2019 07:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/</guid>
+      <description>This article covers  how to do Internet Calendar processing of events in python and how those are leveraged in @redken_bot</description>
+    </item>
+    <item>
+      <title>@redken_bot</title>
+      <link>https://iranzo.io/redken_bot/</link>
+      <pubDate>Mon, 04 Mar 2019 18:34:14 +0100</pubDate>
+      <guid>https://iranzo.io/redken_bot/</guid>
+      <description>Learn about Redken Telegram Bot usage and configuration settings.</description>
+    </item>
+    <item>
+      <title>Telegram Redken bot documentation</title>
+      <link>https://iranzo.io/redkendoc/telegram-redken_bot-documentation/</link>
+      <pubDate>Mon, 04 Mar 2019 18:34:14 +0100</pubDate>
+      <guid>https://iranzo.io/redkendoc/telegram-redken_bot-documentation/</guid>
+      <description>&lt;p&gt;The new document is at &lt;a href=&#34;../../redkendoc/telegram-redken_bot-documentation/&#34;&gt;Redken Documentation&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unit testing for stampy</title>
+      <link>https://iranzo.io/blog/2016/11/05/unit-testing-for-stampy/</link>
+      <pubDate>Sat, 05 Nov 2016 19:39:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2016/11/05/unit-testing-for-stampy/</guid>
+      <description>&lt;p&gt;Since my prior post on &lt;a href=&#34;../../blog/2016/07/21/contributing-to-openstack/&#34;&gt;Contributing to OpenStack&lt;/a&gt;, I liked the idea of using some automated tests to validate functionality and specifically, the corner cases that could arise when playing with the code.&lt;/p&gt;
+&lt;p&gt;Most of the errors fixed so far on stampy, were related with some pieces of the code not properly handling UTF or some information returned, etc and still it has improved, the idea of ensuring that prior errors were not put back into the code when some other changes were performed, started to arise to be a priority.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Writing a Telegram.org bot in Python</title>
+      <link>https://iranzo.io/blog/2015/06/26/writing-a-telegram.org-bot-in-python/</link>
+      <pubDate>Fri, 26 Jun 2015 17:12:30 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/06/26/writing-a-telegram.org-bot-in-python/</guid>
+      <description>&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://telegram.org&#34;&gt;Telegram.org&lt;/a&gt; recently announced the support for writing bots for their platform, by providing details at &lt;a href=&#34;https://core.telegram.org/bots&#34;&gt;https://core.telegram.org/bots&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was missing for a long time the ability to get a count on karma like we&amp;rsquo;ve on
+IRC servers, so I started with it.&lt;/p&gt;
+&lt;p&gt;My first try is published at github repo in &lt;a href=&#34;https://github.com/iranzo/stampython&#34;&gt;https://github.com/iranzo/stampython&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;At the moment it just uses the polling interface to check the new messages received on the channels the bot is in, and later processes them and send the relevant replies via messages.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

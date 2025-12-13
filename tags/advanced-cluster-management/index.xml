@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Advanced Cluster Management on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/advanced-cluster-management/</link>
+    <description>Recent content in Advanced Cluster Management on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/advanced-cluster-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kernel Module Management testing</title>
+      <link>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</guid>
+      <description>&lt;p&gt;Following on the &lt;a href=&#34;../../blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/&#34;&gt;Using Kcli to prepare for OCM testing&lt;/a&gt;, we&amp;rsquo;re going to prepare KMM testing in Hub-Spoke approach.&lt;/p&gt;
+&lt;p&gt;First we need to prepare our &lt;code&gt;.docker/config.json&lt;/code&gt; with the contents of our OpenShift pull secret used with &lt;code&gt;Kcli&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir -p ~/.docker/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp openshift_pull.json ~/.docker/config.json
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;warning-advisories&#34;&gt;Warning advisories&lt;/h2&gt;
+&lt;div class=&#34;admonition note&#34;&gt;
+    &lt;p class=&#34;admonition-title&#34;&gt;Note&lt;/p&gt;
+    &lt;p class=&#34;admonition&#34;&gt;Semi-scripted version available at &lt;a href=&#34;automate.sh&#34;&gt;automate.sh&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;admonition warning&#34;&gt;
+    &lt;p class=&#34;admonition-title&#34;&gt;Warning&lt;/p&gt;
+    &lt;p class=&#34;admonition&#34;&gt;We&amp;rsquo;re using pre-release bits of the software, that&amp;rsquo;s why we need to define a custom catalog for both the Hub and the Spokes. Once KMM is released it will be available from the official one and just the Policy will be needed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Kcli to prepare for Open Cluster Management testing</title>
+      <link>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</link>
+      <pubDate>Fri, 23 Dec 2022 14:04:45 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/karmab/Kcli&#34;&gt;Kcli&lt;/a&gt; allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of &lt;code&gt;plans&lt;/code&gt; it allows to automate most of the setup required to have an environment ready.&lt;/p&gt;
+&lt;p&gt;In our case, let&amp;rsquo;s setup an environment to practice with &lt;a href=&#34;https://open-cluster-management.io/getting-started/quick-start/&#34;&gt;Open Cluster Management&lt;/a&gt; but instead of using kind clusters, let&amp;rsquo;s use VM&amp;rsquo;s.&lt;/p&gt;
+&lt;div class=&#34;admonition note&#34;&gt;
+    &lt;p class=&#34;admonition-title&#34;&gt;Note&lt;/p&gt;
+    &lt;p class=&#34;admonition&#34;&gt;We&amp;rsquo;ll require to setup an &lt;code&gt;openshift_pull.json&lt;/code&gt; file for Kcli to consume when accessing the required resources for this to work. That file, contains the credentials for accessing several container registries used for the deployment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zero Touch Provisioning OpenShift for Edge computing</title>
+      <link>https://iranzo.io/blog/2022/03/12/zero-touch-provisioning-openshift-for-edge-computing/</link>
+      <pubDate>Sat, 12 Mar 2022 09:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2022/03/12/zero-touch-provisioning-openshift-for-edge-computing/</guid>
+      <description>This article describes how to use python to bind against an LDAP server and  perform queries</description>
+    </item>
+  </channel>
+</rss>

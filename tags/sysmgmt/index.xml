@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sysmgmt on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/sysmgmt/</link>
+    <description>Recent content in Sysmgmt on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/sysmgmt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins for running CI tests</title>
+      <link>https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/</link>
+      <pubDate>Thu, 17 Aug 2017 23:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/08/17/jenkins-for-running-ci-tests/</guid>
+      <description>&lt;h2 id=&#34;why&#34;&gt;Why?&lt;/h2&gt;
+&lt;p&gt;While working on &lt;a href=&#34;https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems./&#34;&gt;Citellus&lt;/a&gt; and &lt;a href=&#34;https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts./&#34;&gt;Magui&lt;/a&gt; it soon became evident that Unit testing for validating the changes was a requirement.&lt;/p&gt;
+&lt;p&gt;Initially, using a &lt;code&gt;.travis.yml&lt;/code&gt; file contained in the repo and the free service provided by &lt;a href=&#34;https://travis-ci.org&#34;&gt;https://travis-ci.org&lt;/a&gt; we soon got &lt;a href=&#34;https://github.com&#34;&gt;https://github.com&lt;/a&gt; repo providing information about if the builds succeeded or not.&lt;/p&gt;
+&lt;p&gt;When it was decided to move to &lt;a href=&#34;https://gerrithub.io&#34;&gt;https://gerrithub.io&lt;/a&gt; to work in a more similar way to what is being done in upstream, we improved on the code commenting (peer review), but we lost the ability to run the tests in an automated way until the change was merged into github.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Magui for analysis of issues across several hosts.</title>
+      <link>https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts./</link>
+      <pubDate>Mon, 31 Jul 2017 12:45:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/07/31/magui-for-analysis-of-issues-across-several-hosts./</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;../../blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems./&#34;&gt;Citellus&lt;/a&gt; allows to check a sosreport against known problems identified on the provided tests.&lt;/p&gt;
+&lt;p&gt;This approach is easy to implement and easy to test but has limitations when a problem can span across several hosts and only the problem reveals itself when a general analysis is performed.&lt;/p&gt;
+&lt;p&gt;Magui tries to solve that by running the analysis functions inside citellus across a set of sosreports, unifying the data obtained per citellus plugin.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Citellus: framework for detecting known issues in systems.</title>
+      <link>https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems./</link>
+      <pubDate>Wed, 26 Jul 2017 22:26:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2017/07/26/citellus-framework-for-detecting-known-issues-in-systems./</guid>
+      <description>Learn about Citellus, a framework that will help you detect known issues, and more insightful information about your system</description>
+    </item>
+    <item>
+      <title>InfraRed for deploying OpenStack</title>
+      <link>https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/</link>
+      <pubDate>Thu, 23 Feb 2017 23:27:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2017/02/23/infrared-for-deploying-openstack/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/redhat-openstack/infrared/&#34;&gt;InfraRed&lt;/a&gt; is tool that allows to install/provision OpenStack. You can find the documentation for the project at &lt;a href=&#34;http://infrared.readthedocs.io&#34;&gt;http://infrared.readthedocs.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, developers and users are online in FreeNode at #infrared channel.&lt;/p&gt;
+&lt;h2 id=&#34;why-infrared&#34;&gt;Why InfraRed?&lt;/h2&gt;
+&lt;p&gt;Deploying OSP with OSP-d (TripleO) requires several setup steps for preparation, deployment, etc. InfraRed simplifies them by automating with ansible most of those steps and configuration.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It allows to deploy several OSP versions&lt;/li&gt;
+&lt;li&gt;Allows to ease connection to installed vm roles (Ceph, Computes, Controllers, Undercloud)&lt;/li&gt;
+&lt;li&gt;Allows to define working environments so one InfraRed-running host can be used to manage different environments&lt;/li&gt;
+&lt;li&gt;and much more&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setup-of-infrared-running-host&#34;&gt;Setup of InfraRed-running host&lt;/h2&gt;
+&lt;p&gt;Setting InfraRed is quite easy, at the moment the version 2 (branch on github) is working pretty well.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting started with Ansible</title>
+      <link>https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/</link>
+      <pubDate>Mon, 20 Feb 2017 23:10:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2017/02/20/getting-started-with-ansible/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve started to get familiar with &lt;a href=&#34;http://www.ansible.com&#34;&gt;Ansible&lt;/a&gt; because,
+apart of getting more and more accepted for OSP-related tasks and
+installation, I wanted to automate some tasks we needed to setup some servers
+for the OpenStack group I work for.&lt;/p&gt;
+&lt;p&gt;First of all, it&amp;rsquo;s recommended to get latest version of ansible (tested on
+RHEL7 and Fedora), but in order not to mess with the system python libraries, it&amp;rsquo;s convenient to use python&amp;rsquo;s virtual environments.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

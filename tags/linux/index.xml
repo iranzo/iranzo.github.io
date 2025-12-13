@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/linux/</link>
+    <description>Recent content in Linux on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:35:31 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mydlink Website from Linux</title>
+      <link>https://iranzo.io/blog/2023/11/05/mydlink-website-from-linux/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2023/11/05/mydlink-website-from-linux/</guid>
+      <description>&lt;p&gt;Hi had the chance to buy a Dlink camera, waterproof, with magnetic base and rated for exteriors for a really great price a while ago &lt;a href=&#34;https://www.amazon.es/dp/B07KTT14BH?tag=redken-21&#34;&gt;D-Link DCS 8600LH 🛒#ad&lt;/a&gt; and later a camera with pan and tilt from Dlink too &lt;a href=&#34;https://www.amazon.es/dp/B08VNL3NHL?tag=redken-21&#34;&gt;D-Link DCS-6500LH 🛒#ad&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The camera, of course has an application for configuration, viewing the image, etc named &amp;lsquo;mydlink&amp;rsquo; which has a web counterpart at &lt;a href=&#34;https://mydlink.com/&#34;&gt;https://mydlink.com/&lt;/a&gt;, but unfortunately, when you try to access the website, there&amp;rsquo;s little you can do:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No matching key found</title>
+      <link>https://iranzo.io/tips/no-matching-key-found/</link>
+      <pubDate>Fri, 25 Aug 2023 09:42:48 +0000</pubDate>
+      <guid>https://iranzo.io/tips/no-matching-key-found/</guid>
+      <description>&lt;p&gt;As you might have experienced&amp;hellip; using a recent system to connect to a legacy one could be complicated as some insecure protocols have been disabled, with a message like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Unable to negotiate with 192.168.2.82 port 22: no matching host key type found. Their offer: ssh-rsa,ssh-dss
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Create an entry like this in your &lt;code&gt;.ssh/config&lt;/code&gt; file, so that insecure methods can be used to connect to a specific host:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Host 192.168.2.82
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	HostKeyAlgorithms=+ssh-rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	KexAlgorithms=+diffie-hellman-group1-sha1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  PubkeyAcceptedKeyTypes=+ssh-rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	User root
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or alternatively on the command line:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RHCE and RHCSA tips and tricks</title>
+      <link>https://iranzo.io/blog/2022/07/13/rhce-and-rhcsa-tips-and-tricks/</link>
+      <pubDate>Wed, 13 Jul 2022 21:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/07/13/rhce-and-rhcsa-tips-and-tricks/</guid>
+      <description>&lt;p&gt;I did the RHCE exam some time ago, and still there are some tricks and
+advices I tell the people to bear in mind some of the things I used and that were also provided in the &lt;a href=&#34;https://s.admins.guru/buyonamazon&#34;&gt;Red Hat Enterprise 8 Administration&lt;/a&gt; book:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t remember every step, it&amp;rsquo;s not effective, for example as I don&amp;rsquo;t recall syntax for BIND, I do remember package that has some files with examples and I use that one to check what I need to do&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;mlocate&lt;/code&gt; and run &lt;code&gt;updatedb&lt;/code&gt; as soon as you start, then you can use &lt;code&gt;locate &amp;lt;file&amp;gt;&lt;/code&gt; to find out files in your system&lt;/li&gt;
+&lt;li&gt;Use your preferred editor&amp;hellip; it&amp;rsquo;s common to use &lt;code&gt;vi&lt;/code&gt; or &lt;code&gt;vim&lt;/code&gt; as it&amp;rsquo;s pretty standard, but if you&amp;rsquo;re used to another, make yourself comfortable in the system.&lt;/li&gt;
+&lt;li&gt;As one instructor like to say: &amp;ldquo;Anyone with unlimited amount of time will be able to pass the exam&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;RHCE is a performance-based exam, that means that you need to cover all the required goals within the exam duration, and in the end, the goals is to accomplish, not to do in the &lt;code&gt;smarter&lt;/code&gt; way.
+&lt;ul&gt;
+&lt;li&gt;For example, if you&amp;rsquo;re told to configure &lt;code&gt;resolv.conf&lt;/code&gt; you can either use &lt;code&gt;nmcli&lt;/code&gt; to modify the settings or you can pipe the results to it via &lt;code&gt;echo nameserver 1.1.1.1 &amp;gt; /etc/resolv.conf&lt;/code&gt;, in the end, both will have the same effect, and of course, using &lt;code&gt;nmcli&lt;/code&gt; will be smarter when you&amp;rsquo;re keeping multiple systems and using automation&amp;hellip; but for the exam, the goal is to focus on the fastest path to master at it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can find more tricks at &lt;a href=&#34;https://s.admins.guru/buyonamazon&#34;&gt;Red Hat Enterprise 8 Administration&lt;/a&gt;
+&lt;p&gt;
+Enjoy! (and if you do, you can
+&lt;a href=&#34;https://ko-fi.com/I2I4KDA0V&#34; target=&#34;_blank&#34;&gt;
+  &lt;img src=&#34;https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png&#34; height=&#39;36&#39; style=&#39;border:0px;height:36px;vertical-align:middle;display:inline-block;&#39; border=&#34;0&#34;&gt;
+&lt;/img&gt;
+Buy Me a Coffee
+&lt;/a&gt;
+)
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unsupported upgrade for RHEL-based distributions without reinstallation</title>
+      <link>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</link>
+      <pubDate>Sat, 23 Apr 2022 21:23:48 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/04/23/unsupported-upgrade-for-rhel-based-distributions-without-reinstallation/</guid>
+      <description>&lt;p&gt;Most systems, based on RHEL, were not able to upgrade without
+reinstallation, or best said, not supported. The new version, that was
+released at around 18 months later contained so many changes that it was
+hard to test the upgrades themselves until &lt;code&gt;leapp&lt;/code&gt; was introduced.&lt;/p&gt;
+&lt;p&gt;Check the lifecycle here: &lt;a href=&#34;https://access.redhat.com/support/policy/updates/errata&#34;&gt;https://access.redhat.com/support/policy/updates/errata&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;However, the biggest problem could be the incompatibility of packages or
+package formats&amp;hellip; but as usually there were some middle layers it was
+possible to upgrade without reinstallation by performing some manual steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logitech R400 remote presentation controller on Linux</title>
+      <link>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</link>
+      <pubDate>Fri, 01 Apr 2022 07:31:42 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</guid>
+      <description>&lt;p&gt;Since long ago I had it in my mind getting one remote presenter, but most presenters just had two buttons, and the ones that looked to be valid for my use case, required four and seems that only &lt;code&gt;Rii&lt;/code&gt; had similar devices, but I didn&amp;rsquo;t went for it as it was not a huge need, so I ended up with a mini keyboard I had for Raspberry Pi and some debugging in case I had that need.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ansible setup for VPN using WireGuard</title>
+      <link>https://iranzo.io/blog/2022/03/17/ansible-setup-for-vpn-using-wireguard/</link>
+      <pubDate>Thu, 17 Mar 2022 20:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/03/17/ansible-setup-for-vpn-using-wireguard/</guid>
+      <description>Learn on how to setup a VPN using WireGuard using Ansible</description>
+    </item>
+    <item>
+      <title>LDAP query from Python</title>
+      <link>https://iranzo.io/blog/2021/10/19/ldap-query-from-python/</link>
+      <pubDate>Tue, 19 Oct 2021 22:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/10/19/ldap-query-from-python/</guid>
+      <description>This article describes how to use python to bind against an LDAP server and perform queries</description>
+    </item>
+    <item>
+      <title>How to stake on NYM Validator 🐳🐳🐳</title>
+      <link>https://iranzo.io/blog/2021/09/28/how-to-stake-on-nym-validator/</link>
+      <pubDate>Tue, 28 Sep 2021 17:20:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/09/28/how-to-stake-on-nym-validator/</guid>
+      <description>This article describes how to stake your token against a NYM cosmos validator</description>
+    </item>
+    <item>
+      <title>Geo replication with syncthing</title>
+      <link>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</link>
+      <pubDate>Sat, 12 Jun 2021 21:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</guid>
+      <description>&lt;p&gt;Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc&lt;/p&gt;
+&lt;p&gt;After being using BitTorrent sync and later resilio sync (even if I didn&amp;rsquo;t fully liked the idea of it being not open source), I gave up. My NAS with 16 GB of ram, even if a bit older (HP N54L), seemed not to have enough memory to run it, and was constantly swapping.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to check if a system is virtual</title>
+      <link>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</link>
+      <pubDate>Mon, 10 May 2021 14:30:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</guid>
+      <description>&lt;p&gt;I was improving a playbook in Ansible and wanted to find a way to find if a system was virtual or not to decide about some tunning like setting &lt;code&gt;tuned-adm profile virtual-guest&lt;/code&gt; or disable the power off when the lid is closed.&lt;/p&gt;
+&lt;p&gt;After some research and try-except situations I got to this one that seemed to work (I had to tune it as one desktop machine was missing the /sys entry I was using before):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to run a NYM Validator</title>
+      <link>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-validator/</link>
+      <pubDate>Sun, 09 May 2021 12:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-validator/</guid>
+      <description>&lt;p&gt;As said in the article about &lt;a href=&#34;../../blog/2021/05/09/how-to-run-a-nym-mixnode/&#34;&gt;mixnodes&lt;/a&gt;, NYM is a technology aiming for providing privacy for the communications.&lt;/p&gt;
+&lt;p&gt;Apart of the mixnodes, other key piece in the infrastructure are the validators.&lt;/p&gt;
+&lt;p&gt;As said, the project uses Open Source technology to run, and they have a nice docs with details on how to run a node at &lt;a href=&#34;https://nymtech.net/docs/&#34;&gt;https://nymtech.net/docs/&lt;/a&gt;, and the one relevant for mixnodes at &lt;a href=&#34;https://nymtech.net/docs/run-nym-nodes/validators/&#34;&gt;https://nymtech.net/docs/run-nym-nodes/validators/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this case, we can follow the instructions for compiling, but I faced some issues (compiling went fine, but initial sync failed), so in this case, we will use the pre-compiled version provided with the &lt;code&gt;0.10.0&lt;/code&gt; release.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to run a NYM mixnode</title>
+      <link>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</link>
+      <pubDate>Sun, 09 May 2021 12:30:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/09/how-to-run-a-nym-mixnode/</guid>
+      <description>&lt;p&gt;Some time ago I&amp;rsquo;ve started running a NYM mixnode. &lt;code&gt;NYM&lt;/code&gt; is a project that targets improving privacy by decomposing network packages from different hosts, so that origin and target cannot be traced.&lt;/p&gt;
+&lt;p&gt;You can check more about the NYM project at their site at &lt;a href=&#34;https://nymtech.net/&#34;&gt;https://nymtech.net/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The project uses Open Source technology to run, and they have a nice docs with details on how to run a node at &lt;a href=&#34;https://nymtech.net/docs/&#34;&gt;https://nymtech.net/docs/&lt;/a&gt;, and the one relevant for mixnodes at &lt;a href=&#34;https://nymtech.net/docs/run-nym-nodes/mixnodes/&#34;&gt;https://nymtech.net/docs/run-nym-nodes/mixnodes/&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubiquiti UniFi for WiFi network</title>
+      <link>https://iranzo.io/blog/2021/01/01/ubiquiti-unifi-for-wifi-network/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/01/01/ubiquiti-unifi-for-wifi-network/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;During the pandemic I wanted to work a bit on the wireless system at home, the router provided by the ISP was having already issues that resulted in WiFi devices not connecting and only new devices were able to report &amp;lsquo;AP full&amp;rsquo; message when the connection failed.&lt;/p&gt;
+&lt;p&gt;First I started testing the ASUS devices like the &lt;a href=&#34;https://www.amazon.es/dp/B07SCBMMS8?tag=redken-21&#34;&gt;AX92U&lt;/a&gt; which had WiFi 6 support. My flat is not that big, but as I had some issues with 2.4Ghz devices like smart power plugs, I decided to go for a second unit of the same router and test the &lt;code&gt;AI-Mesh&lt;/code&gt; that was announced by ASUS as the best way to extend coverage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dell racadm remote ISO load</title>
+      <link>https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/</link>
+      <pubDate>Tue, 12 May 2020 13:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/</guid>
+      <description>&lt;p&gt;In order to test IPv6 deployment on Dell hardware I was in need to patch the servers to ensure that UEFI boot mode is in use.&lt;/p&gt;
+&lt;p&gt;Normally I would had use the DSU that runs from within Linux, but as the servers are part of an OpenShift installation (using &lt;a href=&#34;https://github.com/openshift-kni/baremetal-deploy&#34;&gt;baremetal-deploy&lt;/a&gt;) and using CoreOS as the underlying system I wanted to load ISO from HTTP server on the &lt;code&gt;deployhost&lt;/code&gt; (running RHEL).&lt;/p&gt;
+&lt;p&gt;The command is not that hard, let&amp;rsquo;s first define some variables:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Git commit reordering</title>
+      <link>https://iranzo.io/blog/2020/02/13/git-commit-reordering/</link>
+      <pubDate>Thu, 13 Feb 2020 20:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/13/git-commit-reordering/</guid>
+      <description>&lt;p&gt;While I was working for a presentation for kid&amp;rsquo;s school at &lt;a href=&#34;%22campo-magnetico-auroras-fases-lunares-cohetes.md%22&#34;&gt;Magnetic field, Aurora, Lunar Phases and Rockets&lt;/a&gt;, I added 4 big videos to the presentation (as I was going to use them offline while presenting).&lt;/p&gt;
+&lt;p&gt;I know what git is not the place for big binary files, and even Github proposed to use the LFS backend for that, but as it was just temporary, I went ahead.&lt;/p&gt;
+&lt;p&gt;After that commit, I also wrote two more articles, the one on &lt;a href=&#34;../../blog/2020/02/08/lego-speed-champions-2020-review/&#34;&gt;Lego Speed Champions&lt;/a&gt; and the one on &lt;a href=&#34;../../blog/2020/02/12/galleria.io-and-photoswipe/&#34;&gt;Galleria.io and PhotoSwipe&lt;/a&gt;, so it became a problem to have big files in between, when my plan was to remove them in the end.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python and iCalendar ICS processing</title>
+      <link>https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/</link>
+      <pubDate>Tue, 17 Sep 2019 07:00:36 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/09/17/python-and-icalendar-ics-processing/</guid>
+      <description>This article covers  how to do Internet Calendar processing of events in python and how those are leveraged in @redken_bot</description>
+    </item>
+    <item>
+      <title>Argos extension writing for Gnome3</title>
+      <link>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</guid>
+      <description>&lt;p&gt;I was using from time ago this extension for Gnome named &lt;a href=&#34;https://github.com/p-e-w/argos&#34;&gt;Argos&lt;/a&gt; which allows to create useful data views using scripts written in whatever language of choice available, bash included.&lt;/p&gt;
+&lt;p&gt;So far I had just a simple extension writing a UNICODE character, but with the suggestion of my colleague &lt;a href=&#34;http://www.sombrerorojo.com/&#34;&gt;Javi Ramírez&lt;/a&gt;, I decided to use the motivational idea to write a simple script to calculate how much you&amp;rsquo;ve earned so far in the day and show that information at a glance on your menu bar.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Killercoda scenario creation</title>
+      <link>https://iranzo.io/blog/2019/06/11/killercoda-scenario-creation/</link>
+      <pubDate>Tue, 11 Jun 2019 21:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/11/killercoda-scenario-creation/</guid>
+      <description>&lt;p&gt;After some time checking the scenarios at &lt;a href=&#34;https://learn.openshift.com&#34;&gt;https://learn.openshift.com&lt;/a&gt;, I decided to give it a try.&lt;/p&gt;
+&lt;p&gt;With the help of &lt;a href=&#34;https://linuxera.org&#34;&gt;Mario Vázquez&lt;/a&gt;, author of &lt;a href=&#34;https://learn.openshift.com/introduction/federated-clusters/&#34;&gt;Getting Started with Kubefed&lt;/a&gt;, I did create two scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://killercoda.com/citellus/citellus&#34;&gt;How to use Citellus&lt;/a&gt; on &lt;a href=&#34;https://risuorg.github.io&#34;&gt;Citellus: Troubleshooting automation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://killercoda.com/iranzo/kubevirt&#34;&gt;KubeVirt&lt;/a&gt; on a &amp;lsquo;browser-based&amp;rsquo; approach for &lt;a href=&#34;https://kubevirt.io/quickstart_minikube/&#34;&gt;MiniKube&lt;/a&gt; setup for validating KubeVirt: Kubernetes with VM Virtualization (versus the regular containers).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can check how them can be created by looking at their code at: &lt;a href=&#34;https://github.com/iranzo/katacoda-scenarios&#34;&gt;killercoda Scenarios&lt;/a&gt; or the &amp;lsquo;playable&amp;rsquo; version at &lt;a href=&#34;https://killercoda.com/iranzo/&#34;&gt;https://killercoda.com/iranzo/&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Use custom domain name with Blog-O-Matic</title>
+      <link>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</guid>
+      <description>&lt;p&gt;As a recipe, if you want to enable a custom domain name on &lt;a href=&#34;../../blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./&#34;&gt;blog-o-matic&lt;/a&gt; a special file needs to be created on the &amp;lsquo;GitHub Pages&amp;rsquo; served &amp;lsquo;master&amp;rsquo; branch.&lt;/p&gt;
+&lt;p&gt;In order to do so, edit &lt;code&gt;pelicanconf.py&lt;/code&gt; and add the following differences:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;diff --git a/pelicanconf.py b/pelicanconf.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;index 680abcb..fc3dd8f 100644
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;--- a/pelicanconf.py
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+++ b/pelicanconf.py
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@@ -46,13 +46,16 @@ AMAZON_ONELINK = &amp;#34;b63a2115-85f7-43a9-b169-5f4c8c275655&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; # Extra files customization
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-EXTRA_PATH_METADATA = {}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+EXTRA_PATH_METADATA = {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+    &amp;#39;extra/CNAME&amp;#39;: {&amp;#39;path&amp;#39;: &amp;#39;CNAME&amp;#39;},
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; EXTRA_TEMPLATES_PATHS = [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &amp;#34;plugins/revealmd/templates&amp;#34;,  # eg: &amp;#34;plugins/revealmd/templates&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-STATIC_PATHS = [ &amp;#39;images&amp;#39; ]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+STATIC_PATHS = [ &amp;#39;images&amp;#39; , &amp;#39;extra&amp;#39;]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ## ONLY TOUCH IF YOU KNOW WHAT YOU&amp;#39;RE DOING!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will copy the &lt;code&gt;CNAME&lt;/code&gt; file created in &lt;code&gt;content/extra/CNAME&lt;/code&gt; to the resulting &amp;lsquo;master&amp;rsquo; branch as &lt;code&gt;/CNAME&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AwesomeSlides for converting LibreOffice ODP into revealjs</title>
+      <link>https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/</link>
+      <pubDate>Tue, 22 Jan 2019 20:51:27 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;For some time now, I wanted to put the presentations I did in the past to be available, and since I&amp;rsquo;ve added support to &lt;a href=&#34;../../blog/2019/01/20/fixing-pelican-revealjs-plugin/&#34;&gt;my blog to render revealjs slides&lt;/a&gt;, I wanted to also put other presentations that I did in the past, probably (or for sure) outdated, but that were sitting in my computer drive.&lt;/p&gt;
+&lt;p&gt;The presentations already got several transformations, but in the actual status they are stored as LibreOffice ODP files, that made it a bit difficult.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fixing pelican revealjs plugin</title>
+      <link>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</link>
+      <pubDate>Sun, 20 Jan 2019 23:12:17 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;After my recent talk about &lt;a href=&#34;../../blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./&#34;&gt;blog-o-matic&lt;/a&gt;, I was trying to upload somewhere the slides I used.&lt;/p&gt;
+&lt;p&gt;Since some time ago I started using Reveal-MD, so I could use Markdown to create and show slides, but wanted also a way to upload them for consumption.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/brookskindle/pelican-revealmd/&#34;&gt;Pelican-revealmd plugin&lt;/a&gt; seemed to be the answer.&lt;/p&gt;
+&lt;p&gt;It does use pypandoc library and &lt;a href=&#34;https://pandoc.org&#34;&gt;&amp;lsquo;pandoc&amp;rsquo;&lt;/a&gt; for doing the conversion.&lt;/p&gt;
+&lt;h2 id=&#34;the-problems-found&#34;&gt;The problems found&lt;/h2&gt;
+&lt;p&gt;After some test, it had 3 issues:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with little setup steps.</title>
+      <link>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</link>
+      <pubDate>Wed, 09 Jan 2019 22:00:47 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve already covered some articles about automation with Travis-CI, GitHub,
+and one step that seems a show-stopper for many users when trying to build a
+website is on one side, the investment (domain, hosting, etc), the backend
+being used (WordPress, static generators, etc)&amp;hellip;&lt;/p&gt;
+&lt;p&gt;While preparing a talk for a group of co-workers covering several of those aspects, I came with the idea to create Blog-o-Matic, implementing many of those &amp;rsquo;learnings&amp;rsquo; in a &amp;lsquo;canned&amp;rsquo; way that can be easy to consume by users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OSP Director baremetal hypervisor for CoreOS</title>
+      <link>https://iranzo.io/blog/2019/01/08/osp-director-baremetal-hypervisor-for-coreos/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/08/osp-director-baremetal-hypervisor-for-coreos/</guid>
+      <description>&lt;h2 id=&#34;osp-director&#34;&gt;OSP Director&lt;/h2&gt;
+&lt;p&gt;OSP Director (or upstream TripleO) is a life-cycle manager for OpenStack based on the idea of using &amp;lsquo;OpenStack&amp;rsquo; to deploy &amp;lsquo;OpenStack&amp;rsquo;.&lt;/p&gt;
+&lt;p&gt;To do so, it creates a management &amp;lsquo;Undercloud&amp;rsquo;, that is configured and prepared for later deploying an &amp;lsquo;overcloud&amp;rsquo; which is the one that will later run the workloads.&lt;/p&gt;
+&lt;p&gt;TripleO/Director, also automates the inspection of hosts and tagging to the roles they will perform later in the &amp;lsquo;overcloud&amp;rsquo; setup, such as &amp;lsquo;controller&amp;rsquo;, &amp;lsquo;compute&amp;rsquo;, &amp;lsquo;storage&amp;rsquo;, or even mixed roles via &lt;code&gt;composable-roles&lt;/code&gt; support.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Filtering email with imapfilter</title>
+      <link>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</link>
+      <pubDate>Fri, 28 Aug 2015 15:27:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</guid>
+      <description>&lt;p&gt;Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&amp;amp;drop reordering of rules, cloning, etc.&lt;/p&gt;
+&lt;p&gt;As I was already using offlineimap to sync from the remote mail server to my system into a maildir folder, I had almost all the elements I needed.&lt;/p&gt;
+&lt;p&gt;After searching for several options &lt;a href=&#34;https://github.com/lefcha/imapfilter&#34;&gt;imapfilter&lt;/a&gt; seemed to be a perfect fit, so I started with a small set of rules and start integration with my email process.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RHEV-M with nested VM for OSP</title>
+      <link>https://iranzo.io/blog/2015/07/17/rhev-m-with-nested-vm-for-osp/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/07/17/rhev-m-with-nested-vm-for-osp/</guid>
+      <description>&lt;p&gt;Since some time ago, I&amp;rsquo;ve been mostly dealing with OpenStack, requiring different releases to test for different tests, etc.&lt;/p&gt;
+&lt;p&gt;Virtualization, as provided by KVM requires some CPU flags to get accelerated operations, &lt;code&gt;vmx&lt;/code&gt; and &lt;code&gt;svm&lt;/code&gt; depending on your processor architecture, but, of course, this is only provided on bare-metal.&lt;/p&gt;
+&lt;p&gt;In order to get more flexibility at the expense of performance, &lt;code&gt;nestedvt&lt;/code&gt; allows to expose those flags to the VM&amp;rsquo;s running at the hypervisor so you can run another level of VM&amp;rsquo;s inside those VM&amp;rsquo;s (this starts to sound like the movie &lt;a href=&#34;http://www.imdb.com/title/tt1375666/&#34;&gt;Inception&lt;/a&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intel AMT on Linux for remote control/fencing</title>
+      <link>https://iranzo.io/blog/2015/05/01/intel-amt-on-linux-for-remote-control/fencing/</link>
+      <pubDate>Fri, 01 May 2015 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/05/01/intel-amt-on-linux-for-remote-control/fencing/</guid>
+      <description>&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;Some time ago, and after discussing with a colleague, I had a look on Intel&amp;rsquo;s &lt;a href=&#34;http://en.wikipedia.org/wiki/Intel_Active_Management_Technology&#34;&gt;AMT&lt;/a&gt;, and this week I
+did a demo for another colleague as a cheap-replacement for having power fencing capabilities on commodity hardware.&lt;/p&gt;
+&lt;p&gt;AMT provides a server-like Out of band management like iLO, iDRAC, RSB etc and it&amp;rsquo;s included in i3 with vPro processors/chipsets of some equipment.&lt;/p&gt;
+&lt;p&gt;I did the test on a Lenovo X200/201 system I had as old laptop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install RHEL7/Centos/Fedora on a software raid device</title>
+      <link>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</link>
+      <pubDate>Sat, 28 Mar 2015 18:46:42 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</guid>
+      <description>&lt;p&gt;Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.&lt;/p&gt;
+&lt;p&gt;There are several &lt;a href=&#34;http://en.wikipedia.org/wiki/RAID&#34;&gt;RAID&lt;/a&gt; level definitions and may have different uses depending on our needs and hardware availability.&lt;/p&gt;
+&lt;p&gt;For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data)..&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Customize RHEL/CentOS installation media (EL4/EL5&#43;)</title>
+      <link>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</link>
+      <pubDate>Sat, 23 Jan 2010 08:25:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A standard install media, (let&amp;rsquo;s talk about a DVD for easier start) has several files/folders at his root, but most important are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;isolinux&lt;/code&gt; (where the loader lives)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;images&lt;/code&gt; (for extra files for installer to load)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Packages&lt;/code&gt; for installation (&lt;code&gt;RedHat/&lt;/code&gt; for EL4, &lt;code&gt;Server&lt;/code&gt;/&lt;code&gt;Client&lt;/code&gt; for EL5)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usually, a distribution has, for its main binaries, more than 2 gigabytes of data, that enables one target to act as a multifunction server/workstation, but that you will not usually load on the same system. Furthermore, since the DVD creation, there have been so many updates/patches that make your installation a &amp;lsquo;outdated&amp;rsquo; install that you&amp;rsquo;ll need to upgrade to have recent patches.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MiniDLNA SPEC &amp; RPM</title>
+      <link>https://iranzo.io/blog/2009/07/10/minidlna-spec-rpm/</link>
+      <pubDate>Fri, 10 Jul 2009 08:54:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2009/07/10/minidlna-spec-rpm/</guid>
+      <description>&lt;p&gt;MiniDLNA provides an OpenSource DLNA server software that can index and present specific folders on your computer to DLNA clients on your network.&lt;/p&gt;
+&lt;p&gt;Project at sourceforge is distributed as CVS code that you need to checkout and compile for it to work on your computer.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve setup a spec file that will allow you to create an rpm that has been tested on Red Hat Enterprise Linux 5.3 machine x86 for easing adoption among users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mount disk images</title>
+      <link>https://iranzo.io/blog/2008/07/18/mount-disk-images/</link>
+      <pubDate>Fri, 18 Jul 2008 06:17:02 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/07/18/mount-disk-images/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using a Xen guest under RHEL 5.2 to hold this Webserver, and because of failures, I choose to keep a copy of the full disk image on another machine.&lt;/p&gt;
+&lt;p&gt;Having to transfer the full disk in the network means stop the server (Xen guest),
+&lt;code&gt;rsync&lt;/code&gt; the image on disk (wait 40 minutes), then start guest again.&lt;/p&gt;
+&lt;p&gt;After doing the initial image transfer, it would be easier to just sync updated files, but&amp;hellip; how to loop mount a full disk?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logical volume manager (LVM)</title>
+      <link>https://iranzo.io/blog/2008/04/20/logical-volume-manager-lvm/</link>
+      <pubDate>Sun, 20 Apr 2008 23:03:52 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/04/20/logical-volume-manager-lvm/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;LVM are the initials for Logical Volume Manager, a powerful tool present in actual Linux systems inspired in the implementation available in other systems like AIX and HP-UX.&lt;/p&gt;
+&lt;p&gt;LVM introduces a separation between system structure and elements like disks, partitions, filesystems to which we are used to.&lt;/p&gt;
+&lt;p&gt;LVM has three levels:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Physical volumes&lt;/li&gt;
+&lt;li&gt;Volume Groups&lt;/li&gt;
+&lt;li&gt;Logical volumes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One of the benefits of LVM over traditional systems is that LVM introduces an abstraction layer which improves the limitation of a disk, allowing us to have a filesystem to span over several disks, resizing thus making a more efficient usage of storage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Security Enhanced Linux (SELinux)</title>
+      <link>https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/</link>
+      <pubDate>Fri, 04 Jan 2008 18:14:03 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel.&lt;/p&gt;
+&lt;p&gt;SELinux, originally developed by N.S.A. (National Security Agency) allows applications to be confined by the kernel.&lt;/p&gt;
+&lt;p&gt;Inside that &amp;ldquo;confined area&amp;rdquo;, much more grained than a standard &lt;code&gt;chroot&lt;/code&gt; (system where basic executables are copied to another folder in order to have a small subsystem isolated from real system. The drawback is that a small subsystem could have enough utilities to reveal private information from our internal network),in which we can allow only certain operations, for example: adding information to a file, read from a directory but not writing, even just for one file in a standard directory,
+etc&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating Jigsaw Download (JigDo) files for downloading ISO&#39;s</title>
+      <link>https://iranzo.io/blog/2007/11/15/creating-jigsaw-download-jigdo-files-for-downloading-isos/</link>
+      <pubDate>Thu, 15 Nov 2007 21:50:25 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2007/11/15/creating-jigsaw-download-jigdo-files-for-downloading-isos/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;JigDo (&lt;code&gt;JIGsaw DOwnload&lt;/code&gt;) is a small utility that can assemble a CD/DVD image from it&amp;rsquo;s internal files.&lt;/p&gt;
+&lt;p&gt;For example, &lt;a href=&#34;http://www.debian.org/&#34;&gt;Debian&lt;/a&gt; has been using it for years for distributing the entire distribution: you downloaded a
+&lt;code&gt;.jigdo&lt;/code&gt; file, and then, using the utility &lt;code&gt;jigdo-lite&lt;/code&gt; (package
+&lt;code&gt;jigdo-file&lt;/code&gt; on Debian like and RPM based&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. This way, you only downloaded small files from servers, preventing line failures, spreading load between several servers, etc.&lt;/p&gt;
+&lt;p&gt;Furthermore, if you already had some files (for example if you started at version X and have been downloading and keeping
+all files until X.Y,
+&lt;code&gt;jigdo&lt;/code&gt;, can use those updated files to compare them against the &lt;code&gt;.jigdo&lt;/code&gt; file and avoid downloading duplicated files&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH, stunnel and a proxy - double stunnel bypass</title>
+      <link>https://iranzo.io/blog/2006/11/01/ssh-stunnel-and-a-proxy-double-stunnel-bypass/</link>
+      <pubDate>Wed, 01 Nov 2006 17:47:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2006/11/01/ssh-stunnel-and-a-proxy-double-stunnel-bypass/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;m working for a &amp;ldquo;very concerned about security&amp;rdquo; firm, that makes mandatory using VPN for accessing their network, and internal services:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IMAPS&lt;/li&gt;
+&lt;li&gt;SMTP&lt;/li&gt;
+&lt;li&gt;Intranet&lt;/li&gt;
+&lt;li&gt;Forums&lt;/li&gt;
+&lt;li&gt;Online training, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As it should, we provided services for a client, also very concerned about security, thus not allowing internet access despite of using two squid proxies with a network appliance filtering protocols, scripts, viruses and malware. They only allow FTP, HTTP and HTTPS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OCS Deployment Tips and tricks</title>
+      <link>https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/</link>
+      <pubDate>Sat, 29 Jul 2006 20:13:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/</guid>
+      <description>&lt;p&gt;Prior to using the following info for creating own-made packages, let&amp;rsquo;s test if everything is working fine.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve created a NSIS script that writes into registry in a key called &lt;code&gt;HKLMSOFTWAREOCS&lt;/code&gt; and puts a key named &amp;ldquo;cert&amp;rdquo; with value &lt;code&gt;creilla&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If we create a package with action &amp;ldquo;LAUNCH&amp;rdquo;, and attach the &lt;code&gt;regcert.zip&lt;/code&gt; with command to execute &lt;code&gt;regcert.exe&lt;/code&gt;, all clients with functional package deployment, will add that key to registry, so we can check, using OCS registry query function for a key named &amp;ldquo;cert&amp;rdquo; into: &lt;code&gt;HKLM&lt;/code&gt; &lt;code&gt;SOFTWAREOCS&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OCS Inventory Package deployment</title>
+      <link>https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/</link>
+      <pubDate>Thu, 27 Jul 2006 20:29:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;OCS Inventory is an excellent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms).&lt;/p&gt;
+&lt;p&gt;Since New Generation (&lt;code&gt;OCS-NG&lt;/code&gt;), a new architecture was implemented: server were contacted using standard TCP/IP connection (Previous versions, used an MDB file to store information, and required a SMB share to inventory computers ), allowing remote computers to connect as well as providing a new web interface for computer administration, and inventory query.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VPNS - Multiple VPN&#39;s Launcher</title>
+      <link>https://iranzo.io/blog/2003/03/05/vpns-multiple-vpns-launcher/</link>
+      <pubDate>Wed, 05 Mar 2003 20:55:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2003/03/05/vpns-multiple-vpns-launcher/</guid>
+      <description>&lt;h2 id=&#34;general-purpose&#34;&gt;General Purpose&lt;/h2&gt;
+&lt;p&gt;The idea on writing VPNS and the structure it follows was the problem that
+we had into easily configure many VPN&amp;rsquo;s for use with the wireless project
+interconnection (Valencia Wireless
+&lt;a href=&#34;http://www.valenciawireless.org/&#34;&gt;&lt;code&gt;http://www.valenciawireless.org&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;When having no chance to join networks using just wireless links, we needed
+to provide some kind of transparent link from one WiFi node to another. To
+do so, we decided to use the vpnd daemon to establish links between our
+networks for allowing transparent traffic flow.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

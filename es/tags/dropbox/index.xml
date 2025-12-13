@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dropbox on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/dropbox/</link>
+    <description>Recent content in Dropbox on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/dropbox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Herramientas de sincronización/backup</title>
+      <link>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</link>
+      <pubDate>Thu, 08 Dec 2011 11:52:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2011/12/08/herramientas-de-sincronizaci%C3%B3n/backup/</guid>
+      <description>&lt;p&gt;Hace tiempo, estuve buscando una forma de simplificar por un lado, la sincronización de los documentos, fotos, etc entre diversos ordenadores y por otro utilizar esa copia en otros equipos a modo de &amp;lsquo;backup&amp;rsquo; en caso de fallo hardware de algún equipo.&lt;/p&gt;
+&lt;p&gt;Estuve probando y evaluando diversas herramientas multiplataforma y junto a algunas más, las que más probé fueron estas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.aerofs.com/&#34;&gt;AeroFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://db.tt/NV5zDvs&#34;&gt;Dropbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.syncany.org/&#34;&gt;Syncany&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sparkleshare.org/&#34;&gt;Sparkleshare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.wuala.com/&#34;&gt;Wuala&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://spideroak.com/download/referral/dfba22f9764b55ab68427da014e9f0e5&#34;&gt;SpiderOak&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Actualmente necesito &amp;lsquo;salvar/sincronizar&amp;rsquo; unos 35Gb de datos (fotos la gran mayoría y no precisamente en RAW), lo que provocó estas comparativas, preferiblemente de servicios que ofrecieran espacio gratuito.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dropbox en Fedora</title>
+      <link>https://iranzo.io/es/blog/2010/04/01/dropbox-en-fedora/</link>
+      <pubDate>Thu, 01 Apr 2010 11:54:00 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/04/01/dropbox-en-fedora/</guid>
+      <description>&lt;p&gt;Para instalar dropbox en Fedora, no es necesario realizar excesivos pasos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Abrir una cuenta en&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/referrals/NTM4OTM3ODI5&#34;&gt;Dropbox&lt;/a&gt; (o si prefieres, en una empresa alternativa como&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://spideroak.com/download/referral/dfba22f9764b55ab68427da014e9f0e5&#34;&gt;SpiderOak&lt;/a&gt; (O &lt;a href=&#34;http://www.wuala.com/referral/FK4KF3PFHJAF64A74KMB&#34;&gt;Wuala&lt;/a&gt; que ofrece espacio adicional por compartir espacio en tu propio disco)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar en nuestra fedora el paquete correspondiente para &lt;a href=&#34;https://www.dropbox.com/downloading?os=lnx&#34;&gt;Nautilus&lt;/a&gt; (aunque ponga que es para Fedora 10, funciona perfectamente en superiores (probado en 12 y 13))&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Al volver a iniciar sesión (o la lanzar el programa), aparecerá un icono en la bandeja de sistema y comenzará el proceso de configuración en el que se asocia el &amp;rsquo;escritorio&amp;rsquo; a la cuenta de Dropbox que creamos anteriormente.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Firmware on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/firmware/</link>
+    <description>Recent content in Firmware on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/firmware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dell racadm remote ISO load</title>
+      <link>https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/</link>
+      <pubDate>Tue, 12 May 2020 13:30:24 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/05/12/dell-racadm-remote-iso-load/</guid>
+      <description>&lt;p&gt;In order to test IPv6 deployment on Dell hardware I was in need to patch the servers to ensure that UEFI boot mode is in use.&lt;/p&gt;
+&lt;p&gt;Normally I would had use the DSU that runs from within Linux, but as the servers are part of an OpenShift installation (using &lt;a href=&#34;https://github.com/openshift-kni/baremetal-deploy&#34;&gt;baremetal-deploy&lt;/a&gt;) and using CoreOS as the underlying system I wanted to load ISO from HTTP server on the &lt;code&gt;deployhost&lt;/code&gt; (running RHEL).&lt;/p&gt;
+&lt;p&gt;The command is not that hard, let&amp;rsquo;s first define some variables:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
