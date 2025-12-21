@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Xen on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/xen/</link>
+    <description>Recent content in Xen on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/xen/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mount disk images</title>
+      <link>https://iranzo.io/blog/2008/07/18/mount-disk-images/</link>
+      <pubDate>Fri, 18 Jul 2008 06:17:02 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/07/18/mount-disk-images/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using a Xen guest under RHEL 5.2 to hold this Webserver, and because of failures, I choose to keep a copy of the full disk image on another machine.&lt;/p&gt;
+&lt;p&gt;Having to transfer the full disk in the network means stop the server (Xen guest),
+&lt;code&gt;rsync&lt;/code&gt; the image on disk (wait 40 minutes), then start guest again.&lt;/p&gt;
+&lt;p&gt;After doing the initial image transfer, it would be easier to just sync updated files, but&amp;hellip; how to loop mount a full disk?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

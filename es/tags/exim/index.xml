@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Exim on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/exim/</link>
+    <description>Recent content in Exim on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/exim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configurar Exim3 con MailScanner y ClamAV</title>
+      <link>https://iranzo.io/es/blog/2004/02/06/configurar-exim3-con-mailscanner-y-clamav/</link>
+      <pubDate>Fri, 06 Feb 2004 21:31:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/02/06/configurar-exim3-con-mailscanner-y-clamav/</guid>
+      <description>&lt;h3 id=&#34;prerequisitos&#34;&gt;Prerequisitos:&lt;/h3&gt;
+&lt;p&gt;Para hacerlo funcionar, vamos a tener que hacer unas cosillas&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Debemos tener:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MailScanner&lt;/li&gt;
+&lt;li&gt;Exim&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.clamav.net/&#34;&gt;Clamav&lt;/a&gt; (con clamav-freshclam)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Recomendables: razor, unrar, lha, unzoo, arj&lt;/p&gt;
+&lt;p&gt;El funcionamiento es muy sencillo, a partir de la configuración, dispondremos de dos colas de correo, una para recibir y otra para
+enviar.&lt;/p&gt;
+&lt;p&gt;El correo que recibamos será almacenado por exim en sus carpetas, cada cierto tiempo MailScanner comprobará que hay o no correo nuevo, y en ese caso, lo analizará mediante su sistema antispam (sí, el spamassassin) y junto con razor (red colaborativa para notificación de spam), con el antivirus, y al final de todo, si el mensaje supera todos los criterios, lo moverá a la cola de salida, y exim, lo enviará como toque (a la cuenta local del usuario, a un equipo remoto, etc).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

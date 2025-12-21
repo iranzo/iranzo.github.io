@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/</link>
+    <description>Recent content in Categories on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Jul 2025 07:47:35 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bundle</title>
+      <link>https://iranzo.io/categories/bundle/</link>
+      <pubDate>Tue, 16 Jan 2024 16:27:50 +0000</pubDate>
+      <guid>https://iranzo.io/categories/bundle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gems</title>
+      <link>https://iranzo.io/categories/gems/</link>
+      <pubDate>Tue, 16 Jan 2024 16:27:50 +0000</pubDate>
+      <guid>https://iranzo.io/categories/gems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ruby</title>
+      <link>https://iranzo.io/categories/ruby/</link>
+      <pubDate>Tue, 16 Jan 2024 16:27:50 +0000</pubDate>
+      <guid>https://iranzo.io/categories/ruby/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>https://iranzo.io/categories/tech/</link>
+      <pubDate>Tue, 16 Jan 2024 16:27:50 +0000</pubDate>
+      <guid>https://iranzo.io/categories/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tips</title>
+      <link>https://iranzo.io/categories/tips/</link>
+      <pubDate>Tue, 16 Jan 2024 16:27:50 +0000</pubDate>
+      <guid>https://iranzo.io/categories/tips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Education</title>
+      <link>https://iranzo.io/categories/education/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/categories/education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenShift</title>
+      <link>https://iranzo.io/categories/openshift/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/categories/openshift/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Presentations</title>
+      <link>https://iranzo.io/categories/presentations/</link>
+      <pubDate>Thu, 19 Jan 2023 09:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/categories/presentations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Libvirt</title>
+      <link>https://iranzo.io/categories/libvirt/</link>
+      <pubDate>Thu, 12 Jan 2023 14:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/categories/libvirt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RHEL9</title>
+      <link>https://iranzo.io/categories/rhel9/</link>
+      <pubDate>Thu, 12 Jan 2023 14:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/categories/rhel9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualization</title>
+      <link>https://iranzo.io/categories/virtualization/</link>
+      <pubDate>Thu, 12 Jan 2023 14:32:50 +0000</pubDate>
+      <guid>https://iranzo.io/categories/virtualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Book</title>
+      <link>https://iranzo.io/categories/book/</link>
+      <pubDate>Wed, 12 Oct 2022 12:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/categories/book/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ansible</title>
+      <link>https://iranzo.io/categories/ansible/</link>
+      <pubDate>Sat, 24 Sep 2022 11:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/categories/ansible/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FOSS</title>
+      <link>https://iranzo.io/categories/foss/</link>
+      <pubDate>Fri, 19 Aug 2022 10:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/categories/foss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ACM</title>
+      <link>https://iranzo.io/categories/acm/</link>
+      <pubDate>Wed, 10 Aug 2022 14:01:32 +0000</pubDate>
+      <guid>https://iranzo.io/categories/acm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Advanced Cluster Management</title>
+      <link>https://iranzo.io/categories/advanced-cluster-management/</link>
+      <pubDate>Wed, 10 Aug 2022 14:01:32 +0000</pubDate>
+      <guid>https://iranzo.io/categories/advanced-cluster-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://iranzo.io/categories/kubernetes/</link>
+      <pubDate>Wed, 10 Aug 2022 14:01:32 +0000</pubDate>
+      <guid>https://iranzo.io/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LEGO</title>
+      <link>https://iranzo.io/categories/lego/</link>
+      <pubDate>Sat, 18 Jun 2022 18:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/categories/lego/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://iranzo.io/categories/python/</link>
+      <pubDate>Thu, 20 Jan 2022 17:20:14 +0100</pubDate>
+      <guid>https://iranzo.io/categories/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redken_bot</title>
+      <link>https://iranzo.io/categories/redken_bot/</link>
+      <pubDate>Thu, 20 Jan 2022 17:20:14 +0100</pubDate>
+      <guid>https://iranzo.io/categories/redken_bot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fedora</title>
+      <link>https://iranzo.io/categories/fedora/</link>
+      <pubDate>Wed, 07 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/categories/fedora/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CMS</title>
+      <link>https://iranzo.io/categories/cms/</link>
+      <pubDate>Thu, 14 Jan 2021 22:24:00 +0100</pubDate>
+      <guid>https://iranzo.io/categories/cms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Risu</title>
+      <link>https://iranzo.io/categories/risu/</link>
+      <pubDate>Sun, 14 Jun 2020 11:44:24 +0200</pubDate>
+      <guid>https://iranzo.io/categories/risu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>https://iranzo.io/categories/blog/</link>
+      <pubDate>Tue, 24 Mar 2020 09:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenStack</title>
+      <link>https://iranzo.io/categories/openstack/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/categories/openstack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Presentation</title>
+      <link>https://iranzo.io/categories/presentation/</link>
+      <pubDate>Sat, 27 Jan 2018 15:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/categories/presentation/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

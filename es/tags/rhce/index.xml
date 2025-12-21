@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>RHCE on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/rhce/</link>
+    <description>Recent content in RHCE on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:45:44 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/rhce/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trucos y consejos para el RHCE y RHCSA</title>
+      <link>https://iranzo.io/es/blog/2022/07/13/trucos-y-consejos-para-el-rhce-y-rhcsa/</link>
+      <pubDate>Wed, 13 Jul 2022 21:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2022/07/13/trucos-y-consejos-para-el-rhce-y-rhcsa/</guid>
+      <description>&lt;p&gt;Aunque hice el examen de RHCE algún tiempo, sigue habiendo trucos y consejos que siempre transmito a los interesados y que vienen indicados en el libro que escribimos: &lt;a href=&#34;https://s.admins.guru/buyonamazon&#34;&gt;Red Hat Enterprise 8 Administration&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No recuerdes cada paso, por ejemplo, nunca recuerdo la configuración de BIND, asi que recuerdo el paquete con el fichero que tiene ejemplos, lo instalo y lo consulto.&lt;/li&gt;
+&lt;li&gt;Instala &lt;code&gt;mlocate&lt;/code&gt; y ejecuta &lt;code&gt;updatedb&lt;/code&gt; tan pronto como empieces, así podrás usar &lt;code&gt;locate &amp;lt;fichero&amp;gt;&lt;/code&gt; para encontrar archivos rápidamente en tu sistema.&lt;/li&gt;
+&lt;li&gt;Usa tu editor preferido&amp;hellip; Es habitual user &lt;code&gt;vi&lt;/code&gt; o &lt;code&gt;vim&lt;/code&gt; porque son bastante estándar, pero si estás acostumbrado a otro, ponte cómodo en el sistema.&lt;/li&gt;
+&lt;li&gt;Como decía un instructor: &amp;ldquo;Cualquiera con el tiempo suficiente pasaría el RHCE&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;El examen RHCE/RCHSA está basado en el rendimiento&amp;hellip; debes cubrir los objetivos durante la duración del examen, no necesariamente en la forma más elegante.
+&lt;ul&gt;
+&lt;li&gt;Por ejemplo: si te dicen que configures el &lt;code&gt;resolv.conf&lt;/code&gt; puedes bien usar &lt;code&gt;nmcli&lt;/code&gt; para modificar la configuración o puedes escribir el fichero con un &lt;code&gt;echo nameserver 1.1.1.1 &amp;gt; /etc/resolv.conf&lt;/code&gt;, al final, en neto, ambas tendrán el mismo efecto, y aunque es cierto que usar &lt;code&gt;nmcli&lt;/code&gt; permite algo más portable y elegante, pero para el examen&amp;hellip; el objetivo es hacerlo de la forma más rápida para poder pasar al siguiente punto.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Puedes encontrar más consejos en &lt;a href=&#34;https://s.admins.guru/buyonamazon&#34;&gt;Red Hat Enterprise 8 Administration&lt;/a&gt;
+&lt;p&gt;Disfruta! (y si lo haces, puedes
+&lt;a href=&#34;https://ko-fi.com/I2I4KDA0V&#34; target=&#34;_blank&#34;&gt;
+  &lt;img src=&#34;https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png&#34; height=&#39;36&#39; style=&#39;border:0px;height:36px;vertical-align:middle;display:inline-block;&#39; border=&#34;0&#34;&gt;
+&lt;/img&gt;
+Invitarme a un café
+&lt;/a&gt;
+)
+&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

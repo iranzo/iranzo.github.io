@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CMS on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/cms/</link>
+    <description>Recent content in CMS on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/cms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be lazy, automate: GitHub actions for static blogging</title>
+      <link>https://iranzo.io/presentations/2021-01-14-be-lazy-automate-gha-for-static-blogging/2021-01-14-be-lazy-automate-gha-for-static-blogging/</link>
+      <pubDate>Thu, 14 Jan 2021 22:24:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/2021-01-14-be-lazy-automate-gha-for-static-blogging/2021-01-14-be-lazy-automate-gha-for-static-blogging/</guid>
+      <description>&lt;h2 id=&#34;be-lazy-automate-github-actions-for-static-blogging&#34;&gt;Be lazy, automate: GitHub Actions for static blogging&lt;/h2&gt;
+&lt;p&gt;/me: Pablo Iranzo Gómez ( &lt;a href=&#34;https://iranzo.io&#34;&gt;https://iranzo.io&lt;/a&gt; )&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-a-blog&#34;&gt;What is a blog?&lt;/h2&gt;
+&lt;p&gt;A place to share knowledge, interests, tips, etc.&lt;/p&gt;
+&lt;p&gt;Usually features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;images&lt;/li&gt;
+&lt;li&gt;comments from visitors,&lt;/li&gt;
+&lt;li&gt;related articles,&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-are-the-costs-for-a-blog&#34;&gt;What are the costs for a blog?&lt;/h2&gt;
+&lt;p&gt;Web costs money:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hosting&lt;/li&gt;
+&lt;li&gt;Domain&lt;/li&gt;
+&lt;li&gt;Maintenance&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-static-blogging&#34;&gt;What is static blogging?&lt;/h2&gt;
+&lt;p&gt;Generate a static webpage&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Think of it as rendering templates into HTML&lt;/li&gt;
+&lt;li&gt;Has no requirements on the web server, any simple Webserver is enough:
+&lt;ul&gt;
+&lt;li&gt;Look ma!, no database!&lt;/li&gt;
+&lt;li&gt;Look ma!, no users!&lt;/li&gt;
+&lt;li&gt;Look ma!, no security issues!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-does-it-mean-to-us&#34;&gt;What does it mean to us?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We write an article&lt;/li&gt;
+&lt;li&gt;Command for generating html from templates is used&lt;/li&gt;
+&lt;li&gt;New files uploaded to Webserver&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;some-philosophy&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cJMwBwFj5nQ&#34;&gt;Some Philosophy&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Empty your mind, be shapeless, formless, like water.
+Now you put water in a cup, it becomes the cup, you put water into a bottle, it becomes the bottle
+You put water in a teacup, it becomes the teapot
+Now water can flow or it can crash.
+Be water my friend&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Upstream/Downstream documentation workflow</title>
+      <link>https://iranzo.io/blog/2020/12/01/upstream/downstream-documentation-workflow/</link>
+      <pubDate>Tue, 01 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/12/01/upstream/downstream-documentation-workflow/</guid>
+      <description>&lt;p&gt;During last year I&amp;rsquo;ve worked with the &lt;a href=&#34;https://github.com/openshift-kni/baremetal-deploy/&#34;&gt;https://github.com/openshift-kni/baremetal-deploy/&lt;/a&gt; repository after being working in the KNI Community team that was in charge of &amp;lt;KubeVirt.io&amp;gt; and &amp;lt;Metal3.io&amp;gt; where some of the below things were applied.&lt;/p&gt;
+&lt;p&gt;One of the goals we had was to streamline the upstream &amp;lt;-&amp;gt; downstream process to keep changes done in the right way: get changes upstream and copy over downstream with minimal changes.&lt;/p&gt;
+&lt;p&gt;We ended up using AsciiDoctor for building the documentation in the same way it&amp;rsquo;s done downstream so it&amp;rsquo;s just a matter of copying over the modules.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JavaScript for imgur gallery generation for PhotoSwipe and Pelican-Elegant</title>
+      <link>https://iranzo.io/blog/2020/02/19/javascript-for-imgur-gallery-generation-for-photoswipe-and-pelican-elegant/</link>
+      <pubDate>Wed, 19 Feb 2020 21:55:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/19/javascript-for-imgur-gallery-generation-for-photoswipe-and-pelican-elegant/</guid>
+      <description>&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;Using the following code from the Browser console:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;images&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;$$&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;img&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;each&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;images&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &amp;lt;a href=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;images&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;each&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;  data-size=&amp;#34;4032x3024&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            &amp;lt;img src=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;images&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;each&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; width=&amp;#34;403&amp;#34; height=&amp;#34;302&amp;#34;  alt=&amp;#34;Image description&amp;#34; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    `&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;/div&amp;gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It will output a copy-paste ready code for integrating in your blog post and leverage the picture gallery.&lt;/p&gt;
+&lt;div class=&#34;admonition warning&#34;&gt;
+    &lt;p class=&#34;admonition-title&#34;&gt;Warning&lt;/p&gt;
+    &lt;p class=&#34;admonition&#34;&gt;Review the &lt;code&gt;data-size&lt;/code&gt; to make it match the image size as PhotoSwipe requires it to match image and adjust the &lt;code&gt;figcaption&lt;/code&gt; entry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Galleria.io and PhotoSwipe</title>
+      <link>https://iranzo.io/blog/2020/02/12/galleria.io-and-photoswipe/</link>
+      <pubDate>Wed, 12 Feb 2020 07:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/12/galleria.io-and-photoswipe/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I was looking for an alternative for my (this) blog and hold pictures. I&amp;rsquo;m a lego fan so I wanted to get some pictures uploaded but without bloating the site.&lt;/p&gt;
+&lt;p&gt;In the article &lt;a href=&#34;../../blog/2019/06/09/lego-75894-1967-mini-cooper-s-rally-and-buggy-moc-adaptation-as-mini-transporter/&#34;&gt;Lego Mini Cooper MOC&lt;/a&gt; I did add lot of pictures, same for &lt;a href=&#34;../../blog/2019/06/28/lego-80101-chinese-new-years-eve/&#34;&gt;Lego Chinese dinner&lt;/a&gt; and &lt;a href=&#34;../../blog/2019/06/28/lego-80102-dragon-dance/&#34;&gt;Lego Dragon Dance&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was checking and how telegram does handle some links and found that
+Instagram &amp;rsquo;links&amp;rsquo; get expanded to list the images inside directly to see if that could help in a task I was helping at &lt;a href=&#34;https://github.com/Pelican-Elegant/elegant&#34;&gt;Pelican-Elegant theme&lt;/a&gt; used at this site for creating a gallery.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Use custom domain name with Blog-O-Matic</title>
+      <link>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</link>
+      <pubDate>Thu, 16 May 2019 22:29:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/05/16/use-custom-domain-name-with-blog-o-matic/</guid>
+      <description>&lt;p&gt;As a recipe, if you want to enable a custom domain name on &lt;a href=&#34;../../blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./&#34;&gt;blog-o-matic&lt;/a&gt; a special file needs to be created on the &amp;lsquo;GitHub Pages&amp;rsquo; served &amp;lsquo;master&amp;rsquo; branch.&lt;/p&gt;
+&lt;p&gt;In order to do so, edit &lt;code&gt;pelicanconf.py&lt;/code&gt; and add the following differences:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;diff --git a/pelicanconf.py b/pelicanconf.py
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;index 680abcb..fc3dd8f 100644
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;--- a/pelicanconf.py
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+++ b/pelicanconf.py
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@@ -46,13 +46,16 @@ AMAZON_ONELINK = &amp;#34;b63a2115-85f7-43a9-b169-5f4c8c275655&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; # Extra files customization
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-EXTRA_PATH_METADATA = {}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+EXTRA_PATH_METADATA = {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+    &amp;#39;extra/CNAME&amp;#39;: {&amp;#39;path&amp;#39;: &amp;#39;CNAME&amp;#39;},
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; EXTRA_TEMPLATES_PATHS = [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &amp;#34;plugins/revealmd/templates&amp;#34;,  # eg: &amp;#34;plugins/revealmd/templates&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-STATIC_PATHS = [ &amp;#39;images&amp;#39; ]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+STATIC_PATHS = [ &amp;#39;images&amp;#39; , &amp;#39;extra&amp;#39;]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; ## ONLY TOUCH IF YOU KNOW WHAT YOU&amp;#39;RE DOING!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will copy the &lt;code&gt;CNAME&lt;/code&gt; file created in &lt;code&gt;content/extra/CNAME&lt;/code&gt; to the resulting &amp;lsquo;master&amp;rsquo; branch as &lt;code&gt;/CNAME&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AwesomeSlides for converting LibreOffice ODP into revealjs</title>
+      <link>https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/</link>
+      <pubDate>Tue, 22 Jan 2019 20:51:27 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/22/awesomeslides-for-converting-libreoffice-odp-into-revealjs/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;For some time now, I wanted to put the presentations I did in the past to be available, and since I&amp;rsquo;ve added support to &lt;a href=&#34;../../blog/2019/01/20/fixing-pelican-revealjs-plugin/&#34;&gt;my blog to render revealjs slides&lt;/a&gt;, I wanted to also put other presentations that I did in the past, probably (or for sure) outdated, but that were sitting in my computer drive.&lt;/p&gt;
+&lt;p&gt;The presentations already got several transformations, but in the actual status they are stored as LibreOffice ODP files, that made it a bit difficult.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fixing pelican revealjs plugin</title>
+      <link>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</link>
+      <pubDate>Sun, 20 Jan 2019 23:12:17 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/20/fixing-pelican-revealjs-plugin/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;After my recent talk about &lt;a href=&#34;../../blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./&#34;&gt;blog-o-matic&lt;/a&gt;, I was trying to upload somewhere the slides I used.&lt;/p&gt;
+&lt;p&gt;Since some time ago I started using Reveal-MD, so I could use Markdown to create and show slides, but wanted also a way to upload them for consumption.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/brookskindle/pelican-revealmd/&#34;&gt;Pelican-revealmd plugin&lt;/a&gt; seemed to be the answer.&lt;/p&gt;
+&lt;p&gt;It does use pypandoc library and &lt;a href=&#34;https://pandoc.org&#34;&gt;&amp;lsquo;pandoc&amp;rsquo;&lt;/a&gt; for doing the conversion.&lt;/p&gt;
+&lt;h2 id=&#34;the-problems-found&#34;&gt;The problems found&lt;/h2&gt;
+&lt;p&gt;After some test, it had 3 issues:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blog-o-Matic - quickly get a GitHub hosted blog with Pelican, Elegant with little setup steps.</title>
+      <link>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</link>
+      <pubDate>Wed, 09 Jan 2019 22:00:47 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/09/blog-o-matic-quickly-get-a-github-hosted-blog-with-pelican-elegant-with-little-setup-steps./</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve already covered some articles about automation with Travis-CI, GitHub,
+and one step that seems a show-stopper for many users when trying to build a
+website is on one side, the investment (domain, hosting, etc), the backend
+being used (WordPress, static generators, etc)&amp;hellip;&lt;/p&gt;
+&lt;p&gt;While preparing a talk for a group of co-workers covering several of those aspects, I came with the idea to create Blog-o-Matic, implementing many of those &amp;rsquo;learnings&amp;rsquo; in a &amp;lsquo;canned&amp;rsquo; way that can be easy to consume by users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to automate via Travis CI publishing of new pelican pages to GitHub pages</title>
+      <link>https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/</link>
+      <pubDate>Fri, 07 Dec 2018 16:00:47 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2018/12/07/how-to-automate-via-travis-ci-publishing-of-new-pelican-pages-to-github-pages/</guid>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Pelican-Elegant/elegant&#34;&gt;Elegant&lt;/a&gt; theme for pelican has been undergoing a big change from individual-driven effort to community, as part of this, one of the tasks to accomplish, has been the decoupling from author blog to project site for documentation.&lt;/p&gt;
+&lt;p&gt;As we wanted this process to be both automated and allowed us to demonstrate via eat-your-own-dog-food that the theme works and how it looks, the idea was to automate the rendering of Pelican website with new documents.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New blog rendering engine: Pelican</title>
+      <link>https://iranzo.io/blog/2016/06/03/new-blog-rendering-engine-pelican/</link>
+      <pubDate>Fri, 03 Jun 2016 17:23:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2016/06/03/new-blog-rendering-engine-pelican/</guid>
+      <description>&lt;p&gt;As always, I don&amp;rsquo;t usually find myself keen to write about things I do, until I later realize they might be helpful for others, and that&amp;rsquo;s why in the past I decided to switch the place I was putting the information about why did to Github and also, take benefit of practicing markdown for writing the entries.&lt;/p&gt;
+&lt;p&gt;At that time, I moved my old blog posts to markdown to be used in conjunction with Jekyll and to use OctoPress as the engine rendering the contents into a static website. The setup and migration was not difficult, but still require to use some ruby, while I was more familiar with Python.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Migrate SPIP-RSS post feed to HTML</title>
+      <link>https://iranzo.io/blog/2015/04/01/migrate-spip-rss-post-feed-to-html/</link>
+      <pubDate>Wed, 01 Apr 2015 16:49:13 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/04/01/migrate-spip-rss-post-feed-to-html/</guid>
+      <description>&lt;p&gt;I had my old blog based on &lt;a href=&#34;http://www.spip.net&#34;&gt;SPIP&lt;/a&gt;, and I wanted to keep all the posts together, to make it easier to migrate in the future.&lt;/p&gt;
+&lt;p&gt;Initially, I migrated my posts from blogger, where there&amp;rsquo;s an option to export the contents and some plugins to allow easier importing to markdown files (to be used by OctoPress), those were the recent posts, so part of the job was already done there.&lt;/p&gt;
+&lt;p&gt;Next step, was to migrate old posts on my SPIP site.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OctoPress for Jekyll blogging</title>
+      <link>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</link>
+      <pubDate>Tue, 24 Mar 2015 13:23:15 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</guid>
+      <description>&lt;p&gt;After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://octopress.org&#34;&gt;OctoPress&lt;/a&gt; Makes this extra step so you can still focus on your contents and of course have a nice template as starting point with integrations for some social plugins, etc.&lt;/p&gt;
+&lt;p&gt;Setup is well done if you follow the provided steps, without jumping anything, in my case, I moved my old pages (plain &lt;code&gt;jekyll + poole&lt;/code&gt;) to OctoPress.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jekyll and Markdown</title>
+      <link>https://iranzo.io/blog/2015/03/16/jekyll-and-markdown/</link>
+      <pubDate>Mon, 16 Mar 2015 09:06:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/16/jekyll-and-markdown/</guid>
+      <description>&lt;p&gt;For my work I&amp;rsquo;ve been using markdown for a while, it allows to use some formatting on the documents created (mainly for knowledge base and solutions) without too much hassle for the formatting.&lt;/p&gt;
+&lt;p&gt;On the other side I was willing to improve the ability to make it easier to post new entries to blog without having to wait too much time, and of course, be able to prepare them offline and then push them live.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

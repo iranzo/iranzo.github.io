@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>NTP on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/ntp/</link>
+    <description>Recent content in NTP on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:46:05 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/ntp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configuring OpenShift with self-contained NTP</title>
+      <link>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</link>
+      <pubDate>Mon, 07 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In a regular OpenShift environment, NTP server is more less like this:
+
+
+  
+
+
+&lt;figure&gt;
+  &lt;img
+    src=&#39;https://g.gravizo.com/svg?%0a%0a%20%20%20%20%20%20digraph%20connected%20%7b%0a%20%20%20%20%20%20%20%20%20%20%2f%2f%20title%0a%20%20%20%20%20%20%20%20%20%20labelloc%3d%22t%22%3b%0a%20%20%20%20%20%20%20%20%20%20label%3d%22Connected%20Cluster%22%3b%0a%20%20%20%20%20%20%20%20%20%20node%20%5bshape%20%3d%20circle%5d%3b%0a%20%20%20%20%20%20%20%20%20%20%7b%20rank%20%3d%20same%3b%20%22External%20NTP%20Server%22%3b%7d%0a%20%20%20%20%20%20%20%20%20%20%7b%20rank%20%3d%20same%3b%20%22Master%201%22%3b%20%22Master%202%22%3b%20%22Master%203%22%7d%0a%20%20%20%20%20%20%20%20%20%20%7b%20rank%20%3d%20same%3b%20%22Worker%201%22%3b%20%22Worker%202%22%3b%20%22Worker%203%22%7d%0a%20%20%20%20%20%20%20%20%20%20%22Master%201%22%20-%3e%20%22External%20NTP%20Server%22%20%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Master%202%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Master%203%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Worker%201%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Worker%202%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Worker%203%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%7d%0a%0a&#39;
+    alt=&#39;Diagram&#39;
+    /&gt;
+    &lt;figcaption&gt;Diagram&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;In a self-contained cluster with no connection to external networks NTP server is not reachable, but a reachable NTP server is required for proper cluster synchronization.
+Cluster does use SSL certificates that require validation and might fail if the dates between the systems are not in sync or at least pretty close in time.&lt;/p&gt;
+
+
+  
+
+
+&lt;figure&gt;
+  &lt;img
+    src=&#39;https://g.gravizo.com/svg?%0adigraph%20disconnected%20%7b%0a%2f%2f%20title%0alabelloc%3d%22t%22%3b%0alabel%3d%22Disconnected%20Cluster%22%3b%0anode%20%5bshape%20%3d%20circle%5d%3b%0a%7b%20rank%20%3d%20same%3b%20%22Master%201%22%3b%20%22Master%202%22%3b%20%22Master%203%22%7d%0a%7b%20rank%20%3d%20same%3b%20%22Worker%201%22%3b%20%22Worker%202%22%3b%20%22Worker%203%22%7d%0a%22Master%201%22%20-%3e%20%22Master%202%22%20%5bcolor%3d%22red%22%5d%0a%22Master%201%22%20-%3e%20%22Master%203%22%20%5bcolor%3d%22green%22%5d%0a%22Master%202%22%20-%3e%20%22Master%201%22%20%5bcolor%3d%22purple%22%5d%0a%22Master%202%22%20-%3e%20%22Master%203%22%5bcolor%3d%22green%22%5d%0a%22Master%203%22%20-%3e%20%22Master%201%22%5bcolor%3d%22purple%22%5d%0a%22Master%203%22%20-%3e%20%22Master%202%22%5bcolor%3d%22red%22%5d%0a%22Worker%201%22%20-%3e%20%22Master%201%22%20%5bcolor%3d%22purple%22%5d%0a%22Worker%201%22%20-%3e%20%22Master%202%22%20%5bcolor%3d%22red%22%5d%0a%22Worker%201%22%20-%3e%20%22Master%203%22%20%5bcolor%3d%22green%22%5d%0a%22Worker%202%22%20-%3e%20%22Master%201%22%20%5bcolor%3d%22purple%22%5d%0a%22Worker%202%22%20-%3e%20%22Master%202%22%20%5bcolor%3d%22red%22%5d%0a%22Worker%202%22%20-%3e%20%22Master%203%22%20%5bcolor%3d%22green%22%5d%0a%22Worker%203%22%20-%3e%20%22Master%201%22%20%5bcolor%3d%22purple%22%5d%0a%22Worker%203%22%20-%3e%20%22Master%202%22%20%5bcolor%3d%22red%22%5d%0a%22Worker%203%22%20-%3e%20%22Master%203%22%20%5bcolor%3d%22green%22%5d%0a%7d%0a&#39;
+    alt=&#39;Diagram&#39;
+    /&gt;
+    &lt;figcaption&gt;Diagram&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;We&amp;rsquo;ve several components already available in our OpenShift cluster that are very useful:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

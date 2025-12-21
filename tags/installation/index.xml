@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Installation on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/installation/</link>
+    <description>Recent content in Installation on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Customize RHEL/CentOS installation media (EL4/EL5&#43;)</title>
+      <link>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</link>
+      <pubDate>Sat, 23 Jan 2010 08:25:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A standard install media, (let&amp;rsquo;s talk about a DVD for easier start) has several files/folders at his root, but most important are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;isolinux&lt;/code&gt; (where the loader lives)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;images&lt;/code&gt; (for extra files for installer to load)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Packages&lt;/code&gt; for installation (&lt;code&gt;RedHat/&lt;/code&gt; for EL4, &lt;code&gt;Server&lt;/code&gt;/&lt;code&gt;Client&lt;/code&gt; for EL5)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usually, a distribution has, for its main binaries, more than 2 gigabytes of data, that enables one target to act as a multifunction server/workstation, but that you will not usually load on the same system. Furthermore, since the DVD creation, there have been so many updates/patches that make your installation a &amp;lsquo;outdated&amp;rsquo; install that you&amp;rsquo;ll need to upgrade to have recent patches.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

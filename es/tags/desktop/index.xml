@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Desktop on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/desktop/</link>
+    <description>Recent content in Desktop on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/desktop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(mi) Evolución con Linux</title>
+      <link>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</link>
+      <pubDate>Tue, 03 Jun 2008 22:32:07 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/06/03/mi-evoluci%C3%B3n-con-linux/</guid>
+      <description>&lt;h2 id=&#34;antecedentes&#34;&gt;Antecedentes&lt;/h2&gt;
+&lt;p&gt;Llevo gastando Linux desde hace bastantes años&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Primero empecé con una copia de &lt;a href=&#34;http://www.slackware.com/&#34;&gt;Slackware&lt;/a&gt; 1.x que venía con la revista Sólo programadores cuya instalación consistía en descomprimir un fichero &amp;ldquo;zip&amp;rdquo; sobre un disco FAT16 (en aquella época tenía un disco duro de 80 Mb (sí, Megabytes) en un 386DX a 40 Mhz y la instalación venía a ocupar unos 15 Mb descomprimida.&lt;/p&gt;
+&lt;p&gt;Dicha instalación hacía uso de un sistema llamado UMSDOS que permitía, una vez cargado Linux (mediante &lt;code&gt;loadlin&lt;/code&gt;) hacer uso de las características de un filesystem de Linux cuando en realidad había por debajo un sistema FAT.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Preparar Firefox para un kiosco</title>
+      <link>https://iranzo.io/es/blog/2008/05/03/preparar-firefox-para-un-kiosco/</link>
+      <pubDate>Sat, 03 May 2008 23:13:33 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/05/03/preparar-firefox-para-un-kiosco/</guid>
+      <description>&lt;h3 id=&#34;userchromecss&#34;&gt;userChrome.css&lt;/h3&gt;
+&lt;p&gt;Firefox tiene en la carpeta del usuario, y dentro del perfil una subcarpeta llamada chrome y en ella el fichero &lt;code&gt;userChrome.css&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Éste permite ajustar pequeños cambios en el diseño como mostrar u ocultar menús, botones, etc.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, podemos esconder el menú de ayuda con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;#helpMenu &lt;span style=&#34;color:#f92672&#34;&gt;display&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;none&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;important&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;compactando-el-entorno&#34;&gt;Compactando el entorno&lt;/h3&gt;
+&lt;p&gt;Yo utilizo una visión más compacta reduciendo las barras, poniendo la barra de direcciones y búsqueda en la de menús:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

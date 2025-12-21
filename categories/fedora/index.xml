@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fedora on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/fedora/</link>
+    <description>Recent content in Fedora on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>imapfilter for Gmail</title>
+      <link>https://iranzo.io/blog/2021/07/07/imapfilter-for-gmail/</link>
+      <pubDate>Wed, 07 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/07/07/imapfilter-for-gmail/</guid>
+      <description>Learn on how to use imapfilter against Gmail for classifying the messages</description>
+    </item>
+    <item>
+      <title>Geo replication with syncthing</title>
+      <link>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</link>
+      <pubDate>Sat, 12 Jun 2021 21:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</guid>
+      <description>&lt;p&gt;Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc&lt;/p&gt;
+&lt;p&gt;After being using BitTorrent sync and later resilio sync (even if I didn&amp;rsquo;t fully liked the idea of it being not open source), I gave up. My NAS with 16 GB of ram, even if a bit older (HP N54L), seemed not to have enough memory to run it, and was constantly swapping.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Argos extension writing for Gnome3</title>
+      <link>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</guid>
+      <description>&lt;p&gt;I was using from time ago this extension for Gnome named &lt;a href=&#34;https://github.com/p-e-w/argos&#34;&gt;Argos&lt;/a&gt; which allows to create useful data views using scripts written in whatever language of choice available, bash included.&lt;/p&gt;
+&lt;p&gt;So far I had just a simple extension writing a UNICODE character, but with the suggestion of my colleague &lt;a href=&#34;http://www.sombrerorojo.com/&#34;&gt;Javi Ramírez&lt;/a&gt;, I decided to use the motivational idea to write a simple script to calculate how much you&amp;rsquo;ve earned so far in the day and show that information at a glance on your menu bar.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Filtering email with imapfilter</title>
+      <link>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</link>
+      <pubDate>Fri, 28 Aug 2015 15:27:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</guid>
+      <description>&lt;p&gt;Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&amp;amp;drop reordering of rules, cloning, etc.&lt;/p&gt;
+&lt;p&gt;As I was already using offlineimap to sync from the remote mail server to my system into a maildir folder, I had almost all the elements I needed.&lt;/p&gt;
+&lt;p&gt;After searching for several options &lt;a href=&#34;https://github.com/lefcha/imapfilter&#34;&gt;imapfilter&lt;/a&gt; seemed to be a perfect fit, so I started with a small set of rules and start integration with my email process.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install RHEL7/Centos/Fedora on a software raid device</title>
+      <link>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</link>
+      <pubDate>Sat, 28 Mar 2015 18:46:42 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</guid>
+      <description>&lt;p&gt;Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.&lt;/p&gt;
+&lt;p&gt;There are several &lt;a href=&#34;http://en.wikipedia.org/wiki/RAID&#34;&gt;RAID&lt;/a&gt; level definitions and may have different uses depending on our needs and hardware availability.&lt;/p&gt;
+&lt;p&gt;For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data)..&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Podcasts with flexget and transmission</title>
+      <link>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</link>
+      <pubDate>Mon, 16 Mar 2015 21:45:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</guid>
+      <description>&lt;p&gt;Some podcasts are available via RSS feeds, so you can get notified of new episodes, so the best way I&amp;rsquo;ve found so far to automate this procedure is to use the utility &lt;code&gt;flexget&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Flexget can download a RSS feed and get the &lt;code&gt;.torrent&lt;/code&gt; files associated to them and store locally, which makes a perfect fit for later using Transmission&amp;rsquo;s &lt;code&gt;watch&lt;/code&gt; folder, to automatically add them to your download queue.&lt;/p&gt;
+&lt;p&gt;In order to do so, install &lt;code&gt;flexget&lt;/code&gt; either via pip (&lt;code&gt;pip install flexget&lt;/code&gt;) or using a package for your distribution and create a configuration file similar to this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>duplicity for managing backups</title>
+      <link>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</link>
+      <pubDate>Mon, 27 Jun 2011 16:35:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</guid>
+      <description>&lt;p&gt;A few days ago, I was checking a friend&amp;rsquo;s system for backing up.&lt;/p&gt;
+&lt;p&gt;It was based on &lt;code&gt;rsync&lt;/code&gt; at the Linux side and &lt;code&gt;rsync&lt;/code&gt; server on a windows machine he uses for storing information generated by other software.&lt;/p&gt;
+&lt;p&gt;The solution with &lt;code&gt;rsync&lt;/code&gt; worked pretty well for him until he started to put several strange characters in filenames which rendered the backup unusable to certain point.&lt;/p&gt;
+&lt;p&gt;After being asked for alternative backup software that was available on several platforms, I&amp;rsquo;ve ended testing duplicity.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Firsts steps with Fedora 15 pre-alpha</title>
+      <link>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</link>
+      <pubDate>Mon, 07 Mar 2011 17:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</guid>
+      <description>&lt;p&gt;Today I&amp;rsquo;ve decided to give it a try to F15-prealpha (expected to release tomorrow).&lt;/p&gt;
+&lt;p&gt;The upgrade performed in the unsupported way (getting and forcing install for newer fedora-release from a mirror then start issuing several yum upgrades) when reasonably good.&lt;/p&gt;
+&lt;p&gt;Only some minor dependency problems &lt;code&gt;et voilà&lt;/code&gt;, system started fine.&lt;/p&gt;
+&lt;p&gt;Problems so far:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Firefox 4 has a few approved extensions, I used the &amp;ldquo;nightly tester tools&amp;rdquo; to disable version check and enable most of the ones I had with 3.6.x without problems.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t like gnome-shell at the moment&lt;/li&gt;
+&lt;li&gt;Desktop icons disappeared&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Menu bar is black and found no way to configure it yet&lt;/li&gt;
+&lt;li&gt;Gnome-applets have some dependency problems and can&amp;rsquo;t install or configure them, furthermore I lost my tray area on one of the computers but works fine on the other.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I hope that tomorrow&amp;rsquo;s release of Alpha will fix some of them in order to warm-up for final launch (&lt;a href=&#34;http://fedoraproject.org/wiki/Releases/15/Schedule&#34;&gt;http://fedoraproject.org/wiki/Releases/15/Schedule&lt;/a&gt;)&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

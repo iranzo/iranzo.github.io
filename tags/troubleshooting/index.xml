@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Troubleshooting on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/troubleshooting/</link>
+    <description>Recent content in Troubleshooting on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:32:34 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using ChatGPT for writing Risu Plugins</title>
+      <link>https://iranzo.io/blog/2023/03/02/using-chatgpt-for-writing-risu-plugins/</link>
+      <pubDate>Thu, 02 Mar 2023 17:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2023/03/02/using-chatgpt-for-writing-risu-plugins/</guid>
+      <description>&lt;p&gt;Lately, there&amp;rsquo;s a lot of interest on &lt;a href=&#34;https://chat.openai.com/chat&#34;&gt;ChatGPT&lt;/a&gt;, and yes, it&amp;rsquo;s really impressive the way it processes the context to provide answers to the questions.&lt;/p&gt;
+&lt;p&gt;To give it a try, and put into play the requirements for writing a &lt;a href=&#34;../../tags/risu/&#34;&gt;Risu&lt;/a&gt; plugin, I wrote some of the requirements in a paragraph:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I want to create a bash script for checking system status.&lt;/p&gt;
+&lt;p&gt;The script should use return codes to indicate success, failure, information, error or skipped via the values stored in the variables $RC_OKAY, $RC_SKIPPED, $RC_ERROR, $RC_FAILED and $RC_INFO.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenShift&#39;s oc debug and parallel execution</title>
+      <link>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</link>
+      <pubDate>Thu, 03 Nov 2022 14:13:32 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/11/03/openshifts-oc-debug-and-parallel-execution/</guid>
+      <description>&lt;p&gt;A colleague reported some issues in the OpenShift troubleshooting and diagnosis scripts at &lt;a href=&#34;https://github.com/RHsyseng/openshift-checks/&#34;&gt;OpenShift-checks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Some time ago I did contribute some changes to use functions and allow using the &lt;a href=&#34;https://github.com/risuorg/risu&#34;&gt;RISU&lt;/a&gt; wrapper to the scripts, helping consuming the results via RISU&amp;rsquo;s HTML interface.&lt;/p&gt;
+&lt;p&gt;As my colleague reported, for some plugins, the output of the command was not shown in the HTML Interface.&lt;/p&gt;
+&lt;p&gt;After some investigation, it was found that parallel execution for the plugins was causing no output to be shown, but when filtering to individual ones via &lt;code&gt;risu -i XXXXXXX/plugin -l&lt;/code&gt; it was working fine&amp;hellip; the problem was not the check itself, as both of them worked fine when executed individually but failed when executing them together.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DevConf.cz 2018: Citellus - Detecting common pitfalls of deployments</title>
+      <link>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</link>
+      <pubDate>Sat, 27 Jan 2018 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/presentations/citellus/devconfcz-2018/devconfcz2018-presentation-revealmd/</guid>
+      <description>&lt;h2 id=&#34;citellus&#34;&gt;&lt;a href=&#34;https://github.com/citellusorg/citellus&#34;&gt;Citellus&lt;/a&gt;:&lt;/h2&gt;
+&lt;h3 id=&#34;detecting-common-pitfalls-of-deployments&#34;&gt;Detecting common pitfalls of deployments&lt;/h3&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;citellus.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/citellusorg/citellus&#34;&gt;https://github.com/citellusorg/citellus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Recording at &lt;a href=&#34;https://www.youtube.com/watch?v=SDzzqrUdn5A&#34;&gt;https://www.youtube.com/watch?v=SDzzqrUdn5A&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-citellus&#34;&gt;What is Citellus?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Citellus is a framework populated by community-contributed scripts that automate detecting problems, including configuration issues, conflicts with package versions, and more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;history-how-did-was-it-started&#34;&gt;History: how did was it started?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The tool, started by Robin Černín after a long weekend shift checking one and over again several sosreports for the same data on different hosts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It started with some tests + shell wrapper, and was added a python wrapper by Pablo Iranzo to bring in more powerful features.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

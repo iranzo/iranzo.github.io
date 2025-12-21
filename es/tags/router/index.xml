@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Router on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/router/</link>
+    <description>Recent content in Router on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:45:44 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/router/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Montar un router con la idea de wireless</title>
+      <link>https://iranzo.io/es/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless/</link>
+      <pubDate>Wed, 18 Jun 2003 21:39:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2003/06/18/montar-un-router-con-la-idea-de-wireless/</guid>
+      <description>&lt;h3 id=&#34;introducción&#34;&gt;Introducción&lt;/h3&gt;
+&lt;p&gt;Un nodo nos permitirá unir a personas conectadas desde sus tarjetas inalámbricas. Un nodo tiene que ser el punto de unión entre distintos clientes y a su vez enlazar con otros nodos para así crear una red.&lt;/p&gt;
+&lt;p&gt;En el caso de las redes inalámbricas, existen varias aproximaciones.&lt;/p&gt;
+&lt;p&gt;Un nodo puede ser un aparato denominado Punto de Acceso o por sus siglas en inglés AP (Access Point) que contiene en su interior un interfaz wireless y una conexión Ethernet RJ45 para enlazarlo o bien con un equipo o con una red.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gnome on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/gnome/</link>
+    <description>Recent content in Gnome on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Argos extension writing for Gnome3</title>
+      <link>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</guid>
+      <description>&lt;p&gt;I was using from time ago this extension for Gnome named &lt;a href=&#34;https://github.com/p-e-w/argos&#34;&gt;Argos&lt;/a&gt; which allows to create useful data views using scripts written in whatever language of choice available, bash included.&lt;/p&gt;
+&lt;p&gt;So far I had just a simple extension writing a UNICODE character, but with the suggestion of my colleague &lt;a href=&#34;http://www.sombrerorojo.com/&#34;&gt;Javi Ramírez&lt;/a&gt;, I decided to use the motivational idea to write a simple script to calculate how much you&amp;rsquo;ve earned so far in the day and show that information at a glance on your menu bar.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

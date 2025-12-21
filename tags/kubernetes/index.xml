@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kubernetes on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kernel Module Management testing</title>
+      <link>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</link>
+      <pubDate>Thu, 19 Jan 2023 08:55:11 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2023/01/19/kernel-module-management-testing/</guid>
+      <description>&lt;p&gt;Following on the &lt;a href=&#34;../../blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/&#34;&gt;Using Kcli to prepare for OCM testing&lt;/a&gt;, we&amp;rsquo;re going to prepare KMM testing in Hub-Spoke approach.&lt;/p&gt;
+&lt;p&gt;First we need to prepare our &lt;code&gt;.docker/config.json&lt;/code&gt; with the contents of our OpenShift pull secret used with &lt;code&gt;Kcli&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir -p ~/.docker/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp openshift_pull.json ~/.docker/config.json
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;warning-advisories&#34;&gt;Warning advisories&lt;/h2&gt;
+&lt;div class=&#34;admonition note&#34;&gt;
+    &lt;p class=&#34;admonition-title&#34;&gt;Note&lt;/p&gt;
+    &lt;p class=&#34;admonition&#34;&gt;Semi-scripted version available at &lt;a href=&#34;automate.sh&#34;&gt;automate.sh&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;admonition warning&#34;&gt;
+    &lt;p class=&#34;admonition-title&#34;&gt;Warning&lt;/p&gt;
+    &lt;p class=&#34;admonition&#34;&gt;We&amp;rsquo;re using pre-release bits of the software, that&amp;rsquo;s why we need to define a custom catalog for both the Hub and the Spokes. Once KMM is released it will be available from the official one and just the Policy will be needed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Kcli to prepare for Open Cluster Management testing</title>
+      <link>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</link>
+      <pubDate>Fri, 23 Dec 2022 14:04:45 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/12/23/using-kcli-to-prepare-for-open-cluster-management-testing/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/karmab/Kcli&#34;&gt;Kcli&lt;/a&gt; allows to quickly interact with different virtualization platforms to build machines with some specific configurations, and via the use of &lt;code&gt;plans&lt;/code&gt; it allows to automate most of the setup required to have an environment ready.&lt;/p&gt;
+&lt;p&gt;In our case, let&amp;rsquo;s setup an environment to practice with &lt;a href=&#34;https://open-cluster-management.io/getting-started/quick-start/&#34;&gt;Open Cluster Management&lt;/a&gt; but instead of using kind clusters, let&amp;rsquo;s use VM&amp;rsquo;s.&lt;/p&gt;
+&lt;div class=&#34;admonition note&#34;&gt;
+    &lt;p class=&#34;admonition-title&#34;&gt;Note&lt;/p&gt;
+    &lt;p class=&#34;admonition&#34;&gt;We&amp;rsquo;ll require to setup an &lt;code&gt;openshift_pull.json&lt;/code&gt; file for Kcli to consume when accessing the required resources for this to work. That file, contains the credentials for accessing several container registries used for the deployment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setup a Quay mirror for offline installations with mirror-registry</title>
+      <link>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</link>
+      <pubDate>Fri, 19 Aug 2022 10:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</guid>
+      <description>Learn on how to use mirror-registry to create a local copy that can be used to install OpenShift without external Internet connectivity.</description>
+    </item>
+    <item>
+      <title>Zero Touch Provisioning OpenShift for Edge computing</title>
+      <link>https://iranzo.io/blog/2022/03/12/zero-touch-provisioning-openshift-for-edge-computing/</link>
+      <pubDate>Sat, 12 Mar 2022 09:34:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2022/03/12/zero-touch-provisioning-openshift-for-edge-computing/</guid>
+      <description>This article describes how to use python to bind against an LDAP server and  perform queries</description>
+    </item>
+    <item>
+      <title>Configuring OpenShift with self-contained NTP</title>
+      <link>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</link>
+      <pubDate>Mon, 07 Dec 2020 14:10:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2020/12/07/configuring-openshift-with-self-contained-ntp/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In a regular OpenShift environment, NTP server is more less like this:
+
+
+  
+
+
+&lt;figure&gt;
+  &lt;img
+    src=&#39;https://g.gravizo.com/svg?%0a%0a%20%20%20%20%20%20digraph%20connected%20%7b%0a%20%20%20%20%20%20%20%20%20%20%2f%2f%20title%0a%20%20%20%20%20%20%20%20%20%20labelloc%3d%22t%22%3b%0a%20%20%20%20%20%20%20%20%20%20label%3d%22Connected%20Cluster%22%3b%0a%20%20%20%20%20%20%20%20%20%20node%20%5bshape%20%3d%20circle%5d%3b%0a%20%20%20%20%20%20%20%20%20%20%7b%20rank%20%3d%20same%3b%20%22External%20NTP%20Server%22%3b%7d%0a%20%20%20%20%20%20%20%20%20%20%7b%20rank%20%3d%20same%3b%20%22Master%201%22%3b%20%22Master%202%22%3b%20%22Master%203%22%7d%0a%20%20%20%20%20%20%20%20%20%20%7b%20rank%20%3d%20same%3b%20%22Worker%201%22%3b%20%22Worker%202%22%3b%20%22Worker%203%22%7d%0a%20%20%20%20%20%20%20%20%20%20%22Master%201%22%20-%3e%20%22External%20NTP%20Server%22%20%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Master%202%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Master%203%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Worker%201%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Worker%202%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%20%20%20%20%20%20%22Worker%203%22%20-%3e%20%22External%20NTP%20Server%22%5bcolor%3dred%5d%0a%20%20%20%20%7d%0a%0a&#39;
+    alt=&#39;Diagram&#39;
+    /&gt;
+    &lt;figcaption&gt;Diagram&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;In a self-contained cluster with no connection to external networks NTP server is not reachable, but a reachable NTP server is required for proper cluster synchronization.
+Cluster does use SSL certificates that require validation and might fail if the dates between the systems are not in sync or at least pretty close in time.&lt;/p&gt;
+
+
+  
+
+
+&lt;figure&gt;
+  &lt;img
+    src=&#39;https://g.gravizo.com/svg?%0adigraph%20disconnected%20%7b%0a%2f%2f%20title%0alabelloc%3d%22t%22%3b%0alabel%3d%22Disconnected%20Cluster%22%3b%0anode%20%5bshape%20%3d%20circle%5d%3b%0a%7b%20rank%20%3d%20same%3b%20%22Master%201%22%3b%20%22Master%202%22%3b%20%22Master%203%22%7d%0a%7b%20rank%20%3d%20same%3b%20%22Worker%201%22%3b%20%22Worker%202%22%3b%20%22Worker%203%22%7d%0a%22Master%201%22%20-%3e%20%22Master%202%22%20%5bcolor%3d%22red%22%5d%0a%22Master%201%22%20-%3e%20%22Master%203%22%20%5bcolor%3d%22green%22%5d%0a%22Master%202%22%20-%3e%20%22Master%201%22%20%5bcolor%3d%22purple%22%5d%0a%22Master%202%22%20-%3e%20%22Master%203%22%5bcolor%3d%22green%22%5d%0a%22Master%203%22%20-%3e%20%22Master%201%22%5bcolor%3d%22purple%22%5d%0a%22Master%203%22%20-%3e%20%22Master%202%22%5bcolor%3d%22red%22%5d%0a%22Worker%201%22%20-%3e%20%22Master%201%22%20%5bcolor%3d%22purple%22%5d%0a%22Worker%201%22%20-%3e%20%22Master%202%22%20%5bcolor%3d%22red%22%5d%0a%22Worker%201%22%20-%3e%20%22Master%203%22%20%5bcolor%3d%22green%22%5d%0a%22Worker%202%22%20-%3e%20%22Master%201%22%20%5bcolor%3d%22purple%22%5d%0a%22Worker%202%22%20-%3e%20%22Master%202%22%20%5bcolor%3d%22red%22%5d%0a%22Worker%202%22%20-%3e%20%22Master%203%22%20%5bcolor%3d%22green%22%5d%0a%22Worker%203%22%20-%3e%20%22Master%201%22%20%5bcolor%3d%22purple%22%5d%0a%22Worker%203%22%20-%3e%20%22Master%202%22%20%5bcolor%3d%22red%22%5d%0a%22Worker%203%22%20-%3e%20%22Master%203%22%20%5bcolor%3d%22green%22%5d%0a%7d%0a&#39;
+    alt=&#39;Diagram&#39;
+    /&gt;
+    &lt;figcaption&gt;Diagram&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;We&amp;rsquo;ve several components already available in our OpenShift cluster that are very useful:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Live Migration in KubeVirt</title>
+      <link>https://iranzo.io/eko/2020-03-22-live-migration/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/eko/2020-03-22-live-migration/</guid>
+      <description>KubeVirt leverages Live Migration to support workloads to keep running while nodes can be moved to maintenance, etc Check what is needed to get it working and how it works.</description>
+    </item>
+    <item>
+      <title>Baremetal Operator</title>
+      <link>https://iranzo.io/eko/2019-09-11-baremetal-operator/</link>
+      <pubDate>Wed, 11 Sep 2019 11:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/eko/2019-09-11-baremetal-operator/</guid>
+      <description>&lt;p&gt;This article was published originally at &lt;a href=&#34;https://metal3.io/blog/2019/09/11/Baremetal-operator.html&#34;&gt;https://metal3.io/blog/2019/09/11/Baremetal-operator.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/metal3-io/baremetal-operator/&#34;&gt;baremetal operator&lt;/a&gt;, documented at &lt;a href=&#34;https://github.com/metal3-io/baremetal-operator/blob/master/docs/api.md&#34;&gt;https://github.com/metal3-io/baremetal-operator/blob/master/docs/api.md&lt;/a&gt;, it&amp;rsquo;s the Operator in charge of definitions of physical hosts, containing information about how to reach the Out of Band management controller, URL with the desired image to provision, plus other properties related with hosts being used for provisioning instances.&lt;/p&gt;
+&lt;p&gt;Quoting from the project:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Bare Metal Operator implements a Kubernetes API for managing bare metal hosts. It maintains an inventory of available hosts as instances of the BareMetalHost Custom Resource Definition. The Bare Metal Operator knows how to:
+Inspect the host&amp;rsquo;s hardware details and report them on the corresponding BareMetalHost. This includes information about CPUs, RAM, disks, NICs, and more.
+Provision hosts with a desired image
+Clean a host&amp;rsquo;s disk contents before or after provisioning.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Killercoda scenario creation</title>
+      <link>https://iranzo.io/blog/2019/06/11/killercoda-scenario-creation/</link>
+      <pubDate>Tue, 11 Jun 2019 21:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/11/killercoda-scenario-creation/</guid>
+      <description>&lt;p&gt;After some time checking the scenarios at &lt;a href=&#34;https://learn.openshift.com&#34;&gt;https://learn.openshift.com&lt;/a&gt;, I decided to give it a try.&lt;/p&gt;
+&lt;p&gt;With the help of &lt;a href=&#34;https://linuxera.org&#34;&gt;Mario Vázquez&lt;/a&gt;, author of &lt;a href=&#34;https://learn.openshift.com/introduction/federated-clusters/&#34;&gt;Getting Started with Kubefed&lt;/a&gt;, I did create two scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://killercoda.com/citellus/citellus&#34;&gt;How to use Citellus&lt;/a&gt; on &lt;a href=&#34;https://risuorg.github.io&#34;&gt;Citellus: Troubleshooting automation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://killercoda.com/iranzo/kubevirt&#34;&gt;KubeVirt&lt;/a&gt; on a &amp;lsquo;browser-based&amp;rsquo; approach for &lt;a href=&#34;https://kubevirt.io/quickstart_minikube/&#34;&gt;MiniKube&lt;/a&gt; setup for validating KubeVirt: Kubernetes with VM Virtualization (versus the regular containers).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can check how them can be created by looking at their code at: &lt;a href=&#34;https://github.com/iranzo/katacoda-scenarios&#34;&gt;killercoda Scenarios&lt;/a&gt; or the &amp;lsquo;playable&amp;rsquo; version at &lt;a href=&#34;https://killercoda.com/iranzo/&#34;&gt;https://killercoda.com/iranzo/&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Postgres repl SSL replication</title>
+      <link>https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/08/postgres-repl-ssl-replication/</guid>
+      <description>&lt;h1 id=&#34;postgres-across-clusters&#34;&gt;Postgres across clusters&lt;/h1&gt;
+&lt;p&gt;For Postgres to work across clusters we do need to have the data being synchronized.&lt;/p&gt;
+&lt;p&gt;With some other databases we do have some master-master approach, but
+usually have very strict requirements on latency, bandwidth, etc that we
+cannot solve with On-Premise + external cloud providers.&lt;/p&gt;
+&lt;p&gt;If the replication is based on the storage level instead, then you face that database servers don’t deal well if the data changes underneath it, so it leads to data corruption, on top of the storage-level issues/requirements as well on bandwidth, latency, etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quay for Federation</title>
+      <link>https://iranzo.io/blog/2019/01/08/quay-for-federation/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/08/quay-for-federation/</guid>
+      <description>&lt;h2 id=&#34;why-this-article&#34;&gt;Why this article?&lt;/h2&gt;
+&lt;p&gt;For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment.&lt;/p&gt;
+&lt;p&gt;Colleagues in the Solutions Engineering team have been working on
+demonstrating an application running on different clusters over a Federated Control Plane, allowing it to &amp;lsquo;roam&amp;rsquo; between clusters with shared data access as a way to demonstrate how an application can &amp;lsquo;scale&amp;rsquo; from on-premise deployment to external clouds in order to satisfy business requirements for peak demands.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

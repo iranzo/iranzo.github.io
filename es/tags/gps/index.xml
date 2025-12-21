@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GPS on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/gps/</link>
+    <description>Recent content in GPS on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:33:29 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/gps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Localizadores para niños</title>
+      <link>https://iranzo.io/es/blog/2023/03/20/localizadores-para-ni%C3%B1os/</link>
+      <pubDate>Mon, 20 Mar 2023 12:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2023/03/20/localizadores-para-ni%C3%B1os/</guid>
+      <description>&lt;p&gt;Si alguna vez has estado en algún sitio grande o con mucha gente, habrás tenido la necesidad de tener localizado a tu hijo/hija.&lt;/p&gt;
+&lt;p&gt;Existen rastreadores GPS como este &lt;a href=&#34;https://s.click.aliexpress.com/e/_EzNxPB3&#34;&gt;https://s.click.aliexpress.com/e/_EzNxPB3&lt;/a&gt; que permiten hacer el seguimiento, pero necesitan una tarjeta SIM, con tarifa de datos y al igual que con los teléfonos, necesitas cargarlo cada cierto tiempo porque tanto GPS como el uso de los datos consume batería.&lt;/p&gt;
+&lt;p&gt;En el caso de este dispositivo, se puede consultar la ubicación en la web &lt;a href=&#34;http://www.365gps.net/&#34;&gt;http://www.365gps.net/&lt;/a&gt; entrando con el IMEI del GPS.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

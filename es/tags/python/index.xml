@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/python/</link>
+    <description>Recent content in Python on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:32:39 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emerging Tech VLC&#39;19 - Citellus - Automatización de comprobaciones</title>
+      <link>https://iranzo.io/es/presentations/citellus/emergingtechvalencia/20190530/citellus-emergingtechvalencia2019-es/</link>
+      <pubDate>Thu, 30 May 2019 18:30:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/citellus/emergingtechvalencia/20190530/citellus-emergingtechvalencia2019-es/</guid>
+      <description>&lt;h2 id=&#34;citellus&#34;&gt;&lt;a href=&#34;https://risuorg.github.io&#34;&gt;Citellus&lt;/a&gt;:&lt;/h2&gt;
+&lt;h3 id=&#34;citellus---verifica-tus-sistemas&#34;&gt;Citellus - Verifica tus sistemas!!&lt;/h3&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;citellus.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://risuorg.github.io&#34;&gt;https://risuorg.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Emerging Tech Valencia 2019: 30 Mayo&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quién-soy&#34;&gt;¿Quién soy?&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;Pablo Iranzo Gómez (Pablo.Iranzo &lt;em&gt;AT&lt;/em&gt; gmail.com)
+&lt;ul&gt;
+&lt;li&gt;Senior Software Engineer - Solutions Engineering - Red Hat
+&lt;ul&gt;
+&lt;li&gt;RHCA Level V: #110-215-852 (RHC{A,SS,DS,VA,E,SA,SP,AOSP}, JBCAA)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;URLS
+&lt;ul&gt;
+&lt;li&gt;blog: &lt;a href=&#34;https://iranzo.io&#34;&gt;https://iranzo.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://linkedin.com/in/iranzo/&#34;&gt;https://linkedin.com/in/iranzo/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/iranzo&#34;&gt;https://github.com/iranzo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/iranzop&#34;&gt;https://twitter.com/iranzop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Involucrado con Linux desde algo antes de comenzar los estudios universitarios y luego durante ellos, estando involucrado con las asociaciones LinUV y &amp;lt;Valux.org&amp;gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>@redken_bot</title>
+      <link>https://iranzo.io/es/redken_bot/</link>
+      <pubDate>Mon, 04 Mar 2019 18:34:14 +0100</pubDate>
+      <guid>https://iranzo.io/es/redken_bot/</guid>
+      <description>Learn about Redken Telegram Bot usage and configuration settings.</description>
+    </item>
+    <item>
+      <title>SuperSec 2018: Citellus - Herramienta para validar sistemas/ficheros de configuración, logs etc mediante scripts en bash, python, ruby, etc</title>
+      <link>https://iranzo.io/es/presentations/citellus/supersec2018/</link>
+      <pubDate>Sun, 13 May 2018 16:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/presentations/citellus/supersec2018/</guid>
+      <description>&lt;h2 id=&#34;citellus&#34;&gt;&lt;a href=&#34;https://risuorg.github.io&#34;&gt;Citellus&lt;/a&gt;:&lt;/h2&gt;
+&lt;h3 id=&#34;citellus---verifica-tus-sistemas&#34;&gt;Citellus - Verifica tus sistemas!!&lt;/h3&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;citellus.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://risuorg.github.io&#34;&gt;https://risuorg.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SuperSec 2018 Almería 12-13 Mayo&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quién-soy&#34;&gt;¿Quién soy?&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Involucrado con Linux desde algo antes de comenzar los estudios universitarios y luego durante ellos, estando involucrado con las asociaciones LinUV y Valux.org.&lt;/p&gt;
+&lt;p&gt;Empecé a &amp;lsquo;vivir&amp;rsquo; del software libre en 2004 y a trabajar en Red Hat en 2006 como Consultor, luego como Technical Account Manager y ahora como Software Maintenance Engineer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>pyserial</title>
+      <link>https://iranzo.io/es/blog/2010/02/23/pyserial/</link>
+      <pubDate>Tue, 23 Feb 2010 22:50:00 +0100</pubDate>
+      <guid>https://iranzo.io/es/blog/2010/02/23/pyserial/</guid>
+      <description>&lt;h1 id=&#34;pyserial&#34;&gt;Pyserial&lt;/h1&gt;
+&lt;p&gt;Esta semana estuve jugando con python para interrogar mediante puerto serie dispositivos.&lt;/p&gt;
+&lt;p&gt;La verdad es que resultó mucho más sencillo de lo que pensaba, algo de complicación a la hora de interpretar las constantes de ASCII para el group separator (GS).&lt;/p&gt;
+&lt;p&gt;La interrogación es tan sencilla como hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sys
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; serial
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ser &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; serial&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Serial(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        port&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/dev/ttyS0&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        baudrate&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;9600&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        bytesize&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;serial&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;EIGHTBITS,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        timeout&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        parity&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;serial&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;PARITY_NONE,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        stopbits&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;serial&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;STOPBITS_ONE,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        xonxoff&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        rtscts&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fallo al abrir el dispositivo&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    sys&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;exit(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;write(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hola&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;respuesta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;readline()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;string &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%s&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; (chr(&lt;span style=&#34;color:#ae81ff&#34;&gt;26&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;write(string)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;close()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Jugando un poco con los requisitos, podemos hablar el lenguaje del dispositivo que tengamos conectado o empezar con los ejemplos de terminal, etc que acompañan a pyserial (terminales, etc)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

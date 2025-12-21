@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>FOSS on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/categories/foss/</link>
+    <description>Recent content in FOSS on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:35:31 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/categories/foss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup a Quay mirror for offline installations with mirror-registry</title>
+      <link>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</link>
+      <pubDate>Fri, 19 Aug 2022 10:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/08/19/setup-a-quay-mirror-for-offline-installations-with-mirror-registry/</guid>
+      <description>Learn on how to use mirror-registry to create a local copy that can be used to install OpenShift without external Internet connectivity.</description>
+    </item>
+    <item>
+      <title>RHCE and RHCSA tips and tricks</title>
+      <link>https://iranzo.io/blog/2022/07/13/rhce-and-rhcsa-tips-and-tricks/</link>
+      <pubDate>Wed, 13 Jul 2022 21:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/07/13/rhce-and-rhcsa-tips-and-tricks/</guid>
+      <description>&lt;p&gt;I did the RHCE exam some time ago, and still there are some tricks and
+advices I tell the people to bear in mind some of the things I used and that were also provided in the &lt;a href=&#34;https://s.admins.guru/buyonamazon&#34;&gt;Red Hat Enterprise 8 Administration&lt;/a&gt; book:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t remember every step, it&amp;rsquo;s not effective, for example as I don&amp;rsquo;t recall syntax for BIND, I do remember package that has some files with examples and I use that one to check what I need to do&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;mlocate&lt;/code&gt; and run &lt;code&gt;updatedb&lt;/code&gt; as soon as you start, then you can use &lt;code&gt;locate &amp;lt;file&amp;gt;&lt;/code&gt; to find out files in your system&lt;/li&gt;
+&lt;li&gt;Use your preferred editor&amp;hellip; it&amp;rsquo;s common to use &lt;code&gt;vi&lt;/code&gt; or &lt;code&gt;vim&lt;/code&gt; as it&amp;rsquo;s pretty standard, but if you&amp;rsquo;re used to another, make yourself comfortable in the system.&lt;/li&gt;
+&lt;li&gt;As one instructor like to say: &amp;ldquo;Anyone with unlimited amount of time will be able to pass the exam&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;RHCE is a performance-based exam, that means that you need to cover all the required goals within the exam duration, and in the end, the goals is to accomplish, not to do in the &lt;code&gt;smarter&lt;/code&gt; way.
+&lt;ul&gt;
+&lt;li&gt;For example, if you&amp;rsquo;re told to configure &lt;code&gt;resolv.conf&lt;/code&gt; you can either use &lt;code&gt;nmcli&lt;/code&gt; to modify the settings or you can pipe the results to it via &lt;code&gt;echo nameserver 1.1.1.1 &amp;gt; /etc/resolv.conf&lt;/code&gt;, in the end, both will have the same effect, and of course, using &lt;code&gt;nmcli&lt;/code&gt; will be smarter when you&amp;rsquo;re keeping multiple systems and using automation&amp;hellip; but for the exam, the goal is to focus on the fastest path to master at it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can find more tricks at &lt;a href=&#34;https://s.admins.guru/buyonamazon&#34;&gt;Red Hat Enterprise 8 Administration&lt;/a&gt;
+&lt;p&gt;
+Enjoy! (and if you do, you can
+&lt;a href=&#34;https://ko-fi.com/I2I4KDA0V&#34; target=&#34;_blank&#34;&gt;
+  &lt;img src=&#34;https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png&#34; height=&#39;36&#39; style=&#39;border:0px;height:36px;vertical-align:middle;display:inline-block;&#39; border=&#34;0&#34;&gt;
+&lt;/img&gt;
+Buy Me a Coffee
+&lt;/a&gt;
+)
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logitech R400 remote presentation controller on Linux</title>
+      <link>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</link>
+      <pubDate>Fri, 01 Apr 2022 07:31:42 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</guid>
+      <description>&lt;p&gt;Since long ago I had it in my mind getting one remote presenter, but most presenters just had two buttons, and the ones that looked to be valid for my use case, required four and seems that only &lt;code&gt;Rii&lt;/code&gt; had similar devices, but I didn&amp;rsquo;t went for it as it was not a huge need, so I ended up with a mini keyboard I had for Raspberry Pi and some debugging in case I had that need.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>imapfilter for Gmail</title>
+      <link>https://iranzo.io/blog/2021/07/07/imapfilter-for-gmail/</link>
+      <pubDate>Wed, 07 Jul 2021 22:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/07/07/imapfilter-for-gmail/</guid>
+      <description>Learn on how to use imapfilter against Gmail for classifying the messages</description>
+    </item>
+    <item>
+      <title>Geo replication with syncthing</title>
+      <link>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</link>
+      <pubDate>Sat, 12 Jun 2021 21:40:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/06/12/geo-replication-with-syncthing/</guid>
+      <description>&lt;p&gt;Some years ago I started using geo replication to keep a copy of all the pictures, docs, etc&lt;/p&gt;
+&lt;p&gt;After being using BitTorrent sync and later resilio sync (even if I didn&amp;rsquo;t fully liked the idea of it being not open source), I gave up. My NAS with 16 GB of ram, even if a bit older (HP N54L), seemed not to have enough memory to run it, and was constantly swapping.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to check if a system is virtual</title>
+      <link>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</link>
+      <pubDate>Mon, 10 May 2021 14:30:34 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/05/10/how-to-check-if-a-system-is-virtual/</guid>
+      <description>&lt;p&gt;I was improving a playbook in Ansible and wanted to find a way to find if a system was virtual or not to decide about some tunning like setting &lt;code&gt;tuned-adm profile virtual-guest&lt;/code&gt; or disable the power off when the lid is closed.&lt;/p&gt;
+&lt;p&gt;After some research and try-except situations I got to this one that seemed to work (I had to tune it as one desktop machine was missing the /sys entry I was using before):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Argos extension writing for Gnome3</title>
+      <link>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</link>
+      <pubDate>Thu, 27 Jun 2019 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2019/06/27/argos-extension-writing-for-gnome3/</guid>
+      <description>&lt;p&gt;I was using from time ago this extension for Gnome named &lt;a href=&#34;https://github.com/p-e-w/argos&#34;&gt;Argos&lt;/a&gt; which allows to create useful data views using scripts written in whatever language of choice available, bash included.&lt;/p&gt;
+&lt;p&gt;So far I had just a simple extension writing a UNICODE character, but with the suggestion of my colleague &lt;a href=&#34;http://www.sombrerorojo.com/&#34;&gt;Javi Ramírez&lt;/a&gt;, I decided to use the motivational idea to write a simple script to calculate how much you&amp;rsquo;ve earned so far in the day and show that information at a glance on your menu bar.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quay for Federation</title>
+      <link>https://iranzo.io/blog/2019/01/08/quay-for-federation/</link>
+      <pubDate>Tue, 08 Jan 2019 17:30:36 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2019/01/08/quay-for-federation/</guid>
+      <description>&lt;h2 id=&#34;why-this-article&#34;&gt;Why this article?&lt;/h2&gt;
+&lt;p&gt;For Federation of OpenShift/Kubernetes clusters we want not only to demo some applications, but build a solution that covers all that will be needed in a real-world deployment.&lt;/p&gt;
+&lt;p&gt;Colleagues in the Solutions Engineering team have been working on
+demonstrating an application running on different clusters over a Federated Control Plane, allowing it to &amp;lsquo;roam&amp;rsquo; between clusters with shared data access as a way to demonstrate how an application can &amp;lsquo;scale&amp;rsquo; from on-premise deployment to external clouds in order to satisfy business requirements for peak demands.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Filtering email with imapfilter</title>
+      <link>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</link>
+      <pubDate>Fri, 28 Aug 2015 15:27:47 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/08/28/filtering-email-with-imapfilter/</guid>
+      <description>&lt;p&gt;Since some time ago, email filter management was not scaling for me as I was using server-side filtering, I had to deal with the web-based interface which was missing some elements like drag&amp;amp;drop reordering of rules, cloning, etc.&lt;/p&gt;
+&lt;p&gt;As I was already using offlineimap to sync from the remote mail server to my system into a maildir folder, I had almost all the elements I needed.&lt;/p&gt;
+&lt;p&gt;After searching for several options &lt;a href=&#34;https://github.com/lefcha/imapfilter&#34;&gt;imapfilter&lt;/a&gt; seemed to be a perfect fit, so I started with a small set of rules and start integration with my email process.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RHEV-M with nested VM for OSP</title>
+      <link>https://iranzo.io/blog/2015/07/17/rhev-m-with-nested-vm-for-osp/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/07/17/rhev-m-with-nested-vm-for-osp/</guid>
+      <description>&lt;p&gt;Since some time ago, I&amp;rsquo;ve been mostly dealing with OpenStack, requiring different releases to test for different tests, etc.&lt;/p&gt;
+&lt;p&gt;Virtualization, as provided by KVM requires some CPU flags to get accelerated operations, &lt;code&gt;vmx&lt;/code&gt; and &lt;code&gt;svm&lt;/code&gt; depending on your processor architecture, but, of course, this is only provided on bare-metal.&lt;/p&gt;
+&lt;p&gt;In order to get more flexibility at the expense of performance, &lt;code&gt;nestedvt&lt;/code&gt; allows to expose those flags to the VM&amp;rsquo;s running at the hypervisor so you can run another level of VM&amp;rsquo;s inside those VM&amp;rsquo;s (this starts to sound like the movie &lt;a href=&#34;http://www.imdb.com/title/tt1375666/&#34;&gt;Inception&lt;/a&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intel AMT on Linux for remote control/fencing</title>
+      <link>https://iranzo.io/blog/2015/05/01/intel-amt-on-linux-for-remote-control/fencing/</link>
+      <pubDate>Fri, 01 May 2015 11:35:14 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/05/01/intel-amt-on-linux-for-remote-control/fencing/</guid>
+      <description>&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;Some time ago, and after discussing with a colleague, I had a look on Intel&amp;rsquo;s &lt;a href=&#34;http://en.wikipedia.org/wiki/Intel_Active_Management_Technology&#34;&gt;AMT&lt;/a&gt;, and this week I
+did a demo for another colleague as a cheap-replacement for having power fencing capabilities on commodity hardware.&lt;/p&gt;
+&lt;p&gt;AMT provides a server-like Out of band management like iLO, iDRAC, RSB etc and it&amp;rsquo;s included in i3 with vPro processors/chipsets of some equipment.&lt;/p&gt;
+&lt;p&gt;I did the test on a Lenovo X200/201 system I had as old laptop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install RHEL7/Centos/Fedora on a software raid device</title>
+      <link>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</link>
+      <pubDate>Sat, 28 Mar 2015 18:46:42 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/28/install-rhel7/centos/fedora-on-a-software-raid-device/</guid>
+      <description>&lt;p&gt;Installing Linux on a RAID has lot of advantages, from using RAID1 to enjoy protection against drive failures or RAID0 to combine the size of several drives to create bigger space for files with all the smaller disks we have.&lt;/p&gt;
+&lt;p&gt;There are several &lt;a href=&#34;http://en.wikipedia.org/wiki/RAID&#34;&gt;RAID&lt;/a&gt; level definitions and may have different uses depending on our needs and hardware availability.&lt;/p&gt;
+&lt;p&gt;For this, I focused on using raid1 for the system disks (for greater redundancy/protection against failures) and raid0 (for combining several disks to make bigger space available for non important data)..&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OctoPress for Jekyll blogging</title>
+      <link>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</link>
+      <pubDate>Tue, 24 Mar 2015 13:23:15 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/24/octopress-for-jekyll-blogging/</guid>
+      <description>&lt;p&gt;After testing for some days Jekyll and github.io for blog posting, I was missing some features of other CMS, so I started doing some search on how to automate many other topics while keeping simplicity on blog posting.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://octopress.org&#34;&gt;OctoPress&lt;/a&gt; Makes this extra step so you can still focus on your contents and of course have a nice template as starting point with integrations for some social plugins, etc.&lt;/p&gt;
+&lt;p&gt;Setup is well done if you follow the provided steps, without jumping anything, in my case, I moved my old pages (plain &lt;code&gt;jekyll + poole&lt;/code&gt;) to OctoPress.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Podcasts with flexget and transmission</title>
+      <link>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</link>
+      <pubDate>Mon, 16 Mar 2015 21:45:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/03/16/podcasts-with-flexget-and-transmission/</guid>
+      <description>&lt;p&gt;Some podcasts are available via RSS feeds, so you can get notified of new episodes, so the best way I&amp;rsquo;ve found so far to automate this procedure is to use the utility &lt;code&gt;flexget&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Flexget can download a RSS feed and get the &lt;code&gt;.torrent&lt;/code&gt; files associated to them and store locally, which makes a perfect fit for later using Transmission&amp;rsquo;s &lt;code&gt;watch&lt;/code&gt; folder, to automatically add them to your download queue.&lt;/p&gt;
+&lt;p&gt;In order to do so, install &lt;code&gt;flexget&lt;/code&gt; either via pip (&lt;code&gt;pip install flexget&lt;/code&gt;) or using a package for your distribution and create a configuration file similar to this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>duplicity for managing backups</title>
+      <link>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</link>
+      <pubDate>Mon, 27 Jun 2011 16:35:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2011/06/27/duplicity-for-managing-backups/</guid>
+      <description>&lt;p&gt;A few days ago, I was checking a friend&amp;rsquo;s system for backing up.&lt;/p&gt;
+&lt;p&gt;It was based on &lt;code&gt;rsync&lt;/code&gt; at the Linux side and &lt;code&gt;rsync&lt;/code&gt; server on a windows machine he uses for storing information generated by other software.&lt;/p&gt;
+&lt;p&gt;The solution with &lt;code&gt;rsync&lt;/code&gt; worked pretty well for him until he started to put several strange characters in filenames which rendered the backup unusable to certain point.&lt;/p&gt;
+&lt;p&gt;After being asked for alternative backup software that was available on several platforms, I&amp;rsquo;ve ended testing duplicity.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Firsts steps with Fedora 15 pre-alpha</title>
+      <link>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</link>
+      <pubDate>Mon, 07 Mar 2011 17:26:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2011/03/07/firsts-steps-with-fedora-15-pre-alpha/</guid>
+      <description>&lt;p&gt;Today I&amp;rsquo;ve decided to give it a try to F15-prealpha (expected to release tomorrow).&lt;/p&gt;
+&lt;p&gt;The upgrade performed in the unsupported way (getting and forcing install for newer fedora-release from a mirror then start issuing several yum upgrades) when reasonably good.&lt;/p&gt;
+&lt;p&gt;Only some minor dependency problems &lt;code&gt;et voilà&lt;/code&gt;, system started fine.&lt;/p&gt;
+&lt;p&gt;Problems so far:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Firefox 4 has a few approved extensions, I used the &amp;ldquo;nightly tester tools&amp;rdquo; to disable version check and enable most of the ones I had with 3.6.x without problems.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t like gnome-shell at the moment&lt;/li&gt;
+&lt;li&gt;Desktop icons disappeared&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Menu bar is black and found no way to configure it yet&lt;/li&gt;
+&lt;li&gt;Gnome-applets have some dependency problems and can&amp;rsquo;t install or configure them, furthermore I lost my tray area on one of the computers but works fine on the other.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I hope that tomorrow&amp;rsquo;s release of Alpha will fix some of them in order to warm-up for final launch (&lt;a href=&#34;http://fedoraproject.org/wiki/Releases/15/Schedule&#34;&gt;http://fedoraproject.org/wiki/Releases/15/Schedule&lt;/a&gt;)&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Customize RHEL/CentOS installation media (EL4/EL5&#43;)</title>
+      <link>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</link>
+      <pubDate>Sat, 23 Jan 2010 08:25:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2010/01/23/customize-rhel/centos-installation-media-el4/el5-/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A standard install media, (let&amp;rsquo;s talk about a DVD for easier start) has several files/folders at his root, but most important are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;isolinux&lt;/code&gt; (where the loader lives)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;images&lt;/code&gt; (for extra files for installer to load)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Packages&lt;/code&gt; for installation (&lt;code&gt;RedHat/&lt;/code&gt; for EL4, &lt;code&gt;Server&lt;/code&gt;/&lt;code&gt;Client&lt;/code&gt; for EL5)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usually, a distribution has, for its main binaries, more than 2 gigabytes of data, that enables one target to act as a multifunction server/workstation, but that you will not usually load on the same system. Furthermore, since the DVD creation, there have been so many updates/patches that make your installation a &amp;lsquo;outdated&amp;rsquo; install that you&amp;rsquo;ll need to upgrade to have recent patches.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MiniDLNA SPEC &amp; RPM</title>
+      <link>https://iranzo.io/blog/2009/07/10/minidlna-spec-rpm/</link>
+      <pubDate>Fri, 10 Jul 2009 08:54:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2009/07/10/minidlna-spec-rpm/</guid>
+      <description>&lt;p&gt;MiniDLNA provides an OpenSource DLNA server software that can index and present specific folders on your computer to DLNA clients on your network.&lt;/p&gt;
+&lt;p&gt;Project at sourceforge is distributed as CVS code that you need to checkout and compile for it to work on your computer.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve setup a spec file that will allow you to create an rpm that has been tested on Red Hat Enterprise Linux 5.3 machine x86 for easing adoption among users.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mount disk images</title>
+      <link>https://iranzo.io/blog/2008/07/18/mount-disk-images/</link>
+      <pubDate>Fri, 18 Jul 2008 06:17:02 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/07/18/mount-disk-images/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using a Xen guest under RHEL 5.2 to hold this Webserver, and because of failures, I choose to keep a copy of the full disk image on another machine.&lt;/p&gt;
+&lt;p&gt;Having to transfer the full disk in the network means stop the server (Xen guest),
+&lt;code&gt;rsync&lt;/code&gt; the image on disk (wait 40 minutes), then start guest again.&lt;/p&gt;
+&lt;p&gt;After doing the initial image transfer, it would be easier to just sync updated files, but&amp;hellip; how to loop mount a full disk?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logical volume manager (LVM)</title>
+      <link>https://iranzo.io/blog/2008/04/20/logical-volume-manager-lvm/</link>
+      <pubDate>Sun, 20 Apr 2008 23:03:52 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/04/20/logical-volume-manager-lvm/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;LVM are the initials for Logical Volume Manager, a powerful tool present in actual Linux systems inspired in the implementation available in other systems like AIX and HP-UX.&lt;/p&gt;
+&lt;p&gt;LVM introduces a separation between system structure and elements like disks, partitions, filesystems to which we are used to.&lt;/p&gt;
+&lt;p&gt;LVM has three levels:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Physical volumes&lt;/li&gt;
+&lt;li&gt;Volume Groups&lt;/li&gt;
+&lt;li&gt;Logical volumes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One of the benefits of LVM over traditional systems is that LVM introduces an abstraction layer which improves the limitation of a disk, allowing us to have a filesystem to span over several disks, resizing thus making a more efficient usage of storage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Security Enhanced Linux (SELinux)</title>
+      <link>https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/</link>
+      <pubDate>Fri, 04 Jan 2008 18:14:03 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2008/01/04/security-enhanced-linux-selinux/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;SELinux is an implementation of MAC (Mandatory Access Controls) over LSM (Linux Security Modules) in Linux Kernel.&lt;/p&gt;
+&lt;p&gt;SELinux, originally developed by N.S.A. (National Security Agency) allows applications to be confined by the kernel.&lt;/p&gt;
+&lt;p&gt;Inside that &amp;ldquo;confined area&amp;rdquo;, much more grained than a standard &lt;code&gt;chroot&lt;/code&gt; (system where basic executables are copied to another folder in order to have a small subsystem isolated from real system. The drawback is that a small subsystem could have enough utilities to reveal private information from our internal network),in which we can allow only certain operations, for example: adding information to a file, read from a directory but not writing, even just for one file in a standard directory,
+etc&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating Jigsaw Download (JigDo) files for downloading ISO&#39;s</title>
+      <link>https://iranzo.io/blog/2007/11/15/creating-jigsaw-download-jigdo-files-for-downloading-isos/</link>
+      <pubDate>Thu, 15 Nov 2007 21:50:25 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2007/11/15/creating-jigsaw-download-jigdo-files-for-downloading-isos/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;JigDo (&lt;code&gt;JIGsaw DOwnload&lt;/code&gt;) is a small utility that can assemble a CD/DVD image from it&amp;rsquo;s internal files.&lt;/p&gt;
+&lt;p&gt;For example, &lt;a href=&#34;http://www.debian.org/&#34;&gt;Debian&lt;/a&gt; has been using it for years for distributing the entire distribution: you downloaded a
+&lt;code&gt;.jigdo&lt;/code&gt; file, and then, using the utility &lt;code&gt;jigdo-lite&lt;/code&gt; (package
+&lt;code&gt;jigdo-file&lt;/code&gt; on Debian like and RPM based&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. This way, you only downloaded small files from servers, preventing line failures, spreading load between several servers, etc.&lt;/p&gt;
+&lt;p&gt;Furthermore, if you already had some files (for example if you started at version X and have been downloading and keeping
+all files until X.Y,
+&lt;code&gt;jigdo&lt;/code&gt;, can use those updated files to compare them against the &lt;code&gt;.jigdo&lt;/code&gt; file and avoid downloading duplicated files&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH, stunnel and a proxy - double stunnel bypass</title>
+      <link>https://iranzo.io/blog/2006/11/01/ssh-stunnel-and-a-proxy-double-stunnel-bypass/</link>
+      <pubDate>Wed, 01 Nov 2006 17:47:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2006/11/01/ssh-stunnel-and-a-proxy-double-stunnel-bypass/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;m working for a &amp;ldquo;very concerned about security&amp;rdquo; firm, that makes mandatory using VPN for accessing their network, and internal services:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IMAPS&lt;/li&gt;
+&lt;li&gt;SMTP&lt;/li&gt;
+&lt;li&gt;Intranet&lt;/li&gt;
+&lt;li&gt;Forums&lt;/li&gt;
+&lt;li&gt;Online training, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As it should, we provided services for a client, also very concerned about security, thus not allowing internet access despite of using two squid proxies with a network appliance filtering protocols, scripts, viruses and malware. They only allow FTP, HTTP and HTTPS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OCS Deployment Tips and tricks</title>
+      <link>https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/</link>
+      <pubDate>Sat, 29 Jul 2006 20:13:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2006/07/29/ocs-deployment-tips-and-tricks/</guid>
+      <description>&lt;p&gt;Prior to using the following info for creating own-made packages, let&amp;rsquo;s test if everything is working fine.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve created a NSIS script that writes into registry in a key called &lt;code&gt;HKLMSOFTWAREOCS&lt;/code&gt; and puts a key named &amp;ldquo;cert&amp;rdquo; with value &lt;code&gt;creilla&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If we create a package with action &amp;ldquo;LAUNCH&amp;rdquo;, and attach the &lt;code&gt;regcert.zip&lt;/code&gt; with command to execute &lt;code&gt;regcert.exe&lt;/code&gt;, all clients with functional package deployment, will add that key to registry, so we can check, using OCS registry query function for a key named &amp;ldquo;cert&amp;rdquo; into: &lt;code&gt;HKLM&lt;/code&gt; &lt;code&gt;SOFTWAREOCS&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OCS Inventory Package deployment</title>
+      <link>https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/</link>
+      <pubDate>Thu, 27 Jul 2006 20:29:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2006/07/27/ocs-inventory-package-deployment/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;OCS Inventory is an excellent piece of GPL Software for getting info from hardware components, and software installed on computers running Windows or UNIX-like operating systems (there are also some unofficial clients for running on other platforms).&lt;/p&gt;
+&lt;p&gt;Since New Generation (&lt;code&gt;OCS-NG&lt;/code&gt;), a new architecture was implemented: server were contacted using standard TCP/IP connection (Previous versions, used an MDB file to store information, and required a SMB share to inventory computers ), allowing remote computers to connect as well as providing a new web interface for computer administration, and inventory query.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VPNS - Multiple VPN&#39;s Launcher</title>
+      <link>https://iranzo.io/blog/2003/03/05/vpns-multiple-vpns-launcher/</link>
+      <pubDate>Wed, 05 Mar 2003 20:55:00 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2003/03/05/vpns-multiple-vpns-launcher/</guid>
+      <description>&lt;h2 id=&#34;general-purpose&#34;&gt;General Purpose&lt;/h2&gt;
+&lt;p&gt;The idea on writing VPNS and the structure it follows was the problem that
+we had into easily configure many VPN&amp;rsquo;s for use with the wireless project
+interconnection (Valencia Wireless
+&lt;a href=&#34;http://www.valenciawireless.org/&#34;&gt;&lt;code&gt;http://www.valenciawireless.org&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;When having no chance to join networks using just wireless links, we needed
+to provide some kind of transparent link from one WiFi node to another. To
+do so, we decided to use the vpnd daemon to establish links between our
+networks for allowing transparent traffic flow.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Instagram on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/instagram/</link>
+    <description>Recent content in Instagram on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/instagram/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Galleria.io and PhotoSwipe</title>
+      <link>https://iranzo.io/blog/2020/02/12/galleria.io-and-photoswipe/</link>
+      <pubDate>Wed, 12 Feb 2020 07:30:24 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2020/02/12/galleria.io-and-photoswipe/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I was looking for an alternative for my (this) blog and hold pictures. I&amp;rsquo;m a lego fan so I wanted to get some pictures uploaded but without bloating the site.&lt;/p&gt;
+&lt;p&gt;In the article &lt;a href=&#34;../../blog/2019/06/09/lego-75894-1967-mini-cooper-s-rally-and-buggy-moc-adaptation-as-mini-transporter/&#34;&gt;Lego Mini Cooper MOC&lt;/a&gt; I did add lot of pictures, same for &lt;a href=&#34;../../blog/2019/06/28/lego-80101-chinese-new-years-eve/&#34;&gt;Lego Chinese dinner&lt;/a&gt; and &lt;a href=&#34;../../blog/2019/06/28/lego-80102-dragon-dance/&#34;&gt;Lego Dragon Dance&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was checking and how telegram does handle some links and found that
+Instagram &amp;rsquo;links&amp;rsquo; get expanded to list the images inside directly to see if that could help in a task I was helping at &lt;a href=&#34;https://github.com/Pelican-Elegant/elegant&#34;&gt;Pelican-Elegant theme&lt;/a&gt; used at this site for creating a gallery.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Privacy on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/privacy/</link>
+    <description>Recent content in Privacy on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacidad en las comunicaciones electrónicas</title>
+      <link>https://iranzo.io/es/blog/2004/05/23/privacidad-en-las-comunicaciones-electr%C3%B3nicas/</link>
+      <pubDate>Sun, 23 May 2004 20:40:00 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2004/05/23/privacidad-en-las-comunicaciones-electr%C3%B3nicas/</guid>
+      <description>&lt;p&gt;Este artículo, es una sencilla introducción al mundo del cifrado y a modo de resumen o extracto de diversos artículos, presenta información que luego es ampliada en los enlaces indicados, tanto en el cuerpo del artículo como al final en la sección dedicada a tal efecto.&lt;/p&gt;
+&lt;h3 id=&#34;orígenes&#34;&gt;Orígenes&lt;/h3&gt;
+&lt;p&gt;Desde tiempos inmemoriales, a la vez que se avanzaba en la comunicación, se avanzaba también en la necesidad de mantener la privacidad de las mismas&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

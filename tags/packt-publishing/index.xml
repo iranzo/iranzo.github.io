@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Packt Publishing on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/packt-publishing/</link>
+    <description>Recent content in Packt Publishing on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:34:08 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/packt-publishing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Book] Red Hat Enterprise Linux 9 Administration</title>
+      <link>https://iranzo.io/blog/2022/10/12/book-red-hat-enterprise-linux-9-administration/</link>
+      <pubDate>Wed, 12 Oct 2022 12:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2022/10/12/book-red-hat-enterprise-linux-9-administration/</guid>
+      <description>RHEL9 System Administration book now available!</description>
+    </item>
+    <item>
+      <title>The experience of writing a book</title>
+      <link>https://iranzo.io/blog/2021/09/15/the-experience-of-writing-a-book/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2021/09/15/the-experience-of-writing-a-book/</guid>
+      <description>&lt;p&gt;I wanted to write about my experience (before I forget about it), and as some colleagues asked about it&amp;hellip; here we go&amp;hellip;&lt;/p&gt;
+&lt;p&gt;As published in the blog entry &lt;a href=&#34;../../blog/2021/09/11/book-red-hat-enterprise-linux-8-administration/&#34;&gt;RHEL8 Administration book&lt;/a&gt;, some colleagues and I wrote a book on RHEL8 administration, which can be bought &lt;a href=&#34;https://s.iranzo.io/rhel8&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Many years ago I started one about Linux, but every time a new paragraph was added, a lot of new &amp;lsquo;TO-DO&amp;rsquo; items were appended as the information growth&amp;hellip; and as it was a &amp;lsquo;solo&amp;rsquo; project, I had other stuff to work on and was parked.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Book] Red Hat Enterprise Linux 8 Administration</title>
+      <link>https://iranzo.io/blog/2021/09/11/book-red-hat-enterprise-linux-8-administration/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2021/09/11/book-red-hat-enterprise-linux-8-administration/</guid>
+      <description>RHEL8 System Administration book now available!</description>
+    </item>
+  </channel>
+</rss>

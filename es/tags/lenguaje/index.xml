@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lenguaje on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/lenguaje/</link>
+    <description>Recent content in Lenguaje on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/lenguaje/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tablas para no decir nada</title>
+      <link>https://iranzo.io/es/blog/2008/11/08/tablas-para-no-decir-nada/</link>
+      <pubDate>Sat, 08 Nov 2008 23:16:14 +0200</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/11/08/tablas-para-no-decir-nada/</guid>
+      <description>&lt;div class=&#34;admonition hint&#34;&gt;
+    &lt;p class=&#34;admonition-title&#34;&gt;Método de uso&lt;/p&gt;
+    &lt;p class=&#34;admonition&#34;&gt;&lt;p&gt;Comience por la primera casilla de la primera columna, y a continuación lea cualquier casilla, en cualquier orden, de las sucesivas segunda, tercera y cuarta columna. Continúe ya sin miedo, pronunciando con tono grandilocuente y pausas de efecto.&lt;/p&gt;
+&lt;p&gt;Avance por columna eligiendo cualquier casilla.&lt;/p&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;I&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;II&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;III&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;IV&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Queridos compañeros&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;la realización de las premisas del programa&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;nos obliga a un exhaustivo análisis&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de las condiciones financieras y administrativas existentes.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Por otra parte, y dados los condicionamientos actuales&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;la complejidad de los estudios de los dirigentes&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;cumple un rol esencial en la formación&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de las directivas de desarrollo para el futuro.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Asimismo,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;el aumento constante, en cantidad y en extensión, de nuestra actividad&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;exige la precisión y la determinación&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;del sistema de participación general.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Sin embargo no hemos de olvidar que&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;la estructura actual de la organización&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ayuda a la preparación y a la realización&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de las actitudes de los miembros hacia sus deberes ineludibles.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;De igual manera,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;el nuevo modelo de actividad de la organización,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;garantiza la participación de un grupo importante en la formación&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de las nuevas proposiciones.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;La práctica de la vida cotidiana prueba que,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;el desarrollo continuo de distintas formas de actividad&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;cumple deberes importantes en la determinación&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de las direcciones educativas en el sentido del progreso.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;No es indispensable argumentar el peso y la significación de estos problemas ya que,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;nuestra actividad de información y propaganda&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;facilita la creación&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;del sistema de formación de cuadros que corresponda a las necesidades.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Las experiencias ricas y diversas muestran que,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;el reforzamiento y desarrollo de las estructuras&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;obstaculiza la apreciación de la importancia&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de las condiciones de las actividades apropiadas.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;El afán de organización, pero sobre todo&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;la consulta con los numerosos militantes&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ofrece un ensayo interesante de verificación&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;del modelo de desarrollo.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Los superiores principios ideológicos, condicionan que&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;el inicio de la acción general de formación de las actitudes&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;implica el proceso de reestructuración y modernización&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de las formas de acción.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Incluso, bien pudiéramos atrevernos a sugerir que&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;un relanzamiento específico de todos los sectores implicados&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;habrá de significar un auténtico y eficaz punto de partida&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de las básicas premisas adoptadas.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Es obvio señalar que,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;la superación de experiencias periclitadas&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;permite en todo caso explicitar las razones fundamentales&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de toda una casuística de amplio espectro.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Pero pecaríamos de insinceros si soslayásemos que,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;una aplicación indiscriminada de los factores confluyentes&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;asegura, en todo caso, un proceso muy sensible de inversión&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de los elementos generadores.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Y además, quedaríamos inmersos en la más abyecta de las estulticias si no fuéramos conscientes de que,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;la condición sine qua non rectora del proceso&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;radica en una elaboración cuidadosa y sistemática de las estrategias adecuadas&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;para configurar una interface amigable y coadyuvante a la reingeniería del sistema.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Por último, y como definitivo elemento esclarecedor, cabe añadir que,&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;el proceso consensuado de unas y otras aplicaciones concurrentes&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;deriva de una indirecta incidencia superadora&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;de toda una serie de criterios ideológicamente sistematizados en un frente común de actuación regeneradora.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Disfruta! (y si lo haces, puedes
+&lt;a href=&#34;https://ko-fi.com/I2I4KDA0V&#34; target=&#34;_blank&#34;&gt;
+  &lt;img src=&#34;https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png&#34; height=&#39;36&#39; style=&#39;border:0px;height:36px;vertical-align:middle;display:inline-block;&#39; border=&#34;0&#34;&gt;
+&lt;/img&gt;
+Invitarme a un café
+&lt;/a&gt;
+)
+&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

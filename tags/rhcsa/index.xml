@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>RHCSA on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/rhcsa/</link>
+    <description>Recent content in RHCSA on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2025 09:34:08 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/rhcsa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Book] Red Hat Enterprise Linux 9 Administration</title>
+      <link>https://iranzo.io/blog/2022/10/12/book-red-hat-enterprise-linux-9-administration/</link>
+      <pubDate>Wed, 12 Oct 2022 12:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2022/10/12/book-red-hat-enterprise-linux-9-administration/</guid>
+      <description>RHEL9 System Administration book now available!</description>
+    </item>
+    <item>
+      <title>RHCE and RHCSA tips and tricks</title>
+      <link>https://iranzo.io/blog/2022/07/13/rhce-and-rhcsa-tips-and-tricks/</link>
+      <pubDate>Wed, 13 Jul 2022 21:00:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/07/13/rhce-and-rhcsa-tips-and-tricks/</guid>
+      <description>&lt;p&gt;I did the RHCE exam some time ago, and still there are some tricks and
+advices I tell the people to bear in mind some of the things I used and that were also provided in the &lt;a href=&#34;https://s.admins.guru/buyonamazon&#34;&gt;Red Hat Enterprise 8 Administration&lt;/a&gt; book:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t remember every step, it&amp;rsquo;s not effective, for example as I don&amp;rsquo;t recall syntax for BIND, I do remember package that has some files with examples and I use that one to check what I need to do&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;mlocate&lt;/code&gt; and run &lt;code&gt;updatedb&lt;/code&gt; as soon as you start, then you can use &lt;code&gt;locate &amp;lt;file&amp;gt;&lt;/code&gt; to find out files in your system&lt;/li&gt;
+&lt;li&gt;Use your preferred editor&amp;hellip; it&amp;rsquo;s common to use &lt;code&gt;vi&lt;/code&gt; or &lt;code&gt;vim&lt;/code&gt; as it&amp;rsquo;s pretty standard, but if you&amp;rsquo;re used to another, make yourself comfortable in the system.&lt;/li&gt;
+&lt;li&gt;As one instructor like to say: &amp;ldquo;Anyone with unlimited amount of time will be able to pass the exam&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;RHCE is a performance-based exam, that means that you need to cover all the required goals within the exam duration, and in the end, the goals is to accomplish, not to do in the &lt;code&gt;smarter&lt;/code&gt; way.
+&lt;ul&gt;
+&lt;li&gt;For example, if you&amp;rsquo;re told to configure &lt;code&gt;resolv.conf&lt;/code&gt; you can either use &lt;code&gt;nmcli&lt;/code&gt; to modify the settings or you can pipe the results to it via &lt;code&gt;echo nameserver 1.1.1.1 &amp;gt; /etc/resolv.conf&lt;/code&gt;, in the end, both will have the same effect, and of course, using &lt;code&gt;nmcli&lt;/code&gt; will be smarter when you&amp;rsquo;re keeping multiple systems and using automation&amp;hellip; but for the exam, the goal is to focus on the fastest path to master at it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can find more tricks at &lt;a href=&#34;https://s.admins.guru/buyonamazon&#34;&gt;Red Hat Enterprise 8 Administration&lt;/a&gt;
+&lt;p&gt;
+Enjoy! (and if you do, you can
+&lt;a href=&#34;https://ko-fi.com/I2I4KDA0V&#34; target=&#34;_blank&#34;&gt;
+  &lt;img src=&#34;https://storage.ko-fi.com/cdn/brandasset/kofi_s_logo_nolabel.png&#34; height=&#39;36&#39; style=&#39;border:0px;height:36px;vertical-align:middle;display:inline-block;&#39; border=&#34;0&#34;&gt;
+&lt;/img&gt;
+Buy Me a Coffee
+&lt;/a&gt;
+)
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The experience of writing a book</title>
+      <link>https://iranzo.io/blog/2021/09/15/the-experience-of-writing-a-book/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2021/09/15/the-experience-of-writing-a-book/</guid>
+      <description>&lt;p&gt;I wanted to write about my experience (before I forget about it), and as some colleagues asked about it&amp;hellip; here we go&amp;hellip;&lt;/p&gt;
+&lt;p&gt;As published in the blog entry &lt;a href=&#34;../../blog/2021/09/11/book-red-hat-enterprise-linux-8-administration/&#34;&gt;RHEL8 Administration book&lt;/a&gt;, some colleagues and I wrote a book on RHEL8 administration, which can be bought &lt;a href=&#34;https://s.iranzo.io/rhel8&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Many years ago I started one about Linux, but every time a new paragraph was added, a lot of new &amp;lsquo;TO-DO&amp;rsquo; items were appended as the information growth&amp;hellip; and as it was a &amp;lsquo;solo&amp;rsquo; project, I had other stuff to work on and was parked.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Book] Red Hat Enterprise Linux 8 Administration</title>
+      <link>https://iranzo.io/blog/2021/09/11/book-red-hat-enterprise-linux-8-administration/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0100</pubDate>
+      <guid>https://iranzo.io/blog/2021/09/11/book-red-hat-enterprise-linux-8-administration/</guid>
+      <description>RHEL8 System Administration book now available!</description>
+    </item>
+  </channel>
+</rss>

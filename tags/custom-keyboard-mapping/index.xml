@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Custom Keyboard Mapping on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/custom-keyboard-mapping/</link>
+    <description>Recent content in Custom Keyboard Mapping on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:45:44 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/custom-keyboard-mapping/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Logitech R400 remote presentation controller on Linux</title>
+      <link>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</link>
+      <pubDate>Fri, 01 Apr 2022 07:31:42 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2022/04/01/logitech-r400-remote-presentation-controller-on-linux/</guid>
+      <description>&lt;p&gt;Since long ago I had it in my mind getting one remote presenter, but most presenters just had two buttons, and the ones that looked to be valid for my use case, required four and seems that only &lt;code&gt;Rii&lt;/code&gt; had similar devices, but I didn&amp;rsquo;t went for it as it was not a huge need, so I ended up with a mini keyboard I had for Raspberry Pi and some debugging in case I had that need.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

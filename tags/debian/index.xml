@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Debian on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/debian/</link>
+    <description>Recent content in Debian on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Nov 2023 07:12:17 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upgrade Debian from buster to bullseye</title>
+      <link>https://iranzo.io/tips/raspbian-upgrade/</link>
+      <pubDate>Sat, 22 Jul 2023 13:22:08 +0000</pubDate>
+      <guid>https://iranzo.io/tips/raspbian-upgrade/</guid>
+      <description>&lt;p&gt;I had two Raspberry Pi systems running Raspbian and they were failing to find updates for newer packages.&lt;/p&gt;
+&lt;p&gt;As Debian &lt;code&gt;stable&lt;/code&gt; was upgraded too, moving from &lt;code&gt;buster&lt;/code&gt; to &lt;code&gt;bullseye&lt;/code&gt; the packages failed to get the newer ones.&lt;/p&gt;
+&lt;div class=&#34;admonition warning&#34;&gt;
+    &lt;p class=&#34;admonition-title&#34;&gt;Warning&lt;/p&gt;
+    &lt;p class=&#34;admonition&#34;&gt;Beware as this procedure might upgrade the system but might no render a bootable Raspberry Pi&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A way to fix it is, to first, change references, if any, to the old codename version by running:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

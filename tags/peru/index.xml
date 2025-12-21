@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Peru on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/peru/</link>
+    <description>Recent content in Peru on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/peru/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Peru for syncing specific git repository files</title>
+      <link>https://iranzo.io/blog/2018/09/25/peru-for-syncing-specific-git-repository-files/</link>
+      <pubDate>Tue, 25 Sep 2018 22:17:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2018/09/25/peru-for-syncing-specific-git-repository-files/</guid>
+      <description>&lt;h2 id=&#34;peru-a-repository-synchronizer&#34;&gt;Peru a repository synchronizer&lt;/h2&gt;
+&lt;p&gt;Some projects upstream &lt;code&gt;bind&lt;/code&gt; together lot of files which might not be of interest, but still the
+convenience of a &lt;code&gt;git pull&lt;/code&gt; to get latest updates, makes you to download the whole
+repository for just a bunch of files or folders.&lt;/p&gt;
+&lt;p&gt;For example, this website uses &lt;a href=&#34;http://getpelican.com/&#34;&gt;Pelican&lt;/a&gt; to generate the webpages out of markdown files. Pelican does have a rich set of &lt;a href=&#34;https://github.com/getpelican/pelican-plugins&#34;&gt;plugins&lt;/a&gt; but all of them are in the same folder in the &lt;code&gt;git checkout&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

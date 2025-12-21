@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dlna on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/dlna/</link>
+    <description>Recent content in Dlna on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/dlna/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MiniDLNA SPEC &amp; RPM</title>
+      <link>https://iranzo.io/blog/2009/07/10/minidlna-spec-rpm/</link>
+      <pubDate>Fri, 10 Jul 2009 08:54:35 +0000</pubDate>
+      <guid>https://iranzo.io/blog/2009/07/10/minidlna-spec-rpm/</guid>
+      <description>&lt;p&gt;MiniDLNA provides an OpenSource DLNA server software that can index and present specific folders on your computer to DLNA clients on your network.&lt;/p&gt;
+&lt;p&gt;Project at sourceforge is distributed as CVS code that you need to checkout and compile for it to work on your computer.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve setup a spec file that will allow you to create an rpm that has been tested on Red Hat Enterprise Linux 5.3 machine x86 for easing adoption among users.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

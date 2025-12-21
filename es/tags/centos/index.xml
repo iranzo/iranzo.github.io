@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Centos on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/es/tags/centos/</link>
+    <description>Recent content in Centos on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/es/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iSCSI y Clustering en RHEL/CentOS</title>
+      <link>https://iranzo.io/es/blog/2008/12/13/iscsi-y-clustering-en-rhel/centos/</link>
+      <pubDate>Sat, 13 Dec 2008 17:59:41 +0000</pubDate>
+      <guid>https://iranzo.io/es/blog/2008/12/13/iscsi-y-clustering-en-rhel/centos/</guid>
+      <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+&lt;p&gt;Durante la última semana estuve jugando de nuevo con iSCSI en el curso de &lt;a href=&#34;http://www.redhat.es/training/course/RH436&#34;&gt;RH436 Enterprise Clustering and Storage Management&lt;/a&gt;. Hace tiempo había seguido dos artículos &lt;a href=&#34;http://federicosayd.wordpress.com/2007/09/11/instalando-un-target-iscsi/&#34;&gt;Instalando un target iSCSI&lt;/a&gt; y su continuación &lt;a href=&#34;http://federicosayd.wordpress.com/2007/09/13/montando-un-iniciador-iscsi-en-linux/&#34;&gt;Montando un iniciador iSCSI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;iSCSI es una tecnología que permite acceder a almacenamiento remoto como si de unidades locales se tratara. A nivel &amp;lsquo;barato&amp;rsquo;, podemos utilizar el espacio de un servidor central del que hacemos copias de seguridad, etc para ofrecer ese almacenamiento a distintas máquinas.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

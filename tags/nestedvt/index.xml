@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nestedvt on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/nestedvt/</link>
+    <description>Recent content in Nestedvt on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:46 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/nestedvt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RHEV-M with nested VM for OSP</title>
+      <link>https://iranzo.io/blog/2015/07/17/rhev-m-with-nested-vm-for-osp/</link>
+      <pubDate>Fri, 17 Jul 2015 18:34:17 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2015/07/17/rhev-m-with-nested-vm-for-osp/</guid>
+      <description>&lt;p&gt;Since some time ago, I&amp;rsquo;ve been mostly dealing with OpenStack, requiring different releases to test for different tests, etc.&lt;/p&gt;
+&lt;p&gt;Virtualization, as provided by KVM requires some CPU flags to get accelerated operations, &lt;code&gt;vmx&lt;/code&gt; and &lt;code&gt;svm&lt;/code&gt; depending on your processor architecture, but, of course, this is only provided on bare-metal.&lt;/p&gt;
+&lt;p&gt;In order to get more flexibility at the expense of performance, &lt;code&gt;nestedvt&lt;/code&gt; allows to expose those flags to the VM&amp;rsquo;s running at the hypervisor so you can run another level of VM&amp;rsquo;s inside those VM&amp;rsquo;s (this starts to sound like the movie &lt;a href=&#34;http://www.imdb.com/title/tt1375666/&#34;&gt;Inception&lt;/a&gt;).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

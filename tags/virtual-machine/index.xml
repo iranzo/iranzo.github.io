@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Virtual Machine on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/virtual-machine/</link>
+    <description>Recent content in Virtual Machine on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/virtual-machine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Live Migration in KubeVirt</title>
+      <link>https://iranzo.io/eko/2020-03-22-live-migration/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/eko/2020-03-22-live-migration/</guid>
+      <description>KubeVirt leverages Live Migration to support workloads to keep running while nodes can be moved to maintenance, etc Check what is needed to get it working and how it works.</description>
+    </item>
+  </channel>
+</rss>

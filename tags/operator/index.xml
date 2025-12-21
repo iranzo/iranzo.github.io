@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Operator on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/operator/</link>
+    <description>Recent content in Operator on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:48:47 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/operator/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Baremetal Operator</title>
+      <link>https://iranzo.io/eko/2019-09-11-baremetal-operator/</link>
+      <pubDate>Wed, 11 Sep 2019 11:00:00 +0000</pubDate>
+      <guid>https://iranzo.io/eko/2019-09-11-baremetal-operator/</guid>
+      <description>&lt;p&gt;This article was published originally at &lt;a href=&#34;https://metal3.io/blog/2019/09/11/Baremetal-operator.html&#34;&gt;https://metal3.io/blog/2019/09/11/Baremetal-operator.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/metal3-io/baremetal-operator/&#34;&gt;baremetal operator&lt;/a&gt;, documented at &lt;a href=&#34;https://github.com/metal3-io/baremetal-operator/blob/master/docs/api.md&#34;&gt;https://github.com/metal3-io/baremetal-operator/blob/master/docs/api.md&lt;/a&gt;, it&amp;rsquo;s the Operator in charge of definitions of physical hosts, containing information about how to reach the Out of Band management controller, URL with the desired image to provision, plus other properties related with hosts being used for provisioning instances.&lt;/p&gt;
+&lt;p&gt;Quoting from the project:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Bare Metal Operator implements a Kubernetes API for managing bare metal hosts. It maintains an inventory of available hosts as instances of the BareMetalHost Custom Resource Definition. The Bare Metal Operator knows how to:
+Inspect the host&amp;rsquo;s hardware details and report them on the corresponding BareMetalHost. This includes information about CPUs, RAM, disks, NICs, and more.
+Provision hosts with a desired image
+Clean a host&amp;rsquo;s disk contents before or after provisioning.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

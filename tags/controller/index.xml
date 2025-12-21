@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Controller on Pablo Iranzo Gómez blog</title>
+    <link>https://iranzo.io/tags/controller/</link>
+    <description>Recent content in Controller on Pablo Iranzo Gómez blog</description>
+    <image>
+      <title>Pablo Iranzo Gómez blog</title>
+      <url>https://iranzo.io/mugshot.png</url>
+      <link>https://iranzo.io/mugshot.png</link>
+    </image>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 09:46:05 +0000</lastBuildDate>
+    <atom:link href="https://iranzo.io/tags/controller/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubiquiti UniFi for WiFi network</title>
+      <link>https://iranzo.io/blog/2021/01/01/ubiquiti-unifi-for-wifi-network/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0200</pubDate>
+      <guid>https://iranzo.io/blog/2021/01/01/ubiquiti-unifi-for-wifi-network/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;During the pandemic I wanted to work a bit on the wireless system at home, the router provided by the ISP was having already issues that resulted in WiFi devices not connecting and only new devices were able to report &amp;lsquo;AP full&amp;rsquo; message when the connection failed.&lt;/p&gt;
+&lt;p&gt;First I started testing the ASUS devices like the &lt;a href=&#34;https://www.amazon.es/dp/B07SCBMMS8?tag=redken-21&#34;&gt;AX92U&lt;/a&gt; which had WiFi 6 support. My flat is not that big, but as I had some issues with 2.4Ghz devices like smart power plugs, I decided to go for a second unit of the same router and test the &lt;code&gt;AI-Mesh&lt;/code&gt; that was announced by ASUS as the best way to extend coverage.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
