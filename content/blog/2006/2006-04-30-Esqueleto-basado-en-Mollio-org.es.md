@@ -92,19 +92,19 @@ Además de los esqueletos normales de SPIP, estos tienen los siguientes módulos
 
 Actualmente está formado por los siguientes módulos:
 
-| Módulo          | Cometido                                                            |
+| Módulo | Cometido |
 | --------------- | ------------------------------------------------------------------- | --- | ---------------- | -------------------------------------------------------------------------------------------- | --- | ---------------- | ------------------------------------------------------------------------------------ | --- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------- |
-| mod_agenda      | Muestra la mini agenda con los eventos del mes en curso             |     | mod_artsautalbum | Muestra los artículos del mismo ator cuando estamos en un album (en función del id_document) |
-| mod_artsaut     | Muestra los artículos del mismo autor                               |     | mod_artssec      | Muestra los artículos en la misma seción                                                     |
-| mod_breves      | Muestra las noticias breves del sito                                |
-| mod_banners     | Muestra hasta 5 banners laterales                                   |     | mod_popul        | Muestra los 5 artículos más populares del sitio                                              |     | mod_salida       | Muestra las opciones de salida del documento (Impreso o PD)                          |
-| mod_secciones   | Muestra las secciones que cuelgan de la raíz del sitio              |     | mod_tira         | Muestra la tira cómica [E.C.O.L.](http://tira.escomoslinux.org/)                             |
-| mod_traduc      | Muestra otras traducciones del artículo en curso                    |     | mod_exif         | Muestra las cabeceras EXIF de las imgenes (si existen datos)                                 |
-| mod_inscrip     | Permite inscribirse al sitio web                                    |     | mod_jerarquia    | Muestra la jerarquía en secciones para llegar al artículo                                    |     | mod_jerarquiasec | Muestra la jerarquía en secciones parallegar a la sección                            |
-| mod_keywordbrev | Muestra las palabras clave de la bree                               |
-| mod_keyword     | Muestra las palabras clave del artículo                             |     | mod_nextprev     | Muestra los botones adelante y/o atrás en ls galerías                                        |
-| mod_nota        | Muestra el mensaje del sitio web en la portada                      |     | mod_share        | Muestra enlaces para publicar directamente la web en sitios de bookmarking social            |     | mod_nube         | Muestra una nube de palabras clave en función de las asociadas a artículos en la web |     | mod_rub | Muestra los artículos que estén en una rubrique (del raíz) que tenga asociada una palabra clave en un módulo lateral, eliminándolos | de la parte principal de la web | mod_license | Permite mostrar la licencia predeterminada CC by-nc-sa 2.5 o bien, las scogidas mediante palabras clave para cada artículo |
-| mod_technorati  | Muestra los enlaces de otros blogs que enlazan al artículo en curso |
+| mod_agenda | Muestra la mini agenda con los eventos del mes en curso | | mod_artsautalbum | Muestra los artículos del mismo ator cuando estamos en un album (en función del id_document) |
+| mod_artsaut | Muestra los artículos del mismo autor | | mod_artssec | Muestra los artículos en la misma seción |
+| mod_breves | Muestra las noticias breves del sito |
+| mod_banners | Muestra hasta 5 banners laterales | | mod_popul | Muestra los 5 artículos más populares del sitio | | mod_salida | Muestra las opciones de salida del documento (Impreso o PD) |
+| mod_secciones | Muestra las secciones que cuelgan de la raíz del sitio | | mod_tira | Muestra la tira cómica [E.C.O.L.](http://tira.escomoslinux.org/) |
+| mod_traduc | Muestra otras traducciones del artículo en curso | | mod_exif | Muestra las cabeceras EXIF de las imgenes (si existen datos) |
+| mod_inscrip | Permite inscribirse al sitio web | | mod_jerarquia | Muestra la jerarquía en secciones para llegar al artículo | | mod_jerarquiasec | Muestra la jerarquía en secciones parallegar a la sección |
+| mod_keywordbrev | Muestra las palabras clave de la bree |
+| mod_keyword | Muestra las palabras clave del artículo | | mod_nextprev | Muestra los botones adelante y/o atrás en ls galerías |
+| mod_nota | Muestra el mensaje del sitio web en la portada | | mod_share | Muestra enlaces para publicar directamente la web en sitios de bookmarking social | | mod_nube | Muestra una nube de palabras clave en función de las asociadas a artículos en la web | | mod_rub | Muestra los artículos que estén en una rubrique (del raíz) que tenga asociada una palabra clave en un módulo lateral, eliminándolos | de la parte principal de la web | mod_license | Permite mostrar la licencia predeterminada CC by-nc-sa 2.5 o bien, las scogidas mediante palabras clave para cada artículo |
+| mod_technorati | Muestra los enlaces de otros blogs que enlazan al artículo en curso |
 
 | Plantilla Soporte RSS                     | Donde aplica                                                                               |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------ |
