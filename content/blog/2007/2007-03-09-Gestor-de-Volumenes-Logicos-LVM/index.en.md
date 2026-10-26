@@ -205,6 +205,5 @@ When we select the free space of the logical volume, the following is shown: num
 
 [^2]: Multiple Devices: is a software technology that allows creation of several disk grouping levels: `linear`, `raid0`, `raid1`, `raid5`. Devices will identify themselves to the system as `/dev/md*0,1,2,3,etc*`, and it's status (defined `md's`, sync status, etc) in the file `/proc/mdstat`
 
-[^3]:
-    The one that we wrote down in the first step, before it was unmounted.
+[^3]: The one that we wrote down in the first step, before it was unmounted.
     {{<enjoy>}}
